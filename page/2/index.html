@@ -68,6 +68,139 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Lambda.Packaging.Node" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/27/Lambda.Packaging.Node/" class="article-date">
+  <time datetime="2016-11-27T06:54:51.000Z" itemprop="datePublished">2016-11-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/AWS/">AWS</a>►<a class="article-category-link" href="/categories/AWS/Lambda/">Lambda</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/27/Lambda.Packaging.Node/">Lambda Node.JS Packaging</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Lambda-Node-JS-Packaging"><a href="#Lambda-Node-JS-Packaging" class="headerlink" title="Lambda Node.JS Packaging"></a>Lambda Node.JS Packaging</h1><p><strong>Labmda</strong>에 <strong>Node.JS</strong>로 구현하는 내용에 대해서는 아래 3개의 Link를 참고해 주세요.</p>
+<ul>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateWay.01.md" target="_blank" rel="external">Lambda 와 API Gateway 연동 #1 (GET, POST)</a></li>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.02.Route.md" target="_blank" rel="external">Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route)</a></li>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.03.Proxy.md" target="_blank" rel="external">Lambda 와 API Gateway 연동 #3 (Proxy Resource)</a></li>
+</ul>
+<p>이제껏 1개의 <strong>Node.JS</strong> 파일에 <strong>npm module</strong>을 하나도 사용하지 않은 예제만 살펴보았는데,<br>실제로 개발할 상황에서는 파일도 여러 개로 나눠서 개발하고 <strong>npm module</strong>도 많이 사용할 경우가 많습니다.<br>이렇게 개발한 코드들을 어떻게 Lambda로 올리는지 이번 포스팅에서 살펴보도록 하겠습니다.</p>
+<p><strong>Lambda 와 API Gateway 연동 #3</strong>까지 구현되어 있다는 가정하에서 진행하겠습니다.</p>
+<h2 id="Node-JS-코드에-npm-사용"><a href="#Node-JS-코드에-npm-사용" class="headerlink" title="Node.JS 코드에 npm 사용"></a>Node.JS 코드에 npm 사용</h2><ul>
+<li>이전까지 작업한 코드를 <code>index.js</code>란 이름으로 작업할 폴더에 저장</li>
+<li><strong>npm</strong>으로 <strong>lodash</strong> 설치 : <code>npm install lodash</code></li>
+<li>코드를 아래와 같이 수정</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> _ = <span class="built_in">require</span>(<span class="string">'lodash'</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params">userId</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">body</span>: &#123; <span class="attr">id</span>: userId, <span class="attr">name</span>: <span class="string">"test"</span> &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">post</span>(<span class="params">userId, header, body</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">body</span>: &#123; <span class="attr">id</span>: userId, <span class="attr">header</span>: header, <span class="attr">body</span>: body &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> routeMap = &#123;</div><div class="line">  <span class="string">'/test'</span>: &#123;</div><div class="line">    <span class="string">'GET'</span>: <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> userId = _.get(event,<span class="string">'queryStringParameters.id'</span>);</div><div class="line">      <span class="keyword">return</span> get(userId);</div><div class="line">    &#125;,</div><div class="line">    <span class="string">'POST'</span>: <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> userId = _.get(event,<span class="string">'queryStringParameters.id'</span>);</div><div class="line">      <span class="keyword">const</span> body = <span class="built_in">JSON</span>.stringify(_.get(event,<span class="string">'body'</span>));</div><div class="line">      <span class="keyword">const</span> header =  event.headers;</div><div class="line">      <span class="keyword">return</span> post(userId, header, body);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">router</span>(<span class="params">event, context</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> controller = routeMap[event.path][event.httpMethod];</div><div class="line"></div><div class="line">  <span class="keyword">if</span>(!controller) &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">body</span>: &#123; <span class="attr">Error</span>: <span class="string">"Invalid Path"</span> &#125;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> controller(event, context);</div><div class="line">&#125;</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> &#123;</div><div class="line">   <span class="keyword">let</span> result = router(event, context);</div><div class="line">   callback(<span class="literal">null</span>, &#123;<span class="attr">body</span>:<span class="built_in">JSON</span>.stringify(result)&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>routeMap</strong> 내부에 <code>lodash.get</code> 함수를 사용하는 것으로 코드를 변경하였습니다.</p>
+<ul>
+<li>zip 파일로 압축 : <code>zip -r ./sample.zip ./</code></li>
+</ul>
+<h2 id="Lambda에-zip-파일로-배포"><a href="#Lambda에-zip-파일로-배포" class="headerlink" title="Lambda에 zip 파일로 배포"></a>Lambda에 zip 파일로 배포</h2><p>먼저 해당 <strong>Lambda</strong> 설정으로 이동합니다.</p>
+<ul>
+<li><code>Code</code> 탭<ul>
+<li>Code entry type : <code>Upload a .ZIP file</code> 선택<ul>
+<li><code>Upload</code> 버튼을 눌러서 위에서 생성한 <code>sample.zip</code>을 올림</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda.packaging.node.01.png?raw=true"></p>
+<h2 id="확인"><a href="#확인" class="headerlink" title="확인"></a>확인</h2><p><strong>API Gateway</strong>는 변경사항이 없으므로 결과는 <strong>3장</strong>과 똑같이 나옵니다.</p>
+<ul>
+<li><strong>GET</strong> 요청 : <code>https://.../prod/test?id=2</code></li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"body"</span>:&#123;<span class="attr">"id"</span>:<span class="string">"2"</span>,<span class="attr">"name"</span>:<span class="string">"test"</span>&#125;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>POST</strong> 요청 : URL은 <strong>GET</strong>과 동일</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "body": &#123;</div><div class="line">    "id": "2",</div><div class="line">    "header": &#123;</div><div class="line">      ...</div><div class="line">    &#125;,</div><div class="line">    "body": "\"&#123;\\n  \"id\": \"123\",\\n  \"age\": \"25\"\\n&#125;\""</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="여러-파일을-함께-배포"><a href="#여러-파일을-함께-배포" class="headerlink" title="여러 파일을 함께 배포"></a>여러 파일을 함께 배포</h2><p>이미 <strong>npm module</strong>을 포함하여 베포하였으므로 여러 파일을 묶어서 배포하는게 확인되었지만, 우리가 작성한 소스코드 자체도 나눠서 배포해 보도록 하겠습니다.<br>위에 작성한 코드를 4개의 파일로 나눠서 올려보겠습니다.</p>
+<ul>
+<li><code>index.js</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> router = <span class="built_in">require</span>(<span class="string">'./router'</span>);</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> &#123;</div><div class="line">   <span class="keyword">let</span> result = router(event, context);</div><div class="line">   callback(<span class="literal">null</span>, &#123;<span class="attr">body</span>:<span class="built_in">JSON</span>.stringify(result)&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>router.js</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> _ = <span class="built_in">require</span>(<span class="string">'lodash'</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> routeMap = &#123;</div><div class="line">  <span class="string">'/test'</span>: &#123;</div><div class="line">    <span class="string">'GET'</span>: <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> userId = _.get(event,<span class="string">'queryStringParameters.id'</span>);</div><div class="line">      <span class="keyword">return</span> <span class="built_in">require</span>(<span class="string">'./controllers/test/get'</span>)(userId);</div><div class="line">    &#125;,</div><div class="line">    <span class="string">'POST'</span>: <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> userId = _.get(event,<span class="string">'queryStringParameters.id'</span>);</div><div class="line">      <span class="keyword">const</span> body = <span class="built_in">JSON</span>.stringify(_.get(event,<span class="string">'body'</span>));</div><div class="line">      <span class="keyword">const</span> header =  event.headers;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">require</span>(<span class="string">'./controllers/test/post'</span>)(userId, header, body);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> controller = routeMap[event.path][event.httpMethod];</div><div class="line"></div><div class="line">  <span class="keyword">if</span>(!controller) &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">body</span>: &#123; <span class="attr">Error</span>: <span class="string">"Invalid Path"</span> &#125;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> controller(event, context);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>/controllers/test/get.js</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">userId</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">body</span>: &#123; <span class="attr">id</span>: userId, <span class="attr">name</span>: <span class="string">"test"</span> &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>/controllers/test/post.js</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">userId, header, body</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">body</span>: &#123; <span class="attr">id</span>: userId, <span class="attr">header</span>: header, <span class="attr">body</span>: body &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>npm</strong>으로 <strong>lodash</strong> 설치 : <code>npm install lodash</code></li>
+<li>zip 파일로 압축 : <code>zip -r ./sample.zip ./</code></li>
+</ul>
+<p>위에서와 같은 방법으로 <strong>Lambda</strong>에 배포 후 확인을 해보면 같은 결과가 출력됩니다.</p>
+<h2 id="Lambda에-zip-파일로-배포-1"><a href="#Lambda에-zip-파일로-배포-1" class="headerlink" title="Lambda에 zip 파일로 배포"></a>Lambda에 zip 파일로 배포</h2><p>먼저 해당 <strong>Lambda</strong> 설정으로 이동합니다.</p>
+<ul>
+<li><code>Code</code> 탭<ul>
+<li>Code entry type : <code>Upload a .ZIP file</code> 선택<ul>
+<li><code>Upload</code> 버튼을 눌러서 위에서 생성한 <code>sample.zip</code>을 올림</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="확인-1"><a href="#확인-1" class="headerlink" title="확인"></a>확인</h2><p><strong>API Gateway</strong>는 변경사항이 없으므로 결과는 <strong>3장</strong>과 똑같이 나옵니다.</p>
+<ul>
+<li><strong>GET</strong> 요청 : <code>https://.../prod/test?id=2</code></li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"body"</span>:&#123;<span class="attr">"id"</span>:<span class="string">"2"</span>,<span class="attr">"name"</span>:<span class="string">"test"</span>&#125;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>POST</strong> 요청 : URL은 <strong>GET</strong>과 동일</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "body": &#123;</div><div class="line">    "id": "2",</div><div class="line">    "header": &#123;</div><div class="line">      ...</div><div class="line">    &#125;,</div><div class="line">    "body": "\"&#123;\\n  \"id\": \"123\",\\n  \"age\": \"25\"\\n&#125;\""</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="마치며…"><a href="#마치며…" class="headerlink" title="마치며…"></a>마치며…</h3><p>이번 포스팅에서 알아본 내용들은 다음과 같습니다.</p>
+<ul>
+<li><strong>Lambda</strong>에 여러 파일을 <code>.zip</code>으로 묶어서 함께 배포<ul>
+<li><strong>npm module</strong>을 함께 배포</li>
+<li>여러 파일로 작성된 소스코드들을 함께 배포 </li>
+</ul>
+</li>
+</ul>
+<p>잘못되었거나, 변경된 점, 기타 추가 사항에 대한 피드백은 언제나 환영합니다. - <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#x6f;&#107;&#x6a;&#x6f;&#x6f;&#110;&#46;&#121;&#x75;&#110;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#115;&#x65;&#x6f;&#107;&#x6a;&#x6f;&#x6f;&#110;&#46;&#121;&#x75;&#110;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;</a>  </p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><ul>
+<li>AWS 공식 가이드 : <a href="http://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html" target="_blank" rel="external">http://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/11/27/Lambda.Packaging.Node/" data-id="cj1uf5vje0006gu7bo2y7zjk3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-JS/">Node.JS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Lambda.Packaging.Python" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/11/24/Lambda.Packaging.Python/" class="article-date">
@@ -1067,6 +1200,164 @@
 
 
   
+    <article id="post-CSharp.AspnetCore.Install.Net.Core" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/17/CSharp.AspnetCore.Install.Net.Core/" class="article-date">
+  <time datetime="2016-09-16T15:00:00.000Z" itemprop="datePublished">2016-09-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/17/CSharp.AspnetCore.Install.Net.Core/">.NET Core Install for Ubuntu 14.04</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="NET-Core-Install-for-Ubuntu-14-04"><a href="#NET-Core-Install-for-Ubuntu-14-04" class="headerlink" title=".NET Core Install for Ubuntu 14.04"></a>.NET Core Install for Ubuntu 14.04</h1><p><code>.NET Core</code>를 <strong>Ubuntu</strong>에 설치하는 과정에 대해서 소개해드리겠습니다.</p>
+<p><strong>Ubuntu</strong> 설치는 필자의 경우는 <em>Microsoft Azure</em>에 설치하였습니다.<br>(참고로 <strong>Azure</strong>에 <strong>Ubuntu</strong>설치시 SSH (22)번 빼고는 모두 막혀있습니다. Portal에서 원하시는 포트를 열어야 합니다.)</p>
+<h2 id="1-NET-Core-설치-후-Hello-World-출력해보기"><a href="#1-NET-Core-설치-후-Hello-World-출력해보기" class="headerlink" title="1. .NET Core 설치 후 Hello World 출력해보기"></a>1. <strong>.NET Core</strong> 설치 후 <em>Hello World</em> 출력해보기</h2><p>먼저 <code>.Net Core</code>를 컴파일하고 실행할 수 있도록 <strong>SDK</strong>를 설치하겠습니다.</p>
+<p>공식문서에 설명이 잘 되어 있습니다. (<a href="https://www.microsoft.com/net/core#ubuntu" target="_blank" rel="external">https://www.microsoft.com/net/core#ubuntu</a>)<br>아래 설명대로 해서 잘 안되면 Link의 공식문서에 바뀐 점이 있는지 보시고 따라해주세요.</p>
+<p>아래 명령어를 하나씩 입력해주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo sh -c &apos;echo &quot;deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet/ trusty main&quot; &gt; /etc/apt/sources.list.d/dotnetdev.list&apos;</div><div class="line"></div><div class="line">sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"></div><div class="line">sudo apt-get install dotnet-dev-1.0.0-preview2-003121</div></pre></td></tr></table></figure>
+<p>이제 <code>.Net Core SDK</code> 설치가 끝났습니다.<br>제대로 설치가 되었는지 기본 예제를 실행해 보겠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">mkdir hwapp</div><div class="line"></div><div class="line">cd hwapp</div><div class="line"></div><div class="line">dotnet new</div><div class="line"></div><div class="line">dotnet restore</div><div class="line"></div><div class="line">dotnet run</div></pre></td></tr></table></figure>
+<p>아래와 같이 출력이 나오면 제대로 설치가 된 것입니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.01.png?raw=true">  </p>
+<h2 id="2-ASP-NET-Core-용-실행환경-구성"><a href="#2-ASP-NET-Core-용-실행환경-구성" class="headerlink" title="2. ASP.NET Core 용 실행환경 구성"></a>2. <strong>ASP.NET Core</strong> 용 실행환경 구성</h2><p>먼저 <strong>Web App</strong> 생성에 필요한 것들을 설치해야 합니다.</p>
+<p>자세한 설명은 다음 Link에 되어 있습니다. (<a href="https://docs.asp.net/en/1.0.0-rc1/getting-started/installing-on-linux.html#installing-on-ubuntu-14-04" target="_blank" rel="external">https://docs.asp.net/en/1.0.0-rc1/getting-started/installing-on-linux.html#installing-on-ubuntu-14-04</a>)</p>
+<h3 id="2-1-NET-Version-Manager-DNVM-설치"><a href="#2-1-NET-Version-Manager-DNVM-설치" class="headerlink" title="2.1 .NET Version Manager (DNVM) 설치"></a>2.1 .NET Version Manager (DNVM) 설치</h3><p>Linux 상에서 여러 버전의 .NET 실행 환경 (.NET Execution Environment) <code>DNX</code>를 관리해주는 도구입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install unzip curl</div><div class="line"></div><div class="line">curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh &amp;&amp; source ~/.dnx/dnvm/dnvm.sh</div></pre></td></tr></table></figure>
+<h3 id="2-2-NET-Execution-Environment-DNX-설치"><a href="#2-2-NET-Execution-Environment-DNX-설치" class="headerlink" title="2.2 .NET Execution Environment (DNX) 설치"></a>2.2 .NET Execution Environment (DNX) 설치</h3><p>Linux 상에서 .NET 프로젝트를 빌드하고 실행해주는 도구입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libunwind8 gettext libssl-dev libcurl4-openssl-dev zlib1g libicu-dev uuid-dev</div><div class="line"></div><div class="line">dnvm upgrade -r coreclr</div></pre></td></tr></table></figure>
+<h3 id="2-3-libuv-설치"><a href="#2-3-libuv-설치" class="headerlink" title="2.3 libuv 설치"></a>2.3 libuv 설치</h3><p><code>libuv</code>는 멀티플랫폼 비동기 IO 라이브러리 입니다.<br><code>Kestrel</code>에서 <code>libuv</code>를 사용합니다.<br><code>Kestrel</code>은 ASP.NET Core를 호스팅하기 위한 크로스-플랫폼 HTTP 서버 입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install make automake libtool curl</div><div class="line"></div><div class="line">curl -sSL https://github.com/libuv/libuv/archive/v1.8.0.tar.gz | sudo tar zxfv - -C /usr/local/src</div><div class="line"></div><div class="line">cd /usr/local/src/libuv-1.8.0</div><div class="line"></div><div class="line">sudo sh autogen.sh</div><div class="line"></div><div class="line">sudo ./configure</div><div class="line"></div><div class="line">sudo make</div><div class="line"></div><div class="line">sudo make install</div><div class="line"></div><div class="line">sudo rm -rf /usr/local/src/libuv-1.8.0 &amp;&amp; cd ~/</div><div class="line"></div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure>
+<h2 id="3-ASP-NET-Core-Web-App-생성하기"><a href="#3-ASP-NET-Core-Web-App-생성하기" class="headerlink" title="3. ASP.NET Core Web App 생성하기"></a>3. <strong>ASP.NET Core</strong> Web App 생성하기</h2><p>다음 Link의 공식문서를 보고 작성하였습니다. (<a href="https://docs.asp.net/en/latest/getting-started.html" target="_blank" rel="external">https://docs.asp.net/en/latest/getting-started.html</a>)</p>
+<p>좀 전에 생성한 예제 코드로 이동하겠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/hwapp</div></pre></td></tr></table></figure>
+<p><code>project.json</code>의 <code>dependencies</code>란에 다음과 같이 <code>Kestrel</code>를 추가해주세요.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0-*"</span>,</div><div class="line">  <span class="attr">"buildOptions"</span>: &#123;</div><div class="line">    <span class="attr">"debugType"</span>: <span class="string">"portable"</span>,</div><div class="line">    <span class="attr">"emitEntryPoint"</span>: <span class="literal">true</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;&#125;,</div><div class="line">  <span class="attr">"frameworks"</span>: &#123;</div><div class="line">    <span class="attr">"netcoreapp1.0"</span>: &#123;</div><div class="line">      <span class="attr">"dependencies"</span>: &#123;</div><div class="line">        <span class="attr">"Microsoft.NETCore.App"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"platform"</span>,</div><div class="line">          <span class="attr">"version"</span>: <span class="string">"1.0.0"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"Microsoft.AspNetCore.Server.Kestrel"</span>: <span class="string">"1.0.0"</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"imports"</span>: <span class="string">"dnxcore50"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>패키지를 project에 다운로드 합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet restore</div></pre></td></tr></table></figure>
+<p><code>Startup.cs</code>파일을 추가하려 다음의 내용으로 작성합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using Microsoft.AspNetCore.Builder;</div><div class="line">using Microsoft.AspNetCore.Hosting;</div><div class="line">using Microsoft.AspNetCore.Http;</div><div class="line"></div><div class="line">namespace aspnetcoreapp</div><div class="line">&#123;</div><div class="line">    public class Startup</div><div class="line">    &#123;</div><div class="line">        public void Configure(IApplicationBuilder app)</div><div class="line">        &#123;</div><div class="line">            app.Run(context =&gt;</div><div class="line">            &#123;</div><div class="line">                return context.Response.WriteAsync(&quot;Hello from ASP.NET Core!&quot;);</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>Program.cs</code>파일을 다음과 같이 수정해주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using Microsoft.AspNetCore.Hosting;</div><div class="line"></div><div class="line">namespace aspnetcoreapp</div><div class="line">&#123;</div><div class="line">    public class Program</div><div class="line">    &#123;</div><div class="line">        public static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line">            var host = new WebHostBuilder()</div><div class="line">                .UseKestrel()</div><div class="line">                .UseStartup&lt;Startup&gt;()</div><div class="line">                .Build();</div><div class="line"></div><div class="line">            host.Run();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>그런 다음 실행합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet run</div></pre></td></tr></table></figure>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.02.png?raw=true"></p>
+<p>위 그림과 같은 메세지가 나오면 성공한 것입니다.</p>
+<p>웹브라우저로 붙어보면 아래와 같은 그림이 나옵니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.03.png?raw=true"></p>
+<h2 id="4-외부에서-접속가능하게-배포하기"><a href="#4-외부에서-접속가능하게-배포하기" class="headerlink" title="4. 외부에서 접속가능하게 배포하기"></a>4. 외부에서 접속가능하게 배포하기</h2><p>다음 Link의 공식문서를 보고 따라했습니다.<br>(<a href="https://docs.asp.net/en/latest/publishing/linuxproduction.html" target="_blank" rel="external">https://docs.asp.net/en/latest/publishing/linuxproduction.html</a>)</p>
+<p><code>Nginx</code>를 설치합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nginx</div></pre></td></tr></table></figure>
+<p>이제 우리가 띄운 <code>Web App</code>으로 접속하도록 <strong>Proxy</strong>를 설정합니다.</p>
+<p>설정파일은 <code>/etc/nginx/sites-available/default</code> 입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/nginx/sites-available/default</div></pre></td></tr></table></figure>
+<p>버전별로 내용이 조금 다룰수 있는데 눈여겨 볼 부분은 다음과 같습니다.</p>
+<h3 id="4-1-외부에서-접속할-Port-설정"><a href="#4-1-외부에서-접속할-Port-설정" class="headerlink" title="4.1 외부에서 접속할 Port 설정"></a>4.1 외부에서 접속할 Port 설정</h3><p>아래 <code>80</code>부분을 원하는 Port로 설정하면 됩니다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen 80 default_server;</div><div class="line">    listen [::]:80 default_server ipv6only=on;</div></pre></td></tr></table></figure></p>
+<h3 id="4-2-내부로-연결한-주소-설정"><a href="#4-2-내부로-연결한-주소-설정" class="headerlink" title="4.2 내부로 연결한 주소 설정"></a>4.2 내부로 연결한 주소 설정</h3><p><code>location</code>부분을 아래와 같이 설정합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">    proxy_pass http://localhost:5000;</div><div class="line">    proxy_http_version 1.1;</div><div class="line">    proxy_set_header Upgrade $http_upgrade;</div><div class="line">    proxy_set_header Connection keep-alive;</div><div class="line">    proxy_set_header Host $host;</div><div class="line">    proxy_cache_bypass $http_upgrade;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>중요한 부분만 그림으로 보면 다음과 같습니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.04.png?raw=true"></p>
+<p>수정한 내용에 이상은 없는지 확인한 후 실행합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo nginx -t</div><div class="line"></div><div class="line">sudo service nginx start</div></pre></td></tr></table></figure>
+<p>만약 수행 중 변경 후 반영하려면 다음과 같이 입력해야 합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nginx -s reload</div></pre></td></tr></table></figure>
+<p>이제 외부에서 Web App으로 접근이 가능합니다</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.05.png?raw=true"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/09/17/CSharp.AspnetCore.Install.Net.Core/" data-id="cj1ujekv800015a7bgt0o1jem" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSharp.AspnetCore.Depoly.VS.Git" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/17/CSharp.AspnetCore.Depoly.VS.Git/" class="article-date">
+  <time datetime="2016-09-16T15:00:00.000Z" itemprop="datePublished">2016-09-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/17/CSharp.AspnetCore.Depoly.VS.Git/">Deploying .NET Core Web App with Visual Studio and Git</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Deploying-NET-Core-Web-App-with-Visual-Studio-and-Git"><a href="#Deploying-NET-Core-Web-App-with-Visual-Studio-and-Git" class="headerlink" title="Deploying .NET Core Web App with Visual Studio and Git"></a>Deploying .NET Core Web App with Visual Studio and Git</h1><p><strong> ASP.NET Core</strong> 개발환경으로는 Windows에서 Visual Studio를 사용하는 것이 가장 편합니다.<br>이번 포스팅에서는 Windows에서 <code>ASP.NET Core Web App</code>을 작성하여 Git을 이용하여 <strong>Ubuntu</strong>에서 실행하는 것을 소개해 드리겠습니다.</p>
+<h2 id="1-Github에-Repository-생성하기"><a href="#1-Github에-Repository-생성하기" class="headerlink" title="1. Github에 Repository 생성하기"></a>1. Github에 Repository 생성하기</h2><p>본인의 GitHub 계정으로 가셔서 아래와 같이 원하는 이름으로 Repository를 생성합니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/vs.git.01.png?raw=true"></p>
+<h2 id="2-PC에-GitHub-Repository-Clone-하기"><a href="#2-PC에-GitHub-Repository-Clone-하기" class="headerlink" title="2. PC에 GitHub Repository Clone 하기"></a>2. PC에 GitHub Repository Clone 하기</h2><p>원하시는 폴더로 가셔서 GitHub Repository에 연결하세요.<br>(아래에서 github 주소란에는 본인의 Repository 주소로 적어주세요.)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">mkdir WebApp</div><div class="line"></div><div class="line">cd WebApp</div><div class="line"></div><div class="line">git init</div><div class="line"></div><div class="line">git remote add origin https://github.com/DevStarSJ/WebApp.git</div><div class="line"></div><div class="line">git pull origin master</div></pre></td></tr></table></figure>
+<h2 id="3-Visual-Studio로-Web-App-예제-만들기"><a href="#3-Visual-Studio로-Web-App-예제-만들기" class="headerlink" title="3. Visual Studio로 Web App 예제 만들기"></a>3. Visual Studio로 Web App 예제 만들기</h2><p><code>ASP.NET Core Web Application</code>으로 프로젝트를 생성합니다.<br>위치를 좀 전에 Git Repository로 지정한 곳으로 해주세요.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/vs.git.02.png?raw=true"></p>
+<p>다음 그림에서는 <code>Web Application</code>을 선택한 후에 <code>OK</code>를 눌러주세요.</p>
+<p>제대로 만들어졌는지, <code>F5</code>를 눌러서 확인해봅니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/vs.git.03.png?raw=true"></p>
+<h2 id="4-GitHub에-올리기"><a href="#4-GitHub에-올리기" class="headerlink" title="4. GitHub에 올리기"></a>4. GitHub에 올리기</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git add --all</div><div class="line"></div><div class="line">git commit -m &quot;Initial Commit&quot;</div><div class="line"></div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+<h2 id="5-Ubuntu에서-내려받기"><a href="#5-Ubuntu에서-내려받기" class="headerlink" title="5. Ubuntu에서 내려받기"></a>5. Ubuntu에서 내려받기</h2><p>아직 <code>git</code>이 설치되어 있지 않다면 아래와 같이 설치를 해주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install git</div></pre></td></tr></table></figure>
+<p>이제 원하는 폴더로 가셔서 GitHub에서 내려받습니다. 위에 Windows에서 한것과 명령어가 같습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">mkdir WebApp</div><div class="line"></div><div class="line">cd WebApp</div><div class="line"></div><div class="line">git init</div><div class="line"></div><div class="line">git remote add origin https://github.com/DevStarSJ/WebApp.git</div><div class="line"></div><div class="line">git pull origin master</div></pre></td></tr></table></figure>
+<p>이제 WebApp 폴더로 들어가서 <code>project.json</code>의 <code>framework</code>부분을 아래와 같이 수정합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd WebApp/src/WebApp</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">"frameworks": &#123;</div><div class="line">  "netcoreapp1.0": &#123;</div><div class="line">    "dependencies": &#123;</div><div class="line">      "Microsoft.NETCore.App": &#123;</div><div class="line">        "type": "platform",</div><div class="line">        "version": "1.0.0"</div><div class="line">      &#125;,</div><div class="line">      "Microsoft.AspNetCore.Server.Kestrel": "1.0.0"</div><div class="line">    &#125;,</div><div class="line">    "imports": "dnxcore50"</div><div class="line">  &#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<p>저장한 뒤 이제 실행합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">dotnet restore</div><div class="line"></div><div class="line">dotnet build</div><div class="line"></div><div class="line">dotnet run</div></pre></td></tr></table></figure>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/vs.git.04.png?raw=true"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/09/17/CSharp.AspnetCore.Depoly.VS.Git/" data-id="cj1ujekvr00045a7bz4m8lnnr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-TypeScript.07.Exceptions, Memory, and Performance" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/08/16/TypeScript.07.Exceptions, Memory, and Performance/" class="article-date">
@@ -1201,427 +1492,10 @@
 
 
   
-    <article id="post-TypeScript.03.ObjectOrientationInTypeScript" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/11/TypeScript.03.ObjectOrientationInTypeScript/" class="article-date">
-  <time datetime="2016-06-10T15:00:00.000Z" itemprop="datePublished">2016-06-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>►<a class="article-category-link" href="/categories/JavaScript/TypeScript/">TypeScript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/11/TypeScript.03.ObjectOrientationInTypeScript/">Chapter 3 Object Orientation in TypeScript</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Chapter-3-Object-Orientation-in-TypeScript"><a href="#Chapter-3-Object-Orientation-in-TypeScript" class="headerlink" title="Chapter 3 Object Orientation in TypeScript"></a>Chapter 3 Object Orientation in TypeScript</h1><blockquote>
-<p>소프트웨어를 디자인하는 방법 2가지가 있습니다.<br>하나는 간단하게 만들어서 명백하게 결함을 없게하는 것이고,<br>다른 방법은 복잡하게 만들어서 병백한 결함을 없게하는 것입니다.<br>전자가 조금 더 어렵습니다. 그것은 마치 복잡한 자연의 섭리와 같은 기술, 헌신, 통찰력, 영감 등을 요구합니다.</p>
-<ul>
-<li>Tony Hoare</li>
-</ul>
-</blockquote>
-<p>객체지향 프로그래밍은 현실 세계와 유사하게 데이터와 관련된 행위를 코드로 표현합니다.<br>이것을 보통 변수(property)와 함수(method)를 포함하는 클래스(class)로 표현하고 있으며,<br>해당 클래스로부터 객체(object)를 생성합니다.</p>
-<p><a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank" rel="external">https://en.wikipedia.org/wiki/Object-oriented_programming</a></p>
-<p><a href="https://ko.wikipedia.org/wiki/객체_지향_프로그래밍" target="_blank" rel="external">https://ko.wikipedia.org/wiki/객체_지향_프로그래밍</a></p>
-<h2 id="Obejct-Orientation-in-TypeScript"><a href="#Obejct-Orientation-in-TypeScript" class="headerlink" title="Obejct Orientation in TypeScript"></a>Obejct Orientation in TypeScript</h2><p>타입스크립트는 다양한 OOP 개념들을 지원하고 있습니다.</p>
-<ul>
-<li>클래스(Classes)</li>
-<li>객체(Instance of classes)</li>
-<li>함수(Methods)</li>
-<li>상속(Inheritance) : <a href="https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)" target="_blank" rel="external">https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)</a></li>
-<li>열린 재귀(Open recursion) : <a href="https://en.wikipedia.org/wiki/This_(computer_programming)#Open_recursion" target="_blank" rel="external">https://en.wikipedia.org/wiki/This_(computer_programming)#Open_recursion</a></li>
-<li>캡슐화(Encapsulation) : <a href="https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)" target="_blank" rel="external">https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)</a></li>
-<li>위임(Delegation) : <a href="https://en.wikipedia.org/wiki/Delegation_(computing)" target="_blank" rel="external">https://en.wikipedia.org/wiki/Delegation_(computing)</a></li>
-<li>다형성(Polymophism) : <a href="https://en.wikipedia.org/wiki/Polymorphism_(computer_science)" target="_blank" rel="external">https://en.wikipedia.org/wiki/Polymorphism_(computer_science)</a></li>
-</ul>
-<p>Classes, Instace of classes, Methods, Inheritacne는 Chapter.01에서 이미 살펴보았습니다.</p>
-<h2 id="열린-재귀-Open-Recursion"><a href="#열린-재귀-Open-Recursion" class="headerlink" title="열린 재귀(Open Recursion)"></a>열린 재귀(Open Recursion)</h2><p><strong>열린 재귀</strong>란 재귀의 조합과 늦은 바인딩입니다.<br>클래스 내에서 메서드가 자기자신을 호출한 경우, 서브클래스에 정의된 함수를 호출 할 수도 있습니다.<br>그냥 함수 <strong>override</strong>를 설명하는 개념인 것 같습니다.<br><em>List 3-1</em>은 디렉토리의 내용을 읽는 클레스입니다.<br><code>FileReader</code> 클래스는 입력받은 경로에서 내용들을 읽습니다.<br>모든 파일은 파일트리에 추가되지만, 디렉토리에 대해서는 <code>this.getFiles</code>를 재귀적으로 호출합니다.<br>이러한 재귀호출은 모든 하위 경로내의 파일들을 추가할때 까지 계속됩니다.<br><code>fs.readdirSync</code>와 <code>fs.statSync</code> 메서드는 <strong>NodeJS</strong>에 있는 것 입니다.</p>
-<h4 id="List-3-1-Open-Recursion"><a href="#List-3-1-Open-Recursion" class="headerlink" title="List 3-1 Open Recursion"></a>List 3-1 Open Recursion</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> FileItem &#123;</div><div class="line">	path: <span class="built_in">string</span>;</div><div class="line">	contents: <span class="built_in">string</span>[];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> FileReader &#123;</div><div class="line">	getFiles(path: <span class="built_in">string</span>, depth: <span class="built_in">number</span> = <span class="number">0</span>) &#123;</div><div class="line">		<span class="keyword">var</span> fileTree = [];</div><div class="line">		<span class="keyword">var</span> files = fs.readdirSync(path);</div><div class="line">		</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; files.length; i++) &#123;</div><div class="line">			<span class="keyword">var</span> file = files[i];</div><div class="line">			<span class="keyword">var</span> stats = fs.statSync(file);</div><div class="line">			<span class="keyword">var</span> fileItem;</div><div class="line">			<span class="keyword">if</span> (stats.isDirectory()) &#123;</div><div class="line">				<span class="comment">// Add directory and contents</span></div><div class="line">				fileItem = &#123;</div><div class="line">					path: file,</div><div class="line">					contents: <span class="keyword">this</span>.getFiles(file, (depth + <span class="number">1</span>))</div><div class="line">				&#125;;</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				<span class="comment">// Add file</span></div><div class="line">				fileItem = &#123;</div><div class="line">					path: file,</div><div class="line">					contents: []</div><div class="line">				&#125;;</div><div class="line">			&#125;</div><div class="line">			fileTree.push(fileItem);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="keyword">return</span> fileTree;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> LimitedFileReader <span class="keyword">extends</span> FileReader &#123;</div><div class="line">	</div><div class="line">	<span class="keyword">constructor</span>(<span class="params"><span class="keyword">public</span> maxDepth: <span class="built_in">number</span></span>) &#123;</div><div class="line">		<span class="keyword">super</span>();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	getFiles(path: <span class="built_in">string</span>, depth = <span class="number">0</span>) &#123;</div><div class="line">		<span class="keyword">if</span> (depth &gt; <span class="keyword">this</span>.maxDepth) &#123;</div><div class="line">			<span class="keyword">return</span> [];</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">super</span>.getFiles(path, depth);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// instatiating an instance of LimitedFileReader</span></div><div class="line"><span class="keyword">var</span> fileReader = <span class="keyword">new</span> LimitedFileReader(<span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="comment">// results in only the top level, and one additional level being read</span></div><div class="line"><span class="keyword">var</span> files = fileReader.getFiles(<span class="string">'path'</span>);</div></pre></td></tr></table></figure>
-<p>예제에서는 간단한 <em>Sync</em> 함수를 사용했지만,<br>실제로 구현할때에는 <code>readdir</code>, <code>stat</code>와 같이 콜백함수를 사용하는 것이 좋습니다.</p>
-<p><code>LimitedFileReader</code>는 <code>FieReader</code>의 서브클레스입니다.<br><code>LimitedFileReader</code>의 객체를 생성할 때 클레스에 표시되는 파일 트리의 깊이를 지정해야 합니다.<br>이 예제에서는 <code>this.getFiles</code>를 <strong>열린재귀</strong>로 어떻게 호출하는가를 보여줍니다.<br><code>FileReader</code>로 객체를 생성한 경우 <code>this.getFiles</code>는 단순한 일반적인 재귀호출이 됩니다만,<br><code>LimitedFileReader</code>로 인스턴스를 생성한 경우 <code>FileReader.getFiles</code> 메서드 내에서 <code>thid.getFiles</code>는 <code>LimitedFileReader.getFiles</code>를 호출하게 됩니다.</p>
-<p><strong>열린재귀</strong>는 부모클래스를 변경하지 할 필요도 없고, 서브클래스에 대한 사항을 몰라도 된다는 점입니다.<br>서브클래스는 부모클래스의 코드를 재사용하기 위해서 코드를 중복적으로 작성할 필요가 없습니다.</p>
-<h2 id="캡슐화-Encapsulation"><a href="#캡슐화-Encapsulation" class="headerlink" title="캡슐화(Encapsulation)"></a>캡슐화(Encapsulation)</h2><p><em>타입스크립트</em>는 <strong>캡슐화</strong>를 완벽히 지원합니다.<br>클래스 객체는 변수과 함수를 가지고 있으며, <code>private</code> 제한자를 이용해 외부로부터 숨길 수 있습니다.<br><strong>캡슐화</strong>란 데이터를 숨겨서 외부에서 해당 데이터에 대한 접근을 방지하는 것을 말합니다.</p>
-<p><code>List 3-2</code>의 예를 보면 <code>Totalizer</code> 클래스의 경우 <code>private</code>으로 <code>total</code> 변수를 가지고 있어서 외부에서는 수정을 할 수 없습니다.<br>수정하기 위해서는 클래스내에 선언된 함수 호출로 가능합니다.<br>이런 점은 다음의 위험을 제거합니다.</p>
-<ul>
-<li><code>taxRebate</code>를 추가하지 않으면서 <code>amount</code>를 추가하는 외부 코드</li>
-<li><code>amount</code>가 0보다 크지 않은 경우</li>
-<li>코드 여러곳에서 호출되는 <code>taxRebate</code> 계산</li>
-<li>코드 여러곳에 나타는 <code>taxRateFactor</code></li>
-</ul>
-<h4 id="List-3-2-Encapsulation"><a href="#List-3-2-Encapsulation" class="headerlink" title="List 3-2 Encapsulation"></a>List 3-2 Encapsulation</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Totalizer &#123;</div><div class="line">    <span class="keyword">private</span> total = <span class="number">0</span>;</div><div class="line">    <span class="keyword">private</span> taxRateFactor = <span class="number">0.2</span>;</div><div class="line"></div><div class="line">    addDonation(amount: <span class="built_in">number</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (amount &lt;= <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'Donation exception'</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">var</span> taxRebate = amount * <span class="keyword">this</span>.taxRateFactor;</div><div class="line">        <span class="keyword">var</span> totalDonation = amount + taxRebate;</div><div class="line">        <span class="keyword">this</span>.total += totalDonation;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    getAmountRaised() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.total;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> totalizer = <span class="keyword">new</span> Totalizer();</div><div class="line">totalizer.addDonation(<span class="number">100.00</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> fundsRaised = totalizer.getAmountRaised();</div><div class="line"></div><div class="line"><span class="comment">// 120</span></div><div class="line"><span class="built_in">console</span>.log(fundsRaised);</div></pre></td></tr></table></figure>
-<p><strong>캡슐화</strong>를 하면 프로그램상에서 중복 코드를 예방할 수 있는 도구로 보여지지만 사실상 그렇지 않습니다.<br><code>private</code> 키워드를 사용하여 외부에서 값을 수정하는 것을 방지할 수 있습니다.<br>복제의 가장 일반적인 경우는 논리적 분리입니다.<br>예를 들어서 <code>if</code>나 <code>switch</code> 문의 경우 <code>private</code>에 숨겨진 요소를 바탕으로 프로그램을 제어 할 수 있습니다.<br>요소를 변경할 경우 이러한 논리적 분리 상에 있는 모든 코드들을 다 살펴봐야 할 필요가 있습니다.</p>
-<h2 id="위임-Delegation"><a href="#위임-Delegation" class="headerlink" title="위임 (Delegation)"></a>위임 (Delegation)</h2><p>프로그램 재사용 측면에서 가장 중요한 개념중 하나는 바로 <strong>위임</strong>입니다.<br>레퍼(Wrapper) 클래스가 위임한 클래스를 호출하기 위해 인자로 키워드를 전달해야하는 경우 위임한 클레스는 래퍼클레스의 메서드를 호출 할 수 있습니다.</p>
-<p>이것은 레퍼와 위임한 클래스가 서브클레스와 부모클레스로 동작하는것을 가능하게 합니다.<br>레퍼가 자기자신에게 참조를 전달하지 못할 경우, 해당 작업은 위임보다는 전달(Forwarding)로 알려져 있습니다.<br>위임과 전달에서는 클래스의 함수를 호출할 수 있지만, 해당 클래스는 그것을 다른 클래스로 넘겨줍니다.<br>Listing 3-3이 거기에 대한 예제입니다.</p>
-<p>위임과 전달은 두 클래스간의 관계가 <code>ia a</code> 테스트에 실패하여 상속이 안되는 경우 좋은 대안입니다.</p>
-<h4 id="Listing-3-3-Delegation"><a href="#Listing-3-3-Delegation" class="headerlink" title="Listing 3-3. Delegation"></a>Listing 3-3. Delegation</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> ControlPanel &#123;</div><div class="line">    startAlarm(message: <span class="built_in">string</span>): <span class="built_in">any</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">interface</span> Sensor &#123;</div><div class="line">    check(): <span class="built_in">any</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> MasterControlPanel &#123;</div><div class="line">    <span class="keyword">private</span> sensors: Sensor[] = [];</div><div class="line">    <span class="keyword">constructor</span>(<span class="params"></span>) &#123;</div><div class="line">        <span class="comment">// Instantiating the delegate HeatSensor</span></div><div class="line">        <span class="keyword">this</span>.sensors.push(<span class="keyword">new</span> HeatSensor(<span class="keyword">this</span>));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    start() &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i= <span class="number">0</span>; i &lt; <span class="keyword">this</span>.sensors.length; i++) &#123;</div><div class="line">            <span class="comment">// Calling the delegate</span></div><div class="line">            <span class="keyword">this</span>.sensors[i].check();</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">window</span>.setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>.start(), <span class="number">1000</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    startAlarm(message: <span class="built_in">string</span>) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Alarm! '</span> + message);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> HeatSensor &#123;</div><div class="line">    <span class="keyword">private</span> upperLimit = <span class="number">38</span>;</div><div class="line">    <span class="keyword">private</span> sensor =  &#123;</div><div class="line">        read: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">100</span>); &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> controlPanel: ControlPanel</span>) &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    check() &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.sensor.read() &gt; <span class="keyword">this</span>.upperLimit) &#123;</div><div class="line">            <span class="comment">// Calling back to the wrapper</span></div><div class="line">            <span class="keyword">this</span>.controlPanel.startAlarm(<span class="string">'Overheating!'</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> cp = <span class="keyword">new</span> MasterControlPanel();</div><div class="line">cp.start();</div></pre></td></tr></table></figure>
-<p>List 3-3은 위임의 간단한 예제입니다.<br><code>HeatSensor</code>의 생성자로 <code>ControlPanel</code> 객체를 전달합니다.<br><code>HeatSensor</code> 클레스가 <code>ControlPanel</code>의 <code>startAlarm</code> 메서드를 필요할때 호출할 수 있습니다.</p>
-<p><code>ControlPanel</code>은 센서들의 갯수를 조정할수 있으며,<br>각각의 센서는 <code>ControlPanel</code>에 콜백을 통해서 문제가 발생했을때 경보를 알릴수 있습니다.</p>
-<p>그림 3-1은 다양한 자동차 구성 요소 사이의 관계를 설명합니다.</p>
-<p>새시는 자동차에 내장된 일반 골격입니다.<br>엔진, 구동샤프트, 트랜스미션이 섀시에 장착될 때, 그 결합을 롤링 섀시라고 합니다.</p>
-<h4 id="그림-3-1-캡슐화와-상속"><a href="#그림-3-1-캡슐화와-상속" class="headerlink" title="그림 3-1 캡슐화와 상속"></a>그림 3-1 캡슐화와 상속</h4><p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Front-end/TypeScript/image/TypeScript.03.01.png?raw=true"></p>
-<h2 id="다형성-Polymorphism"><a href="#다형성-Polymorphism" class="headerlink" title="다형성(Polymorphism)"></a>다형성(Polymorphism)</h2><p><strong>다형성</strong>이란 하나의 시그너쳐를 여러가지 다른 형태로 구현하는 능력을 말합니다.<br><em>타입스크립트</em>에서 <strong>다형성</strong>은 여러가지 다른 형태로 가능합니다.</p>
-<ul>
-<li>많은 클래스에 의해 구현된 인터페이스</li>
-<li>많은 개체에 의해 구현된 인터페이스</li>
-<li>많은 함수에 의해 구현된 인터페이스</li>
-<li>여러 서브 클래스를 가진 슈퍼 클래스</li>
-<li>유사한 스트럭쳐를 많이 가진 스트럭쳐</li>
-</ul>
-<p>리스트 중 마지막 부분에 보면 <em>“유사한 스트럭쳐를 많이 가진 스트럭쳐”</em>란 형태가 같은 <em>타입스크립트 스트럭쳐 타입</em>을 말합니다.</p>
-<h4 id="Listing-3-4-Polymorphism"><a href="#Listing-3-4-Polymorphism" class="headerlink" title="Listing 3-4. Polymorphism"></a>Listing 3-4. Polymorphism</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> Vehicle &#123;</div><div class="line">    moveTo(x: <span class="built_in">number</span>, y: <span class="built_in">number</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Car <span class="keyword">implements</span> Vehicle &#123;</div><div class="line">    moveTo(x: <span class="built_in">number</span>, y: <span class="built_in">number</span>) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Driving to '</span> + x + <span class="string">' '</span> + y);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> SportsCar <span class="keyword">extends</span> Car &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Airplane &#123;</div><div class="line">    moveTo(x: <span class="built_in">number</span>, y: <span class="built_in">number</span>) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Flying to '</span> + x + <span class="string">' '</span> + y);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">navigate</span>(<span class="params">vehicle: Vehicle</span>) </span>&#123;</div><div class="line">    vehicle.moveTo(<span class="number">59.9436499</span>, <span class="number">10.7167959</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> airplane = <span class="keyword">new</span> Airplane();</div><div class="line">navigate(airplane);</div><div class="line"><span class="keyword">var</span> car = <span class="keyword">new</span> SportsCar();</div><div class="line">navigate(car);</div></pre></td></tr></table></figure>
-<p><code>navigate</code>함수는 <code>Vehicle</code>인터페이스와 호환되는 어떤 타입이라도 다 받아들입니다.<br>2개의 <code>number</code>타입을 인수로 받는 <code>moveTo</code> 메서드를 가진 어떠한 클래스나 객체라도 다 가능합니다.</p>
-<p>예제의 모든 타입은 <code>Vehicle</code>의 정의와 호환됩니다.<br><code>Car</code>는 명시적으로 인터페이스를 구현한 것이며,<br><code>SportsCar</code>는 <code>Car</code>를 상속받았으므로 <code>Vehicle</code>인터페이스를 구현하였습니다.<br><code>Airplane</code>는 명시적으로 <code>Vehicle</code> 인터페이스를 구현하지 않았지만, <code>moveTo</code> 메서드 가지고 있으므로 <code>navigate</code> 함수에 호환됩니다.</p>
-<h2 id="SOLID-Principles"><a href="#SOLID-Principles" class="headerlink" title="SOLID Principles"></a>SOLID Principles</h2><p><a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)" target="_blank" rel="external">https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)</a></p>
-<h4 id="1-단일-책임-원칙-Single-responsibility-priciple"><a href="#1-단일-책임-원칙-Single-responsibility-priciple" class="headerlink" title="1. 단일 책임 원칙 (Single responsibility priciple)"></a>1. 단일 책임 원칙 (Single responsibility priciple)</h4><p>클레스는 오직 한 가지 작업만 수행하며, 단 한 가지 이유에 의해서만 변경되는 코드를 작성하도록 권장하는 원칙이다.</p>
-<h4 id="2-개방-폐쇄-원칙-Open-closed-principle"><a href="#2-개방-폐쇄-원칙-Open-closed-principle" class="headerlink" title="2. 개방/폐쇄 원칙 (Open/closed principle)"></a>2. 개방/폐쇄 원칙 (Open/closed principle)</h4><p>클래스 내부를 수정하지 않고서도 확장할 수 있어야 한다. (여기에 대해서는 사람마다 해석하는 방법이 다르다.)</p>
-<ul>
-<li>확장에 대한 개방 : 새로운 요구 사항 발생시 추가가 가능해야 한다. </li>
-<li>수정에 대한 폐쇄 : 수정될때 그 결과 인해 모듈의 소스 혹은 바이너리 코드가 변경되어서는 안된다.</li>
-</ul>
-<h4 id="3-리스코프-치환-원칙-Liskov-substitution-principle"><a href="#3-리스코프-치환-원칙-Liskov-substitution-principle" class="headerlink" title="3. 리스코프 치환 원칙 (Liskov substitution principle)"></a>3. 리스코프 치환 원칙 (Liskov substitution principle)</h4><p>슈퍼 클래스가 사용되는 곳에 서브 클래스로 치환하더라도 문제를 일으키지 않고 동작해야 한다.</p>
-<h4 id="4-인터페이스-분리-Interface-segregation-principle"><a href="#4-인터페이스-분리-Interface-segregation-principle" class="headerlink" title="4. 인터페이스 분리 (Interface segregation principle)"></a>4. 인터페이스 분리 (Interface segregation principle)</h4><p>작은 인터페이스로 많이 분리하는 것이 일반적인 경우에도 다 사용가능한 하나의 인터페이스보다 더 좋다.</p>
-<h4 id="5-의존성-주입-Dependency-inversion-principle"><a href="#5-의존성-주입-Dependency-inversion-principle" class="headerlink" title="5, 의존성 주입 (Dependency inversion principle)"></a>5, 의존성 주입 (Dependency inversion principle)</h4><p>직접적으로 의존하지 말고 추상화에 의존하라.</p>
-<h3 id="단일-책임-원칙-Single-responsibility-priciple"><a href="#단일-책임-원칙-Single-responsibility-priciple" class="headerlink" title="단일 책임 원칙 (Single responsibility priciple)"></a>단일 책임 원칙 (Single responsibility priciple)</h3><p>클레스가 변경되는 이유는 딱 한가지여야 합니다.<br>클레스 설계시 통상 관련있는 항목 들을 같이 넣어서 변경시 관련 있는 것들을 모아둡니다.<br>이러한 프로그램은 매우 결합력이 있을수 있습니다.</p>
-<p>여기에서의 결합력의 의미는 클래스나 모듈에서 기능의 관련성을 의미합니다.<br>기능들이 관련성이 낮으면 클래스는 낮은 결합력을 가지는 것이며 여러가지 이유에 의해서 변경 될 수 있습니다.<br>높은 응집력은 <code>SRP</code>의 결과입니다.</p>
-<p>코드를 추가할 경우 어디에 추가할지에 대해서 결정을 해야 하는데 대부분의 명백히 맞다, 틀리다라고 말하기 애매한 경우가 많습니다.<br>클래스는 시간이 지날수록 점점 더 원래의 목적과 멀어지는 경우가 많습니다.</p>
-<p><strong>SRP</strong>를 클래스에 적용한다고 생각할 것이 아니라<br>함수를 만들때도 그것은 한가지 일만 수행해야 하고, 한가지 이유에 의해서만 수정해야 합니다.<br>모듈 또한 마찬가지고 한가지 목적을 가지고 있는 것들의 집합으로 생성해야 합니다.</p>
-<p><em>List 3-5</em>는 <strong>SRP</strong>에 어긋한 사례를 보여줍니다.<br>언뜻보면 모든 함수들이 <code>Movie</code> 클래스의 속성을 사용하여 작업하므로 맞게 된 것으로 보이지만,<br><code>Movie</code> 객체를 사용하는 것과 Repository로 사용하는 것 사이에서 그 경계가 애매모호 한 점이 보입니다.</p>
-<h4 id="Listing-3-5-Single-responsibility-principle-SRP-violation"><a href="#Listing-3-5-Single-responsibility-principle-SRP-violation" class="headerlink" title="Listing 3-5. Single responsibility principle (SRP) violation"></a>Listing 3-5. Single responsibility principle (SRP) violation</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Movie &#123;</div><div class="line">    <span class="keyword">private</span> db: DataBase;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> title: <span class="built_in">string</span>, <span class="keyword">private</span> year: <span class="built_in">number</span></span>) &#123;</div><div class="line">        <span class="keyword">this</span>.db = DataBase.connect(<span class="string">'user:pw@mydb'</span>, [<span class="string">'movies'</span>]);</div><div class="line">    &#125;</div><div class="line">    getTitle() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.title + <span class="string">' ('</span> + <span class="keyword">this</span>.year + <span class="string">')'</span>;</div><div class="line">    &#125;</div><div class="line">    save() &#123;</div><div class="line">        <span class="keyword">this</span>.db.movies.save(&#123; title: <span class="keyword">this</span>.title, year: <span class="keyword">this</span>.year &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>이 클래스가 더 커지기전에 수정하고자 한다면,<br><code>Movie</code>에 관련된 것과 <code>MovieRepository</code>에 관련된 것으로 구분이 가능합니다.<br><code>Movie</code>에 관련된 기능을 추가할 경우 <code>MovieRepository</code>는 변경할 필요가 없습니다.<br>반대로 <code>MovieRepository</code>를 변경한 경우 <code>Movie</code>는 변경할 필요가 없습니다.</p>
-<h4 id="Listing-3-6-Separate-reasons-for-change"><a href="#Listing-3-6-Separate-reasons-for-change" class="headerlink" title="Listing 3-6. Separate reasons for change"></a>Listing 3-6. Separate reasons for change</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Movie &#123;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> title: <span class="built_in">string</span>, <span class="keyword">private</span> year: <span class="built_in">number</span></span>) &#123;</div><div class="line">    &#125;</div><div class="line">    getTitle() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.title + <span class="string">' ('</span> + <span class="keyword">this</span>.year + <span class="string">')'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> MovieRepository &#123;</div><div class="line">    <span class="keyword">private</span> db: DataBase;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params"></span>) &#123;</div><div class="line">        <span class="keyword">this</span>.db = DataBase.connect(<span class="string">'user:pw@mydb'</span>, [<span class="string">'movies'</span>]);</div><div class="line">    &#125;</div><div class="line">    save(movie: Movie) &#123;</div><div class="line">        <span class="keyword">this</span>.db.movies.save(<span class="built_in">JSON</span>.stringify(movie));</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Movie</span></div><div class="line"><span class="keyword">var</span> movie = <span class="keyword">new</span> Movie(<span class="string">'The Internship'</span>, <span class="number">2013</span>);</div><div class="line"></div><div class="line"><span class="comment">// MovieRepository</span></div><div class="line"><span class="keyword">var</span> movieRepository = <span class="keyword">new</span> MovieRepository();</div><div class="line"></div><div class="line">movieRepository.save(movie);</div></pre></td></tr></table></figure>
-<p><strong>SRP</strong>를 클래스 레벨에 대해서 고려하는 것은 개념적으로 생각하기 쉽습니다.<br>하지만 함수 레벨에 적용을 하는게 더 중요합니다.<br>각각의 함수는 한가지 작업만을 수행하며, 함수명은 그 의도를 명확히 보여주어야 합니다.<br><em>Uncle Bob</em> (<a href="http://blog.cleancoder.com" target="_blank" rel="external">http://blog.cleancoder.com</a>)은 <em>당신이 떨어져 나갈때까지 분리하라.</em>고 하였습니다.<br>즉, 함수가 몇줄 안될때까지 한가지 작업만 할 수 있도록 리팩토링을 하라는 의미입니다.<br>이러한 함수를 리팩토링하는 방법은 전체적인 디자인을 재구성할 경우 쉽게 가능하도록 하는데 큰 도움이 됩니다.</p>
-<h3 id="개방-폐쇄-원칙-Open-closed-principle"><a href="#개방-폐쇄-원칙-Open-closed-principle" class="headerlink" title="개방/폐쇄 원칙 (Open/closed principle)"></a>개방/폐쇄 원칙 (Open/closed principle)</h3><p><strong>OCP</strong>는 다음 문장으로 요약됩니다.</p>
-<blockquote>
-<p>소프트웨어는 확장에 대해서는 개방적이어야 하지만, 수정을 하는데는 폐쇄적이어야 한다.</p>
-</blockquote>
-<p>실질적으로 아무리 설계를 잘하더라도, 수정으로부터 완벽하게 보호하는 것은 힘듭니다.<br>그러나 아무리 사소한거라도 기존 코드를 변경하는 것은 위험합니다.</p>
-<p><strong>OCP</strong>를 따를려면 프로그램의 변경가능성을 고려해야 합니다.<br>예를 들어, 나중에 교체되거나 확장가능한 함수를 포함하는 클래스들을 식별해야 합니다.<br>하지만, 미래를 예측하는 것은 가능한 일이 아니며, 나중을 위해 생성한 코드는 거의 대부분 사용되지 않습니다.<br>무슨 일이 일어날지 예측하는 것은 까다롭습니다.<br>이 코드가 나중에 필요없게 될수도 있고, 예측한 것과는 다른 방향으로 흘러 갈 수도 있습니다.<br>그래서 실제로 문제가 일어났을 때만 해결하려고 노력을 한다는 것을 윈칙으로 하는것이 좋습니다.</p>
-<p><strong>OCP</strong>를 따르는 방법중 가장 일반적인 것은 필요할 경우 클래스를 다른 클래스도 대체할 수 있도록 구현하는 것입니다.<br>객체지향 언어로 이렇게 구현하는 것은 그렇게 어려운 일이 아닙니다.<br>물론 타입스크립트도 예외는 아닙니다.<br>목록 3-7은 <code>RewardPointsCalculator</code>라는 포인트 카드의 리워드를 계산해주는 클래스를 보여줍니다.<br>보통의 경우 달러 당 4점의 포인트를 보상해 줍니다.<br>VIP 손님과 같이 2배로 포인트를 보상해 주려고 할때 <code>DoublePointsCalculator</code>라는 서브클래스로 대체할 수 있습니다.<br><code>getPoints()</code>함수 호출하면 슈퍼클래스의 함수가 무시되고 서브클레스에서 수행합니다.</p>
-<h4 id="Listing-3-7-Open–closed-principle-OCP"><a href="#Listing-3-7-Open–closed-principle-OCP" class="headerlink" title="Listing 3-7. Open–closed principle (OCP)"></a>Listing 3-7. Open–closed principle (OCP)</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> RewardPointsCalculator &#123;</div><div class="line">    getPoints(transactionValue: <span class="built_in">number</span>) &#123;</div><div class="line">        <span class="comment">// 4 points per whole dollar spent</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.floor(transactionValue) * <span class="number">4</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> DoublePointsCalculator <span class="keyword">extends</span> RewardPointsCalculator &#123;</div><div class="line">    getPoints(transactionValue: <span class="built_in">number</span>) &#123;</div><div class="line">        <span class="keyword">var</span> standardPoints = <span class="keyword">super</span>.getPoints(transactionValue);</div><div class="line">        <span class="keyword">return</span> standardPoints * <span class="number">2</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> pointsCalculator = <span class="keyword">new</span> DoublePointsCalculator();</div><div class="line"></div><div class="line">alert(pointsCalculator.getPoints(<span class="number">100.99</span>));</div></pre></td></tr></table></figure>
-<p><code>RewardPointsCalculator</code>의 기능을 대체하기 위해서 해당 클래스에 대한 수정 없이 서브클래스를 생성하여 원래 기능을 대체함으로써 구현을 하였습니다.<br><strong>OCP</strong>를 잘 지키면 유지 보수 및 재사용 가능한 코드로 작성되는 경향이 높습니다.<br>변화가 필요한 경우에도 기존에 잘 동작하는 코드는 수정하지 않으면서 새로운 코드를 요구 사항에 맞게 처리하도록 추가할 수 있습니다.</p>
-<h3 id="리스코프-치환-원칙-The-Liskov-Substitution-Principle-LSP"><a href="#리스코프-치환-원칙-The-Liskov-Substitution-Principle-LSP" class="headerlink" title="리스코프 치환 원칙 (The Liskov Substitution Principle) (LSP)"></a>리스코프 치환 원칙 (The Liskov Substitution Principle) (LSP)</h3><p>바바라 리스코프(Barbara Liskov)가 1988년에 <code>데이터 추상화와 계층구조</code>(Data Abstraction and Hierarchy)라는 제목의 기조연설에서 이런말을 했습니다.</p>
-<blockquote>
-<p>S가 T의 하위속성이라면 프로그램의 변경없이 T의 객체를 S로 교체(치환)할 수 있어야 한다.</p>
-</blockquote>
-<p>서브클레스가 슈퍼클래스를 대체할 경우 클래스를 사용하는 코드가 대체한다는 사실을 알 필요가 없다는 것입니다.<br>개체의 타입에 대해서 테스트하는 코드가 있는 경우에는 <strong>LSP</strong>를 위반하고 있을 가능성이 높습니다.</p>
-<ul>
-<li>서브타입에서의 함수 인자 호환성 :<br>슈퍼클래스에 <code>Cat</code>을 입력받는 함수가 있는 경우, 서브클레스는 <code>Cat</code> 혹은 <code>Animal</code>을 인자로 받을수 있어야 합니다.</li>
-<li>서브타입에서의 리턴 타입 호환성 :<br>슈퍼클래스에 <code>Animal</code>을 리턴하는 함수가 있는 경우, 서브클레스는 <code>Animal</code>이나 <code>Animal</code>의 서브클래스 (<code>Cat</code>)를 반환할 수 있어야 합니다.</li>
-<li>서브타입에서의 발생 예외 호환성 :<br>서브클래스가 예외를 발생할 경우, 슈퍼클래스와 같은 예외이거나 그 예외의 서브타입을 발생시켜야 합니다.<br>타입스크립스의 경우에는 예외 클래스 뿐만 아니라 단순한 예외를 문자열로 <code>throw</code>하게 지정할 수 있습니다.<br><code>List 3-8</code>과 같이 오류 클래스를 생성할 수도 있습니다.<br>여기서 말하고자하는 것은 예외 처리 코드의 경우 서브클레스라고 해서 다르게 처리되어서는 안된다는 뜻입니다.</li>
-</ul>
-<h4 id="Listing-3-8-Error-classes"><a href="#Listing-3-8-Error-classes" class="headerlink" title="Listing 3-8. Error classes"></a>Listing 3-8. Error classes</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> ApplicationError <span class="keyword">implements</span> <span class="built_in">Error</span> &#123;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params"><span class="keyword">public</span> name: <span class="built_in">string</span>, <span class="keyword">public</span> message: <span class="built_in">string</span></span>) &#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">throw</span> <span class="keyword">new</span> ApplicationError(<span class="string">'Example Error'</span>, <span class="string">'An error has occurred'</span>);</div></pre></td></tr></table></figure>
-<p><strong>LSP</strong>는 새로운 함수를 추가할 때 예전에 사용되던 함수 대신 사용이 가능하다는 것을 보장해 줌으로 OCP를 지원합니다.<br>서브클래스가 직접 슈퍼클래스를 대체할 수 없는 경우,<br>서브클래스를 추가하는 작업은 기존에 잘 작동하던 코드를 수정해야 한다는 뜻이며,<br>객체 타입에 따라 실행이 나뉘게 되는 식으로 프로그램을 작성해야 할 수도 있다는 말이 됩니다.</p>
-<p>책에서는 소개되지 않았지만 <strong>LSP</strong>를 제대로 지키기 위한 가이드 라인을 소개해 드리겠습니다.</p>
-<ul>
-<li>계약 규칙<ul>
-<li>서브타입에서 더 강력한 사전 조건을 정의할 수 없다.</li>
-<li>서브타입에서 더 완화된 사후 조건을 정의할 수 없다.</li>
-<li>슈퍼타입의 불변식(항상 참으로 유지되는 조건들)은 서브타입에서도 반드시 유지되어야 한다.</li>
-</ul>
-</li>
-<li>가변성 규칙<ul>
-<li>서브타입의 메서드 인수는 반 공변성(contravariance)을 가져야 한다. (더 작은 파생형식을 사용할 수 있다.)</li>
-<li>서브타입의 리턴 타입은 공변성(variance)을 가져야 한다. (더 많은 파생형식을 사용할 수 있다.)</li>
-<li>서브타입은 슈퍼타입이 발생시키는 것과 동일한 타입 예외나 그 보무 타입의 예외 혹은 자식 타입의 예외만 사용해야 한다.</li>
-</ul>
-</li>
-</ul>
-<h3 id="인터페이스-분리-The-Interface-Segregation-Principle-ISP"><a href="#인터페이스-분리-The-Interface-Segregation-Principle-ISP" class="headerlink" title="인터페이스 분리 (The Interface Segregation Principle) (ISP)"></a>인터페이스 분리 (The Interface Segregation Principle) (ISP)</h3><p>인터페이스를 통해 클래스가 어떤 역할을 하는지를 알 수 있습니다.<br>통상적으로 클래스를 먼저 생성한 후에 인터페이스를 작성합니다.<br><code>List 3-9</code>는 복사,출력, 분류 작업을 하는 <code>Printer</code> 인터페이스입니다.<br>이 인터페이스는 프린터 동작을 단순히 포함하는 식이기 때문에 폴딩, 봉투 입력, 팩스, 스캔, 이메일 전송 등의 작업을 추가하는 식으로 점점 더 커질 수 있습니다.</p>
-<h4 id="Listing-3-9-Printer-interface"><a href="#Listing-3-9-Printer-interface" class="headerlink" title="Listing 3-9. Printer interface"></a>Listing 3-9. Printer interface</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> Printer &#123;</div><div class="line">    copyDocument();</div><div class="line">    printDocument(<span class="built_in">document</span>: Document);</div><div class="line">    stapleDocument(<span class="built_in">document</span>: Document, tray: <span class="built_in">number</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>ISP</strong>는 큰 인터페이스를 만드는 대신 더 작고 구체적인 인터페이스로 분리하는 것을 권장합니다.<br>각각의 인터페이스는 필요한 함수만을 제공하도록 정의합니다.<br>이렇게 함으로써 클래스 내에 인터페이스를 구현할 때 필요없는 기능에 대해서 구현할 필요가 없게 할 수 있습니다.</p>
-<p><code>List 3-9</code>의 <code>Printer</code> 인터페이스를 구현할때 인쇄, 복사는 구현이 가능한데 분류가 불가능할 경우 해당 함수에 대해서는 오류를 발생시키도록 해야 할 수도 있습니다.<br>추후에 <code>Printer</code> 인터페이스에 새로운 함수를 추가할 경우 이미 구현된 클래스들에 영향을 주기 때문에 추가 자체가 어려워 집니다.<br><code>List 3-10</code>은 기존의 <code>Printer</code> 인터페이스를 나눠서 <code>SimplePrinter</code>와 <code>SuperPrinter</code>에서 구현을 다르게 한 것을 보여줍니다.</p>
-<h4 id="Listing-3-10-Segregated-interfaces"><a href="#Listing-3-10-Segregated-interfaces" class="headerlink" title="Listing 3-10. Segregated interfaces"></a>Listing 3-10. Segregated interfaces</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> Printer &#123;</div><div class="line">    printDocument(<span class="built_in">document</span>: Document);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">interface</span> Stapler &#123;</div><div class="line">    stapleDocument(<span class="built_in">document</span>: Document, tray: <span class="built_in">number</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">interface</span> Copier &#123;</div><div class="line">    copyDocument();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> SimplePrinter <span class="keyword">implements</span> Printer &#123;</div><div class="line">    printDocument(<span class="built_in">document</span>: Document) &#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> SuperPrinter <span class="keyword">implements</span> Printer, Stapler, Copier &#123;</div><div class="line">    printDocument(<span class="built_in">document</span>: Document) &#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">    copyDocument() &#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">    stapleDocument(<span class="built_in">document</span>: Document, tray: <span class="built_in">number</span>) &#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>ISP</strong>를 잘 지키면 클라이언트 코드는 사용하지 않는 함수에 대해서 구현할 필요가 없습니다.</p>
-<h3 id="의존성-주입-The-Dependency-Inversion-Principle-DIP"><a href="#의존성-주입-The-Dependency-Inversion-Principle-DIP" class="headerlink" title="의존성 주입 (The Dependency Inversion Principle) (DIP)"></a>의존성 주입 (The Dependency Inversion Principle) (DIP)</h3><p>전통적인 OOP에서는 상위 컴퍼넌트는 계층구조 상의 하위 컴퍼넌트들에게 의존적입니다.<br>컴퍼넌트간의 결합으로 인해 시스템을 수정하기 힘들게 됩니다.<br>또한 해당 모듈을 재사용하기 위해서는 의존 관계에 있는 모든 컴퍼넌트들을 다 신경써야 하므로, 결과적으로 재사용성을 떨어트립니다.</p>
-<p><code>List 3-11</code>은 전통적인 종속성을 보여주는 예제입니다.<br><code>LightSwitch</code> 클래스는 <code>Light</code> 클래스에 의존성을 가지고 있습니다.</p>
-<h4 id="Listing-3-11-High-level-dependency-on-low-level-class"><a href="#Listing-3-11-High-level-dependency-on-low-level-class" class="headerlink" title="Listing 3-11. High-level dependency on low-level class"></a>Listing 3-11. High-level dependency on low-level class</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> LightSource &#123;</div><div class="line">    switchOn();</div><div class="line">    switchOff();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Light &#123;</div><div class="line">    switchOn() &#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">    switchOff() &#123;</div><div class="line">        <span class="comment">//...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> LightSwitch &#123;</div><div class="line">    <span class="keyword">private</span> isOn = <span class="literal">false</span>;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> light: Light</span>) &#123;</div><div class="line">    &#125;</div><div class="line">    onPress() &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.isOn) &#123;</div><div class="line">            <span class="keyword">this</span>.light.switchOff();</div><div class="line">            <span class="keyword">this</span>.isOn = <span class="literal">false</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">this</span>.light.switchOn();</div><div class="line">            <span class="keyword">this</span>.isOn = <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>DIP</strong>는 <strong>OCP</strong>와 <strong>LSP</strong>를 확장한 개념입니다.<br>추상화에 의존하게 함으로써, 구체적인 클래스와의 결합성을 낮출수 있습니다.<br>이 원리를 따르는 가장 간단한 방법은 <em>클래스</em>가 아닌 <em>인터페이스</em>에 의존적으로 구현하는 것입니다.</p>
-<h2 id="디자인-패턴-Design-Patterns"><a href="#디자인-패턴-Design-Patterns" class="headerlink" title="디자인 패턴 (Design Patterns)"></a>디자인 패턴 (Design Patterns)</h2><p>디자인 패턴이란 이미 알려진 문제점들에 대해서 그 해결책을 디자인을 통해서 제공해주는 것을 의미합니다.<br>하지만 패턴이 과도하게 사용되어서는 안됩니다.<br>디자인 패턴에 관해 가장 알려진 것은 <code>Gang of Four</code>의 <code>Design Patterns: Elements of Reusable Object-Oriented Software (Gamma, Helm, Johnson,
-&amp; Vlissides, Addison Wesley, 1995)</code>가 있습니다.</p>
-<p>디자인 패턴들을 자바스크립트에서도 적용이 가능합니다.<br><code>Diaz and Harmes</code>의 <code>Pro JavaScript Design Patterns, Apress, 2007</code>란 책도 나와 있습니다.<br>자바스크립트에서 가능한 것은 타입스크립트에서도 물론 가능합니다.<br>타입스크립트는 클래스 기반의 객체 지향을 사용하기 때문에 전통적인 디자인 패턴 예제를 타입스크립트로 적용하는 것이 가능합니다.<br>몇 가지 디자인 패턴 샘플들에 대해서 소개해 드리겠습니다.<br>(<code>전략 패턴</code>, <code>추상 팩토리 패턴</code>)<br>GOF의 디자인패턴에는 총 23가지 패턴이 있습니다.</p>
-<h3 id="전략-패턴-The-Strategy-Pattern"><a href="#전략-패턴-The-Strategy-Pattern" class="headerlink" title="전략 패턴 (The Strategy Pattern)"></a>전략 패턴 (The Strategy Pattern)</h3><p><strong>전략패턴</strong>은 알고리즘을 캡슐화하는 방법을 제공합니다.<br>그림 3-2에서 <code>Context</code> 클래스는 인터페이스의 구체적인 구현을 제공하는 <code>Strategy</code>에 의존적입니다.<br>인터페이스를 구현하는 클래스는 런타임에 <code>Context</code>에 제공되어 집니다.</p>
-<h4 id="그림-3-2-전략-패턴"><a href="#그림-3-2-전략-패턴" class="headerlink" title="그림 3-2 전략 패턴"></a>그림 3-2 전략 패턴</h4><p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Front-end/TypeScript/image/TypeScript.03.02.png?raw=true"></p>
-<h3 id="추상-팩토리-패턴-The-Abstract-Factory-Pattern"><a href="#추상-팩토리-패턴-The-Abstract-Factory-Pattern" class="headerlink" title="추상 팩토리 패턴 (The Abstract Factory Pattern)"></a>추상 팩토리 패턴 (The Abstract Factory Pattern)</h3><p>추상 팩토리 패턴은 창조적인 디자인 패턴입니다.<br>개체 생성을 위해서 구체적인 클래스를 지정하지 않고 인터페이스로 지정할 수 있습니다.<br>그래서 런타임시 구체적인 클래스를 전달하는 것입니다.</p>
-<h4 id="그림-3-3-추상-팩토리-패턴"><a href="#그림-3-3-추상-팩토리-패턴" class="headerlink" title="그림 3-3 추상 팩토리 패턴"></a>그림 3-3 추상 팩토리 패턴</h4><p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Front-end/TypeScript/image/TypeScript.03.03.png?raw=true"></p>
-<h3 id="예제"><a href="#예제" class="headerlink" title="예제"></a>예제</h3><p>새차 시스템에 전략 패턴과 추상 팩토리 패턴을 이용한 예를 살펴보겠습니다.<br>가격에 따라 다른 서비스를 제공하는 시스템입니다.<br><code>List 3-13</code>은 휠청소 클래스에 대한 인터페이스와 2가지 기본, 고급의 2가지 전략을 보여줍니다.</p>
-<h4 id="Listing-3-13-Wheel-cleaning"><a href="#Listing-3-13-Wheel-cleaning" class="headerlink" title="Listing 3-13. Wheel cleaning"></a>Listing 3-13. Wheel cleaning</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> WheelCleaning &#123;</div><div class="line">    cleanWheels(): <span class="built_in">void</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> BasicWheelCleaning <span class="keyword">implements</span> WheelCleaning &#123;</div><div class="line">    cleanWheels() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Soaping Wheel'</span>);</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Brushing wheel'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> ExecutiveWheelCleaning <span class="keyword">extends</span> BasicWheelCleaning &#123;</div><div class="line">    cleanWheels() &#123;</div><div class="line">        <span class="keyword">super</span>.cleanWheels();</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Waxing Wheel'</span>);</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Rinsing Wheel'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>List 3-14</code>는 차체 청소를 위한 전략을 보여줍니다.</p>
-<h4 id="Listing-3-14-Body-cleaning"><a href="#Listing-3-14-Body-cleaning" class="headerlink" title="Listing 3-14. Body cleaning"></a>Listing 3-14. Body cleaning</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> BodyCleaning &#123;</div><div class="line">    cleanBody(): <span class="built_in">void</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> BasicBodyCleaning <span class="keyword">implements</span> BodyCleaning &#123;</div><div class="line">    cleanBody() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Soaping car'</span>);</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Rinsing Car'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> ExecutiveBodyCleaning <span class="keyword">extends</span> BasicBodyCleaning &#123;</div><div class="line">    cleanBody() &#123;</div><div class="line">        <span class="keyword">super</span>.cleanBody();</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Waxing car'</span>);</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Blow drying car'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>List 3-15</code>는 추상 팩토리 패턴이 사용되기 전의 <code>CarWashProgram</code>입니다.<br>세척 클래스들과 강력한 결합을 가지고 있으며, 선택된 것에 대하여 클래스를 생성합니다.</p>
-<h4 id="Listing-3-15-CarWashProgram-class-before-the-abstract-factory-pattern"><a href="#Listing-3-15-CarWashProgram-class-before-the-abstract-factory-pattern" class="headerlink" title="Listing 3-15. CarWashProgram class before the abstract factory pattern"></a>Listing 3-15. CarWashProgram class before the abstract factory pattern</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> CarWashProgram &#123;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> washLevel: <span class="built_in">number</span></span>) &#123;</div><div class="line">    &#125;</div><div class="line">    runWash() &#123;</div><div class="line">        <span class="keyword">var</span> wheelWash: WheelCleaning;</div><div class="line">        <span class="keyword">var</span> bodyWash: BodyCleaning;</div><div class="line">        <span class="keyword">switch</span> (<span class="keyword">this</span>.washLevel) &#123;</div><div class="line">            <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">                wheelWash = <span class="keyword">new</span> BasicWheelCleaning();</div><div class="line">                wheelWash.cleanWheels();</div><div class="line">                bodyWash = <span class="keyword">new</span> BasicBodyCleaning();</div><div class="line">                bodyWash.cleanBody();</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">                wheelWash = <span class="keyword">new</span> BasicWheelCleaning();</div><div class="line">                wheelWash.cleanWheels();</div><div class="line">                bodyWash = <span class="keyword">new</span> ExecutiveBodyCleaning();</div><div class="line">                bodyWash.cleanBody();</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">3</span>:</div><div class="line">                wheelWash = <span class="keyword">new</span> ExecutiveWheelCleaning();</div><div class="line">                wheelWash.cleanWheels();</div><div class="line">                bodyWash = <span class="keyword">new</span> ExecutiveBodyCleaning();</div><div class="line">                bodyWash.cleanBody();</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>추상 팩토리란 구체적인 팩토리들이 수행가능한 인터페이스 입니다.<br><code>List 3-16</code>에서 <code>ValetFactory</code> 인터페이스는 <code>WheelCleaning</code>와 <code>BodyCleaning</code>를 얻을 수 있는 기능을 제공합니다.<br>휠청소와 차체청소를 필요로하는 클래스는 이 인터페이스에 의존적일 수 있습니다.<br>또한 각각의 청소를 클래스로 부터 해제하는 일이 필요할 수도 있습니다.</p>
-<h4 id="Listing-3-16-Abstract-factory"><a href="#Listing-3-16-Abstract-factory" class="headerlink" title="Listing 3-16. Abstract factory"></a>Listing 3-16. Abstract factory</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> ValetFactory &#123;</div><div class="line">    getWheelCleaning() : WheelCleaning;</div><div class="line">    getBodyCleaning() : BodyCleaning;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>List 3-17</code>에서 금,은,동 등급의 3개의 팩토리를 선언합니다.<br>각각의 팩토리는 해당 등급에 맞는 청소클래스를 제공합니다.</p>
-<h4 id="Listing-3-17-Concrete-factories"><a href="#Listing-3-17-Concrete-factories" class="headerlink" title="Listing 3-17. Concrete factories"></a>Listing 3-17. Concrete factories</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> BronzeWashFactory <span class="keyword">implements</span> ValetFactory &#123;</div><div class="line">    getWheelCleaning() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BasicWheelCleaning();</div><div class="line">    &#125;</div><div class="line">    getBodyCleaning() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BasicBodyCleaning();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> SilverWashFactory <span class="keyword">implements</span> ValetFactory &#123;</div><div class="line">    getWheelCleaning() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BasicWheelCleaning();</div><div class="line">    &#125;</div><div class="line">    getBodyCleaning() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ExecutiveBodyCleaning();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> GoldWashFactory <span class="keyword">implements</span> ValetFactory &#123;</div><div class="line">    getWheelCleaning() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ExecutiveWheelCleaning();</div><div class="line">    &#125;</div><div class="line">    getBodyCleaning() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ExecutiveBodyCleaning();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>List 3-18</code>은 추상 팩토리 패턴이 사용된 예제입니다.<br><code>CarWashProgram</code> 플래스는 더이상 구체적인 클래스에 대해서 알 필요가 없습니다.<br>이제는 각각의 청소 클래스를 제공하는 팩토리로 구성되어 있습니다.<br>이것은 컴파일 타임이나 런타임에 수행됩니다.</p>
-<h4 id="Listing-3-18-Abstract-factory-pattern-in-use"><a href="#Listing-3-18-Abstract-factory-pattern-in-use" class="headerlink" title="Listing 3-18. Abstract factory pattern in use"></a>Listing 3-18. Abstract factory pattern in use</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> CarWashProgram &#123;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> cleaningFactory: ValetFactory</span>) &#123;</div><div class="line">    &#125;</div><div class="line">    runWash() &#123;</div><div class="line">        <span class="keyword">var</span> wheelWash = <span class="keyword">this</span>.cleaningFactory.getWheelCleaning();</div><div class="line">        wheelWash.cleanWheels();</div><div class="line">        <span class="keyword">var</span> bodyWash = <span class="keyword">this</span>.cleaningFactory.getBodyCleaning();</div><div class="line">        bodyWash.cleanBody();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Mixins"><a href="#Mixins" class="headerlink" title="Mixins"></a>Mixins</h2><p><a href="https://en.wikipedia.org/wiki/Mixin" target="_blank" rel="external">https://en.wikipedia.org/wiki/Mixin</a></p>
-<p><code>Mix-in</code>은 디자인 패턴에서는 다루지 않는 응용 프로그램을 구성하는 다른 방법입니다.<br>믹스인은 미사추세츠, 소머빌에 있는 시트브 아이스크림이란 가게에서 고객이 고를수 있는 아이스크림 디저트의 이름을 따왔습니다.<br>아이스 크림을 고른 뒤 막대 사탕 같은 다른 기호에 맞는 것들을 추가할 수가 있습니다.</p>
-<p>프로그래밍의 믹스인도 이와 유사합니다.<br>인자로 재사용 가능한 클래스들을 받아서 그것들을 조합하여 사용합니다.<br>믹스인 클래스의 일부는 인터페이스이며 일부는 구현입니다.</p>
-<h3 id="TypeScript-Mixins"><a href="#TypeScript-Mixins" class="headerlink" title="TypeScript Mixins"></a>TypeScript Mixins</h3><p>아직 타입스크립트에서 <strong>믹스인</strong>이 완벽하게 지원되지는 않습니다만, 간단한 정도는 구현이 가능합니다.<br><code>List 3-19</code>에 <strong>믹스인</strong>을 적용한 함수가 있습니다.<br>이 함수는 각각의 <em>증강 클래스</em>(augumented class) 배열을 baseCtors로 전달하고 <em>구현할 클래스</em>를 derivedCtor로 전달합니다.<br>이 함수를 통해서 <strong>믹스인</strong>을 적용하고 싶을 때는 언제든지 적용이 가능합니다.</p>
-<h4 id="Listing-3-19-Mixin-enabler-function"><a href="#Listing-3-19-Mixin-enabler-function" class="headerlink" title="Listing 3-19. Mixin enabler function"></a>Listing 3-19. Mixin enabler function</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">applyMixins</span>(<span class="params">derivedCtor: <span class="built_in">any</span>, baseCtors: <span class="built_in">any</span>[]</span>) </span>&#123;</div><div class="line">    baseCtors.forEach(<span class="function"><span class="params">baseCtor</span> =&gt;</span> &#123;</div><div class="line">        <span class="built_in">Object</span>.getOwnPropertyNames(baseCtor.prototype).forEach(<span class="function"><span class="params">name</span> =&gt;</span> &#123;</div><div class="line">            <span class="keyword">if</span> (name !== <span class="string">'constructor'</span>) &#123;</div><div class="line">                derivedCtor.prototype[name] = baseCtor.prototype[name];</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>Listing 3-20</code>에는 재사용 가능한 <em>증강 클래스</em>가 정의 되어 있습니다.<br>구체적인 구분은 없지만, <code>Sings</code>, <code>Dances</code>, <code>Acts</code>에 대해서 정의했습니다.<br>이러한 클래스는 서로 다른 조합으로 구성되어 실행이 가능합니다.</p>
-<h4 id="Listing-3-20-Reusable-classes"><a href="#Listing-3-20-Reusable-classes" class="headerlink" title="Listing 3-20. Reusable classes"></a>Listing 3-20. Reusable classes</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Sings &#123;</div><div class="line">    sing() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Singing'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Dances &#123;</div><div class="line">    dance() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Dancing'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Acts &#123;</div><div class="line">    act() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Acting'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>이 클래스들은 <strong>SRP</strong>를 매우 잘 지키고 있습니다.<br>타입스크립트에서는 <code>implements</code> 키워드 뒤에 믹스인 리스트(<em>증강 클래스</em>)를 콤마로 나열해서 클래스를 구성할 수 있습니다.</p>
-<h4 id="Listing-3-21-Composing-classes"><a href="#Listing-3-21-Composing-classes" class="headerlink" title="Listing 3-21. Composing classes"></a>Listing 3-21. Composing classes</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Actor <span class="keyword">implements</span> Acts &#123;</div><div class="line">    act: <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">void</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">applyMixins(Actor, [Acts]);</div><div class="line"></div><div class="line"><span class="keyword">class</span> AllRounder <span class="keyword">implements</span> Acts, Dances, Sings &#123;</div><div class="line">    act: <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">void</span>;</div><div class="line">    dance: <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">void</span>;</div><div class="line">    sing: <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">void</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">applyMixins(AllRounder, [Acts, Dances, Sings]);</div></pre></td></tr></table></figure>
-<p><code>Actor</code>와 <code>AllRounder</code> 클래스에는 구현되어 있는게 아무것도 없습니다.<br><em>증강 클래스</em>에서 제공받을 수 있는 공간만을 할당해놓고 있습니다.<br>이 클래스를 사용하는 것은 다른 클래스를 사용하는 것과 다르지 않습니다.</p>
-<h4 id="Listing-3-22-Using-the-classes"><a href="#Listing-3-22-Using-the-classes" class="headerlink" title="Listing 3-22. Using the classes"></a>Listing 3-22. Using the classes</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> actor = <span class="keyword">new</span> Actor();</div><div class="line">actor.act();</div><div class="line"></div><div class="line"><span class="keyword">var</span> allRounder = <span class="keyword">new</span> AllRounder();</div><div class="line">allRounder.act();</div><div class="line">allRounder.dance();</div><div class="line">allRounder.sing();</div></pre></td></tr></table></figure>
-<p>타입스크립트에서 다중 상속은 허용되지 않습니다.<br>마치 다중 상속처럼 보이겠지만, <code>extends</code>를 사용한 것이 아닌 <code>impliments</code>를 사용했다는 것이 중요합니다.</p>
-<h3 id="언제-믹스인을-써야-하는가"><a href="#언제-믹스인을-써야-하는가" class="headerlink" title="언제 믹스인을 써야 하는가"></a>언제 믹스인을 써야 하는가</h3><p><strong>믹스인</strong>을 타입스크립트에서 일부 지원하지만, 사용할때 무엇을 염두해 두어야 할까요 ?<br>무엇보다도, 구현이 클래스에 주입되었는지에 대해서 확인하는 방법이 없으므로 <code>applyMixins</code> 함수를 정확한 클래스 명의 리스트로 호출하는것을 신경써야 합니다.<br>그렇지 않으면 테스트 할때 제대로 잘 안되더라도 원인을 찾기 힘들 것입니다.</p>
-<p>믹스인을 사용할지 일반적인 클래스를 사용할지는 클래스간의 관계를 보고 결정을 해야 합니다.<br><strong>상속</strong>에는 통상 <code>is a</code>를 사용하고 <strong>위임</strong>에서는 <code>has a</code>를 사용합니다.</p>
-<ul>
-<li>A car has a chassis.</li>
-<li>A rolling chassis is a chassis.</li>
-</ul>
-<p>믹스인에서는 <code>can do</code>를 사용하는 것으로 그 관계를 설명할 수 있습니다.</p>
-<ul>
-<li>An actor can do acting<br>or</li>
-<li>An actor acts.</li>
-</ul>
-<p><code>Acting</code>과 <code>Acts</code>와 같이 이름 지정으로서 믹스인 관계를 식별하도록 할 수 있습니다.<br>그렇게 하면 클래스 선언이 마치 문장 처럼 보일 수 있습니다. (<code>Actor implements Acting</code>)<br><strong>믹스인</strong>은 작은 단위가 합쳐서 큰 것으로 되는 것이 가능하기 때문에, 다음에 열거한 시나리오들은 믹스인으로 구성되기 좋은 것들입니다.</p>
-<ul>
-<li>추가적인 옵션을 갖는 클래스 (<em>믹스인 함수</em>를 옵션으로 구현)</li>
-<li>여러 클래스에서 동일한 함수를 재사용</li>
-<li>비슷한 기능들의 조합으로 여러 가지 클래스를 만들어야 할 경우</li>
-</ul>
-<h3 id="제한점"><a href="#제한점" class="headerlink" title="제한점"></a>제한점</h3><p><em>믹스인 함수</em>를 <code>private</code> 멤버로 사용하면 안됩니다.<br>왜냐면 컴파일러가 <em>증강 클래스</em>가 구현이 안되었을 경우 오류를 발생합니다.<br>또한 <em>믹스인 함수</em>와 <em>증강 클래스</em>가 둘 다 동일한 이름의 <code>private</code> 멤버를 가지고 있는 경우에도 오류를 발생합니다.</p>
-<p><strong>믹스인</strong>의 또다른 제한점은 함수는 <em>증강 클래스</em>로 매핑되지만, 속성은 안됩니다. (<code>List 3-23</code>)<br><em>증강 클래스</em> 안에 속성을 구현한 경우 <em>믹스인 함수</em>에서 초기화해줘야 합니다.<br>실수를 방지하기 위해서는 <em>증강 클래스</em> 안에 있는 속성에 대해서는 디폴트값을 정의하지 않는 것이 좋습니다.</p>
-<h4 id="Listing-3-23-Properties-not-mapped"><a href="#Listing-3-23-Properties-not-mapped" class="headerlink" title="Listing 3-23. Properties not mapped"></a>Listing 3-23. Properties not mapped</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Acts &#123;</div><div class="line">    <span class="keyword">public</span> message = <span class="string">'Acting'</span>;</div><div class="line">    act() &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.message);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Actor <span class="keyword">implements</span> Acts &#123;</div><div class="line">    <span class="keyword">public</span> message: <span class="built_in">string</span>;</div><div class="line">    act: <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">void</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">applyMixins(Actor, [Acts]);</div><div class="line"></div><div class="line"><span class="keyword">var</span> actor = <span class="keyword">new</span> Actor();</div><div class="line"></div><div class="line"><span class="comment">// Logs 'undefined', not 'Acting'</span></div><div class="line">actor.act();</div></pre></td></tr></table></figure>
-<p>속성이 특정 개체에 종속되지 않는다면 <code>static</code>으로 선언하는 방법도 있습니다.<br><code>List 3-24</code>는 <code>List 3-23</code>의 문제점을 <code>static</code> 요소로 선언하는 것으로 해결한 것입니다.<br>객체마다 다른 값이 필요한 경우 해당 요소는 <em>믹스인 함수</em>에서 초기화해줘야 합니다.</p>
-<h4 id="Listing-3-24-Static-properties-are-available"><a href="#Listing-3-24-Static-properties-are-available" class="headerlink" title="Listing 3-24. Static properties are available"></a>Listing 3-24. Static properties are available</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Acts &#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> message = <span class="string">'Acting'</span>;</div><div class="line">    act() &#123;</div><div class="line">        alert(Acts.message);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><ul>
-<li>타입스크립트에는 객체 지향적인 요소들을 대부분 포함하고 있습니다.</li>
-<li>SOLID 이론은 코드가 계속 유지될 수 있도록 해주는 것을 그 목표로 하고 있습니다.</li>
-<li>디자인 패턴은 일반적으로 알려준 문제들에 대한 해법이 될 수 있습니다.</li>
-<li>디자인 패턴에서 설명한 그대로 구현할 필요는 없습니다.</li>
-<li>믹스인은 각 가수어품들을 대체 할수 있는 방법을 제공합니다.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://DevStarSJ.github.io/2016/06/11/TypeScript.03.ObjectOrientationInTypeScript/" data-id="cj1uieq7r0000d17bqx7hro5m" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Devops.SymbolRepository" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/04/04/Devops.SymbolRepository/" class="article-date">
-  <time datetime="2016-04-03T15:00:00.000Z" itemprop="datePublished">2016-04-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/04/Devops.SymbolRepository/">Make Symbol Repository for Visual Studio</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Make-Symbol-Repository-for-Visual-Studio"><a href="#Make-Symbol-Repository-for-Visual-Studio" class="headerlink" title="Make Symbol Repository for Visual Studio"></a>Make Symbol Repository for Visual Studio</h1><h3 id="1-Debugging-Tools-for-Windows-설치"><a href="#1-Debugging-Tools-for-Windows-설치" class="headerlink" title="1. Debugging Tools for Windows 설치"></a>1. Debugging Tools for Windows 설치</h3><p><a href="https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063(v=vs.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063(v=vs.85).aspx</a></p>
-<h3 id="2-Symbol-등록"><a href="#2-Symbol-등록" class="headerlink" title="2. Symbol 등록"></a>2. Symbol 등록</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call svnindex.cmd -source=&quot;&#123;SolutionFolder&#125;&quot; -symbols=&quot;&#123;SolutionFolder&#125;\bin\Unicode Release&quot;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">symstore.exe add /r /f &quot;&#123;SolutionFolder&#125;\bin\Unicode Release\*.*&quot; /s &quot;&#123;SymbolRepository&#125;&quot; /t &quot;&#123;Name&#125;&quot; /compress</div></pre></td></tr></table></figure>
-<blockquote>
-<p>e.g.<br>call svnindex.cmd -source=”d:\svn\trunk” -symbol=”d:\svn\trunk\bin\Unicode Release”<br>symstore add /r /f “d:\svn\trunk\bin\Unicode Release*.*” /s “d:\symbol” /t “MyApp” /compress</p>
-</blockquote>
-<ul>
-<li><p>통상적으로 <code>symstore.exe</code>는 아래 폴더에 위치합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\Program Files\Debugging Tools for Windows (x64)</div></pre></td></tr></table></figure>
-</li>
-<li><p><code>svnindex.cmd</code>는 설치된 Debugging Tools for Windows 폴더 아래 <code>srcsrv</code> 폴더 내에 있으며 다른 CI 제품들의 cmd 파일들도 존재합니다.</p>
-</li>
-</ul>
-<h3 id="3-저장된-Symbol-확인"><a href="#3-저장된-Symbol-확인" class="headerlink" title="3. 저장된 Symbol 확인"></a>3. 저장된 Symbol 확인</h3><ul>
-<li><code>{SymbolRepository}\000Admin\server.txt</code>에서 확인</li>
-<li>각 ID별 Build일시. 이름 (/t 옵션 뒤에 이름) 확인이 가능</li>
-</ul>
-<h3 id="4-Symbol-삭제"><a href="#4-Symbol-삭제" class="headerlink" title="4. Symbol 삭제"></a>4. Symbol 삭제</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">symstore del /i ID /s &quot;&#123;SymbolRepository&#125;&quot;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>e.g.<br>symstore del /i 142 /s “d:\symbol”</p>
-</blockquote>
-<h3 id="symstore-사용법-Symbol-삭제-포함"><a href="#symstore-사용법-Symbol-삭제-포함" class="headerlink" title="symstore 사용법 (Symbol 삭제 포함)"></a>symstore 사용법 (Symbol 삭제 포함)</h3><p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms681378(v=vs.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/windows/desktop/ms681378(v=vs.85).aspx</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://DevStarSJ.github.io/2016/04/04/Devops.SymbolRepository/" data-id="cj1uiu1k00001q57b97252j82" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Devops.Jenkins" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/10/Devops.Jenkins/" class="article-date">
-  <time datetime="2015-11-09T15:00:00.000Z" itemprop="datePublished">2015-11-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/10/Devops.Jenkins/">Install Jenkins</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Install-Jenkins"><a href="#Install-Jenkins" class="headerlink" title="Install Jenkins"></a>Install Jenkins</h1><h3 id="1-Jenkins-란"><a href="#1-Jenkins-란" class="headerlink" title="1. Jenkins 란 ?"></a>1. Jenkins 란 ?</h3><p>Jenkins Server는 Open Source CI (Continuous Integration) 을 자동화해주는 Tool입니다. 대부분 다음과 같은 방식으로 Jenkins를 이용합니다.</p>
-<ol>
-<li>Repository (SVN, Git)에서 source code를 가져옵니다.</li>
-<li>정해진 절차에 따라 build 및 unit test, integration test를 수행합니다. 수행 결과 이상이 있을 때 e-mail을 통해서 reporting해주는 역할까지 수행해 줍니다.</li>
-<li>정상적으로 build 되었으며, 모든 test 결과에 이상이 없는 경우 배포 파일(setup, update)을 생성합니다.</li>
-</ol>
-<p>Jenkins 자체는 사용자가 입력한 command line 명령어들을 특정 조건에 맞게 또는 특정 시간이나 일정한 간격으로 수행해주는 역할을 해줍니다.<br>build 및 test, deploy하는 역할 자체는 command line에서 수행가능한 형태로 사용자가 직접 입력해 놓으면 그 명령어를 수행해주는 역할을 할 뿐이지, Jenkins 자체에 build tool이 있다던지 그러진 않습니다.</p>
-<h3 id="2-이번-Posting에서-다룰-내용"><a href="#2-이번-Posting에서-다룰-내용" class="headerlink" title="2. 이번 Posting에서 다룰 내용"></a>2. 이번 Posting에서 다룰 내용</h3><ol>
-<li>Jenkins download 및 설치 (Windows 기준)</li>
-<li>MSBuild plugin 설치</li>
-<li>Jenkins item 설정<ol>
-<li>SVN Repository에서 source code 내려받기</li>
-<li>VisualStudio Solution (.sln)을 command line에서 실행시키기 (MSBuild 이용)</li>
-<li>Jenkins item에서 build 후 다른 item 실행</li>
-</ol>
-</li>
-</ol>
-<h3 id="3-Jenkins-download-및-설치"><a href="#3-Jenkins-download-및-설치" class="headerlink" title="3. Jenkins download 및 설치"></a>3. Jenkins download 및 설치</h3><ul>
-<li>Link : <a href="http://jenkins-ci.org" target="_blank" rel="external">http://jenkins-ci.org</a></li>
-</ul>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.01.png?raw=true"></p>
-<p>위 Link에서 우측에 있는 <code>Windows</code>를 눌러서 다운로드 받으면 됩니다.<br>zip 파일이 다운로드 받아지는데 압축을 풀어서 셋업을 실행하면 설치가 끝납니다.<br>바로 Jenkins 창이 실행됩니다. 기본적으로는 <a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> 로 접속이 가능합니다. (다른 PC에서 접속시에는 PC ip나 hostname 에 8080 포트로 접속을 하면 됩니다.)</p>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.02.png?raw=true"></p>
-<p>###3. MSBuild plugin 설치</p>
-<p>Visual Studio에서 작업한 solution 파일 (.sln)을 command line에서 build 하기 위해서는 MSBuild.exe를 실행해서 build 해야 합니다. MSBuild.exe는 Visual Studio 설치시 같이 설치가 됩니다.<br>Jenkins에서 MSBuild를 사용하기 위해서는 별도의 plugin이 필요합니다.</p>
-<p>먼저 Jenkins 화면에서 <code>Jenkins 관리</code>-&gt; <code>플러그인 관리</code> 로 들어갑니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.03.png?raw=true">  </p>
-<p>internet에 연결된 환경이라면 <code>설치가능</code> 탭에서 바로 MSBuild를 선택해주시면 됩니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.04.png?raw=true">  </p>
-<p>offline 상태의 pc라면 <a href="https://updates.jenkins-ci.org/download/plugins" target="_blank" rel="external">https://updates.jenkins-ci.org/download/plugins</a>로 들어가서 원하는 버전의 MSBuild plugin을 다운로드 받으시면 됩니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.05.png?raw=true">  </p>
-<p>다운로드 받은 뒤 <code>고급</code> 탭을 눌러서 <code>플러그인 올리기</code> 에서 다운로드 받은 파일을 선택하면 됩니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.06.png?raw=true">  </p>
-<p>그런 뒤 Jenkins를 재가동 하면 됩니다.</p>
-<h3 id="4-Jenkins-환경설정"><a href="#4-Jenkins-환경설정" class="headerlink" title="4. Jenkins 환경설정"></a>4. Jenkins 환경설정</h3><p>SVN , MSBuild 설정에 대한 부분을 설명드리겠습니다.<br>다른 Tool 들에 대해서도 어렵지 않게 스스로 설정이 가능하거나, 검색을 하시면 자료가 많이 나올 것입니다.  </p>
-<p>먼저 Jenkins 화면에서 <code>Jenkins 관리</code>-&gt; <code>시스템 설정</code> 으로 들어갑니다.</p>
-<p>아래로 쭉 내리시면 <code>Subversion</code>이란 부분이 있습니다.<br>현재 PC에 설치된 SVN과 같은 버전으로 설정하면 끝입니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.08.png?raw=true">  </p>
-<p>거기서 조금 위로 올리시면 <code>MSBuild</code> 부분이 있습니다. 거기 버튼을 누른 뒤 PC상의 <code>MSBuild.exe</code>파일의 위치를 입력해줍니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.07.png?raw=true">  </p>
-<p>단순히 여기에 위치만 입력해 줘도 되지만, 개인적으로는 해당 위치를 시스템환경변수에 PATH로 잡아두시는 것을 추천합니다.<br>그러면 cmd 창에서 직접 실행도 가능합니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.09.png?raw=true">  </p>
-<p><code>MSBuild</code>의 자세한 사용법에 대해서는 여기서 다루지 않겠습니다.  </p>
-<p>MSDN에 자세한 설명이 있으니 참조하시면 됩니다.</p>
-<blockquote>
-<p><a href="https://msdn.microsoft.com/ko-kr/library/ms164311.aspx" target="_blank" rel="external">https://msdn.microsoft.com/ko-kr/library/ms164311.aspx</a></p>
-</blockquote>
-<p>그 중 Jenkins에서 자주 사용하는 예시 한가지만 든다면…</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/p:Configuration=&quot;Release&quot; /t:Clean,Build</div></pre></td></tr></table></figure>
-<p>Release 모드로 Clean 후 Build를 할 경우 위와 같이 써주시면 됩니다.</p>
-<p>###5. Jenkins item 추가</p>
-<ul>
-<li><code>새로운 item</code>을 누르면 추가가 가능합니다.</li>
-<li>원하시는 이름을 입력한 뒤 <code>Freestyle project</code>를 선택합니다.</li>
-<li>먼저 <code>고급 프로젝트 옵션</code>에서 <code>고급</code> 버튼을 눌러서 <code>사용자 빌드 경로 사용</code>을 체크하셔서 source code를 받을 경로를 입력해 줍니다.  </li>
-</ul>
-<blockquote>
-<p>ex. <code>d:\build\svn\test_project</code>  </p>
-</blockquote>
-<ul>
-<li><code>소스코드관리</code>에는 <code>Subversion</code>을 선택하시고 <code>Repository URL</code>을 입력합니다.  </li>
-</ul>
-<blockquote>
-<p>ex. <code>svn://192.168.0.1/repo/test_project/trunk</code>  </p>
-</blockquote>
-<ul>
-<li><code>Add Build Step</code> 을 눌러서 <code>MSBuild</code>를 선택합니다.</li>
-<li>build할 solution이나 project 파일명을 전체경로나 위에 정한 사용자 빌드 경로로 부터의 상태경로로 입력합니다.  </li>
-</ul>
-<blockquote>
-<p>ex. <code>./workspace/buildAll.sln</code>  </p>
-</blockquote>
-<ul>
-<li>그리고 command line argument에 옵션을 적어줍니다.</li>
-</ul>
-<blockquote>
-<p>ex. <code>/p:Configuration=&quot;Release&quot; /t:Clean,Build</code>  </p>
-</blockquote>
-<ul>
-<li>한 item에서 여러가지의 build step을 가질 수 있습니다. 예를 들어서 <code>Release</code>로 빌드하고, <code>Debug</code>로도 빌드 한다던지, 다른 project나 solution 들을 build 한다든지 등요.</li>
-<li>build step에서 <code>Execute Windows batch command</code>를 선택하시면 일단 command line에서 선택하는 명령어를 그대로 입력하셔서 실행이 가능합니다. 관련 내용을 미리 batch file (.bat)나 python으로 생성해 놓고 실행하면 편리합니다.<ul>
-<li>특정 file들을 다른 folder로 옮겨 놓고 파일이름을 다르게 복사하고 등등의 작업이 가능합니다.</li>
-</ul>
-</li>
-<li>현재 item이 끝난 후 다른 item을 자동으로 시작 시킬려면 <code>빌드 후 조치 추가</code>에서 <code>Build other projects</code>를 눌러서 다른 item명을 입력하시면 선택이 됩니다. 콤마(,)를 입력해서 여러개 project 실행이 가능합니다. Test Project를 실행한다던지, InstallShield를 이용하여 배포 파일을 생성하는 등의 작업을 하면 편리하게 활용이 가능합니다.</li>
-<li>주기적으로 build를 할려면 <code>빌드 유발</code>에 <code>Build periodically</code>를 선택하셔서 <code>Schedule</code>에 입력하시면 됩니다. 참고로 매일 새벽에 돌리실려면 <code>@midnight</code>라고 입력하시면 됩니다. 오른쪽 ?를 누르면 자세한 설명이 나옵니다.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://DevStarSJ.github.io/2015/11/10/Devops.Jenkins/" data-id="cj1uiu1jt0000q57bj0xl3upv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -1631,7 +1505,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -1641,7 +1515,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
     </div>
   </div>
 
@@ -1651,7 +1525,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/APIGateway/" style="font-size: 18px;">APIGateway</a> <a href="/tags/AWS/" style="font-size: 20px;">AWS</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 12px;">CI/CD</a> <a href="/tags/DevOps/" style="font-size: 12px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 20px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 16px;">Node.JS</a> <a href="/tags/Python/" style="font-size: 14px;">Python</a> <a href="/tags/Serverless/" style="font-size: 14px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 12px;">TypeScript</a>
+      <a href="/tags/APIGateway/" style="font-size: 18.33px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 10px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 11.67px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 20px;">AWS</a> <a href="/tags/C/" style="font-size: 15px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.67px;">CI/CD</a> <a href="/tags/DevOps/" style="font-size: 11.67px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 20px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 16.67px;">Node.JS</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/Serverless/" style="font-size: 13.33px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.67px;">TypeScript</a>
     </div>
   </div>
 
@@ -1660,7 +1534,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
     </div>
   </div>
 

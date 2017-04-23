@@ -880,6 +880,48 @@
 
 
   
+    <article id="post-CSharp.Aspnet.RequestBodyLog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/23/CSharp.Aspnet.RequestBodyLog/" class="article-date">
+  <time datetime="2017-01-22T15:00:00.000Z" itemprop="datePublished">2017-01-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/ASP-NET/">ASP.NET</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/23/CSharp.Aspnet.RequestBodyLog/">Get Request Body in Action Method</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Get-Request-Body-in-Action-Method"><a href="#Get-Request-Body-in-Action-Method" class="headerlink" title="Get Request Body in Action Method"></a>Get Request Body in Action Method</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">string body = &quot;&quot;;</div><div class="line">Request.InputStream.Seek(0, SeekOrigin.Begin);</div><div class="line">using (StreamReader reader = new StreamReader(Request.InputStream))</div><div class="line">&#123;</div><div class="line">    body = reader.ReadToEnd();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2017/01/23/CSharp.Aspnet.RequestBodyLog/" data-id="cj1ujekv200005a7blq2u95xs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Lambda.CSharp" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/12/03/Lambda.CSharp/" class="article-date">
@@ -1049,143 +1091,10 @@
 
 
   
-    <article id="post-Lambda.Packaging.Node" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/27/Lambda.Packaging.Node/" class="article-date">
-  <time datetime="2016-11-27T06:54:51.000Z" itemprop="datePublished">2016-11-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/AWS/">AWS</a>►<a class="article-category-link" href="/categories/AWS/Lambda/">Lambda</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/27/Lambda.Packaging.Node/">Lambda Node.JS Packaging</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Lambda-Node-JS-Packaging"><a href="#Lambda-Node-JS-Packaging" class="headerlink" title="Lambda Node.JS Packaging"></a>Lambda Node.JS Packaging</h1><p><strong>Labmda</strong>에 <strong>Node.JS</strong>로 구현하는 내용에 대해서는 아래 3개의 Link를 참고해 주세요.</p>
-<ul>
-<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateWay.01.md" target="_blank" rel="external">Lambda 와 API Gateway 연동 #1 (GET, POST)</a></li>
-<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.02.Route.md" target="_blank" rel="external">Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route)</a></li>
-<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.03.Proxy.md" target="_blank" rel="external">Lambda 와 API Gateway 연동 #3 (Proxy Resource)</a></li>
-</ul>
-<p>이제껏 1개의 <strong>Node.JS</strong> 파일에 <strong>npm module</strong>을 하나도 사용하지 않은 예제만 살펴보았는데,<br>실제로 개발할 상황에서는 파일도 여러 개로 나눠서 개발하고 <strong>npm module</strong>도 많이 사용할 경우가 많습니다.<br>이렇게 개발한 코드들을 어떻게 Lambda로 올리는지 이번 포스팅에서 살펴보도록 하겠습니다.</p>
-<p><strong>Lambda 와 API Gateway 연동 #3</strong>까지 구현되어 있다는 가정하에서 진행하겠습니다.</p>
-<h2 id="Node-JS-코드에-npm-사용"><a href="#Node-JS-코드에-npm-사용" class="headerlink" title="Node.JS 코드에 npm 사용"></a>Node.JS 코드에 npm 사용</h2><ul>
-<li>이전까지 작업한 코드를 <code>index.js</code>란 이름으로 작업할 폴더에 저장</li>
-<li><strong>npm</strong>으로 <strong>lodash</strong> 설치 : <code>npm install lodash</code></li>
-<li>코드를 아래와 같이 수정</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> _ = <span class="built_in">require</span>(<span class="string">'lodash'</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params">userId</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">body</span>: &#123; <span class="attr">id</span>: userId, <span class="attr">name</span>: <span class="string">"test"</span> &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">post</span>(<span class="params">userId, header, body</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">body</span>: &#123; <span class="attr">id</span>: userId, <span class="attr">header</span>: header, <span class="attr">body</span>: body &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> routeMap = &#123;</div><div class="line">  <span class="string">'/test'</span>: &#123;</div><div class="line">    <span class="string">'GET'</span>: <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> userId = _.get(event,<span class="string">'queryStringParameters.id'</span>);</div><div class="line">      <span class="keyword">return</span> get(userId);</div><div class="line">    &#125;,</div><div class="line">    <span class="string">'POST'</span>: <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> userId = _.get(event,<span class="string">'queryStringParameters.id'</span>);</div><div class="line">      <span class="keyword">const</span> body = <span class="built_in">JSON</span>.stringify(_.get(event,<span class="string">'body'</span>));</div><div class="line">      <span class="keyword">const</span> header =  event.headers;</div><div class="line">      <span class="keyword">return</span> post(userId, header, body);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">router</span>(<span class="params">event, context</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> controller = routeMap[event.path][event.httpMethod];</div><div class="line"></div><div class="line">  <span class="keyword">if</span>(!controller) &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">body</span>: &#123; <span class="attr">Error</span>: <span class="string">"Invalid Path"</span> &#125;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> controller(event, context);</div><div class="line">&#125;</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> &#123;</div><div class="line">   <span class="keyword">let</span> result = router(event, context);</div><div class="line">   callback(<span class="literal">null</span>, &#123;<span class="attr">body</span>:<span class="built_in">JSON</span>.stringify(result)&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>routeMap</strong> 내부에 <code>lodash.get</code> 함수를 사용하는 것으로 코드를 변경하였습니다.</p>
-<ul>
-<li>zip 파일로 압축 : <code>zip -r ./sample.zip ./</code></li>
-</ul>
-<h2 id="Lambda에-zip-파일로-배포"><a href="#Lambda에-zip-파일로-배포" class="headerlink" title="Lambda에 zip 파일로 배포"></a>Lambda에 zip 파일로 배포</h2><p>먼저 해당 <strong>Lambda</strong> 설정으로 이동합니다.</p>
-<ul>
-<li><code>Code</code> 탭<ul>
-<li>Code entry type : <code>Upload a .ZIP file</code> 선택<ul>
-<li><code>Upload</code> 버튼을 눌러서 위에서 생성한 <code>sample.zip</code>을 올림</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda.packaging.node.01.png?raw=true"></p>
-<h2 id="확인"><a href="#확인" class="headerlink" title="확인"></a>확인</h2><p><strong>API Gateway</strong>는 변경사항이 없으므로 결과는 <strong>3장</strong>과 똑같이 나옵니다.</p>
-<ul>
-<li><strong>GET</strong> 요청 : <code>https://.../prod/test?id=2</code></li>
-</ul>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"body"</span>:&#123;<span class="attr">"id"</span>:<span class="string">"2"</span>,<span class="attr">"name"</span>:<span class="string">"test"</span>&#125;&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>POST</strong> 요청 : URL은 <strong>GET</strong>과 동일</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "body": &#123;</div><div class="line">    "id": "2",</div><div class="line">    "header": &#123;</div><div class="line">      ...</div><div class="line">    &#125;,</div><div class="line">    "body": "\"&#123;\\n  \"id\": \"123\",\\n  \"age\": \"25\"\\n&#125;\""</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="여러-파일을-함께-배포"><a href="#여러-파일을-함께-배포" class="headerlink" title="여러 파일을 함께 배포"></a>여러 파일을 함께 배포</h2><p>이미 <strong>npm module</strong>을 포함하여 베포하였으므로 여러 파일을 묶어서 배포하는게 확인되었지만, 우리가 작성한 소스코드 자체도 나눠서 배포해 보도록 하겠습니다.<br>위에 작성한 코드를 4개의 파일로 나눠서 올려보겠습니다.</p>
-<ul>
-<li><code>index.js</code></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> router = <span class="built_in">require</span>(<span class="string">'./router'</span>);</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> &#123;</div><div class="line">   <span class="keyword">let</span> result = router(event, context);</div><div class="line">   callback(<span class="literal">null</span>, &#123;<span class="attr">body</span>:<span class="built_in">JSON</span>.stringify(result)&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><code>router.js</code></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> _ = <span class="built_in">require</span>(<span class="string">'lodash'</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> routeMap = &#123;</div><div class="line">  <span class="string">'/test'</span>: &#123;</div><div class="line">    <span class="string">'GET'</span>: <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> userId = _.get(event,<span class="string">'queryStringParameters.id'</span>);</div><div class="line">      <span class="keyword">return</span> <span class="built_in">require</span>(<span class="string">'./controllers/test/get'</span>)(userId);</div><div class="line">    &#125;,</div><div class="line">    <span class="string">'POST'</span>: <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> userId = _.get(event,<span class="string">'queryStringParameters.id'</span>);</div><div class="line">      <span class="keyword">const</span> body = <span class="built_in">JSON</span>.stringify(_.get(event,<span class="string">'body'</span>));</div><div class="line">      <span class="keyword">const</span> header =  event.headers;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">require</span>(<span class="string">'./controllers/test/post'</span>)(userId, header, body);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">event, context</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">const</span> controller = routeMap[event.path][event.httpMethod];</div><div class="line"></div><div class="line">  <span class="keyword">if</span>(!controller) &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">body</span>: &#123; <span class="attr">Error</span>: <span class="string">"Invalid Path"</span> &#125;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> controller(event, context);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li><code>/controllers/test/get.js</code></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">userId</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">body</span>: &#123; <span class="attr">id</span>: userId, <span class="attr">name</span>: <span class="string">"test"</span> &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li><code>/controllers/test/post.js</code></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">userId, header, body</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">body</span>: &#123; <span class="attr">id</span>: userId, <span class="attr">header</span>: header, <span class="attr">body</span>: body &#125;</div><div class="line">  &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>npm</strong>으로 <strong>lodash</strong> 설치 : <code>npm install lodash</code></li>
-<li>zip 파일로 압축 : <code>zip -r ./sample.zip ./</code></li>
-</ul>
-<p>위에서와 같은 방법으로 <strong>Lambda</strong>에 배포 후 확인을 해보면 같은 결과가 출력됩니다.</p>
-<h2 id="Lambda에-zip-파일로-배포-1"><a href="#Lambda에-zip-파일로-배포-1" class="headerlink" title="Lambda에 zip 파일로 배포"></a>Lambda에 zip 파일로 배포</h2><p>먼저 해당 <strong>Lambda</strong> 설정으로 이동합니다.</p>
-<ul>
-<li><code>Code</code> 탭<ul>
-<li>Code entry type : <code>Upload a .ZIP file</code> 선택<ul>
-<li><code>Upload</code> 버튼을 눌러서 위에서 생성한 <code>sample.zip</code>을 올림</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="확인-1"><a href="#확인-1" class="headerlink" title="확인"></a>확인</h2><p><strong>API Gateway</strong>는 변경사항이 없으므로 결과는 <strong>3장</strong>과 똑같이 나옵니다.</p>
-<ul>
-<li><strong>GET</strong> 요청 : <code>https://.../prod/test?id=2</code></li>
-</ul>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"body"</span>:&#123;<span class="attr">"id"</span>:<span class="string">"2"</span>,<span class="attr">"name"</span>:<span class="string">"test"</span>&#125;&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>POST</strong> 요청 : URL은 <strong>GET</strong>과 동일</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "body": &#123;</div><div class="line">    "id": "2",</div><div class="line">    "header": &#123;</div><div class="line">      ...</div><div class="line">    &#125;,</div><div class="line">    "body": "\"&#123;\\n  \"id\": \"123\",\\n  \"age\": \"25\"\\n&#125;\""</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="마치며…"><a href="#마치며…" class="headerlink" title="마치며…"></a>마치며…</h3><p>이번 포스팅에서 알아본 내용들은 다음과 같습니다.</p>
-<ul>
-<li><strong>Lambda</strong>에 여러 파일을 <code>.zip</code>으로 묶어서 함께 배포<ul>
-<li><strong>npm module</strong>을 함께 배포</li>
-<li>여러 파일로 작성된 소스코드들을 함께 배포 </li>
-</ul>
-</li>
-</ul>
-<p>잘못되었거나, 변경된 점, 기타 추가 사항에 대한 피드백은 언제나 환영합니다. - <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#x6f;&#107;&#x6a;&#x6f;&#x6f;&#110;&#46;&#121;&#x75;&#110;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#115;&#x65;&#x6f;&#107;&#x6a;&#x6f;&#x6f;&#110;&#46;&#121;&#x75;&#110;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;</a>  </p>
-<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><ul>
-<li>AWS 공식 가이드 : <a href="http://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html" target="_blank" rel="external">http://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://DevStarSJ.github.io/2016/11/27/Lambda.Packaging.Node/" data-id="cj1uf5vje0006gu7bo2y7zjk3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-JS/">Node.JS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -1195,7 +1104,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -1205,7 +1114,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
     </div>
   </div>
 
@@ -1215,7 +1124,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/APIGateway/" style="font-size: 18px;">APIGateway</a> <a href="/tags/AWS/" style="font-size: 20px;">AWS</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 12px;">CI/CD</a> <a href="/tags/DevOps/" style="font-size: 12px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 20px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 16px;">Node.JS</a> <a href="/tags/Python/" style="font-size: 14px;">Python</a> <a href="/tags/Serverless/" style="font-size: 14px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 12px;">TypeScript</a>
+      <a href="/tags/APIGateway/" style="font-size: 18.33px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 10px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 11.67px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 20px;">AWS</a> <a href="/tags/C/" style="font-size: 15px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.67px;">CI/CD</a> <a href="/tags/DevOps/" style="font-size: 11.67px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 20px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 16.67px;">Node.JS</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/Serverless/" style="font-size: 13.33px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.67px;">TypeScript</a>
     </div>
   </div>
 
@@ -1224,7 +1133,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
     </div>
   </div>
 

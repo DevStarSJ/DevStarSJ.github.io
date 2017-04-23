@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>.NET Core Install for Ubuntu 14.04 | Dev Star SJ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content=".NET Core Install for Ubuntu 14.04.NET Core를 Ubuntu에 설치하는 과정에 대해서 소개해드리겠습니다. Ubuntu 설치는 필자의 경우는 Microsoft Azure에 설치하였습니다.(참고로 Azure에 Ubuntu설치시 SSH (22)번 빼고는 모두 막혀있습니다. Portal에서 원하시는 포트를 열어야 합니다.) 1. .">
+<meta name="keywords" content="C#,ASP.NET Core">
+<meta property="og:type" content="article">
+<meta property="og:title" content=".NET Core Install for Ubuntu 14.04">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/09/17/CSharp.AspnetCore.Install.Net.Core/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content=".NET Core Install for Ubuntu 14.04.NET Core를 Ubuntu에 설치하는 과정에 대해서 소개해드리겠습니다. Ubuntu 설치는 필자의 경우는 Microsoft Azure에 설치하였습니다.(참고로 Azure에 Ubuntu설치시 SSH (22)번 빼고는 모두 막혀있습니다. Portal에서 원하시는 포트를 열어야 합니다.) 1. .">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.01.png?raw=true">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.02.png?raw=true">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.03.png?raw=true">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.04.png?raw=true">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.05.png?raw=true">
+<meta property="og:updated_time" content="2017-04-23T10:12:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=".NET Core Install for Ubuntu 14.04">
+<meta name="twitter:description" content=".NET Core Install for Ubuntu 14.04.NET Core를 Ubuntu에 설치하는 과정에 대해서 소개해드리겠습니다. Ubuntu 설치는 필자의 경우는 Microsoft Azure에 설치하였습니다.(참고로 Azure에 Ubuntu설치시 SSH (22)번 빼고는 모두 막혀있습니다. Portal에서 원하시는 포트를 열어야 합니다.) 1. .">
+<meta name="twitter:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.01.png?raw=true">
+  
+    <link rel="alternate" href="/atom.xml" title="Dev Star SJ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dev Star SJ</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">DevStarSJ</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://DevStarSJ.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSharp.AspnetCore.Install.Net.Core" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/17/CSharp.AspnetCore.Install.Net.Core/" class="article-date">
+  <time datetime="2016-09-16T15:00:00.000Z" itemprop="datePublished">2016-09-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      .NET Core Install for Ubuntu 14.04
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="NET-Core-Install-for-Ubuntu-14-04"><a href="#NET-Core-Install-for-Ubuntu-14-04" class="headerlink" title=".NET Core Install for Ubuntu 14.04"></a>.NET Core Install for Ubuntu 14.04</h1><p><code>.NET Core</code>를 <strong>Ubuntu</strong>에 설치하는 과정에 대해서 소개해드리겠습니다.</p>
+<p><strong>Ubuntu</strong> 설치는 필자의 경우는 <em>Microsoft Azure</em>에 설치하였습니다.<br>(참고로 <strong>Azure</strong>에 <strong>Ubuntu</strong>설치시 SSH (22)번 빼고는 모두 막혀있습니다. Portal에서 원하시는 포트를 열어야 합니다.)</p>
+<h2 id="1-NET-Core-설치-후-Hello-World-출력해보기"><a href="#1-NET-Core-설치-후-Hello-World-출력해보기" class="headerlink" title="1. .NET Core 설치 후 Hello World 출력해보기"></a>1. <strong>.NET Core</strong> 설치 후 <em>Hello World</em> 출력해보기</h2><p>먼저 <code>.Net Core</code>를 컴파일하고 실행할 수 있도록 <strong>SDK</strong>를 설치하겠습니다.</p>
+<p>공식문서에 설명이 잘 되어 있습니다. (<a href="https://www.microsoft.com/net/core#ubuntu" target="_blank" rel="external">https://www.microsoft.com/net/core#ubuntu</a>)<br>아래 설명대로 해서 잘 안되면 Link의 공식문서에 바뀐 점이 있는지 보시고 따라해주세요.</p>
+<p>아래 명령어를 하나씩 입력해주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo sh -c &apos;echo &quot;deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet/ trusty main&quot; &gt; /etc/apt/sources.list.d/dotnetdev.list&apos;</div><div class="line"></div><div class="line">sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"></div><div class="line">sudo apt-get install dotnet-dev-1.0.0-preview2-003121</div></pre></td></tr></table></figure>
+<p>이제 <code>.Net Core SDK</code> 설치가 끝났습니다.<br>제대로 설치가 되었는지 기본 예제를 실행해 보겠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">mkdir hwapp</div><div class="line"></div><div class="line">cd hwapp</div><div class="line"></div><div class="line">dotnet new</div><div class="line"></div><div class="line">dotnet restore</div><div class="line"></div><div class="line">dotnet run</div></pre></td></tr></table></figure>
+<p>아래와 같이 출력이 나오면 제대로 설치가 된 것입니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.01.png?raw=true">  </p>
+<h2 id="2-ASP-NET-Core-용-실행환경-구성"><a href="#2-ASP-NET-Core-용-실행환경-구성" class="headerlink" title="2. ASP.NET Core 용 실행환경 구성"></a>2. <strong>ASP.NET Core</strong> 용 실행환경 구성</h2><p>먼저 <strong>Web App</strong> 생성에 필요한 것들을 설치해야 합니다.</p>
+<p>자세한 설명은 다음 Link에 되어 있습니다. (<a href="https://docs.asp.net/en/1.0.0-rc1/getting-started/installing-on-linux.html#installing-on-ubuntu-14-04" target="_blank" rel="external">https://docs.asp.net/en/1.0.0-rc1/getting-started/installing-on-linux.html#installing-on-ubuntu-14-04</a>)</p>
+<h3 id="2-1-NET-Version-Manager-DNVM-설치"><a href="#2-1-NET-Version-Manager-DNVM-설치" class="headerlink" title="2.1 .NET Version Manager (DNVM) 설치"></a>2.1 .NET Version Manager (DNVM) 설치</h3><p>Linux 상에서 여러 버전의 .NET 실행 환경 (.NET Execution Environment) <code>DNX</code>를 관리해주는 도구입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install unzip curl</div><div class="line"></div><div class="line">curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh &amp;&amp; source ~/.dnx/dnvm/dnvm.sh</div></pre></td></tr></table></figure>
+<h3 id="2-2-NET-Execution-Environment-DNX-설치"><a href="#2-2-NET-Execution-Environment-DNX-설치" class="headerlink" title="2.2 .NET Execution Environment (DNX) 설치"></a>2.2 .NET Execution Environment (DNX) 설치</h3><p>Linux 상에서 .NET 프로젝트를 빌드하고 실행해주는 도구입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libunwind8 gettext libssl-dev libcurl4-openssl-dev zlib1g libicu-dev uuid-dev</div><div class="line"></div><div class="line">dnvm upgrade -r coreclr</div></pre></td></tr></table></figure>
+<h3 id="2-3-libuv-설치"><a href="#2-3-libuv-설치" class="headerlink" title="2.3 libuv 설치"></a>2.3 libuv 설치</h3><p><code>libuv</code>는 멀티플랫폼 비동기 IO 라이브러리 입니다.<br><code>Kestrel</code>에서 <code>libuv</code>를 사용합니다.<br><code>Kestrel</code>은 ASP.NET Core를 호스팅하기 위한 크로스-플랫폼 HTTP 서버 입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install make automake libtool curl</div><div class="line"></div><div class="line">curl -sSL https://github.com/libuv/libuv/archive/v1.8.0.tar.gz | sudo tar zxfv - -C /usr/local/src</div><div class="line"></div><div class="line">cd /usr/local/src/libuv-1.8.0</div><div class="line"></div><div class="line">sudo sh autogen.sh</div><div class="line"></div><div class="line">sudo ./configure</div><div class="line"></div><div class="line">sudo make</div><div class="line"></div><div class="line">sudo make install</div><div class="line"></div><div class="line">sudo rm -rf /usr/local/src/libuv-1.8.0 &amp;&amp; cd ~/</div><div class="line"></div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure>
+<h2 id="3-ASP-NET-Core-Web-App-생성하기"><a href="#3-ASP-NET-Core-Web-App-생성하기" class="headerlink" title="3. ASP.NET Core Web App 생성하기"></a>3. <strong>ASP.NET Core</strong> Web App 생성하기</h2><p>다음 Link의 공식문서를 보고 작성하였습니다. (<a href="https://docs.asp.net/en/latest/getting-started.html" target="_blank" rel="external">https://docs.asp.net/en/latest/getting-started.html</a>)</p>
+<p>좀 전에 생성한 예제 코드로 이동하겠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/hwapp</div></pre></td></tr></table></figure>
+<p><code>project.json</code>의 <code>dependencies</code>란에 다음과 같이 <code>Kestrel</code>를 추가해주세요.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0-*"</span>,</div><div class="line">  <span class="attr">"buildOptions"</span>: &#123;</div><div class="line">    <span class="attr">"debugType"</span>: <span class="string">"portable"</span>,</div><div class="line">    <span class="attr">"emitEntryPoint"</span>: <span class="literal">true</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;&#125;,</div><div class="line">  <span class="attr">"frameworks"</span>: &#123;</div><div class="line">    <span class="attr">"netcoreapp1.0"</span>: &#123;</div><div class="line">      <span class="attr">"dependencies"</span>: &#123;</div><div class="line">        <span class="attr">"Microsoft.NETCore.App"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"platform"</span>,</div><div class="line">          <span class="attr">"version"</span>: <span class="string">"1.0.0"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"Microsoft.AspNetCore.Server.Kestrel"</span>: <span class="string">"1.0.0"</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"imports"</span>: <span class="string">"dnxcore50"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>패키지를 project에 다운로드 합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet restore</div></pre></td></tr></table></figure>
+<p><code>Startup.cs</code>파일을 추가하려 다음의 내용으로 작성합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using Microsoft.AspNetCore.Builder;</div><div class="line">using Microsoft.AspNetCore.Hosting;</div><div class="line">using Microsoft.AspNetCore.Http;</div><div class="line"></div><div class="line">namespace aspnetcoreapp</div><div class="line">&#123;</div><div class="line">    public class Startup</div><div class="line">    &#123;</div><div class="line">        public void Configure(IApplicationBuilder app)</div><div class="line">        &#123;</div><div class="line">            app.Run(context =&gt;</div><div class="line">            &#123;</div><div class="line">                return context.Response.WriteAsync(&quot;Hello from ASP.NET Core!&quot;);</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>Program.cs</code>파일을 다음과 같이 수정해주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using Microsoft.AspNetCore.Hosting;</div><div class="line"></div><div class="line">namespace aspnetcoreapp</div><div class="line">&#123;</div><div class="line">    public class Program</div><div class="line">    &#123;</div><div class="line">        public static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line">            var host = new WebHostBuilder()</div><div class="line">                .UseKestrel()</div><div class="line">                .UseStartup&lt;Startup&gt;()</div><div class="line">                .Build();</div><div class="line"></div><div class="line">            host.Run();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>그런 다음 실행합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet run</div></pre></td></tr></table></figure>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.02.png?raw=true"></p>
+<p>위 그림과 같은 메세지가 나오면 성공한 것입니다.</p>
+<p>웹브라우저로 붙어보면 아래와 같은 그림이 나옵니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.03.png?raw=true"></p>
+<h2 id="4-외부에서-접속가능하게-배포하기"><a href="#4-외부에서-접속가능하게-배포하기" class="headerlink" title="4. 외부에서 접속가능하게 배포하기"></a>4. 외부에서 접속가능하게 배포하기</h2><p>다음 Link의 공식문서를 보고 따라했습니다.<br>(<a href="https://docs.asp.net/en/latest/publishing/linuxproduction.html" target="_blank" rel="external">https://docs.asp.net/en/latest/publishing/linuxproduction.html</a>)</p>
+<p><code>Nginx</code>를 설치합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nginx</div></pre></td></tr></table></figure>
+<p>이제 우리가 띄운 <code>Web App</code>으로 접속하도록 <strong>Proxy</strong>를 설정합니다.</p>
+<p>설정파일은 <code>/etc/nginx/sites-available/default</code> 입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/nginx/sites-available/default</div></pre></td></tr></table></figure>
+<p>버전별로 내용이 조금 다룰수 있는데 눈여겨 볼 부분은 다음과 같습니다.</p>
+<h3 id="4-1-외부에서-접속할-Port-설정"><a href="#4-1-외부에서-접속할-Port-설정" class="headerlink" title="4.1 외부에서 접속할 Port 설정"></a>4.1 외부에서 접속할 Port 설정</h3><p>아래 <code>80</code>부분을 원하는 Port로 설정하면 됩니다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen 80 default_server;</div><div class="line">    listen [::]:80 default_server ipv6only=on;</div></pre></td></tr></table></figure></p>
+<h3 id="4-2-내부로-연결한-주소-설정"><a href="#4-2-내부로-연결한-주소-설정" class="headerlink" title="4.2 내부로 연결한 주소 설정"></a>4.2 내부로 연결한 주소 설정</h3><p><code>location</code>부분을 아래와 같이 설정합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">    proxy_pass http://localhost:5000;</div><div class="line">    proxy_http_version 1.1;</div><div class="line">    proxy_set_header Upgrade $http_upgrade;</div><div class="line">    proxy_set_header Connection keep-alive;</div><div class="line">    proxy_set_header Host $host;</div><div class="line">    proxy_cache_bypass $http_upgrade;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>중요한 부분만 그림으로 보면 다음과 같습니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.04.png?raw=true"></p>
+<p>수정한 내용에 이상은 없는지 확인한 후 실행합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo nginx -t</div><div class="line"></div><div class="line">sudo service nginx start</div></pre></td></tr></table></figure>
+<p>만약 수행 중 변경 후 반영하려면 다음과 같이 입력해야 합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nginx -s reload</div></pre></td></tr></table></figure>
+<p>이제 외부에서 Web App으로 접근이 가능합니다</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.05.png?raw=true"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/09/17/CSharp.AspnetCore.Install.Net.Core/" data-id="cj1ujekv800015a7bgt0o1jem" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/17/CSharp.AspnetCore.Depoly.VS.Git/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Deploying .NET Core Web App with Visual Studio and Git
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/08/JavaScript.Squel/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Squel.js</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APIGateway/" style="font-size: 18.33px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 10px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 11.67px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 20px;">AWS</a> <a href="/tags/C/" style="font-size: 15px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.67px;">CI/CD</a> <a href="/tags/DevOps/" style="font-size: 11.67px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 20px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 16.67px;">Node.JS</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/Serverless/" style="font-size: 13.33px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.67px;">TypeScript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/23/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/08/AWS-Lambda-BinaryResponse/">AWS Lambda + API Gateway Binary Response 예제</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/Lambda.Chatbot.01/">AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/Lambda.invoke.Lambda/">Lambda에서 Lambda를 호출하는 방법</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/11/Lambda.Tips.01/">AWS Lambda 사용에 관련된 Tip</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yun Seok-joon<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
