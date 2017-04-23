@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: Lambda | Dev Star SJ</title>
+  <title>Using SignalR in ASP.NET Core | Dev Star SJ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Sharing the common developer&apos;s try-on">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dev Star SJ">
-<meta property="og:url" content="http://DevStarSJ.github.io/categories/AWS/Lambda/page/2/index.html">
+  <meta name="description" content="SignalR을 ASP.NET 5 Template에서 사용하기 위해서는 Startup.cs의 public void Configure(IApplicationBuilder app, ...)에서 아래와 같은 구문이 필요합니다. 123456789101112public class Startup&amp;#123;	public void Configure(IApplication">
+<meta name="keywords" content="C#,ASP.NET Core">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using SignalR in ASP.NET Core">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/09/17/CSharp.AspnetCore.SignalR/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="Sharing the common developer&apos;s try-on">
+<meta property="og:description" content="SignalR을 ASP.NET 5 Template에서 사용하기 위해서는 Startup.cs의 public void Configure(IApplicationBuilder app, ...)에서 아래와 같은 구문이 필요합니다. 123456789101112public class Startup&amp;#123;	public void Configure(IApplication">
+<meta property="og:updated_time" content="2017-04-23T10:16:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dev Star SJ">
-<meta name="twitter:description" content="Sharing the common developer&apos;s try-on">
+<meta name="twitter:title" content="Using SignalR in ASP.NET Core">
+<meta name="twitter:description" content="SignalR을 ASP.NET 5 Template에서 사용하기 위해서는 Startup.cs의 public void Configure(IApplicationBuilder app, ...)에서 아래와 같은 구문이 필요합니다. 123456789101112public class Startup&amp;#123;	public void Configure(IApplication">
   
     <link rel="alternate" href="/atom.xml" title="Dev Star SJ" type="application/atom+xml">
   
@@ -66,101 +68,74 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/11/24/Lambda.Python/" class="archive-article-date">
-  <time datetime="2016-11-24T06:54:51.000Z" itemprop="datePublished">Nov 24</time>
+        <section id="main"><article id="post-CSharp.AspnetCore.SignalR" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/17/CSharp.AspnetCore.SignalR/" class="article-date">
+  <time datetime="2016-09-16T15:00:00.000Z" itemprop="datePublished">2016-09-17</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/24/Lambda.Python/">AWS Lambda에 Python Handler 만들기</a>
+    <h1 class="article-title" itemprop="name">
+      Using SignalR in ASP.NET Core
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/11/22/Lambda+APIGateway.03.Proxy/" class="archive-article-date">
-  <time datetime="2016-11-22T07:54:51.000Z" itemprop="datePublished">Nov 22</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/Lambda+APIGateway.03.Proxy/">AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기 (3) - Proxy</a>
-    </h1>
-  
+        <p><code>SignalR</code>을 <code>ASP.NET 5 Template</code>에서 사용하기 위해서는 <code>Startup.cs</code>의 <code>public void Configure(IApplicationBuilder app, ...)</code>에서 아래와 같은 구문이 필요합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public class Startup</div><div class="line">&#123;</div><div class="line">	public void Configure(IApplicationBuilder app)</div><div class="line">	&#123;</div><div class="line">		app.UseServices(services =&gt;</div><div class="line">		&#123;</div><div class="line">			services.AddSignalR();</div><div class="line">		&#125;);</div><div class="line">		app.UseFileServer();</div><div class="line">		app.UseSignalR();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>app.UserServices()</code>를 사용하기 위해서는 <code>Microsoft.AspNet.RequestContainer</code> assembly를 포함시켜야 <code>IApplicationBuilder</code>의 extention method인 <code>UseServices</code>의 사용이 가능한데, 현재 version에서는 <code>ASP.NET 4.5.1</code>을 지원하지 않아서 사용이 불가능 합니다.</p>
+<p><a href="https://github.com/aspnet/Hosting/tree/8f16060f941b71551be09015d76efb86770d84d7/src/Microsoft.AspNet.RequestContainer" target="_blank" rel="external">https://github.com/aspnet/Hosting/tree/8f16060f941b71551be09015d76efb86770d84d7/src/Microsoft.AspNet.RequestContainer</a></p>
+<p>위 Github repository의 <code>ContainerExtensions.cs</code>에 구현되어 있습니다.</p>
+<p>추후에라도 적용시키기 위해서는 아래 Link를 참고하시기 바랍니다.</p>
+<p><a href="http://dotnetthoughts.net/using-signalr-in-asp-net-5/" target="_blank" rel="external">http://dotnetthoughts.net/using-signalr-in-asp-net-5/</a></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/11/22/Lambda+APIGateway.02.Route/" class="archive-article-date">
-  <time datetime="2016-11-22T06:54:51.000Z" itemprop="datePublished">Nov 22</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/Lambda+APIGateway.02.Route/">AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기 (2) - Route</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/11/22/Lambda+APIGateWay.01/" class="archive-article-date">
-  <time datetime="2016-11-22T05:54:51.000Z" itemprop="datePublished">Nov 22</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/09/17/CSharp.AspnetCore.SignalR/" data-id="cj1ujo3um0000ct7b6s0wr2d3" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/Lambda+APIGateWay.01/">AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기</a>
-    </h1>
-  
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/17/CSharp.AspnetCore.Depoly.VS.Git/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Deploying .NET Core Web App with Visual Studio and Git
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/08/JavaScript.Squel/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Squel.js</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/categories/AWS/Lambda/">&laquo; __('prev')</a><a class="page-number" href="/categories/AWS/Lambda/">1</a><span class="page-number current">2</span>
-  </nav>
 </section>
         
           <aside id="sidebar">
