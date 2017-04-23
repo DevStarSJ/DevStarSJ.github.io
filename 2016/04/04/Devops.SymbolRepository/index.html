@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Make Symbol Repository for Visual Studio | Dev Star SJ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Make Symbol Repository for Visual Studio1. Debugging Tools for Windows 설치https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063(v=vs.85).aspx 2. Symbol 등록1call svnindex.cmd -source=&amp;quot;&amp;">
+<meta name="keywords" content="DevOps,CI/CD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Make Symbol Repository for Visual Studio">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/04/04/Devops.SymbolRepository/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="Make Symbol Repository for Visual Studio1. Debugging Tools for Windows 설치https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063(v=vs.85).aspx 2. Symbol 등록1call svnindex.cmd -source=&amp;quot;&amp;">
+<meta property="og:updated_time" content="2017-04-23T09:56:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Make Symbol Repository for Visual Studio">
+<meta name="twitter:description" content="Make Symbol Repository for Visual Studio1. Debugging Tools for Windows 설치https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063(v=vs.85).aspx 2. Symbol 등록1call svnindex.cmd -source=&amp;quot;&amp;">
+  
+    <link rel="alternate" href="/atom.xml" title="Dev Star SJ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dev Star SJ</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">DevStarSJ</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://DevStarSJ.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Devops.SymbolRepository" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/04/Devops.SymbolRepository/" class="article-date">
+  <time datetime="2016-04-03T15:00:00.000Z" itemprop="datePublished">2016-04-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Make Symbol Repository for Visual Studio
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Make-Symbol-Repository-for-Visual-Studio"><a href="#Make-Symbol-Repository-for-Visual-Studio" class="headerlink" title="Make Symbol Repository for Visual Studio"></a>Make Symbol Repository for Visual Studio</h1><h3 id="1-Debugging-Tools-for-Windows-설치"><a href="#1-Debugging-Tools-for-Windows-설치" class="headerlink" title="1. Debugging Tools for Windows 설치"></a>1. Debugging Tools for Windows 설치</h3><p><a href="https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063(v=vs.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063(v=vs.85).aspx</a></p>
+<h3 id="2-Symbol-등록"><a href="#2-Symbol-등록" class="headerlink" title="2. Symbol 등록"></a>2. Symbol 등록</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call svnindex.cmd -source=&quot;&#123;SolutionFolder&#125;&quot; -symbols=&quot;&#123;SolutionFolder&#125;\bin\Unicode Release&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">symstore.exe add /r /f &quot;&#123;SolutionFolder&#125;\bin\Unicode Release\*.*&quot; /s &quot;&#123;SymbolRepository&#125;&quot; /t &quot;&#123;Name&#125;&quot; /compress</div></pre></td></tr></table></figure>
+<blockquote>
+<p>e.g.<br>call svnindex.cmd -source=”d:\svn\trunk” -symbol=”d:\svn\trunk\bin\Unicode Release”<br>symstore add /r /f “d:\svn\trunk\bin\Unicode Release*.*” /s “d:\symbol” /t “MyApp” /compress</p>
+</blockquote>
+<ul>
+<li><p>통상적으로 <code>symstore.exe</code>는 아래 폴더에 위치합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\Program Files\Debugging Tools for Windows (x64)</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>svnindex.cmd</code>는 설치된 Debugging Tools for Windows 폴더 아래 <code>srcsrv</code> 폴더 내에 있으며 다른 CI 제품들의 cmd 파일들도 존재합니다.</p>
+</li>
+</ul>
+<h3 id="3-저장된-Symbol-확인"><a href="#3-저장된-Symbol-확인" class="headerlink" title="3. 저장된 Symbol 확인"></a>3. 저장된 Symbol 확인</h3><ul>
+<li><code>{SymbolRepository}\000Admin\server.txt</code>에서 확인</li>
+<li>각 ID별 Build일시. 이름 (/t 옵션 뒤에 이름) 확인이 가능</li>
+</ul>
+<h3 id="4-Symbol-삭제"><a href="#4-Symbol-삭제" class="headerlink" title="4. Symbol 삭제"></a>4. Symbol 삭제</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">symstore del /i ID /s &quot;&#123;SymbolRepository&#125;&quot;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>e.g.<br>symstore del /i 142 /s “d:\symbol”</p>
+</blockquote>
+<h3 id="symstore-사용법-Symbol-삭제-포함"><a href="#symstore-사용법-Symbol-삭제-포함" class="headerlink" title="symstore 사용법 (Symbol 삭제 포함)"></a>symstore 사용법 (Symbol 삭제 포함)</h3><p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms681378(v=vs.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/windows/desktop/ms681378(v=vs.85).aspx</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/04/04/Devops.SymbolRepository/" data-id="cj1uiu1k00001q57b97252j82" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/10/Devops.Jenkins/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Install Jenkins
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/11/TypeScript.03.ObjectOrientationInTypeScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Chapter 3 Object Orientation in TypeScript</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APIGateway/" style="font-size: 18px;">APIGateway</a> <a href="/tags/AWS/" style="font-size: 20px;">AWS</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 12px;">CI/CD</a> <a href="/tags/DevOps/" style="font-size: 12px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 20px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 16px;">Node.JS</a> <a href="/tags/Python/" style="font-size: 14px;">Python</a> <a href="/tags/Serverless/" style="font-size: 14px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 12px;">TypeScript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/23/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/08/AWS-Lambda-BinaryResponse/">AWS Lambda + API Gateway Binary Response 예제</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/Lambda.Chatbot.01/">AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/Lambda.invoke.Lambda/">Lambda에서 Lambda를 호출하는 방법</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/11/Lambda.Tips.01/">AWS Lambda 사용에 관련된 Tip</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yun Seok-joon<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
