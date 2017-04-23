@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Dev Star SJ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Sharing the common developer&apos;s try-on">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dev Star SJ">
+<meta property="og:url" content="http://DevStarSJ.github.io/page/4/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="Sharing the common developer&apos;s try-on">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dev Star SJ">
+<meta name="twitter:description" content="Sharing the common developer&apos;s try-on">
+  
+    <link rel="alternate" href="/atom.xml" title="Dev Star SJ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dev Star SJ</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">DevStarSJ</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://DevStarSJ.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-CSharp.Aspnet.03.Route.adv" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/08/CSharp.Aspnet.03.Route.adv/" class="article-date">
+  <time datetime="2016-05-07T17:00:00.000Z" itemprop="datePublished">2016-05-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/ASP-NET/">ASP.NET</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/08/CSharp.Aspnet.03.Route.adv/">ASP.NET MVC 03. Advanced Routing</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="고급-Routing"><a href="#고급-Routing" class="headerlink" title="고급 Routing"></a>고급 Routing</h1><h2 id="1-View에서-outgoing-URL-생성-using-routing-system"><a href="#1-View에서-outgoing-URL-생성-using-routing-system" class="headerlink" title="1. View에서 outgoing URL 생성 (using routing system)"></a>1. View에서 outgoing URL 생성 (using routing system)</h2><p>View에서 왜 굳이 routing system을 사용해서 outgoing URL을 생성해야 할까요 ?<br>그냥 static link를 사용해서 쉽게 생성이 가능한데 말이죠.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/Home/Index"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Static link (정적 링크)의 문제점은 URL Schema가 바뀔 경우 hard-coding된 URL들을 모두 찾아서 바꿔줘야 합니다.<br>그러므로 Route 시스템을 이용하여 outgoing URL을 동적으로 생성하는게 더 바람직합니다.</p>
+<h3 id="1-1-동일-Controller에서의-다른-Action-Method-호출"><a href="#1-1-동일-Controller에서의-다른-Action-Method-호출" class="headerlink" title="1.1 동일 Controller에서의 다른 Action Method 호출"></a>1.1 동일 Controller에서의 다른 Action Method 호출</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@Html.ActionLink(&quot;This is a outgoing URL&quot;, &quot;ActionMethod&quot;)</div></pre></td></tr></table></figure>
+<p><code>Html.ActionLink</code> helper method를 이용하여 rendering된 page의 html을 보면 아래와 같이 생성이 됩니다</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/Home/ActionMethod"</span>&gt;</span>This is a outgoing URL<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>RouteConfig.cs</code>의 <code>RouteConfig</code>에 설정된 <code>.MapRoute()</code>중 matching되는 패턴을 찾아서 해당 URL로 rendering됩니다.  </p>
+<h3 id="1-2-다른-Controller-호출"><a href="#1-2-다른-Controller-호출" class="headerlink" title="1.2 다른 Controller 호출"></a>1.2 다른 Controller 호출</h3><p>다른 Controller로 가려면 <code>Html.ActionLink</code>의 overloading된 다른 함수를 사용하면 됩니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@Html.ActionLink(&quot;This is a outgoing URL&quot;, &quot;ActionMethod&quot;, &quot;ControllerName&quot;)</div></pre></td></tr></table></figure>
+<h3 id="1-3-추가값-전달"><a href="#1-3-추가값-전달" class="headerlink" title="1.3 추가값 전달"></a>1.3 추가값 전달</h3><p>Controller, Action Method 이외에 추가값을 전달할 경우 익명타입을 이용하여 전달합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@Html.ActionLink(&quot;This is a outgoing URL&quot;, &quot;ActionMethod&quot;, &quot;ControllerName&quot;, new &#123; id = &quot;Luna&quot; )</div></pre></td></tr></table></figure>
+<p>이 경우 다음과 같은 Link로 rendering 됩니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/ControllerName/ActionMethod?id=Luna"</span>&gt;</span>This is a outgoing URL<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>물론 <code>routes.MapRoute(null, &quot;{controller}/{action}/{id}&quot;, ...);</code>로 URL pattern이 설정되어 있을 경우에는 <code>&quot;/ControllerName/ActionMethod/Luna&quot;</code> 로 생성합니다.  </p>
+<h3 id="1-4-Html-Attribute가-적용된-앵커-a-생성"><a href="#1-4-Html-Attribute가-적용된-앵커-a-생성" class="headerlink" title="1.4 Html Attribute가 적용된 앵커(a) 생성"></a>1.4 Html Attribute가 적용된 앵커(a) 생성</h3><p>익명타입의 추가값 다음 인자로 익명타입으로 전달하면 됩니다. 전달할 추가값이 없는 경우에는 추가값에 대한 익명타입란에 <code>null</code>을 넣어주면 됩니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@Html.ActionLink(&quot;Home&quot;, &quot;Index&quot;, &quot;Home&quot;, null, </div><div class="line">    new &#123; id = &quot;anchorID&quot;, @class = &quot;cssStyleClass&quot; &#125; )</div></pre></td></tr></table></figure>
+<p>다음과 같이 rendering 됩니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/"</span> <span class="attr">id</span> = <span class="string">"anchorID"</span>, <span class="attr">class</span> = <span class="string">"cssStyleClass"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>@class</code>를 좀 주의해야하는데, 아마도 C# keyword의 <code>class</code>와 중복이 되어서가 아닐까라 추측됩니다.</p>
+<h3 id="1-5-정규화된-URL-생성"><a href="#1-5-정규화된-URL-생성" class="headerlink" title="1.5 정규화된 URL 생성"></a>1.5 정규화된 URL 생성</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Html.ActionLink(&quot;Home&quot;, &quot;Index&quot;, &quot;Home&quot;,</div><div class="line">    &quot;https&quot;, &quot;mySite.com&quot;, &quot;fragment&quot;,    </div><div class="line">    new &#123; id = &quot;Luna&quot; &#125;,</div><div class="line">    new &#123; id = &quot;anchorID&quot;, @class = &quot;cssStyleClass&quot; &#125; )</div></pre></td></tr></table></figure>
+<p><code>Controller</code> 다음에 새로 추가된 3개의 매개변수는 각각 Protocol, Server의 URL, FragmentName을 나타냅니다.<br>그래서 다음과 같이 rendering 됩니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://mySite.com?id=Luna#fragment"</span> <span class="attr">id</span> = <span class="string">"anchorID"</span>, <span class="attr">class</span> = <span class="string">"cssStyleClass"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="1-6-링크-a-없이-URL만-생성하기"><a href="#1-6-링크-a-없이-URL만-생성하기" class="headerlink" title="1.6 링크(a)없이 URL만 생성하기"></a>1.6 링크(a)없이 URL만 생성하기</h3><p><code>Html.ActionLink()</code> 대신 <code>Html.Action()</code>를 사용하면 <code>&lt;a&gt;&lt;/a&gt;</code>없는 URL만 Text로 생성합니다.<br>말 그대로 <code>Link</code>를 빼면 Link없이 URL만 생성합니다.<br>사용법은 <code>Html.ActionLink()</code>와 같습다만 처음의 text 인자와 html attribute 인자가 없습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@Html.Action(&quot;ActionMethod&quot;, &quot;ControllerName&quot;, new &#123; id = &quot;Luna&quot; )</div></pre></td></tr></table></figure>
+<p>의 경우 <code>/ControllerName/ActionMethod?id=Luna</code>라는 문자열을 생성합니다.<br><code>routes.MapRoute(null, &quot;{controller}/{action}/{id}&quot;, ...);</code>로 URL pattern이 설정되어 있을 경우에는 <code>/ControllerName/ActionMethod/Luna</code> 로 생성합니다.  </p>
+<h2 id="2-Action-Method에서-outgoing-URL-생성하기"><a href="#2-Action-Method에서-outgoing-URL-생성하기" class="headerlink" title="2. Action Method에서 outgoing URL 생성하기"></a>2. Action Method에서 outgoing URL 생성하기</h2><h3 id="2-1-View에서-사용한-helper-method-그대로-사용하여-URL생성"><a href="#2-1-View에서-사용한-helper-method-그대로-사용하여-URL생성" class="headerlink" title="2.1 View에서 사용한 helper method 그대로 사용하여 URL생성"></a>2.1 View에서 사용한 helper method 그대로 사용하여 URL생성</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public ViewResult MyActionMethod()</div><div class="line">&#123;</div><div class="line">    string url = Url.Action(&quot;Index&quot;, new &#123; id = &quot;Luna&quot;&#125;); // /Home/Index?id=Luna or /Home/Index/Luna </div><div class="line">    string url2 = Url.RouteUrl(new &#123; controller = &quot;Home&quot;, action = &quot;Index&quot;&#125;); // /Home/Index or /</div><div class="line">    ...</div><div class="line">    return View();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-2-다른-URL로-재전송"><a href="#2-2-다른-URL로-재전송" class="headerlink" title="2.2 다른 URL로 재전송"></a>2.2 다른 URL로 재전송</h3><h4 id="2-2-1-다른-Action-Method-호출"><a href="#2-2-1-다른-Action-Method-호출" class="headerlink" title="2.2.1 다른 Action Method 호출"></a>2.2.1 다른 Action Method 호출</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public RedirectToRouteResult MyActionMethod()</div><div class="line">&#123;</div><div class="line">    return RedirectToAction(&quot;Index&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>다른 Controller 호출 및 segement 전달 가능한 overload된 함수들이 존재합니다.</p>
+<h4 id="2-2-2-URL을-생성하여-재전송"><a href="#2-2-2-URL을-생성하여-재전송" class="headerlink" title="2.2.2 URL을 생성하여 재전송"></a>2.2.2 URL을 생성하여 재전송</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public RedirectToRouteResult MyActionMethod()</div><div class="line">&#123;</div><div class="line">    return RedirectToRoute(new &#123; controller = &quot;Home&quot;, action = &quot;Index&quot;, id = &quot;Luna&quot;&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="3-특정-Route를-선택적으로-사용하기"><a href="#3-특정-Route를-선택적으로-사용하기" class="headerlink" title="3. 특정 Route를 선택적으로 사용하기"></a>3. 특정 Route를 선택적으로 사용하기</h2><p>이제껏 Routing system이 URL, Link를 Rule에 따라서 생성하였습니다.<br>우리가 직접 Route를 선택하는 방법도 있습니다.<br>(<code>routes.MapRoute()</code>의 첫번째 인자로 명칭을 입력했는데 그것을 명시적으로 사용하면 됩니다.)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">routes.MapRoute(&quot;Route1&quot;, &quot;&#123;controller&#125;/&#123;action&#125;&quot;);</div><div class="line">routes.MapRoute(&quot;Route2&quot;, &quot;App/&#123;action&#125;&quot;, new &#123; controller = &quot;Home&quot; &#125;);</div></pre></td></tr></table></figure>
+<p>위와 같이 설정된 경우</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@Html.ActionLink(&quot;Customer Infomation&quot;, &quot;Index&quot;, &quot;Customer&quot;)</div></pre></td></tr></table></figure>
+<p>는 항상 다음의 Link로 생성됩니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/Customer/Index"</span>&gt;</span>Customer Information<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="3-1-View에서-특정-Route-사용하기"><a href="#3-1-View에서-특정-Route-사용하기" class="headerlink" title="3.1 View에서 특정 Route 사용하기"></a>3.1 View에서 특정 Route 사용하기</h3><p>만약 <code>Route2</code>를 이용한 Link의 생성을 원할 경우 다음과 같이 명시적으로 Route Name을 선택 할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@Html.ActionLink(&quot;Customer Infomation&quot;, &quot;Route2&quot;, &quot;Index&quot;, &quot;Customer&quot;)</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/Home/Index?Length=5"</span> <span class="attr">Length</span>=<span class="string">"8"</span>&gt;</span>Customer Information<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>사용자가 <code>Customer</code>라는 Controller를 사용하라고 했지만, 해당 Route Pattern에 의해서 <code>HomeController</code>로 연결이 됩니다.</p>
+<h3 id="3-2-Route-Attribute에서-특정-Route를-지정"><a href="#3-2-Route-Attribute에서-특정-Route를-지정" class="headerlink" title="3.2 Route Attribute에서 특정 Route를 지정"></a>3.2 Route Attribute에서 특정 Route를 지정</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[Route(&quot;Add/&#123;user&#125;/&#123;id:int&#125;&quot;, Name=&quot;AddRoute&quot;)]</div><div class="line">public string Add(string user, int id)</div><div class="line">&#123;</div><div class="line">    return $&quot;Add User - Name : &#123;user&#125; , ID : &#123;id&#125;&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-Area"><a href="#4-Area" class="headerlink" title="4. Area"></a>4. Area</h2><p>Project에서 Area를 추가 할 수 있습니다.<br>각 영역(Area)별로 다른 Controller, Model, View 및 다른 Route 규칙 등을 가집니다.<br>Area의 특징은 다음과 같습니다.</p>
+<ul>
+<li>Area별로 다른 Folder안에 MVC Project의 구조들을 그대로 가지고 있습니다.</li>
+<li>Area내의 <code>(Area명칭)AreaRegistration.cs</code> 내에 Route 규칙을 정의합니다.</li>
+<li>Project의 <code>Global.asax.cs</code>내에 <code>AreaRegistration.RegisterAllAreas();</code>를 호출하는 부분이 추가됩니다.</li>
+<li>Attribute로 Routing하는 경우 <code>[RouteArea(&quot;Area명칭&quot;)]</code>으로 적용이 가능합니다.</li>
+<li><code>Html.ActionLink()</code>에서 Area를 명시할 경우에는 추가정보를 적는 무명 타입란에 <code>area</code>를 지정하면 됩니다.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@Html.ActionLink(&quot;Go to Another Area&quot;, &quot;Index&quot;, new &#123; area = &quot;Admin&quot; &#125;)</div></pre></td></tr></table></figure>
+<h2 id="5-Disk-file에-대한-요청"><a href="#5-Disk-file에-대한-요청" class="headerlink" title="5. Disk file에 대한 요청"></a>5. Disk file에 대한 요청</h2><p>정적 파일 (Image, html, JavaScript 등…)에 대한 접근은 그냥 해당 주소를 그대로 적어주면 접근이 됩니다.<br>Routing system은 전달받은 URL이 disk상의 file과 매칭될 경우 Routing pattern과는 상관없이 해당 file을 전달해 줍니다.<br>단, <code>RouteConfig.cs</code>에서 <code>routes.RouteExistingFiles = true;</code>로 설정할 경우 file을 찾기전에 Routing pattern을 먼저 적용합니다.<br>이렇게 설정한 경우 특정 패턴에 대해서는 file로 접근을 먼저 시키고자 할때는 <code>routes.IgnoreRoute(&quot;Content/{filename}.html&quot;)</code>과 같은 형식으로 적용이 가능합니다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/05/08/CSharp.Aspnet.03.Route.adv/" data-id="cj1uk5wpm0003wp7bacwl9xc4" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSharp.Aspnet.02.Route" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/07/CSharp.Aspnet.02.Route/" class="article-date">
+  <time datetime="2016-05-06T16:00:00.000Z" itemprop="datePublished">2016-05-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/ASP-NET/">ASP.NET</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/07/CSharp.Aspnet.02.Route/">ASP.NET MVC 02. URL Routing</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ASP-NET-MVC-URL-Routing"><a href="#ASP-NET-MVC-URL-Routing" class="headerlink" title="ASP.NET MVC URL Routing"></a>ASP.NET MVC URL Routing</h1><h2 id="1-URL-Routing이란"><a href="#1-URL-Routing이란" class="headerlink" title="1. URL Routing이란"></a>1. URL Routing이란</h2><p>ASP.NET MVC로 생성된 Web Application의 경우 아래와 같은 형식으로 접근이 가능합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://mySite.com/Home/Index</div></pre></td></tr></table></figure>
+<p>기본 URL Routing 형식으로 해석을 할 경우</p>
+<ul>
+<li><code>mySite.com</code> : Web Application의 주소</li>
+<li><code>Home</code> : Controller 명칭</li>
+<li><code>Index</code> : Action method 명칭</li>
+</ul>
+<p>으로 동작합니다.</p>
+<h2 id="2-RouteConfig-cs"><a href="#2-RouteConfig-cs" class="headerlink" title="2. RouteConfig.cs"></a>2. RouteConfig.cs</h2><h3 id="2-1-Global-asax-cs-를-보면-아래와-같이-Route를-설정하는-Code가-있습니다"><a href="#2-1-Global-asax-cs-를-보면-아래와-같이-Route를-설정하는-Code가-있습니다" class="headerlink" title="2.1 Global.asax.cs 를 보면 아래와 같이 Route를 설정하는 Code가 있습니다."></a>2.1 <code>Global.asax.cs</code> 를 보면 아래와 같이 Route를 설정하는 Code가 있습니다.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RouteConfig.RegisterRoutes(RouteTable.Routes);</div></pre></td></tr></table></figure>
+<h3 id="2-2-App-Start-RouteConfig-cs-파일에-RouteConfig-RegisterRoute라는-static-method가-있습니다"><a href="#2-2-App-Start-RouteConfig-cs-파일에-RouteConfig-RegisterRoute라는-static-method가-있습니다" class="headerlink" title="2.2 \App_Start\RouteConfig.cs 파일에 RouteConfig.RegisterRoute라는 static method가 있습니다."></a>2.2 <code>\App_Start\RouteConfig.cs</code> 파일에 <code>RouteConfig.RegisterRoute</code>라는 static method가 있습니다.</h3><p>매개변수로 전달받은 <code>RouteCollection route</code>에 <code>.MapRoute()</code>로 Routing 규칙들을 추가하는 Code들이 있습니다.</p>
+<h2 id="3-MapRoute-parameters"><a href="#3-MapRoute-parameters" class="headerlink" title="3. .MapRoute() parameters"></a>3. <code>.MapRoute()</code> parameters</h2><h3 id="3-1-name"><a href="#3-1-name" class="headerlink" title="3.1 name"></a>3.1 name</h3><p>Mapping할 Routing 명칭입니다. 별 의미가 없으므로 <code>null</code>로 입력해도 됩니다.</p>
+<h3 id="3-2-url"><a href="#3-2-url" class="headerlink" title="3.2 url"></a>3.2 url</h3><p>URL 패턴을 지정합니다.<br><code>Web Application 주소/</code> 다음부터의 패턴을 지정 할 수 있습니다.  </p>
+<ul>
+<li>Static URL Segment : url안에 일반 문자열로 입력이 가능합니다.</li>
+<li>Dynamic URL Segment : 중괄호<code>{ }</code>내에 <code>변수명</code>을 입력하면 해당 ActionMethod에서 <code>RouteData.Vaues[&quot;변수명&quot;]</code>으로 읽을 수 있습니다.  </li>
+</ul>
+<p>ex) <code>url: &quot;Page{page}&quot;</code>로 설정할 경우 <code>http://mySite.com/Page3</code>으로 접근하면 해당 Route로 mapping되며 <code>{page}</code>에 3의 값이 전달됩니다.  </p>
+<p>아래의 3가지 명칭은 변수명으로 지정이 불가능 합니다.</p>
+<ul>
+<li><code>controller</code> : Controller 이름을 지정합니다.</li>
+<li><code>action</code> : Action Method 이름을 지정합니다.</li>
+<li><code>area</code> : Area를 지정합니다.</li>
+</ul>
+<p>만약 해당 <code>Controller</code>의 <code>Action Method</code>의 <code>argument</code>와 같은 변수명으로 Mapping하게되면 <code>Action Method</code>의 <code>argument</code>로 그 값을 전달합니다.</p>
+<p>ex) <code>url : &quot;{controller}/{action}/{id}</code>로 설정하였을 경우,<br><code>http://mySite.com/Product/Index/Luna</code>란 주소로 접근할 경우<br><code>ProductController</code>에 <code>Index(string id)</code>라는 Action Method가 있으면 <code>id</code>라는 argument를 <code>Luna</code>로 전달하게 됩니다.</p>
+<h4 id="가변길이-parameter"><a href="#가변길이-parameter" class="headerlink" title="가변길이 parameter"></a>가변길이 parameter</h4><p><code>{controller}/{action}/{*all}</code> 이라고 정의한 경우 segment가 3개 이상인 경우 모두 all변수에 할당되어서 Matching됩니다.  </p>
+<h3 id="3-3-defaults"><a href="#3-3-defaults" class="headerlink" title="3.3 defaults"></a>3.3 defaults</h3><p>기본값 설정이 가능합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">defaults : new &#123; controller = &quot;Product&quot;, action = &quot;Index&quot;, id = &quot;Luna&quot; &#125;</div></pre></td></tr></table></figure>
+<p>와 같은 형식으로 지정이 가능합니다.<br>해당 URL와 매칭되는 경우 URL 패턴의 변수명과 같은 곳에 아무런 값도 안 넣은 경우 default로 설정된 값이 사용되며,<br>URL 패턴에 없는 변수명을 default로 설정한 경우 해당 변수명(또는 controller, action)에 대해서는 default로 설정된 값으로 동작합니다.  </p>
+<ul>
+<li>Optinal로 설정될 경우 <code>id = UrlParameter.Optional</code> 해당 segment는 입력되지 않아도 Matching 된 것으로 간주됩니다.</li>
+</ul>
+<h3 id="3-4-constratins"><a href="#3-4-constratins" class="headerlink" title="3.4 constratins"></a>3.4 constratins</h3><p>URL parameter에 제약사항을 설정합니다.  </p>
+<h4 id="3-4-1-Regular-Expression-정규표현식-을-이용하여-검사"><a href="#3-4-1-Regular-Expression-정규표현식-을-이용하여-검사" class="headerlink" title="3.4.1 Regular Expression (정규표현식)을 이용하여 검사"></a>3.4.1 Regular Expression (정규표현식)을 이용하여 검사</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constraints: new &#123; page = @&quot;\d+&quot; &#125;</div></pre></td></tr></table></figure>
+<p>위의 경우 page의 값은 숫자형식만 가능하게 됩니다.  </p>
+<h4 id="3-4-2-여러-개의-값을-지정하여-검사"><a href="#3-4-2-여러-개의-값을-지정하여-검사" class="headerlink" title="3.4.2 여러 개의 값을 지정하여 검사"></a>3.4.2 여러 개의 값을 지정하여 검사</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constraints: new &#123; page = @&quot;\d+&quot;, action=&quot;^Index$|^About$&quot;&#125;</div></pre></td></tr></table></figure>
+<p>위의 경우 추가로 action segment가 Index 나 About인 URL만 Matching합니다.</p>
+<h4 id="3-4-3-HTTP-Method를-사용하여-검사"><a href="#3-4-3-HTTP-Method를-사용하여-검사" class="headerlink" title="3.4.3 HTTP Method를 사용하여 검사"></a>3.4.3 HTTP Method를 사용하여 검사</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">constraints: new &#123; page = @&quot;\d+&quot;, action=&quot;^Index$|^About$&quot;,</div><div class="line">    httpMethod = new HttpMethodConstarint(&quot;GET&quot;, &quot;POST&quot;)&#125;</div></pre></td></tr></table></figure>
+<p>위의 경우 추가로 GET, POST 요청만 처리하도록 제한합니다.</p>
+<h4 id="3-4-4-형식-범위-등의-제약조건"><a href="#3-4-4-형식-범위-등의-제약조건" class="headerlink" title="3.4.4 형식,범위 등의 제약조건"></a>3.4.4 형식,범위 등의 제약조건</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">constraints: new &#123; page = @&quot;\d+&quot;, action=&quot;^Index$|^About$&quot;,</div><div class="line">    httpMethod = new HttpMethodConstarint(&quot;GET&quot;, &quot;POST&quot;), </div><div class="line">    id = new RangeRouteConstraint(10, 20) &#125;</div></pre></td></tr></table></figure>
+<p>위의 경우 추가로 id값이 10에서 20 사이에 경우에만 허용합니다.  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">using System.Web.Mvc.Routing.Constarints;</div></pre></td></tr></table></figure>
+<p>위 namespace에 제약조건 class들이 정의되어 있으며 목록은 아래 link에서 확인이 가능합니다.</p>
+<p><a href="https://msdn.microsoft.com/ko-kr/library/system.web.mvc.routing.constraints(v=vs.118).aspx" target="_blank" rel="external">https://msdn.microsoft.com/ko-kr/library/system.web.mvc.routing.constraints(v=vs.118).aspx</a></p>
+<h3 id="3-5-namespaces"><a href="#3-5-namespaces" class="headerlink" title="3.5 namespaces"></a>3.5 namespaces</h3><p><code>string[]</code> 타입으로 여러개의 namespace 값을 전달 받습니다.<br>해당 값을 전달받은 경우 먼저 전달받은 namespace내의 controller부터 찾게 됩니다.<br>배열로 전달받은 namespace들은 모두 동일한 우선순위를 가지게 됩니다.<br>만약 특정 namespace에 우선순의를 두고자 할 경우 <code>MapRoute()</code>를 따로 설정하여야 합니다.  </p>
+<h2 id="4-Segment-Matching-규칙"><a href="#4-Segment-Matching-규칙" class="headerlink" title="4. Segment Matching 규칙"></a>4. Segment Matching 규칙</h2><ul>
+<li>위에 설정한 규칙부터 차례대로 적용합니다.</li>
+<li>그러므로 동일한 segment를 가지는 Route를 여러개 설정할 경우 좀 더 특수한 경우를 먼저 선언해야 적용됩니다.</li>
+</ul>
+<p>ex)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">routes.MapRoute(</div><div class="line">    name: null,</div><div class="line">    url: &quot;Luna&#123;controller&#125;/&#123;action&#125;&quot;</div><div class="line">);</div><div class="line"></div><div class="line">routes.MapRoute(</div><div class="line">    name: null,</div><div class="line">    url: &quot;&#123;controller&#125;/&#123;action&#125;&quot;</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>위와 같이 설정했을 경우에는  </p>
+<ul>
+<li><code>http://mySite.com/LunaProduct/Index</code>로 접근할 경우 <code>Product</code> controller의 <code>Index</code> Action Method를 실행하게 되며,</li>
+<li><code>http://mySite.com/Product/Index</code>로 접근할 경우에도 <code>Product</code> controller의 <code>Index</code> Action Method를 실행하게 됩니다.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">routes.MapRoute(</div><div class="line">    name: null,</div><div class="line">    url: &quot;&#123;controller&#125;/&#123;action&#125;&quot;</div><div class="line">);</div><div class="line"></div><div class="line">routes.MapRoute(</div><div class="line">    name: null,</div><div class="line">    url: &quot;Luna&#123;controller&#125;/&#123;action&#125;&quot;</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>위와 같이 설정되었을 경우 segment가 2개인 경우 무조건 위에 것만 처리되며 아래에 설정된 URL패턴으로는 검사하지 않습니다.<br>즉, </p>
+<ul>
+<li><code>http://mySite.com/LunaProduct/Index</code>로 접근할 경우 <code>LunaProduct</code> controller의 <code>Index</code> Action Method를 실행하게 되며, (없으면 404 오류)  </li>
+<li><code>http://mySite.com/Product/Index</code>로 접근할 경우에도 <code>Product</code> controller의 <code>Index</code> Action Method를 실행하게 됩니다.</li>
+</ul>
+<h2 id="5-Attribute-Routing"><a href="#5-Attribute-Routing" class="headerlink" title="5. Attribute Routing"></a>5. Attribute Routing</h2><p>위에 살펴본 것은 Rule-based Routing (규칙기반 라우팅)이었습니다.<br>각각의 Action Method에 Attribute를 이용하여 적용하는 방법도 있습니다.  </p>
+<h3 id="5-1-Attribute-Route가-동작하도록-설정"><a href="#5-1-Attribute-Route가-동작하도록-설정" class="headerlink" title="5.1 Attribute Route가 동작하도록 설정"></a>5.1 Attribute Route가 동작하도록 설정</h3><p><code>RouteConfig.cs</code>의 <code>RegisterRoutes(RouteCollection routes)</code>함수 내에  <code>routes.MapMvcAttributeRoutes();</code>를 호출하면 Attribute 기반의 Route 기능을 활성화합ㄴ다.</p>
+<h3 id="5-2-Attribute-Route-설정"><a href="#5-2-Attribute-Route-설정" class="headerlink" title="5.2  Attribute Route 설정"></a>5.2  Attribute Route 설정</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public class CustomerController : Controller</div><div class="line">&#123;</div><div class="line">    [Route(&quot;Test&quot;)]</div><div class="line">    public ActionResult Index()</div><div class="line">    &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>와 같이 경우 <code>http://mySite.com/Test</code>로 접근할 경우 <code>Customer</code> Controller의 <code>Index</code> Action method가 실행됩니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[Route(&quot;User/Add/&#123;user&#125;/&#123;id&#125;&quot;]</div><div class="line">public string Create(string user, int id) &#123; ... &#125;</div></pre></td></tr></table></figure>
+<p><code>user</code>와 <code>id</code>가 인자로 전달됩니다.<br>각각의 인자에 제약조건 설정도 가능합니다.</p>
+<ul>
+<li><code>{id:int}</code> : id는 int 값으로전달이 가능합니다.</li>
+<li><code>{password:alpha:length(6)}</code> : password에 alpha와 length 2가지 제약조건을 설정합니다.</li>
+</ul>
+<h3 id="5-3-Prefix-접두어-사용"><a href="#5-3-Prefix-접두어-사용" class="headerlink" title="5.3 Prefix(접두어) 사용"></a>5.3 Prefix(접두어) 사용</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[RoutePrefix(&quot;User&quot;)]</div><div class="line">public class UserController : Controller</div><div class="line">&#123;</div><div class="line">    [Route(&quot;~/Test&quot;)]</div><div class="line">    public ActionResult Index() &#123; ... &#125;</div><div class="line">    </div><div class="line">    [Route(&quot;Add/&#123;user&#125;&quot;)]</div><div class="line">    public ActionResult Create(string user) &#123; ... &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>http://mySite.com/User/Add/Luna</code>로 접근할 경우 <code>Create</code> Action method가 실행됩니다.</li>
+<li><code>http://mySite.com/Test</code>로 접근할 경우 <code>Index</code>가 실행됩니다. 즉,  <code>~/</code>로 설정할 경우 Prefix가 무시됩니다.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/05/07/CSharp.Aspnet.02.Route/" data-id="cj1uk5wpj0001wp7bcqp18yms" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-macOS.set.mouse" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/07/macOS.set.mouse/" class="article-date">
+  <time datetime="2016-05-06T15:00:00.000Z" itemprop="datePublished">2016-05-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tips/">Tips</a>►<a class="article-category-link" href="/categories/Tips/macOS/">macOS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/07/macOS.set.mouse/">Using the gesture function with a common mouse in macOS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="macOS-OSX-에서-일반-마우스로-매직마우스의-제스쳐-gesture-기능-사용하기"><a href="#macOS-OSX-에서-일반-마우스로-매직마우스의-제스쳐-gesture-기능-사용하기" class="headerlink" title="macOS(OSX)에서 일반 마우스로 매직마우스의 제스쳐(gesture) 기능 사용하기"></a>macOS(OSX)에서 일반 마우스로 매직마우스의 제스쳐(gesture) 기능 사용하기</h2><p>맥북프로나 맥북에어의 경우 마우스없이 매직패드만으로도 사용이 편리하다는 분들이 많긴하지만,<br>그래도 마우스를 사용하는게 익숙하신 분들은 마우스 사용을 선호합니다.</p>
+<p>이 경우 매직패드에서 제스쳐로 제공하는 기능이 편리하기 때문에 해당 기능을 사용하기 위해서 매직마우스를 구입하는 경우가 많습니다.<br>하지만 매직마우스 가격이 좀 후덜덜하죠. (99,000원)<br>오픈마켓에서 조금 저렴하게 구입하더라도 8만원이 넘습니다.</p>
+<h3 id="키보드-단축키-확인-및-재할당"><a href="#키보드-단축키-확인-및-재할당" class="headerlink" title="키보드 단축키 확인 및 재할당"></a>키보드 단축키 확인 및 재할당</h3><p>사실 매직마우스에서 주로 사용하는 제스쳐 중 <code>Mission Control</code>, <code>왼쪽 Space</code>, <code>오른쪽 Space</code> 이 3가지만 사용하더라도 작업이 편리해 집니다.</p>
+<p>기본적으로 이 기능을 굳이 매직마우스를 사용하지 않고 <code>키보드 단축키</code>를 사용하는 것도 가능합니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Apple/image/macOS.set.mouse.01.png?raw=true"></p>
+<p><code>^</code>는 <code>control</code>키를 뜻합니다.<br><code>control</code>키와 방향키 4개를 이용해서 해당 기능들이 기본으로 할당되어 있습니다.</p>
+<h3 id="Mission-Control-기능을-마우스에-할당"><a href="#Mission-Control-기능을-마우스에-할당" class="headerlink" title="Mission Control 기능을 마우스에 할당"></a>Mission Control 기능을 마우스에 할당</h3><p>이 기능들을 마우스 버튼에 할당하려면 <code>시스템 환경설정</code> 에서 <code>Mission Control</code>에서 가능합니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Apple/image/macOS.set.mouse.02.png?raw=true"></p>
+<p>아래쪽에보면 키보드로는 기본 단축키들이 할당되어 있습니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Apple/image/macOS.set.mouse.03.png?raw=true"></p>
+<p>그 오른쪽을 클릭하면 마우스버튼 또는 마우스 버튼 + 특수키(<code>control</code> , <code>alt</code>, <code>command</code>, <code>shift</code>) 조합을 이용해서도 가능합니다.</p>
+<p>여기에서 마우스버튼을 할당하려고 눌러보면 마우스 버튼이 32번까지 할당이 가능합니다.<br>하지만, 일반 마우스의 경우 마우스 버튼을 <em>macOS</em> 에서 인식하기 위해서는 전용 드라이버를 설치하거나, 별도의 프로그램을 사용해야 합니다.<br>그리고 결정적으로 여기에서는 <strong>Space</strong> 간 이용에 대해서는 할당이 안됩니다.</p>
+<h3 id="BetterTouchTool"><a href="#BetterTouchTool" class="headerlink" title="BetterTouchTool"></a>BetterTouchTool</h3><p>예전에는 무료 프로그램도 많았지만 요즘 대부분 유료화 되었으며 그래도 그 중 가장 기능이 많고 사용하기 편한 것으로는 <code>BetterTouchTool</code>가 있습니다.<br><a href="https://www.boastr.net/downloads" target="_blank" rel="external">https://www.boastr.net/downloads</a>에서 45일 <em>Trial</em> 로 사용이 가능하며 4,500원에서 50,000원 정도의 가격으로 구매가 가능합니다.<br>제작사는 7,000원 정도의 가격으로 구매해주기를 추천한다고 되어 있습니다.<br>가격별로 기능적 차이는 없습니다.<br>그냥 <em>donation</em> 적인 측면이라 생각하시면 될 것입니다.</p>
+<p><code>BetterTouchTool</code> 의 원래 목적은 <em>macOS</em> 및 개별 Application 별로 키보드, 매직마우스, 일반마우스 의 특정 버튼 및 제스쳐에 기능들을 할당하는 것이므로 매직마우스 사용자라도 구매하시면 편리하게 사용이 가능합니다.</p>
+<p>일반마우스 사용자는 이 툴을 이용해서 기본적으로 <em>macOS</em> 에서 할당되지 않은 버튼이나 버튼 + 특수키(<code>control</code> , <code>alt</code>, <code>command</code>, <code>shift</code>)의 조합으로 <code>Mission Control</code>, <code>왼쪽 Space</code>, <code>오른쪽 Space</code> 등의 기능을 할당 할 수 있습니다.</p>
+<h3 id="제조사-제공-마우스-드라이버"><a href="#제조사-제공-마우스-드라이버" class="headerlink" title="제조사 제공 마우스 드라이버"></a>제조사 제공 마우스 드라이버</h3><p>필자는 <strong>Logitech</strong> 사의 <code>MX Anywhere 2</code> 마우스를 사용중인데, 제조사에서 <em>macOS</em> 용 드라이버를 따로 제공해 줍니다.<br>이렇게 별도의 드라이버를 제공하는 마우스의 경우에는 거기서 설정이 가능한 경우가 많습니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Apple/image/macOS.set.mouse.04.png?raw=true"></p>
+<p><code>MX Anywhere 2</code>는 가운데 버튼에 <code>Mission Control</code>, <code>왼쪽 Space</code>, <code>오른쪽 Space</code> 이 기본적으로 할당되어 있습니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Apple/image/macOS.set.mouse.05.png?raw=true"></p>
+<ul>
+<li><code>Mission Control</code> : 가운데 버튼 클릭 또는 누른체 위로 이동</li>
+<li><code>왼쪽 Space</code> : 가운데 버튼 누른체 좌로 이동</li>
+<li><code>오른쪽 Space</code> : 가운데 버튼 누른체 우로 이동</li>
+<li><code>응용 프로그램 윈도우</code> : 가운데 버튼 누른체 아래로 이동</li>
+</ul>
+<p><code>Space 이동</code>의 경우는 비교적 자주 사용하는 기능이므로 좀 더 빨리 사용하기 위해 마우스 휠을 좌, 우로 클릭하는 것이 더 편리할 것으로 판단되어 그렇게 할당을 하였습니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Apple/image/macOS.set.mouse.06.png?raw=true"></p>
+<h3 id="마치며…"><a href="#마치며…" class="headerlink" title="마치며…"></a>마치며…</h3><p>해당 제품이 아닌 다른 마우스를 구입할 경우 제조사에서 드라이버를 제공해주지 않는다 하더라도 <code>BetterTouchTool</code> 툴을 이용해서 할당이 가능합니다.<br>단, 마우스의 별도 버튼이 있거나, 휠을 좌,우 클릭으로 누르는게 가능한 마우스를 구매하셔야 좀 더 편리하게 사용이 가능하리라 생각됩니다.</p>
+<p>조금 저렴한 버튼이 많은 마우스(휠 좌,우 클릭 지원)와 <code>BetterTouchTool</code> 구매를 하더라도 매직마우스 보다는 확실히 더 저렴하니깐요.</p>
+<p>매직마우스 + <code>BetterTouchTool</code> 의 조합의 경우는 더 많은 작업이 가능하겠지만요.<br>세손가락 클릭, 네손가락 클릭 등 매직마우스 상의 제스쳐를 이용해서 벼나별 기능의 할당이 가능합니다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/05/07/macOS.set.mouse/" data-id="cj1ukth7c000bix7bkdx3uzss" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSharp.Aspnet.01.MVC.Project" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/07/CSharp.Aspnet.01.MVC.Project/" class="article-date">
+  <time datetime="2016-05-06T15:00:00.000Z" itemprop="datePublished">2016-05-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/ASP-NET/">ASP.NET</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/07/CSharp.Aspnet.01.MVC.Project/">ASP.NET MVC 01. Project</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="MVC-Project-항목요약"><a href="#MVC-Project-항목요약" class="headerlink" title="MVC Project 항목요약"></a>MVC Project 항목요약</h2><ul>
+<li><code>/App_Data</code> : File기반 저장소의 데이터 파일,XML 파일 등을 저장</li>
+<li><code>/App_Start</code> : Route, Filter, Contents 등에 대한 정의 같은 Project에 대한 주요 구성 설정들<ul>
+<li><code>/RouteConfig.cs</code> : Route 정보 </li>
+</ul>
+</li>
+<li><code>/Areas</code> : 큰 Application을 작은 Area로 나누는 방법</li>
+<li><code>/bin</code> : compile된 어셈블리 및 기타 어셈블리들이 위치, 소스 제어에 포함시켜서는 안됨</li>
+<li><code>/Content</code> : css, Image 등 static contents들</li>
+<li><code>/Controllers</code> : Controller classes</li>
+<li><code>/Models</code> : VewModel, Domain Model 들. 별도 Project에 Domain Model을 정의하는 방법을 더 많이 선호</li>
+<li><code>/Scripts</code> : JavaScript Library</li>
+<li><code>/Views</code> : View, PartialView<ul>
+<li><code>/Web.config</code> : View가 동작하는데 필요한 구성, ISS에 의해 View 파일 자체가 서비스되지 않도록 제한하는데 필요한 구성, View에 import하는 namespace에 대한 정보 등…</li>
+<li><code>/Share</code> : 특정 Controller에 종속되지 않는 Layout, View</li>
+</ul>
+</li>
+<li><code>/Global.asax</code> : 전역 ASP.NET Application class.</li>
+<li><code>/Web.config</code> : Application을 위한 구성 파일</li>
+</ul>
+<h2 id="MVC-규약"><a href="#MVC-규약" class="headerlink" title="MVC 규약"></a>MVC 규약</h2><ul>
+<li><p>Controller</p>
+<ul>
+<li><code>/Controllers/명칭Controller.cs</code> 란 이름으로 저장</li>
+<li>HTML helper method에서 <code>명칭</code>만 입력하면 <code>명칭</code>Controller class를 자동으로 찾아줌</li>
+</ul>
+</li>
+<li><p>View</p>
+<ul>
+<li><code>/Views/명칭</code> 폴더안에 저장</li>
+<li>해당 Controller의 Action method 명칭으로 View이름을 정함 : <code>return View();</code><ul>
+<li>ex) ProductController의 Index에 대한 View는 /View/Product/Index.cshtml 이란 이름으로 작성</li>
+</ul>
+</li>
+<li>다른 View 이름을 명시적으로 사용도 가능함 : <code>return View(&quot;View명칭&quot;);</code></li>
+<li>Controller 명칭의 폴더에서 View를 먼저 찾은 후 <code>/Views/Shared</code> 폴더에서 찾는다.</li>
+</ul>
+</li>
+<li><p>Layout</p>
+<ul>
+<li><code>_</code>(언더바)로 시작</li>
+<li>기본적으로 <code>/Views/_ViewStart.cshtml</code>을 모든 View에 적용</li>
+<li>특정 Layout을 지정하면 _ViewStart.cshtml을 적용하지 않음 : <code>Layout = &quot;~/Views/Shared/_MyLayout.cshtml&quot;;</code></li>
+<li>아무런 Layout도 참조하지 않으려면 <code>null</code>값을 대입 : <code>Layout = null;</code></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/05/07/CSharp.Aspnet.01.MVC.Project/" data-id="cj1uk5wpg0000wp7brtjbaqa8" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Devops.SymbolRepository" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/04/Devops.SymbolRepository/" class="article-date">
+  <time datetime="2016-04-03T15:00:00.000Z" itemprop="datePublished">2016-04-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/04/Devops.SymbolRepository/">Make Symbol Repository for Visual Studio</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Make-Symbol-Repository-for-Visual-Studio"><a href="#Make-Symbol-Repository-for-Visual-Studio" class="headerlink" title="Make Symbol Repository for Visual Studio"></a>Make Symbol Repository for Visual Studio</h1><h3 id="1-Debugging-Tools-for-Windows-설치"><a href="#1-Debugging-Tools-for-Windows-설치" class="headerlink" title="1. Debugging Tools for Windows 설치"></a>1. Debugging Tools for Windows 설치</h3><p><a href="https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063(v=vs.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063(v=vs.85).aspx</a></p>
+<h3 id="2-Symbol-등록"><a href="#2-Symbol-등록" class="headerlink" title="2. Symbol 등록"></a>2. Symbol 등록</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call svnindex.cmd -source=&quot;&#123;SolutionFolder&#125;&quot; -symbols=&quot;&#123;SolutionFolder&#125;\bin\Unicode Release&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">symstore.exe add /r /f &quot;&#123;SolutionFolder&#125;\bin\Unicode Release\*.*&quot; /s &quot;&#123;SymbolRepository&#125;&quot; /t &quot;&#123;Name&#125;&quot; /compress</div></pre></td></tr></table></figure>
+<blockquote>
+<p>e.g.<br>call svnindex.cmd -source=”d:\svn\trunk” -symbol=”d:\svn\trunk\bin\Unicode Release”<br>symstore add /r /f “d:\svn\trunk\bin\Unicode Release*.*” /s “d:\symbol” /t “MyApp” /compress</p>
+</blockquote>
+<ul>
+<li><p>통상적으로 <code>symstore.exe</code>는 아래 폴더에 위치합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\Program Files\Debugging Tools for Windows (x64)</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>svnindex.cmd</code>는 설치된 Debugging Tools for Windows 폴더 아래 <code>srcsrv</code> 폴더 내에 있으며 다른 CI 제품들의 cmd 파일들도 존재합니다.</p>
+</li>
+</ul>
+<h3 id="3-저장된-Symbol-확인"><a href="#3-저장된-Symbol-확인" class="headerlink" title="3. 저장된 Symbol 확인"></a>3. 저장된 Symbol 확인</h3><ul>
+<li><code>{SymbolRepository}\000Admin\server.txt</code>에서 확인</li>
+<li>각 ID별 Build일시. 이름 (/t 옵션 뒤에 이름) 확인이 가능</li>
+</ul>
+<h3 id="4-Symbol-삭제"><a href="#4-Symbol-삭제" class="headerlink" title="4. Symbol 삭제"></a>4. Symbol 삭제</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">symstore del /i ID /s &quot;&#123;SymbolRepository&#125;&quot;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>e.g.<br>symstore del /i 142 /s “d:\symbol”</p>
+</blockquote>
+<h3 id="symstore-사용법-Symbol-삭제-포함"><a href="#symstore-사용법-Symbol-삭제-포함" class="headerlink" title="symstore 사용법 (Symbol 삭제 포함)"></a>symstore 사용법 (Symbol 삭제 포함)</h3><p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms681378(v=vs.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/windows/desktop/ms681378(v=vs.85).aspx</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/04/04/Devops.SymbolRepository/" data-id="cj1uiu1k00001q57b97252j82" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Devops.Jenkins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/10/Devops.Jenkins/" class="article-date">
+  <time datetime="2015-11-09T15:00:00.000Z" itemprop="datePublished">2015-11-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/10/Devops.Jenkins/">Install Jenkins</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Install-Jenkins"><a href="#Install-Jenkins" class="headerlink" title="Install Jenkins"></a>Install Jenkins</h1><h3 id="1-Jenkins-란"><a href="#1-Jenkins-란" class="headerlink" title="1. Jenkins 란 ?"></a>1. Jenkins 란 ?</h3><p>Jenkins Server는 Open Source CI (Continuous Integration) 을 자동화해주는 Tool입니다. 대부분 다음과 같은 방식으로 Jenkins를 이용합니다.</p>
+<ol>
+<li>Repository (SVN, Git)에서 source code를 가져옵니다.</li>
+<li>정해진 절차에 따라 build 및 unit test, integration test를 수행합니다. 수행 결과 이상이 있을 때 e-mail을 통해서 reporting해주는 역할까지 수행해 줍니다.</li>
+<li>정상적으로 build 되었으며, 모든 test 결과에 이상이 없는 경우 배포 파일(setup, update)을 생성합니다.</li>
+</ol>
+<p>Jenkins 자체는 사용자가 입력한 command line 명령어들을 특정 조건에 맞게 또는 특정 시간이나 일정한 간격으로 수행해주는 역할을 해줍니다.<br>build 및 test, deploy하는 역할 자체는 command line에서 수행가능한 형태로 사용자가 직접 입력해 놓으면 그 명령어를 수행해주는 역할을 할 뿐이지, Jenkins 자체에 build tool이 있다던지 그러진 않습니다.</p>
+<h3 id="2-이번-Posting에서-다룰-내용"><a href="#2-이번-Posting에서-다룰-내용" class="headerlink" title="2. 이번 Posting에서 다룰 내용"></a>2. 이번 Posting에서 다룰 내용</h3><ol>
+<li>Jenkins download 및 설치 (Windows 기준)</li>
+<li>MSBuild plugin 설치</li>
+<li>Jenkins item 설정<ol>
+<li>SVN Repository에서 source code 내려받기</li>
+<li>VisualStudio Solution (.sln)을 command line에서 실행시키기 (MSBuild 이용)</li>
+<li>Jenkins item에서 build 후 다른 item 실행</li>
+</ol>
+</li>
+</ol>
+<h3 id="3-Jenkins-download-및-설치"><a href="#3-Jenkins-download-및-설치" class="headerlink" title="3. Jenkins download 및 설치"></a>3. Jenkins download 및 설치</h3><ul>
+<li>Link : <a href="http://jenkins-ci.org" target="_blank" rel="external">http://jenkins-ci.org</a></li>
+</ul>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.01.png?raw=true"></p>
+<p>위 Link에서 우측에 있는 <code>Windows</code>를 눌러서 다운로드 받으면 됩니다.<br>zip 파일이 다운로드 받아지는데 압축을 풀어서 셋업을 실행하면 설치가 끝납니다.<br>바로 Jenkins 창이 실행됩니다. 기본적으로는 <a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> 로 접속이 가능합니다. (다른 PC에서 접속시에는 PC ip나 hostname 에 8080 포트로 접속을 하면 됩니다.)</p>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.02.png?raw=true"></p>
+<p>###3. MSBuild plugin 설치</p>
+<p>Visual Studio에서 작업한 solution 파일 (.sln)을 command line에서 build 하기 위해서는 MSBuild.exe를 실행해서 build 해야 합니다. MSBuild.exe는 Visual Studio 설치시 같이 설치가 됩니다.<br>Jenkins에서 MSBuild를 사용하기 위해서는 별도의 plugin이 필요합니다.</p>
+<p>먼저 Jenkins 화면에서 <code>Jenkins 관리</code>-&gt; <code>플러그인 관리</code> 로 들어갑니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.03.png?raw=true">  </p>
+<p>internet에 연결된 환경이라면 <code>설치가능</code> 탭에서 바로 MSBuild를 선택해주시면 됩니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.04.png?raw=true">  </p>
+<p>offline 상태의 pc라면 <a href="https://updates.jenkins-ci.org/download/plugins" target="_blank" rel="external">https://updates.jenkins-ci.org/download/plugins</a>로 들어가서 원하는 버전의 MSBuild plugin을 다운로드 받으시면 됩니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.05.png?raw=true">  </p>
+<p>다운로드 받은 뒤 <code>고급</code> 탭을 눌러서 <code>플러그인 올리기</code> 에서 다운로드 받은 파일을 선택하면 됩니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.06.png?raw=true">  </p>
+<p>그런 뒤 Jenkins를 재가동 하면 됩니다.</p>
+<h3 id="4-Jenkins-환경설정"><a href="#4-Jenkins-환경설정" class="headerlink" title="4. Jenkins 환경설정"></a>4. Jenkins 환경설정</h3><p>SVN , MSBuild 설정에 대한 부분을 설명드리겠습니다.<br>다른 Tool 들에 대해서도 어렵지 않게 스스로 설정이 가능하거나, 검색을 하시면 자료가 많이 나올 것입니다.  </p>
+<p>먼저 Jenkins 화면에서 <code>Jenkins 관리</code>-&gt; <code>시스템 설정</code> 으로 들어갑니다.</p>
+<p>아래로 쭉 내리시면 <code>Subversion</code>이란 부분이 있습니다.<br>현재 PC에 설치된 SVN과 같은 버전으로 설정하면 끝입니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.08.png?raw=true">  </p>
+<p>거기서 조금 위로 올리시면 <code>MSBuild</code> 부분이 있습니다. 거기 버튼을 누른 뒤 PC상의 <code>MSBuild.exe</code>파일의 위치를 입력해줍니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.07.png?raw=true">  </p>
+<p>단순히 여기에 위치만 입력해 줘도 되지만, 개인적으로는 해당 위치를 시스템환경변수에 PATH로 잡아두시는 것을 추천합니다.<br>그러면 cmd 창에서 직접 실행도 가능합니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/CI/image/jenkins.09.png?raw=true">  </p>
+<p><code>MSBuild</code>의 자세한 사용법에 대해서는 여기서 다루지 않겠습니다.  </p>
+<p>MSDN에 자세한 설명이 있으니 참조하시면 됩니다.</p>
+<blockquote>
+<p><a href="https://msdn.microsoft.com/ko-kr/library/ms164311.aspx" target="_blank" rel="external">https://msdn.microsoft.com/ko-kr/library/ms164311.aspx</a></p>
+</blockquote>
+<p>그 중 Jenkins에서 자주 사용하는 예시 한가지만 든다면…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/p:Configuration=&quot;Release&quot; /t:Clean,Build</div></pre></td></tr></table></figure>
+<p>Release 모드로 Clean 후 Build를 할 경우 위와 같이 써주시면 됩니다.</p>
+<p>###5. Jenkins item 추가</p>
+<ul>
+<li><code>새로운 item</code>을 누르면 추가가 가능합니다.</li>
+<li>원하시는 이름을 입력한 뒤 <code>Freestyle project</code>를 선택합니다.</li>
+<li>먼저 <code>고급 프로젝트 옵션</code>에서 <code>고급</code> 버튼을 눌러서 <code>사용자 빌드 경로 사용</code>을 체크하셔서 source code를 받을 경로를 입력해 줍니다.  </li>
+</ul>
+<blockquote>
+<p>ex. <code>d:\build\svn\test_project</code>  </p>
+</blockquote>
+<ul>
+<li><code>소스코드관리</code>에는 <code>Subversion</code>을 선택하시고 <code>Repository URL</code>을 입력합니다.  </li>
+</ul>
+<blockquote>
+<p>ex. <code>svn://192.168.0.1/repo/test_project/trunk</code>  </p>
+</blockquote>
+<ul>
+<li><code>Add Build Step</code> 을 눌러서 <code>MSBuild</code>를 선택합니다.</li>
+<li>build할 solution이나 project 파일명을 전체경로나 위에 정한 사용자 빌드 경로로 부터의 상태경로로 입력합니다.  </li>
+</ul>
+<blockquote>
+<p>ex. <code>./workspace/buildAll.sln</code>  </p>
+</blockquote>
+<ul>
+<li>그리고 command line argument에 옵션을 적어줍니다.</li>
+</ul>
+<blockquote>
+<p>ex. <code>/p:Configuration=&quot;Release&quot; /t:Clean,Build</code>  </p>
+</blockquote>
+<ul>
+<li>한 item에서 여러가지의 build step을 가질 수 있습니다. 예를 들어서 <code>Release</code>로 빌드하고, <code>Debug</code>로도 빌드 한다던지, 다른 project나 solution 들을 build 한다든지 등요.</li>
+<li>build step에서 <code>Execute Windows batch command</code>를 선택하시면 일단 command line에서 선택하는 명령어를 그대로 입력하셔서 실행이 가능합니다. 관련 내용을 미리 batch file (.bat)나 python으로 생성해 놓고 실행하면 편리합니다.<ul>
+<li>특정 file들을 다른 folder로 옮겨 놓고 파일이름을 다르게 복사하고 등등의 작업이 가능합니다.</li>
+</ul>
+</li>
+<li>현재 item이 끝난 후 다른 item을 자동으로 시작 시킬려면 <code>빌드 후 조치 추가</code>에서 <code>Build other projects</code>를 눌러서 다른 item명을 입력하시면 선택이 됩니다. 콤마(,)를 입력해서 여러개 project 실행이 가능합니다. Test Project를 실행한다던지, InstallShield를 이용하여 배포 파일을 생성하는 등의 작업을 하면 편리하게 활용이 가능합니다.</li>
+<li>주기적으로 build를 할려면 <code>빌드 유발</code>에 <code>Build periodically</code>를 선택하셔서 <code>Schedule</code>에 입력하시면 됩니다. 참고로 매일 새벽에 돌리실려면 <code>@midnight</code>라고 입력하시면 됩니다. 오른쪽 ?를 누르면 자세한 설명이 나옵니다.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2015/11/10/Devops.Jenkins/" data-id="cj1uiu1jt0000q57bj0xl3upv" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APIGateway/" style="font-size: 17.5px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 16.25px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.75px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18.75px;">AWS</a> <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.25px;">CI/CD</a> <a href="/tags/DevOps/" style="font-size: 11.25px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 18.75px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 15px;">Node.JS</a> <a href="/tags/Python/" style="font-size: 12.5px;">Python</a> <a href="/tags/Serverless/" style="font-size: 12.5px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.25px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/23/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/08/AWS-Lambda-BinaryResponse/">AWS Lambda + API Gateway Binary Response 예제</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/Lambda.Chatbot.01/">AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/Lambda.invoke.Lambda/">Lambda에서 Lambda를 호출하는 방법</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/11/Lambda.Tips.01/">AWS Lambda 사용에 관련된 Tip</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yun Seok-joon<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

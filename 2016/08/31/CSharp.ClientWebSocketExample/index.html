@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Client WebSocket Example without ASP.NET | Dev Star SJ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Client WebSocket Example without ASP.NETASP.NET을 사용하지 않고 일반적인 C# (Console, Winform) 에서 WebSocket Server에 접속하는 코드 예제 입니다. 결론만 말씀드리자면… WebSocketSharp 만 사용하세요. https://github.com/sta/websocket-sharp 그래도">
+<meta name="keywords" content="C#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Client WebSocket Example without ASP.NET">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/08/31/CSharp.ClientWebSocketExample/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="Client WebSocket Example without ASP.NETASP.NET을 사용하지 않고 일반적인 C# (Console, Winform) 에서 WebSocket Server에 접속하는 코드 예제 입니다. 결론만 말씀드리자면… WebSocketSharp 만 사용하세요. https://github.com/sta/websocket-sharp 그래도">
+<meta property="og:updated_time" content="2017-04-23T10:51:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Client WebSocket Example without ASP.NET">
+<meta name="twitter:description" content="Client WebSocket Example without ASP.NETASP.NET을 사용하지 않고 일반적인 C# (Console, Winform) 에서 WebSocket Server에 접속하는 코드 예제 입니다. 결론만 말씀드리자면… WebSocketSharp 만 사용하세요. https://github.com/sta/websocket-sharp 그래도">
+  
+    <link rel="alternate" href="/atom.xml" title="Dev Star SJ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dev Star SJ</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">DevStarSJ</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://DevStarSJ.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSharp.ClientWebSocketExample" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/31/CSharp.ClientWebSocketExample/" class="article-date">
+  <time datetime="2016-08-30T17:00:00.000Z" itemprop="datePublished">2016-08-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/C/">C#</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Client WebSocket Example without ASP.NET
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Client-WebSocket-Example-without-ASP-NET"><a href="#Client-WebSocket-Example-without-ASP-NET" class="headerlink" title="Client WebSocket Example without ASP.NET"></a>Client WebSocket Example without ASP.NET</h1><p>ASP.NET을 사용하지 않고 일반적인 C# (Console, Winform) 에서 WebSocket Server에 접속하는 코드 예제 입니다.</p>
+<p>결론만 말씀드리자면… <code>WebSocketSharp</code> 만 사용하세요.</p>
+<p><a href="https://github.com/sta/websocket-sharp" target="_blank" rel="external">https://github.com/sta/websocket-sharp</a></p>
+<p>그래도 나머지의 사용법도 설명해 드리겠습니다.</p>
+<h2 id="1-WebSocketSharp"><a href="#1-WebSocketSharp" class="headerlink" title="1. WebSocketSharp"></a>1. WebSocketSharp</h2><p><code>Nuget Manager</code>에서 <code>WebSocketSharp</code>를 <code>include prerelease</code>를 체크한 상태에서 검색해서 설치하세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">using WebSocketSharp;</div><div class="line"></div><div class="line">WebSocket ws = new WebSocket(url: &quot;ws://localhost:5000&quot;);</div><div class="line"></div><div class="line">ws.Connect();</div><div class="line"></div><div class="line">ws.Send(new byte[] &#123; 0x01, 0x02, 0x03 &#125;);</div><div class="line"></div><div class="line">ws.OnMessage += (sender, e) =&gt;</div><div class="line">&#123;</div><div class="line">    Console.WriteLine(e.Data); // string</div><div class="line">    byte[] data = e.RawData // byte []</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="2-WebSocketSharp-clone-사용"><a href="#2-WebSocketSharp-clone-사용" class="headerlink" title="2. WebSocketSharp-clone 사용"></a>2. WebSocketSharp-clone 사용</h2><p>nuget manager에서 <code>websocket-sharp.clone</code> 로 검색하면 나옵니다.</p>
+<p><code>WebSocketSharp</code>에 비해 사용하기 조금 더 까다롭습니다.<br>하지만, 비동기(<code>async</code>)처리를 지원해 줍니다.</p>
+<p><code>OnMessage</code> 이벤트를 생성자에게 입력해줘야 하는데, 타입이 까다로워서 쉽지 않습니다.<br>(저도 구현해보려고 시도하다가 귀찮아서 관뒀습니다.)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">using WebSocketSharp;</div><div class="line"></div><div class="line">WebSocket ws = new WebSocket(url: &quot;ws://localhost:5000&quot;);</div><div class="line"></div><div class="line">await ws.Connect();</div><div class="line"></div><div class="line">Console.WriteLine(ws.ReadyState); // Open</div><div class="line"></div><div class="line">bool result = await ws.Send(new byte[] &#123; 0x03, 0x01, 0x10, 0xFF &#125;);</div><div class="line"></div><div class="line">Console.WriteLine(result.ToString()); // true</div></pre></td></tr></table></figure>
+<h2 id="3-System-Net-WebSockets-사용"><a href="#3-System-Net-WebSockets-사용" class="headerlink" title="3. System.Net.WebSockets 사용"></a>3. System.Net.WebSockets 사용</h2><p>별도의 nuget 설치 필요없이 사용이 가능합니다.</p>
+<p><code>SendAsync()</code>가 실행 중 다시 실행하면 오류가 발생합니다.<br>그러니 별도의 <code>Lock</code>작업을 해주던지 메세지 전송을 <code>Queue</code>처리해서 한 곳에서만 동작하게 구현을 해줘야 합니다.</p>
+<p><code>ReceiveAsync()</code>를 호출해서 값을 읽어야 하므로, 구현하기에 불편함이 있습니다.<br>해당 함수를 이용해서 <code>Event</code>를 만들어서 구현을 해주면 편리하게 사용이 가능할거라 생각됩니다.<br>귀찮아서 저도 그렇게 구현해 보려다 말았습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">using System.Net.WebSockets;</div><div class="line"></div><div class="line">ClientWebSocket ws = new ClientWebSocket();</div><div class="line">Uri uri = new Uri(&quot;ws://localhost:5000&quot;);</div><div class="line"></div><div class="line">await ws.ConnectAsync(uri, CancellationToken.None);</div><div class="line"></div><div class="line">Console.WriteLine(ws.State); // open</div><div class="line"></div><div class="line">var segment = new ArraySegment&lt;byte&gt;(new byte[] &#123; 0x03, 0x01, 0x10, 0xFF &#125;);</div><div class="line">await ws.SendAsync(segment, WebSocketMessageType.Binary, true, CancellationToken.None);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/08/31/CSharp.ClientWebSocketExample/" data-id="cj1ukth6t0001ix7bz9z1ydua" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/16/TypeScript.07.Exceptions, Memory, and Performance/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Chapter 7 Exceptions, Memory, and Performance
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/08/JavaScript.Squel/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Squel.js</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APIGateway/" style="font-size: 17.5px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 16.25px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.75px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18.75px;">AWS</a> <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.25px;">CI/CD</a> <a href="/tags/DevOps/" style="font-size: 11.25px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 18.75px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 15px;">Node.JS</a> <a href="/tags/Python/" style="font-size: 12.5px;">Python</a> <a href="/tags/Serverless/" style="font-size: 12.5px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.25px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/23/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/08/AWS-Lambda-BinaryResponse/">AWS Lambda + API Gateway Binary Response 예제</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/Lambda.Chatbot.01/">AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/Lambda.invoke.Lambda/">Lambda에서 Lambda를 호출하는 방법</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/11/Lambda.Tips.01/">AWS Lambda 사용에 관련된 Tip</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yun Seok-joon<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

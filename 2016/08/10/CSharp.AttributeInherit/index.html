@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인 | Dev Star SJ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인C# Attribute class 생성 및 사용, 상속시에 동작 등에 대해서 확인 가능한 예제코드 입니다. 코드 다운로드 : https://github.com/DevStarSJ/Study/tree/master/Blog/CSharp/AttributeInheritTest St">
+<meta name="keywords" content="C#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/08/10/CSharp.AttributeInherit/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인C# Attribute class 생성 및 사용, 상속시에 동작 등에 대해서 확인 가능한 예제코드 입니다. 코드 다운로드 : https://github.com/DevStarSJ/Study/tree/master/Blog/CSharp/AttributeInheritTest St">
+<meta property="og:updated_time" content="2017-04-23T10:45:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인">
+<meta name="twitter:description" content="C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인C# Attribute class 생성 및 사용, 상속시에 동작 등에 대해서 확인 가능한 예제코드 입니다. 코드 다운로드 : https://github.com/DevStarSJ/Study/tree/master/Blog/CSharp/AttributeInheritTest St">
+  
+    <link rel="alternate" href="/atom.xml" title="Dev Star SJ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dev Star SJ</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">DevStarSJ</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://DevStarSJ.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSharp.AttributeInherit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/10/CSharp.AttributeInherit/" class="article-date">
+  <time datetime="2016-08-09T17:00:00.000Z" itemprop="datePublished">2016-08-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C#</a>►<a class="article-category-link" href="/categories/C/C/">C#</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C-Attribute-상속-후-override-할-경우-부모-값도-잘-가져오는지-확인"><a href="#C-Attribute-상속-후-override-할-경우-부모-값도-잘-가져오는지-확인" class="headerlink" title="C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인"></a>C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인</h1><p>C# Attribute class 생성 및 사용, 상속시에 동작 등에 대해서 확인 가능한 예제코드 입니다.</p>
+<p>코드 다운로드 : <a href="https://github.com/DevStarSJ/Study/tree/master/Blog/CSharp/AttributeInheritTest" target="_blank" rel="external">https://github.com/DevStarSJ/Study/tree/master/Blog/CSharp/AttributeInheritTest</a></p>
+<h2 id="Step-1-Attribute-존재여부-검사"><a href="#Step-1-Attribute-존재여부-검사" class="headerlink" title="Step 1. Attribute 존재여부 검사"></a>Step 1. Attribute 존재여부 검사</h2><h4 id="AttributeInheritTest-01-cs"><a href="#AttributeInheritTest-01-cs" class="headerlink" title="AttributeInheritTest.01.cs"></a>AttributeInheritTest.01.cs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line"></div><div class="line">public class Test1Attribute : Attribute</div><div class="line">&#123;</div><div class="line">    public int t1 &#123; get; set; &#125;</div><div class="line">    public Test1Attribute(int t)</div><div class="line">    &#123;</div><div class="line">        t1 = t;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Test2Attribute : Attribute</div><div class="line">&#123;</div><div class="line">    public int t2 &#123; get; set; &#125;</div><div class="line">    public Test2Attribute(int t)</div><div class="line">    &#123;</div><div class="line">        t2 = t;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Parent</div><div class="line">&#123;</div><div class="line">    [Test1(1)]</div><div class="line">    [Test2(2)]</div><div class="line">    public int id &#123; get; set; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        var propertyInfo = typeof(Parent).GetProperty(nameof(Parent.id));</div><div class="line"></div><div class="line">        var attributes = Attribute.GetCustomAttributes(propertyInfo, true);</div><div class="line">        foreach (var a in attributes)</div><div class="line">        &#123;</div><div class="line">            Console.WriteLine(a.GetType().ToString());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Test2Attribute</div><div class="line">Test1Attribute</div></pre></td></tr></table></figure>
+<h2 id="Step-2-Attribute-내부-값-사용하기"><a href="#Step-2-Attribute-내부-값-사용하기" class="headerlink" title="Step 2. Attribute 내부 값 사용하기"></a>Step 2. Attribute 내부 값 사용하기</h2><p><code>foreach</code> 내부만 수정</p>
+<h4 id="AttributeInheritTest-02-cs"><a href="#AttributeInheritTest-02-cs" class="headerlink" title="AttributeInheritTest.02.cs"></a>AttributeInheritTest.02.cs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">foreach (var a in attributes)</div><div class="line">&#123;</div><div class="line">    Console.WriteLine(a.GetType().ToString());</div><div class="line"></div><div class="line">    if (a.GetType() == typeof(Test1Attribute))</div><div class="line">    &#123;</div><div class="line">        Console.WriteLine((a as Test1Attribute).t1);</div><div class="line">    &#125;</div><div class="line">    else if (a.GetType() == typeof(Test2Attribute))</div><div class="line">    &#123;</div><div class="line">        Console.WriteLine((a as Test2Attribute).t2);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Test2Attribute</div><div class="line">2</div><div class="line">Test1Attribute</div><div class="line">1</div></pre></td></tr></table></figure>
+<h2 id="Step-3-상속받은-후-Attribute-존재여부-검사-및-값-사용하기"><a href="#Step-3-상속받은-후-Attribute-존재여부-검사-및-값-사용하기" class="headerlink" title="Step 3. 상속받은 후 Attribute 존재여부 검사 및 값 사용하기"></a>Step 3. 상속받은 후 Attribute 존재여부 검사 및 값 사용하기</h2><p><code>Child</code> 정의 및 <code>propertyInfo</code> 생성 부분만 수정</p>
+<h4 id="AttributeInheritTest-03-cs"><a href="#AttributeInheritTest-03-cs" class="headerlink" title="AttributeInheritTest.03.cs"></a>AttributeInheritTest.03.cs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public class Child : Parent</div><div class="line">&#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var propertyInfo = typeof(Child).GetProperty(nameof(Child.id));</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Test2Attribute</div><div class="line">2</div><div class="line">Test1Attribute</div><div class="line">1</div></pre></td></tr></table></figure>
+<h2 id="Step-4-상속받은-후-property를-override한-후-Attribute-재정의"><a href="#Step-4-상속받은-후-property를-override한-후-Attribute-재정의" class="headerlink" title="Step 4. 상속받은 후 property를 override한 후 Attribute 재정의"></a>Step 4. 상속받은 후 property를 override한 후 Attribute 재정의</h2><p>재정의한 Attribute만 바뀌었고, 나머지는 부모의 것을 가져오는 것을 확인 할 수 있습니다.</p>
+<p><code>Parent</code>의 <code>id</code>를 <code>virtual</code>처리 하였고, <code>Child</code>의 <code>id</code>를 <code>override</code>한 후 <code>Test2Attribute</code>만 재정의 하였습니다.</p>
+<h4 id="AttributeInheritTest-04-cs"><a href="#AttributeInheritTest-04-cs" class="headerlink" title="AttributeInheritTest.04.cs"></a>AttributeInheritTest.04.cs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public class Parent</div><div class="line">&#123;</div><div class="line">    [Test1(1)]</div><div class="line">    [Test2(2)]</div><div class="line">    public virtual int id &#123; get; set; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Child : Parent</div><div class="line">&#123;</div><div class="line">    [Test2(3)]</div><div class="line">    public override int id &#123; get; set; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Test2Attribute</div><div class="line">3</div><div class="line">Test1Attribute</div><div class="line">1</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/08/10/CSharp.AttributeInherit/" data-id="cj1ukth6o0000ix7bpw7zj6po" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/12/CSharp.StaticConstructorAsync/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Using async method in static constructor ( C# )
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/16/TypeScript.07.Exceptions, Memory, and Performance/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Chapter 7 Exceptions, Memory, and Performance</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APIGateway/" style="font-size: 17.5px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 16.25px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.75px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18.75px;">AWS</a> <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.25px;">CI/CD</a> <a href="/tags/DevOps/" style="font-size: 11.25px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 18.75px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 15px;">Node.JS</a> <a href="/tags/Python/" style="font-size: 12.5px;">Python</a> <a href="/tags/Serverless/" style="font-size: 12.5px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.25px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/23/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/08/AWS-Lambda-BinaryResponse/">AWS Lambda + API Gateway Binary Response 예제</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/Lambda.Chatbot.01/">AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/Lambda.invoke.Lambda/">Lambda에서 Lambda를 호출하는 방법</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/11/Lambda.Tips.01/">AWS Lambda 사용에 관련된 Tip</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yun Seok-joon<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
