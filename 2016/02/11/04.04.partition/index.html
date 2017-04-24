@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>SQLP 3-5-4 Partition, Batch Job | Dev Star SJ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.4 Partition 활용 Partitioning 이란 ?  Table, Index를 Partition 단위로 나누어 저장 Partition Key에 따라 물리적으로 별도의 Segment에 저장   Partition 장점  관리적 측면 : Partition 단위 백업, 추가, 삭제, 변">
+<meta name="keywords" content="Database,Oracle,SQLP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQLP 3-5-4 Partition, Batch Job">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/02/11/04.04.partition/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.4 Partition 활용 Partitioning 이란 ?  Table, Index를 Partition 단위로 나누어 저장 Partition Key에 따라 물리적으로 별도의 Segment에 저장   Partition 장점  관리적 측면 : Partition 단위 백업, 추가, 삭제, 변">
+<meta property="og:updated_time" content="2017-04-24T00:17:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQLP 3-5-4 Partition, Batch Job">
+<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.4 Partition 활용 Partitioning 이란 ?  Table, Index를 Partition 단위로 나누어 저장 Partition Key에 따라 물리적으로 별도의 Segment에 저장   Partition 장점  관리적 측면 : Partition 단위 백업, 추가, 삭제, 변">
+  
+    <link rel="alternate" href="/atom.xml" title="Dev Star SJ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dev Star SJ</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">DevStarSJ</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://DevStarSJ.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-04.04.partition" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/11/04.04.partition/" class="article-date">
+  <time datetime="2016-02-10T17:00:00.000Z" itemprop="datePublished">2016-02-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Database/">Database</a>►<a class="article-category-link" href="/categories/Database/SQLP/">SQLP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SQLP 3-5-4 Partition, Batch Job
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="3과목-SQL-고급-활용-및-Tuning"><a href="#3과목-SQL-고급-활용-및-Tuning" class="headerlink" title="3과목 SQL 고급 활용 및 Tuning"></a>3과목 SQL 고급 활용 및 Tuning</h1><h2 id="5장-고급-SQL-Tuning"><a href="#5장-고급-SQL-Tuning" class="headerlink" title="5장 고급 SQL Tuning"></a>5장 고급 SQL Tuning</h2><h3 id="5-4-Partition-활용"><a href="#5-4-Partition-활용" class="headerlink" title="5.4 Partition 활용"></a>5.4 Partition 활용</h3><ul>
+<li><p>Partitioning 이란 ?</p>
+<ul>
+<li>Table, Index를 Partition 단위로 나누어 저장</li>
+<li>Partition Key에 따라 물리적으로 별도의 Segment에 저장</li>
+</ul>
+</li>
+<li><p>Partition 장점</p>
+<ul>
+<li>관리적 측면 : Partition 단위 백업, 추가, 삭제, 변경이 편리</li>
+<li>성능적 측면 : Partition 단위로 Query, DML이 수행되어서 Transaction 경합 및 부하 분산</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-4-1-Partition-유형"><a href="#5-4-1-Partition-유형" class="headerlink" title="5.4.1 Partition 유형"></a>5.4.1 Partition 유형</h4><h5 id="1-Range-Partition"><a href="#1-Range-Partition" class="headerlink" title="1. Range Partition"></a>1. Range Partition</h5><ul>
+<li>Partition Key 값의 범위(Range)로 분할</li>
+<li>가장 일반적인 형태</li>
+</ul>
+<blockquote>
+<p>e.g. 날짜 칼럼 기준으로 판매데이터를 월별로 분할</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 주문</div><div class="line">(</div><div class="line">    ...</div><div class="line">)</div><div class="line"><span class="keyword">PARTITION</span> <span class="keyword">BY</span> <span class="keyword">RANGE</span>(주문일자)</div><div class="line">(</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q1 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">'20090401'</span>),</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q2 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">'20090701'</span>),</div><div class="line">    ...</div><div class="line">    <span class="keyword">PARTITION</span> P9999_MX <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (MAXVALUE)</div><div class="line">)<span class="string">'</span></div></pre></td></tr></table></figure>
+<h5 id="2-Hash-Partition"><a href="#2-Hash-Partition" class="headerlink" title="2. Hash Partition"></a>2. Hash Partition</h5><ul>
+<li>Partition Key 값의 Hash 함수를 적용하여 그 값으로 Mapping</li>
+<li>고르게 분산되는 대신 각 Row의 저장위치 예측이 불가</li>
+<li>병렬처리 시 성능효과 극대화</li>
+<li>DML 경합 분산에 효과적</li>
+</ul>
+<blockquote>
+<p>e.g. 고객번호, 주문일련번호</p>
+</blockquote>
+<h5 id="3-List-Partition"><a href="#3-List-Partition" class="headerlink" title="3. List Partition"></a>3. List Partition</h5><ul>
+<li>불연속적인 값의 목록을 각 Partition에 지정</li>
+</ul>
+<blockquote>
+<p>e.g. 판매 데이터를 지역별로 분할</p>
+</blockquote>
+<h5 id="4-Composite-Partition"><a href="#4-Composite-Partition" class="headerlink" title="4. Composite Partition"></a>4. Composite Partition</h5><ul>
+<li>2개 이상의 Partition 구성 (단, 맨 처음에 Hash가 올 순 없음)</li>
+<li>Range나 List Partition에 Range, Hash, List를 Sub-partition으로 구성</li>
+</ul>
+<p>e.g. Range + Hash로 구성<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 주문</div><div class="line">(</div><div class="line">    ...</div><div class="line">)</div><div class="line"><span class="keyword">PARTITION</span> <span class="keyword">BY</span> <span class="keyword">RANGE</span>(주문일자)</div><div class="line"><span class="keyword">SUBPARTITION</span> <span class="keyword">BY</span> <span class="keyword">HASH</span>(고객<span class="keyword">ID</span>) <span class="keyword">SUBPARTITIONS</span> <span class="number">8</span></div><div class="line">(</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q1 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">'20090401'</span>),</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q2 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">'20090701'</span>),</div><div class="line">    ...</div><div class="line">    <span class="keyword">PARTITION</span> P9999_MX <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (MAXVALUE) </div><div class="line">);</div></pre></td></tr></table></figure></p>
+<h4 id="5-4-2-Partition-Pruning"><a href="#5-4-2-Partition-Pruning" class="headerlink" title="5.4.2 Partition Pruning"></a>5.4.2 Partition Pruning</h4><ul>
+<li>Optimizer가 SQL의 대상 Table과 조건을 분석하여 불필요한 Partition을액세스 대상에서 제외하는 기능</li>
+</ul>
+<ol>
+<li>Static Partition Pruning<ul>
+<li>액세스할 Partition을 Compile-Time에 미리 결정</li>
+<li>상수 조건으로 조회할 경우 작동</li>
+</ul>
+</li>
+<li>Dynamic Partition Pruning<ul>
+<li>액세스할 Partition을 Run-Time에 결정</li>
+<li>Bind Variable로 조회하는 경우</li>
+<li>NL Join시 Inner Table이 Join 칼럼 기준으로 Partition 되 있는 경우</li>
+</ul>
+</li>
+</ol>
+<h4 id="5-4-3-Index-Partitioning"><a href="#5-4-3-Index-Partitioning" class="headerlink" title="5.4.3 Index Partitioning"></a>5.4.3 Index Partitioning</h4><ul>
+<li><p>Local vs Global</p>
+<ul>
+<li>Local Partition Index<ul>
+<li>Table Partition과 1:1 대응하도록 Index Partitioning</li>
+<li>Index Partition Key를 사용자가 따로 지정하지 않고, DBMS가 자동으로 관리</li>
+</ul>
+</li>
+<li>Global Partition Index<ul>
+<li>Table Partition과는 독립적으로 구성</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Prefixed vs NonPrefixed</p>
+<ul>
+<li>Prefixed Partition Index : Partition Key Column이 Index의 왼쪽 선두에 위치</li>
+<li>NonPrefixed Partition Index : Partition Key Column이 Index의 왼쪽 선두에 있지 않거나, 아에 속하지 않을 경우</li>
+</ul>
+</li>
+<li><p>위 조합중 Global NonPrefixed Partition Index는 Oracle에서 지원하지 않음</p>
+</li>
+<li><p>Index Partitioning Guide</p>
+<ul>
+<li>NonPartitioned Index (일반 Index)<ul>
+<li>Partition Key Column이 조건절에 누락되면 여러 Index Partition을 액세스해야 하므로 비효율적</li>
+<li>특히 OLTP환경에서는 성능에 미치는 영향이 크므로 NonPartitioned 전략이 유용할 수 있음</li>
+<li>NL Join에서 Partition Key에 대한 넓은 범위검색 조건을 가지고 Inner Table에 Partitioned Index로 액세스하면 비효율적 -&gt; NonPartitioned Index 사용을 고려</li>
+<li>Partition Index를 이용하면 SORT ORDER BY 대체 효과 상실 -&gt; Sort 연산을 대체함으로 부분범위 처리를 활용하고자 할 경우 NonPartitioned Index가 유리함</li>
+<li>Table Partition 이동,삭제 등 작업시 unsuable 되므로 적용 시 주의</li>
+</ul>
+</li>
+<li>Global Prefixed<ul>
+<li>Index 경합 분산에 효과적</li>
+<li>여러 Local Index Partition을 액세스하는 것이 비효율적일 경우 대안으로 활용</li>
+<li>Table Partition 이동,삭제 등 작업시 unsuable 되므로 적용 시 주의</li>
+</ul>
+</li>
+<li>Local Prefixed<ul>
+<li>관리적 측면에서 유용 : Table Partition에 대한 추가, 삭제 등의 작업이 빈번할 때</li>
+<li>이력성 데이터를 주로 관리하는 DB 환경에 효과적</li>
+<li>Partition Key Column이 <code>=</code> 조건으로 사용될 때 유용</li>
+<li>Partition Key Column에 대한 검색 조건이 없으면 정상적 사용이 불가 (Index Full Scan으로는 선택가능)</li>
+<li>Partition Key Column이 범위검색 (LIKE, BETWEEN, 부등호) 일 경우 불리</li>
+</ul>
+</li>
+<li>Local NonPrefixed<ul>
+<li>Local Prefixed와 거의 같은 특징이긴하나</li>
+<li>범위검색이 주로 사용될 경우 NonPrefixed가 더 유리 (단, 좁은 범위검색이어야 함)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-5-Batch-Program-Tuning"><a href="#5-5-Batch-Program-Tuning" class="headerlink" title="5.5 Batch Program Tuning"></a>5.5 Batch Program Tuning</h3><ul>
+<li><p>Batch Program이란 ?</p>
+<ul>
+<li>User와의 상호작용(Interface)없이</li>
+<li>대량의 데이터를 처리하는</li>
+<li>일련의 작업들을 묶어</li>
+<li>정기적으로 반복 수행하거나 (정기 배치)</li>
+<li>정해진 규칙에 따라 (이벤트 배치)</li>
+<li>자동으로 수행 (수동으로 On-Demand 배치로도 수행가능)</li>
+</ul>
+</li>
+<li><p>Batch 환경의 변화</p>
+<ul>
+<li>과거 : 일, 월 단위로 주로 야간에 수행되었으며, Online과 Batch가 명확하게 구분되어서 사용되었지만,</li>
+<li>현재 : 시간, 분 단위의 짧은 시간에 수행되는 경우가 많으며 On-Demand Batch도 제한적이나마 허용되어야 한다.</li>
+</ul>
+</li>
+<li><p>성능개선 목표 설정</p>
+<ul>
+<li>전체 Batch Program 들의 최종 수행시간 단축<ul>
+<li>Batch Window를 보고 Batch Program 간의 선후 관계를 따져가면서 전체적으로 고려</li>
+</ul>
+</li>
+<li>System 부하도 고려해야 함<ul>
+<li>병렬도 (DOP : Degree of Parallelism)를 32로 하여 5분에 수행되는것보다는 병렬처리 없이 10분 소요되는게 더 나을 수 있다.</li>
+</ul>
+</li>
+<li>경합을 최소화<ul>
+<li>CPU 자원 대량 사용 및 동일한 자원(데이터)에 접근하는 Batch Program을 분산</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Batch Program 구현 Pattern과 Tuning 방안</p>
+<ul>
+<li>절차형으로 작성된 Program<ul>
+<li>Application Cursor를 열고, Loop 내에서 다른 SQL이나 Sub Procedure를 호출하면서 반복처리</li>
+<li>(One SQL 보다) 구현이 쉽다. </li>
+<li>아무리 Tuning을 잘해도 다음과 같은 최적화 한계가 있음<ul>
+<li>반복적인 DB Call 발생</li>
+<li>Random I/O 위주</li>
+<li>동일한 데이터 중복 액세스</li>
+</ul>
+</li>
+<li>Tuning Guide<ul>
+<li>병목을 일으키는 SQL을 찾아 I/O Tuning : Index 재구성 및 액세스 경로 최적화</li>
+<li>Program Parallel 활용 : SQL이 읽는 데이터 범위를 달리하여 여러 Program이 동시에 수행</li>
+<li>Array Processing 활용</li>
+<li>One SQL로 다시 구현;;;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>One SQL<ul>
+<li>One SQL로 구현하거나, 집합적으로 정의된 여러 SQL을 단계적으로 실행</li>
+<li>구현하기 어렵고, 업무가 복잡할 경우 여러 SQL들을 통합했다가 결과가 틀려질 수 있음</li>
+<li>Tuning Guide<ul>
+<li>병목을 일으키는 오퍼레이션을 찾아 I/O Tuning<ul>
+<li>Index Scan 대신 Full Table Scan으로</li>
+<li>NL Join 보다 Hash Join으로</li>
+</ul>
+</li>
+<li>임시 Table 활용</li>
+<li>Partition 활용</li>
+<li>병렬처리 활용</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>병렬 처리 활용</p>
+<ul>
+<li><code>SELECT /*+ full(T) parallel(T, 4) */ ...</code> : T Table을 Full Scan으로 4개로 병렬처리</li>
+<li><code>SELECT /*+ index_ffs(T t_idx) parallel(T, t_idx, 4) */ ...</code> : T Table의 t_idx Index를 Fast Full Scan으로 4개로 병렬처리</li>
+<li>QC (Query Cordinator)<ul>
+<li>병렬 SQL문을 발행한 Session</li>
+<li>병렬로 처리되지 않는 Table은 QC가 직접처리</li>
+<li>각 병렬 Server로부터의 산출물을 통합하는 작업 수행</li>
+<li>최종 결과 집합을 User에게 전송</li>
+</ul>
+</li>
+<li>Parallel Server Process<ul>
+<li>병렬 SQL을 실제로 수행하는 개별 Session</li>
+</ul>
+</li>
+<li>Operation Parallelism<ul>
+<li>Intra-Opertarion Parallelism<ul>
+<li>서로 배타적인 범위를 독립적으로 처리</li>
+<li>각각의 데이터를 Process별로 읽는 작업</li>
+<li>전달받은 데이터를 각각의 Process에서 처리</li>
+</ul>
+</li>
+<li>Inter-Operation Parallelism<ul>
+<li>다른 서버 집합으로 분배하거나 정렬된 결과를 QC에게 전송하는 작업을 병렬로 동시에 진행</li>
+<li>Process간의 통신이 발생</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/02/11/04.04.partition/" data-id="cj1vdqy6z001jy77b4v2uljr3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQLP/">SQLP</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/11/04.03.dml/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          SQLP 3-5-3 DML Tuning
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/13/05.01.sql/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SQLP etc-1 외워야 할 SQL 문법</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQLP/">SQLP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 12.22px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/23/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/08/AWS-Lambda-BinaryResponse/">AWS Lambda + API Gateway Binary Response 예제</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/Lambda.Chatbot.01/">AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/Lambda.invoke.Lambda/">Lambda에서 Lambda를 호출하는 방법</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/11/Lambda.Tips.01/">AWS Lambda 사용에 관련된 Tip</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yun Seok-joon<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

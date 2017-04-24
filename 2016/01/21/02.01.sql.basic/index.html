@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>SQLP 2-1 SQL 기본 | Dev Star SJ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  1장 SQL 기본1.1 SQL 종류 DML (Data Manipulation Language) : 데이터 조작어 SELECT : 조회 INSERT, UPDATE">
+<meta name="keywords" content="Database,Oracle,SQLP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQLP 2-1 SQL 기본">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/01/21/02.01.sql.basic/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  1장 SQL 기본1.1 SQL 종류 DML (Data Manipulation Language) : 데이터 조작어 SELECT : 조회 INSERT, UPDATE">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.01.decode.01.png?raw=true">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.01.decode.02.png?raw=true">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.01.decode.03.png?raw=true">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.01.nonEQ.png?raw=true">
+<meta property="og:updated_time" content="2017-04-23T23:54:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQLP 2-1 SQL 기본">
+<meta name="twitter:description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  1장 SQL 기본1.1 SQL 종류 DML (Data Manipulation Language) : 데이터 조작어 SELECT : 조회 INSERT, UPDATE">
+<meta name="twitter:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.01.decode.01.png?raw=true">
+  
+    <link rel="alternate" href="/atom.xml" title="Dev Star SJ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Dev Star SJ</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">DevStarSJ</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://DevStarSJ.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-02.01.sql.basic" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/21/02.01.sql.basic/" class="article-date">
+  <time datetime="2016-01-20T15:00:00.000Z" itemprop="datePublished">2016-01-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Database/">Database</a>►<a class="article-category-link" href="/categories/Database/SQLP/">SQLP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SQLP 2-1 SQL 기본
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="2과목-SQL-기본-및-활용"><a href="#2과목-SQL-기본-및-활용" class="headerlink" title="2과목 SQL 기본 및 활용"></a>2과목 SQL 기본 및 활용</h2><ul>
+<li>20문제</li>
+<li>각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다.</li>
+<li>기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.</li>
+</ul>
+<h3 id="1장-SQL-기본"><a href="#1장-SQL-기본" class="headerlink" title="1장 SQL 기본"></a>1장 SQL 기본</h3><h4 id="1-1-SQL-종류"><a href="#1-1-SQL-종류" class="headerlink" title="1.1 SQL 종류"></a>1.1 SQL 종류</h4><ol>
+<li>DML (Data Manipulation Language) : 데이터 조작어<ul>
+<li>SELECT : 조회</li>
+<li>INSERT, UPDATE, DELETE : 데이터에 변형을 가하는 명령어</li>
+</ul>
+</li>
+<li>DDL (Data Definition Language) : 데이터 정의어<ul>
+<li>CREATE, ALTER, DROP, RENAME :  테이블 등의 데이터 구조를 생성, 변경, 삭제하는 명령어</li>
+</ul>
+</li>
+<li>DCL (Data Control Language) : 데이터 제어어<ul>
+<li>GRANT, REVOKE : DB 및 객체의 접근, 사용 권한을 주고 회수하는 명령어</li>
+</ul>
+</li>
+<li>TCL (Transaction Control Language) : 트랜잭션 제어어<ul>
+<li>COMMIT, ROLLBACK : 트랜잭션을 제어하는 명령어</li>
+</ul>
+</li>
+</ol>
+<h4 id="1-2-CREATE-TABLE"><a href="#1-2-CREATE-TABLE" class="headerlink" title="1.2 CREATE TABLE"></a>1.2 CREATE TABLE</h4><h5 id="1-기본적인-생성법"><a href="#1-기본적인-생성법" class="headerlink" title="1. 기본적인 생성법"></a>1. 기본적인 생성법</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 테이블명 (</div><div class="line">    컬럼명    DATATYPE    [<span class="keyword">DEFAULT</span> 형식],</div><div class="line">    ...</div><div class="line">    <span class="keyword">CONSTRAINT</span> 테이블명_PK PRIMARY <span class="keyword">KEY</span> (컬럼, ...),</div><div class="line">    <span class="keyword">CONSTRAINT</span> 테이블명_FK FOREIGN <span class="keyword">KEY</span> (컬럼, ...) <span class="keyword">REFERENCES</span> 테이블<span class="number">2</span>(컬럼, ...)</div><div class="line">);</div></pre></td></tr></table></figure>
+<h5 id="2-CTAS-Create-Table-as-Select"><a href="#2-CTAS-Create-Table-as-Select" class="headerlink" title="2. CTAS (Create Table as Select)"></a>2. CTAS (Create Table as Select)</h5><ul>
+<li><p>Oracle</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> EMP_COPY</div><div class="line"><span class="keyword">AS</span> <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> SCOTT.EMP;</div></pre></td></tr></table></figure>
+</li>
+<li><p>MS-SQL</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">INTO</span> EMP_COPY <span class="keyword">FROM</span> SCOTT.EMP;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><code>NOT NULL</code> 제약조건을 제외하고는 모두 삭제</li>
+</ul>
+<h4 id="1-3-TRUNCATE-TABLE-vs-DROP-TABLE-DELETE-TABLE"><a href="#1-3-TRUNCATE-TABLE-vs-DROP-TABLE-DELETE-TABLE" class="headerlink" title="1.3 TRUNCATE TABLE vs DROP TABLE, DELETE TABLE"></a>1.3 TRUNCATE TABLE vs DROP TABLE, DELETE TABLE</h4><ul>
+<li>TRUNCATE TABLE<ul>
+<li>DROP TABLE과의 차이점 : Table을 삭제하지 않고 모든 row들을 제거한다.</li>
+<li>DELETE TABLE과의 차이점 : 시스템 부하가 훨씬 적인 대신에 복구가 불가능하다. (rollback 불가)</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-4-TRANSACTION"><a href="#1-4-TRANSACTION" class="headerlink" title="1.4 TRANSACTION"></a>1.4 TRANSACTION</h4><h5 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h5><ul>
+<li>원자성 (atomicity) : 모두 정상적으로 실행되거나, 실행되지 않은 상태로 되거나 (all or nothing )</li>
+<li>일관성 (consistency) : 실행전에 잘못된 상태가 아니었다면, 실행후에도 잘못이 있으면 안됨</li>
+<li>고립성 (isolation) : 도중에 다른 트랜잭션의 영향을 받지 않음</li>
+<li>지속성 (durability) : 수행후 갱신한 내용은 영구적으로 저장</li>
+</ul>
+<h5 id="명령어"><a href="#명령어" class="headerlink" title="명령어"></a>명령어</h5><ul>
+<li>COMMIT : 변경된 상태를 DB에 반영</li>
+<li>ROLLBACK : 트랜잭션 수행 이전 상태로 되돌림</li>
+<li>SAVEPOINT [저장명칭] : 현시점까지만 ROLLBACK이 가능하도록 SAVEPOINT 지정 (MS-SQL에서는 SAVE TRANSACTION [저장명칭])</li>
+<li>ROLLBACK TO [저장명칭] : 해당 SAVEPOINT 까지 ROLLBACK (MS-SQL에서는 ROLLBACK TRANSACTION [저장명칭])</li>
+</ul>
+<h4 id="1-5-ROWNUM-Oracle-TOP-MS-SQL"><a href="#1-5-ROWNUM-Oracle-TOP-MS-SQL" class="headerlink" title="1.5 ROWNUM (Oracle), TOP (MS-SQL)"></a>1.5 ROWNUM (Oracle), TOP (MS-SQL)</h4><ul>
+<li>ROWNUM : SQL 처리결과 각 행의 임시 일련번호</li>
+<li><p>1개의 행만 출력할 경우  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">FROM</span> ... <span class="keyword">WHERE</span> <span class="keyword">ROWNUM</span> = <span class="number">1</span>;</div><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">FROM</span> ... <span class="keyword">WHERE</span> <span class="keyword">ROWNUM</span> &lt;= <span class="number">1</span>;</div><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">FROM</span> ... <span class="keyword">WHERE</span> <span class="keyword">ROWNUM</span> &lt; <span class="number">2</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>n개의 행을 출력할 경우  <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">FROM</span> ... <span class="keyword">WHERE</span> <span class="keyword">ROWNUM</span> &lt;= n;</div><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">FROM</span> ... <span class="keyword">WHERE</span> <span class="keyword">ROWNUM</span> &lt; n+<span class="number">1</span>;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>TOP : 출력결과의 행 수를 제한  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> TOP( n [<span class="keyword">PERCENT</span>] [<span class="keyword">WITH</span> <span class="keyword">TIES</span>] ) ... <span class="keyword">FROM</span> ...;</div></pre></td></tr></table></figure>
+<ul>
+<li>n : n의 갯수 만큼 행을 출력</li>
+<li>PERCENT : n % 만큼 출력</li>
+<li>WITH TIES : 마지막 행과 동일한 값과 동일한 값은 추가로 같이 출력</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-6-CASE"><a href="#1-6-CASE" class="headerlink" title="1.6 CASE"></a>1.6 CASE</h4><ul>
+<li>프로그래밍의 IF-THEN-ELSE와 비슷한 표현식입니다.</li>
+</ul>
+<h5 id="1-단순비교-해당-값에-따라-분류"><a href="#1-단순비교-해당-값에-따라-분류" class="headerlink" title="1. 단순비교 : 해당 값에 따라 분류"></a>1. 단순비교 : 해당 값에 따라 분류</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CASE value WHEN 1 THEN 'one'</div><div class="line">           WHEN 2 THEN 'two'</div><div class="line">           ELSE NULL</div><div class="line"><span class="keyword">END</span></div></pre></td></tr></table></figure>
+<h5 id="2-조건비교-해당-조건에-따라-분류"><a href="#2-조건비교-해당-조건에-따라-분류" class="headerlink" title="2. 조건비교 : 해당 조건에 따라 분류"></a>2. 조건비교 : 해당 조건에 따라 분류</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CASE WHEN value = 1 THEN 'one'</div><div class="line">     WHEN value = 2 THEN 'two'</div><div class="line">     ELSE NULL</div><div class="line"><span class="keyword">END</span></div></pre></td></tr></table></figure>
+<h5 id="3-DECODE-단순비교를-보다-짧게-표한하는-Oracle-함수"><a href="#3-DECODE-단순비교를-보다-짧게-표한하는-Oracle-함수" class="headerlink" title="3. DECODE : 단순비교를 보다 짧게 표한하는 Oracle 함수"></a>3. DECODE : 단순비교를 보다 짧게 표한하는 Oracle 함수</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DECODE(value, 1,'one', 2,'two', NULL)</div></pre></td></tr></table></figure>
+<h4 id="1-7-NULL"><a href="#1-7-NULL" class="headerlink" title="1.7 NULL"></a>1.7 NULL</h4><ul>
+<li>NULL 관련 문제는 반드시 출제된다.</li>
+</ul>
+<h5 id="NVL-Oracle-ISNULL-MS-SQL"><a href="#NVL-Oracle-ISNULL-MS-SQL" class="headerlink" title="NVL (Oracle), ISNULL (MS-SQL)"></a>NVL (Oracle), ISNULL (MS-SQL)</h5><p>해당 값이 NULL일 경우 2번째 인자의 값을 출력한다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> NVL(SAL,<span class="number">0</span>) <span class="keyword">FROM</span> EMP; <span class="comment">-- Oracle</span></div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">ISNULL</span>(SAL,<span class="number">0</span>) <span class="keyword">FROM</span> EMP; <span class="comment">-- MS-SQL</span></div></pre></td></tr></table></figure></p>
+<h5 id="COALESCE"><a href="#COALESCE" class="headerlink" title="COALESCE"></a>COALESCE</h5><p>인수 중 최초로 NULL이 아닌 값을 출력한다. 모두 NULL인 경우 NULL이 출력된다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ENAME, COMM, SAL, <span class="keyword">COALESCE</span>(COMM, SAL) COAL <span class="keyword">FROM</span> EMP;</div></pre></td></tr></table></figure></p>
+<p>위 문장은 아래의 CASE문으로 표현한 것과 같다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ENAME, COMM, SAL,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> COMM <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">THEN</span> COMM</div><div class="line">            <span class="keyword">WHEN</span> SAL <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">THEN</span> SAL</div><div class="line">            <span class="keyword">ELSE</span> <span class="literal">NULL</span></div><div class="line">       <span class="keyword">END</span> COAL</div><div class="line">  <span class="keyword">FROM</span> EMP;</div></pre></td></tr></table></figure></p>
+<h4 id="1-8-집계함수-Aggregate-function"><a href="#1-8-집계함수-Aggregate-function" class="headerlink" title="1.8 집계함수 (Aggregate function)"></a>1.8 집계함수 (Aggregate function)</h4><ul>
+<li>GROUP 당 단 1개의 값만 출력하는 함수</li>
+<li>SELECT , HAVING, ORDER BY 절에서 사용할 수 있다.</li>
+<li>집계함수에 들어온 NULL값은 계산에 포함시키지 않는다. (참고로 산술연산에 NULL 값이 포함되어 있으면 결과는 무조건 NULL이다.)</li>
+</ul>
+<h5 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h5><p>GROUP BY에 명시된 컬럼, 집계함수의 결과값 만 가능하다.</p>
+<h5 id="GROUP-BY"><a href="#GROUP-BY" class="headerlink" title="GROUP BY"></a>GROUP BY</h5><p>여기에 명시한 컬럼, 표현식 단위로 집계함수를 이용하여 계산한다.</p>
+<h5 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h5><p>여기에 적은 조건에 부합하는 row만 집계함수 계산에 참여한다. (GROUP BY 이전 필터링 역할)</p>
+<h5 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h5><p>집계된 결과 중 HAVING 절의 조건에 만족하는 것만 출력한다. (GROUP BY 이후 필터링 역할)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> D.DEPTNO, <span class="keyword">MAX</span>(DNAME) <span class="keyword">AS</span> DNAME, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> <span class="keyword">SUM</span>, <span class="keyword">AVG</span>(SAL) <span class="keyword">AS</span> <span class="keyword">AVG</span></div><div class="line">  <span class="keyword">FROM</span> DEPT D, EMP E</div><div class="line"> <span class="keyword">WHERE</span> D.DEPTNO = E.DEPTNO</div><div class="line">   <span class="keyword">AND</span> D.DEPTNO <span class="keyword">IN</span> (<span class="number">10</span>, <span class="number">30</span>)     <span class="comment">-- DEPTNO가 10, 30 인것만 집계로 계산</span></div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> D.DNAME</div><div class="line"><span class="keyword">HAVING</span> <span class="keyword">SUM</span>(SAL) &gt;= <span class="number">10000</span>        <span class="comment">-- 계산된 결과중 10000이 넘는 것만 출력</span></div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">SUM</span>(SAL);</div></pre></td></tr></table></figure>
+<h5 id="SELECT-문장-실행순서"><a href="#SELECT-문장-실행순서" class="headerlink" title="SELECT 문장 실행순서"></a>SELECT 문장 실행순서</h5><ol>
+<li>FROM : 대상 Table 검색</li>
+<li>WHERE : 검색 대상이 아닌 데이터 제거</li>
+<li>GROUP BY : 집계할 단위로 그룹화</li>
+<li>HAVING : 집계한 것중 조건에 맞는 것만 선택</li>
+<li>SELECT : 출력할 값들을 계산 및 함수적용</li>
+<li>ORDER BY : 데이터를 정렬하여서 출력</li>
+</ol>
+<h5 id="CASE-GROUP-BY"><a href="#CASE-GROUP-BY" class="headerlink" title="CASE - GROUP BY"></a>CASE - GROUP BY</h5><p>1정규화로 모델링된 테이블들에서 보고서를 만들때 많이 사용되는 기법이다.</p>
+<p>예를 들어서 각 부서별로 입사월별 급여합계가 필요한 경우가 있다고 가정했을 때</p>
+<p>먼저 부서, 사원명, 입사월, 급여를 출력해보자.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ENAME, DEPTNO, <span class="keyword">EXTRACT</span>(<span class="keyword">MONTH</span> <span class="keyword">FROM</span> HIREDATE) M, SAL</div><div class="line">  <span class="keyword">FROM</span> SCOTT.EMP</div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> SAL <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.01.decode.01.png?raw=true"></p>
+<p>위 문장을 이용하여 각 월별로 컬럼을 생성하여 해당 월에 급여를 출력해보자.<br>(CASE랑 기능이 같은 DECODE를 사용하겠다.)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ENAME, DEPTNO,</div><div class="line">       <span class="keyword">DECODE</span>(M, <span class="number">1</span>,SAL) <span class="keyword">AS</span> M01,</div><div class="line">       <span class="keyword">DECODE</span>(M, <span class="number">2</span>,SAL) <span class="keyword">AS</span> M02,</div><div class="line">       <span class="keyword">DECODE</span>(M, <span class="number">3</span>,SAL) <span class="keyword">AS</span> M03,</div><div class="line">       <span class="keyword">DECODE</span>(M, <span class="number">4</span>,SAL) <span class="keyword">AS</span> M04,</div><div class="line">       <span class="keyword">DECODE</span>(M, <span class="number">5</span>,SAL) <span class="keyword">AS</span> M05,</div><div class="line">       <span class="keyword">DECODE</span>(M, <span class="number">6</span>,SAL) <span class="keyword">AS</span> M06,</div><div class="line">       <span class="keyword">DECODE</span>(M, <span class="number">7</span>,SAL) <span class="keyword">AS</span> M07,</div><div class="line">       <span class="keyword">DECODE</span>(M, <span class="number">8</span>,SAL) <span class="keyword">AS</span> M08,</div><div class="line">       <span class="keyword">DECODE</span>(M, <span class="number">9</span>,SAL) <span class="keyword">AS</span> M09,</div><div class="line">       <span class="keyword">DECODE</span>(M,<span class="number">10</span>,SAL) <span class="keyword">AS</span> M10,</div><div class="line">       <span class="keyword">DECODE</span>(M,<span class="number">11</span>,SAL) <span class="keyword">AS</span> M11,</div><div class="line">       <span class="keyword">DECODE</span>(M,<span class="number">12</span>,SAL) <span class="keyword">AS</span> M12</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> ENAME, DEPTNO, <span class="keyword">EXTRACT</span>(<span class="keyword">MONTH</span> <span class="keyword">FROM</span> HIREDATE) M, SAL</div><div class="line">          <span class="keyword">FROM</span> SCOTT.EMP )</div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> DEPTNO, ENAME;</div></pre></td></tr></table></figure>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.01.decode.02.png?raw=true"></p>
+<p>이제 위 문장을 부서별로 GROUP BY 하는건 어렵지 않을 것이다.<br>참고로 NULL인 경우 0으로 표시하도록 NVL을 이용하였다.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DEPTNO,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M, <span class="number">1</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M01,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M, <span class="number">2</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M02,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M, <span class="number">3</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M03,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M, <span class="number">4</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M04,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M, <span class="number">5</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M05,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M, <span class="number">6</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M06,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M, <span class="number">7</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M07,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M, <span class="number">8</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M08,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M, <span class="number">9</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M09,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M,<span class="number">10</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M10,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M,<span class="number">11</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M11,</div><div class="line">       NVL(<span class="keyword">SUM</span>(<span class="keyword">DECODE</span>(M,<span class="number">12</span>,SAL)),<span class="number">0</span>) <span class="keyword">AS</span> M12</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> ENAME, DEPTNO, <span class="keyword">EXTRACT</span>(<span class="keyword">MONTH</span> <span class="keyword">FROM</span> HIREDATE) M, SAL</div><div class="line">          <span class="keyword">FROM</span> SCOTT.EMP )</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO;</div></pre></td></tr></table></figure>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.01.decode.03.png?raw=true"></p>
+<h4 id="1-9-JOIN"><a href="#1-9-JOIN" class="headerlink" title="1.9 JOIN"></a>1.9 JOIN</h4><p>JOIN은 한번에 2개의 집합간에만 가능하다.<br>FROM A, B, C, D 가 있더라도 이 중 2개를 먼저 JOIN하고 그 결과를 다음과 JOIN하는 식으로 처리된다.</p>
+<p>JOIN에 대해서는 2장에서 자세히 다루려했으나…<br>거기에 시간을 빼았겨서는 안될듯하여 그냥 여기서 간단히 다루겠습니다.</p>
+<h5 id="JOIN-연산"><a href="#JOIN-연산" class="headerlink" title="JOIN 연산"></a>JOIN 연산</h5><ul>
+<li>EQUI JOIN</li>
+</ul>
+<p>일반적으로 PK - FK 의 관계에서 많이 이루어진다.<br>WHERE 절이나 ON 절에서 <code>=</code> 연산으로 JOIN 한다.  </p>
+<ul>
+<li>Non EQUI JOIN</li>
+</ul>
+<p><code>=</code>연산이 아닌 연산으로 JOIN을 수행한다. ( BETWEEN, &gt;, &gt;=, &lt;, &lt;=, &lt;&gt;, != )</p>
+<p>예를 들어 SALGRADE Table에 각 급여구간별 GRADE가 저장된 경우, EMP의 각 사원별로 급여등급을 구하고자할때 다음과 같이 작성하면 된다.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> E.ENAME, E.DEPTNO, E.SAL, G.GRADE</div><div class="line">  <span class="keyword">FROM</span> SCOTT.EMP E, SCOTT.SALGRADE G</div><div class="line"> <span class="keyword">WHERE</span> E.SAL <span class="keyword">BETWEEN</span> G.LOSAL <span class="keyword">AND</span> G.HISAL</div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> SAL <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.01.nonEQ.png?raw=true"></p>
+<h5 id="JOIN-종류"><a href="#JOIN-종류" class="headerlink" title="JOIN 종류"></a>JOIN 종류</h5><ul>
+<li><p>INNER JOIN</p>
+<ul>
+<li>양쪽 Table 모두 조건에 해당되는 데이터만 출력 (교집합)</li>
+<li>Natural JOIN : INNER JOIN 에서 중복된 컬럼은 한번만 출력됨<ul>
+<li>모든 일치된 칼럼에 대해서 JOIN 되지만, USING으로 원하는 컬럼만 선택이 가능 (실제로 해보니 USING 안쓰면 ERROR)<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP E, DEPT D <span class="keyword">WHERE</span> E.DEPTNO = D.DEPTNO;</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * EMP E <span class="keyword">INNER</span> <span class="keyword">JOIN</span> DEPT D <span class="keyword">ON</span> E.DEPTNO = D.DEPTNO;</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP NATUAL <span class="keyword">JOIN</span> DEPT <span class="keyword">USING</span> (DEPTNO);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>OUTER JOIN</p>
+<ul>
+<li>LEFT OUTER JOIN : 왼쪽 Table의 모든 row 출력, 오른쪽 Table에는 조건에 맞으면 출력하고 아니면 NULL</li>
+<li>RIGHT OUTER JOIN : 오른쪽 Table의 모든 row 출력, 왼쪽 Table에는 조건에 맞으면 출력하고 아니면 NULL</li>
+<li>FULL OUTER JOIN : 좌,우측을 모두 읽어서 서로 상대에게 있으면 출력 없으면 NULL (LEFT OUTER와 RIGHT OUTER를 UNION 한거랑 결과가 같음)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> SCOTT.EMP E <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> SCOTT.DEPT D <span class="keyword">ON</span> E.DEPTNO = D.DEPTNO;</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> SCOTT.EMP E <span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> SCOTT.DEPT D <span class="keyword">ON</span> E.DEPTNO = D.DEPTNO;</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> SCOTT.EMP E <span class="keyword">FULL</span> <span class="keyword">JOIN</span> SCOTT.DEPT D <span class="keyword">ON</span> E.DEPTNO = D.DEPTNO;</div></pre></td></tr></table></figure>
+<ul>
+<li>CROSS JOIN (CARTESIAN PRODUCT)<ul>
+<li>양쪽 Table의 모든 row 들을 모두 관계짓는다. (A에 10개 row, B에 5개 row가 있을 경우 결과는 10 x 5 = 50개가 된다.)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> SCOTT.EMP <span class="keyword">CROSS</span> <span class="keyword">JOIN</span> SCOTT.DEPT;</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> SCOTT.EMP, SCOTT.DEPT;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://DevStarSJ.github.io/2016/01/21/02.01.sql.basic/" data-id="cj1vdqy5a0004y77b2oz84hed" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQLP/">SQLP</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/20/01.02.modeling_performance/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          SQLP 1-2 데이터 모델과 성능
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/23/02.02.sql.adv/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SQLP 2-2-1 SET, Hierarchical Query, Sub-query</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQLP/">SQLP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 12.22px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/23/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/08/AWS-Lambda-BinaryResponse/">AWS Lambda + API Gateway Binary Response 예제</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/Lambda.Chatbot.01/">AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/Lambda.invoke.Lambda/">Lambda에서 Lambda를 호출하는 방법</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/11/Lambda.Tips.01/">AWS Lambda 사용에 관련된 Tip</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Yun Seok-joon<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
