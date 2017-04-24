@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Dev Star SJ">
-    <title>Using async method in static constructor ( C# ) - Dev Star SJ</title>
-    <meta name="author" content="Yun Seok-joon">
+    <meta charset="utf-8">
     
+    <title>Using async method in static constructor ( C# ) | Dev Star SJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
+        <meta name="keywords" content="C#" />
     
     <meta name="description" content="Using async method in static constructor ( C# )static constructor 내부에서 async 함수를 호출할 경우 제대로 동작을 하지 않습니다.(왠만해서는 이런식으로 code가 이루어지지 않도록 해야하지만, 어쩔수 없이 이렇게 사용해야 할 경우가 발생 할 수 있습니다.)    참고로 static constructo">
 <meta name="keywords" content="C#">
-<meta property="og:type" content="blog">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Using async method in static constructor ( C# )">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
@@ -23,252 +20,152 @@
 <meta name="twitter:title" content="Using async method in static constructor ( C# )">
 <meta name="twitter:description" content="Using async method in static constructor ( C# )static constructor 내부에서 async 함수를 호출할 경우 제대로 동작을 하지 않습니다.(왠만해서는 이런식으로 code가 이루어지지 않도록 해야하지만, 어쩔수 없이 이렇게 사용해야 할 경우가 발생 할 수 있습니다.)    참고로 static constructo">
     
+
     
-        
+        <link rel="alternate" href="/" title="Dev Star SJ" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
     
     
-        <meta property="og:image" content="http://DevStarSJ.github.io/assets/images/sjyun.jpg"/>
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
     
     
     
-    
-    <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-eoqrdyagg8lofwhg4unnxmhyxznbkxgjkodxgdtletmltlwb2wgngdrld76m.min.css">
-    <!--STYLES END-->
-    
-    
+
 </head>
 
-    <body>
-        <div id="blog">
-            <!-- Define author's picture -->
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">DevStarSJ</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
 
-
-    
-        
-            
-        
-    
-
-<header id="header" data-behavior="4">
-    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
-    <div class="header-title">
-        <a class="header-title-link" href="/ ">Dev Star SJ</a>
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
     </div>
-    
-        
-            <a  class="header-right-picture "
-                href="#about">
-        
-        
-            <img class="header-picture" src="/assets/images/sjyun.jpg" alt="Author&#39;s picture"/>
-        
-        </a>
-    
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
-
-            <!-- Define author's picture -->
-
-
-
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/C/">C#</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/C/C/">C#</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-CSharp.StaticConstructorAsync" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Using async method in static constructor ( C# )
+        </h1>
     
 
-<nav id="sidebar" data-behavior="4">
-    <div class="sidebar-container">
+            </header>
         
-            <div class="sidebar-profile">
-                <a href="/#about">
-                    <img class="sidebar-profile-picture" src="/assets/images/sjyun.jpg" alt="Author&#39;s picture"/>
-                </a>
-                <h4 class="sidebar-profile-name">Yun Seok-joon</h4>
+        
+            <div class="article-meta">
                 
-                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
-</h5>
+    <div class="article-date">
+        <a href="/2016/06/12/CSharp.StaticConstructorAsync/" class="article-date">
+            <time datetime="2016-06-11T17:00:00.000Z" itemprop="datePublished">2016-06-12</time>
+        </a>
+    </div>
+
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/C/">C#</a>
+    </div>
+
             </div>
         
         
-            <ul class="sidebar-buttons">
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/ "
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-                        <span class="sidebar-button-desc">Home</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/all-categories"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                        <span class="sidebar-button-desc">Categories</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/all-tags"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-                        <span class="sidebar-button-desc">Tags</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/all-archives"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                        <span class="sidebar-button-desc">Archives</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link open-algolia-search"
-                             href="#search"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
-                        <span class="sidebar-button-desc">Search</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="#about"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
-                        <span class="sidebar-button-desc">About</span>
-                    </a>
-            </li>
-            
-        </ul>
-        
-            <ul class="sidebar-buttons">
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="https://DevLunaSJ.github.com/" target="_blank" rel="noopener">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
-                        <span class="sidebar-button-desc">GitHub</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="https://www.facebook.com/seokjoon.yun.9" target="_blank" rel="noopener">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-facebook"></i>
-                        <span class="sidebar-button-desc">Facebook</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="https://plus.google.com/u/1/108379332089647292574" target="_blank" rel="noopener">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-google-plus"></i>
-                        <span class="sidebar-button-desc">Google +</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="https://www.linkedin.com/in/sjyun/" target="_blank" rel="noopener">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
-                        <span class="sidebar-button-desc">LinkedIn</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="mailto:seokjoon.yun@gmail.com" target="_blank" rel="noopener">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
-                        <span class="sidebar-button-desc">Mail</span>
-                    </a>
-            </li>
-            
-        </ul>
-        
-            <ul class="sidebar-buttons">
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/atom.xml"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
-                        <span class="sidebar-button-desc">RSS</span>
-                    </a>
-            </li>
-            
-        </ul>
-        
-    </div>
-</nav>
-
-            
-            <div id="main" data-behavior="4"
-                 class="
-                        hasCoverMetaIn
-                        ">
-                
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
-    
-    
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            Using async method in static constructor ( C# )
-        </h1>
-    
-    
-        <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-06-12T02:00:00+09:00">
-	
-		    Jun 12, 2016
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/C/">C#</a>, <a class="category-link" href="/categories/C/C/">C#</a>
-
-
-    
-</div>
-
-    
-</div>
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
+        <div class="article-entry" itemprop="articleBody">
             <h1 id="Using-async-method-in-static-constructor-C"><a href="#Using-async-method-in-static-constructor-C" class="headerlink" title="Using async method in static constructor ( C# )"></a>Using async method in static constructor ( C# )</h1><p><code>static constructor</code> 내부에서 <code>async</code> 함수를 호출할 경우 제대로 동작을 하지 않습니다.<br>(왠만해서는 이런식으로 code가 이루어지지 않도록 해야하지만, 어쩔수 없이 이렇게 사용해야 할 경우가 발생 할 수 있습니다.)  </p>
 <ul>
 <li>참고로 <code>static constructor</code>는 해당 <code>class</code>가 가장 먼저 사용 될 때 실행됩니다.</li>
@@ -293,467 +190,399 @@
 <h3 id="3-초기화-작업을-별도-Init-method로-분리"><a href="#3-초기화-작업을-별도-Init-method로-분리" class="headerlink" title="3. 초기화 작업을 별도 Init method로 분리"></a>3. 초기화 작업을 별도 Init method로 분리</h3><p>개인적으로 이 방법이 가장 깔끔해 보입니다.<br>해당 <code>class</code>가 사용되기 전에 <code>Init()</code>을 호출한 뒤에 사용하면 됩니다.<br><code>Init()</code>함수가 호출되기 전에 이미 해당 <code>class</code>의 <code>static constructor</code>가 실행된 상태이기 때문에 <code>CLR-internal lock</code>은 이미 <code>unlcok</code>된 상태에서 <code>async</code>작업을 수행하게 됩니다.<br>하지만 여러 thread에서 <code>Init()</code> 함수가 호출될 가능성이 있을 경우에는 사용자가 별도로 <code>lock</code>을 걸어서 호출을 해야 합니다.<br>해당 기능은 <code>clsss</code>가 최초로 사용되기 이전 시점의 아무 곳에서나 호출이 가능하므로, <code>lock</code>이 필요없는 적당한 시점에 호출시켜 주는 것이 좋습니다.  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">using System.Collections.Generic;</div><div class="line">using System.Threading.Tasks;</div><div class="line"></div><div class="line">class StaticClass</div><div class="line">&#123;</div><div class="line">    public static IEnumerable&lt;string&gt; Names &#123; set; get; &#125;</div><div class="line"></div><div class="line">    static StaticClass()</div><div class="line">    &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void Init()</div><div class="line">    &#123;</div><div class="line">        Names = Task.Run(async () =&gt; &#123; return await GetNamesAsync(); &#125;).Result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static async Task&lt;IEnumerable&lt;string&gt;&gt; GetNamesAsync()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        StaticClass.Init();</div><div class="line">        foreach (string name in StaticClass.Names)</div><div class="line">        &#123;</div><div class="line">            System.Console.WriteLine(name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-            
         </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
-        
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGGED IN</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/C/">C#</a>
-
-            </div>
-        
-        
-            <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/11/TypeScript.03.ObjectOrientationInTypeScript/"  data-tooltip="Chapter 3 Object Orientation in TypeScript">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/12/CSharp.EF.CodeFirst/" data-tooltip="Entity Framework Code First (Table 생성 및 수정)">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
+        <footer class="article-footer">
             
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
 
 
-        
-        
-            
-        
+
+    <a data-url="http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/" data-id="cj1vnqe68003efz7bpgzjl5f2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
 
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
 
 
-                <footer id="footer" class="main-content-wrap">
-    <span class="copyrights">
-        Copyrights &copy; 2017 Yun Seok-joon. All Rights Reserved.
-    </span>
-</footer>
-
-            </div>
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
             
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/11/TypeScript.03.ObjectOrientationInTypeScript/"  data-tooltip="Chapter 3 Object Orientation in TypeScript">
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
                 
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
+            
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/06/12/CSharp.EF.CodeFirst/" data-tooltip="Entity Framework Code First (Table 생성 및 수정)">
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/seokjoon.yun.9" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
                 
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/1/108379332089647292574" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/DevStarSJ" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
         </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-    <i id="btn-close-shareoptions" class="fa fa-close"></i>
-    <ul class="share-options">
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/">
-                    <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/">
-                    <i class="fa fa-twitter"></i><span>Share on Twitter</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/">
-                    <i class="fa fa-google-plus"></i><span>Share on Google+</span>
-                </a>
-            </li>
-        
-    </ul>
-</div>
-
-            
-        </div>
-        
-
-
-    
-        
-    
-
-<div id="about">
-    <div id="about-card">
-        <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
-        </div>
-        
-            <img id="about-card-picture" src="/assets/images/sjyun.jpg" alt="Author&#39;s picture"/>
-        
-            <h4 id="about-card-name">Yun Seok-joon</h4>
-        
-            <div id="about-card-bio"><p>author.bio</p>
-</div>
-        
-        
-            <div id="about-card-job">
-                <i class="fa fa-briefcase"></i>
-                <br/>
-                <p>author.job</p>
-
-            </div>
-        
-        
-            <div id="about-card-location">
-                <i class="fa fa-map-marker"></i>
-                <br/>
-                Seoul, South Korea
-            </div>
-        
     </div>
-</div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/11/TypeScript.03.ObjectOrientationInTypeScript/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Chapter 3 Object Orientation in TypeScript
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/06/12/CSharp.EF.CodeFirst/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Entity Framework Code First (Table 생성 및 수정)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
 
-        <div id="algolia-search-modal" class="modal-container">
-    <div class="modal">
-        <div class="modal-header">
-            <span class="close-button"><i class="fa fa-close"></i></span>
-            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-                <span class="searchby-algolia-text text-color-light text-small">by</span>
-                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-            </a>
-            <i class="search-icon fa fa-search"></i>
-            <form id="algolia-search-form">
-                <input type="text" id="algolia-search-input" name="search"
-                    class="form-control input--large search-input" placeholder="Search "
-                    />
-            </form>
-        </div>
-        <div class="modal-body">
-            <div class="no-result text-color-light text-center">no post found</div>
-            <div class="results">
+    
+    <div class="widgets-container">
+        
+            
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2015/11/10/Devops.Jenkins/">
-                            <h3 class="media-heading">Install Jenkins</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Nov 10, 2015
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2016/01/20/01.01.modeling/">
-                            <h3 class="media-heading">SQLP 1-1 데이터 모델링</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 20, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/23/hello-world/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/04/23/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2017-04-23T08:21:19.000Z" itemprop="datePublished">2017-04-23</time></p>
+                        </div>
+                    </li>
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2016/01/20/01.02.modeling_performance/">
-                            <h3 class="media-heading">SQLP 1-2 데이터 모델과 성능</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 20, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/08/AWS-Lambda-BinaryResponse/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/br1.png)" alt="AWS Lambda + API Gateway Binary Response 예제" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/AWS/">AWS</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/AWS/Lambda/">Lambda</a></p>
+                            <p class="item-title"><a href="/2017/04/08/AWS-Lambda-BinaryResponse/" class="title">AWS Lambda + API Gateway Binary Response 예제</a></p>
+                            <p class="item-date"><time datetime="2017-04-07T15:00:00.000Z" itemprop="datePublished">2017-04-08</time></p>
+                        </div>
+                    </li>
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2016/01/21/02.01.sql.basic/">
-                            <h3 class="media-heading">SQLP 2-1 SQL 기본</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 21, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/26/Lambda.Chatbot.01/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://github.com/DevStarSJ/Study/raw/master/Blog/Cloud/AWS/Lambda/images/Lambda.Chatbot.01.png?raw=true)" alt="AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/AWS/">AWS</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/AWS/Lambda/">Lambda</a></p>
+                            <p class="item-title"><a href="/2017/03/26/Lambda.Chatbot.01/" class="title">AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</a></p>
+                            <p class="item-date"><time datetime="2017-03-25T15:00:00.000Z" itemprop="datePublished">2017-03-26</time></p>
+                        </div>
+                    </li>
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2016/01/23/02.02.sql.adv/">
-                            <h3 class="media-heading">SQLP 2-2-1 SET, Hierarchical Query, Sub-query</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 23, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/19/Lambda.invoke.Lambda/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/AWS/">AWS</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/AWS/Lambda/">Lambda</a></p>
+                            <p class="item-title"><a href="/2017/03/19/Lambda.invoke.Lambda/" class="title">Lambda에서 Lambda를 호출하는 방법</a></p>
+                            <p class="item-date"><time datetime="2017-03-18T15:00:00.000Z" itemprop="datePublished">2017-03-19</time></p>
+                        </div>
+                    </li>
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2016/01/25/02.03.group/">
-                            <h3 class="media-heading">SQLP 2-2-2 GROUP function</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 25, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/11/Lambda.Tips.01/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://github.com/DevStarSJ/Study/raw/master/Blog/Cloud/AWS/Lambda/images/Lambda.Tips.01.01.png?raw=true)" alt="AWS Lambda 사용에 관련된 Tip" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/AWS/">AWS</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/AWS/Lambda/">Lambda</a></p>
+                            <p class="item-title"><a href="/2017/03/11/Lambda.Tips.01/" class="title">AWS Lambda 사용에 관련된 Tip</a></p>
+                            <p class="item-date"><time datetime="2017-03-10T15:00:00.000Z" itemprop="datePublished">2017-03-11</time></p>
+                        </div>
+                    </li>
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2016/01/25/02.04.window/">
-                            <h3 class="media-heading">SQLP 2-2-3 Window function</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 25, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2016/01/26/02.05.dcl/">
-                            <h3 class="media-heading">SQLP 2-2-4 DCL</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 26, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2016/01/26/02.06.plsql/">
-                            <h3 class="media-heading">SQLP 2-2-5 PL/SQL</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 26, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://DevStarSJ.github.io/2016/01/27/02.07.optimizer/">
-                            <h3 class="media-heading">SQLP 2-3 Optimizing SQL</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 27, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-            </div>
-        </div>
-        <div class="modal-footer">
-            <p class="results-count text-medium"
-                data-message-zero="no post found"
-                data-message-one="1 post found"
-                data-message-other="{n} posts found">
-                59 posts found
-            </p>
+            </ul>
         </div>
     </div>
-</div>
 
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/APIGateway/">APIGateway</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET/">ASP.NET</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-NET-Core/">ASP.NET Core</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AWS/">AWS</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CI-CD/">CI/CD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/">Database</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lambda/">Lambda</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQLP/">SQLP</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Serverless/">Serverless</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 12.22px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
         
-<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
-        <!--SCRIPTS-->
-<script src="/assets/js/script-kbuclmtqrwfmqogitsifpjr2mdxgukkqucv5th9u0chgrdjqgqfxwhpjxejt.min.js"></script>
-<!--SCRIPTS END-->
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Yun Seok-joon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://DevStarSJ.github.io/2016/06/12/CSharp.StaticConstructorAsync/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
 
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
     
 
 
-    </body>
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
 </html>
