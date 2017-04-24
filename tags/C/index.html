@@ -284,13 +284,6 @@
             
         </div>
         
-            <a href="/2017/01/23/CSharp.Aspnet.RequestBodyLog/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
-        
     </article>
     
     
@@ -438,7 +431,7 @@
 <li><strong>JSON Object</strong>로 입력 및 응답을 주고 받는 방법</li>
 </ul>
 <p><strong>API Gateway</strong>와의 연동 및 <strong>path</strong>, <strong>querystring</strong>, <strong>HTTP Method</strong>에 따라 다른 작업 및 응답을 발성하는 방법에 대해서는 제가 앞서 작성한 <strong>Node.JS</strong>로 <strong>AWS Lambda</strong> 올리는 곳의 코드와 구조가 똑같습니다.<br>그래서 이 부분에 대해서는 따로 다루지 않겠습니다.</p>
-<p>잘못되었거나, 변경된 점, 기타 추가 사항에 대한 피드백은 언제나 환영합니다. - <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#111;&#107;&#106;&#x6f;&#x6f;&#110;&#x2e;&#121;&#x75;&#x6e;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#115;&#x65;&#111;&#107;&#106;&#x6f;&#x6f;&#110;&#x2e;&#121;&#x75;&#x6e;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a>  </p>
+<p>잘못되었거나, 변경된 점, 기타 추가 사항에 대한 피드백은 언제나 환영합니다. - <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#x6f;&#x6b;&#106;&#111;&#x6f;&#110;&#46;&#x79;&#x75;&#x6e;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">&#x73;&#x65;&#x6f;&#x6b;&#106;&#111;&#x6f;&#110;&#46;&#x79;&#x75;&#x6e;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#109;</a>  </p>
 <h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><ul>
 <li>AWS 공식 문서들<ul>
 <li><a href="https://aws.amazon.com/about-aws/whats-new/2016/12/aws-lambda-supports-c-sharp/" target="_blank" rel="external">https://aws.amazon.com/about-aws/whats-new/2016/12/aws-lambda-supports-c-sharp/</a></li>
@@ -464,13 +457,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/12/03/Lambda.CSharp/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     
@@ -533,13 +519,6 @@
             
         </div>
         
-            <a href="/2016/08/31/CSharp.ClientWebSocketExample/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
-        
     </article>
     
     
@@ -600,90 +579,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/08/10/CSharp.AttributeInherit/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/06/12/CSharp.StaticConstructorAsync/">
-                            Using async method in static constructor ( C# )
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-06-12T02:00:00+09:00">
-	
-		    Jun 12, 2016
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/C/">C#</a>, <a class="category-link" href="/categories/C/C/">C#</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <h1 id="Using-async-method-in-static-constructor-C"><a href="#Using-async-method-in-static-constructor-C" class="headerlink" title="Using async method in static constructor ( C# )"></a>Using async method in static constructor ( C# )</h1><p><code>static constructor</code> 내부에서 <code>async</code> 함수를 호출할 경우 제대로 동작을 하지 않습니다.<br>(왠만해서는 이런식으로 code가 이루어지지 않도록 해야하지만, 어쩔수 없이 이렇게 사용해야 할 경우가 발생 할 수 있습니다.)  </p>
-<ul>
-<li>참고로 <code>static constructor</code>는 해당 <code>class</code>가 가장 먼저 사용 될 때 실행됩니다.</li>
-</ul>
-<h3 id="CLR-internal-lock"><a href="#CLR-internal-lock" class="headerlink" title="CLR-internal lock"></a>CLR-internal lock</h3><p><code>static constructor</code>는 정확히 1번만 실행되어야 합니다.<br>그러므로 <code>static constructor</code>가 실행될 때는 내부적으로 <code>CLR-internal lock</code>으로 해당 code를 1번만 실행되도록 수행합니다.<br>이렇게 lock이 걸린 상태에서 <code>async</code>를 이용하여 다른 <code>thread</code>로 작업을 수행할 경우 <code>thread-lock</code>과 <code>CLR-internal lock</code>간의 <code>deadlock</code>이 발생해서 안된다고 생각 할 수 있습니다.</p>
-<p><a href="http://blogs.msdn.com/b/pfxteam/archive/2011/05/03/10159682.aspx" target="_blank" rel="external">http://blogs.msdn.com/b/pfxteam/archive/2011/05/03/10159682.aspx</a> 링크의 posting을 보면 설명이 되어 있습니다.</p>
-<p><a href="http://blog.stephencleary.com/2013/01/async-oop-2-constructors.html" target="_blank" rel="external">http://blog.stephencleary.com/2013/01/async-oop-2-constructors.html</a> 링크의 posting에도 절대로 <code>static constructor</code>에서 <code>async</code> 작업을 하는 건 <code>BAD CODE!!!</code>라고 경고하고 있습니다.  </p>
-<p>참고로 위 Link에 있는 posting에서 안된다고 하는 예제들을 만들어서 해보면 잘 됩니다.<br>진짜로 async 한 작업 (DB, Network, disk I/O) 을 이용하는 경우에는 안 될 수 있지만, 단순히 <code>async</code> 키워드만 붙였다고 해서 <code>deadlock</code>이 재현되지는 않습니다.</p>
-<h3 id="내가-상상하는-안되는-이유…"><a href="#내가-상상하는-안되는-이유…" class="headerlink" title="내가 상상하는 안되는 이유…"></a>내가 상상하는 안되는 이유…</h3><p>위 내용들은 어느정도 검증(?)된 posting을 바탕으로 한 내용이구요.<br>제가 생각했을 때 안되는 이유를 말씀드리겠습니다.<br>어디까지나 혼자만의 상상의 나래로 기록한 썰(?)이지, 검증된 내용은 아닙니다.  </p>
-<p><code>constructor</code>라 함은 object가 생성될때 가장 먼저 해줘야 하는 작업입니다.<br><code>static constructor</code>는 해당 class의 <code>static properties, method</code>들이 사용되기 전에 먼저 실행되어야 할 code들을 모아둔 곳이어야 겠죠.<br><code>C++98</code>까지의 modern하지 않은 <code>C++</code>에서는 <code>member variable</code> (C# 의 properties) 들을 초기화 하는 작업을 <code>constructor</code>에서 했습니다.<br>C++11 에서는 C# 과 같이 선언과 동시에 초기값를 바로 써 줄 수 있지만, 아마 동작은 <code>constuctor</code>실행시 할 거라 생각됩니다.<br>C# 도 편의상 선언과 동시에 초기값을 써 줄 수는 있지만, 아마 동작은 <code>constuctor</code> 수행시 할 거라 생각됩니다.  </p>
-<p><code>static constuctor</code>는 해당 class의 <code>static method</code>보다 먼저 수행되어야 할 code라는 썰을 전제로 생각해 본다면,<br>그럼 <code>static constructor</code>에서 다른 <code>static method</code>를 호출하면 어떻게 될까요 ???<br>아마 그 시점에 해당 <code>static method</code>의 code를 실행가능 하도록 해주지 않을까 예상됩니다.<br>(memory에 load한다던지, 아니면 다른 방법으로 실행가능하게 뭔가 조치를 해주겠죠.)<br>이게 동일 thread 내에서는 당연히 판단이 가능하여서 아무런 문제가 없이 동작하지만,<br><code>static constructor</code>가 수행중이고 아직 완료되지 않은 시점에,<br>갑자기 다른 thread가 해당 class의 다른 <code>static method</code>에 접근을 할 경우에는 어떻게 해야 할까요 ?<br>아마 <code>static constructor</code>가 수행중이니 <code>CLR-internal lock</code>으로 보호되고 있겠지요 ?<br>이 lock은 <code>static constructor</code>가 수행을 종료해야 풀리겠구요.<br>그런데 그 다른 thread가 <code>static method</code>를 수행완료해야만 <code>static constructor</code>가 종료될 수 있다면 ???<br>여기서 <code>dead lock</code>이 발생할 것입니다.<br>동일 thread 내에서는 <code>CLR-internal lock</code> 내부에서 수행이 되도록 잘 설계 했습니다.<br>당연히 다른 thread에서 접근은 lock으로 보호해야하는 건 맞구요.<br>하지만, 해당 thread가 종료되길 기다리는게 <code>static constructor</code>인 경우에는 ???  </p>
-<p>그래서 아래에 제가 적어놓은 해결 방법 중에,<br><code>static constructor</code>에서 자신의 class가 아닌 다른 class의 <code>async</code> 작업을 기다리는 경우는 잘 동작합니다.<br>이것을 이용해서 <code>async</code>한 작업을 별도 class로 나누면 역시나 잘 동작합니다.</p>
-<h3 id="Deadlock-in-async-method-in-static-constuctor"><a href="#Deadlock-in-async-method-in-static-constuctor" class="headerlink" title="Deadlock in async method in static constuctor"></a>Deadlock in async method in static constuctor</h3><p>강제로 <code>deadlock</code>을 발생시키는 code를 만들어 보았습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">using System.Collections.Generic;</div><div class="line">using System.Threading.Tasks;</div><div class="line"></div><div class="line">class StaticClass</div><div class="line">&#123;</div><div class="line">    public static IEnumerable&lt;string&gt; Names &#123; set; get; &#125;</div><div class="line"></div><div class="line">    static StaticClass()</div><div class="line">    &#123;</div><div class="line">        Names = Task.Run(async () =&gt; &#123; return await GetNamesAsync(); &#125;).Result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static async Task&lt;IEnumerable&lt;string&gt;&gt; GetNamesAsync()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        foreach (string name in StaticClass.Names)</div><div class="line">        &#123;</div><div class="line">            System.Console.WriteLine(name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>이런 code를 어떻게 고쳐야 하는지 3가지 방법을 살펴보겠습니다.</p>
-<h3 id="1-async한-구현의-method를-추가"><a href="#1-async한-구현의-method를-추가" class="headerlink" title="1. async한 구현의 method를 추가"></a>1. async한 구현의 method를 추가</h3><p>위 예제의 경우 <code>GetNamesAsync()</code> method와 같은 기능을 하는 sync한 method인 <code>GetNames()</code>를 추가하는 방법이 있습니다.<br>동일한 구현이 2개가 되므로 별로 추천드리는 방법은 아닙니다.  </p>
-<p>참고로 아래 예제도 썩 그렇게 좋은 예제코드는 아닙니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">using System.Collections.Generic;</div><div class="line">using System.Threading.Tasks;</div><div class="line"></div><div class="line">class StaticClass</div><div class="line">&#123;</div><div class="line">    public static IEnumerable&lt;string&gt; Names &#123; set; get; &#125;</div><div class="line"></div><div class="line">    static StaticClass()</div><div class="line">    &#123;</div><div class="line">        Names = GetNames();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static async Task&lt;IEnumerable&lt;string&gt;&gt; GetNamesAsync()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static IEnumerable&lt;string&gt; GetNames()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        foreach (string name in StaticClass.Names)</div><div class="line">        &#123;</div><div class="line">            System.Console.WriteLine(name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>하지만 sync한 작업으로 구현 자체가 될 것을 굳이 <code>async</code>로 선언할 일은 잘 없습니다.<br>그러므로 이렇게 해결될 수 있는 일이라면 애초에 <code>async</code>로 구현한거 자체가 제대로 된 설계가 아닐 수 있습니다.</p>
-<h3 id="2-async-작업을-별도-class로-분리-또는-async-작업-호출을-별도-class로-제한"><a href="#2-async-작업을-별도-class로-분리-또는-async-작업-호출을-별도-class로-제한" class="headerlink" title="2. async 작업을 별도 class로 분리 (또는 async 작업 호출을 별도 class로 제한)"></a>2. async 작업을 별도 class로 분리 (또는 async 작업 호출을 별도 class로 제한)</h3><p><code>async</code> 작업을 별도 class로 분리하거나,<br><code>static constructor</code>에서 호출하는 <code>async</code> 작업을 다른 class의 method로 제한하는 방법이 있습니다.<br>이렇게 구현할 경우 원래 <code>class</code>에서 sync한 구현과 async한 구현이 모두 필요할 경우 1번과 같은 code 모양이 될 경우가 많습니다.<br><code>static constructor</code>에서 호출하는 <code>async method</code>가 다른 class의 method일 경우에는 <code>deadlock</code>이 걸리지 않았습니다.  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">using System.Collections.Generic;</div><div class="line">using System.Threading.Tasks;</div><div class="line"></div><div class="line">class StaticClass</div><div class="line">&#123;</div><div class="line">    public static IEnumerable&lt;string&gt; Names &#123; set; get; &#125;</div><div class="line"></div><div class="line">    static StaticClass()</div><div class="line">    &#123;</div><div class="line">        Names = GetNames();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static IEnumerable&lt;string&gt; GetNames()</div><div class="line">    &#123;</div><div class="line">        return Task.Run(async () =&gt; &#123; return await AsyncClass.GetNamesAsync(); &#125;).Result; ;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class AsyncClass</div><div class="line">&#123;</div><div class="line">    public static async Task&lt;IEnumerable&lt;string&gt;&gt; GetNamesAsync()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        foreach (string name in StaticClass.Names)</div><div class="line">        &#123;</div><div class="line">            System.Console.WriteLine(name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="3-초기화-작업을-별도-Init-method로-분리"><a href="#3-초기화-작업을-별도-Init-method로-분리" class="headerlink" title="3. 초기화 작업을 별도 Init method로 분리"></a>3. 초기화 작업을 별도 Init method로 분리</h3><p>개인적으로 이 방법이 가장 깔끔해 보입니다.<br>해당 <code>class</code>가 사용되기 전에 <code>Init()</code>을 호출한 뒤에 사용하면 됩니다.<br><code>Init()</code>함수가 호출되기 전에 이미 해당 <code>class</code>의 <code>static constructor</code>가 실행된 상태이기 때문에 <code>CLR-internal lock</code>은 이미 <code>unlcok</code>된 상태에서 <code>async</code>작업을 수행하게 됩니다.<br>하지만 여러 thread에서 <code>Init()</code> 함수가 호출될 가능성이 있을 경우에는 사용자가 별도로 <code>lock</code>을 걸어서 호출을 해야 합니다.<br>해당 기능은 <code>clsss</code>가 최초로 사용되기 이전 시점의 아무 곳에서나 호출이 가능하므로, <code>lock</code>이 필요없는 적당한 시점에 호출시켜 주는 것이 좋습니다.  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">using System.Collections.Generic;</div><div class="line">using System.Threading.Tasks;</div><div class="line"></div><div class="line">class StaticClass</div><div class="line">&#123;</div><div class="line">    public static IEnumerable&lt;string&gt; Names &#123; set; get; &#125;</div><div class="line"></div><div class="line">    static StaticClass()</div><div class="line">    &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void Init()</div><div class="line">    &#123;</div><div class="line">        Names = Task.Run(async () =&gt; &#123; return await GetNamesAsync(); &#125;).Result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static async Task&lt;IEnumerable&lt;string&gt;&gt; GetNamesAsync()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        StaticClass.Init();</div><div class="line">        foreach (string name in StaticClass.Names)</div><div class="line">        &#123;</div><div class="line">            System.Console.WriteLine(name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2016/06/12/CSharp.StaticConstructorAsync/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2016/06/12/CSharp.StaticConstructorAsync/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     
@@ -800,12 +695,75 @@
             
         </div>
         
-            <a href="/2016/06/12/CSharp.NewtonJSON/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
             
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/06/12/CSharp.StaticConstructorAsync/">
+                            Using async method in static constructor ( C# )
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-06-12T02:00:00+09:00">
+	
+		    Jun 12, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/C/">C#</a>, <a class="category-link" href="/categories/C/C/">C#</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h1 id="Using-async-method-in-static-constructor-C"><a href="#Using-async-method-in-static-constructor-C" class="headerlink" title="Using async method in static constructor ( C# )"></a>Using async method in static constructor ( C# )</h1><p><code>static constructor</code> 내부에서 <code>async</code> 함수를 호출할 경우 제대로 동작을 하지 않습니다.<br>(왠만해서는 이런식으로 code가 이루어지지 않도록 해야하지만, 어쩔수 없이 이렇게 사용해야 할 경우가 발생 할 수 있습니다.)  </p>
+<ul>
+<li>참고로 <code>static constructor</code>는 해당 <code>class</code>가 가장 먼저 사용 될 때 실행됩니다.</li>
+</ul>
+<h3 id="CLR-internal-lock"><a href="#CLR-internal-lock" class="headerlink" title="CLR-internal lock"></a>CLR-internal lock</h3><p><code>static constructor</code>는 정확히 1번만 실행되어야 합니다.<br>그러므로 <code>static constructor</code>가 실행될 때는 내부적으로 <code>CLR-internal lock</code>으로 해당 code를 1번만 실행되도록 수행합니다.<br>이렇게 lock이 걸린 상태에서 <code>async</code>를 이용하여 다른 <code>thread</code>로 작업을 수행할 경우 <code>thread-lock</code>과 <code>CLR-internal lock</code>간의 <code>deadlock</code>이 발생해서 안된다고 생각 할 수 있습니다.</p>
+<p><a href="http://blogs.msdn.com/b/pfxteam/archive/2011/05/03/10159682.aspx" target="_blank" rel="external">http://blogs.msdn.com/b/pfxteam/archive/2011/05/03/10159682.aspx</a> 링크의 posting을 보면 설명이 되어 있습니다.</p>
+<p><a href="http://blog.stephencleary.com/2013/01/async-oop-2-constructors.html" target="_blank" rel="external">http://blog.stephencleary.com/2013/01/async-oop-2-constructors.html</a> 링크의 posting에도 절대로 <code>static constructor</code>에서 <code>async</code> 작업을 하는 건 <code>BAD CODE!!!</code>라고 경고하고 있습니다.  </p>
+<p>참고로 위 Link에 있는 posting에서 안된다고 하는 예제들을 만들어서 해보면 잘 됩니다.<br>진짜로 async 한 작업 (DB, Network, disk I/O) 을 이용하는 경우에는 안 될 수 있지만, 단순히 <code>async</code> 키워드만 붙였다고 해서 <code>deadlock</code>이 재현되지는 않습니다.</p>
+<h3 id="내가-상상하는-안되는-이유…"><a href="#내가-상상하는-안되는-이유…" class="headerlink" title="내가 상상하는 안되는 이유…"></a>내가 상상하는 안되는 이유…</h3><p>위 내용들은 어느정도 검증(?)된 posting을 바탕으로 한 내용이구요.<br>제가 생각했을 때 안되는 이유를 말씀드리겠습니다.<br>어디까지나 혼자만의 상상의 나래로 기록한 썰(?)이지, 검증된 내용은 아닙니다.  </p>
+<p><code>constructor</code>라 함은 object가 생성될때 가장 먼저 해줘야 하는 작업입니다.<br><code>static constructor</code>는 해당 class의 <code>static properties, method</code>들이 사용되기 전에 먼저 실행되어야 할 code들을 모아둔 곳이어야 겠죠.<br><code>C++98</code>까지의 modern하지 않은 <code>C++</code>에서는 <code>member variable</code> (C# 의 properties) 들을 초기화 하는 작업을 <code>constructor</code>에서 했습니다.<br>C++11 에서는 C# 과 같이 선언과 동시에 초기값를 바로 써 줄 수 있지만, 아마 동작은 <code>constuctor</code>실행시 할 거라 생각됩니다.<br>C# 도 편의상 선언과 동시에 초기값을 써 줄 수는 있지만, 아마 동작은 <code>constuctor</code> 수행시 할 거라 생각됩니다.  </p>
+<p><code>static constuctor</code>는 해당 class의 <code>static method</code>보다 먼저 수행되어야 할 code라는 썰을 전제로 생각해 본다면,<br>그럼 <code>static constructor</code>에서 다른 <code>static method</code>를 호출하면 어떻게 될까요 ???<br>아마 그 시점에 해당 <code>static method</code>의 code를 실행가능 하도록 해주지 않을까 예상됩니다.<br>(memory에 load한다던지, 아니면 다른 방법으로 실행가능하게 뭔가 조치를 해주겠죠.)<br>이게 동일 thread 내에서는 당연히 판단이 가능하여서 아무런 문제가 없이 동작하지만,<br><code>static constructor</code>가 수행중이고 아직 완료되지 않은 시점에,<br>갑자기 다른 thread가 해당 class의 다른 <code>static method</code>에 접근을 할 경우에는 어떻게 해야 할까요 ?<br>아마 <code>static constructor</code>가 수행중이니 <code>CLR-internal lock</code>으로 보호되고 있겠지요 ?<br>이 lock은 <code>static constructor</code>가 수행을 종료해야 풀리겠구요.<br>그런데 그 다른 thread가 <code>static method</code>를 수행완료해야만 <code>static constructor</code>가 종료될 수 있다면 ???<br>여기서 <code>dead lock</code>이 발생할 것입니다.<br>동일 thread 내에서는 <code>CLR-internal lock</code> 내부에서 수행이 되도록 잘 설계 했습니다.<br>당연히 다른 thread에서 접근은 lock으로 보호해야하는 건 맞구요.<br>하지만, 해당 thread가 종료되길 기다리는게 <code>static constructor</code>인 경우에는 ???  </p>
+<p>그래서 아래에 제가 적어놓은 해결 방법 중에,<br><code>static constructor</code>에서 자신의 class가 아닌 다른 class의 <code>async</code> 작업을 기다리는 경우는 잘 동작합니다.<br>이것을 이용해서 <code>async</code>한 작업을 별도 class로 나누면 역시나 잘 동작합니다.</p>
+<h3 id="Deadlock-in-async-method-in-static-constuctor"><a href="#Deadlock-in-async-method-in-static-constuctor" class="headerlink" title="Deadlock in async method in static constuctor"></a>Deadlock in async method in static constuctor</h3><p>강제로 <code>deadlock</code>을 발생시키는 code를 만들어 보았습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">using System.Collections.Generic;</div><div class="line">using System.Threading.Tasks;</div><div class="line"></div><div class="line">class StaticClass</div><div class="line">&#123;</div><div class="line">    public static IEnumerable&lt;string&gt; Names &#123; set; get; &#125;</div><div class="line"></div><div class="line">    static StaticClass()</div><div class="line">    &#123;</div><div class="line">        Names = Task.Run(async () =&gt; &#123; return await GetNamesAsync(); &#125;).Result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static async Task&lt;IEnumerable&lt;string&gt;&gt; GetNamesAsync()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        foreach (string name in StaticClass.Names)</div><div class="line">        &#123;</div><div class="line">            System.Console.WriteLine(name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>이런 code를 어떻게 고쳐야 하는지 3가지 방법을 살펴보겠습니다.</p>
+<h3 id="1-async한-구현의-method를-추가"><a href="#1-async한-구현의-method를-추가" class="headerlink" title="1. async한 구현의 method를 추가"></a>1. async한 구현의 method를 추가</h3><p>위 예제의 경우 <code>GetNamesAsync()</code> method와 같은 기능을 하는 sync한 method인 <code>GetNames()</code>를 추가하는 방법이 있습니다.<br>동일한 구현이 2개가 되므로 별로 추천드리는 방법은 아닙니다.  </p>
+<p>참고로 아래 예제도 썩 그렇게 좋은 예제코드는 아닙니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">using System.Collections.Generic;</div><div class="line">using System.Threading.Tasks;</div><div class="line"></div><div class="line">class StaticClass</div><div class="line">&#123;</div><div class="line">    public static IEnumerable&lt;string&gt; Names &#123; set; get; &#125;</div><div class="line"></div><div class="line">    static StaticClass()</div><div class="line">    &#123;</div><div class="line">        Names = GetNames();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static async Task&lt;IEnumerable&lt;string&gt;&gt; GetNamesAsync()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static IEnumerable&lt;string&gt; GetNames()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        foreach (string name in StaticClass.Names)</div><div class="line">        &#123;</div><div class="line">            System.Console.WriteLine(name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>하지만 sync한 작업으로 구현 자체가 될 것을 굳이 <code>async</code>로 선언할 일은 잘 없습니다.<br>그러므로 이렇게 해결될 수 있는 일이라면 애초에 <code>async</code>로 구현한거 자체가 제대로 된 설계가 아닐 수 있습니다.</p>
+<h3 id="2-async-작업을-별도-class로-분리-또는-async-작업-호출을-별도-class로-제한"><a href="#2-async-작업을-별도-class로-분리-또는-async-작업-호출을-별도-class로-제한" class="headerlink" title="2. async 작업을 별도 class로 분리 (또는 async 작업 호출을 별도 class로 제한)"></a>2. async 작업을 별도 class로 분리 (또는 async 작업 호출을 별도 class로 제한)</h3><p><code>async</code> 작업을 별도 class로 분리하거나,<br><code>static constructor</code>에서 호출하는 <code>async</code> 작업을 다른 class의 method로 제한하는 방법이 있습니다.<br>이렇게 구현할 경우 원래 <code>class</code>에서 sync한 구현과 async한 구현이 모두 필요할 경우 1번과 같은 code 모양이 될 경우가 많습니다.<br><code>static constructor</code>에서 호출하는 <code>async method</code>가 다른 class의 method일 경우에는 <code>deadlock</code>이 걸리지 않았습니다.  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">using System.Collections.Generic;</div><div class="line">using System.Threading.Tasks;</div><div class="line"></div><div class="line">class StaticClass</div><div class="line">&#123;</div><div class="line">    public static IEnumerable&lt;string&gt; Names &#123; set; get; &#125;</div><div class="line"></div><div class="line">    static StaticClass()</div><div class="line">    &#123;</div><div class="line">        Names = GetNames();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static IEnumerable&lt;string&gt; GetNames()</div><div class="line">    &#123;</div><div class="line">        return Task.Run(async () =&gt; &#123; return await AsyncClass.GetNamesAsync(); &#125;).Result; ;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class AsyncClass</div><div class="line">&#123;</div><div class="line">    public static async Task&lt;IEnumerable&lt;string&gt;&gt; GetNamesAsync()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        foreach (string name in StaticClass.Names)</div><div class="line">        &#123;</div><div class="line">            System.Console.WriteLine(name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-초기화-작업을-별도-Init-method로-분리"><a href="#3-초기화-작업을-별도-Init-method로-분리" class="headerlink" title="3. 초기화 작업을 별도 Init method로 분리"></a>3. 초기화 작업을 별도 Init method로 분리</h3><p>개인적으로 이 방법이 가장 깔끔해 보입니다.<br>해당 <code>class</code>가 사용되기 전에 <code>Init()</code>을 호출한 뒤에 사용하면 됩니다.<br><code>Init()</code>함수가 호출되기 전에 이미 해당 <code>class</code>의 <code>static constructor</code>가 실행된 상태이기 때문에 <code>CLR-internal lock</code>은 이미 <code>unlcok</code>된 상태에서 <code>async</code>작업을 수행하게 됩니다.<br>하지만 여러 thread에서 <code>Init()</code> 함수가 호출될 가능성이 있을 경우에는 사용자가 별도로 <code>lock</code>을 걸어서 호출을 해야 합니다.<br>해당 기능은 <code>clsss</code>가 최초로 사용되기 이전 시점의 아무 곳에서나 호출이 가능하므로, <code>lock</code>이 필요없는 적당한 시점에 호출시켜 주는 것이 좋습니다.  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">using System.Collections.Generic;</div><div class="line">using System.Threading.Tasks;</div><div class="line"></div><div class="line">class StaticClass</div><div class="line">&#123;</div><div class="line">    public static IEnumerable&lt;string&gt; Names &#123; set; get; &#125;</div><div class="line"></div><div class="line">    static StaticClass()</div><div class="line">    &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void Init()</div><div class="line">    &#123;</div><div class="line">        Names = Task.Run(async () =&gt; &#123; return await GetNamesAsync(); &#125;).Result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static async Task&lt;IEnumerable&lt;string&gt;&gt; GetNamesAsync()</div><div class="line">    &#123;</div><div class="line">        List&lt;string&gt; nameList = new List&lt;string&gt;</div><div class="line">        &#123;</div><div class="line">            &quot;Luna&quot;, &quot;Star&quot;, &quot;Philip&quot;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        return nameList;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Program</div><div class="line">&#123;</div><div class="line">    static void Main(string[] args)</div><div class="line">    &#123;</div><div class="line">        StaticClass.Init();</div><div class="line">        foreach (string name in StaticClass.Names)</div><div class="line">        &#123;</div><div class="line">            System.Console.WriteLine(name);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2016/06/12/CSharp.StaticConstructorAsync/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
         
     </article>
     
@@ -900,13 +858,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/06/12/CSharp.EF.CodeFirst/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     
@@ -1012,13 +963,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/05/24/CSharp.Aspnet.05.View /">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     
@@ -1194,13 +1138,6 @@
             
         </div>
         
-            <a href="/2016/05/12/CSharp.Aspnet.04.ControllerAndAction/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
-        
     </article>
     
     
@@ -1210,8 +1147,8 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
-                        <a class="link-unstyled" href="/2016/05/11/CSharp.AspnetCore.WebSocket/">
-                            WebSockets in .NET Core
+                        <a class="link-unstyled" href="/2016/05/11/CSharp.AspnetCore.Install.Net.Core/">
+                            .NET Core Install for Ubuntu 14.04
                         </a>
                     
                 </h1>
@@ -1233,78 +1170,66 @@
             </div>
             
                 <div class="postShorten-content" itemprop="articleBody">
-                    <p><code>.NET Core</code> (현재는 ASP.NET 5)로 간단한 Web Socket을 구현하는 예제코드와 설명입니다.</p>
-<p>작업은 <code>Visual Studio 2015</code> , <code>ASP.NET5-rc1</code> 으로 진행하였습니다.</p>
-<h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><ul>
-<li><code>.NET Core</code> (ASP.NET 5 Template)로 Web Application Project를 생성</li>
-<li>Server : Echo Server 를 Web Socket으로 구현<ul>
-<li>Client에서 전달한 Text Message를 그대로 전달</li>
-</ul>
-</li>
-<li>Client : jQuery를 이용한 간단한 Web Socket page를 생성</li>
-<li>여러 Client가 접속한 경우 접속된 모든 Client에게 echo message를 전달</li>
-</ul>
-<h2 id="1-Project-생성"><a href="#1-Project-생성" class="headerlink" title="1. Project 생성"></a>1. Project 생성</h2><p><code>C#</code> -&gt; <code>Web</code> -&gt; <code>ASP.NET Web Application</code> 선택 후 <code>ASP.NET 5 Templates</code> -&gt; <code>Web Appliacaion</code>으로 Project를 생성합니다.<br><code>ASP.NET 5 Templates</code>가 설치되지 않은 경우 아래 설치 버튼이 활성화되며, 설치가 짧은 순간에 끝나지는 않으니 조금 기다리셔야 합니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.01.png?raw=true">  </p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.02.png?raw=true">  </p>
-<h2 id="2-Server-Web-Socket-구현"><a href="#2-Server-Web-Socket-구현" class="headerlink" title="2. Server Web Socket 구현"></a>2. Server Web Socket 구현</h2><p><code>Startup.cs</code> 파일을 열어서 <code>public void Configure()</code> 함수에 아래 Code를 추가합니다.<br>단 <code>app.UseMvc()</code>보다 위에 위치해야 합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">app.UseWebSockets();</div><div class="line">app.Use(async (http, next) =&gt;</div><div class="line">&#123;</div><div class="line">    if (http.WebSockets.IsWebSocketRequest)</div><div class="line">    &#123;</div><div class="line">        var webSocket = await http.WebSockets.AcceptWebSocketAsync();</div><div class="line"></div><div class="line">        if (webSocket != null &amp;&amp; webSocket.State == WebSocketState.Open)</div><div class="line">        &#123;</div><div class="line">            // Handle the socket here</div><div class="line">            while (webSocket.State == WebSocketState.Open)</div><div class="line">            &#123;</div><div class="line">                var token = CancellationToken.None;</div><div class="line">                var buffer = new ArraySegment&lt;byte&gt;(new byte[4096]);</div><div class="line"></div><div class="line">                var received = await webSocket.ReceiveAsync(buffer, token);</div><div class="line"></div><div class="line">                switch (received.MessageType)</div><div class="line">                &#123;</div><div class="line">                    case WebSocketMessageType.Text:</div><div class="line">                        var request = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, buffer.Count);</div><div class="line"></div><div class="line">                        // Handle request here</div><div class="line">                        await webSocket.SendAsync(buffer, WebSocketMessageType.Text, true, token);</div><div class="line">                        break;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        await next();</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>위 Code가 실행되려면 Assembly를 하나 추가해 줘야합니다.</p>
-<blockquote>
-<p>“Microsoft.AspNet.WebSockets.Server”: “1.0.0-rc1-final”</p>
-</blockquote>
-<p><code>Nuget package manager</code>를 사용하지 않더라도 오류가 발생한 Code에서 <code>Ctrl + .</code> (Quick Action)을 이용하면 자동으로 추가가 됩니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.03.png?raw=true">  </p>
-<p>또 필요한 <code>namespace</code>를 <code>using</code>에 추가를 해주는 작업도 <code>Ctrl +.</code>으로 쉽게 작업이 가능합니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.04.png?raw=true">  </p>
-<p>Client에서 Connection을 연결할때마다 <code>app.Use</code>안에 선언한 함수가 실행됩니다.<br>Request가 아닌 경우에는 그냥 무시 (<code>next();</code>)를 하며 <code>Request</code>인 경우에는 <code>Accept</code>수행 후 <code>Receive</code>작업을 기다리며 Pending 상태가 됩니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var webSocket = await http.WebSockets.AcceptWebSocketAsync();</div><div class="line"></div><div class="line">if (webSocket != null &amp;&amp; webSocket.State == WebSocketState.Open)</div><div class="line">&#123;</div><div class="line">    while (webSocket.State == WebSocketState.Open)</div><div class="line">    &#123;</div><div class="line">        var token = CancellationToken.None;</div><div class="line">        var buffer = new ArraySegment&lt;byte&gt;(new byte[4096]);</div><div class="line"></div><div class="line">        var received = await webSocket.ReceiveAsync(buffer, token);</div><div class="line"></div><div class="line">        // Processing received message</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Message가 도착하면 <code>await webSocket.ReceiveAsync()</code>의 Pending이 해제되면서 다음 Line을 수행합니다.<br>현재 예제는 Text 타입에 대해서만 그대로 Client에게 echo message를 전달하고 있습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">switch (received.MessageType)</div><div class="line">&#123;</div><div class="line">    case WebSocketMessageType.Text:</div><div class="line">        await webSocket.SendAsync(buffer, WebSocketMessageType.Text, true, token);</div><div class="line">        break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="3-Client-Web-Socket-구현"><a href="#3-Client-Web-Socket-구현" class="headerlink" title="3. Client Web Socket 구현"></a>3. Client Web Socket 구현</h2><p>편의상 추가로 <code>Controller</code>를 추가하지 않고 <code>Home</code> Controller에 <code>Chat</code>이라는 <code>Action Method</code>를 추가하도록 하겠습니다.<br><code>Controllers/HomeController.cs</code>파일을 열어서 아래 Action을 추가해 주세요.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public ActionResult Chat()</div><div class="line">&#123;</div><div class="line">    return View();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>아무런 내용없이 그냥 기본 Routing되는 View를 return합니다.</p>
-<p><code>Views/Home</code> 폴더 아래에 <code>Chat.cshtml</code>파일을 추가해서 다음과 같이 입력해주세요.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">@&#123;</div><div class="line">    ViewData["Title"] = "WebSocket Chat Page";</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"chatform"</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"inputbox"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"message"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//code.jquery.com/jquery-1.11.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="xml"></span></div><div class="line">    $(document).ready(function()</div><div class="line">    &#123;</div><div class="line">        var username = prompt('Enter your name: ');</div><div class="line">        var uri = 'ws://localhost:9258';</div><div class="line">        var ws = new WebSocket(uri);</div><div class="line"></div><div class="line">        ws.onopen = function () &#123;</div><div class="line">            $('#message').prepend('<span class="tag">&lt;<span class="name">div</span>&gt;</span>Connected.<span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</div><div class="line">            $('#chatform').submit(function (event) &#123;</div><div class="line">                ws.send('<span class="tag">&lt;<span class="name">strong</span>&gt;</span>' + username + ' : <span class="tag">&lt;/<span class="name">strong</span>&gt;</span>' +$('#inputbox').val());</div><div class="line">                $('#inputbox').val('');</div><div class="line">                event.preventDefault();</div><div class="line">             &#125;);</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        ws.onerror = function (event) &#123;</div><div class="line">            $('#message').prepend('<span class="tag">&lt;<span class="name">div</span>&gt;</span>ERROR<span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        ws.onmessage = function (event) &#123;</div><div class="line">            $('#message').prepend('<span class="tag">&lt;<span class="name">div</span>&gt;</span>' + event.data + '<span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>접속주소(<code>uri</code>) 값은 Server 실행시 port 번호를 보고 수정해 주세요.</li>
-</ul>
-<p><code>jQuery</code>를 nuget으로 설치해도 되지만 편의상 online으로 참조하였습니다.</p>
-<ul>
-<li>해당 View가 열릴때 <code>WebSocket()</code>으로 접속합니다.</li>
-<li>접속에 성공하면 (<code>ws.onopen</code>) <code>chatform</code>의 <code>submit</code>작업으로 <code>ws.send()</code>를 실행하도록 설정합니다.</li>
-<li><code>WebSocket</code>으로 부터 message를 전달받으면 (<code>ws,onmessage</code>)를 화면에 출력합니다.</li>
-</ul>
-<p>최대한 군더더기 없이 간단하게 구현하였습니다.</p>
-<h2 id="4-실행"><a href="#4-실행" class="headerlink" title="4. 실행"></a>4. 실행</h2><p><code>F5</code>를 눌러서 <code>Debug</code> 수행후 접속주소에 <code>/Home/Chat</code>를 붙여서 우리가 생성한 View를 열어주세요.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.06.png?raw=true">  </p>
-<p>이름을 입력해서 접속을 한 후에, 채팅 메세지를 입력하면 화면에 메세지가 출력됩니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.07.png?raw=true">  </p>
-<p>위 메세지는 Client에서 출력을 한 것이 아니라 Server로 부터 전달받은 메세지 입니다.<br>믿기 힘드시겠다면, 여러 Client끼리 Chat을 할 수 있도록 Server를 수정해 보도록 하겠습니다.</p>
-<h2 id="5-Server를-여러-Client에게-메세지-전달하도록-수정"><a href="#5-Server를-여러-Client에게-메세지-전달하도록-수정" class="headerlink" title="5. Server를 여러 Client에게 메세지 전달하도록 수정"></a>5. Server를 여러 Client에게 메세지 전달하도록 수정</h2><p><code>Startup.cs</code> 파일의 <code>public class Startup</code>에 thread-safety한 map을 하나 선언합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ConcurrentBag&lt;WebSocket&gt; _sockets = new ConcurrentBag&lt;WebSocket&gt;();</div></pre></td></tr></table></figure>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.05.png?raw=true">  </p>
-<p>다음으로는 Client에서 접속시 <code>_sockets</code>에 socket들을 저장해 놓습니다.<br><code>// Handle the socket here</code> 바로 윗 부분에 아래 Code를 추가합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">_sockets.Add(webSocket);</div></pre></td></tr></table></figure>
-<p>Client에게 <code>SendAsync()</code>를 하는 부분을 전체 Client에게 전송하도록 수정합니다.<br><code>// Handle request here</code> 아래에 있는 <code>await webSocket.SendAsync()</code>줄을 지우고 아래 Code를 입력해주세요.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">foreach (var socket in _sockets)</div><div class="line">&#123;</div><div class="line">    await socket.SendAsync(buffer, WebSocketMessageType.Text, true, token);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="6-실행"><a href="#6-실행" class="headerlink" title="6. 실행"></a>6. 실행</h2><p>이제 실행하여 Browser를 2개 띄워서 Test해보면 한 쪽에서 입력해도 양쪽으로 모두 메세지가 출력되는 것을 확인 할 수 있습니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.08.png?raw=true">  </p>
-<h2 id="참조-Site"><a href="#참조-Site" class="headerlink" title="참조 Site"></a>참조 Site</h2><ul>
-<li>ASP.NET 5 Server Web Socket</li>
-</ul>
-<p><a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x68;&#116;&#x74;&#x70;&#x73;&#58;&#47;&#47;&#109;&#x65;&#100;&#x69;&#117;&#109;&#x2e;&#x63;&#111;&#109;&#x2f;&#x40;&#116;&#117;&#x72;&#111;&#119;&#x69;&#x63;&#122;&#x2f;&#x77;&#x65;&#98;&#x73;&#111;&#x63;&#107;&#101;&#116;&#x73;&#x2d;&#105;&#x6e;&#x2d;&#x61;&#x73;&#x70;&#45;&#x6e;&#x65;&#116;&#x2d;&#x35;&#45;&#54;&#48;&#57;&#52;&#51;&#x31;&#x39;&#97;&#x31;&#53;&#x61;&#50;&#35;&#x2e;&#114;&#112;&#102;&#116;&#55;&#54;&#x36;&#x77;&#98;">&#x68;&#116;&#x74;&#x70;&#x73;&#58;&#47;&#47;&#109;&#x65;&#100;&#x69;&#117;&#109;&#x2e;&#x63;&#111;&#109;&#x2f;&#x40;&#116;&#117;&#x72;&#111;&#119;&#x69;&#x63;&#122;&#x2f;&#x77;&#x65;&#98;&#x73;&#111;&#x63;&#107;&#101;&#116;&#x73;&#x2d;&#105;&#x6e;&#x2d;&#x61;&#x73;&#x70;&#45;&#x6e;&#x65;&#116;&#x2d;&#x35;&#45;&#54;&#48;&#57;&#52;&#51;&#x31;&#x39;&#97;&#x31;&#53;&#x61;&#50;&#35;&#x2e;&#114;&#112;&#102;&#116;&#55;&#54;&#x36;&#x77;&#98;</a></p>
-<ul>
-<li>Client jQuery Web Socket</li>
-</ul>
-<p><a href="https://blogs.msdn.microsoft.com/youssefm/2012/07/17/building-real-time-web-apps-with-asp-net-webapi-and-websockets" target="_blank" rel="external">https://blogs.msdn.microsoft.com/youssefm/2012/07/17/building-real-time-web-apps-with-asp-net-webapi-and-websockets</a></p>
+                    <h1 id="NET-Core-Install-for-Ubuntu-14-04"><a href="#NET-Core-Install-for-Ubuntu-14-04" class="headerlink" title=".NET Core Install for Ubuntu 14.04"></a>.NET Core Install for Ubuntu 14.04</h1><p><code>.NET Core</code>를 <strong>Ubuntu</strong>에 설치하는 과정에 대해서 소개해드리겠습니다.</p>
+<p><strong>Ubuntu</strong> 설치는 필자의 경우는 <em>Microsoft Azure</em>에 설치하였습니다.<br>(참고로 <strong>Azure</strong>에 <strong>Ubuntu</strong>설치시 SSH (22)번 빼고는 모두 막혀있습니다. Portal에서 원하시는 포트를 열어야 합니다.)</p>
+<h2 id="1-NET-Core-설치-후-Hello-World-출력해보기"><a href="#1-NET-Core-설치-후-Hello-World-출력해보기" class="headerlink" title="1. .NET Core 설치 후 Hello World 출력해보기"></a>1. <strong>.NET Core</strong> 설치 후 <em>Hello World</em> 출력해보기</h2><p>먼저 <code>.Net Core</code>를 컴파일하고 실행할 수 있도록 <strong>SDK</strong>를 설치하겠습니다.</p>
+<p>공식문서에 설명이 잘 되어 있습니다. (<a href="https://www.microsoft.com/net/core#ubuntu" target="_blank" rel="external">https://www.microsoft.com/net/core#ubuntu</a>)<br>아래 설명대로 해서 잘 안되면 Link의 공식문서에 바뀐 점이 있는지 보시고 따라해주세요.</p>
+<p>아래 명령어를 하나씩 입력해주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo sh -c &apos;echo &quot;deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet/ trusty main&quot; &gt; /etc/apt/sources.list.d/dotnetdev.list&apos;</div><div class="line"></div><div class="line">sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"></div><div class="line">sudo apt-get install dotnet-dev-1.0.0-preview2-003121</div></pre></td></tr></table></figure>
+<p>이제 <code>.Net Core SDK</code> 설치가 끝났습니다.<br>제대로 설치가 되었는지 기본 예제를 실행해 보겠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">mkdir hwapp</div><div class="line"></div><div class="line">cd hwapp</div><div class="line"></div><div class="line">dotnet new</div><div class="line"></div><div class="line">dotnet restore</div><div class="line"></div><div class="line">dotnet run</div></pre></td></tr></table></figure>
+<p>아래와 같이 출력이 나오면 제대로 설치가 된 것입니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.01.png?raw=true">  </p>
+<h2 id="2-ASP-NET-Core-용-실행환경-구성"><a href="#2-ASP-NET-Core-용-실행환경-구성" class="headerlink" title="2. ASP.NET Core 용 실행환경 구성"></a>2. <strong>ASP.NET Core</strong> 용 실행환경 구성</h2><p>먼저 <strong>Web App</strong> 생성에 필요한 것들을 설치해야 합니다.</p>
+<p>자세한 설명은 다음 Link에 되어 있습니다. (<a href="https://docs.asp.net/en/1.0.0-rc1/getting-started/installing-on-linux.html#installing-on-ubuntu-14-04" target="_blank" rel="external">https://docs.asp.net/en/1.0.0-rc1/getting-started/installing-on-linux.html#installing-on-ubuntu-14-04</a>)</p>
+<h3 id="2-1-NET-Version-Manager-DNVM-설치"><a href="#2-1-NET-Version-Manager-DNVM-설치" class="headerlink" title="2.1 .NET Version Manager (DNVM) 설치"></a>2.1 .NET Version Manager (DNVM) 설치</h3><p>Linux 상에서 여러 버전의 .NET 실행 환경 (.NET Execution Environment) <code>DNX</code>를 관리해주는 도구입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install unzip curl</div><div class="line"></div><div class="line">curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh &amp;&amp; source ~/.dnx/dnvm/dnvm.sh</div></pre></td></tr></table></figure>
+<h3 id="2-2-NET-Execution-Environment-DNX-설치"><a href="#2-2-NET-Execution-Environment-DNX-설치" class="headerlink" title="2.2 .NET Execution Environment (DNX) 설치"></a>2.2 .NET Execution Environment (DNX) 설치</h3><p>Linux 상에서 .NET 프로젝트를 빌드하고 실행해주는 도구입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libunwind8 gettext libssl-dev libcurl4-openssl-dev zlib1g libicu-dev uuid-dev</div><div class="line"></div><div class="line">dnvm upgrade -r coreclr</div></pre></td></tr></table></figure>
+<h3 id="2-3-libuv-설치"><a href="#2-3-libuv-설치" class="headerlink" title="2.3 libuv 설치"></a>2.3 libuv 설치</h3><p><code>libuv</code>는 멀티플랫폼 비동기 IO 라이브러리 입니다.<br><code>Kestrel</code>에서 <code>libuv</code>를 사용합니다.<br><code>Kestrel</code>은 ASP.NET Core를 호스팅하기 위한 크로스-플랫폼 HTTP 서버 입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install make automake libtool curl</div><div class="line"></div><div class="line">curl -sSL https://github.com/libuv/libuv/archive/v1.8.0.tar.gz | sudo tar zxfv - -C /usr/local/src</div><div class="line"></div><div class="line">cd /usr/local/src/libuv-1.8.0</div><div class="line"></div><div class="line">sudo sh autogen.sh</div><div class="line"></div><div class="line">sudo ./configure</div><div class="line"></div><div class="line">sudo make</div><div class="line"></div><div class="line">sudo make install</div><div class="line"></div><div class="line">sudo rm -rf /usr/local/src/libuv-1.8.0 &amp;&amp; cd ~/</div><div class="line"></div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure>
+<h2 id="3-ASP-NET-Core-Web-App-생성하기"><a href="#3-ASP-NET-Core-Web-App-생성하기" class="headerlink" title="3. ASP.NET Core Web App 생성하기"></a>3. <strong>ASP.NET Core</strong> Web App 생성하기</h2><p>다음 Link의 공식문서를 보고 작성하였습니다. (<a href="https://docs.asp.net/en/latest/getting-started.html" target="_blank" rel="external">https://docs.asp.net/en/latest/getting-started.html</a>)</p>
+<p>좀 전에 생성한 예제 코드로 이동하겠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/hwapp</div></pre></td></tr></table></figure>
+<p><code>project.json</code>의 <code>dependencies</code>란에 다음과 같이 <code>Kestrel</code>를 추가해주세요.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0-*"</span>,</div><div class="line">  <span class="attr">"buildOptions"</span>: &#123;</div><div class="line">    <span class="attr">"debugType"</span>: <span class="string">"portable"</span>,</div><div class="line">    <span class="attr">"emitEntryPoint"</span>: <span class="literal">true</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;&#125;,</div><div class="line">  <span class="attr">"frameworks"</span>: &#123;</div><div class="line">    <span class="attr">"netcoreapp1.0"</span>: &#123;</div><div class="line">      <span class="attr">"dependencies"</span>: &#123;</div><div class="line">        <span class="attr">"Microsoft.NETCore.App"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"platform"</span>,</div><div class="line">          <span class="attr">"version"</span>: <span class="string">"1.0.0"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"Microsoft.AspNetCore.Server.Kestrel"</span>: <span class="string">"1.0.0"</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"imports"</span>: <span class="string">"dnxcore50"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>패키지를 project에 다운로드 합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet restore</div></pre></td></tr></table></figure>
+<p><code>Startup.cs</code>파일을 추가하려 다음의 내용으로 작성합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using Microsoft.AspNetCore.Builder;</div><div class="line">using Microsoft.AspNetCore.Hosting;</div><div class="line">using Microsoft.AspNetCore.Http;</div><div class="line"></div><div class="line">namespace aspnetcoreapp</div><div class="line">&#123;</div><div class="line">    public class Startup</div><div class="line">    &#123;</div><div class="line">        public void Configure(IApplicationBuilder app)</div><div class="line">        &#123;</div><div class="line">            app.Run(context =&gt;</div><div class="line">            &#123;</div><div class="line">                return context.Response.WriteAsync(&quot;Hello from ASP.NET Core!&quot;);</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>Program.cs</code>파일을 다음과 같이 수정해주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using Microsoft.AspNetCore.Hosting;</div><div class="line"></div><div class="line">namespace aspnetcoreapp</div><div class="line">&#123;</div><div class="line">    public class Program</div><div class="line">    &#123;</div><div class="line">        public static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line">            var host = new WebHostBuilder()</div><div class="line">                .UseKestrel()</div><div class="line">                .UseStartup&lt;Startup&gt;()</div><div class="line">                .Build();</div><div class="line"></div><div class="line">            host.Run();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>그런 다음 실행합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet run</div></pre></td></tr></table></figure>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.02.png?raw=true"></p>
+<p>위 그림과 같은 메세지가 나오면 성공한 것입니다.</p>
+<p>웹브라우저로 붙어보면 아래와 같은 그림이 나옵니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.03.png?raw=true"></p>
+<h2 id="4-외부에서-접속가능하게-배포하기"><a href="#4-외부에서-접속가능하게-배포하기" class="headerlink" title="4. 외부에서 접속가능하게 배포하기"></a>4. 외부에서 접속가능하게 배포하기</h2><p>다음 Link의 공식문서를 보고 따라했습니다.<br>(<a href="https://docs.asp.net/en/latest/publishing/linuxproduction.html" target="_blank" rel="external">https://docs.asp.net/en/latest/publishing/linuxproduction.html</a>)</p>
+<p><code>Nginx</code>를 설치합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nginx</div></pre></td></tr></table></figure>
+<p>이제 우리가 띄운 <code>Web App</code>으로 접속하도록 <strong>Proxy</strong>를 설정합니다.</p>
+<p>설정파일은 <code>/etc/nginx/sites-available/default</code> 입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/nginx/sites-available/default</div></pre></td></tr></table></figure>
+<p>버전별로 내용이 조금 다룰수 있는데 눈여겨 볼 부분은 다음과 같습니다.</p>
+<h3 id="4-1-외부에서-접속할-Port-설정"><a href="#4-1-외부에서-접속할-Port-설정" class="headerlink" title="4.1 외부에서 접속할 Port 설정"></a>4.1 외부에서 접속할 Port 설정</h3><p>아래 <code>80</code>부분을 원하는 Port로 설정하면 됩니다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen 80 default_server;</div><div class="line">    listen [::]:80 default_server ipv6only=on;</div></pre></td></tr></table></figure></p>
+<h3 id="4-2-내부로-연결한-주소-설정"><a href="#4-2-내부로-연결한-주소-설정" class="headerlink" title="4.2 내부로 연결한 주소 설정"></a>4.2 내부로 연결한 주소 설정</h3><p><code>location</code>부분을 아래와 같이 설정합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">    proxy_pass http://localhost:5000;</div><div class="line">    proxy_http_version 1.1;</div><div class="line">    proxy_set_header Upgrade $http_upgrade;</div><div class="line">    proxy_set_header Connection keep-alive;</div><div class="line">    proxy_set_header Host $host;</div><div class="line">    proxy_cache_bypass $http_upgrade;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>중요한 부분만 그림으로 보면 다음과 같습니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.04.png?raw=true"></p>
+<p>수정한 내용에 이상은 없는지 확인한 후 실행합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo nginx -t</div><div class="line"></div><div class="line">sudo service nginx start</div></pre></td></tr></table></figure>
+<p>만약 수행 중 변경 후 반영하려면 다음과 같이 입력해야 합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nginx -s reload</div></pre></td></tr></table></figure>
+<p>이제 외부에서 Web App으로 접근이 가능합니다</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.05.png?raw=true"></p>
 
                     
                         
                     
                     
                         <p>
-                            <a href="/2016/05/11/CSharp.AspnetCore.WebSocket/#post-footer" class="postShorten-excerpt_link link">
+                            <a href="/2016/05/11/CSharp.AspnetCore.Install.Net.Core/#post-footer" class="postShorten-excerpt_link link">
                                 Comment and share
                             </a>
                         </p>
@@ -1312,13 +1237,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/05/11/CSharp.AspnetCore.WebSocket/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     

@@ -342,13 +342,6 @@
             
         </div>
         
-            <a href="/2016/05/24/CSharp.Aspnet.05.View /">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
-        
     </article>
     
     
@@ -523,13 +516,6 @@
             
         </div>
         
-            <a href="/2016/05/12/CSharp.Aspnet.04.ControllerAndAction/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
-        
     </article>
     
     
@@ -597,132 +583,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/05/11/CSharp.AspnetCore.Depoly.VS.Git/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/05/11/CSharp.AspnetCore.WebSocket/">
-                            WebSockets in .NET Core
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-05-11T00:00:00+09:00">
-	
-		    May 11, 2016
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/C/">C#</a>, <a class="category-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p><code>.NET Core</code> (현재는 ASP.NET 5)로 간단한 Web Socket을 구현하는 예제코드와 설명입니다.</p>
-<p>작업은 <code>Visual Studio 2015</code> , <code>ASP.NET5-rc1</code> 으로 진행하였습니다.</p>
-<h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><ul>
-<li><code>.NET Core</code> (ASP.NET 5 Template)로 Web Application Project를 생성</li>
-<li>Server : Echo Server 를 Web Socket으로 구현<ul>
-<li>Client에서 전달한 Text Message를 그대로 전달</li>
-</ul>
-</li>
-<li>Client : jQuery를 이용한 간단한 Web Socket page를 생성</li>
-<li>여러 Client가 접속한 경우 접속된 모든 Client에게 echo message를 전달</li>
-</ul>
-<h2 id="1-Project-생성"><a href="#1-Project-생성" class="headerlink" title="1. Project 생성"></a>1. Project 생성</h2><p><code>C#</code> -&gt; <code>Web</code> -&gt; <code>ASP.NET Web Application</code> 선택 후 <code>ASP.NET 5 Templates</code> -&gt; <code>Web Appliacaion</code>으로 Project를 생성합니다.<br><code>ASP.NET 5 Templates</code>가 설치되지 않은 경우 아래 설치 버튼이 활성화되며, 설치가 짧은 순간에 끝나지는 않으니 조금 기다리셔야 합니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.01.png?raw=true">  </p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.02.png?raw=true">  </p>
-<h2 id="2-Server-Web-Socket-구현"><a href="#2-Server-Web-Socket-구현" class="headerlink" title="2. Server Web Socket 구현"></a>2. Server Web Socket 구현</h2><p><code>Startup.cs</code> 파일을 열어서 <code>public void Configure()</code> 함수에 아래 Code를 추가합니다.<br>단 <code>app.UseMvc()</code>보다 위에 위치해야 합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">app.UseWebSockets();</div><div class="line">app.Use(async (http, next) =&gt;</div><div class="line">&#123;</div><div class="line">    if (http.WebSockets.IsWebSocketRequest)</div><div class="line">    &#123;</div><div class="line">        var webSocket = await http.WebSockets.AcceptWebSocketAsync();</div><div class="line"></div><div class="line">        if (webSocket != null &amp;&amp; webSocket.State == WebSocketState.Open)</div><div class="line">        &#123;</div><div class="line">            // Handle the socket here</div><div class="line">            while (webSocket.State == WebSocketState.Open)</div><div class="line">            &#123;</div><div class="line">                var token = CancellationToken.None;</div><div class="line">                var buffer = new ArraySegment&lt;byte&gt;(new byte[4096]);</div><div class="line"></div><div class="line">                var received = await webSocket.ReceiveAsync(buffer, token);</div><div class="line"></div><div class="line">                switch (received.MessageType)</div><div class="line">                &#123;</div><div class="line">                    case WebSocketMessageType.Text:</div><div class="line">                        var request = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, buffer.Count);</div><div class="line"></div><div class="line">                        // Handle request here</div><div class="line">                        await webSocket.SendAsync(buffer, WebSocketMessageType.Text, true, token);</div><div class="line">                        break;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        await next();</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>위 Code가 실행되려면 Assembly를 하나 추가해 줘야합니다.</p>
-<blockquote>
-<p>“Microsoft.AspNet.WebSockets.Server”: “1.0.0-rc1-final”</p>
-</blockquote>
-<p><code>Nuget package manager</code>를 사용하지 않더라도 오류가 발생한 Code에서 <code>Ctrl + .</code> (Quick Action)을 이용하면 자동으로 추가가 됩니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.03.png?raw=true">  </p>
-<p>또 필요한 <code>namespace</code>를 <code>using</code>에 추가를 해주는 작업도 <code>Ctrl +.</code>으로 쉽게 작업이 가능합니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.04.png?raw=true">  </p>
-<p>Client에서 Connection을 연결할때마다 <code>app.Use</code>안에 선언한 함수가 실행됩니다.<br>Request가 아닌 경우에는 그냥 무시 (<code>next();</code>)를 하며 <code>Request</code>인 경우에는 <code>Accept</code>수행 후 <code>Receive</code>작업을 기다리며 Pending 상태가 됩니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var webSocket = await http.WebSockets.AcceptWebSocketAsync();</div><div class="line"></div><div class="line">if (webSocket != null &amp;&amp; webSocket.State == WebSocketState.Open)</div><div class="line">&#123;</div><div class="line">    while (webSocket.State == WebSocketState.Open)</div><div class="line">    &#123;</div><div class="line">        var token = CancellationToken.None;</div><div class="line">        var buffer = new ArraySegment&lt;byte&gt;(new byte[4096]);</div><div class="line"></div><div class="line">        var received = await webSocket.ReceiveAsync(buffer, token);</div><div class="line"></div><div class="line">        // Processing received message</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Message가 도착하면 <code>await webSocket.ReceiveAsync()</code>의 Pending이 해제되면서 다음 Line을 수행합니다.<br>현재 예제는 Text 타입에 대해서만 그대로 Client에게 echo message를 전달하고 있습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">switch (received.MessageType)</div><div class="line">&#123;</div><div class="line">    case WebSocketMessageType.Text:</div><div class="line">        await webSocket.SendAsync(buffer, WebSocketMessageType.Text, true, token);</div><div class="line">        break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="3-Client-Web-Socket-구현"><a href="#3-Client-Web-Socket-구현" class="headerlink" title="3. Client Web Socket 구현"></a>3. Client Web Socket 구현</h2><p>편의상 추가로 <code>Controller</code>를 추가하지 않고 <code>Home</code> Controller에 <code>Chat</code>이라는 <code>Action Method</code>를 추가하도록 하겠습니다.<br><code>Controllers/HomeController.cs</code>파일을 열어서 아래 Action을 추가해 주세요.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public ActionResult Chat()</div><div class="line">&#123;</div><div class="line">    return View();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>아무런 내용없이 그냥 기본 Routing되는 View를 return합니다.</p>
-<p><code>Views/Home</code> 폴더 아래에 <code>Chat.cshtml</code>파일을 추가해서 다음과 같이 입력해주세요.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">@&#123;</div><div class="line">    ViewData["Title"] = "WebSocket Chat Page";</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"chatform"</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"inputbox"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"message"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//code.jquery.com/jquery-1.11.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="xml"></span></div><div class="line">    $(document).ready(function()</div><div class="line">    &#123;</div><div class="line">        var username = prompt('Enter your name: ');</div><div class="line">        var uri = 'ws://localhost:9258';</div><div class="line">        var ws = new WebSocket(uri);</div><div class="line"></div><div class="line">        ws.onopen = function () &#123;</div><div class="line">            $('#message').prepend('<span class="tag">&lt;<span class="name">div</span>&gt;</span>Connected.<span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</div><div class="line">            $('#chatform').submit(function (event) &#123;</div><div class="line">                ws.send('<span class="tag">&lt;<span class="name">strong</span>&gt;</span>' + username + ' : <span class="tag">&lt;/<span class="name">strong</span>&gt;</span>' +$('#inputbox').val());</div><div class="line">                $('#inputbox').val('');</div><div class="line">                event.preventDefault();</div><div class="line">             &#125;);</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        ws.onerror = function (event) &#123;</div><div class="line">            $('#message').prepend('<span class="tag">&lt;<span class="name">div</span>&gt;</span>ERROR<span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        ws.onmessage = function (event) &#123;</div><div class="line">            $('#message').prepend('<span class="tag">&lt;<span class="name">div</span>&gt;</span>' + event.data + '<span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>접속주소(<code>uri</code>) 값은 Server 실행시 port 번호를 보고 수정해 주세요.</li>
-</ul>
-<p><code>jQuery</code>를 nuget으로 설치해도 되지만 편의상 online으로 참조하였습니다.</p>
-<ul>
-<li>해당 View가 열릴때 <code>WebSocket()</code>으로 접속합니다.</li>
-<li>접속에 성공하면 (<code>ws.onopen</code>) <code>chatform</code>의 <code>submit</code>작업으로 <code>ws.send()</code>를 실행하도록 설정합니다.</li>
-<li><code>WebSocket</code>으로 부터 message를 전달받으면 (<code>ws,onmessage</code>)를 화면에 출력합니다.</li>
-</ul>
-<p>최대한 군더더기 없이 간단하게 구현하였습니다.</p>
-<h2 id="4-실행"><a href="#4-실행" class="headerlink" title="4. 실행"></a>4. 실행</h2><p><code>F5</code>를 눌러서 <code>Debug</code> 수행후 접속주소에 <code>/Home/Chat</code>를 붙여서 우리가 생성한 View를 열어주세요.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.06.png?raw=true">  </p>
-<p>이름을 입력해서 접속을 한 후에, 채팅 메세지를 입력하면 화면에 메세지가 출력됩니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.07.png?raw=true">  </p>
-<p>위 메세지는 Client에서 출력을 한 것이 아니라 Server로 부터 전달받은 메세지 입니다.<br>믿기 힘드시겠다면, 여러 Client끼리 Chat을 할 수 있도록 Server를 수정해 보도록 하겠습니다.</p>
-<h2 id="5-Server를-여러-Client에게-메세지-전달하도록-수정"><a href="#5-Server를-여러-Client에게-메세지-전달하도록-수정" class="headerlink" title="5. Server를 여러 Client에게 메세지 전달하도록 수정"></a>5. Server를 여러 Client에게 메세지 전달하도록 수정</h2><p><code>Startup.cs</code> 파일의 <code>public class Startup</code>에 thread-safety한 map을 하나 선언합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ConcurrentBag&lt;WebSocket&gt; _sockets = new ConcurrentBag&lt;WebSocket&gt;();</div></pre></td></tr></table></figure>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.05.png?raw=true">  </p>
-<p>다음으로는 Client에서 접속시 <code>_sockets</code>에 socket들을 저장해 놓습니다.<br><code>// Handle the socket here</code> 바로 윗 부분에 아래 Code를 추가합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">_sockets.Add(webSocket);</div></pre></td></tr></table></figure>
-<p>Client에게 <code>SendAsync()</code>를 하는 부분을 전체 Client에게 전송하도록 수정합니다.<br><code>// Handle request here</code> 아래에 있는 <code>await webSocket.SendAsync()</code>줄을 지우고 아래 Code를 입력해주세요.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">foreach (var socket in _sockets)</div><div class="line">&#123;</div><div class="line">    await socket.SendAsync(buffer, WebSocketMessageType.Text, true, token);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="6-실행"><a href="#6-실행" class="headerlink" title="6. 실행"></a>6. 실행</h2><p>이제 실행하여 Browser를 2개 띄워서 Test해보면 한 쪽에서 입력해도 양쪽으로 모두 메세지가 출력되는 것을 확인 할 수 있습니다.</p>
-<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.08.png?raw=true">  </p>
-<h2 id="참조-Site"><a href="#참조-Site" class="headerlink" title="참조 Site"></a>참조 Site</h2><ul>
-<li>ASP.NET 5 Server Web Socket</li>
-</ul>
-<p><a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x68;&#116;&#x74;&#x70;&#x73;&#58;&#47;&#47;&#109;&#x65;&#100;&#x69;&#117;&#109;&#x2e;&#x63;&#111;&#109;&#x2f;&#x40;&#116;&#117;&#x72;&#111;&#119;&#x69;&#x63;&#122;&#x2f;&#x77;&#x65;&#98;&#x73;&#111;&#x63;&#107;&#101;&#116;&#x73;&#x2d;&#105;&#x6e;&#x2d;&#x61;&#x73;&#x70;&#45;&#x6e;&#x65;&#116;&#x2d;&#x35;&#45;&#54;&#48;&#57;&#52;&#51;&#x31;&#x39;&#97;&#x31;&#53;&#x61;&#50;&#35;&#x2e;&#114;&#112;&#102;&#116;&#55;&#54;&#x36;&#x77;&#98;">&#x68;&#116;&#x74;&#x70;&#x73;&#58;&#47;&#47;&#109;&#x65;&#100;&#x69;&#117;&#109;&#x2e;&#x63;&#111;&#109;&#x2f;&#x40;&#116;&#117;&#x72;&#111;&#119;&#x69;&#x63;&#122;&#x2f;&#x77;&#x65;&#98;&#x73;&#111;&#x63;&#107;&#101;&#116;&#x73;&#x2d;&#105;&#x6e;&#x2d;&#x61;&#x73;&#x70;&#45;&#x6e;&#x65;&#116;&#x2d;&#x35;&#45;&#54;&#48;&#57;&#52;&#51;&#x31;&#x39;&#97;&#x31;&#53;&#x61;&#50;&#35;&#x2e;&#114;&#112;&#102;&#116;&#55;&#54;&#x36;&#x77;&#98;</a></p>
-<ul>
-<li>Client jQuery Web Socket</li>
-</ul>
-<p><a href="https://blogs.msdn.microsoft.com/youssefm/2012/07/17/building-real-time-web-apps-with-asp-net-webapi-and-websockets" target="_blank" rel="external">https://blogs.msdn.microsoft.com/youssefm/2012/07/17/building-real-time-web-apps-with-asp-net-webapi-and-websockets</a></p>
-
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2016/05/11/CSharp.AspnetCore.WebSocket/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-            <a href="/2016/05/11/CSharp.AspnetCore.WebSocket/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     
@@ -824,12 +684,117 @@
             
         </div>
         
-            <a href="/2016/05/11/CSharp.AspnetCore.Install.Net.Core/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
             
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/05/11/CSharp.AspnetCore.WebSocket/">
+                            WebSockets in .NET Core
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-05-11T00:00:00+09:00">
+	
+		    May 11, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/C/">C#</a>, <a class="category-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p><code>.NET Core</code> (현재는 ASP.NET 5)로 간단한 Web Socket을 구현하는 예제코드와 설명입니다.</p>
+<p>작업은 <code>Visual Studio 2015</code> , <code>ASP.NET5-rc1</code> 으로 진행하였습니다.</p>
+<h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><ul>
+<li><code>.NET Core</code> (ASP.NET 5 Template)로 Web Application Project를 생성</li>
+<li>Server : Echo Server 를 Web Socket으로 구현<ul>
+<li>Client에서 전달한 Text Message를 그대로 전달</li>
+</ul>
+</li>
+<li>Client : jQuery를 이용한 간단한 Web Socket page를 생성</li>
+<li>여러 Client가 접속한 경우 접속된 모든 Client에게 echo message를 전달</li>
+</ul>
+<h2 id="1-Project-생성"><a href="#1-Project-생성" class="headerlink" title="1. Project 생성"></a>1. Project 생성</h2><p><code>C#</code> -&gt; <code>Web</code> -&gt; <code>ASP.NET Web Application</code> 선택 후 <code>ASP.NET 5 Templates</code> -&gt; <code>Web Appliacaion</code>으로 Project를 생성합니다.<br><code>ASP.NET 5 Templates</code>가 설치되지 않은 경우 아래 설치 버튼이 활성화되며, 설치가 짧은 순간에 끝나지는 않으니 조금 기다리셔야 합니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.01.png?raw=true">  </p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.02.png?raw=true">  </p>
+<h2 id="2-Server-Web-Socket-구현"><a href="#2-Server-Web-Socket-구현" class="headerlink" title="2. Server Web Socket 구현"></a>2. Server Web Socket 구현</h2><p><code>Startup.cs</code> 파일을 열어서 <code>public void Configure()</code> 함수에 아래 Code를 추가합니다.<br>단 <code>app.UseMvc()</code>보다 위에 위치해야 합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">app.UseWebSockets();</div><div class="line">app.Use(async (http, next) =&gt;</div><div class="line">&#123;</div><div class="line">    if (http.WebSockets.IsWebSocketRequest)</div><div class="line">    &#123;</div><div class="line">        var webSocket = await http.WebSockets.AcceptWebSocketAsync();</div><div class="line"></div><div class="line">        if (webSocket != null &amp;&amp; webSocket.State == WebSocketState.Open)</div><div class="line">        &#123;</div><div class="line">            // Handle the socket here</div><div class="line">            while (webSocket.State == WebSocketState.Open)</div><div class="line">            &#123;</div><div class="line">                var token = CancellationToken.None;</div><div class="line">                var buffer = new ArraySegment&lt;byte&gt;(new byte[4096]);</div><div class="line"></div><div class="line">                var received = await webSocket.ReceiveAsync(buffer, token);</div><div class="line"></div><div class="line">                switch (received.MessageType)</div><div class="line">                &#123;</div><div class="line">                    case WebSocketMessageType.Text:</div><div class="line">                        var request = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, buffer.Count);</div><div class="line"></div><div class="line">                        // Handle request here</div><div class="line">                        await webSocket.SendAsync(buffer, WebSocketMessageType.Text, true, token);</div><div class="line">                        break;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        await next();</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>위 Code가 실행되려면 Assembly를 하나 추가해 줘야합니다.</p>
+<blockquote>
+<p>“Microsoft.AspNet.WebSockets.Server”: “1.0.0-rc1-final”</p>
+</blockquote>
+<p><code>Nuget package manager</code>를 사용하지 않더라도 오류가 발생한 Code에서 <code>Ctrl + .</code> (Quick Action)을 이용하면 자동으로 추가가 됩니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.03.png?raw=true">  </p>
+<p>또 필요한 <code>namespace</code>를 <code>using</code>에 추가를 해주는 작업도 <code>Ctrl +.</code>으로 쉽게 작업이 가능합니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.04.png?raw=true">  </p>
+<p>Client에서 Connection을 연결할때마다 <code>app.Use</code>안에 선언한 함수가 실행됩니다.<br>Request가 아닌 경우에는 그냥 무시 (<code>next();</code>)를 하며 <code>Request</code>인 경우에는 <code>Accept</code>수행 후 <code>Receive</code>작업을 기다리며 Pending 상태가 됩니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var webSocket = await http.WebSockets.AcceptWebSocketAsync();</div><div class="line"></div><div class="line">if (webSocket != null &amp;&amp; webSocket.State == WebSocketState.Open)</div><div class="line">&#123;</div><div class="line">    while (webSocket.State == WebSocketState.Open)</div><div class="line">    &#123;</div><div class="line">        var token = CancellationToken.None;</div><div class="line">        var buffer = new ArraySegment&lt;byte&gt;(new byte[4096]);</div><div class="line"></div><div class="line">        var received = await webSocket.ReceiveAsync(buffer, token);</div><div class="line"></div><div class="line">        // Processing received message</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Message가 도착하면 <code>await webSocket.ReceiveAsync()</code>의 Pending이 해제되면서 다음 Line을 수행합니다.<br>현재 예제는 Text 타입에 대해서만 그대로 Client에게 echo message를 전달하고 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">switch (received.MessageType)</div><div class="line">&#123;</div><div class="line">    case WebSocketMessageType.Text:</div><div class="line">        await webSocket.SendAsync(buffer, WebSocketMessageType.Text, true, token);</div><div class="line">        break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="3-Client-Web-Socket-구현"><a href="#3-Client-Web-Socket-구현" class="headerlink" title="3. Client Web Socket 구현"></a>3. Client Web Socket 구현</h2><p>편의상 추가로 <code>Controller</code>를 추가하지 않고 <code>Home</code> Controller에 <code>Chat</code>이라는 <code>Action Method</code>를 추가하도록 하겠습니다.<br><code>Controllers/HomeController.cs</code>파일을 열어서 아래 Action을 추가해 주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public ActionResult Chat()</div><div class="line">&#123;</div><div class="line">    return View();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>아무런 내용없이 그냥 기본 Routing되는 View를 return합니다.</p>
+<p><code>Views/Home</code> 폴더 아래에 <code>Chat.cshtml</code>파일을 추가해서 다음과 같이 입력해주세요.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">@&#123;</div><div class="line">    ViewData["Title"] = "WebSocket Chat Page";</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"chatform"</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"inputbox"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"message"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//code.jquery.com/jquery-1.11.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">    $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">var</span> username = prompt(<span class="string">'Enter your name: '</span>);</div><div class="line">        <span class="keyword">var</span> uri = <span class="string">'ws://localhost:9258'</span>;</div><div class="line">        <span class="keyword">var</span> ws = <span class="keyword">new</span> WebSocket(uri);</div><div class="line"></div><div class="line">        ws.onopen = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            $(<span class="string">'#message'</span>).prepend(<span class="string">'&lt;div&gt;Connected.&lt;/div&gt;'</span>);</div><div class="line">            $(<span class="string">'#chatform'</span>).submit(<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">                ws.send(<span class="string">'&lt;strong&gt;'</span> + username + <span class="string">' : &lt;/strong&gt;'</span> +$(<span class="string">'#inputbox'</span>).val());</div><div class="line">                $(<span class="string">'#inputbox'</span>).val(<span class="string">''</span>);</div><div class="line">                event.preventDefault();</div><div class="line">             &#125;);</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        ws.onerror = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">            $(<span class="string">'#message'</span>).prepend(<span class="string">'&lt;div&gt;ERROR&lt;/div&gt;'</span>);</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        ws.onmessage = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">            $(<span class="string">'#message'</span>).prepend(<span class="string">'&lt;div&gt;'</span> + event.data + <span class="string">'&lt;/div&gt;'</span>);</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>접속주소(<code>uri</code>) 값은 Server 실행시 port 번호를 보고 수정해 주세요.</li>
+</ul>
+<p><code>jQuery</code>를 nuget으로 설치해도 되지만 편의상 online으로 참조하였습니다.</p>
+<ul>
+<li>해당 View가 열릴때 <code>WebSocket()</code>으로 접속합니다.</li>
+<li>접속에 성공하면 (<code>ws.onopen</code>) <code>chatform</code>의 <code>submit</code>작업으로 <code>ws.send()</code>를 실행하도록 설정합니다.</li>
+<li><code>WebSocket</code>으로 부터 message를 전달받으면 (<code>ws,onmessage</code>)를 화면에 출력합니다.</li>
+</ul>
+<p>최대한 군더더기 없이 간단하게 구현하였습니다.</p>
+<h2 id="4-실행"><a href="#4-실행" class="headerlink" title="4. 실행"></a>4. 실행</h2><p><code>F5</code>를 눌러서 <code>Debug</code> 수행후 접속주소에 <code>/Home/Chat</code>를 붙여서 우리가 생성한 View를 열어주세요.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.06.png?raw=true">  </p>
+<p>이름을 입력해서 접속을 한 후에, 채팅 메세지를 입력하면 화면에 메세지가 출력됩니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.07.png?raw=true">  </p>
+<p>위 메세지는 Client에서 출력을 한 것이 아니라 Server로 부터 전달받은 메세지 입니다.<br>믿기 힘드시겠다면, 여러 Client끼리 Chat을 할 수 있도록 Server를 수정해 보도록 하겠습니다.</p>
+<h2 id="5-Server를-여러-Client에게-메세지-전달하도록-수정"><a href="#5-Server를-여러-Client에게-메세지-전달하도록-수정" class="headerlink" title="5. Server를 여러 Client에게 메세지 전달하도록 수정"></a>5. Server를 여러 Client에게 메세지 전달하도록 수정</h2><p><code>Startup.cs</code> 파일의 <code>public class Startup</code>에 thread-safety한 map을 하나 선언합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ConcurrentBag&lt;WebSocket&gt; _sockets = new ConcurrentBag&lt;WebSocket&gt;();</div></pre></td></tr></table></figure>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.05.png?raw=true">  </p>
+<p>다음으로는 Client에서 접속시 <code>_sockets</code>에 socket들을 저장해 놓습니다.<br><code>// Handle the socket here</code> 바로 윗 부분에 아래 Code를 추가합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">_sockets.Add(webSocket);</div></pre></td></tr></table></figure>
+<p>Client에게 <code>SendAsync()</code>를 하는 부분을 전체 Client에게 전송하도록 수정합니다.<br><code>// Handle request here</code> 아래에 있는 <code>await webSocket.SendAsync()</code>줄을 지우고 아래 Code를 입력해주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">foreach (var socket in _sockets)</div><div class="line">&#123;</div><div class="line">    await socket.SendAsync(buffer, WebSocketMessageType.Text, true, token);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="6-실행"><a href="#6-실행" class="headerlink" title="6. 실행"></a>6. 실행</h2><p>이제 실행하여 Browser를 2개 띄워서 Test해보면 한 쪽에서 입력해도 양쪽으로 모두 메세지가 출력되는 것을 확인 할 수 있습니다.</p>
+<p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/WebSocket/image/ws5.08.png?raw=true">  </p>
+<h2 id="참조-Site"><a href="#참조-Site" class="headerlink" title="참조 Site"></a>참조 Site</h2><ul>
+<li>ASP.NET 5 Server Web Socket</li>
+</ul>
+<p><a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x68;&#116;&#116;&#x70;&#x73;&#x3a;&#x2f;&#47;&#109;&#101;&#100;&#105;&#x75;&#109;&#x2e;&#99;&#x6f;&#109;&#47;&#64;&#x74;&#x75;&#114;&#111;&#119;&#105;&#99;&#x7a;&#x2f;&#119;&#x65;&#x62;&#115;&#111;&#x63;&#107;&#x65;&#x74;&#x73;&#x2d;&#105;&#110;&#45;&#x61;&#x73;&#112;&#x2d;&#x6e;&#101;&#x74;&#x2d;&#x35;&#45;&#54;&#48;&#x39;&#52;&#51;&#49;&#x39;&#x61;&#49;&#x35;&#97;&#x32;&#35;&#x2e;&#114;&#112;&#102;&#x74;&#x37;&#54;&#54;&#119;&#98;">&#x68;&#116;&#116;&#x70;&#x73;&#x3a;&#x2f;&#47;&#109;&#101;&#100;&#105;&#x75;&#109;&#x2e;&#99;&#x6f;&#109;&#47;&#64;&#x74;&#x75;&#114;&#111;&#119;&#105;&#99;&#x7a;&#x2f;&#119;&#x65;&#x62;&#115;&#111;&#x63;&#107;&#x65;&#x74;&#x73;&#x2d;&#105;&#110;&#45;&#x61;&#x73;&#112;&#x2d;&#x6e;&#101;&#x74;&#x2d;&#x35;&#45;&#54;&#48;&#x39;&#52;&#51;&#49;&#x39;&#x61;&#49;&#x35;&#97;&#x32;&#35;&#x2e;&#114;&#112;&#102;&#x74;&#x37;&#54;&#54;&#119;&#98;</a></p>
+<ul>
+<li>Client jQuery Web Socket</li>
+</ul>
+<p><a href="https://blogs.msdn.microsoft.com/youssefm/2012/07/17/building-real-time-web-apps-with-asp-net-webapi-and-websockets" target="_blank" rel="external">https://blogs.msdn.microsoft.com/youssefm/2012/07/17/building-real-time-web-apps-with-asp-net-webapi-and-websockets</a></p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2016/05/11/CSharp.AspnetCore.WebSocket/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
         
     </article>
     
@@ -884,13 +849,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/05/09/CSharp.AspnetCore.SignalR/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     
@@ -988,13 +946,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/05/08/CSharp.Aspnet.03.Route.adv/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     
@@ -1121,13 +1072,6 @@
             
         </div>
         
-            <a href="/2016/05/07/CSharp.Aspnet.02.Route/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
-        
     </article>
     
     
@@ -1204,13 +1148,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/05/07/macOS.set.mouse/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     
@@ -1305,13 +1242,6 @@
                 </div>
             
         </div>
-        
-            <a href="/2016/05/07/CSharp.Aspnet.01.MVC.Project/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="undefined"/>
-                </div>
-            </a>
-            
         
     </article>
     
