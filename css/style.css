@@ -274,14 +274,14 @@ code {
 .logo {
   display: block;
   padding: 10px 0;
-  width: 165px;
+  width: 60px;
   height: 60px;
   background-image: url("images/sjyun.jpg");
   background-position: 0px 10px;
   background-repeat: no-repeat;
-  -webkit-background-size: 165px 60px;
-  -moz-background-size: 165px 60px;
-  background-size: 165px 60px;
+  -webkit-background-size: 60px 60px;
+  -moz-background-size: 60px 60px;
+  background-size: 60px 60px;
 }
 .main-body {
   margin-top: -60px;
@@ -1637,11 +1637,11 @@ a.article-title:hover {
   line-height: 22px;
 }
 #footer .logo {
-  width: 132px;
+  width: 48px;
   height: 48px;
-  -webkit-background-size: 132px 48px;
-  -moz-background-size: 132px 48px;
-  background-size: 132px 48px;
+  -webkit-background-size: 48px 48px;
+  -moz-background-size: 48px 48px;
+  background-size: 48px 48px;
 }
 i.icon {
   display: inline-block;
