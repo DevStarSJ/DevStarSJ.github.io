@@ -274,14 +274,14 @@ code {
 .logo {
   display: block;
   padding: 10px 0;
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   background-image: url("images/sjyun.jpg");
   background-position: 0px 10px;
   background-repeat: no-repeat;
-  -webkit-background-size: 60px 60px;
-  -moz-background-size: 60px 60px;
-  background-size: 60px 60px;
+  -webkit-background-size: 100px 100px;
+  -moz-background-size: 100px 100px;
+  background-size: 100px 100px;
 }
 .main-body {
   margin-top: -60px;
@@ -378,7 +378,7 @@ code {
 #header-title .subtitle {
   font-size: 16px;
   font-style: italic;
-  line-height: 70px;
+  line-height: 110px;
   color: rgba(255,255,255,0.7);
   text-shadow: 0 1px rgba(0,0,0,0.2);
 }
@@ -1637,11 +1637,11 @@ a.article-title:hover {
   line-height: 22px;
 }
 #footer .logo {
-  width: 48px;
-  height: 48px;
-  -webkit-background-size: 48px 48px;
-  -moz-background-size: 48px 48px;
-  background-size: 48px 48px;
+  width: 80px;
+  height: 80px;
+  -webkit-background-size: 80px 80px;
+  -moz-background-size: 80px 80px;
+  background-size: 80px 80px;
 }
 i.icon {
   display: inline-block;
