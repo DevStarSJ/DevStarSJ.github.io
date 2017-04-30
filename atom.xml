@@ -94,6 +94,32 @@
   </entry>
   
   <entry>
+    <title>마이크로서비스 아키텍처 구축</title>
+    <link href="http://DevStarSJ.github.io/2017/03/17/hanbit.Build.Microservices/"/>
+    <id>http://DevStarSJ.github.io/2017/03/17/hanbit.Build.Microservices/</id>
+    <published>2017-03-16T15:00:00.000Z</published>
+    <updated>2017-04-30T03:41:44.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;마이크로서비스-아키텍처-구축&quot;&gt;&lt;a href=&quot;#마이크로서비스-아키텍처-구축&quot; class=&quot;headerlink&quot; title=&quot;마이크로서비스 아키텍처 구축&quot;&gt;&lt;/a&gt;마이크로서비스 아키텍처 구축&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;한빛미디어&lt;/li&gt;
+&lt;
+    
+    </summary>
+    
+      <category term="Book" scheme="http://DevStarSJ.github.io/categories/Book/"/>
+    
+      <category term="Review" scheme="http://DevStarSJ.github.io/categories/Book/Review/"/>
+    
+    
+      <category term="Book" scheme="http://DevStarSJ.github.io/tags/Book/"/>
+    
+      <category term="Review" scheme="http://DevStarSJ.github.io/tags/Review/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AWS Lambda 사용에 관련된 Tip</title>
     <link href="http://DevStarSJ.github.io/2017/03/11/Lambda.Tips.01/"/>
     <id>http://DevStarSJ.github.io/2017/03/11/Lambda.Tips.01/</id>
@@ -440,6 +466,32 @@
   </entry>
   
   <entry>
+    <title>Zero to One</title>
+    <link href="http://DevStarSJ.github.io/2016/10/20/ZeroToOne/"/>
+    <id>http://DevStarSJ.github.io/2016/10/20/ZeroToOne/</id>
+    <published>2016-10-19T15:00:00.000Z</published>
+    <updated>2017-04-30T03:45:22.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Zero-to-One&quot;&gt;&lt;a href=&quot;#Zero-to-One&quot; class=&quot;headerlink&quot; title=&quot;Zero to One&quot;&gt;&lt;/a&gt;Zero to One&lt;/h1&gt;&lt;p&gt;경쟁하지 말고 독점하라&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;지은이 : 피터
+    
+    </summary>
+    
+      <category term="Book" scheme="http://DevStarSJ.github.io/categories/Book/"/>
+    
+      <category term="Review" scheme="http://DevStarSJ.github.io/categories/Book/Review/"/>
+    
+    
+      <category term="Book" scheme="http://DevStarSJ.github.io/tags/Book/"/>
+    
+      <category term="Review" scheme="http://DevStarSJ.github.io/tags/Review/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Think Bayes</title>
     <link href="http://DevStarSJ.github.io/2016/09/21/Python.ThinkBayes/"/>
     <id>http://DevStarSJ.github.io/2016/09/21/Python.ThinkBayes/</id>
@@ -464,68 +516,27 @@
   </entry>
   
   <entry>
-    <title>Client WebSocket Example without ASP.NET</title>
-    <link href="http://DevStarSJ.github.io/2016/08/31/CSharp.ClientWebSocketExample/"/>
-    <id>http://DevStarSJ.github.io/2016/08/31/CSharp.ClientWebSocketExample/</id>
-    <published>2016-08-30T17:00:00.000Z</published>
-    <updated>2017-04-23T10:51:07.000Z</updated>
+    <title>파이썬으로 풀어보는 수학</title>
+    <link href="http://DevStarSJ.github.io/2016/09/03/DoingMathWithPython/"/>
+    <id>http://DevStarSJ.github.io/2016/09/03/DoingMathWithPython/</id>
+    <published>2016-09-02T15:00:00.000Z</published>
+    <updated>2017-04-30T03:39:29.000Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Client-WebSocket-Example-without-ASP-NET&quot;&gt;&lt;a href=&quot;#Client-WebSocket-Example-without-ASP-NET&quot; class=&quot;headerlink&quot; title=&quot;Client WebSo
+      &lt;h1 id=&quot;파이썬으로-풀어보는-수학&quot;&gt;&lt;a href=&quot;#파이썬으로-풀어보는-수학&quot; class=&quot;headerlink&quot; title=&quot;파이썬으로 풀어보는 수학&quot;&gt;&lt;/a&gt;파이썬으로 풀어보는 수학&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;원서명 : Doing Math wit
     
     </summary>
     
-      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/"/>
+      <category term="Book" scheme="http://DevStarSJ.github.io/categories/Book/"/>
     
-      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/C/"/>
-    
-    
-      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jupyter notebook markdown에 내가 원하는 css 적용하기 (Linux / macOS)</title>
-    <link href="http://DevStarSJ.github.io/2016/08/27/Tips.JupyterNotebook.custom.css.mac/"/>
-    <id>http://DevStarSJ.github.io/2016/08/27/Tips.JupyterNotebook.custom.css.mac/</id>
-    <published>2016-08-26T15:00:00.000Z</published>
-    <updated>2017-04-30T03:23:21.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Jupyter-notebook-markdown에-내가-원하는-css-적용하기-Linux-macOS&quot;&gt;&lt;a href=&quot;#Jupyter-notebook-markdown에-내가-원하는-css-적용하기-Linux-macOS&quot; class=&quot;hea
-    
-    </summary>
-    
-      <category term="Tips" scheme="http://DevStarSJ.github.io/categories/Tips/"/>
-    
-      <category term="JupyterNotebook" scheme="http://DevStarSJ.github.io/categories/Tips/JupyterNotebook/"/>
+      <category term="Review" scheme="http://DevStarSJ.github.io/categories/Book/Review/"/>
     
     
-      <category term="JupyterNotebook" scheme="http://DevStarSJ.github.io/tags/JupyterNotebook/"/>
+      <category term="Book" scheme="http://DevStarSJ.github.io/tags/Book/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Running Multiple Coroutines Concurrently</title>
-    <link href="http://DevStarSJ.github.io/2016/08/19/Python.RunMultipleCoroutinesConcurrently/"/>
-    <id>http://DevStarSJ.github.io/2016/08/19/Python.RunMultipleCoroutinesConcurrently/</id>
-    <published>2016-08-18T15:00:00.000Z</published>
-    <updated>2017-04-30T03:29:37.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Python-Running-Multiple-Coroutines-Concurrently&quot;&gt;&lt;a href=&quot;#Python-Running-Multiple-Coroutines-Concurrently&quot; class=&quot;headerlink&quot; title
-    
-    </summary>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/categories/Python/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/categories/Python/Python/"/>
-    
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+      <category term="Review" scheme="http://DevStarSJ.github.io/tags/Review/"/>
     
   </entry>
   

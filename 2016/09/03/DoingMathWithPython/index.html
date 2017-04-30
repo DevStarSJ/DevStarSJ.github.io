@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>파이썬으로 풀어보는 수학 | Dev Star SJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Book,Review" />
+    
+    <meta name="description" content="파이썬으로 풀어보는 수학 원서명 : Doing Math with Python: Use Programming to Explore Algebra, Statistics, Calculus, and More! (ISBN 9781593276409) 지은이 : 아미트 사하(Amit Saha) 원서 및 관련자료 : https://www.nostarch.com/doingm">
+<meta name="keywords" content="Book,Review">
+<meta property="og:type" content="article">
+<meta property="og:title" content="파이썬으로 풀어보는 수학">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/09/03/DoingMathWithPython/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="파이썬으로 풀어보는 수학 원서명 : Doing Math with Python: Use Programming to Explore Algebra, Statistics, Calculus, and More! (ISBN 9781593276409) 지은이 : 아미트 사하(Amit Saha) 원서 및 관련자료 : https://www.nostarch.com/doingm">
+<meta property="og:image" content="https://github.com/DevStarSJ/Study/blob/master/Blog/Review/Books/image/DoingMathWithPython.cover.jpg?raw=true">
+<meta property="og:updated_time" content="2017-04-30T03:39:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="파이썬으로 풀어보는 수학">
+<meta name="twitter:description" content="파이썬으로 풀어보는 수학 원서명 : Doing Math with Python: Use Programming to Explore Algebra, Statistics, Calculus, and More! (ISBN 9781593276409) 지은이 : 아미트 사하(Amit Saha) 원서 및 관련자료 : https://www.nostarch.com/doingm">
+<meta name="twitter:image" content="https://github.com/DevStarSJ/Study/blob/master/Blog/Review/Books/image/DoingMathWithPython.cover.jpg?raw=true">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">DevStarSJ</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/">Book</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/Review/">Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Book/">Book</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Book/Review/">Review</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-DoingMathWithPython" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        파이썬으로 풀어보는 수학
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/09/03/DoingMathWithPython/" class="article-date">
+            <time datetime="2016-09-02T15:00:00.000Z" itemprop="datePublished">2016-09-03</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Book/">Book</a>, <a class="tag-link" href="/tags/Review/">Review</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="파이썬으로-풀어보는-수학"><a href="#파이썬으로-풀어보는-수학" class="headerlink" title="파이썬으로 풀어보는 수학"></a>파이썬으로 풀어보는 수학</h1><ul>
+<li>원서명 : Doing Math with Python: Use Programming to Explore Algebra, Statistics, Calculus, and More! (ISBN 9781593276409)</li>
+<li>지은이 : 아미트 사하(Amit Saha)</li>
+<li>원서 및 관련자료 : <a href="https://www.nostarch.com/doingmathwithpython" target="_blank" rel="external">https://www.nostarch.com/doingmathwithpython</a></li>
+<li>번역서 : <a href="http://www.acornpub.co.kr/book/doing-math-with-python" target="_blank" rel="external">http://www.acornpub.co.kr/book/doing-math-with-python</a></li>
+</ul>
+<p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Review/Books/image/DoingMathWithPython.cover.jpg?raw=true" alt=""></p>
+<p>정말 쉽고 재밌는 책입니다.<br>수학에 대해서 잘 알지 못해도 풀이 과정을 증명하는 것처럼 풀어서 설명을 해주며,<br>파이썬에 대해서 잘 알지 못해도 책에 있는 예제코드만 따라해도 관련 문법을 어떻게 응용하면 되겠다 라는 것을 알 수 있습니다.</p>
+<p>물론 수학에 대한 내용을 깊게 다루지도 않으며, 파이썬 문법에 대해서도 자세히 설명해주지는 않습니다.</p>
+<p>하지만, 그 둘을 다 모르는 사람도 보기에 편한 책이니 만큼 수식을 보는데 두려움이 있는 개발자 분들이나,<br>파이썬을 처음 접해보려는데 문법책만 보니깐 너무 어렵고 지루하다고 느끼시는 분들은 이 책을 한 번 다 읽고, 예제들도 따라해 보신 후<br>자신이 관심이 가는 다른 책을 보시는 것을 추천드립니다.</p>
+<p>저같은 경우에는 출퇴근길에 지하철에서 전체 책을 먼저 한번 읽어 본 뒤,<br>시간이 날때마다 책의 예제를 따라해보면서 해당 내용을 <code>Jupyter notebook</code>을 통해 정리를 하였습니다.<br>작업한 파일은 <strong>Github</strong> (<a href="http://goo.gl/UFieM5" target="_blank" rel="external">http://goo.gl/UFieM5</a>) 에 올려두었습니다.</p>
+<p>Github에서 직접 렌더링하여 보여주는 기능을 제공하지만, 수식의 경우 깨져서 나오므로,<br>블로그 상의 글을 참조하시거나 <strong>nbviewer</strong>로 접근해서 보시면 정상적으로 보입니다.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://DevStarSJ.github.io/2016/09/03/DoingMathWithPython/" data-id="cj245lo6m0004wh7bqjns742p" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook-square" href="https://www.facebook.com/seokjoon.yun.9" target="_blank">
+                        <i class="icon fa fa-facebook-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/DevStarSJ" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="slideshare" href="https://www.slideshare.net/seokjoonyun9" target="_blank">
+                        <i class="icon fa fa-slideshare"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/sjyun" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/1/108379332089647292574" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/09/21/Python.ThinkBayes/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Think Bayes
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/09/03/DataScienceWithScratch/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">선대인의 빅픽처 저성장 시대의 생존 경제학</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Review/">Review</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/APIGateway/" style="font-size: 17px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18px;">AWS</a> <a href="/tags/Book/" style="font-size: 15px;">Book</a> <a href="/tags/C/" style="font-size: 19px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11px;">CI/CD</a> <a href="/tags/DataScience/" style="font-size: 12px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12px;">JavaScript</a> <a href="/tags/JupyterNotebook/" style="font-size: 11px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 18px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 16px;">Python</a> <a href="/tags/Review/" style="font-size: 15px;">Review</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Yun Seok-joon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://DevStarSJ.github.io/2016/09/03/DoingMathWithPython/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
