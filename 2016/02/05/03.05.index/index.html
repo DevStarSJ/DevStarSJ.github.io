@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 4&amp;#xC7A5; Index&amp;#xC640; Join 4.1 Index Index&amp;#xC758; NULL&amp;#xAC12;  Oracle : &amp;#xBAA8;&amp;#xB450; NULL&amp;#xC778; &amp;#xAC12;&amp;#xC740; &amp;#xC8">
+    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning4장 Index와 Join4.1 IndexIndex의 NULL값 Oracle : 모두 NULL인 값은 저장하지 않음. NULL은 맨 뒤에 저장 MS-SQL : 모두 NULL인 값도 저장. NULL은 맨 앞에 저장  Index 탐색 수직 탐색 수평적 탐색을 위한 시작점을 찾는 과정 Root Node에서 Leaf Node">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 3-4-1 Index">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/05/03.05.index/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 4&amp;#xC7A5; Index&amp;#xC640; Join 4.1 Index Index&amp;#xC758; NULL&amp;#xAC12;  Oracle : &amp;#xBAA8;&amp;#xB450; NULL&amp;#xC778; &amp;#xAC12;&amp;#xC740; &amp;#xC8">
+<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning4장 Index와 Join4.1 IndexIndex의 NULL값 Oracle : 모두 NULL인 값은 저장하지 않음. NULL은 맨 뒤에 저장 MS-SQL : 모두 NULL인 값도 저장. NULL은 맨 앞에 저장  Index 탐색 수직 탐색 수평적 탐색을 위한 시작점을 찾는 과정 Root Node에서 Leaf Node">
 <meta property="og:updated_time" content="2017-04-24T00:07:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 3-4-1 Index">
-<meta name="twitter:description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 4&amp;#xC7A5; Index&amp;#xC640; Join 4.1 Index Index&amp;#xC758; NULL&amp;#xAC12;  Oracle : &amp;#xBAA8;&amp;#xB450; NULL&amp;#xC778; &amp;#xAC12;&amp;#xC740; &amp;#xC8">
+<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning4장 Index와 Join4.1 IndexIndex의 NULL값 Oracle : 모두 NULL인 값은 저장하지 않음. NULL은 맨 뒤에 저장 MS-SQL : 모두 NULL인 값도 저장. NULL은 맨 앞에 저장  Index 탐색 수직 탐색 수평적 탐색을 위한 시작점을 찾는 과정 Root Node에서 Leaf Node">
     
 
     
@@ -69,7 +69,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -164,264 +164,273 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="&#xACFC;&#xBAA9;-sql-&#xACE0;&#xAE09;-&#xD65C;&#xC6A9;-&#xBC0F;-tuning">3&#xACFC;&#xBAA9; SQL &#xACE0;&#xAE09; &#xD65C;&#xC6A9; &#xBC0F; Tuning</h1>
-<h2 id="&#xC7A5;-index&#xC640;-join">4&#xC7A5; Index&#xC640; Join</h2>
-<h3 id="index">4.1 Index</h3>
-<h4 id="index&#xC758;-null&#xAC12;">Index&#xC758; NULL&#xAC12;</h4>
-<ul>
-<li>Oracle : &#xBAA8;&#xB450; NULL&#xC778; &#xAC12;&#xC740; &#xC800;&#xC7A5;&#xD558;&#xC9C0; &#xC54A;&#xC74C;. NULL&#xC740; &#xB9E8; &#xB4A4;&#xC5D0; &#xC800;&#xC7A5;</li>
-<li>MS-SQL : &#xBAA8;&#xB450; NULL&#xC778; &#xAC12;&#xB3C4; &#xC800;&#xC7A5;. NULL&#xC740; &#xB9E8; &#xC55E;&#xC5D0; &#xC800;&#xC7A5;</li>
+            <h1 id="3과목-SQL-고급-활용-및-Tuning"><a href="#3과목-SQL-고급-활용-및-Tuning" class="headerlink" title="3과목 SQL 고급 활용 및 Tuning"></a>3과목 SQL 고급 활용 및 Tuning</h1><h2 id="4장-Index와-Join"><a href="#4장-Index와-Join" class="headerlink" title="4장 Index와 Join"></a>4장 Index와 Join</h2><h3 id="4-1-Index"><a href="#4-1-Index" class="headerlink" title="4.1 Index"></a>4.1 Index</h3><h4 id="Index의-NULL값"><a href="#Index의-NULL값" class="headerlink" title="Index의 NULL값"></a>Index의 NULL값</h4><ul>
+<li>Oracle : 모두 NULL인 값은 저장하지 않음. NULL은 맨 뒤에 저장</li>
+<li>MS-SQL : 모두 NULL인 값도 저장. NULL은 맨 앞에 저장</li>
 </ul>
-<h4 id="index-&#xD0D0;&#xC0C9;">Index &#xD0D0;&#xC0C9;</h4>
-<ul>
-<li>&#xC218;&#xC9C1; &#xD0D0;&#xC0C9;</li>
-<li>&#xC218;&#xD3C9;&#xC801; &#xD0D0;&#xC0C9;&#xC744; &#xC704;&#xD55C; &#xC2DC;&#xC791;&#xC810;&#xC744; &#xCC3E;&#xB294; &#xACFC;&#xC815;</li>
-<li>Root Node&#xC5D0;&#xC11C; Leaf Node&#xAE4C;&#xC9C0;&#xC758; &#xAC80;&#xC0C9;</li>
-<li>Index &#xC870;&#xAC74;&#xC5D0; &#xB9DE;&#xB294; &#xCCAB;&#xBC88;&#xC9F8; &#xAC12;&#xC744; &#xCC3E;&#xC544;&#xAC00;&#xB294; &#xC5F0;&#xC0B0;</li>
-<li>&#xC218;&#xD3C9; &#xD0D0;&#xC0C9;</li>
-<li>Leaf Node&#xB07C;&#xB9AC; &#xC5F0;&#xACB0;&#xB41C; Link&#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xBC94;&#xC704; &#xAC80;&#xC0C9;</li>
+<h4 id="Index-탐색"><a href="#Index-탐색" class="headerlink" title="Index 탐색"></a>Index 탐색</h4><ul>
+<li>수직 탐색<ul>
+<li>수평적 탐색을 위한 시작점을 찾는 과정</li>
+<li>Root Node에서 Leaf Node까지의 검색</li>
+<li>Index 조건에 맞는 첫번째 값을 찾아가는 연산</li>
 </ul>
-<h4 id="index-scan-&#xBC29;&#xC2DD;">Index Scan &#xBC29;&#xC2DD;</h4>
-<h5 id="index-range-scan">1. Index Range Scan</h5>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (RANGE SCAN) OF &apos;&#xC778;&#xB371;&#xC2A4;&#xBA85;&apos; (INDEX)</div></pre></td></tr></table></figure>
-<ul>
-<li>&#xC218;&#xC9C1; &#xD0D0;&#xC0C9; &#xD6C4; Leaf Block&#xC744; &#xD544;&#xC694;&#xD55C; &#xBC94;&#xC704;&#xB9CC; Scan</li>
-<li>B*Tree Index&#xC758; &#xAC00;&#xC7A5; &#xC77C;&#xBC18;&#xC801;&#xC774;&#xACE0; &#xC815;&#xC0C1;&#xC801;&#xC778; &#xD615;&#xD0DC;</li>
-<li>Index &#xAD6C;&#xC131; &#xCE7C;&#xB7FC; &#xC911; &#xC120;&#xB450; &#xCEEC;&#xB7FC;&#xC774; &#xC870;&#xAC74;&#xC808;&#xC5D0; &#xC0AC;&#xC6A9;&#xB418;&#xC5B4;&#xC57C;&#xB9CC; &#xAC00;&#xB2A5;</li>
-<li>&#xC0DD;&#xC131;&#xB41C; &#xACB0;&#xACFC;&#xC9D1;&#xD569;&#xC740; Index &#xCEEC;&#xB7FC; &#xC21C;&#xB300;&#xB85C; &#xC815;&#xB82C;&#xB41C; &#xC0C1;&#xD0DC; (ORDER BY, MIN, MAX &#xCC98;&#xB9AC; &#xAC00;&#xB2A5;)</li>
+</li>
+<li>수평 탐색<ul>
+<li>Leaf Node끼리 연결된 Link를 통해서 범위 검색</li>
 </ul>
-<h5 id="index-full-scan">2. Index Full Scan</h5>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (FULL SCAN) OF &apos;&#xC778;&#xB371;&#xC2A4;&#xBA85;&apos; (INDEX)</div></pre></td></tr></table></figure>
-<ul>
-<li>&#xC218;&#xC9C1; &#xD0D0;&#xC0C9; &#xC5C6;&#xC774; Leaf Block&#xC744; &#xCC98;&#xC74C;&#xBD80;&#xD130; &#xB05D;&#xAE4C;&#xC9C0; &#xC218;&#xD3C9;&#xC801;&#xC73C;&#xB85C; Scan</li>
-<li>&#xB300;&#xAC1C;&#xC758; &#xACBD;&#xC6B0; Index&#xC758; &#xC120;&#xB450; &#xCEEC;&#xB7FC;&#xC774; &#xC870;&#xAC74;&#xC808;&#xC5D0; &#xC5C6;&#xC73C;&#xBA74; Optimizer&#xB294; Table Full Scan&#xC744; &#xACE0;&#xB824;&#xD55C;&#xB2E4;.</li>
-<li>&#xD558;&#xC9C0;&#xB9CC; &#xB2E4;&#xC74C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; Optimzer&#xAC00; &#xC804;&#xB7B5;&#xC801;&#xC73C;&#xB85C; Index Full Scan&#xC744; &#xACE0;&#xB824;&#xD55C;&#xB2E4;.</li>
-<li>Table&#xC774; &#xB300;&#xC6A9;&#xB7C9;&#xC774;&#xAC70;&#xB098;, Index&#xC758; &#xB098;&#xBA38;&#xC9C0; &#xCE7C;&#xB7FC;&#xC73C;&#xB85C; &#xB300;&#xBD80;&#xBD84;&#xC758; record&#xB97C; filtering&#xD558;&#xACE0; &#xC77C;&#xBD80;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; Table &#xC561;&#xC138;&#xC2A4;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xACBD;&#xC6B0;</li>
-<li>ORDER BY &#xC5F0;&#xC0B0;&#xC744; &#xD574;&#xC57C;&#xD558;&#xB294;&#xB370; <code>first_rows</code> Hint&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xBD80;&#xBD84;&#xBC94;&#xC704; &#xCC98;&#xB9AC;&#xB97C; &#xD560; &#xACBD;&#xC6B0;. &#xD558;&#xC9C0;&#xB9CC; &#xC774; &#xACBD;&#xC6B0; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; FETCH&#xB97C; &#xB05D;&#xAE4C;&#xC9C0; &#xB2E4; &#xD560; &#xACBD;&#xC6B0; Table Full Scan&#xBCF4;&#xB2E4; &#xB354; &#xBE44;&#xD6A8;&#xC728;&#xC801;&#xC774;&#xAC8C; &#xB41C;&#xB2E4;.</li>
+</li>
 </ul>
-<h5 id="index-unique-scan">3. Index Unique Scan</h5>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (UNIQUE SCAN) OF &apos;PK &#xB610;&#xB294; Unique Index&#xBA85;` (UNIQUE)</div></pre></td></tr></table></figure>
+<h4 id="Index-Scan-방식"><a href="#Index-Scan-방식" class="headerlink" title="Index Scan 방식"></a>Index Scan 방식</h4><h5 id="1-Index-Range-Scan"><a href="#1-Index-Range-Scan" class="headerlink" title="1. Index Range Scan"></a>1. Index Range Scan</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (RANGE SCAN) OF &apos;인덱스명&apos; (INDEX)</div></pre></td></tr></table></figure>
 <ul>
-<li>&#xC218;&#xC9C1; &#xD0D0;&#xC0C9;&#xB9CC;&#xC73C;&#xB85C; Scan</li>
-<li>Unique Index&#xB97C; = &#xC870;&#xAC74;&#xC73C;&#xB85C; &#xAC80;&#xC0C9;&#xD560; &#xACBD;&#xC6B0;&#xC5D0;&#xB9CC; &#xC791;&#xB3D9;</li>
+<li>수직 탐색 후 Leaf Block을 필요한 범위만 Scan</li>
+<li>B*Tree Index의 가장 일반적이고 정상적인 형태</li>
+<li>Index 구성 칼럼 중 선두 컬럼이 조건절에 사용되어야만 가능</li>
+<li>생성된 결과집합은 Index 컬럼 순대로 정렬된 상태 (ORDER BY, MIN, MAX 처리 가능)</li>
 </ul>
-<h4 id="index-skip-scan">4. Index Skip Scan</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (SKIP SCAN) OF &apos;&#xC778;&#xB371;&#xC2A4;&#xBA85;&apos; (INDEX)</div></pre></td></tr></table></figure>
+<h5 id="2-Index-Full-Scan"><a href="#2-Index-Full-Scan" class="headerlink" title="2. Index Full Scan"></a>2. Index Full Scan</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (FULL SCAN) OF &apos;인덱스명&apos; (INDEX)</div></pre></td></tr></table></figure>
 <ul>
-<li>INDEX&#xC758; &#xC120;&#xB450;&#xCEEC;&#xB7FC;&#xC774; &#xC870;&#xAC74;&#xC808;&#xC5D0; &#xBE60;&#xC84C;&#xC744; &#xACBD;&#xC6B0; &#xB300;&#xBD80;&#xBD84; Table Full Scan&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0;&#xB9CC; 9i&#xC5D0;&#xC11C; &#xC0C8;&#xB85C; &#xC0DD;&#xAE34; &#xBC29;&#xC2DD;</li>
-<li>&#xC120;&#xB450; &#xCEEC;&#xB7FC;&#xC758; DISTICT &#xC218;&#xAC00; &#xC801;&#xACE0;, &#xD6C4;&#xD589; &#xCEEC;&#xB7FC;&#xC758; DISTINCT &#xC218;&#xAC00; &#xB9CE;&#xC744; &#xACBD;&#xC6B0; &#xD6A8;&#xACFC;&#xC801;</li>
+<li>수직 탐색 없이 Leaf Block을 처음부터 끝까지 수평적으로 Scan</li>
+<li>대개의 경우 Index의 선두 컬럼이 조건절에 없으면 Optimizer는 Table Full Scan을 고려한다.</li>
+<li>하지만 다음 경우에는 Optimzer가 전략적으로 Index Full Scan을 고려한다.<ul>
+<li>Table이 대용량이거나, Index의 나머지 칼럼으로 대부분의 record를 filtering하고 일부에 대해서만 Table 액세스가 발생하는 경우</li>
+<li>ORDER BY 연산을 해야하는데 <code>first_rows</code> Hint를 이용하여 부분범위 처리를 할 경우. 하지만 이 경우 사용자가 FETCH를 끝까지 다 할 경우 Table Full Scan보다 더 비효율적이게 된다.</li>
 </ul>
-<h5 id="index-fast-full-scan">5. Index Fast Full Scan</h5>
-<ul>
-<li>Index&#xC5D0; &#xD3EC;&#xD568;&#xB41C; &#xCEEC;&#xB7FC;&#xB9CC;&#xC73C;&#xB85C; &#xC870;&#xD68C;&#xAC00; &#xAC00;&#xB2A5;&#xD55C; &#xACBD;&#xC6B0;</li>
-<li>Index Tree&#xAD6C;&#xC870;&#xB97C; &#xBB34;&#xC2DC;&#xD558;&#xACE0; Segment &#xC804;&#xCCB4;&#xB97C; Multiblock Read &#xBC29;&#xC2DD;&#xC73C;&#xB85C; Scan</li>
-<li>&#xACB0;&#xACFC;&#xC9D1;&#xD569; &#xC21C;&#xC11C;&#xAC00; &#xBCF4;&#xC7A5; &#xC548;&#xB428;</li>
-<li>Parallel Scan &#xAC00;&#xB2A5;</li>
+</li>
 </ul>
-<h5 id="index-range-scan-descending">6. Index Range Scan Descending</h5>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (RANGE SCAN DESCENDING) OF &apos;&#xC778;&#xB371;&#xC2A4;&#xBA85;&apos; (INDEX)</div></pre></td></tr></table></figure>
+<h5 id="3-Index-Unique-Scan"><a href="#3-Index-Unique-Scan" class="headerlink" title="3. Index Unique Scan"></a>3. Index Unique Scan</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (UNIQUE SCAN) OF &apos;PK 또는 Unique Index명` (UNIQUE)</div></pre></td></tr></table></figure>
 <ul>
-<li>Index Range Scan&#xACFC; &#xB3D9;&#xC77C;&#xD55C; &#xBC29;&#xBC95;&#xC774;&#xB098; &#xB4A4;&#xC5D0;&#xC11C; &#xC55E;&#xC73C;&#xB85C; Scan</li>
-<li>Index&#xC5D0; &#xC800;&#xC7A5;&#xB41C; &#xC21C;&#xC11C;&#xC640;&#xB294; &#xBC18;&#xB300;&#xB85C; &#xC815;&#xB82C;&#xB41C; &#xACB0;&#xACFC;&#xC9D1;&#xD569;&#xC744; &#xCD9C;&#xB825;</li>
-<li>MIN / MAX &#xAC12;&#xC744; &#xAD6C;&#xD560; &#xACBD;&#xC6B0; 1&#xAC74;&#xB9CC; &#xC77D;&#xACE0; &#xBA48;&#xCD94;&#xB294; &#xC2E4;&#xD589;&#xACC4;&#xD68D;&#xC73C;&#xB85C; &#xC720;&#xB3C4;&#xD560; &#xACBD;&#xC6B0;&#xC5D0; &#xC88B;&#xC74C;</li>
+<li>수직 탐색만으로 Scan</li>
+<li>Unique Index를 = 조건으로 검색할 경우에만 작동</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (RANGE SCAN (MIN/MAX)) OF &apos;&#xC778;&#xB371;&#xC2A4;&#xBA85;&apos; (INDEX)</div></pre></td></tr></table></figure>
-<h4 id="index-&#xC885;&#xB958;">Index &#xC885;&#xB958;</h4>
-<h5 id="btree-index">1. B*Tree Index</h5>
+<h4 id="4-Index-Skip-Scan"><a href="#4-Index-Skip-Scan" class="headerlink" title="4. Index Skip Scan"></a>4. Index Skip Scan</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (SKIP SCAN) OF &apos;인덱스명&apos; (INDEX)</div></pre></td></tr></table></figure>
 <ul>
-<li>&#xAC00;&#xC7A5; &#xAE30;&#xBCF8;&#xC801;&#xC778; Index &#xD615;&#xC2DD;</li>
-<li>&#xCD5C;&#xC801;&#xC758; &#xC131;&#xB2A5;&#xC744; &#xC704;&#xD574;&#xC11C;&#xB294; Index Fragmentation&#xC744; &#xACE0;&#xB824;&#xD574;&#xC57C; &#xD568;</li>
+<li>INDEX의 선두컬럼이 조건절에 빠졌을 경우 대부분 Table Full Scan을 사용하지만 9i에서 새로 생긴 방식</li>
+<li>선두 컬럼의 DISTICT 수가 적고, 후행 컬럼의 DISTINCT 수가 많을 경우 효과적</li>
 </ul>
-<ol style="list-style-type: decimal">
-<li>Unbalnaced Index
-<ul>
-<li>Root&#xC5D0;&#xC11C; Leaf Node&#xAE4C;&#xC9C0;&#xC758; Height&#xAC00; &#xB2E4;&#xB978; &#xACBD;&#xC6B0;</li>
-<li>B<em>Tree&#xC5D0;&#xC11C;&#xB294; &#xC774;&#xB7F0; &#xD604;&#xC0C1;&#xC774; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xC74C; (Balanced</em>Tree&#xC5D0;&#xC11C; Unbalanced &#xD604;&#xC0C1;&#xC774; &#xC0DD;&#xAE30;&#xB294;&#xAC74; &#xB9D0;&#xC774; &#xC548;&#xB428;)</li>
-</ul></li>
-<li>Index Skew
-<ul>
-<li>Index Enrty&#xAC00; &#xD55C;&#xCABD;&#xC73C;&#xB85C; &#xCE58;&#xC6B0;&#xCE58;&#xB294; &#xD604;&#xC0C1;</li>
-<li>&#xB300;&#xB7C9;&#xC758; delete &#xC791;&#xC5C5; &#xD6C4;&#xC5D0;&#xB294; &#xD55C;&#xCABD;&#xC758; Leaf Node&#xB4E4;&#xC774; empty &#xC0C1;&#xD0DC;&#xAC00; &#xB428;</li>
-<li>empty Node&#xB4E4;&#xC740; &#xC5B8;&#xC81C;&#xB4E0; &#xC7AC;&#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD558;&#xC9C0;&#xB9CC;, &#xB2E4;&#xC2DC; &#xCC44;&#xC6CC;&#xC9C8; &#xB54C;&#xAE4C;&#xC9C0;&#xB294; Index Scan &#xD6A8;&#xC728;&#xC774; &#xB5A8;&#xC5B4;&#xC9D0;</li>
-<li>MS-SQL&#xC740; &#xC8FC;&#xAE30;&#xC801;&#xC73C;&#xB85C; Index&#xB97C; &#xC815;&#xB9AC;&#xD574;&#xC8FC;&#xBBC0;&#xB85C; &#xC774;&#xB7F0; &#xD604;&#xC0C1;&#xC774; &#xB098;&#xD0C0;&#xB098;&#xC9C0; &#xC54A;&#xC74C;</li>
-</ul></li>
-<li>Index Sparse
-<ul>
-<li>Index Block &#xB0B4;&#xC758; &#xBC00;&#xB3C4;(density)&#xAC00; &#xB5A8;&#xC5B4;&#xC9C0;&#xB294; &#xD604;&#xC0C1;</li>
-<li>&#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xD604;&#xC0C1;&#xC774; &#xC77C;&#xC5B4;&#xB098;&#xBA74; Index Sparse&#xB77C; &#xD310;&#xB2E8;</li>
-<li>Index &#xB0B4;&#xC758; record&#xB294; &#xB9CE;&#xC774; &#xC0AD;&#xC81C;&#xD588;&#xC9C0;&#xB9CC;, Index Scan Block &#xC218;&#xB294; &#xBCC0;&#xD654;&#xAC00; &#xC5C6;&#xC74C;</li>
-<li>Index record&#xC218;&#xB294; &#xC77C;&#xC815;&#xD55C;&#xB370;, Index &#xC0AC;&#xC6A9; &#xACF5;&#xAC04;&#xC774; &#xC810;&#xC810; &#xCEE4;&#xC9D0;</li>
-</ul></li>
-<li>Index &#xC7AC;&#xC0DD;&#xC131;
-<ul>
-<li>&#xC704;&#xC640; &#xAC19;&#xC740; Fragmentation &#xD604;&#xC0C1;&#xC744; &#xC81C;&#xAC70;&#xD558;&#xAE30; &#xC704;&#xD574; Index&#xB97C; &#xC0AD;&#xC81C; &#xD6C4; &#xC7AC;&#xC0DD;&#xC131;</li>
-<li>&#xC7AC;&#xC0DD;&#xC131;&#xC740; &#xC218;&#xD589;&#xC2DC;&#xAC04;&#xACFC; &#xBD80;&#xD558;&#xAC00; &#xD070; &#xC791;&#xC5C5;&#xC774;&#xBBC0;&#xB85C; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xC608;&#xC0C1;&#xD6A8;&#xACFC;&#xAC00; &#xD655;&#xC2E4;&#xD560; &#xB54C;&#xB9CC; &#xC2DC;&#xD589;&#xD558;&#xB294;&#xAC8C; &#xBC14;&#xB78C;&#xC9C1;&#xD568;</li>
+<h5 id="5-Index-Fast-Full-Scan"><a href="#5-Index-Fast-Full-Scan" class="headerlink" title="5. Index Fast Full Scan"></a>5. Index Fast Full Scan</h5><ul>
+<li>Index에 포함된 컬럼만으로 조회가 가능한 경우</li>
+<li>Index Tree구조를 무시하고 Segment 전체를 Multiblock Read 방식으로 Scan</li>
+<li>결과집합 순서가 보장 안됨</li>
+<li>Parallel Scan 가능</li>
 </ul>
-<ol style="list-style-type: decimal">
-<li>Index &#xBD84;&#xD560;&#xC5D0; &#xC758;&#xD55C; &#xACBD;&#xD569;&#xC774; &#xD604;&#xC800;&#xD788; &#xB192;&#xC744; &#xB54C;</li>
-<li>&#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xB418;&#xB294; Index Scan &#xD6A8;&#xC728;&#xC744; &#xB192;&#xC774;&#xACE0;&#xC790; &#xD560; &#xB54C;. &#xD2B9;&#xD788; NL Join&#xC5D0;&#xC11C; &#xBC18;&#xBCF5; &#xC561;&#xC138;&#xC2A4; &#xB418;&#xB294; &#xACBD;&#xC6B0;</li>
-<li>&#xB300;&#xB7C9;&#xC758; delete &#xC791;&#xC5C5; &#xC774;&#xD6C4; &#xC0C8;&#xB85C;&#xC6B4; record&#xAC00; &#xC785;&#xB825;&#xB420; &#xB54C;&#xAE4C;&#xC9C0; &#xC624;&#xB79C; &#xC2DC;&#xAC04;&#xC774; &#xAC78;&#xB9B4; &#xB54C;</li>
-<li>&#xCD1D; record&#xC218;&#xAC00; &#xC77C;&#xC815;&#xD55C;&#xB370;&#xB3C4; Index&#xAC00; &#xACC4;&#xC18D; &#xCEE4;&#xC9C8; &#xB54C;</li>
-</ol></li>
+<h5 id="6-Index-Range-Scan-Descending"><a href="#6-Index-Range-Scan-Descending" class="headerlink" title="6. Index Range Scan Descending"></a>6. Index Range Scan Descending</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (RANGE SCAN DESCENDING) OF &apos;인덱스명&apos; (INDEX)</div></pre></td></tr></table></figure>
+<ul>
+<li>Index Range Scan과 동일한 방법이나 뒤에서 앞으로 Scan</li>
+<li>Index에 저장된 순서와는 반대로 정렬된 결과집합을 출력</li>
+<li>MIN / MAX 값을 구할 경우 1건만 읽고 멈추는 실행계획으로 유도할 경우에 좋음</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INDEX (RANGE SCAN (MIN/MAX)) OF &apos;인덱스명&apos; (INDEX)</div></pre></td></tr></table></figure>
+<h4 id="Index-종류"><a href="#Index-종류" class="headerlink" title="Index 종류"></a>Index 종류</h4><h5 id="1-B-Tree-Index"><a href="#1-B-Tree-Index" class="headerlink" title="1. B*Tree Index"></a>1. B*Tree Index</h5><ul>
+<li>가장 기본적인 Index 형식</li>
+<li>최적의 성능을 위해서는 Index Fragmentation을 고려해야 함<ol>
+<li>Unbalnaced Index<ul>
+<li>Root에서 Leaf Node까지의 Height가 다른 경우</li>
+<li>B<em>Tree에서는 이런 현상이 발생하지 않음 (Balanced</em>Tree에서 Unbalanced 현상이 생기는건 말이 안됨)</li>
+</ul>
+</li>
+<li>Index Skew<ul>
+<li>Index Enrty가 한쪽으로 치우치는 현상</li>
+<li>대량의 delete 작업 후에는 한쪽의 Leaf Node들이 empty 상태가 됨</li>
+<li>empty Node들은 언제든 재사용 가능하지만, 다시 채워질 때까지는 Index Scan 효율이 떨어짐</li>
+<li>MS-SQL은 주기적으로 Index를 정리해주므로 이런 현상이 나타나지 않음</li>
+</ul>
+</li>
+<li>Index Sparse<ul>
+<li>Index Block 내의 밀도(density)가 떨어지는 현상</li>
+<li>아래와 같은 현상이 일어나면 Index Sparse라 판단<ul>
+<li>Index 내의 record는 많이 삭제했지만, Index Scan Block 수는 변화가 없음</li>
+<li>Index record수는 일정한데, Index 사용 공간이 점점 커짐</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Index 재생성<ul>
+<li>위와 같은 Fragmentation 현상을 제거하기 위해 Index를 삭제 후 재생성</li>
+<li>재생성은 수행시간과 부하가 큰 작업이므로 아래와 같이 예상효과가 확실할 때만 시행하는게 바람직함<ol>
+<li>Index 분할에 의한 경합이 현저히 높을 때</li>
+<li>자주 사용되는 Index Scan 효율을 높이고자 할 때. 특히 NL Join에서 반복 액세스 되는 경우</li>
+<li>대량의 delete 작업 이후 새로운 record가 입력될 때까지 오랜 시간이 걸릴 때</li>
+<li>총 record수가 일정한데도 Index가 계속 커질 때</li>
 </ol>
-<h5 id="bitmap-index">2 Bitmap Index</h5>
-<ul>
-<li>Column&#xC774; &#xAC00;&#xC9C8;&#xC218; &#xC788;&#xB294; &#xAC12;&#xC758; DISTINCT &#xC218;&#xB9CC;&#xD07C;&#xC758; BIT(0,1)&#xB97C; 2&#xCC28;&#xC6D0; &#xBC30;&#xC5F4;&#xB85C; &#xD45C;&#xD604;</li>
-<li>&#xC5EC;&#xB7EC; INDEX&#xB97C; &#xB3D9;&#xC2DC;&#xC5D0; &#xD65C;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC5B4;&#xC11C;, &#xC815;&#xD615;&#xD654;&#xB418;&#xC9C0; &#xC54A;&#xC740; ad-hoc query&#xAC00; &#xB9CE;&#xC740; &#xD658;&#xACBD;&#xC5D0; &#xD6A8;&#xACFC;&#xC801;</li>
-<li>DISTICT&#xC218;&#xAC00; &#xC801;&#xC744; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; B*Tree Index&#xBCF4;&#xB2E4; &#xC801;&#xC740; &#xACF5;&#xAC04;&#xC744; &#xCC28;&#xC9C0;&#xD558;&#xC9C0;&#xB9CC;, DISTINCT&#xC218;&#xAC00; &#xB9CE;&#xC73C;&#xBA74; &#xB354; &#xD070; &#xACF5;&#xAC04;&#xC744; &#xCC28;&#xC9C0;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xB2E4;.</li>
-<li>&#xB4F1;&#xCE58;(=), &#xBD80;&#xC815;(&lt;&gt;), NULL &#xC870;&#xAC74;&#xC744; &#xCC3E;&#xB294;&#xB370; &#xD6A8;&#xACFC;&#xC801;&#xC774;&#xB2E4;.</li>
-<li>&#xD558;&#xB098;&#xC758; record&#xB9CC; &#xBCC0;&#xACBD;&#xB418;&#xB354;&#xB77C;&#xB3C4; &#xC804;&#xCCB4;&#xC5D0; Lock&#xC774; &#xAC78;&#xB9AC;&#xBBC0;&#xB85C; OLTP&#xD658;&#xACBD;&#xC5D0;&#xC11C;&#xB294; &#xC4F8;&#xC218; &#xC5C6;&#xC74C;</li>
-<li>&#xB300;&#xC6A9;&#xB7C9;&#xC758; DW(OLAP) &#xD658;&#xACBD;&#xC5D0; &#xC801;&#xD569;</li>
+</li>
 </ul>
-<h5 id="fbi-function-based-index">3. FBI (Function Based Index)</h5>
-<ul>
-<li>&#xCEEC;&#xB7FC;&#xAC12; &#xC790;&#xCCB4;&#xAC00; &#xC544;&#xB2CC; &#xD568;&#xC218;&#xACB0;&#xACFC;&#xAC12;&#xC73C;&#xB85C; B*Tree Index&#xB97C; &#xC0DD;&#xC131;</li>
-<li>Index &#xCEEC;&#xB7FC; &#xC790;&#xCCB4;&#xB97C; &#xAC00;&#xACF5;&#xD558;&#xBA74; &#xC815;&#xC0C1;&#xC801;&#xC778; Index &#xC0AC;&#xC6A9;&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD55C;&#xB370;, &#xC774; &#xACBD;&#xC6B0; &#xD6A8;&#xACFC;&#xC801;&#xC73C;&#xB85C; Scan &#xAC00;&#xB2A5;</li>
+</li>
+</ol>
+</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> EMP_NVL_COMM <span class="keyword">ON</span> EMP(NVL(COMM,<span class="number">0</span>));      <span class="comment">-- &#xC0C1;&#xC5EC;&#xAE08;&#xC774; &#xC5C6;&#xB294; &#xACBD;&#xC6B0; 0</span></div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> EMP_UPPER_ENAME <span class="keyword">ON</span> EMP(<span class="keyword">UPPER</span>(ENAME));  <span class="comment">-- &#xC774;&#xB984;&#xC744; &#xB300;&#xC18C;&#xBB38;&#xC790; &#xAD6C;&#xBD84;&#xC5C6;&#xC774; &#xAC80;&#xC0C9;&#xD574;&#xC57C; &#xD560; &#xACBD;&#xC6B0;</span></div></pre></td></tr></table></figure>
-<h5 id="reverse-key-index">4. Reverse Key Index</h5>
-<ul>
-<li>Key &#xAC12;&#xC744; Reverse() &#xD568;&#xC218;&#xB97C; &#xAC70;&#xCCD0;&#xC11C; &#xC800;&#xC7A5;</li>
-<li>&#xD55C;&#xCABD;&#xC73C;&#xB85C;&#xB9CC; &#xCE58;&#xC6B0;&#xCE58;&#xB294; &#xD615;&#xD0DC;&#xC758; &#xAC12;&#xC744; &#xBD84;&#xC0B0;&#xC801;&#xC73C;&#xB85C; &#xC800;&#xC7A5;&#xD558;&#xACE0;&#xC790; &#xD560; &#xACBD;&#xC6B0; &#xD6A8;&#xACFC;&#xC801;</li>
-<li>&#xC8FC;&#xBB38;&#xC77C;&#xC2DC;&#xC758; &#xACBD;&#xC6B0; &#xD56D;&#xC0C1; &#xC99D;&#xAC00;&#xB41C; &#xAC12;&#xC774; &#xB4E4;&#xC5B4;&#xC624;&#xB974;&#xBAA8; &#xC624;&#xB978;&#xCABD; Leaf Block&#xC5D0;&#xB9CC; &#xB370;&#xC774;&#xD130;&#xAC00; &#xC313;&#xC778;&#xB2E4;. (Right Growing Index)</li>
-<li>&#xC774;&#xB7F4; &#xACBD;&#xC6B0; &#xC8FC;&#xBB38;&#xC77C;&#xC790;&#xB97C; &#xAC70;&#xAFB8;&#xB85C; &#xC785;&#xB825;&#xD558;&#xBA74; Leaf &#xC804;&#xCCB4;&#xC5D0; &#xACE0;&#xB974;&#xAC8C; &#xC800;&#xC7A5;&#xB418;&#xBBC0;&#xB85C; Transaction&#xC744; &#xBD84;&#xC0B0;&#xC2DC;&#xD0A4;&#xB294; &#xD6A8;&#xACFC;&#xB97C; &#xC5BB;&#xC744; &#xC218; &#xC788;&#xB2E4;.</li>
-<li>&#xD558;&#xC9C0;&#xB9CC;, &#xB4F1;&#xCE58;(=) &#xC870;&#xAC74;&#xC73C;&#xB85C;&#xB9CC; &#xAC80;&#xC0C9;&#xC774; &#xAC00;&#xB2A5; (&#xBD80;&#xB4F1;&#xD638;, BETWEEN, LIKE&#xB85C;&#xC758; &#xAC80;&#xC0C9;&#xC740; &#xBD88;&#xAC00;&#xB2A5;)</li>
+<h5 id="2-Bitmap-Index"><a href="#2-Bitmap-Index" class="headerlink" title="2 Bitmap Index"></a>2 Bitmap Index</h5><ul>
+<li>Column이 가질수 있는 값의 DISTINCT 수만큼의 BIT(0,1)를 2차원 배열로 표현</li>
+<li>여러 INDEX를 동시에 활용할 수 있어서, 정형화되지 않은 ad-hoc query가 많은 환경에 효과적</li>
+<li>DISTICT수가 적을 경우에는 B*Tree Index보다 적은 공간을 차지하지만, DISTINCT수가 많으면 더 큰 공간을 차지할 수도 있다.</li>
+<li>등치(=), 부정(&lt;&gt;), NULL 조건을 찾는데 효과적이다.</li>
+<li>하나의 record만 변경되더라도 전체에 Lock이 걸리므로 OLTP환경에서는 쓸수 없음</li>
+<li>대용량의 DW(OLAP) 환경에 적합</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> IDX_&#xC8FC;&#xBB38;_&#xC8FC;&#xBB38;&#xC77C;&#xC2DC; <span class="keyword">ON</span> &#xC8FC;&#xBB38;(<span class="keyword">REVERSE</span>(&#xC8FC;&#xBB38;&#xC77C;&#xC2DC;));</div></pre></td></tr></table></figure>
-<h5 id="cluster-index">5. Cluster Index</h5>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> CLUSTER C_DEPTNO (DEPTNO <span class="built_in">NUMBER</span>(<span class="number">2</span>)) <span class="keyword">INDEX</span>;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span>   I_DEPTNO <span class="keyword">ON</span> CLUSTER C_DEPTNO;</div></pre></td></tr></table></figure>
-<ul>
-<li>Oracel Clusterd Table : &#xAC12;&#xC740; Key&#xAC12;&#xC744; &#xAC00;&#xC9C4; record&#xB97C; &#xD55C; block&#xC5D0; &#xC800;&#xC7A5; (1 block&#xC758; &#xD06C;&#xAE30;&#xAC00; &#xB118;&#xC73C;&#xBA74; cluster chain&#xC73C;&#xB85C; &#xC5F0;&#xACB0;)</li>
-<li>CLUSTER&#xC5D0; &#xB300;&#xD55C; Index&#xB97C; &#xC0DD;&#xC131;</li>
-<li>Index Key&#xAC12;&#xC740; Unique</li>
-<li>Index Key : Table Record&#xAC00; 1:M &#xAD00;&#xACC4; (&#xC77C;&#xBC18; Index&#xB294; 1:1)</li>
-<li>Index Key&#xC5D0;&#xC11C; Random Scan, Cluster &#xB0B4;&#xC5D0;&#xC11C;&#xB294; Sqeuential Scan</li>
-<li>&#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xACBD;&#xC6B0; &#xC720;&#xB9AC;</li>
-<li>Scan &#xBC94;&#xC704;&#xAC00; &#xB113;&#xC744; &#xACBD;&#xC6B0;</li>
-<li>&#xD06C;&#xAE30;&#xAC00; &#xC791;&#xACE0; NL Join&#xC73C;&#xB85C; &#xBC18;&#xBCF5; Lookup&#xD558;&#xB294; Table</li>
-<li>Column &#xC218;&#xAC00; &#xC801;&#xACE0; rocord&#xAC00; &#xB9CE;&#xC740; Table</li>
-<li>&#xB370;&#xC774;&#xD130; &#xC785;&#xB825; &#xD328;&#xD134;&#xACFC; &#xC870;&#xD68C; &#xD328;&#xD134;&#xC774; &#xC11C;&#xB85C; &#xB2E4;&#xB978; Table
-<ul>
-<li>ex. &#xC2E4;&#xC801;&#xB4F1;&#xB85D; &#xBC0F; &#xC870;&#xD68C;&#xC758; &#xACBD;&#xC6B0;</li>
-<li>&#xC785;&#xB825;&#xC740; &#xC77C;&#xC790;&#xBCC4;&#xB85C; &#xC9C4;&#xD589;&#xB418;&#xC9C0;&#xB9CC;, &#xC870;&#xD68C;&#xB294; &#xC0AC;&#xC6D0;&#xBCC4;&#xB85C; &#xD558;&#xB294; &#xACBD;&#xC6B0;</li>
-<li>&#xC77C;&#xBC18; Table&#xC758; &#xACBD;&#xC6B0; &#xC0AC;&#xC6D0;&#xB9C8;&#xB2E4; 365&#xC77C;&#xC758; &#xB370;&#xC774;&#xD130; &#xD398;&#xC774;&#xC9C0;&#xB97C; Random &#xC561;&#xC138;&#xC2A4; &#xD574;&#xC57C;&#xD568;</li>
-<li>&#xC0AC;&#xBC88;&#xC744; &#xAE30;&#xC900;&#xC73C;&#xB85C; CLUSTER&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xBA74; &#xD6A8;&#xACFC;&#xC801;</li>
-</ul></li>
+<h5 id="3-FBI-Function-Based-Index"><a href="#3-FBI-Function-Based-Index" class="headerlink" title="3. FBI (Function Based Index)"></a>3. FBI (Function Based Index)</h5><ul>
+<li>컬럼값 자체가 아닌 함수결과값으로 B*Tree Index를 생성</li>
+<li>Index 컬럼 자체를 가공하면 정상적인 Index 사용이 불가능한데, 이 경우 효과적으로 Scan 가능</li>
 </ul>
-<h3 id="index-tuning">4.2 Index Tuning</h3>
-<h4 id="index-tuning-&#xAE30;&#xCD08;">Index Tuning &#xAE30;&#xCD08;</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> EMP_NVL_COMM <span class="keyword">ON</span> EMP(NVL(COMM,<span class="number">0</span>));      <span class="comment">-- 상여금이 없는 경우 0</span></div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> EMP_UPPER_ENAME <span class="keyword">ON</span> EMP(<span class="keyword">UPPER</span>(ENAME));  <span class="comment">-- 이름을 대소문자 구분없이 검색해야 할 경우</span></div></pre></td></tr></table></figure>
+<h5 id="4-Reverse-Key-Index"><a href="#4-Reverse-Key-Index" class="headerlink" title="4. Reverse Key Index"></a>4. Reverse Key Index</h5><ul>
+<li>Key 값을 Reverse() 함수를 거쳐서 저장</li>
+<li>한쪽으로만 치우치는 형태의 값을 분산적으로 저장하고자 할 경우 효과적<ul>
+<li>주문일시의 경우 항상 증가된 값이 들어오르모 오른쪽 Leaf Block에만 데이터가 쌓인다. (Right Growing Index)</li>
+<li>이럴 경우 주문일자를 거꾸로 입력하면 Leaf 전체에 고르게 저장되므로 Transaction을 분산시키는 효과를 얻을 수 있다.</li>
+</ul>
+</li>
+<li>하지만, 등치(=) 조건으로만 검색이 가능 (부등호, BETWEEN, LIKE로의 검색은 불가능)</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> IDX_주문_주문일시 <span class="keyword">ON</span> 주문(<span class="keyword">REVERSE</span>(주문일시));</div></pre></td></tr></table></figure>
+<h5 id="5-Cluster-Index"><a href="#5-Cluster-Index" class="headerlink" title="5. Cluster Index"></a>5. Cluster Index</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> CLUSTER C_DEPTNO (DEPTNO <span class="built_in">NUMBER</span>(<span class="number">2</span>)) <span class="keyword">INDEX</span>;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span>   I_DEPTNO <span class="keyword">ON</span> CLUSTER C_DEPTNO;</div></pre></td></tr></table></figure>
 <ul>
-<li>Index &#xC120;&#xB450; &#xCEEC;&#xB7FC;&#xC774; &#xC870;&#xAC74;&#xC808;&#xC5D0; &#xC0AC;&#xC6A9;&#xB418;&#xB354;&#xB77C;&#xB3C4; Index Range Scan&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD558;&#xAC70;&#xB098; Index&#xB97C; &#xC0AC;&#xC6A9;&#xBABB;&#xD558;&#xB294; &#xACBD;&#xC6B0;</li>
-<li>&#xCE7C;&#xB7FC; &#xAC00;&#xACF5; : <code>SUBSTR(DNAME, 1, 2) = &apos;&#xC601;&#xC5C5;&apos;</code></li>
-<li>&#xBD80;&#xC815; &#xBE44;&#xAD50; : <code>DNAME &lt;&gt; &apos;&#xC601;&#xC5C5;&#xBD80;&apos;</code></li>
-<li><p>NOT NULL &#xC870;&#xAC74; : <code>COMM IS NOT NULL</code> (&#xB2F9;&#xC5F0;&#xD788; INDEX&#xC5D0;&#xB294; NULL&#xC774; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C;, &#xADF8;&#xB0E5; Index Full Scan&#xACFC; &#xAC19;&#xB2E4;.)</p></li>
-<li>Index &#xCEEC;&#xB7FC; &#xAC00;&#xACF5;&#xC5D0; &#xB300;&#xD55C; Tuning</li>
-<li><code>SUBSTR(DNAME, 1, 2) = &apos;&#xC601;&#xC5C5;&apos;</code> -&gt; <code>DNAME LIKE &apos;&#xC601;&#xC5C5;%&apos;</code></li>
+<li>Oracel Clusterd Table : 값은 Key값을 가진 record를 한 block에 저장 (1 block의 크기가 넘으면 cluster chain으로 연결)</li>
+<li>CLUSTER에 대한 Index를 생성<ul>
+<li>Index Key값은 Unique</li>
+<li>Index Key : Table Record가 1:M 관계 (일반 Index는 1:1)</li>
+<li>Index Key에서 Random Scan, Cluster 내에서는 Sqeuential Scan</li>
+</ul>
+</li>
+<li>다음과 같은 경우 유리<ul>
+<li>Scan 범위가 넓을 경우</li>
+<li>크기가 작고 NL Join으로 반복 Lookup하는 Table</li>
+<li>Column 수가 적고 rocord가 많은 Table</li>
+<li>데이터 입력 패턴과 조회 패턴이 서로 다른 Table<ul>
+<li>ex. 실적등록 및 조회의 경우<ul>
+<li>입력은 일자별로 진행되지만, 조회는 사원별로 하는 경우</li>
+<li>일반 Table의 경우 사원마다 365일의 데이터 페이지를 Random 액세스 해야함</li>
+<li>사번을 기준으로 CLUSTER를 생성하면 효과적</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-Index-Tuning"><a href="#4-2-Index-Tuning" class="headerlink" title="4.2 Index Tuning"></a>4.2 Index Tuning</h3><h4 id="Index-Tuning-기초"><a href="#Index-Tuning-기초" class="headerlink" title="Index Tuning 기초"></a>Index Tuning 기초</h4><ul>
+<li><p>Index 선두 컬럼이 조건절에 사용되더라도 Index Range Scan이 불가능하거나 Index를 사용못하는 경우</p>
+<ul>
+<li>칼럼 가공 : <code>SUBSTR(DNAME, 1, 2) = &#39;영업&#39;</code></li>
+<li>부정 비교 : <code>DNAME &lt;&gt; &#39;영업부&#39;</code></li>
+<li>NOT NULL 조건 : <code>COMM IS NOT NULL</code> (당연히 INDEX에는 NULL이 없으므로, 그냥 Index Full Scan과 같다.)</li>
+</ul>
+</li>
+<li><p>Index 컬럼 가공에 대한 Tuning</p>
+<ul>
+<li><code>SUBSTR(DNAME, 1, 2) = &#39;영업&#39;</code> -&gt; <code>DNAME LIKE &#39;영업%&#39;</code></li>
 <li><code>SAL * 12 &gt; 3000</code> -&gt; <code>SAL &gt; 3000 / 12</code></li>
-<li><code>TO_CHAR(&#xC77C;&#xC2DC;,&apos;yyyymmdd&apos;) = :dt</code> -&gt; <code>&#xC77C;&#xC2DC; &gt;= TO_DATE(:dt,&apos;yyyymmdd&apos;) AND &#xC77C;&#xC2DC; &lt; TO_DATE(:dt,&apos;yyyymmdd&apos;) + 1</code></li>
-<li><code>&#xC5F0;&#xB839; || &#xC9C1;&#xC5C5; = &apos;30&#xACF5;&#xBB34;&#xC6D0;&apos;</code> -&gt; <code>&#xC5F0;&#xB839; = 30 AND &#xC9C1;&#xC5C5; = &apos;&#xACF5;&#xBB34;&#xC6D0;&apos;</code></li>
-<li><p><code>&#xD68C;&#xC6D0;&#xBC88;&#xD638; || &#xC9C0;&#xC810;&#xBC88;&#xD638; = :str</code> -&gt; <code>&#xD68C;&#xC6D0;&#xBC88;&#xD638; = SUBSTR(:str,1,2) AND &#xC9C0;&#xC810;&#xBC88;&#xD638; = SUBSTR(:str,3,4)</code></p></li>
-<li>Implicit Conversion (&#xBB35;&#xC2DC;&#xC801; &#xD615;&#xBCC0;&#xD658;)</li>
-<li>&#xCEEC;&#xB7FC; &#xD0C0;&#xC785;&#xACFC; &#xBE44;&#xAD50;&#xAC12; &#xD0C0;&#xC785;&#xC774; &#xB2E4;&#xB97C; &#xACBD;&#xC6B0; &#xBB35;&#xC2DC;&#xC801; &#xD615;&#xBCC0;&#xD658;&#xC774; &#xBC1C;&#xC0DD;</li>
-<li>&#xBB38;&#xC790;&#xD615;&#xACFC; &#xC22B;&#xC790;&#xD615; : &#xBB38;&#xC790;&#xD615;&#xC744; &#xC22B;&#xC790;&#xD615;&#xC73C;&#xB85C; &#xBCC0;&#xD658;</li>
-<li>&#xBB38;&#xC790;&#xD615;&#xACFC; &#xB0A0;&#xC9DC;&#xD615; : &#xBB38;&#xC790;&#xD615;&#xC744; &#xB0A0;&#xC9DC;&#xD615;&#xC73C;&#xB85C; &#xBCC0;&#xD658;</li>
-<li>&#xBCC0;&#xD658;&#xB418;&#xB294;&#xAC8C; &#xCEEC;&#xB7FC;&#xCABD;&#xC774;&#xB77C;&#xBA74; Index&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xBABB;&#xD558;&#xACE0; Table Full Scan &#xBC1C;&#xC0DD;</li>
-<li><p>&#xC774;&#xB7F0; &#xBCC0;&#xD658;&#xC758; &#xC6B0;&#xC120;&#xC21C;&#xC704;&#xB97C; &#xC678;&#xC6B0;&#xAE30; &#xBCF4;&#xB2E4;&#xB294; &#xADF8;&#xB0E5; &#xBE44;&#xAD50;&#xAC12;&#xC744; &#xCEEC;&#xB7FC; &#xD0C0;&#xC785;&#xC73C;&#xB85C; &#xBCC0;&#xD658;&#xD574;&#xC8FC;&#xB294;&#xAC8C; &#xC88B;&#xC74C;</p></li>
+<li><code>TO_CHAR(일시,&#39;yyyymmdd&#39;) = :dt</code> -&gt; <code>일시 &gt;= TO_DATE(:dt,&#39;yyyymmdd&#39;) AND 일시 &lt; TO_DATE(:dt,&#39;yyyymmdd&#39;) + 1</code></li>
+<li><code>연령 || 직업 = &#39;30공무원&#39;</code> -&gt; <code>연령 = 30 AND 직업 = &#39;공무원&#39;</code></li>
+<li><code>회원번호 || 지점번호 = :str</code> -&gt; <code>회원번호 = SUBSTR(:str,1,2) AND 지점번호 = SUBSTR(:str,3,4)</code></li>
 </ul>
-<h4 id="table-random-&#xC561;&#xC138;&#xC2A4;-&#xCD5C;&#xC18C;&#xD654;">Table Random &#xC561;&#xC138;&#xC2A4; &#xCD5C;&#xC18C;&#xD654;</h4>
+</li>
+<li><p>Implicit Conversion (묵시적 형변환)</p>
 <ul>
-<li><p>Index rowid&#xC5D0; &#xC758;&#xD55C; Table &#xC561;&#xC138;&#xC2A4; <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">TABLE ACCESS (BY INDEX ROWID) OF &apos;&#xCEEC;&#xB7FC;&apos; (TABLE)</div></pre></td></tr></table></figure></p></li>
-<li>rowid&#xB294; disk &#xC0C1;&#xC758; &#xC704;&#xCE58;&#xC815;&#xBCF4;&#xC774;&#xB2E4;.</li>
-<li>DB Buffer Cache&#xC5D0;&#xC11C;&#xC758; &#xD574;&#xB2F9; Block&#xC758; &#xC704;&#xCE58;&#xB294; rowid&#xC758; hash&#xAC12;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; bucket list&#xB85C; &#xCC3E;&#xC544;&#xAC04;&#xB2E4;.</li>
-<li>bucket list &#xC0C1;&#xC5D0;&#xC11C; &#xAC12;&#xC744; &#xCC3E;&#xB294; &#xACFC;&#xC815;&#xC5D0;&#xC11C;&#xB3C4; Latch, &#xBC84;&#xD37C; Lock&#xB4F1;&#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xCC3E;&#xB294;&#xB2E4;.</li>
-<li>Clustering Factor</li>
-<li>Index&#xC0C1; &#xAC19;&#xC740; Block&#xC5D0; &#xC788;&#xB294; record&#xB4E4;&#xB77C;&#xB3C4; Table&#xC0C1;&#xC5D0;&#xC11C;&#xB294; &#xB2E4;&#xB978; Block&#xB4E4;&#xC5D0; &#xC788;&#xC744; &#xC218; &#xC788;&#xB2E4;.</li>
-<li><p>Index&#xC640; Table&#xC758; Record&#xC815;&#xB82C; &#xC21C;&#xC11C;&#xAC00; &#xBE44;&#xAD50;&#xC801; &#xAC19;&#xC740; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; Clustering Factor&#xAC00; &#xC88B;&#xC544;&#xC11C; Index Scan &#xD6A8;&#xC728;&#xC774; &#xC88B;&#xB2E4;.</p></li>
-<li>Index &#xC190;&#xC775;&#xBD84;&#xAE30;&#xC810;</li>
-<li>Index Range Scan&#xC5D0; &#xC758;&#xD55C; &#xBE44;&#xC6A9;&#xC774; Table Full Scan&#xBCF4;&#xB2E4; &#xB290;&#xB824;&#xC9C0;&#xB294; &#xC9C0;&#xC810;</li>
-<li>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; 5 ~ 20% &#xC815;&#xB3C4;&#xC9C0;&#xB9CC; Clustering Factor&#xAC00; &#xB098;&#xC058;&#xBA74; 5% &#xBBF8;&#xB9CC;&#xC774; &#xB420;&#xC218;&#xB3C4; &#xC788;&#xACE0;, &#xC544;&#xC8FC; &#xC88B;&#xC744; &#xB550; 90%&#xAE4C;&#xC9C0; &#xC62C;&#xB77C;&#xAC00;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;.</li>
-<li>Index rowid&#xC5D0; &#xC758;&#xD55C; Table &#xC561;&#xC138;&#xC2A4; : Random &#xC561;&#xC138;&#xC2A4;, Single Block Read</li>
-<li><p>Full Table Scan : Sequential &#xC561;&#xC138;&#xC2A4;, Multiblock Read</p></li>
-<li>&#xC190;&#xC775;&#xBD84;&#xAE30;&#xC810; &#xADF9;&#xBCF5;&#xD558;&#xAE30;</li>
+<li>컬럼 타입과 비교값 타입이 다를 경우 묵시적 형변환이 발생</li>
+<li>문자형과 숫자형 : 문자형을 숫자형으로 변환</li>
+<li>문자형과 날짜형 : 문자형을 날짜형으로 변환</li>
+<li>변환되는게 컬럼쪽이라면 Index를 사용하지 못하고 Table Full Scan 발생</li>
+<li>이런 변환의 우선순위를 외우기 보다는 그냥 비교값을 컬럼 타입으로 변환해주는게 좋음</li>
 </ul>
-<ol style="list-style-type: decimal">
-<li>Clustering Index, IOT : Table&#xC744; Index&#xAD6C;&#xC870;&#xB85C; &#xC0DD;&#xC131;&#xD568;&#xC73C;&#xB85C;&#xC368; &#xD56D;&#xC0C1; &#xC815;&#xB82C;&#xB41C; &#xC0C1;&#xD0DC;&#xB97C; &#xC720;&#xC9C0;</li>
-<li>Index Key &#xC774;&#xC678;&#xC758; &#xBBF8;&#xB9AC; &#xC9C0;&#xC815;&#xB41C; &#xCE7C;&#xB7FC;&#xC744; Leaf Level&#xC5D0; &#xBAA8;&#xB450; &#xC800;&#xC7A5; (MS-SQL&#xC758; Include index)</li>
-<li>Oracle&#xC758; Clusterd Table : Key&#xAC12;&#xC774; &#xAC19;&#xC740; record&#xB97C; &#xAC19;&#xC740; Block&#xC5D0; &#xC800;&#xC7A5;&#xD568;&#xC73C;&#xB85C; Random &#xC561;&#xC138;&#xC2A4;&#xB294; Key&#xAC12;&#xB2F9; 1&#xBC88;</li>
-<li>Partitioning : &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xCEEC;&#xB7FC; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xD30C;&#xD2F0;&#xC154;&#xB2DD;&#xC744; &#xD558;&#xBA74; Full Table Scan&#xC774;&#xB354;&#xB77C;&#xB3C4; &#xC77C;&#xBD80; &#xD30C;&#xD2F0;&#xC158;&#xB9CC; &#xC77D;&#xACE0; &#xBA48;&#xCD9C; &#xC218; &#xC788;&#xC74C;</li>
+</li>
+</ul>
+<h4 id="Table-Random-액세스-최소화"><a href="#Table-Random-액세스-최소화" class="headerlink" title="Table Random 액세스 최소화"></a>Table Random 액세스 최소화</h4><ul>
+<li>Index rowid에 의한 Table 액세스<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">TABLE ACCESS (BY INDEX ROWID) OF &apos;컬럼&apos; (TABLE)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>rowid는 disk 상의 위치정보이다.</li>
+<li>DB Buffer Cache에서의 해당 Block의 위치는 rowid의 hash값을 이용하여 bucket list로 찾아간다.</li>
+<li>bucket list 상에서 값을 찾는 과정에서도 Latch, 버퍼 Lock등을 이용해서 찾는다.</li>
+<li>Clustering Factor<ul>
+<li>Index상 같은 Block에 있는 record들라도 Table상에서는 다른 Block들에 있을 수 있다.</li>
+<li>Index와 Table의 Record정렬 순서가 비교적 같은 경우에는 Clustering Factor가 좋아서 Index Scan 효율이 좋다.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Index 손익분기점</p>
+<ul>
+<li>Index Range Scan에 의한 비용이 Table Full Scan보다 느려지는 지점</li>
+<li>일반적으로 5 ~ 20% 정도지만 Clustering Factor가 나쁘면 5% 미만이 될수도 있고, 아주 좋을 땐 90%까지 올라가기도 한다.</li>
+<li>Index rowid에 의한 Table 액세스 : Random 액세스, Single Block Read</li>
+<li>Full Table Scan : Sequential 액세스, Multiblock Read</li>
+</ul>
+</li>
+<li><p>손익분기점 극복하기</p>
+<ol>
+<li>Clustering Index, IOT : Table을 Index구조로 생성함으로써 항상 정렬된 상태를 유지</li>
+<li>Index Key 이외의 미리 지정된 칼럼을 Leaf Level에 모두 저장 (MS-SQL의 Include index)</li>
+<li>Oracle의 Clusterd Table : Key값이 같은 record를 같은 Block에 저장함으로 Random 액세스는 Key값당 1번</li>
+<li>Partitioning : 자주 사용하는 컬럼 기준으로 파티셔닝을 하면 Full Table Scan이더라도 일부 파티션만 읽고 멈출 수 있음</li>
 </ol>
-<h4 id="table-random-&#xC561;&#xC138;&#xC2A4;-&#xCD5C;&#xC18C;&#xD654;-tuning">Table Random &#xC561;&#xC138;&#xC2A4; &#xCD5C;&#xC18C;&#xD654; Tuning</h4>
-<h5 id="index-&#xCEEC;&#xB7FC;-&#xCD94;&#xAC00;">1. Index &#xCEEC;&#xB7FC; &#xCD94;&#xAC00;</h5>
-<ul>
-<li>&#xAE30;&#xC874; Index&#xC758; &#xAD6C;&#xC131;&#xC774;&#xB098; &#xC2E0;&#xADDC; &#xCD94;&#xAC00;&#xB294; &#xC2E4; &#xC6B4;&#xC601; &#xD658;&#xACBD;&#xC5D0;&#xC11C;&#xB294; &#xD568;&#xBD80;&#xB85C; &#xBC14;&#xAFB8;&#xAE30;&#xAC00; &#xC27D;&#xC9C0; &#xC54A;&#xB2E4;.</li>
-<li>&#xAE30;&#xC874; Index&#xC5D0; &#xC870;&#xAC74;&#xC808;&#xC758; &#xBE44;&#xAD50;&#xC870;&#xAC74;&#xC744; &#xBCF4;&#xACE0; &#xB4A4;&#xC5D0; &#xCEEC;&#xB7FC;&#xC744; &#xCD94;&#xAC00;&#xD574;&#xC918;&#xC11C; &#xCD5C;&#xB300;&#xD55C; &#xC870;&#xAC74;&#xBE44;&#xAD50;&#xB97C; Index &#xB0B4;&#xC5D0;&#xC11C; &#xB05D;&#xB0B4;&#xACE0; Table &#xC561;&#xC138;&#xC2A4;&#xB97C; &#xCD5C;&#xC18C;&#xD654; &#xD55C;&#xB2E4;.</li>
+</li>
+</ul>
+<h4 id="Table-Random-액세스-최소화-Tuning"><a href="#Table-Random-액세스-최소화-Tuning" class="headerlink" title="Table Random 액세스 최소화 Tuning"></a>Table Random 액세스 최소화 Tuning</h4><h5 id="1-Index-컬럼-추가"><a href="#1-Index-컬럼-추가" class="headerlink" title="1. Index 컬럼 추가"></a>1. Index 컬럼 추가</h5><ul>
+<li>기존 Index의 구성이나 신규 추가는 실 운영 환경에서는 함부로 바꾸기가 쉽지 않다.</li>
+<li>기존 Index에 조건절의 비교조건을 보고 뒤에 컬럼을 추가해줘서 최대한 조건비교를 Index 내에서 끝내고 Table 액세스를 최소화 한다.</li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> I_EMP_01 <span class="keyword">ON</span> EMP(DEPTNO, JOB);</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ INDEX(I_EMP_01) */</span> ENAME, JOB, SAL</div><div class="line">  <span class="keyword">FROM</span> EMP</div><div class="line"> <span class="keyword">WHERE</span> DEPTNO = <span class="number">30</span></div><div class="line">   <span class="keyword">AND</span> SAL &gt;= <span class="number">2000</span>;</div></pre></td></tr></table></figure>
-<p>&#xC704;&#xC758; &#xC0C1;&#xD669;&#xC5D0;&#xC11C;&#xB294; DEPTNO = 30&#xC778; &#xC870;&#xAC74;&#xC5D0; &#xB9DE;&#xB294; record&#xB4E4;&#xC5D0; &#xB300;&#xD574;&#xC11C; Table&#xC5D0;&#xC11C; record&#xB4E4;&#xC744; &#xAC00;&#xC838;&#xC640;&#xC57C; &#xD55C;&#xB2E4;.<br>
-&#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xAE30;&#xC874; Index&#xB97C; &#xADF8;&#xB300;&#xB85C; &#xB450;&#xACE0; &#xCEEC;&#xB7FC;&#xB9CC; &#xCD94;&#xAC00;&#xD574; &#xC904; &#xACBD;&#xC6B0; Index&#xC758; &#xC561;&#xC138;&#xC2A4;&#xB294; &#xC904;&#xC77C; &#xC218; &#xC5C6;&#xC9C0;&#xB9CC;, Table &#xC561;&#xC138;&#xC2A4;&#xB294; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>위의 상황에서는 DEPTNO = 30인 조건에 맞는 record들에 대해서 Table에서 record들을 가져와야 한다.<br>아래와 같이 기존 Index를 그대로 두고 컬럼만 추가해 줄 경우 Index의 액세스는 줄일 수 없지만, Table 액세스는 줄일 수 있다.</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> I_EMP_01 <span class="keyword">ON</span> EMP(DEPTNO, JOB, SAL);</div></pre></td></tr></table></figure>
 <ul>
-<li>&#xB9CC;&#xC57D; Index&#xC758; &#xCE7C;&#xB7FC;&#xB9CC;&#xC73C;&#xB85C;&#xB3C4; &#xC870;&#xD68C;&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;&#xBA74; Table &#xC561;&#xC138;&#xC2A4; &#xC790;&#xCCB4;&#xB97C; &#xC548;&#xD574;&#xB3C4; &#xB420; &#xC218; &#xC788;&#xB2E4;.</li>
-<li>MS-SQL&#xC5D0;&#xC11C;&#xB294; &#xC774; &#xACBD;&#xC6B0;&#xB97C; Covered Index, Covered Query &#xB77C; &#xBD80;&#xB978;&#xB2E4;.</li>
-<li>Include Index : MS-SQL&#xC5D0;&#xC11C;&#xB294; Index&#xC5D0; Key&#xAC00; &#xC544;&#xB2CC; &#xC77C;&#xBC18; &#xCEEC;&#xB7FC; &#xCD94;&#xAC00;&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.
-<ul>
+<li>만약 Index의 칼럼만으로도 조회가 가능하다면 Table 액세스 자체를 안해도 될 수 있다.<ul>
+<li>MS-SQL에서는 이 경우를 Covered Index, Covered Query 라 부른다.</li>
+<li>Include Index : MS-SQL에서는 Index에 Key가 아닌 일반 컬럼 추가가 가능하다.<ul>
 <li><code>CREATE INDEX EMP_01 ON EMP (DEPTNO) INCLUDE (SAL);</code></li>
-</ul></li>
 </ul>
-<h5 id="iot-cluster-&#xD65C;&#xC6A9;">2. IOT, Cluster &#xD65C;&#xC6A9;</h5>
-<ul>
-<li>Index Key&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xD55C;&#xBC88;&#xB9CC;&#xC5D0; &#xCC3E;&#xC544;&#xAC00;&#xC11C; Sequential&#xB85C; &#xCC3E;&#xC74C;</li>
-<li>Index Key&#xC758; Hash&#xAC12;&#xC73C;&#xB85C; &#xCC3E;&#xC544;&#xAC00;&#xBBC0;&#xB85C; <code>=</code> &#xC870;&#xAC74;&#xC73C;&#xB85C;&#xB9CC; &#xAC80;&#xC0C9;&#xB418;&#xB294; &#xCE7C;&#xB7FC;&#xC744; Key&#xB85C; &#xD574;&#xC57C;&#xD55C;&#xB2E4;.</li>
+</li>
 </ul>
-<h5 id="&#xC218;&#xB3D9;&#xC73C;&#xB85C;-clustering-factor-&#xB192;&#xC774;&#xAE30;">3. &#xC218;&#xB3D9;&#xC73C;&#xB85C; Clustering Factor &#xB192;&#xC774;&#xAE30;</h5>
-<ul>
-<li>&#xC790;&#xC8FC; &#xC774;&#xC6A9;&#xB418;&#xB294; Index&#xB97C; &#xAE30;&#xC900;&#xC73C;&#xB85C; Table&#xC744; &#xC7AC;&#xC0DD;&#xC131;</li>
-<li>&#xD55C; Table&#xC5D0; Index&#xAC00; &#xC5EC;&#xB7EC; &#xAC1C;&#xC778; &#xACBD;&#xC6B0; &#xADF8; &#xC911; 1&#xAC1C;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; Clustering Factor&#xAC00; &#xC88B;&#xAC8C; &#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
+</li>
 </ul>
-<h4 id="index-scan-&#xBC94;&#xC704;-&#xCD5C;&#xC18C;&#xD654;">Index Scan &#xBC94;&#xC704; &#xCD5C;&#xC18C;&#xD654;</h4>
-<ul>
-<li>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; Random &#xC561;&#xC138;&#xC2A4; &#xBC1C;&#xC0DD;&#xB7C9;&#xC744; &#xC904;&#xC774;&#xACE0;, Sequential &#xC561;&#xC138;&#xC2A4;&#xC5D0; &#xC758;&#xD55C; &#xC120;&#xD0DD; &#xBC30;&#xC911;&#xC744; &#xB192;&#xC774;&#xBA74; &#xC131;&#xB2A5;&#xC774; &#xC88B;&#xC544;&#xC9C4;&#xB2E4;.</li>
+<h5 id="2-IOT-Cluster-활용"><a href="#2-IOT-Cluster-활용" class="headerlink" title="2. IOT, Cluster 활용"></a>2. IOT, Cluster 활용</h5><ul>
+<li>Index Key를 이용해서 한번만에 찾아가서 Sequential로 찾음</li>
+<li>Index Key의 Hash값으로 찾아가므로 <code>=</code> 조건으로만 검색되는 칼럼을 Key로 해야한다.</li>
 </ul>
-<h5 id="index-&#xC120;&#xD589;-&#xCE7C;&#xB7FC;&#xC774;-&#xBC94;&#xC704;&#xC870;&#xAC74;&#xC77C;-&#xACBD;&#xC6B0;">1. Index &#xC120;&#xD589; &#xCE7C;&#xB7FC;&#xC774; &#xBC94;&#xC704;&#xC870;&#xAC74;&#xC77C; &#xACBD;&#xC6B0;</h5>
-<ul>
-<li>&#xBC94;&#xC704; &#xC870;&#xAC74; &#xC774;&#xD6C4;&#xC758; &#xCE7C;&#xB7FC;&#xB4E4;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; Range Scan&#xC744; &#xD574;&#xC57C; &#xD558;&#xBBC0;&#xB85C; &#xC77D;&#xC5B4;&#xC57C; &#xD560; &#xBC94;&#xC704;&#xAC00; &#xB113;&#xC5B4;&#xC9C4;&#xB2E4;.</li>
-<li>&#xC774;&#xB7F4; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; Index &#xCEEC;&#xB7FC; &#xC21C;&#xC11C;&#xB97C; &#xBC14;&#xAFD4;&#xC8FC;&#xB294;&#xAC8C; &#xD6A8;&#xACFC;&#xC801;&#xC774;&#xB2E4;.</li>
+<h5 id="3-수동으로-Clustering-Factor-높이기"><a href="#3-수동으로-Clustering-Factor-높이기" class="headerlink" title="3. 수동으로 Clustering Factor 높이기"></a>3. 수동으로 Clustering Factor 높이기</h5><ul>
+<li>자주 이용되는 Index를 기준으로 Table을 재생성</li>
+<li>한 Table에 Index가 여러 개인 경우 그 중 1개에 대해서만 Clustering Factor가 좋게 할 수 있다.</li>
 </ul>
-<h5 id="&#xBC94;&#xC704;&#xC870;&#xAC74;&#xC744;-in-list&#xB85C;-&#xC804;&#xD658;">2. &#xBC94;&#xC704;&#xC870;&#xAC74;&#xC744; In-List&#xB85C; &#xC804;&#xD658;</h5>
-<ul>
-<li>&#xBC94;&#xC704;&#xC870;&#xAC74;&#xC73C;&#xB85C; &#xAC80;&#xC0C9;&#xD558;&#xB294; &#xCEEC;&#xB7FC;&#xC758; &#xC21C;&#xC11C;&#xB97C; &#xBC14;&#xAFB8;&#xAE30;&#xAC00; &#xD798;&#xB4E0; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; BETWEEN &#xC870;&#xAC74;&#xC744; IN-List&#xB85C; &#xBC14;&#xAFD4;&#xC8FC;&#xBA74; &#xD6A8;&#xACFC;&#xC801;&#xC774;&#xB2E4;.</li>
-<li>&#xC2E4;&#xD589;&#xACC4;&#xD68D;&#xC0C1;&#xC5D0; <code>INLIST ITERATOR</code>&#xB85C; &#xCC98;&#xB9AC;&#xB418;&#xBBC0;&#xB85C; Scan &#xBC94;&#xC704;&#xB97C; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</li>
-<li>IN-List&#xB294; <code>UNION ALL</code>&#xB85C; &#xB530;&#xB85C; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xAC70;&#xB791; &#xAC19;&#xB2E4;.</li>
-<li>IN-List&#xC758; &#xAC1C;&#xC218;&#xAC00; &#xC801;&#xC744; &#xACBD;&#xC6B0; &#xD6A8;&#xACFC;&#xC801;&#xC774;&#xB2E4;. &#xB9CE;&#xB2E4;&#xBA74; &#xBC94;&#xC704;&#xC870;&#xAC74;&#xC77C; &#xACBD;&#xC6B0;&#xBCF4;&#xB2E4; &#xBE44;&#xD6A8;&#xC728;&#xC801;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</li>
+<h4 id="Index-Scan-범위-최소화"><a href="#Index-Scan-범위-최소화" class="headerlink" title="Index Scan 범위 최소화"></a>Index Scan 범위 최소화</h4><ul>
+<li>일반적으로 Random 액세스 발생량을 줄이고, Sequential 액세스에 의한 선택 배중을 높이면 성능이 좋아진다.</li>
+</ul>
+<h5 id="1-Index-선행-칼럼이-범위조건일-경우"><a href="#1-Index-선행-칼럼이-범위조건일-경우" class="headerlink" title="1. Index 선행 칼럼이 범위조건일 경우"></a>1. Index 선행 칼럼이 범위조건일 경우</h5><ul>
+<li>범위 조건 이후의 칼럼들에 대해서는 Range Scan을 해야 하므로 읽어야 할 범위가 넓어진다.</li>
+<li>이럴 경우에는 Index 컬럼 순서를 바꿔주는게 효과적이다.</li>
+</ul>
+<h5 id="2-범위조건을-In-List로-전환"><a href="#2-범위조건을-In-List로-전환" class="headerlink" title="2. 범위조건을 In-List로 전환"></a>2. 범위조건을 In-List로 전환</h5><ul>
+<li>범위조건으로 검색하는 컬럼의 순서를 바꾸기가 힘든 경우에는 BETWEEN 조건을 IN-List로 바꿔주면 효과적이다.<ul>
+<li>실행계획상에 <code>INLIST ITERATOR</code>로 처리되므로 Scan 범위를 줄일 수 있다.</li>
+<li>IN-List는 <code>UNION ALL</code>로 따로 실행되는 거랑 같다.</li>
+<li>IN-List의 개수가 적을 경우 효과적이다. 많다면 범위조건일 경우보다 비효율적일 수 있다.</li>
+</ul>
+</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DEPTNO BETWEEN 10 AND 20 -&gt; DEPTNO IN (10, 20)</div></pre></td></tr></table></figure>
-<h5 id="&#xBC94;&#xC704;&#xC870;&#xAC74;&#xC774;-2&#xAC1C;-&#xC774;&#xC0C1;&#xC77C;-&#xACBD;&#xC6B0;">3. &#xBC94;&#xC704;&#xC870;&#xAC74;&#xC774; 2&#xAC1C; &#xC774;&#xC0C1;&#xC77C; &#xACBD;&#xC6B0;</h5>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> I_PROD <span class="keyword">ON</span> PRODUCT(COMPANY, PTYPE, PNAME);</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> PRODUCT</div><div class="line"> <span class="keyword">WHERE</span> COMPANY = :com</div><div class="line">   <span class="keyword">AND</span> PTYPE <span class="keyword">LIKE</span> :ptype || <span class="string">&apos;%&apos;</span></div><div class="line">   <span class="keyword">AND</span> PNAME <span class="keyword">LIKE</span> :pname || <span class="string">&apos;%&apos;</span>;</div></pre></td></tr></table></figure>
+<h5 id="3-범위조건이-2개-이상일-경우"><a href="#3-범위조건이-2개-이상일-경우" class="headerlink" title="3. 범위조건이 2개 이상일 경우"></a>3. 범위조건이 2개 이상일 경우</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> I_PROD <span class="keyword">ON</span> PRODUCT(COMPANY, PTYPE, PNAME);</div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> PRODUCT</div><div class="line"> <span class="keyword">WHERE</span> COMPANY = :com</div><div class="line">   <span class="keyword">AND</span> PTYPE <span class="keyword">LIKE</span> :ptype || <span class="string">'%'</span></div><div class="line">   <span class="keyword">AND</span> PNAME <span class="keyword">LIKE</span> :pname || <span class="string">'%'</span>;</div></pre></td></tr></table></figure>
 <ul>
-<li>&#xCCAB;&#xBC88;&#xC9F8; &#xBC94;&#xC704;&#xC870;&#xAC74;&#xC5D0; &#xC758;&#xD574;&#xC11C; &#xC2A4;&#xCE94; &#xBC94;&#xC704;&#xAC00; &#xAC70;&#xC758; &#xACB0;&#xC815;&#xB098;&#xACE0;, &#xB450;&#xBC88;&#xC9F8;&#xB294; &#xD544;&#xD130; &#xC870;&#xAC74; &#xC5ED;&#xD560;&#xB9CC; &#xD55C;&#xB2E4;.</li>
-<li>&#xB9CC;&#xC57D; &#xC774; &#xACBD;&#xC6B0; &#xCCAB;&#xBC88;&#xC9F8; &#xBC94;&#xC704;&#xC870;&#xAC74;&#xC774; &#xC785;&#xB825;&#xB418;&#xC9C0; &#xC54A;&#xC744; &#xC218; &#xC788;&#xB2E4;&#xBA74; SQL&#xC744; 2&#xAC1C;&#xB85C; &#xB098;&#xB204;&#xB294;&#xAC8C; &#xD6A8;&#xACFC;&#xC801;&#xC774;&#xB2E4;.</li>
+<li>첫번째 범위조건에 의해서 스캔 범위가 거의 결정나고, 두번째는 필터 조건 역할만 한다.</li>
+<li>만약 이 경우 첫번째 범위조건이 입력되지 않을 수 있다면 SQL을 2개로 나누는게 효과적이다.</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> PRODUCT</div><div class="line"> <span class="keyword">WHERE</span> :ptype <span class="keyword">IS</span> <span class="literal">NULL</span></div><div class="line">   <span class="keyword">AND</span> COMPANY = :com</div><div class="line">   <span class="keyword">AND</span> PNAME <span class="keyword">LIKE</span> :pname || <span class="string">&apos;%&apos;</span>;</div><div class="line">   </div><div class="line"> UNION ALL</div><div class="line"> </div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> PRODUCT</div><div class="line"> <span class="keyword">WHERE</span> :ptype <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span></div><div class="line">   <span class="keyword">AND</span> COMPANY = :com</div><div class="line">   <span class="keyword">AND</span> PTYPE = :ptype</div><div class="line">   <span class="keyword">AND</span> PNAME <span class="keyword">LIKE</span> :pname || <span class="string">&apos;%&apos;</span>;</div></pre></td></tr></table></figure>
-<h4 id="index-&#xC124;&#xACC4;">Index &#xC124;&#xACC4;</h4>
-<ul>
-<li>&#xAE30;&#xBCF8; &#xACF5;&#xC2DD;</li>
-</ul>
-<ol style="list-style-type: decimal">
-<li>&#xC870;&#xAC74;&#xC808;&#xC5D0; &#xD56D;&#xC0C1; &#xC0AC;&#xC6A9;&#xB418;&#xAC70;&#xB098;, &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xCEEC;&#xB7FC;&#xC744; &#xC120;&#xC815;</li>
-<li><code>=</code> &#xC870;&#xAC74;&#xC73C;&#xB85C; &#xC790;&#xC8FC; &#xC870;&#xD68C;&#xB418;&#xB294; &#xCE7C;&#xB7FC;&#xC744; &#xC55E;&#xC73C;&#xB85C;</li>
-<li>&#xC870;&#xAC74;&#xC808;&#xC5D0; &#xC0AC;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB354;&#xB77C;&#xB3C4; Sort &#xC5F0;&#xC0B0; (ORDER BY, GROUP BY)&#xB97C; &#xB300;&#xCCB4;&#xD560; &#xBAA9;&#xC801;&#xC73C;&#xB85C; &#xAD6C;&#xC131;&#xC774; &#xAC00;&#xB2A5;</li>
-<li>&#xC120;&#xD0DD;&#xB3C4;(Selectivy)&#xAC00; &#xCDA9;&#xBD84;&#xD788; &#xB0AE;&#xC9C0; &#xC54A;&#xB2E4;&#xBA74; Full Table Scan&#xBCF4;&#xB2E4; &#xB290;&#xB824;&#xC9C0;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC758;&#xBBF8;&#xAC00; &#xC5C6;&#xC74C;</li>
-<li>&#xCD94;&#xAC00; &#xACE0;&#xB824;&#xC0AC;&#xD56D;
-<ul>
-<li>Query &#xC218;&#xD589; &#xBE48;&#xB3C4;</li>
-<li>&#xC5C5;&#xBB34;&#xC0C1; &#xC911;&#xC694;&#xB3C4;</li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> PRODUCT</div><div class="line"> <span class="keyword">WHERE</span> :ptype <span class="keyword">IS</span> <span class="literal">NULL</span></div><div class="line">   <span class="keyword">AND</span> COMPANY = :com</div><div class="line">   <span class="keyword">AND</span> PNAME <span class="keyword">LIKE</span> :pname || <span class="string">'%'</span>;</div><div class="line">   </div><div class="line"> UNION ALL</div><div class="line"> </div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> PRODUCT</div><div class="line"> <span class="keyword">WHERE</span> :ptype <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span></div><div class="line">   <span class="keyword">AND</span> COMPANY = :com</div><div class="line">   <span class="keyword">AND</span> PTYPE = :ptype</div><div class="line">   <span class="keyword">AND</span> PNAME <span class="keyword">LIKE</span> :pname || <span class="string">'%'</span>;</div></pre></td></tr></table></figure>
+<h4 id="Index-설계"><a href="#Index-설계" class="headerlink" title="Index 설계"></a>Index 설계</h4><ul>
+<li>기본 공식<ol>
+<li>조건절에 항상 사용되거나, 자주 사용되는 컬럼을 선정</li>
+<li><code>=</code> 조건으로 자주 조회되는 칼럼을 앞으로</li>
+<li>조건절에 사용되지 않더라도 Sort 연산 (ORDER BY, GROUP BY)를 대체할 목적으로 구성이 가능</li>
+<li>선택도(Selectivy)가 충분히 낮지 않다면 Full Table Scan보다 느려지기 때문에 의미가 없음</li>
+<li>추가 고려사항<ul>
+<li>Query 수행 빈도</li>
+<li>업무상 중요도</li>
 <li>Clustering Factor</li>
-<li>&#xB370;&#xC774;&#xD130;&#xB7C9;</li>
-<li>DML &#xBD80;&#xD558;</li>
-<li>&#xC800;&#xC7A5; &#xACF5;&#xAC04;</li>
-<li>Index &#xAD00;&#xB9AC; &#xBE44;&#xC6A9;</li>
-</ul></li>
+<li>데이터량</li>
+<li>DML 부하</li>
+<li>저장 공간</li>
+<li>Index 관리 비용</li>
+</ul>
+</li>
 </ol>
+</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -429,7 +438,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/05/03.05.index/" data-id="cj243030c000xkc7b634d6wlw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/05/03.05.index/" data-id="cj244xaxu00197k7b7rtso6s1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -585,7 +594,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -595,7 +604,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+            <a href="/tags/APIGateway/" style="font-size: 17px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18px;">AWS</a> <a href="/tags/C/" style="font-size: 19px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11px;">CI/CD</a> <a href="/tags/DataScience/" style="font-size: 12px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12px;">JavaScript</a> <a href="/tags/JupyterNotebook/" style="font-size: 11px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 18px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 16px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
         </div>
     </div>
 

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>Running Multiple Coroutines Concurrently | Dev Star SJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Python" />
+    
+    <meta name="description" content="Python : Running Multiple Coroutines Concurrently파이썬에서 asyncio로 만들어진 Coroutine들 여러 개를 동시에 돌리는 방법에 대해서 소개해 드리겠습니다. 파이썬 코루틴들은 event_loop에 등록이 되어서 동작합니다. 가장 먼저 생각할 수 있는 방법으로는 멀티쓰레드를 이용한 방법입니다만, Python의 쓰">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Running Multiple Coroutines Concurrently">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/08/19/Python.RunMultipleCoroutinesConcurrently/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="Python : Running Multiple Coroutines Concurrently파이썬에서 asyncio로 만들어진 Coroutine들 여러 개를 동시에 돌리는 방법에 대해서 소개해 드리겠습니다. 파이썬 코루틴들은 event_loop에 등록이 되어서 동작합니다. 가장 먼저 생각할 수 있는 방법으로는 멀티쓰레드를 이용한 방법입니다만, Python의 쓰">
+<meta property="og:updated_time" content="2017-04-30T03:19:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Running Multiple Coroutines Concurrently">
+<meta name="twitter:description" content="Python : Running Multiple Coroutines Concurrently파이썬에서 asyncio로 만들어진 Coroutine들 여러 개를 동시에 돌리는 방법에 대해서 소개해 드리겠습니다. 파이썬 코루틴들은 event_loop에 등록이 되어서 동작합니다. 가장 먼저 생각할 수 있는 방법으로는 멀티쓰레드를 이용한 방법입니다만, Python의 쓰">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">DevStarSJ</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Python/Python/">Python</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Python.RunMultipleCoroutinesConcurrently" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Running Multiple Coroutines Concurrently
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/08/19/Python.RunMultipleCoroutinesConcurrently/" class="article-date">
+            <time datetime="2016-08-18T15:00:00.000Z" itemprop="datePublished">2016-08-19</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Python/">Python</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Python-Running-Multiple-Coroutines-Concurrently"><a href="#Python-Running-Multiple-Coroutines-Concurrently" class="headerlink" title="Python : Running Multiple Coroutines Concurrently"></a>Python : Running Multiple Coroutines Concurrently</h1><p>파이썬에서 <code>asyncio</code>로 만들어진 Coroutine들 여러 개를 동시에 돌리는 방법에 대해서 소개해 드리겠습니다.</p>
+<p>파이썬 코루틴들은 <code>event_loop</code>에 등록이 되어서 동작합니다.</p>
+<p>가장 먼저 생각할 수 있는 방법으로는 멀티쓰레드를 이용한 방법입니다만, Python의 쓰레드는 동시에 동작하지 않습니다.<br>그래서 멀티스레드 작업은 같은 작업을 싱글스레드에서 하는것보다 더 느립니다.<br>더군다나 하나의 프로세스에서 동작하는 코루틴 들에 <code>event_loop</code> 등록을 각각하게 되면 오류가 발생합니다.<br>그래서 멀티쓰레드로 구현하는 방법은 일단 제외하겠습니다.</p>
+<h3 id="1-멀티프로세스-multiprocessing-로-구현"><a href="#1-멀티프로세스-multiprocessing-로-구현" class="headerlink" title="1. 멀티프로세스(multiprocessing)로 구현"></a>1. 멀티프로세스(multiprocessing)로 구현</h3><p>파이썬은 멀티프로세스로 작업을 구현하는것이 가능합니다.<br>이 경우 주의해야 할 점은 프로세스간에는 메모리 공유가 되지 않습니다.<br>서로 공유해야할 데이터가 있을 경우에는 다른 방법으로 공유하는 것을 추가구현하여야 합니다.</p>
+<p>아래 간단한 예제코드 입니다.<br>전체 코드가 아니라 실행되는 코드는 아니니 구현방법에 대해서만 참조해 주시기 바랍니다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> multiprocessing</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_server_source</span><span class="params">()</span>:</span></div><div class="line">    ...</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_server_client</span><span class="params">()</span>:</span></div><div class="line">    ...</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    process1 = multiprocessing.Process(target=run_server_source)</div><div class="line">    process2 = multiprocessing.Process(target=run_server_client)</div><div class="line"></div><div class="line">    process1.start()</div><div class="line">    process2.start()</div><div class="line"></div><div class="line">    process1.join()</div><div class="line">    process2.join()</div></pre></td></tr></table></figure>
+<h3 id="2-이벤트-루프-event-loop-를-공유"><a href="#2-이벤트-루프-event-loop-를-공유" class="headerlink" title="2. 이벤트 루프(event_loop)를 공유"></a>2. 이벤트 루프(event_loop)를 공유</h3><p>하나의 프로세스 안에서 이벤트 루프를 공유하는 방법입니다.<br>단일 프로세스 내에서 동작하기 때문에 데이터를 공유할 일이 있는 경우에는 이 방법이 편리합니다.</p>
+<p>이벤트 루프를 공유한다는게 말같지도 않게 들리죠 ?<br>몇개의 코루틴이든 그냥 <code>get_event_loop()</code>를 해서 사용하면 됩니다.<br>통상적으로 <code>class</code> 내부에서 코루틴을 사용하는 경우 내부에서 <code>get_event_loop()</code>를 매번 호출해서 사용하는 경우도 있고,<br><code>get_event_loop()</code>로 반환받은 <code>loop</code>를 멤버로 저장한 뒤 계속 사용하는 방법도 있습니다.</p>
+<p>이 경우에 <code>class</code> 외부에서 <code>loop</code>를 주입받아서 사용하도록 <code>class</code> 구현을 수정한 뒤 외부에서 <code>get_event_loop()</code>로 가져온 <code>loop</code>로 코루틴을 사용하는 모든 <code>class</code>로 주입을 하면 해당 <code>class</code>들이 모두 정상적으로 동작합니다.<br>그렇게 사용할 모든 <code>class</code>에 주입한 다음 <code>run_forever()</code>를 한번만 호출하면 됩니다.<br>너무나도 당연한 말인데, 해당 키워드로 검색 및 질문들이 stackoverflow에 등록되어 있으며, 아주 복잡한 방법으로의 답변들만 등록되어 있더군요.</p>
+<p>아래는 간단한 예제 코드입니다.</p>
+<pre><code class="Python"><span class="keyword">from</span> event_server <span class="keyword">import</span> run_event_server
+<span class="keyword">from</span> client_server <span class="keyword">import</span> run_client_server
+<span class="keyword">from</span> asyncio <span class="keyword">import</span> get_event_loop
+<span class="keyword">from</span> log_console <span class="keyword">import</span> ConsoleClientLogger, ConsoleEventLogger
+
+<span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:
+
+    loop = get_event_loop()
+
+    client_server = run_client_server(loop, ConsoleClientLogger())
+    source_server = run_event_server(loop, client_server, ConsoleEventLogger())
+
+    loop.run_forever()
+</code></pre>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://DevStarSJ.github.io/2016/08/19/Python.RunMultipleCoroutinesConcurrently/" data-id="cj244xb0n005s7k7bjd2sw2ue" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook-square" href="https://www.facebook.com/seokjoon.yun.9" target="_blank">
+                        <i class="icon fa fa-facebook-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/DevStarSJ" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="slideshare" href="https://www.slideshare.net/seokjoonyun9" target="_blank">
+                        <i class="icon fa fa-slideshare"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/sjyun" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/1/108379332089647292574" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/27/Tips.JupyterNotebook.custom.css.mac/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Jupyter notebook markdown에 내가 원하는 css 적용하기 (Linux / macOS)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/08/16/TypeScript.07.Exceptions, Memory, and Performance/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Chapter 7 Exceptions, Memory, and Performance</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/APIGateway/" style="font-size: 17px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18px;">AWS</a> <a href="/tags/C/" style="font-size: 19px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11px;">CI/CD</a> <a href="/tags/DataScience/" style="font-size: 12px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12px;">JavaScript</a> <a href="/tags/JupyterNotebook/" style="font-size: 11px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 18px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 16px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Yun Seok-joon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://DevStarSJ.github.io/2016/08/19/Python.RunMultipleCoroutinesConcurrently/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 2&amp;#xC7A5; Lock&amp;#xACFC; Transaction &amp;#xB3D9;&amp;#xC2DC;&amp;#xC131; &amp;#xC81C;&amp;#xC5B4; 2.1 Lock Shared Lock vs.&amp;#xA0;Exclusive Lock  Share">
+    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning2장 Lock과 Transaction 동시성 제어2.1 LockShared Lock vs. Exclusive Lock Shared Lock (공유 Lock) 데이터를 읽을 때 사용 다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨 즉, Shared Lock이 걸려있는 상태에서 Exc">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 3-2 Lock과 Transaction 동시성 제어">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/02/03.03.lock/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 2&amp;#xC7A5; Lock&amp;#xACFC; Transaction &amp;#xB3D9;&amp;#xC2DC;&amp;#xC131; &amp;#xC81C;&amp;#xC5B4; 2.1 Lock Shared Lock vs.&amp;#xA0;Exclusive Lock  Share">
+<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning2장 Lock과 Transaction 동시성 제어2.1 LockShared Lock vs. Exclusive Lock Shared Lock (공유 Lock) 데이터를 읽을 때 사용 다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨 즉, Shared Lock이 걸려있는 상태에서 Exc">
 <meta property="og:updated_time" content="2017-04-24T00:03:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 3-2 Lock과 Transaction 동시성 제어">
-<meta name="twitter:description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 2&amp;#xC7A5; Lock&amp;#xACFC; Transaction &amp;#xB3D9;&amp;#xC2DC;&amp;#xC131; &amp;#xC81C;&amp;#xC5B4; 2.1 Lock Shared Lock vs.&amp;#xA0;Exclusive Lock  Share">
+<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning2장 Lock과 Transaction 동시성 제어2.1 LockShared Lock vs. Exclusive Lock Shared Lock (공유 Lock) 데이터를 읽을 때 사용 다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨 즉, Shared Lock이 걸려있는 상태에서 Exc">
     
 
     
@@ -69,7 +69,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -164,138 +164,156 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="&#xACFC;&#xBAA9;-sql-&#xACE0;&#xAE09;-&#xD65C;&#xC6A9;-&#xBC0F;-tuning">3&#xACFC;&#xBAA9; SQL &#xACE0;&#xAE09; &#xD65C;&#xC6A9; &#xBC0F; Tuning</h1>
-<h2 id="&#xC7A5;-lock&#xACFC;-transaction-&#xB3D9;&#xC2DC;&#xC131;-&#xC81C;&#xC5B4;">2&#xC7A5; Lock&#xACFC; Transaction &#xB3D9;&#xC2DC;&#xC131; &#xC81C;&#xC5B4;</h2>
-<h3 id="lock">2.1 Lock</h3>
-<h4 id="shared-lock-vs.exclusive-lock">Shared Lock vs.&#xA0;Exclusive Lock</h4>
-<ul>
-<li>Shared Lock (&#xACF5;&#xC720; Lock)</li>
-<li>&#xB370;&#xC774;&#xD130;&#xB97C; &#xC77D;&#xC744; &#xB54C; &#xC0AC;&#xC6A9;</li>
-<li>&#xB2E4;&#xB978; Shared Lock&#xACFC;&#xB294; &#xD638;&#xD658;&#xB418;&#xC9C0;&#xB9CC;, Exclusive Lock&#xACFC;&#xB294; &#xD638;&#xD658;&#xC774; &#xC548;&#xB428;
-<ul>
-<li>&#xC989;, Shared Lock&#xC774; &#xAC78;&#xB824;&#xC788;&#xB294; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; Exclusive Lock&#xC740; Blocking &#xB428;</li>
-</ul></li>
-<li>Exclusive Lock (&#xBCA0;&#xD0C0;&#xC801; Lock)</li>
-<li>&#xB370;&#xC774;&#xD130;&#xB97C; &#xBCC0;&#xACBD;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;</li>
-<li>&#xBAA8;&#xB4E0; &#xC885;&#xB958;&#xC758; Lock&#xACFC; &#xD638;&#xD658;&#xC774; &#xC548;&#xB428;</li>
+            <h1 id="3과목-SQL-고급-활용-및-Tuning"><a href="#3과목-SQL-고급-활용-및-Tuning" class="headerlink" title="3과목 SQL 고급 활용 및 Tuning"></a>3과목 SQL 고급 활용 및 Tuning</h1><h2 id="2장-Lock과-Transaction-동시성-제어"><a href="#2장-Lock과-Transaction-동시성-제어" class="headerlink" title="2장 Lock과 Transaction 동시성 제어"></a>2장 Lock과 Transaction 동시성 제어</h2><h3 id="2-1-Lock"><a href="#2-1-Lock" class="headerlink" title="2.1 Lock"></a>2.1 Lock</h3><h4 id="Shared-Lock-vs-Exclusive-Lock"><a href="#Shared-Lock-vs-Exclusive-Lock" class="headerlink" title="Shared Lock vs. Exclusive Lock"></a>Shared Lock vs. Exclusive Lock</h4><ul>
+<li>Shared Lock (공유 Lock)<ul>
+<li>데이터를 읽을 때 사용</li>
+<li>다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨<ul>
+<li>즉, Shared Lock이 걸려있는 상태에서 Exclusive Lock은 Blocking 됨</li>
 </ul>
-<h4 id="blocking&#xACFC;-deadlock">Blocking&#xACFC; Deadlock</h4>
-<ul>
-<li>Blocking</li>
-<li>Lock &#xACBD;&#xD569;&#xC774; &#xBC1C;&#xC0DD;&#xD558;&#xC5EC; &#xD2B9;&#xC815; &#xC138;&#xC158;&#xC774; &#xC791;&#xC5C5;&#xC744; &#xC9C4;&#xD589;&#xD558;&#xC9C0; &#xBABB;&#xD558;&#xACE0; &#xBA48;&#xCD98; &#xC0C1;&#xD0DC;</li>
-<li>Blocking &#xC0C1;&#xD0DC;&#xB97C; &#xD574;&#xC18C;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC740; Commit or Rollback &#xBFD0;</li>
-<li>Lock&#xC5D0; &#xC758;&#xD55C; &#xC131;&#xB2A5; &#xCD5C;&#xC18C;&#xD654; &#xBC29;&#xC548;</li>
-<li>Transaction&#xC758; &#xC6D0;&#xC790;&#xC131;&#xC744; &#xD6FC;&#xC190;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xC120;&#xC5D0;&#xC11C; &#xCD5C;&#xB300;&#xD55C; &#xC9E7;&#xAC8C; &#xC815;&#xC758;</li>
-<li>&#xAC19;&#xC740; &#xB370;&#xC774;&#xD130;&#xB97C; &#xAC31;&#xC2E0;&#xD558;&#xB294; Transaction&#xC774; &#xB3D9;&#xC2DC;&#xC5D0; &#xC218;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xC124;&#xACC4;</li>
-<li>Transaction Isolation Level&#xC744; &#xC9C0;&#xB098;&#xCE58;&#xAC8C; &#xC0C1;&#xD5A5; &#xC870;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</li>
-<li>Transaction&#xC744; &#xC798; &#xC124;&#xACC4;&#xD558;&#xC5EC; &#xB300;&#xAE30; &#xD604;&#xC0C1;&#xC744; &#xD53C;&#xD558;&#xB3C4;&#xB85D; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;</li>
-<li><p>&#xC8FC;&#xAC04;&#xC758; &#xB300;&#xC6A9;&#xB7C9; &#xAC31;&#xC2E0;&#xC791;&#xC5C5;&#xC774; &#xBD88;&#xAC00;&#xD53C;&#xD558;&#xB2E4;&#xBA74; timeout&#xC744; &#xC774;&#xC6A9;<br>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> T <span class="keyword">WHERE</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span> <span class="keyword">NOWAIT</span> <span class="comment">-- &#xB300;&#xAE30;&#xC5C6;&#xC774; Exception  </span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> T <span class="keyword">WHERE</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span> <span class="keyword">WAIT</span> <span class="number">3</span> <span class="comment">-- 3&#xCD08; &#xB300;&#xAE30; &#xD6C4; Exception</span></div></pre></td></tr></table></figure></p></li>
-<li>Deadlock (&#xAD50;&#xCC29;&#xC0C1;&#xD0DC;)</li>
-<li>&#xB450; &#xC138;&#xC158;&#xC774; &#xAC01;&#xAC01; Lock&#xC744; &#xAC74; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; &#xC11C;&#xB85C;&#xC758; Lock&#xAC78;&#xB9B0; &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xC561;&#xC138;&#xC2A4;&#xD558;&#xB824; &#xD560; &#xACBD;&#xC6B0; &#xC601;&#xC6D0;&#xD788; &#xB300;&#xAE30;&#xC0C1;&#xD0DC;&#xC5D0; &#xBE60;&#xC9C0;&#xB294; &#xAC83;</li>
-<li>&#xC720;&#xC77C;&#xD55C; &#xD574;&#xACB0; &#xBC29;&#xBC95;&#xC740; &#xB458; &#xC911; &#xD55C; &#xC138;&#xC158;&#xC5D0; &#xC5D0;&#xB7EC;&#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0A4;&#xB294; &#xAC83;</li>
-<li><p>&#xD14C;&#xC774;&#xBE14; &#xC811;&#xADFC; &#xC21C;&#xC11C;&#xB97C; &#xAC19;&#xAC8C; &#xCC98;&#xB9AC;&#xD558;&#xBA74; &#xD53C;&#xD560; &#xC218; &#xC788;&#xC74C;</p></li>
+</li>
 </ul>
-<h4 id="oracle-lock">Oracle Lock</h4>
+</li>
+<li>Exclusive Lock (베타적 Lock)<ul>
+<li>데이터를 변경할 때 사용</li>
+<li>모든 종류의 Lock과 호환이 안됨</li>
+</ul>
+</li>
+</ul>
+<h4 id="Blocking과-Deadlock"><a href="#Blocking과-Deadlock" class="headerlink" title="Blocking과 Deadlock"></a>Blocking과 Deadlock</h4><ul>
+<li>Blocking<ul>
+<li>Lock 경합이 발생하여 특정 세션이 작업을 진행하지 못하고 멈춘 상태</li>
+<li>Blocking 상태를 해소하는 방법은 Commit or Rollback 뿐</li>
+</ul>
+</li>
+<li><p>Lock에 의한 성능 최소화 방안</p>
 <ul>
-<li>Oracle&#xC5D0;&#xC11C;&#xB294; &#xC5B4;&#xB5A0;&#xD55C; &#xC77D;&#xAE30; &#xC791;&#xC5C5;&#xB3C4; Lock&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBC1B;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
-<li>Undo &#xB370;&#xC774;&#xD130;&#xB97C; &#xD65C;&#xC6A9;&#xD55C; &#xB2E4;&#xC911;&#xBC84;&#xC804; &#xB3D9;&#xC2DC;&#xC131; &#xC81C;&#xC5B4; &#xBA54;&#xCEE4;&#xB2C8;&#xC998;&#xC744; &#xD65C;&#xC6A9;&#xD55C;&#xB2E4;.</li>
-<li>&#xB2E8;, SELECT &#x2026; FOR UPDATE &#xC81C;&#xC678;</li>
-<li>Row Lock</li>
-<li>&#xD56D;&#xC0C1; Exclusive Lock</li>
-<li>INSERT, UPDATE, DELETE, SELECT &#x2026; FOR UPDATE&#xB97C; &#xC218;&#xD589;&#xD55C; Transaction&#xC5D0; &#xC758;&#xD574; &#xC124;&#xC815;&#xB418;&#xBA70; &#xD574;&#xB2F9; Transaction&#xC774; Commit &#xC774;&#xB098; Rollback&#xD560;&#xB54C;&#xAE4C;&#xC9C0; &#xB2E4;&#xB978; Transaction&#xC740; &#xD574;&#xB2F9; Row&#xB97C; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</li>
-<li>Table Lock</li>
-<li>Row Lock&#xC744; &#xC5BB;&#xB294; &#xC21C;&#xAC04;, &#xD574;&#xB2F9; Table&#xC5D0; &#xB300;&#xD55C; Table Lock&#xB3C4; &#xC5BB;&#xB294;&#xB2E4;.</li>
-<li>&#xD604;&#xC7AC; Transaction&#xC774; &#xAC31;&#xC2E0; &#xC911;&#xC778; Table&#xC5D0; &#xB300;&#xD574; &#xD638;&#xD658;&#xB418;&#xC9C0; &#xC54A;&#xB294; DDL &#xC218;&#xD589;&#xC744; &#xBC29;&#xC9C0;&#xD55C;&#xB2E4;.</li>
-<li>5&#xC885;&#xB958;&#xC758; Lock&#xC774; &#xC788;&#xC74C;
+<li>Transaction의 원자성을 훼손하지 않는 선에서 최대한 짧게 정의</li>
+<li>같은 데이터를 갱신하는 Transaction이 동시에 수행되지 않도록 설계</li>
+<li>Transaction Isolation Level을 지나치게 상향 조정하지 않음</li>
+<li>Transaction을 잘 설계하여 대기 현상을 피하도록 프로그래밍</li>
+<li>주간의 대용량 갱신작업이 불가피하다면 timeout을 이용  <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> T <span class="keyword">WHERE</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span> <span class="keyword">NOWAIT</span> <span class="comment">-- 대기없이 Exception  </span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> T <span class="keyword">WHERE</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span> <span class="keyword">WAIT</span> <span class="number">3</span> <span class="comment">-- 3초 대기 후 Exception</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Deadlock (교착상태)</p>
 <ul>
-<li>RS (Row Share) : X&#xC81C;&#xC678; &#xBAA8;&#xB450; &#xD5C8;&#xC6A9;</li>
-<li>RX (Row Exclusive) : RS, RX &#xD5C8;&#xC6A9;</li>
-<li>S (Share) : RS, S &#xD5C8;&#xC6A9;</li>
-<li>SRX (Share Row Exclusive) : RS &#xD5C8;&#xC6A9;</li>
-<li>X (Exclusive) : &#xBAA8;&#xB450; &#xBD88;&#xD5C8;&#xC6A9;</li>
-</ul></li>
-<li>&#xBA85;&#xC2DC;&#xC801;&#xC73C;&#xB85C; <code>Lock Table</code> &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC0AC;&#xC6A9; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xC74C;</li>
+<li>두 세션이 각각 Lock을 건 상태에서 서로의 Lock걸린 리소스를 액세스하려 할 경우 영원히 대기상태에 빠지는 것</li>
+<li>유일한 해결 방법은 둘 중 한 세션에 에러를 발생시키는 것</li>
+<li>테이블 접근 순서를 같게 처리하면 피할 수 있음</li>
+</ul>
+</li>
+</ul>
+<h4 id="Oracle-Lock"><a href="#Oracle-Lock" class="headerlink" title="Oracle Lock"></a>Oracle Lock</h4><ul>
+<li>Oracle에서는 어떠한 읽기 작업도 Lock에 영향을 받지 않는다.<ul>
+<li>Undo 데이터를 활용한 다중버전 동시성 제어 메커니즘을 활용한다.</li>
+<li>단,  SELECT … FOR UPDATE 제외</li>
+</ul>
+</li>
+<li>Row Lock<ul>
+<li>항상 Exclusive Lock</li>
+<li>INSERT, UPDATE, DELETE, SELECT … FOR UPDATE를 수행한 Transaction에 의해 설정되며 해당 Transaction이 Commit 이나 Rollback할때까지 다른 Transaction은 해당 Row를 변경할 수 없다.</li>
+</ul>
+</li>
+<li>Table Lock<ul>
+<li>Row Lock을 얻는 순간, 해당 Table에 대한 Table Lock도 얻는다.</li>
+<li>현재 Transaction이 갱신 중인 Table에 대해 호환되지 않는 DDL 수행을 방지한다.</li>
+<li>5종류의 Lock이 있음<ul>
+<li>RS (Row Share) : X제외 모두 허용</li>
+<li>RX (Row Exclusive) : RS, RX 허용</li>
+<li>S (Share) : RS, S 허용</li>
+<li>SRX (Share Row Exclusive) : RS 허용</li>
+<li>X (Exclusive) : 모두 불허용</li>
+</ul>
+</li>
+<li>명시적으로 <code>Lock Table</code> 명령어를 사용 할 수도 있음</li>
+</ul>
+</li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">LOCK</span> <span class="keyword">TABLE</span> emp <span class="keyword">IN</span> <span class="keyword">ROW</span> <span class="keyword">SHARE</span> <span class="keyword">MODE</span>;</div><div class="line"><span class="keyword">LOCK</span> <span class="keyword">TABLE</span> emp <span class="keyword">IN</span> <span class="keyword">ROW</span> EXCLUSIVE <span class="keyword">MODE</span>;</div><div class="line">...</div></pre></td></tr></table></figure>
-<h3 id="transaction">2.1 Transaction</h3>
-<h4 id="transaction-&#xD2B9;&#xC9D5;">Transaction &#xD2B9;&#xC9D5;</h4>
-<ol style="list-style-type: decimal">
-<li>&#xC6D0;&#xC790;&#xC131; (Atomicity) : &#xC5C5;&#xBB34;&#xC0C1; &#xCD5C;&#xC18C;&#xB2E8;&#xC704;</li>
-<li>&#xC77C;&#xAD00;&#xC131; (Consistency) : &#xC2E4;&#xD589; &#xC804;&#xD6C4; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC0C1;&#xD0DC;&#xAC00; &#xBAA8;&#xC21C;&#xB418;&#xC9C0; &#xC54A;&#xC544;&#xC57C; &#xD568;</li>
-<li>&#xACA9;&#xB9AC;&#xC131; (Isolation) : &#xC2E4;&#xD589; &#xC911; &#xB2E4;&#xB978; Transaction&#xC774; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xC74C;</li>
-<li>&#xC601;&#xC18D;&#xC131; (Durability) : &#xC131;&#xACF5;&#xC801;&#xC73C;&#xB85C; &#xC218;&#xD589;&#xD558;&#xBA74;, &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0; &#xC601;&#xC18D;&#xC801;&#xC73C;&#xB85C; &#xC800;&#xC7A5;</li>
+<h3 id="2-1-Transaction"><a href="#2-1-Transaction" class="headerlink" title="2.1 Transaction"></a>2.1 Transaction</h3><h4 id="Transaction-특징"><a href="#Transaction-특징" class="headerlink" title="Transaction 특징"></a>Transaction 특징</h4><ol>
+<li>원자성 (Atomicity) : 업무상 최소단위</li>
+<li>일관성 (Consistency) : 실행 전후 데이터베이스 상태가 모순되지 않아야 함</li>
+<li>격리성 (Isolation) : 실행 중 다른 Transaction이 접근할 수 없음</li>
+<li>영속성 (Durability) : 성공적으로 수행하면, 데이터베이스에 영속적으로 저장</li>
 </ol>
-<h4 id="&#xB0AE;&#xC740;-isolation-level&#xC5D0;&#xC11C;&#xC758;-&#xD604;&#xC0C1;">&#xB0AE;&#xC740; Isolation Level&#xC5D0;&#xC11C;&#xC758; &#xD604;&#xC0C1;</h4>
-<ol style="list-style-type: decimal">
-<li>Dirty Read</li>
-</ol>
-<ul>
-<li>Commit&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC77D;&#xC74C;. &#xC774;&#xBBF8; &#xC77D;&#xC740; &#xB4A4; &#xB2E4;&#xC2DC; Rollback &#xB420; &#xC218; &#xC788;&#xC74C;.</li>
+<h4 id="낮은-Isolation-Level에서의-현상"><a href="#낮은-Isolation-Level에서의-현상" class="headerlink" title="낮은 Isolation Level에서의 현상"></a>낮은 Isolation Level에서의 현상</h4><ol>
+<li>Dirty Read<ul>
+<li>Commit하지 않은 데이터를 읽음. 이미 읽은 뒤 다시 Rollback 될 수 있음.</li>
 </ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Non-Repeatable Read</li>
-</ol>
-<ul>
-<li>&#xD55C; Transaction &#xB0B4;&#xC758; &#xAC19;&#xC740; Query&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xAC12;&#xC774; &#xBC14;&#xB00C;&#xB294; &#xD604;&#xC0C1;</li>
-<li>&#xCC98;&#xC74C; &#xAC12;&#xC744; &#xC77D;&#xC740; &#xB4A4; &#xB2E4;&#xB978; Transaction&#xC774; &#xD574;&#xB2F9; &#xAC12;&#xC744; &#xBCC0;&#xACBD;&#xD55C; &#xACBD;&#xC6B0;</li>
+</li>
+<li>Non-Repeatable Read<ul>
+<li>한 Transaction 내의 같은 Query에 대해서 값이 바뀌는 현상</li>
+<li>처음 값을 읽은 뒤 다른 Transaction이 해당 값을 변경한 경우</li>
 </ul>
-<ol start="3" style="list-style-type: decimal">
-<li>Phantom Read</li>
-</ol>
-<ul>
-<li>&#xD55C; Transaction &#xB0B4;&#xC5D0; &#xAC19;&#xC740; Query&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xCC98;&#xC74C;&#xC5D0; &#xC5C6;&#xC5C8;&#xB358; &#xAC12;&#xC774; &#xC77D;&#xD788;&#xB294; &#xD604;&#xC0C1;</li>
-<li>&#xCC98;&#xC74C; &#xAC12;&#xC744; &#xC77D;&#xC740; &#xB4A4; &#xB2E4;&#xB978; Transaction&#xC774; &#xC0C8;&#xB85C;&#xC6B4; &#xAC12;&#xC744; &#xC785;&#xB825;&#xD55C; &#xACBD;&#xC6B0;</li>
+</li>
+<li>Phantom Read<ul>
+<li>한 Transaction 내에 같은 Query에 대해서 처음에 없었던 값이 읽히는 현상</li>
+<li>처음 값을 읽은 뒤 다른 Transaction이 새로운 값을 입력한 경우</li>
 </ul>
-<h4 id="transaction-isolation-level">Transaction Isolation Level</h4>
-<ol style="list-style-type: decimal">
-<li>Read Uncommitted : &#xB2E4;&#xB978; Transaction&#xC774; &#xCC98;&#xB9AC; &#xC911;&#xC778; &#xAC12;&#xC744; &#xC77D;&#xB294; &#xAC83;&#xC744; &#xD5C8;&#xC6A9; (&#xC774;&#xAC78; &#xD5C8;&#xC6A9;&#xD558;&#xB294; DB&#xB294; &#xAC70;&#xC758; &#xC5C6;&#xC74C;)</li>
-<li>Read Committed : Dirty Read &#xBC29;&#xC9C0;</li>
-<li>Repeatable Read : Non-Repeatable Read &#xBC29;&#xC9C0;</li>
-<li>Serializable Read : Phantom Read &#xBC29;&#xC9C0; <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> <span class="keyword">TRANSACTION</span> <span class="keyword">ISOLATION</span> <span class="keyword">LEVEL</span> <span class="keyword">READ</span> <span class="keyword">SERIALIZABLE</span>;</div></pre></td></tr></table></figure></li>
+</li>
+</ol>
+<h4 id="Transaction-Isolation-Level"><a href="#Transaction-Isolation-Level" class="headerlink" title="Transaction Isolation Level"></a>Transaction Isolation Level</h4><ol>
+<li>Read Uncommitted : 다른 Transaction이 처리 중인 값을 읽는 것을 허용 (이걸 허용하는 DB는 거의 없음)</li>
+<li>Read Committed : Dirty Read 방지</li>
+<li>Repeatable Read : Non-Repeatable Read 방지</li>
+<li>Serializable Read : Phantom Read 방지<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> <span class="keyword">TRANSACTION</span> <span class="keyword">ISOLATION</span> <span class="keyword">LEVEL</span> <span class="keyword">READ</span> <span class="keyword">SERIALIZABLE</span>;</div></pre></td></tr></table></figure>
+</li>
 </ol>
 <ul>
-<li>Transaction Isolation Level&#xC744; &#xB192;&#xC77C;&#xC218;&#xB85D; Lock&#xC5D0; &#xC758;&#xC874;&#xC801;&#xC774;&#xB2E4;&#xBCF4;&#xB2C8; &#xB3D9;&#xC2DC;&#xC131;&#xC774; &#xC800;&#xD558;&#xB41C;&#xB2E4;.</li>
-<li>Oracle&#xC5D0;&#xC11C;&#xB294; &#xB2E4;&#xC911;&#xBC84;&#xC804; &#xB3D9;&#xC2DC;&#xC131; &#xC81C;&#xC5B4;(Multiversion Concurrency Control)&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</li>
+<li>Transaction Isolation Level을 높일수록 Lock에 의존적이다보니 동시성이 저하된다.</li>
+<li>Oracle에서는 다중버전 동시성 제어(Multiversion Concurrency Control)을 사용한다.</li>
 </ul>
-<h4 id="&#xB3D9;&#xC2DC;&#xC131;-&#xC81C;&#xC5B4;-concurrency-control">&#xB3D9;&#xC2DC;&#xC131; &#xC81C;&#xC5B4; (Concurrency Control)</h4>
+<h4 id="동시성-제어-Concurrency-Control"><a href="#동시성-제어-Concurrency-Control" class="headerlink" title="동시성 제어 (Concurrency Control)"></a>동시성 제어 (Concurrency Control)</h4><ul>
+<li><p>비관적 동시성 제어 (Pessimistic Concurrency Control)</p>
 <ul>
-<li>&#xBE44;&#xAD00;&#xC801; &#xB3D9;&#xC2DC;&#xC131; &#xC81C;&#xC5B4; (Pessimistic Concurrency Control)</li>
-<li>&#xAC19;&#xC740; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB3D9;&#xC2DC;&#xC5D0; &#xC218;&#xC815;&#xD560; &#xAC83;&#xC774;&#xB77C;&#xACE0; &#xAC00;&#xC815;</li>
-<li><p>&#xBA3C;&#xC800; Lock&#xC744; &#xAC78;&#xACE0; Transaction&#xC774; &#xC644;&#xB8CC;&#xB420;&#xB54C;&#xAE4C;&#xC9C0; &#xC720;&#xC9C0; <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span>;</div><div class="line"><span class="keyword">UPDATE</span> ...</div><div class="line"><span class="keyword">COMMIT</span>;</div></pre></td></tr></table></figure></p></li>
-<li>&#xB099;&#xAD00;&#xC801; &#xB3D9;&#xC2DC;&#xC131; &#xC81C;&#xC5B4; (Optimistic Concurrency Control)</li>
-<li>&#xAC19;&#xC740; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB3D9;&#xC2DC;&#xC5D0; &#xC218;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC744; &#xAC83;&#xC774;&#xB77C;&#xACE0; &#xAC00;&#xC815;</li>
-<li><p>&#xB370;&#xC774;&#xD130; &#xC77D;&#xC744; &#xB54C; Lock&#xC744; &#xAC78;&#xC9C0; &#xC54A;&#xC9C0;&#xB9CC;, &#xC218;&#xC815;&#xD560;&#xB54C; &#xBCC0;&#xACBD;&#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778; <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">INTO</span> :a, :b, :c, :d ... ;</div><div class="line"><span class="keyword">UPDATE</span> ... <span class="keyword">WHERE</span> col1 = :a <span class="keyword">AND</span> col2 = :b ...;</div></pre></td></tr></table></figure></p></li>
+<li>같은 데이터를 동시에 수정할 것이라고 가정</li>
+<li>먼저 Lock을 걸고 Transaction이 완료될때까지 유지<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span>;</div><div class="line"><span class="keyword">UPDATE</span> ...</div><div class="line"><span class="keyword">COMMIT</span>;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="&#xB2E4;&#xC911;&#xBC84;&#xC804;-&#xB3D9;&#xC2DC;&#xC131;-&#xC81C;&#xC5B4;-multiversion-concurrency-control">&#xB2E4;&#xC911;&#xBC84;&#xC804; &#xB3D9;&#xC2DC;&#xC131; &#xC81C;&#xC5B4; (Multiversion Concurrency Control)</h4>
+</li>
+<li><p>낙관적 동시성 제어 (Optimistic Concurrency Control)</p>
 <ul>
-<li>&#xB370;&#xC774;&#xD130;&#xB97C; &#xBCC0;&#xACBD;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; Undo &#xC601;&#xC5ED;&#xC5D0; &#xC800;&#xC7A5;</li>
-<li><p>Query (&#xB610;&#xB294; Transaction) &#xC2DC;&#xC791; &#xC2DC;&#xC810; &#xC774;&#xD6C4; &#xBCC0;&#xACBD;&#xB41C; &#xAC12;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; Undo &#xC601;&#xC5ED;&#xC5D0; &#xC800;&#xC7A5;&#xB41C; &#xC815;&#xBCF4;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC77C;&#xAD00;&#xC131; &#xC788;&#xB294; &#xBC84;&#xC804;(CR Copy)&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xC77D;&#xC74C;</p></li>
-<li>&#xBB38;&#xC7A5;&#xC218;&#xC900; &#xC77D;&#xAE30; &#xC77C;&#xAD00;&#xC131; (Statement-Level Read Consistency)</li>
-<li>&#xB2E8;&#xC77C; SQL &#xB0B4;&#xC5D0;&#xC11C;&#xC758; &#xC77C;&#xAD00;&#xC131; &#xC720;&#xC9C0;</li>
-<li>Query &#xC2DC;&#xC791;&#xC2DC;&#xC810; &#xC774;&#xD6C4; &#xBCC0;&#xACBD;&#xAC12;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; CR Copy &#xAC12;&#xC744; &#xC77D;&#xC74C;</li>
-<li>&#xD2B8;&#xB79C;&#xC7AD;&#xC158; &#xC218;&#xC900; &#xC77D;&#xAE30; &#xC778;&#xAD00;&#xC131; (Transaction-Level Read Consistency)</li>
-<li>Transaction &#xC2DC;&#xC791;&#xC2DC;&#xC810; &#xC774;&#xD6C4; &#xBCC0;&#xACBD;&#xAC12;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; CR Copy &#xAC12;&#xC744; &#xC77D;&#xC74C;</li>
-<li>Snapshot too old</li>
-<li>Undo &#xC601;&#xC5ED;&#xC758; &#xC815;&#xBCF4;&#xAC00; &#xB2E4;&#xB978; Transaction&#xC5D0; &#xC758;&#xD574; &#xC7AC;&#xC0AC;&#xC6A9;&#xB428;&#xC73C;&#xB85C; CR Copy&#xB97C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC5C6;&#xC744; &#xACBD;&#xC6B0; &#xBC1C;&#xC0DD;</li>
-<li>&#xC904;&#xC77C; &#xC218; &#xC788;&#xB294; &#xBC29;&#xBC95;
-<ul>
-<li>Undo &#xC601;&#xC5ED; &#xD06C;&#xAE30; &#xC99D;&#xAC00;</li>
-<li>Commit&#xC744; &#xC790;&#xC8FC;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</li>
-<li>fetch across commit &#xD615;&#xD0DC;&#xC758; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC791;&#xC131;&#xC744; &#xD53C;&#xD568;</li>
-<li>Transation&#xC774; &#xBAB0;&#xB9AC;&#xB294; &#xC2DC;&#xAC04;&#xB300;&#xC5D0; &#xC624;&#xB798; &#xAC78;&#xB9AC;&#xB294; Query &#xC218;&#xD589;&#xC744; &#xD53C;&#xD568;</li>
-<li>&#xD070; Table&#xC744; &#xC77C;&#xC815; &#xBC94;&#xC704;&#xB85C; &#xB098;&#xC6B0;&#xC5B4; &#xC77C;&#xACE0; &#xB2E8;&#xACC4;&#xC801;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xD558;&#xB3C4;&#xB85D; &#xCF54;&#xB529; (&#xB2E8; &#xC77C;&#xAD00;&#xC131; &#xBB38;&#xC81C;&#xB294; &#xC5C6;&#xC5B4;&#xC57C; &#xD568;)</li>
-<li>&#xC624;&#xB79C; &#xC2DC;&#xAC04;&#xC5D0; &#xAC78;&#xCCD0; &#xAC19;&#xC740; Block&#xC744; &#xC5EC;&#xB7EC; &#xBC88; &#xBC29;&#xBB38;&#xD558;&#xB294; NL JOIN &#xB610;&#xB294; Index&#xB97C; &#xACBD;&#xC720;&#xD55C; Table &#xC561;&#xC138;&#xC2A4;&#xB97C; &#xCCB4;&#xD06C;&#xD558;&#xACE0; &#xD68C;&#xD53C;&#xD560;&#xC218; &#xC788;&#xB294; &#xBC29;&#xBC95; &#xCC3E;&#xC74C; (JOIN &#xBC29;&#xBC95; &#xBCC0;&#xACBD;, Full Table Scan)</li>
-<li>ORDER BY&#xB97C; &#xAC15;&#xC81C;&#xB85C; &#xC0BD;&#xC785;&#xD558;&#xC5EC; Sort&#xC5F0;&#xC0B0;&#xC744; &#xAC15;&#xC81C;&#xB85C; &#xBC1C;&#xC0DD;</li>
-<li>&#xB300;&#xB7C9; UPDATE&#xD6C4; &#xBC14;&#xB85C; &#xD574;&#xB2F9; Table &#xB610;&#xB294; Index&#xB97C; Full Scan&#xD558;&#xB3C4;&#xB85D; Query &#xC218;&#xD589;</li>
-</ul></li>
+<li>같은 데이터를 동시에 수정하지 않을 것이라고 가정</li>
+<li>데이터 읽을 때 Lock을 걸지 않지만, 수정할때 변경되었는지 확인<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">INTO</span> :a, :b, :c, :d ... ;</div><div class="line"><span class="keyword">UPDATE</span> ... <span class="keyword">WHERE</span> col1 = :a <span class="keyword">AND</span> col2 = :b ...;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="&#xAD00;&#xB828;-&#xB0B4;&#xC6A9;-slide">&#xAD00;&#xB828; &#xB0B4;&#xC6A9; Slide</h3>
+</li>
+</ul>
+<h4 id="다중버전-동시성-제어-Multiversion-Concurrency-Control"><a href="#다중버전-동시성-제어-Multiversion-Concurrency-Control" class="headerlink" title="다중버전 동시성 제어 (Multiversion Concurrency Control)"></a>다중버전 동시성 제어 (Multiversion Concurrency Control)</h4><ul>
+<li>데이터를 변경할 때마다 Undo 영역에 저장</li>
+<li>Query (또는 Transaction) 시작 시점 이후 변경된 값에 대해서는 Undo 영역에 저장된 정보를 이용해서 일관성 있는 버전(CR Copy)를 생성하여 읽음</li>
+</ul>
 <ul>
-<li>Oracle Transaction Isolation Level : <a href="http://www.slideshare.net/seokjoonyun9/2015-0515-oracle-transaction-concurrency-control-read-consistency" class="uri" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/2015-0515-oracle-transaction-concurrency-control-read-consistency</a></li>
-<li>Oracle Concurrency Control : <a href="http://www.slideshare.net/seokjoonyun9/20150522-oracle-ways-of-concurrency-control" class="uri" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/20150522-oracle-ways-of-concurrency-control</a></li>
-<li>Oracle Snapshot too Old : <a href="http://www.slideshare.net/seokjoonyun9/oracle-architecture2015-0424-bblock-cleanout-and-snapshottooold" class="uri" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/oracle-architecture2015-0424-bblock-cleanout-and-snapshottooold</a></li>
-<li>Oracle Consistency : <a href="http://www.slideshare.net/seokjoonyun9/2015-0409-consistency" class="uri" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/2015-0409-consistency</a></li>
+<li>문장수준 읽기 일관성 (Statement-Level Read Consistency)<ul>
+<li>단일 SQL 내에서의 일관성 유지</li>
+<li>Query 시작시점 이후 변경값에 대해서는 CR Copy 값을 읽음</li>
+</ul>
+</li>
+<li>트랜잭션 수준 읽기 인관성 (Transaction-Level Read Consistency)<ul>
+<li>Transaction 시작시점 이후 변경값에 대해서는 CR Copy 값을 읽음</li>
+</ul>
+</li>
+<li>Snapshot too old<ul>
+<li>Undo 영역의 정보가 다른 Transaction에 의해 재사용됨으로 CR Copy를 생성할 수 없을 경우 발생</li>
+<li>줄일 수 있는 방법<ul>
+<li>Undo 영역 크기 증가</li>
+<li>Commit을 자주하지 않음</li>
+<li>fetch across commit 형태의 프로그램 작성을 피함</li>
+<li>Transation이 몰리는 시간대에 오래 걸리는 Query 수행을 피함</li>
+<li>큰 Table을 일정 범위로 나우어 일고 단계적으로 실행하도록 코딩 (단 일관성 문제는 없어야 함)</li>
+<li>오랜 시간에 걸쳐 같은 Block을 여러 번 방문하는 NL JOIN 또는 Index를 경유한 Table 액세스를 체크하고 회피할수 있는 방법 찾음 (JOIN 방법 변경, Full Table Scan)</li>
+<li>ORDER BY를 강제로 삽입하여 Sort연산을 강제로 발생</li>
+<li>대량 UPDATE후 바로 해당 Table 또는 Index를 Full Scan하도록 Query 수행</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="관련-내용-Slide"><a href="#관련-내용-Slide" class="headerlink" title="관련 내용 Slide"></a>관련 내용 Slide</h3><ul>
+<li>Oracle Transaction Isolation Level : <a href="http://www.slideshare.net/seokjoonyun9/2015-0515-oracle-transaction-concurrency-control-read-consistency" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/2015-0515-oracle-transaction-concurrency-control-read-consistency</a></li>
+<li>Oracle Concurrency Control : <a href="http://www.slideshare.net/seokjoonyun9/20150522-oracle-ways-of-concurrency-control" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/20150522-oracle-ways-of-concurrency-control</a></li>
+<li>Oracle Snapshot too Old : <a href="http://www.slideshare.net/seokjoonyun9/oracle-architecture2015-0424-bblock-cleanout-and-snapshottooold" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/oracle-architecture2015-0424-bblock-cleanout-and-snapshottooold</a></li>
+<li>Oracle Consistency : <a href="http://www.slideshare.net/seokjoonyun9/2015-0409-consistency" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/2015-0409-consistency</a></li>
 </ul>
 
         </div>
@@ -304,7 +322,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/02/03.03.lock/" data-id="cj2430309000qkc7bc50tmd1w" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/02/03.03.lock/" data-id="cj244xaxh000t7k7bdby6cclq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -460,7 +478,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -470,7 +488,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+            <a href="/tags/APIGateway/" style="font-size: 17px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18px;">AWS</a> <a href="/tags/C/" style="font-size: 19px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11px;">CI/CD</a> <a href="/tags/DataScience/" style="font-size: 12px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12px;">JavaScript</a> <a href="/tags/JupyterNotebook/" style="font-size: 11px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 18px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 16px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
         </div>
     </div>
 

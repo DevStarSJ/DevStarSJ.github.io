@@ -24,8 +24,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;aws-lambda-api-gateway-binary-response-&amp;#xC608;&amp;#xC81C;&quot;&gt;AWS Lambda + API Gateway Binary Response &amp;#xC608;&amp;#xC81C;&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;A
+      &lt;h1 id=&quot;AWS-Lambda-API-Gateway-Binary-Response-예제&quot;&gt;&lt;a href=&quot;#AWS-Lambda-API-Gateway-Binary-Response-예제&quot; class=&quot;headerlink&quot; title=&quot;AWS Lambda
     
     </summary>
     
@@ -51,7 +50,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;aws-lambda&amp;#xC5D0;-python-slack-chatbot&amp;#xC744;-&amp;#xD1B5;&amp;#xD574;&amp;#xC11C;-&amp;#xBBF8;&amp;#xC138;&amp;#xBA3C;&amp;#xC9C0;-&amp;#xB300;&amp;#xAE30;&amp;#xC815;&amp;#
+      &lt;h1 id=&quot;AWS-Lambda에-Python-Slack-Chatbot을-통해서-미세먼지-대기정보-알림이-만들기&quot;&gt;&lt;a href=&quot;#AWS-Lambda에-Python-Slack-Chatbot을-통해서-미세먼지-대기정보-알림이-만들기&quot; class=&quot;h
     
     </summary>
     
@@ -103,7 +102,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;aws-lambda-&amp;#xC0AC;&amp;#xC6A9;&amp;#xC5D0;-&amp;#xAD00;&amp;#xB828;&amp;#xB41C;-tip&quot;&gt;AWS Lambda &amp;#xC0AC;&amp;#xC6A9;&amp;#xC5D0; &amp;#xAD00;&amp;#xB828;&amp;#xB41C; Tip&lt;/
+      &lt;h1 id=&quot;AWS-Lambda-사용에-관련된-Tip&quot;&gt;&lt;a href=&quot;#AWS-Lambda-사용에-관련된-Tip&quot; class=&quot;headerlink&quot; title=&quot;AWS Lambda 사용에 관련된 Tip&quot;&gt;&lt;/a&gt;AWS Lambda 사용에 관련된 T
     
     </summary>
     
@@ -127,8 +126,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;monolith-to-serverless-using-aws-lambda&quot;&gt;Monolith to Serverless using AWS Lambda&lt;/h1&gt;
-&lt;h2 id=&quot;&amp;#xAE30;&amp;#xC874;-&amp;#xBAA8;&amp;#xB178;&amp;#xB9
+      &lt;h1 id=&quot;Monolith-to-Serverless-using-AWS-Lambda&quot;&gt;&lt;a href=&quot;#Monolith-to-Serverless-using-AWS-Lambda&quot; class=&quot;headerlink&quot; title=&quot;Monolith to Se
     
     </summary>
     
@@ -154,8 +152,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;monolith-to-serverless-using-aws-lambda&quot;&gt;Monolith to Serverless using AWS Lambda&lt;/h1&gt;
-&lt;h2 id=&quot;&amp;#xAE30;&amp;#xC874;-&amp;#xBAA8;&amp;#xB178;&amp;#xB9
+      &lt;h1 id=&quot;Monolith-to-Serverless-using-AWS-Lambda&quot;&gt;&lt;a href=&quot;#Monolith-to-Serverless-using-AWS-Lambda&quot; class=&quot;headerlink&quot; title=&quot;Monolith to Se
     
     </summary>
     
@@ -181,8 +178,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;monolith-to-serverless-using-aws-lambda&quot;&gt;Monolith to Serverless using AWS Lambda&lt;/h1&gt;
-&lt;h2 id=&quot;&amp;#xAE30;&amp;#xC874;-&amp;#xBAA8;&amp;#xB178;&amp;#xB9
+      &lt;h1 id=&quot;Monolith-to-Serverless-using-AWS-Lambda&quot;&gt;&lt;a href=&quot;#Monolith-to-Serverless-using-AWS-Lambda&quot; class=&quot;headerlink&quot; title=&quot;Monolith to Se
     
     </summary>
     
@@ -208,8 +204,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;get-request-body-in-action-method&quot;&gt;Get Request Body in Action Method&lt;/h1&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt
+      &lt;h1 id=&quot;Get-Request-Body-in-Action-Method&quot;&gt;&lt;a href=&quot;#Get-Request-Body-in-Action-Method&quot; class=&quot;headerlink&quot; title=&quot;Get Request Body in Action
     
     </summary>
     
@@ -233,8 +228,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;aws-lambda&amp;#xC5D0;-c-handler-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&quot;&gt;AWS Lambda&amp;#xC5D0; C# Handler &amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;AWS La
+      &lt;h1 id=&quot;AWS-Lambda에-C-Handler-만들기&quot;&gt;&lt;a href=&quot;#AWS-Lambda에-C-Handler-만들기&quot; class=&quot;headerlink&quot; title=&quot;AWS Lambda에 C# Handler 만들기&quot;&gt;&lt;/a&gt;AWS Lambda
     
     </summary>
     
@@ -262,8 +256,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;lambda-node.js-packaging&quot;&gt;Lambda Node.JS Packaging&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Labmda&lt;/strong&gt;&amp;#xC5D0; &lt;strong&gt;Node.JS&lt;/strong&gt;&amp;#xB85C; &amp;#xAD6C;
+      &lt;h1 id=&quot;Lambda-Node-JS-Packaging&quot;&gt;&lt;a href=&quot;#Lambda-Node-JS-Packaging&quot; class=&quot;headerlink&quot; title=&quot;Lambda Node.JS Packaging&quot;&gt;&lt;/a&gt;Lambda Node.JS
     
     </summary>
     
@@ -291,8 +284,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;lambda-python-packaging&quot;&gt;Lambda Python Packaging&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;AWS Lambda&lt;/strong&gt;&amp;#xC5D0; &amp;#xB300;&amp;#xD574; &amp;#xB2E4;&amp;#xB8E8;&amp;#xB29
+      &lt;h1 id=&quot;Lambda-Python-Packaging&quot;&gt;&lt;a href=&quot;#Lambda-Python-Packaging&quot; class=&quot;headerlink&quot; title=&quot;Lambda Python Packaging&quot;&gt;&lt;/a&gt;Lambda Python Pac
     
     </summary>
     
@@ -320,8 +312,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;aws-lambda&amp;#xC5D0;-python-handler-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&quot;&gt;AWS Lambda&amp;#xC5D0; Python Handler &amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&lt;/h1&gt;
-&lt;p&gt;AWS L
+      &lt;h1 id=&quot;AWS-Lambda에-Python-Handler-만들기&quot;&gt;&lt;a href=&quot;#AWS-Lambda에-Python-Handler-만들기&quot; class=&quot;headerlink&quot; title=&quot;AWS Lambda에 Python Handler 만들기&quot;&gt;
     
     </summary>
     
@@ -349,7 +340,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;aws-lambda&amp;#xC640;-api-gateway&amp;#xB97C;-&amp;#xC774;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C;-serverless-web-api-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;-3&quot;&gt;AWS Lambda&amp;#x
+      &lt;h1 id=&quot;AWS-Lambda와-API-Gateway를-이용해서-Serverless-Web-API-만들기-3&quot;&gt;&lt;a href=&quot;#AWS-Lambda와-API-Gateway를-이용해서-Serverless-Web-API-만들기-3&quot; class=&quot;hea
     
     </summary>
     
@@ -377,7 +368,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;aws-lambda&amp;#xC640;-api-gateway&amp;#xB97C;-&amp;#xC774;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C;-serverless-web-api-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;-2&quot;&gt;AWS Lambda&amp;#x
+      &lt;h1 id=&quot;AWS-Lambda와-API-Gateway를-이용해서-Serverless-Web-API-만들기-2&quot;&gt;&lt;a href=&quot;#AWS-Lambda와-API-Gateway를-이용해서-Serverless-Web-API-만들기-2&quot; class=&quot;hea
     
     </summary>
     
@@ -405,7 +396,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;aws-lambda&amp;#xC640;-api-gateway&amp;#xB97C;-&amp;#xC774;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C;-serverless-web-api-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&quot;&gt;AWS Lambda&amp;#xC6
+      &lt;h1 id=&quot;AWS-Lambda와-API-Gateway를-이용해서-Serverless-Web-API-만들기&quot;&gt;&lt;a href=&quot;#AWS-Lambda와-API-Gateway를-이용해서-Serverless-Web-API-만들기&quot; class=&quot;headerl
     
     </summary>
     
@@ -433,8 +424,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;squel.js&quot;&gt;Squel.js&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;JavaScript&lt;/strong&gt; &amp;#xC758; &lt;code&gt;SQL query string&lt;/code&gt;&amp;#xC758; &amp;#xC791;&amp;#xC131;&amp;#xC744; &amp;#xB3
+      &lt;h1 id=&quot;Squel-js&quot;&gt;&lt;a href=&quot;#Squel-js&quot; class=&quot;headerlink&quot; title=&quot;Squel.js&quot;&gt;&lt;/a&gt;Squel.js&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;JavaScript&lt;/strong&gt; 의 &lt;code&gt;SQL query 
     
     </summary>
     
@@ -450,6 +440,30 @@
   </entry>
   
   <entry>
+    <title>Think Bayes</title>
+    <link href="http://DevStarSJ.github.io/2016/09/21/Python.ThinkBayes/"/>
+    <id>http://DevStarSJ.github.io/2016/09/21/Python.ThinkBayes/</id>
+    <published>2016-09-20T15:00:00.000Z</published>
+    <updated>2017-04-30T03:15:02.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Think-Bayes-파이썬을-활용한-베이지안-통계&quot;&gt;&lt;a href=&quot;#Think-Bayes-파이썬을-활용한-베이지안-통계&quot; class=&quot;headerlink&quot; title=&quot;Think Bayes (파이썬을 활용한 베이지안 통계)&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/categories/Python/"/>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/categories/Python/DataScience/"/>
+    
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/tags/DataScience/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Client WebSocket Example without ASP.NET</title>
     <link href="http://DevStarSJ.github.io/2016/08/31/CSharp.ClientWebSocketExample/"/>
     <id>http://DevStarSJ.github.io/2016/08/31/CSharp.ClientWebSocketExample/</id>
@@ -458,8 +472,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;client-websocket-example-without-asp.net&quot;&gt;Client WebSocket Example without ASP.NET&lt;/h1&gt;
-&lt;p&gt;ASP.NET&amp;#xC744; &amp;#xC0AC;&amp;#xC6A9;&amp;#xD558;&amp;
+      &lt;h1 id=&quot;Client-WebSocket-Example-without-ASP-NET&quot;&gt;&lt;a href=&quot;#Client-WebSocket-Example-without-ASP-NET&quot; class=&quot;headerlink&quot; title=&quot;Client WebSo
     
     </summary>
     
@@ -473,74 +486,46 @@
   </entry>
   
   <entry>
-    <title>Chapter 7 Exceptions, Memory, and Performance</title>
-    <link href="http://DevStarSJ.github.io/2016/08/16/TypeScript.07.Exceptions,%20Memory,%20and%20Performance/"/>
-    <id>http://DevStarSJ.github.io/2016/08/16/TypeScript.07.Exceptions, Memory, and Performance/</id>
-    <published>2016-08-15T15:00:00.000Z</published>
-    <updated>2017-04-23T09:46:06.000Z</updated>
+    <title>Jupyter notebook markdown에 내가 원하는 css 적용하기 (Linux / macOS)</title>
+    <link href="http://DevStarSJ.github.io/2016/08/27/Tips.JupyterNotebook.custom.css.mac/"/>
+    <id>http://DevStarSJ.github.io/2016/08/27/Tips.JupyterNotebook.custom.css.mac/</id>
+    <published>2016-08-26T15:00:00.000Z</published>
+    <updated>2017-04-30T03:23:21.000Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;chapter-7-exceptions-memory-and-performance&quot;&gt;Chapter 7 Exceptions, Memory, and Performance&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;#xC608;&amp;#xC678;(Exception)
+      &lt;h1 id=&quot;Jupyter-notebook-markdown에-내가-원하는-css-적용하기-Linux-macOS&quot;&gt;&lt;a href=&quot;#Jupyter-notebook-markdown에-내가-원하는-css-적용하기-Linux-macOS&quot; class=&quot;hea
     
     </summary>
     
-      <category term="JavaScript" scheme="http://DevStarSJ.github.io/categories/JavaScript/"/>
+      <category term="Tips" scheme="http://DevStarSJ.github.io/categories/Tips/"/>
     
-      <category term="TypeScript" scheme="http://DevStarSJ.github.io/categories/JavaScript/TypeScript/"/>
+      <category term="JupyterNotebook" scheme="http://DevStarSJ.github.io/categories/Tips/JupyterNotebook/"/>
     
     
-      <category term="JavaScript" scheme="http://DevStarSJ.github.io/tags/JavaScript/"/>
-    
-      <category term="TypeScript" scheme="http://DevStarSJ.github.io/tags/TypeScript/"/>
+      <category term="JupyterNotebook" scheme="http://DevStarSJ.github.io/tags/JupyterNotebook/"/>
     
   </entry>
   
   <entry>
-    <title>C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인</title>
-    <link href="http://DevStarSJ.github.io/2016/08/10/CSharp.AttributeInherit/"/>
-    <id>http://DevStarSJ.github.io/2016/08/10/CSharp.AttributeInherit/</id>
-    <published>2016-08-09T17:00:00.000Z</published>
-    <updated>2017-04-23T10:45:18.000Z</updated>
+    <title>Running Multiple Coroutines Concurrently</title>
+    <link href="http://DevStarSJ.github.io/2016/08/19/Python.RunMultipleCoroutinesConcurrently/"/>
+    <id>http://DevStarSJ.github.io/2016/08/19/Python.RunMultipleCoroutinesConcurrently/</id>
+    <published>2016-08-18T15:00:00.000Z</published>
+    <updated>2017-04-30T03:19:05.000Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;c-attribute-&amp;#xC0C1;&amp;#xC18D;-&amp;#xD6C4;-override-&amp;#xD560;-&amp;#xACBD;&amp;#xC6B0;-&amp;#xBD80;&amp;#xBAA8;-&amp;#xAC12;&amp;#xB3C4;-&amp;#xC798;-&amp;#xAC00;&amp;#xC838;
-    
-    </summary>
-    
-      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/"/>
-    
-      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/C/"/>
-    
-    
-      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Doing Math with Python</title>
-    <link href="http://DevStarSJ.github.io/2016/07/09/Python.DoingMathWithPython/"/>
-    <id>http://DevStarSJ.github.io/2016/07/09/Python.DoingMathWithPython/</id>
-    <published>2016-07-08T15:00:00.000Z</published>
-    <updated>2017-04-30T02:56:32.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Doing-Math-with-Python-파이썬으로-풀어보는-수학&quot;&gt;&lt;a href=&quot;#Doing-Math-with-Python-파이썬으로-풀어보는-수학&quot; class=&quot;headerlink&quot; title=&quot;Doing Math with Pyth
+      &lt;h1 id=&quot;Python-Running-Multiple-Coroutines-Concurrently&quot;&gt;&lt;a href=&quot;#Python-Running-Multiple-Coroutines-Concurrently&quot; class=&quot;headerlink&quot; title
     
     </summary>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/categories/Python/"/>
     
-      <category term="DoingMathWithPython" scheme="http://DevStarSJ.github.io/categories/Python/DoingMathWithPython/"/>
+      <category term="Python" scheme="http://DevStarSJ.github.io/categories/Python/Python/"/>
     
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
-      <category term="Math" scheme="http://DevStarSJ.github.io/tags/Math/"/>
     
   </entry>
   

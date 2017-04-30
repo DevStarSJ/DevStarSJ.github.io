@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="LEADING(&amp;#xD14C;&amp;#xC774;&amp;#xBE14;) : &amp;#xD574;&amp;#xB2F9; Table &amp;#xBD80;&amp;#xD130; &amp;#xC77D;&amp;#xC74C; QB_NAME(&amp;#xC774;&amp;#xB984;) : &amp;#xD574;&amp;#xB2F9; query block&amp;#xC5D0; &amp;#xC774;&amp;#xB984;&amp;#xC744; &amp;#xC9C0;&amp;#xC5B4;">
+    <meta name="description" content="LEADING(테이블) : 해당 Table 부터 읽음 QB_NAME(이름) : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다. JOIN 방법 USE_NL(테이블) : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도   Se">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle hint">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/26/Oracle.hint/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="LEADING(&amp;#xD14C;&amp;#xC774;&amp;#xBE14;) : &amp;#xD574;&amp;#xB2F9; Table &amp;#xBD80;&amp;#xD130; &amp;#xC77D;&amp;#xC74C; QB_NAME(&amp;#xC774;&amp;#xB984;) : &amp;#xD574;&amp;#xB2F9; query block&amp;#xC5D0; &amp;#xC774;&amp;#xB984;&amp;#xC744; &amp;#xC9C0;&amp;#xC5B4;">
+<meta property="og:description" content="LEADING(테이블) : 해당 Table 부터 읽음 QB_NAME(이름) : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다. JOIN 방법 USE_NL(테이블) : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도   Se">
 <meta property="og:updated_time" content="2017-04-24T00:20:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle hint">
-<meta name="twitter:description" content="LEADING(&amp;#xD14C;&amp;#xC774;&amp;#xBE14;) : &amp;#xD574;&amp;#xB2F9; Table &amp;#xBD80;&amp;#xD130; &amp;#xC77D;&amp;#xC74C; QB_NAME(&amp;#xC774;&amp;#xB984;) : &amp;#xD574;&amp;#xB2F9; query block&amp;#xC5D0; &amp;#xC774;&amp;#xB984;&amp;#xC744; &amp;#xC9C0;&amp;#xC5B4;">
+<meta name="twitter:description" content="LEADING(테이블) : 해당 Table 부터 읽음 QB_NAME(이름) : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다. JOIN 방법 USE_NL(테이블) : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도   Se">
     
 
     
@@ -69,7 +69,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -165,28 +165,40 @@
         
         <div class="article-entry" itemprop="articleBody">
             <ul>
-<li><code>LEADING(&#xD14C;&#xC774;&#xBE14;)</code> : &#xD574;&#xB2F9; Table &#xBD80;&#xD130; &#xC77D;&#xC74C;</li>
-<li><code>QB_NAME(&#xC774;&#xB984;)</code> : &#xD574;&#xB2F9; query block&#xC5D0; &#xC774;&#xB984;&#xC744; &#xC9C0;&#xC5B4;&#xC900;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xB2E4;&#xB978; &#xACF3;&#xC5D0;&#xC11C; &#xC774;&#xB984;@&#xD14C;&#xC774;&#xBE14;&#xBA85; &#xC73C;&#xB85C; &#xD574;&#xB2F9; &#xD14C;&#xC774;&#xBE14;&#xC744; &#xC9C0;&#xC815; &#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
-<li>JOIN &#xBC29;&#xBC95;</li>
-<li><code>USE_NL(&#xD14C;&#xC774;&#xBE14;)</code> : outer table&#xC744; &#xD14C;&#xC774;&#xBE14;(inner table)&#xACFC; Nested Loop Join &#xBC29;&#xC2DD;&#xC73C;&#xB85C; JOIN&#xC744; &#xC2DC;&#xB3C4;</li>
-<li>Semi Join : 1 row&#xB9CC; JOIN&#xC5D0; &#xC131;&#xACF5;&#xD558;&#xBA74; &#xB354;&#xC774;&#xC0C1; inner&#xCABD;&#xC744; &#xBCF4;&#xC9C0; &#xC54A;&#xACE0; outer&#xC758; &#xB2E4;&#xC74C; row&#xB97C; &#xCC3E;&#xC74C;</li>
+<li><code>LEADING(테이블)</code> : 해당 Table 부터 읽음</li>
+<li><code>QB_NAME(이름)</code> : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다.</li>
+<li>JOIN 방법<ul>
+<li><code>USE_NL(테이블)</code> : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도</li>
+</ul>
+</li>
+<li>Semi Join : 1 row만 JOIN에 성공하면 더이상 inner쪽을 보지 않고 outer의 다음 row를 찾음<ul>
 <li><code>NL_SJ</code>, <code>HASH_SJ</code>, <code>MERGE_SJ</code></li>
-<li>Anti Join : &#xC77C;&#xCE58;&#xD558;&#xC9C0; &#xC54A;&#xB294; data&#xB97C; &#xCD94;&#xCD9C; (NOT IN, NOT EXISTS, MINUS)</li>
+</ul>
+</li>
+<li>Anti Join : 일치하지 않는 data를 추출 (NOT IN, NOT EXISTS, MINUS)<ul>
 <li><code>NL_AJ</code>, <code>HASH_AJ</code>, <code>MERGE_AJ</code></li>
-<li>Subquery Unnesting &#xAD00;&#xB828;</li>
-<li><code>UNNEST</code> : &#xD480;&#xC5B4;&#xC11C; JOIN &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC720;&#xB3C4;</li>
-<li><code>NO_UNNEST</code> : &#xD480;&#xC9C0;&#xB9D0;&#xACE0; Filter &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xCD5C;&#xC801;&#xD654; &#xC720;&#xB3C4;</li>
-<li>View Merging</li>
-<li><code>NO_MERGE(&#xD14C;&#xC774;&#xBE14;)</code> : main query &#xC640; inline view&#xB97C; JOIN&#xC73C;&#xB85C; &#xD480;&#xC9C0;&#xB9D0;&#xACE0; inline view&#xB97C; &#xBA3C;&#xC800; &#xC2E4;&#xD589;</li>
-<li><code>MERGE(&#xD14C;&#xC774;&#xBE14;)</code> : main query&#xC640; inline view&#xB97C; JOIN&#xC73C;&#xB85C; &#xD480;&#xC5B4;&#xC11C; &#xCD5C;&#xC801;&#xD654;&#xB97C; &#xC2DC;&#xB3C4;</li>
-<li><code>PUSH_PRED(&#xC778;&#xB77C;&#xC778;&#xBDF0;)</code> : (Push Predicate, &#xC870;&#xAC74;&#xC808; Push) main query&#xC5D0;&#xC11C; &#xBA3C;&#xC800; filtering&#xD558;&#xC5EC; &#xADF8; &#xACB0;&#xACFC;&#xB97C; inline view&#xC758; filter &#xC870;&#xAC74;&#xC73C;&#xB85C; &#xB123;&#xC5B4;&#xB77C;.</li>
-<li><code>PUSH_SUBQ</code> : (Push Subquery) &#xC2E4;&#xD589;&#xACC4;&#xD68D;&#xC0C1; &#xAC00;&#xB2A5;&#xD55C; &#xC55E; &#xB2E8;&#xACC4;&#xC5D0;&#xC11C; subquery filtering&#xC744; &#xD558;&#xC5EC; main query&#xC758; &#xBC94;&#xC704;&#xB97C; &#xC904;&#xC774;&#xACE0;&#xC790; &#xD560;&#xB54C;, NO_UNNEST&#xC640; &#xAC19;&#xC774; &#xC0AC;&#xC6A9;&#xB418;&#xC5B4;&#xC57C; &#xD568;</li>
-<li>Concatenation (&#xC8FC;&#xB85C; OR&#xC808; &#xCC98;&#xB9AC;)</li>
-<li><code>USE_CONCAT</code> : UNION ALL&#xB85C; &#xD45C;&#xD604;</li>
-<li><code>NO_EXPAND</code> : &#xB098;&#xB204;&#xC9C0; &#xB9D0;&#xACE0; &#xADF8;&#xB300;&#xB85C; &#xC2E4;&#xD589;</li>
-<li><code>FULL(&#xD14C;&#xC774;&#xBE14;)</code> : &#xD574;&#xB2F9; &#xD14C;&#xC774;&#xBE14;&#xC744; full scan &#xD55C;&#xB2E4;.</li>
-<li><code>PARALLEL(&#xD14C;&#xC774;&#xBE14; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC218;)</code> : &#xD574;&#xB2F9; &#xD14C;&#xC774;&#xBE14;&#xC744; &#xBA85;&#xC2DC;&#xD55C; &#xD504;&#xB85C;&#xB808;&#xC2A4;&#xC218; &#xB9CC;&#xD07C; &#xBCD1;&#xB82C;&#xB85C; &#xCC98;&#xB9AC;&#xD55C;&#xB2E4;.</li>
-<li><code>APPEND</code> : INSERT&#xB97C; APPEND &#xBAA8;&#xB4DC;&#xB85C; &#xC218;&#xD589;</li>
+</ul>
+</li>
+<li>Subquery Unnesting 관련<ul>
+<li><code>UNNEST</code> : 풀어서 JOIN 방식으로 유도</li>
+<li><code>NO_UNNEST</code> : 풀지말고 Filter 방식으로 최적화 유도</li>
+</ul>
+</li>
+<li>View Merging<ul>
+<li><code>NO_MERGE(테이블)</code> : main query 와 inline view를 JOIN으로 풀지말고 inline view를 먼저 실행</li>
+<li><code>MERGE(테이블)</code> : main query와 inline view를 JOIN으로 풀어서 최적화를 시도</li>
+</ul>
+</li>
+<li><code>PUSH_PRED(인라인뷰)</code> : (Push Predicate, 조건절 Push) main query에서 먼저 filtering하여 그 결과를 inline view의 filter 조건으로 넣어라.</li>
+<li><code>PUSH_SUBQ</code> : (Push Subquery) 실행계획상 가능한 앞 단계에서 subquery filtering을 하여 main query의 범위를 줄이고자 할때, NO_UNNEST와 같이 사용되어야 함</li>
+<li>Concatenation (주로 OR절 처리)<ul>
+<li><code>USE_CONCAT</code> : UNION ALL로 표현</li>
+<li><code>NO_EXPAND</code> : 나누지 말고 그대로 실행</li>
+</ul>
+</li>
+<li><code>FULL(테이블)</code> : 해당 테이블을 full scan 한다.</li>
+<li><code>PARALLEL(테이블 프로세스수)</code> : 해당 테이블을 명시한 프로레스수 만큼 병렬로 처리한다.</li>
+<li><code>APPEND</code> : INSERT를 APPEND 모드로 수행</li>
 </ul>
 
         </div>
@@ -195,7 +207,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/26/Oracle.hint/" data-id="cj2430325005gkc7bjh935po6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/26/Oracle.hint/" data-id="cj244xb0e005c7k7bgljtbvif" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -351,7 +363,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -361,7 +373,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+            <a href="/tags/APIGateway/" style="font-size: 17px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18px;">AWS</a> <a href="/tags/C/" style="font-size: 19px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11px;">CI/CD</a> <a href="/tags/DataScience/" style="font-size: 12px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12px;">JavaScript</a> <a href="/tags/JupyterNotebook/" style="font-size: 11px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 18px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 16px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
         </div>
     </div>
 

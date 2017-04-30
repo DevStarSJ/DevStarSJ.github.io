@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 5&amp;#xC7A5; &amp;#xACE0;&amp;#xAE09; SQL Tuning 5.4 Partition &amp;#xD65C;&amp;#xC6A9;  Partitioning &amp;#xC774;&amp;#xB780; ? Table, Index&amp;#xB97C; Parti">
+    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.4 Partition 활용 Partitioning 이란 ?  Table, Index를 Partition 단위로 나누어 저장 Partition Key에 따라 물리적으로 별도의 Segment에 저장   Partition 장점  관리적 측면 : Partition 단위 백업, 추가, 삭제, 변">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 3-5-4 Partition, Batch Job">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/11/04.04.partition/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 5&amp;#xC7A5; &amp;#xACE0;&amp;#xAE09; SQL Tuning 5.4 Partition &amp;#xD65C;&amp;#xC6A9;  Partitioning &amp;#xC774;&amp;#xB780; ? Table, Index&amp;#xB97C; Parti">
+<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.4 Partition 활용 Partitioning 이란 ?  Table, Index를 Partition 단위로 나누어 저장 Partition Key에 따라 물리적으로 별도의 Segment에 저장   Partition 장점  관리적 측면 : Partition 단위 백업, 추가, 삭제, 변">
 <meta property="og:updated_time" content="2017-04-24T00:17:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 3-5-4 Partition, Batch Job">
-<meta name="twitter:description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 5&amp;#xC7A5; &amp;#xACE0;&amp;#xAE09; SQL Tuning 5.4 Partition &amp;#xD65C;&amp;#xC6A9;  Partitioning &amp;#xC774;&amp;#xB780; ? Table, Index&amp;#xB97C; Parti">
+<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.4 Partition 활용 Partitioning 이란 ?  Table, Index를 Partition 단위로 나누어 저장 Partition Key에 따라 물리적으로 별도의 Segment에 저장   Partition 장점  관리적 측면 : Partition 단위 백업, 추가, 삭제, 변">
     
 
     
@@ -69,7 +69,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -164,192 +164,220 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="&#xACFC;&#xBAA9;-sql-&#xACE0;&#xAE09;-&#xD65C;&#xC6A9;-&#xBC0F;-tuning">3&#xACFC;&#xBAA9; SQL &#xACE0;&#xAE09; &#xD65C;&#xC6A9; &#xBC0F; Tuning</h1>
-<h2 id="&#xC7A5;-&#xACE0;&#xAE09;-sql-tuning">5&#xC7A5; &#xACE0;&#xAE09; SQL Tuning</h2>
-<h3 id="partition-&#xD65C;&#xC6A9;">5.4 Partition &#xD65C;&#xC6A9;</h3>
+            <h1 id="3과목-SQL-고급-활용-및-Tuning"><a href="#3과목-SQL-고급-활용-및-Tuning" class="headerlink" title="3과목 SQL 고급 활용 및 Tuning"></a>3과목 SQL 고급 활용 및 Tuning</h1><h2 id="5장-고급-SQL-Tuning"><a href="#5장-고급-SQL-Tuning" class="headerlink" title="5장 고급 SQL Tuning"></a>5장 고급 SQL Tuning</h2><h3 id="5-4-Partition-활용"><a href="#5-4-Partition-활용" class="headerlink" title="5.4 Partition 활용"></a>5.4 Partition 활용</h3><ul>
+<li><p>Partitioning 이란 ?</p>
 <ul>
-<li>Partitioning &#xC774;&#xB780; ?</li>
-<li>Table, Index&#xB97C; Partition &#xB2E8;&#xC704;&#xB85C; &#xB098;&#xB204;&#xC5B4; &#xC800;&#xC7A5;</li>
-<li><p>Partition Key&#xC5D0; &#xB530;&#xB77C; &#xBB3C;&#xB9AC;&#xC801;&#xC73C;&#xB85C; &#xBCC4;&#xB3C4;&#xC758; Segment&#xC5D0; &#xC800;&#xC7A5;</p></li>
-<li>Partition &#xC7A5;&#xC810;</li>
-<li>&#xAD00;&#xB9AC;&#xC801; &#xCE21;&#xBA74; : Partition &#xB2E8;&#xC704; &#xBC31;&#xC5C5;, &#xCD94;&#xAC00;, &#xC0AD;&#xC81C;, &#xBCC0;&#xACBD;&#xC774; &#xD3B8;&#xB9AC;</li>
-<li><p>&#xC131;&#xB2A5;&#xC801; &#xCE21;&#xBA74; : Partition &#xB2E8;&#xC704;&#xB85C; Query, DML&#xC774; &#xC218;&#xD589;&#xB418;&#xC5B4;&#xC11C; Transaction &#xACBD;&#xD569; &#xBC0F; &#xBD80;&#xD558; &#xBD84;&#xC0B0;</p></li>
+<li>Table, Index를 Partition 단위로 나누어 저장</li>
+<li>Partition Key에 따라 물리적으로 별도의 Segment에 저장</li>
 </ul>
-<h4 id="partition-&#xC720;&#xD615;">5.4.1 Partition &#xC720;&#xD615;</h4>
-<h5 id="range-partition">1. Range Partition</h5>
+</li>
+<li><p>Partition 장점</p>
 <ul>
-<li>Partition Key &#xAC12;&#xC758; &#xBC94;&#xC704;(Range)&#xB85C; &#xBD84;&#xD560;</li>
-<li>&#xAC00;&#xC7A5; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xD615;&#xD0DC;</li>
+<li>관리적 측면 : Partition 단위 백업, 추가, 삭제, 변경이 편리</li>
+<li>성능적 측면 : Partition 단위로 Query, DML이 수행되어서 Transaction 경합 및 부하 분산</li>
 </ul>
-<blockquote>
-<p>e.g.&#xA0;&#xB0A0;&#xC9DC; &#xCE7C;&#xB7FC; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xD310;&#xB9E4;&#xB370;&#xC774;&#xD130;&#xB97C; &#xC6D4;&#xBCC4;&#xB85C; &#xBD84;&#xD560;</p>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> &#xC8FC;&#xBB38;</div><div class="line">(</div><div class="line">    ...</div><div class="line">)</div><div class="line"><span class="keyword">PARTITION</span> <span class="keyword">BY</span> <span class="keyword">RANGE</span>(&#xC8FC;&#xBB38;&#xC77C;&#xC790;)</div><div class="line">(</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q1 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">&apos;20090401&apos;</span>),</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q2 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">&apos;20090701&apos;</span>),</div><div class="line">    ...</div><div class="line">    <span class="keyword">PARTITION</span> P9999_MX <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (MAXVALUE)</div><div class="line">)<span class="string">&apos;</span></div></pre></td></tr></table></figure>
-<h5 id="hash-partition">2. Hash Partition</h5>
-<ul>
-<li>Partition Key &#xAC12;&#xC758; Hash &#xD568;&#xC218;&#xB97C; &#xC801;&#xC6A9;&#xD558;&#xC5EC; &#xADF8; &#xAC12;&#xC73C;&#xB85C; Mapping</li>
-<li>&#xACE0;&#xB974;&#xAC8C; &#xBD84;&#xC0B0;&#xB418;&#xB294; &#xB300;&#xC2E0; &#xAC01; Row&#xC758; &#xC800;&#xC7A5;&#xC704;&#xCE58; &#xC608;&#xCE21;&#xC774; &#xBD88;&#xAC00;</li>
-<li>&#xBCD1;&#xB82C;&#xCC98;&#xB9AC; &#xC2DC; &#xC131;&#xB2A5;&#xD6A8;&#xACFC; &#xADF9;&#xB300;&#xD654;</li>
-<li>DML &#xACBD;&#xD569; &#xBD84;&#xC0B0;&#xC5D0; &#xD6A8;&#xACFC;&#xC801;</li>
+</li>
+</ul>
+<h4 id="5-4-1-Partition-유형"><a href="#5-4-1-Partition-유형" class="headerlink" title="5.4.1 Partition 유형"></a>5.4.1 Partition 유형</h4><h5 id="1-Range-Partition"><a href="#1-Range-Partition" class="headerlink" title="1. Range Partition"></a>1. Range Partition</h5><ul>
+<li>Partition Key 값의 범위(Range)로 분할</li>
+<li>가장 일반적인 형태</li>
 </ul>
 <blockquote>
-<p>e.g.&#xA0;&#xACE0;&#xAC1D;&#xBC88;&#xD638;, &#xC8FC;&#xBB38;&#xC77C;&#xB828;&#xBC88;&#xD638;</p>
+<p>e.g. 날짜 칼럼 기준으로 판매데이터를 월별로 분할</p>
 </blockquote>
-<h5 id="list-partition">3. List Partition</h5>
-<ul>
-<li>&#xBD88;&#xC5F0;&#xC18D;&#xC801;&#xC778; &#xAC12;&#xC758; &#xBAA9;&#xB85D;&#xC744; &#xAC01; Partition&#xC5D0; &#xC9C0;&#xC815;</li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 주문</div><div class="line">(</div><div class="line">    ...</div><div class="line">)</div><div class="line"><span class="keyword">PARTITION</span> <span class="keyword">BY</span> <span class="keyword">RANGE</span>(주문일자)</div><div class="line">(</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q1 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">'20090401'</span>),</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q2 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">'20090701'</span>),</div><div class="line">    ...</div><div class="line">    <span class="keyword">PARTITION</span> P9999_MX <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (MAXVALUE)</div><div class="line">)<span class="string">'</span></div></pre></td></tr></table></figure>
+<h5 id="2-Hash-Partition"><a href="#2-Hash-Partition" class="headerlink" title="2. Hash Partition"></a>2. Hash Partition</h5><ul>
+<li>Partition Key 값의 Hash 함수를 적용하여 그 값으로 Mapping</li>
+<li>고르게 분산되는 대신 각 Row의 저장위치 예측이 불가</li>
+<li>병렬처리 시 성능효과 극대화</li>
+<li>DML 경합 분산에 효과적</li>
 </ul>
 <blockquote>
-<p>e.g.&#xA0;&#xD310;&#xB9E4; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC9C0;&#xC5ED;&#xBCC4;&#xB85C; &#xBD84;&#xD560;</p>
+<p>e.g. 고객번호, 주문일련번호</p>
 </blockquote>
-<h5 id="composite-partition">4. Composite Partition</h5>
-<ul>
-<li>2&#xAC1C; &#xC774;&#xC0C1;&#xC758; Partition &#xAD6C;&#xC131; (&#xB2E8;, &#xB9E8; &#xCC98;&#xC74C;&#xC5D0; Hash&#xAC00; &#xC62C; &#xC21C; &#xC5C6;&#xC74C;)</li>
-<li>Range&#xB098; List Partition&#xC5D0; Range, Hash, List&#xB97C; Sub-partition&#xC73C;&#xB85C; &#xAD6C;&#xC131;</li>
+<h5 id="3-List-Partition"><a href="#3-List-Partition" class="headerlink" title="3. List Partition"></a>3. List Partition</h5><ul>
+<li>불연속적인 값의 목록을 각 Partition에 지정</li>
 </ul>
-<p>e.g.&#xA0;Range + Hash&#xB85C; &#xAD6C;&#xC131; <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> &#xC8FC;&#xBB38;</div><div class="line">(</div><div class="line">    ...</div><div class="line">)</div><div class="line"><span class="keyword">PARTITION</span> <span class="keyword">BY</span> <span class="keyword">RANGE</span>(&#xC8FC;&#xBB38;&#xC77C;&#xC790;)</div><div class="line"><span class="keyword">SUBPARTITION</span> <span class="keyword">BY</span> <span class="keyword">HASH</span>(&#xACE0;&#xAC1D;<span class="keyword">ID</span>) <span class="keyword">SUBPARTITIONS</span> <span class="number">8</span></div><div class="line">(</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q1 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">&apos;20090401&apos;</span>),</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q2 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">&apos;20090701&apos;</span>),</div><div class="line">    ...</div><div class="line">    <span class="keyword">PARTITION</span> P9999_MX <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (MAXVALUE) </div><div class="line">);</div></pre></td></tr></table></figure></p>
-<h4 id="partition-pruning">5.4.2 Partition Pruning</h4>
-<ul>
-<li>Optimizer&#xAC00; SQL&#xC758; &#xB300;&#xC0C1; Table&#xACFC; &#xC870;&#xAC74;&#xC744; &#xBD84;&#xC11D;&#xD558;&#xC5EC; &#xBD88;&#xD544;&#xC694;&#xD55C; Partition&#xC744;&#xC561;&#xC138;&#xC2A4; &#xB300;&#xC0C1;&#xC5D0;&#xC11C; &#xC81C;&#xC678;&#xD558;&#xB294; &#xAE30;&#xB2A5;</li>
+<blockquote>
+<p>e.g. 판매 데이터를 지역별로 분할</p>
+</blockquote>
+<h5 id="4-Composite-Partition"><a href="#4-Composite-Partition" class="headerlink" title="4. Composite Partition"></a>4. Composite Partition</h5><ul>
+<li>2개 이상의 Partition 구성 (단, 맨 처음에 Hash가 올 순 없음)</li>
+<li>Range나 List Partition에 Range, Hash, List를 Sub-partition으로 구성</li>
 </ul>
-<ol style="list-style-type: decimal">
-<li>Static Partition Pruning</li>
+<p>e.g. Range + Hash로 구성<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 주문</div><div class="line">(</div><div class="line">    ...</div><div class="line">)</div><div class="line"><span class="keyword">PARTITION</span> <span class="keyword">BY</span> <span class="keyword">RANGE</span>(주문일자)</div><div class="line"><span class="keyword">SUBPARTITION</span> <span class="keyword">BY</span> <span class="keyword">HASH</span>(고객<span class="keyword">ID</span>) <span class="keyword">SUBPARTITIONS</span> <span class="number">8</span></div><div class="line">(</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q1 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">'20090401'</span>),</div><div class="line">    <span class="keyword">PARTITION</span> P2009_Q2 <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="string">'20090701'</span>),</div><div class="line">    ...</div><div class="line">    <span class="keyword">PARTITION</span> P9999_MX <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (MAXVALUE) </div><div class="line">);</div></pre></td></tr></table></figure></p>
+<h4 id="5-4-2-Partition-Pruning"><a href="#5-4-2-Partition-Pruning" class="headerlink" title="5.4.2 Partition Pruning"></a>5.4.2 Partition Pruning</h4><ul>
+<li>Optimizer가 SQL의 대상 Table과 조건을 분석하여 불필요한 Partition을액세스 대상에서 제외하는 기능</li>
+</ul>
+<ol>
+<li>Static Partition Pruning<ul>
+<li>액세스할 Partition을 Compile-Time에 미리 결정</li>
+<li>상수 조건으로 조회할 경우 작동</li>
+</ul>
+</li>
+<li>Dynamic Partition Pruning<ul>
+<li>액세스할 Partition을 Run-Time에 결정</li>
+<li>Bind Variable로 조회하는 경우</li>
+<li>NL Join시 Inner Table이 Join 칼럼 기준으로 Partition 되 있는 경우</li>
+</ul>
+</li>
 </ol>
+<h4 id="5-4-3-Index-Partitioning"><a href="#5-4-3-Index-Partitioning" class="headerlink" title="5.4.3 Index Partitioning"></a>5.4.3 Index Partitioning</h4><ul>
+<li><p>Local vs Global</p>
 <ul>
-<li>&#xC561;&#xC138;&#xC2A4;&#xD560; Partition&#xC744; Compile-Time&#xC5D0; &#xBBF8;&#xB9AC; &#xACB0;&#xC815;</li>
-<li>&#xC0C1;&#xC218; &#xC870;&#xAC74;&#xC73C;&#xB85C; &#xC870;&#xD68C;&#xD560; &#xACBD;&#xC6B0; &#xC791;&#xB3D9;</li>
+<li>Local Partition Index<ul>
+<li>Table Partition과 1:1 대응하도록 Index Partitioning</li>
+<li>Index Partition Key를 사용자가 따로 지정하지 않고, DBMS가 자동으로 관리</li>
 </ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Dynamic Partition Pruning</li>
-</ol>
-<ul>
-<li>&#xC561;&#xC138;&#xC2A4;&#xD560; Partition&#xC744; Run-Time&#xC5D0; &#xACB0;&#xC815;</li>
-<li>Bind Variable&#xB85C; &#xC870;&#xD68C;&#xD558;&#xB294; &#xACBD;&#xC6B0;</li>
-<li>NL Join&#xC2DC; Inner Table&#xC774; Join &#xCE7C;&#xB7FC; &#xAE30;&#xC900;&#xC73C;&#xB85C; Partition &#xB418; &#xC788;&#xB294; &#xACBD;&#xC6B0;</li>
+</li>
+<li>Global Partition Index<ul>
+<li>Table Partition과는 독립적으로 구성</li>
 </ul>
-<h4 id="index-partitioning">5.4.3 Index Partitioning</h4>
-<ul>
-<li>Local vs Global</li>
-<li>Local Partition Index
-<ul>
-<li>Table Partition&#xACFC; 1:1 &#xB300;&#xC751;&#xD558;&#xB3C4;&#xB85D; Index Partitioning</li>
-<li>Index Partition Key&#xB97C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xB530;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xACE0;, DBMS&#xAC00; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xAD00;&#xB9AC;</li>
-</ul></li>
-<li>Global Partition Index
-<ul>
-<li>Table Partition&#xACFC;&#xB294; &#xB3C5;&#xB9BD;&#xC801;&#xC73C;&#xB85C; &#xAD6C;&#xC131;</li>
-</ul></li>
-<li>Prefixed vs NonPrefixed</li>
-<li>Prefixed Partition Index : Partition Key Column&#xC774; Index&#xC758; &#xC67C;&#xCABD; &#xC120;&#xB450;&#xC5D0; &#xC704;&#xCE58;</li>
-<li><p>NonPrefixed Partition Index : Partition Key Column&#xC774; Index&#xC758; &#xC67C;&#xCABD; &#xC120;&#xB450;&#xC5D0; &#xC788;&#xC9C0; &#xC54A;&#xAC70;&#xB098;, &#xC544;&#xC5D0; &#xC18D;&#xD558;&#xC9C0; &#xC54A;&#xC744; &#xACBD;&#xC6B0;</p></li>
-<li><p>&#xC704; &#xC870;&#xD569;&#xC911; Global NonPrefixed Partition Index&#xB294; Oracle&#xC5D0;&#xC11C; &#xC9C0;&#xC6D0;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</p></li>
-<li>Index Partitioning Guide</li>
-<li>NonPartitioned Index (&#xC77C;&#xBC18; Index)
-<ul>
-<li>Partition Key Column&#xC774; &#xC870;&#xAC74;&#xC808;&#xC5D0; &#xB204;&#xB77D;&#xB418;&#xBA74; &#xC5EC;&#xB7EC; Index Partition&#xC744; &#xC561;&#xC138;&#xC2A4;&#xD574;&#xC57C; &#xD558;&#xBBC0;&#xB85C; &#xBE44;&#xD6A8;&#xC728;&#xC801;</li>
-<li>&#xD2B9;&#xD788; OLTP&#xD658;&#xACBD;&#xC5D0;&#xC11C;&#xB294; &#xC131;&#xB2A5;&#xC5D0; &#xBBF8;&#xCE58;&#xB294; &#xC601;&#xD5A5;&#xC774; &#xD06C;&#xBBC0;&#xB85C; NonPartitioned &#xC804;&#xB7B5;&#xC774; &#xC720;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
-<li>NL Join&#xC5D0;&#xC11C; Partition Key&#xC5D0; &#xB300;&#xD55C; &#xB113;&#xC740; &#xBC94;&#xC704;&#xAC80;&#xC0C9; &#xC870;&#xAC74;&#xC744; &#xAC00;&#xC9C0;&#xACE0; Inner Table&#xC5D0; Partitioned Index&#xB85C; &#xC561;&#xC138;&#xC2A4;&#xD558;&#xBA74; &#xBE44;&#xD6A8;&#xC728;&#xC801; -&gt; NonPartitioned Index &#xC0AC;&#xC6A9;&#xC744; &#xACE0;&#xB824;</li>
-<li>Partition Index&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; SORT ORDER BY &#xB300;&#xCCB4; &#xD6A8;&#xACFC; &#xC0C1;&#xC2E4; -&gt; Sort &#xC5F0;&#xC0B0;&#xC744; &#xB300;&#xCCB4;&#xD568;&#xC73C;&#xB85C; &#xBD80;&#xBD84;&#xBC94;&#xC704; &#xCC98;&#xB9AC;&#xB97C; &#xD65C;&#xC6A9;&#xD558;&#xACE0;&#xC790; &#xD560; &#xACBD;&#xC6B0; NonPartitioned Index&#xAC00; &#xC720;&#xB9AC;&#xD568;</li>
-<li>Table Partition &#xC774;&#xB3D9;,&#xC0AD;&#xC81C; &#xB4F1; &#xC791;&#xC5C5;&#xC2DC; unsuable &#xB418;&#xBBC0;&#xB85C; &#xC801;&#xC6A9; &#xC2DC; &#xC8FC;&#xC758;</li>
-</ul></li>
-<li>Global Prefixed
-<ul>
-<li>Index &#xACBD;&#xD569; &#xBD84;&#xC0B0;&#xC5D0; &#xD6A8;&#xACFC;&#xC801;</li>
-<li>&#xC5EC;&#xB7EC; Local Index Partition&#xC744; &#xC561;&#xC138;&#xC2A4;&#xD558;&#xB294; &#xAC83;&#xC774; &#xBE44;&#xD6A8;&#xC728;&#xC801;&#xC77C; &#xACBD;&#xC6B0; &#xB300;&#xC548;&#xC73C;&#xB85C; &#xD65C;&#xC6A9;</li>
-<li>Table Partition &#xC774;&#xB3D9;,&#xC0AD;&#xC81C; &#xB4F1; &#xC791;&#xC5C5;&#xC2DC; unsuable &#xB418;&#xBBC0;&#xB85C; &#xC801;&#xC6A9; &#xC2DC; &#xC8FC;&#xC758;</li>
-</ul></li>
-<li>Local Prefixed
-<ul>
-<li>&#xAD00;&#xB9AC;&#xC801; &#xCE21;&#xBA74;&#xC5D0;&#xC11C; &#xC720;&#xC6A9; : Table Partition&#xC5D0; &#xB300;&#xD55C; &#xCD94;&#xAC00;, &#xC0AD;&#xC81C; &#xB4F1;&#xC758; &#xC791;&#xC5C5;&#xC774; &#xBE48;&#xBC88;&#xD560; &#xB54C;</li>
-<li>&#xC774;&#xB825;&#xC131; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC8FC;&#xB85C; &#xAD00;&#xB9AC;&#xD558;&#xB294; DB &#xD658;&#xACBD;&#xC5D0; &#xD6A8;&#xACFC;&#xC801;</li>
-<li>Partition Key Column&#xC774; <code>=</code> &#xC870;&#xAC74;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB420; &#xB54C; &#xC720;&#xC6A9;</li>
-<li>Partition Key Column&#xC5D0; &#xB300;&#xD55C; &#xAC80;&#xC0C9; &#xC870;&#xAC74;&#xC774; &#xC5C6;&#xC73C;&#xBA74; &#xC815;&#xC0C1;&#xC801; &#xC0AC;&#xC6A9;&#xC774; &#xBD88;&#xAC00; (Index Full Scan&#xC73C;&#xB85C;&#xB294; &#xC120;&#xD0DD;&#xAC00;&#xB2A5;)</li>
-<li>Partition Key Column&#xC774; &#xBC94;&#xC704;&#xAC80;&#xC0C9; (LIKE, BETWEEN, &#xBD80;&#xB4F1;&#xD638;) &#xC77C; &#xACBD;&#xC6B0; &#xBD88;&#xB9AC;</li>
-</ul></li>
-<li>Local NonPrefixed
-<ul>
-<li>Local Prefixed&#xC640; &#xAC70;&#xC758; &#xAC19;&#xC740; &#xD2B9;&#xC9D5;&#xC774;&#xAE34;&#xD558;&#xB098;</li>
-<li>&#xBC94;&#xC704;&#xAC80;&#xC0C9;&#xC774; &#xC8FC;&#xB85C; &#xC0AC;&#xC6A9;&#xB420; &#xACBD;&#xC6B0; NonPrefixed&#xAC00; &#xB354; &#xC720;&#xB9AC; (&#xB2E8;, &#xC881;&#xC740; &#xBC94;&#xC704;&#xAC80;&#xC0C9;&#xC774;&#xC5B4;&#xC57C; &#xD568;)</li>
-</ul></li>
+</li>
 </ul>
-<h3 id="batch-program-tuning">5.5 Batch Program Tuning</h3>
+</li>
+<li><p>Prefixed vs NonPrefixed</p>
 <ul>
-<li>Batch Program&#xC774;&#xB780; ?</li>
-<li>User&#xC640;&#xC758; &#xC0C1;&#xD638;&#xC791;&#xC6A9;(Interface)&#xC5C6;&#xC774;</li>
-<li>&#xB300;&#xB7C9;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xB294;</li>
-<li>&#xC77C;&#xB828;&#xC758; &#xC791;&#xC5C5;&#xB4E4;&#xC744; &#xBB36;&#xC5B4;</li>
-<li>&#xC815;&#xAE30;&#xC801;&#xC73C;&#xB85C; &#xBC18;&#xBCF5; &#xC218;&#xD589;&#xD558;&#xAC70;&#xB098; (&#xC815;&#xAE30; &#xBC30;&#xCE58;)</li>
-<li>&#xC815;&#xD574;&#xC9C4; &#xADDC;&#xCE59;&#xC5D0; &#xB530;&#xB77C; (&#xC774;&#xBCA4;&#xD2B8; &#xBC30;&#xCE58;)</li>
-<li><p>&#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC218;&#xD589; (&#xC218;&#xB3D9;&#xC73C;&#xB85C; On-Demand &#xBC30;&#xCE58;&#xB85C;&#xB3C4; &#xC218;&#xD589;&#xAC00;&#xB2A5;)</p></li>
-<li>Batch &#xD658;&#xACBD;&#xC758; &#xBCC0;&#xD654;</li>
-<li>&#xACFC;&#xAC70; : &#xC77C;, &#xC6D4; &#xB2E8;&#xC704;&#xB85C; &#xC8FC;&#xB85C; &#xC57C;&#xAC04;&#xC5D0; &#xC218;&#xD589;&#xB418;&#xC5C8;&#xC73C;&#xBA70;, Online&#xACFC; Batch&#xAC00; &#xBA85;&#xD655;&#xD558;&#xAC8C; &#xAD6C;&#xBD84;&#xB418;&#xC5B4;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xC5C8;&#xC9C0;&#xB9CC;,</li>
-<li><p>&#xD604;&#xC7AC; : &#xC2DC;&#xAC04;, &#xBD84; &#xB2E8;&#xC704;&#xC758; &#xC9E7;&#xC740; &#xC2DC;&#xAC04;&#xC5D0; &#xC218;&#xD589;&#xB418;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xC73C;&#xBA70; On-Demand Batch&#xB3C4; &#xC81C;&#xD55C;&#xC801;&#xC774;&#xB098;&#xB9C8; &#xD5C8;&#xC6A9;&#xB418;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p></li>
-<li>&#xC131;&#xB2A5;&#xAC1C;&#xC120; &#xBAA9;&#xD45C; &#xC124;&#xC815;</li>
-<li>&#xC804;&#xCCB4; Batch Program &#xB4E4;&#xC758; &#xCD5C;&#xC885; &#xC218;&#xD589;&#xC2DC;&#xAC04; &#xB2E8;&#xCD95;
+<li>Prefixed Partition Index : Partition Key Column이 Index의 왼쪽 선두에 위치</li>
+<li>NonPrefixed Partition Index : Partition Key Column이 Index의 왼쪽 선두에 있지 않거나, 아에 속하지 않을 경우</li>
+</ul>
+</li>
+<li><p>위 조합중 Global NonPrefixed Partition Index는 Oracle에서 지원하지 않음</p>
+</li>
+<li><p>Index Partitioning Guide</p>
 <ul>
-<li>Batch Window&#xB97C; &#xBCF4;&#xACE0; Batch Program &#xAC04;&#xC758; &#xC120;&#xD6C4; &#xAD00;&#xACC4;&#xB97C; &#xB530;&#xC838;&#xAC00;&#xBA74;&#xC11C; &#xC804;&#xCCB4;&#xC801;&#xC73C;&#xB85C; &#xACE0;&#xB824;</li>
-</ul></li>
-<li>System &#xBD80;&#xD558;&#xB3C4; &#xACE0;&#xB824;&#xD574;&#xC57C; &#xD568;
+<li>NonPartitioned Index (일반 Index)<ul>
+<li>Partition Key Column이 조건절에 누락되면 여러 Index Partition을 액세스해야 하므로 비효율적</li>
+<li>특히 OLTP환경에서는 성능에 미치는 영향이 크므로 NonPartitioned 전략이 유용할 수 있음</li>
+<li>NL Join에서 Partition Key에 대한 넓은 범위검색 조건을 가지고 Inner Table에 Partitioned Index로 액세스하면 비효율적 -&gt; NonPartitioned Index 사용을 고려</li>
+<li>Partition Index를 이용하면 SORT ORDER BY 대체 효과 상실 -&gt; Sort 연산을 대체함으로 부분범위 처리를 활용하고자 할 경우 NonPartitioned Index가 유리함</li>
+<li>Table Partition 이동,삭제 등 작업시 unsuable 되므로 적용 시 주의</li>
+</ul>
+</li>
+<li>Global Prefixed<ul>
+<li>Index 경합 분산에 효과적</li>
+<li>여러 Local Index Partition을 액세스하는 것이 비효율적일 경우 대안으로 활용</li>
+<li>Table Partition 이동,삭제 등 작업시 unsuable 되므로 적용 시 주의</li>
+</ul>
+</li>
+<li>Local Prefixed<ul>
+<li>관리적 측면에서 유용 : Table Partition에 대한 추가, 삭제 등의 작업이 빈번할 때</li>
+<li>이력성 데이터를 주로 관리하는 DB 환경에 효과적</li>
+<li>Partition Key Column이 <code>=</code> 조건으로 사용될 때 유용</li>
+<li>Partition Key Column에 대한 검색 조건이 없으면 정상적 사용이 불가 (Index Full Scan으로는 선택가능)</li>
+<li>Partition Key Column이 범위검색 (LIKE, BETWEEN, 부등호) 일 경우 불리</li>
+</ul>
+</li>
+<li>Local NonPrefixed<ul>
+<li>Local Prefixed와 거의 같은 특징이긴하나</li>
+<li>범위검색이 주로 사용될 경우 NonPrefixed가 더 유리 (단, 좁은 범위검색이어야 함)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-5-Batch-Program-Tuning"><a href="#5-5-Batch-Program-Tuning" class="headerlink" title="5.5 Batch Program Tuning"></a>5.5 Batch Program Tuning</h3><ul>
+<li><p>Batch Program이란 ?</p>
 <ul>
-<li>&#xBCD1;&#xB82C;&#xB3C4; (DOP : Degree of Parallelism)&#xB97C; 32&#xB85C; &#xD558;&#xC5EC; 5&#xBD84;&#xC5D0; &#xC218;&#xD589;&#xB418;&#xB294;&#xAC83;&#xBCF4;&#xB2E4;&#xB294; &#xBCD1;&#xB82C;&#xCC98;&#xB9AC; &#xC5C6;&#xC774; 10&#xBD84; &#xC18C;&#xC694;&#xB418;&#xB294;&#xAC8C; &#xB354; &#xB098;&#xC744; &#xC218; &#xC788;&#xB2E4;.</li>
-</ul></li>
-<li>&#xACBD;&#xD569;&#xC744; &#xCD5C;&#xC18C;&#xD654;
+<li>User와의 상호작용(Interface)없이</li>
+<li>대량의 데이터를 처리하는</li>
+<li>일련의 작업들을 묶어</li>
+<li>정기적으로 반복 수행하거나 (정기 배치)</li>
+<li>정해진 규칙에 따라 (이벤트 배치)</li>
+<li>자동으로 수행 (수동으로 On-Demand 배치로도 수행가능)</li>
+</ul>
+</li>
+<li><p>Batch 환경의 변화</p>
 <ul>
-<li>CPU &#xC790;&#xC6D0; &#xB300;&#xB7C9; &#xC0AC;&#xC6A9; &#xBC0F; &#xB3D9;&#xC77C;&#xD55C; &#xC790;&#xC6D0;(&#xB370;&#xC774;&#xD130;)&#xC5D0; &#xC811;&#xADFC;&#xD558;&#xB294; Batch Program&#xC744; &#xBD84;&#xC0B0;</li>
-</ul></li>
-<li>Batch Program &#xAD6C;&#xD604; Pattern&#xACFC; Tuning &#xBC29;&#xC548;</li>
-<li>&#xC808;&#xCC28;&#xD615;&#xC73C;&#xB85C; &#xC791;&#xC131;&#xB41C; Program
+<li>과거 : 일, 월 단위로 주로 야간에 수행되었으며, Online과 Batch가 명확하게 구분되어서 사용되었지만,</li>
+<li>현재 : 시간, 분 단위의 짧은 시간에 수행되는 경우가 많으며 On-Demand Batch도 제한적이나마 허용되어야 한다.</li>
+</ul>
+</li>
+<li><p>성능개선 목표 설정</p>
 <ul>
-<li>Application Cursor&#xB97C; &#xC5F4;&#xACE0;, Loop &#xB0B4;&#xC5D0;&#xC11C; &#xB2E4;&#xB978; SQL&#xC774;&#xB098; Sub Procedure&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA74;&#xC11C; &#xBC18;&#xBCF5;&#xCC98;&#xB9AC;</li>
-<li>(One SQL &#xBCF4;&#xB2E4;) &#xAD6C;&#xD604;&#xC774; &#xC27D;&#xB2E4;.</li>
-<li>&#xC544;&#xBB34;&#xB9AC; Tuning&#xC744; &#xC798;&#xD574;&#xB3C4; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xCD5C;&#xC801;&#xD654; &#xD55C;&#xACC4;&#xAC00; &#xC788;&#xC74C;</li>
-<li>&#xBC18;&#xBCF5;&#xC801;&#xC778; DB Call &#xBC1C;&#xC0DD;</li>
-<li>Random I/O &#xC704;&#xC8FC;</li>
-<li>&#xB3D9;&#xC77C;&#xD55C; &#xB370;&#xC774;&#xD130; &#xC911;&#xBCF5; &#xC561;&#xC138;&#xC2A4;</li>
-<li>Tuning Guide</li>
-<li>&#xBCD1;&#xBAA9;&#xC744; &#xC77C;&#xC73C;&#xD0A4;&#xB294; SQL&#xC744; &#xCC3E;&#xC544; I/O Tuning : Index &#xC7AC;&#xAD6C;&#xC131; &#xBC0F; &#xC561;&#xC138;&#xC2A4; &#xACBD;&#xB85C; &#xCD5C;&#xC801;&#xD654;</li>
-<li>Program Parallel &#xD65C;&#xC6A9; : SQL&#xC774; &#xC77D;&#xB294; &#xB370;&#xC774;&#xD130; &#xBC94;&#xC704;&#xB97C; &#xB2EC;&#xB9AC;&#xD558;&#xC5EC; &#xC5EC;&#xB7EC; Program&#xC774; &#xB3D9;&#xC2DC;&#xC5D0; &#xC218;&#xD589;</li>
-<li>Array Processing &#xD65C;&#xC6A9;</li>
-<li>One SQL&#xB85C; &#xB2E4;&#xC2DC; &#xAD6C;&#xD604;;;;</li>
-</ul></li>
-<li>One SQL
+<li>전체 Batch Program 들의 최종 수행시간 단축<ul>
+<li>Batch Window를 보고 Batch Program 간의 선후 관계를 따져가면서 전체적으로 고려</li>
+</ul>
+</li>
+<li>System 부하도 고려해야 함<ul>
+<li>병렬도 (DOP : Degree of Parallelism)를 32로 하여 5분에 수행되는것보다는 병렬처리 없이 10분 소요되는게 더 나을 수 있다.</li>
+</ul>
+</li>
+<li>경합을 최소화<ul>
+<li>CPU 자원 대량 사용 및 동일한 자원(데이터)에 접근하는 Batch Program을 분산</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Batch Program 구현 Pattern과 Tuning 방안</p>
 <ul>
-<li>One SQL&#xB85C; &#xAD6C;&#xD604;&#xD558;&#xAC70;&#xB098;, &#xC9D1;&#xD569;&#xC801;&#xC73C;&#xB85C; &#xC815;&#xC758;&#xB41C; &#xC5EC;&#xB7EC; SQL&#xC744; &#xB2E8;&#xACC4;&#xC801;&#xC73C;&#xB85C; &#xC2E4;&#xD589;</li>
-<li>&#xAD6C;&#xD604;&#xD558;&#xAE30; &#xC5B4;&#xB835;&#xACE0;, &#xC5C5;&#xBB34;&#xAC00; &#xBCF5;&#xC7A1;&#xD560; &#xACBD;&#xC6B0; &#xC5EC;&#xB7EC; SQL&#xB4E4;&#xC744; &#xD1B5;&#xD569;&#xD588;&#xB2E4;&#xAC00; &#xACB0;&#xACFC;&#xAC00; &#xD2C0;&#xB824;&#xC9C8; &#xC218; &#xC788;&#xC74C;</li>
-<li>Tuning Guide</li>
-<li>&#xBCD1;&#xBAA9;&#xC744; &#xC77C;&#xC73C;&#xD0A4;&#xB294; &#xC624;&#xD37C;&#xB808;&#xC774;&#xC158;&#xC744; &#xCC3E;&#xC544; I/O Tuning
+<li>절차형으로 작성된 Program<ul>
+<li>Application Cursor를 열고, Loop 내에서 다른 SQL이나 Sub Procedure를 호출하면서 반복처리</li>
+<li>(One SQL 보다) 구현이 쉽다. </li>
+<li>아무리 Tuning을 잘해도 다음과 같은 최적화 한계가 있음<ul>
+<li>반복적인 DB Call 발생</li>
+<li>Random I/O 위주</li>
+<li>동일한 데이터 중복 액세스</li>
+</ul>
+</li>
+<li>Tuning Guide<ul>
+<li>병목을 일으키는 SQL을 찾아 I/O Tuning : Index 재구성 및 액세스 경로 최적화</li>
+<li>Program Parallel 활용 : SQL이 읽는 데이터 범위를 달리하여 여러 Program이 동시에 수행</li>
+<li>Array Processing 활용</li>
+<li>One SQL로 다시 구현;;;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>One SQL<ul>
+<li>One SQL로 구현하거나, 집합적으로 정의된 여러 SQL을 단계적으로 실행</li>
+<li>구현하기 어렵고, 업무가 복잡할 경우 여러 SQL들을 통합했다가 결과가 틀려질 수 있음</li>
+<li>Tuning Guide<ul>
+<li>병목을 일으키는 오퍼레이션을 찾아 I/O Tuning<ul>
+<li>Index Scan 대신 Full Table Scan으로</li>
+<li>NL Join 보다 Hash Join으로</li>
+</ul>
+</li>
+<li>임시 Table 활용</li>
+<li>Partition 활용</li>
+<li>병렬처리 활용</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>병렬 처리 활용</p>
 <ul>
-<li>Index Scan &#xB300;&#xC2E0; Full Table Scan&#xC73C;&#xB85C;</li>
-<li>NL Join &#xBCF4;&#xB2E4; Hash Join&#xC73C;&#xB85C;</li>
-</ul></li>
-<li>&#xC784;&#xC2DC; Table &#xD65C;&#xC6A9;</li>
-<li>Partition &#xD65C;&#xC6A9;</li>
-<li>&#xBCD1;&#xB82C;&#xCC98;&#xB9AC; &#xD65C;&#xC6A9;</li>
-</ul></li>
-<li>&#xBCD1;&#xB82C; &#xCC98;&#xB9AC; &#xD65C;&#xC6A9;</li>
-<li><code>SELECT /*+ full(T) parallel(T, 4) */ ...</code> : T Table&#xC744; Full Scan&#xC73C;&#xB85C; 4&#xAC1C;&#xB85C; &#xBCD1;&#xB82C;&#xCC98;&#xB9AC;</li>
-<li><code>SELECT /*+ index_ffs(T t_idx) parallel(T, t_idx, 4) */ ...</code> : T Table&#xC758; t_idx Index&#xB97C; Fast Full Scan&#xC73C;&#xB85C; 4&#xAC1C;&#xB85C; &#xBCD1;&#xB82C;&#xCC98;&#xB9AC;</li>
-<li>QC (Query Cordinator)
-<ul>
-<li>&#xBCD1;&#xB82C; SQL&#xBB38;&#xC744; &#xBC1C;&#xD589;&#xD55C; Session</li>
-<li>&#xBCD1;&#xB82C;&#xB85C; &#xCC98;&#xB9AC;&#xB418;&#xC9C0; &#xC54A;&#xB294; Table&#xC740; QC&#xAC00; &#xC9C1;&#xC811;&#xCC98;&#xB9AC;</li>
-<li>&#xAC01; &#xBCD1;&#xB82C; Server&#xB85C;&#xBD80;&#xD130;&#xC758; &#xC0B0;&#xCD9C;&#xBB3C;&#xC744; &#xD1B5;&#xD569;&#xD558;&#xB294; &#xC791;&#xC5C5; &#xC218;&#xD589;</li>
-<li>&#xCD5C;&#xC885; &#xACB0;&#xACFC; &#xC9D1;&#xD569;&#xC744; User&#xC5D0;&#xAC8C; &#xC804;&#xC1A1;</li>
-</ul></li>
-<li>Parallel Server Process
-<ul>
-<li>&#xBCD1;&#xB82C; SQL&#xC744; &#xC2E4;&#xC81C;&#xB85C; &#xC218;&#xD589;&#xD558;&#xB294; &#xAC1C;&#xBCC4; Session</li>
-</ul></li>
-<li>Operation Parallelism
-<ul>
-<li>Intra-Opertarion Parallelism</li>
-<li>&#xC11C;&#xB85C; &#xBC30;&#xD0C0;&#xC801;&#xC778; &#xBC94;&#xC704;&#xB97C; &#xB3C5;&#xB9BD;&#xC801;&#xC73C;&#xB85C; &#xCC98;&#xB9AC;</li>
-<li>&#xAC01;&#xAC01;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; Process&#xBCC4;&#xB85C; &#xC77D;&#xB294; &#xC791;&#xC5C5;</li>
-<li>&#xC804;&#xB2EC;&#xBC1B;&#xC740; &#xB370;&#xC774;&#xD130;&#xB97C; &#xAC01;&#xAC01;&#xC758; Process&#xC5D0;&#xC11C; &#xCC98;&#xB9AC;</li>
-<li>Inter-Operation Parallelism</li>
-<li>&#xB2E4;&#xB978; &#xC11C;&#xBC84; &#xC9D1;&#xD569;&#xC73C;&#xB85C; &#xBD84;&#xBC30;&#xD558;&#xAC70;&#xB098; &#xC815;&#xB82C;&#xB41C; &#xACB0;&#xACFC;&#xB97C; QC&#xC5D0;&#xAC8C; &#xC804;&#xC1A1;&#xD558;&#xB294; &#xC791;&#xC5C5;&#xC744; &#xBCD1;&#xB82C;&#xB85C; &#xB3D9;&#xC2DC;&#xC5D0; &#xC9C4;&#xD589;</li>
-<li>Process&#xAC04;&#xC758; &#xD1B5;&#xC2E0;&#xC774; &#xBC1C;&#xC0DD;</li>
-</ul></li>
+<li><code>SELECT /*+ full(T) parallel(T, 4) */ ...</code> : T Table을 Full Scan으로 4개로 병렬처리</li>
+<li><code>SELECT /*+ index_ffs(T t_idx) parallel(T, t_idx, 4) */ ...</code> : T Table의 t_idx Index를 Fast Full Scan으로 4개로 병렬처리</li>
+<li>QC (Query Cordinator)<ul>
+<li>병렬 SQL문을 발행한 Session</li>
+<li>병렬로 처리되지 않는 Table은 QC가 직접처리</li>
+<li>각 병렬 Server로부터의 산출물을 통합하는 작업 수행</li>
+<li>최종 결과 집합을 User에게 전송</li>
+</ul>
+</li>
+<li>Parallel Server Process<ul>
+<li>병렬 SQL을 실제로 수행하는 개별 Session</li>
+</ul>
+</li>
+<li>Operation Parallelism<ul>
+<li>Intra-Opertarion Parallelism<ul>
+<li>서로 배타적인 범위를 독립적으로 처리</li>
+<li>각각의 데이터를 Process별로 읽는 작업</li>
+<li>전달받은 데이터를 각각의 Process에서 처리</li>
+</ul>
+</li>
+<li>Inter-Operation Parallelism<ul>
+<li>다른 서버 집합으로 분배하거나 정렬된 결과를 QC에게 전송하는 작업을 병렬로 동시에 진행</li>
+<li>Process간의 통신이 발생</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -358,7 +386,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/11/04.04.partition/" data-id="cj243030p001lkc7bzlxasjf2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/11/04.04.partition/" data-id="cj244xaxy001h7k7b4fdkae3w" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -514,7 +542,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -524,7 +552,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+            <a href="/tags/APIGateway/" style="font-size: 17px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18px;">AWS</a> <a href="/tags/C/" style="font-size: 19px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11px;">CI/CD</a> <a href="/tags/DataScience/" style="font-size: 12px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12px;">JavaScript</a> <a href="/tags/JupyterNotebook/" style="font-size: 11px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 18px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 16px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
         </div>
     </div>
 
