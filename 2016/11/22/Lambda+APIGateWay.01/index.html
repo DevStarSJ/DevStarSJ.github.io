@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
     <title>AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기 | Dev Star SJ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="AWS,Lambda,APIGateway,Node.JS" />
     
-    <meta name="description" content="AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기AWS Lambda 란 코드를 AWS 내에 올려두고 필요할 때에만 해당 코드를 실행해주는 서비스를 말합니다.서버를 24시간 가동시키게 아니라, 그냥 해당 코드가 실행되면서 사용하는 컴퓨팅 시간에 대해서만 과금을 하는 방식입니다.즉, 서버없이 서비스를 할 수 있는 편">
+    <meta name="description" content="AWS Lambda&amp;#xC640; API Gateway&amp;#xB97C; &amp;#xC774;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C; Serverless Web API &amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30; AWS Lambda &amp;#xB780; &amp;#xCF54;&amp;#xB4DC;&amp;#xB97C; AWS &amp;#xB0B4;&amp;#xC5D0; &amp;#xC62C;&amp;#xB824;&amp;#">
 <meta name="keywords" content="AWS,Lambda,APIGateway,Node.JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/11/22/Lambda+APIGateWay.01/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기AWS Lambda 란 코드를 AWS 내에 올려두고 필요할 때에만 해당 코드를 실행해주는 서비스를 말합니다.서버를 24시간 가동시키게 아니라, 그냥 해당 코드가 실행되면서 사용하는 컴퓨팅 시간에 대해서만 과금을 하는 방식입니다.즉, 서버없이 서비스를 할 수 있는 편">
+<meta property="og:description" content="AWS Lambda&amp;#xC640; API Gateway&amp;#xB97C; &amp;#xC774;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C; Serverless Web API &amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30; AWS Lambda &amp;#xB780; &amp;#xCF54;&amp;#xB4DC;&amp;#xB97C; AWS &amp;#xB0B4;&amp;#xC5D0; &amp;#xC62C;&amp;#xB824;&amp;#">
 <meta property="og:image" content="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.01.png?raw=true">
 <meta property="og:updated_time" content="2017-04-23T08:21:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기">
-<meta name="twitter:description" content="AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기AWS Lambda 란 코드를 AWS 내에 올려두고 필요할 때에만 해당 코드를 실행해주는 서비스를 말합니다.서버를 24시간 가동시키게 아니라, 그냥 해당 코드가 실행되면서 사용하는 컴퓨팅 시간에 대해서만 과금을 하는 방식입니다.즉, 서버없이 서비스를 할 수 있는 편">
+<meta name="twitter:description" content="AWS Lambda&amp;#xC640; API Gateway&amp;#xB97C; &amp;#xC774;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C; Serverless Web API &amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30; AWS Lambda &amp;#xB780; &amp;#xCF54;&amp;#xB4DC;&amp;#xB97C; AWS &amp;#xB0B4;&amp;#xC5D0; &amp;#xC62C;&amp;#xB824;&amp;#">
 <meta name="twitter:image" content="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.01.png?raw=true">
     
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     
@@ -47,7 +47,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
         <header id="header">
     <div id="header-outer" class="outer">
         <div class="container">
@@ -71,7 +71,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -166,237 +166,202 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="AWS-Lambda와-API-Gateway를-이용해서-Serverless-Web-API-만들기"><a href="#AWS-Lambda와-API-Gateway를-이용해서-Serverless-Web-API-만들기" class="headerlink" title="AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기"></a>AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기</h1><p><strong><a href="https://aws.amazon.com/ko/lambda/details" target="_blank" rel="external">AWS Lambda</a></strong> 란 코드를 AWS 내에 올려두고 필요할 때에만 해당 코드를 실행해주는 서비스를 말합니다.<br>서버를 24시간 가동시키게 아니라, 그냥 해당 코드가 실행되면서 사용하는 컴퓨팅 시간에 대해서만 과금을 하는 방식입니다.<br>즉, 서버없이 서비스를 할 수 있는 편리한 구조면서도 실제로 코드가 동작하는 만큼만 과금이 되다보니 보통의 경우 서버를 띄워놓는거보다 훨씬 저렴한 비용으로 서비가 가능하며 스케일링에 대한 관리를 해줄 필요가 없습니다.</p>
-<p>람다에 올려둔 코드는 AWS 내의 다른 서비스에서 이벤트 형식으로 해당 코드가 실행되게 할 수 있는데, <strong><a href="https://aws.amazon.com/ko/api-gateway" target="_blank" rel="external">API Gateway</a></strong> 를 붙이면 웹서비스로 활용이 가능합니다.</p>
-<p>이 두가지 AWS의 서비스를 이용해서 서버없이 API 서비스를 구축하는 튜토리얼을 진행하겠습니다. 아무 생각없이 그냥 따라하시다 보면 그 과정과 원하는 값을 전달하고 받는 것에 대해서 이해가 되실 겁니다.</p>
-<h2 id="Lambda-생성"><a href="#Lambda-생성" class="headerlink" title="Lambda 생성"></a>Lambda 생성</h2><ul>
-<li><code>AWS</code> 로그인 후 <code>Lambda</code> 탭으로 이동</li>
+            <h1 id="aws-lambda&#xC640;-api-gateway&#xB97C;-&#xC774;&#xC6A9;&#xD574;&#xC11C;-serverless-web-api-&#xB9CC;&#xB4E4;&#xAE30;">AWS Lambda&#xC640; API Gateway&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; Serverless Web API &#xB9CC;&#xB4E4;&#xAE30;</h1>
+<p><strong><a href="https://aws.amazon.com/ko/lambda/details" target="_blank" rel="external">AWS Lambda</a></strong> &#xB780; &#xCF54;&#xB4DC;&#xB97C; AWS &#xB0B4;&#xC5D0; &#xC62C;&#xB824;&#xB450;&#xACE0; &#xD544;&#xC694;&#xD560; &#xB54C;&#xC5D0;&#xB9CC; &#xD574;&#xB2F9; &#xCF54;&#xB4DC;&#xB97C; &#xC2E4;&#xD589;&#xD574;&#xC8FC;&#xB294; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xB9D0;&#xD569;&#xB2C8;&#xB2E4;. &#xC11C;&#xBC84;&#xB97C; 24&#xC2DC;&#xAC04; &#xAC00;&#xB3D9;&#xC2DC;&#xD0A4;&#xAC8C; &#xC544;&#xB2C8;&#xB77C;, &#xADF8;&#xB0E5; &#xD574;&#xB2F9; &#xCF54;&#xB4DC;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xBA74;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xCEF4;&#xD4E8;&#xD305; &#xC2DC;&#xAC04;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xACFC;&#xAE08;&#xC744; &#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC785;&#xB2C8;&#xB2E4;. &#xC989;, &#xC11C;&#xBC84;&#xC5C6;&#xC774; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xD560; &#xC218; &#xC788;&#xB294; &#xD3B8;&#xB9AC;&#xD55C; &#xAD6C;&#xC870;&#xBA74;&#xC11C;&#xB3C4; &#xC2E4;&#xC81C;&#xB85C; &#xCF54;&#xB4DC;&#xAC00; &#xB3D9;&#xC791;&#xD558;&#xB294; &#xB9CC;&#xD07C;&#xB9CC; &#xACFC;&#xAE08;&#xC774; &#xB418;&#xB2E4;&#xBCF4;&#xB2C8; &#xBCF4;&#xD1B5;&#xC758; &#xACBD;&#xC6B0; &#xC11C;&#xBC84;&#xB97C; &#xB744;&#xC6CC;&#xB193;&#xB294;&#xAC70;&#xBCF4;&#xB2E4; &#xD6E8;&#xC52C; &#xC800;&#xB834;&#xD55C; &#xBE44;&#xC6A9;&#xC73C;&#xB85C; &#xC11C;&#xBE44;&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xBA70; &#xC2A4;&#xCF00;&#xC77C;&#xB9C1;&#xC5D0; &#xB300;&#xD55C; &#xAD00;&#xB9AC;&#xB97C; &#xD574;&#xC904; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB78C;&#xB2E4;&#xC5D0; &#xC62C;&#xB824;&#xB454; &#xCF54;&#xB4DC;&#xB294; AWS &#xB0B4;&#xC758; &#xB2E4;&#xB978; &#xC11C;&#xBE44;&#xC2A4;&#xC5D0;&#xC11C; &#xC774;&#xBCA4;&#xD2B8; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xD574;&#xB2F9; &#xCF54;&#xB4DC;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xAC8C; &#xD560; &#xC218; &#xC788;&#xB294;&#xB370;, <strong><a href="https://aws.amazon.com/ko/api-gateway" target="_blank" rel="external">API Gateway</a></strong> &#xB97C; &#xBD99;&#xC774;&#xBA74; &#xC6F9;&#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xD65C;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774; &#xB450;&#xAC00;&#xC9C0; AWS&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC11C;&#xBC84;&#xC5C6;&#xC774; API &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xAD6C;&#xCD95;&#xD558;&#xB294; &#xD29C;&#xD1A0;&#xB9AC;&#xC5BC;&#xC744; &#xC9C4;&#xD589;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC544;&#xBB34; &#xC0DD;&#xAC01;&#xC5C6;&#xC774; &#xADF8;&#xB0E5; &#xB530;&#xB77C;&#xD558;&#xC2DC;&#xB2E4; &#xBCF4;&#xBA74; &#xADF8; &#xACFC;&#xC815;&#xACFC; &#xC6D0;&#xD558;&#xB294; &#xAC12;&#xC744; &#xC804;&#xB2EC;&#xD558;&#xACE0; &#xBC1B;&#xB294; &#xAC83;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xC774;&#xD574;&#xAC00; &#xB418;&#xC2E4; &#xAC81;&#xB2C8;&#xB2E4;.</p>
+<h2 id="lambda-&#xC0DD;&#xC131;">Lambda &#xC0DD;&#xC131;</h2>
+<ul>
+<li><code>AWS</code> &#xB85C;&#xADF8;&#xC778; &#xD6C4; <code>Lambda</code> &#xD0ED;&#xC73C;&#xB85C; &#xC774;&#xB3D9;</li>
 </ul>
 <p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.01.png?raw=true"></p>
 <ul>
-<li><code>Create a Lambda Function</code> 선택</li>
+<li><code>Create a Lambda Function</code> &#xC120;&#xD0DD;</li>
 </ul>
 <p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.02.png?raw=true"></p>
 <ul>
-<li>Select blueprint에서 <code>Blank Function</code> 선택</li>
+<li>Select blueprint&#xC5D0;&#xC11C; <code>Blank Function</code> &#xC120;&#xD0DD;</li>
 </ul>
 <p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.03.png?raw=true"></p>
 <ul>
-<li>Configure function 에서 일단 바로 <code>Next</code> 선택 (미리 연결할 API Gateway가 있다면 여기서 연결하면 됨)</li>
-<li><code>Configure function</code>에서 함수 정의<ul>
+<li>Configure function &#xC5D0;&#xC11C; &#xC77C;&#xB2E8; &#xBC14;&#xB85C; <code>Next</code> &#xC120;&#xD0DD; (&#xBBF8;&#xB9AC; &#xC5F0;&#xACB0;&#xD560; API Gateway&#xAC00; &#xC788;&#xB2E4;&#xBA74; &#xC5EC;&#xAE30;&#xC11C; &#xC5F0;&#xACB0;&#xD558;&#xBA74; &#xB428;)</li>
+<li><code>Configure function</code>&#xC5D0;&#xC11C; &#xD568;&#xC218; &#xC815;&#xC758;</li>
 <li>Name : <code>testLambda-luna</code></li>
 <li>Runtime : <code>Node.js 4.3</code></li>
-<li>Code : 아래 코드를 입력<ul>
-<li>참고로 <code>callback(null, result);</code>와 <code>context.succeed(result);</code>는 둘 다 결과를 return 해주는 코드로 아무거나 사용해도 됨</li>
-</ul>
-</li>
-<li>Role &amp; Existing role : 일단은 적당히 선택 (만약 Lambda에서 다른 AWS 서비스 RDS, S3 등을 연동할려면 필요)</li>
-<li>아래 코드 입력 후 <code>Next</code> 선택</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> result = &#123;<span class="string">"event"</span> : event, <span class="string">"context"</span> : context&#125;</div><div class="line">    context.succeed(result);</div><div class="line">    <span class="comment">//callback(null, result);</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<li>Code : &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB97C; &#xC785;&#xB825;
 <ul>
-<li><code>Create Function</code> 선택</li>
-<li><code>Action</code> -&gt; <code>Configure test event</code> 선택</li>
-<li>원하는 값으로 수정 후 <code>Save and test</code> 선택하면 아래와 같이 나옴.</li>
+<li>&#xCC38;&#xACE0;&#xB85C; <code>callback(null, result);</code>&#xC640; <code>context.succeed(result);</code>&#xB294; &#xB458; &#xB2E4; &#xACB0;&#xACFC;&#xB97C; return &#xD574;&#xC8FC;&#xB294; &#xCF54;&#xB4DC;&#xB85C; &#xC544;&#xBB34;&#xAC70;&#xB098; &#xC0AC;&#xC6A9;&#xD574;&#xB3C4; &#xB428;</li>
+</ul></li>
+<li>Role &amp; Existing role : &#xC77C;&#xB2E8;&#xC740; &#xC801;&#xB2F9;&#xD788; &#xC120;&#xD0DD; (&#xB9CC;&#xC57D; Lambda&#xC5D0;&#xC11C; &#xB2E4;&#xB978; AWS &#xC11C;&#xBE44;&#xC2A4; RDS, S3 &#xB4F1;&#xC744; &#xC5F0;&#xB3D9;&#xD560;&#xB824;&#xBA74; &#xD544;&#xC694;)</li>
+<li>&#xC544;&#xB798; &#xCF54;&#xB4DC; &#xC785;&#xB825; &#xD6C4; <code>Next</code> &#xC120;&#xD0DD;</li>
 </ul>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"event"</span>: &#123;</div><div class="line">    <span class="attr">"key3"</span>: <span class="string">"value3"</span>,</div><div class="line">    <span class="attr">"key2"</span>: <span class="string">"value2"</span>,</div><div class="line">    <span class="attr">"key1"</span>: <span class="string">"value1"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"context"</span>: &#123;</div><div class="line">    <span class="attr">"callbackWaitsForEmptyEventLoop"</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">"logGroupName"</span>: <span class="string">"/aws/lambda/testLambda-luna"</span>,</div><div class="line">    <span class="attr">"logStreamName"</span>: <span class="string">"2016/11/16/[$LATEST]3906ef41b5df4f1d89c6501dda78253c"</span>,</div><div class="line">    <span class="attr">"functionName"</span>: <span class="string">"testLambda-luna"</span>,</div><div class="line">    <span class="attr">"memoryLimitInMB"</span>: <span class="string">"128"</span>,</div><div class="line">    <span class="attr">"functionVersion"</span>: <span class="string">"$LATEST"</span>,</div><div class="line">    <span class="attr">"invokeid"</span>: <span class="string">"be8f2961-aba7-11e6-8ffb-6d91b83819cf"</span>,</div><div class="line">    <span class="attr">"awsRequestId"</span>: <span class="string">"be8f2961-aba7-11e6-8ffb-6d91b83819cf"</span>,</div><div class="line">    <span class="attr">"invokedFunctionArn"</span>: <span class="string">"arn:aws:lambda:ap-northeast-1:768556645518:function:testLambda-luna"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&apos;use strict&apos;</span>;</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> {</div><div class="line">    <span class="keyword">let</span> result = {<span class="string">&quot;event&quot;</span> : event, <span class="string">&quot;context&quot;</span> : context}</div><div class="line">    context.succeed(result);</div><div class="line">    <span class="comment">//callback(null, result);</span></div><div class="line">};</div></pre></td></tr></table></figure>
 <ul>
-<li>만약 <code>name</code>이란 값을 <code>event</code>로 넘겨서 <code>Hello</code> + <code>name</code> 을 출력하고 싶다면 위 Lambda Code를 아래와 같이 수정</li>
+<li><code>Create Function</code> &#xC120;&#xD0DD;</li>
+<li><code>Action</code> -&gt; <code>Configure test event</code> &#xC120;&#xD0DD;</li>
+<li>&#xC6D0;&#xD558;&#xB294; &#xAC12;&#xC73C;&#xB85C; &#xC218;&#xC815; &#xD6C4; <code>Save and test</code> &#xC120;&#xD0DD;&#xD558;&#xBA74; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xB098;&#xC634;.</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> result = &#123;<span class="string">"event"</span> : event, <span class="string">"context"</span> : context&#125;</div><div class="line">    <span class="keyword">let</span> name = event.name || <span class="string">'no name'</span>;</div><div class="line">    context.succeed(<span class="string">'Hello '</span> + name);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;event&quot;</span>: {</div><div class="line">    <span class="attr">&quot;key3&quot;</span>: <span class="string">&quot;value3&quot;</span>,</div><div class="line">    <span class="attr">&quot;key2&quot;</span>: <span class="string">&quot;value2&quot;</span>,</div><div class="line">    <span class="attr">&quot;key1&quot;</span>: <span class="string">&quot;value1&quot;</span></div><div class="line">  },</div><div class="line">  <span class="attr">&quot;context&quot;</span>: {</div><div class="line">    <span class="attr">&quot;callbackWaitsForEmptyEventLoop&quot;</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">&quot;logGroupName&quot;</span>: <span class="string">&quot;/aws/lambda/testLambda-luna&quot;</span>,</div><div class="line">    <span class="attr">&quot;logStreamName&quot;</span>: <span class="string">&quot;2016/11/16/[$LATEST]3906ef41b5df4f1d89c6501dda78253c&quot;</span>,</div><div class="line">    <span class="attr">&quot;functionName&quot;</span>: <span class="string">&quot;testLambda-luna&quot;</span>,</div><div class="line">    <span class="attr">&quot;memoryLimitInMB&quot;</span>: <span class="string">&quot;128&quot;</span>,</div><div class="line">    <span class="attr">&quot;functionVersion&quot;</span>: <span class="string">&quot;$LATEST&quot;</span>,</div><div class="line">    <span class="attr">&quot;invokeid&quot;</span>: <span class="string">&quot;be8f2961-aba7-11e6-8ffb-6d91b83819cf&quot;</span>,</div><div class="line">    <span class="attr">&quot;awsRequestId&quot;</span>: <span class="string">&quot;be8f2961-aba7-11e6-8ffb-6d91b83819cf&quot;</span>,</div><div class="line">    <span class="attr">&quot;invokedFunctionArn&quot;</span>: <span class="string">&quot;arn:aws:lambda:ap-northeast-1:768556645518:function:testLambda-luna&quot;</span></div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
 <ul>
-<li>그런 다음 <code>Configure test event</code>에 <code>name</code>을 넣어주면 아래와 같이 출력됨.</li>
+<li>&#xB9CC;&#xC57D; <code>name</code>&#xC774;&#xB780; &#xAC12;&#xC744; <code>event</code>&#xB85C; &#xB118;&#xACA8;&#xC11C; <code>Hello</code> + <code>name</code> &#xC744; &#xCD9C;&#xB825;&#xD558;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74; &#xC704; Lambda Code&#xB97C; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xC218;&#xC815;</li>
 </ul>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span> : <span class="string">"Luna"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&apos;use strict&apos;</span>;</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> {</div><div class="line">    <span class="keyword">let</span> result = {<span class="string">&quot;event&quot;</span> : event, <span class="string">&quot;context&quot;</span> : context}</div><div class="line">    <span class="keyword">let</span> name = event.name || <span class="string">&apos;no name&apos;</span>;</div><div class="line">    context.succeed(<span class="string">&apos;Hello &apos;</span> + name);</div><div class="line">};</div></pre></td></tr></table></figure>
+<ul>
+<li>&#xADF8;&#xB7F0; &#xB2E4;&#xC74C; <code>Configure test event</code>&#xC5D0; <code>name</code>&#xC744; &#xB123;&#xC5B4;&#xC8FC;&#xBA74; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xCD9C;&#xB825;&#xB428;.</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;name&quot;</span> : <span class="string">&quot;Luna&quot;</span></div><div class="line">}</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;Hello Luna&quot;</div></pre></td></tr></table></figure>
-<h2 id="API-Gateway-생성-amp-Lambda-연결"><a href="#API-Gateway-생성-amp-Lambda-연결" class="headerlink" title="API Gateway 생성 &amp; Lambda 연결"></a>API Gateway 생성 &amp; Lambda 연결</h2><ul>
-<li><code>AWS</code> 메인 화면으로 이동 후 <code>API Gateway</code> 탭으로 이동</li>
+<h2 id="api-gateway-&#xC0DD;&#xC131;-lambda-&#xC5F0;&#xACB0;">API Gateway &#xC0DD;&#xC131; &amp; Lambda &#xC5F0;&#xACB0;</h2>
+<ul>
+<li><code>AWS</code> &#xBA54;&#xC778; &#xD654;&#xBA74;&#xC73C;&#xB85C; &#xC774;&#xB3D9; &#xD6C4; <code>API Gateway</code> &#xD0ED;&#xC73C;&#xB85C; &#xC774;&#xB3D9;</li>
 </ul>
 <p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.04.png?raw=true"></p>
 <ul>
-<li><code>Create API</code> 선택<ul>
+<li><code>Create API</code> &#xC120;&#xD0DD;</li>
 <li>API name : <code>testAPI-luna</code></li>
-<li><code>Create API</code> 선택</li>
-</ul>
-</li>
-<li><code>Actions</code> -&gt; <code>Create Resource</code> 선택 (API Path를 추가)<ul>
+<li><code>Create API</code> &#xC120;&#xD0DD;</li>
+<li><code>Actions</code> -&gt; <code>Create Resource</code> &#xC120;&#xD0DD; (API Path&#xB97C; &#xCD94;&#xAC00;)</li>
 <li>Resource name : <code>test</code></li>
 <li>Resource Path : <code>test</code></li>
-<li><code>Create Resource</code> 선택</li>
-</ul>
-</li>
-<li><code>/test</code>가 선택된 상태에서 <code>Actions</code> -&gt; <code>Create Resource</code> 선택<ul>
+<li><code>Create Resource</code> &#xC120;&#xD0DD;</li>
+<li><code>/test</code>&#xAC00; &#xC120;&#xD0DD;&#xB41C; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; <code>Actions</code> -&gt; <code>Create Resource</code> &#xC120;&#xD0DD;</li>
 <li>Resource name : <code>name</code></li>
-<li>Resource Path : <code>{name}</code> (Path Variable 추가)</li>
-<li><code>Create Resource</code> 선택</li>
-</ul>
-</li>
-<li><code>/{name}</code>이 선택된 상태에서 <code>Actions</code> -&gt; <code>Create Method</code> 선택<ul>
-<li><code>GET</code> 선택 후 확인<ul>
-<li>Lambda Region : 람다를 생성한 region 선택</li>
-<li>Lambda Function : <code>testLambda-luna</code> (좀 전에 생성한 람다명 입력)</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>Resource Path : <code>{name}</code> (Path Variable &#xCD94;&#xAC00;)</li>
+<li><code>Create Resource</code> &#xC120;&#xD0DD;</li>
+<li><code>/{name}</code>&#xC774; &#xC120;&#xD0DD;&#xB41C; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; <code>Actions</code> -&gt; <code>Create Method</code> &#xC120;&#xD0DD;</li>
+<li><code>GET</code> &#xC120;&#xD0DD; &#xD6C4; &#xD655;&#xC778;
+<ul>
+<li>Lambda Region : &#xB78C;&#xB2E4;&#xB97C; &#xC0DD;&#xC131;&#xD55C; region &#xC120;&#xD0DD;</li>
+<li>Lambda Function : <code>testLambda-luna</code> (&#xC880; &#xC804;&#xC5D0; &#xC0DD;&#xC131;&#xD55C; &#xB78C;&#xB2E4;&#xBA85; &#xC785;&#xB825;)</li>
+</ul></li>
 </ul>
 <p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.05.png?raw=true"></p>
 <ul>
-<li><code>Integration Request</code> 선택<ul>
-<li><code>Body Mapping Templates</code> 선택<ul>
-<li><code>Add mapping template</code> 선택<ul>
-<li><code>application/json</code> 입력<ul>
-<li><code>No, use current settings</code> 선택</li>
+<li><code>Integration Request</code> &#xC120;&#xD0DD;
+<ul>
+<li><code>Body Mapping Templates</code> &#xC120;&#xD0DD;</li>
+<li><code>Add mapping template</code> &#xC120;&#xD0DD;
+<ul>
+<li><code>application/json</code> &#xC785;&#xB825;</li>
+<li><code>No, use current settings</code> &#xC120;&#xD0DD;</li>
+<li>Generate template: <code>Method Request passthrough</code> &#xC120;&#xD0DD;</li>
+<li><code>Save</code> &#xC120;&#xD0DD;</li>
+</ul></li>
+</ul></li>
+<li><code>/test/{name} [GET]</code> &#xC120;&#xD0DD;</li>
+<li><code>TEST</code> &#xC120;&#xD0DD;
+<ul>
+<li>Path {name} : &#xC6D0;&#xD558;&#xB294; &#xAC12; &#xC785;&#xB825;</li>
+<li><code>Test</code> &#xBC84;&#xD2BC; &#xC120;&#xD0DD;</li>
+<li>&#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xCD9C;&#xB825;&#xB418;&#xBA74; &#xC131;&#xACF5;</li>
+</ul></li>
 </ul>
-</li>
-<li>Generate template: <code>Method Request passthrough</code> 선택<ul>
-<li><code>Save</code> 선택</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>/test/{name} [GET]</code> 선택</li>
-</ul>
-</li>
-<li><code>TEST</code> 선택<ul>
-<li>Path {name} : 원하는 값 입력</li>
-<li><code>Test</code> 버튼 선택</li>
-<li>아래와 같이 출력되면 성공</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "event": &#123;</div><div class="line">    "body-json": &#123;&#125;,</div><div class="line">    "params": &#123;</div><div class="line">      "path": &#123;</div><div class="line">        "name": "Luna"</div><div class="line">      &#125;,</div><div class="line">      "querystring": &#123;&#125;,</div><div class="line">      "header": &#123;&#125;</div><div class="line">    &#125;,</div><div class="line">    "stage-variables": &#123;&#125;,</div><div class="line">    "context": &#123;</div><div class="line">      ...</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  "context": &#123;</div><div class="line">    "callbackWaitsForEmptyEventLoop": true,</div><div class="line">    "logGroupName": "/aws/lambda/testLambda-luna",</div><div class="line">    ...</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="배포"><a href="#배포" class="headerlink" title="배포"></a>배포</h2><ul>
-<li><code>Actions</code> -&gt; <code>Deploy API</code> 선택<ul>
-<li>Deployment Stage : <code>[New Stage]</code> 선택</li>
-<li>Stage name : <code>prod</code> 입력</li>
-<li><code>Deploy</code> 버튼 선택</li>
-<li><code>Invoke URL</code> 복사</li>
-</ul>
-</li>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  &quot;event&quot;: {</div><div class="line">    &quot;body-json&quot;: {},</div><div class="line">    &quot;params&quot;: {</div><div class="line">      &quot;path&quot;: {</div><div class="line">        &quot;name&quot;: &quot;Luna&quot;</div><div class="line">      },</div><div class="line">      &quot;querystring&quot;: {},</div><div class="line">      &quot;header&quot;: {}</div><div class="line">    },</div><div class="line">    &quot;stage-variables&quot;: {},</div><div class="line">    &quot;context&quot;: {</div><div class="line">      ...</div><div class="line">    }</div><div class="line">  },</div><div class="line">  &quot;context&quot;: {</div><div class="line">    &quot;callbackWaitsForEmptyEventLoop&quot;: true,</div><div class="line">    &quot;logGroupName&quot;: &quot;/aws/lambda/testLambda-luna&quot;,</div><div class="line">    ...</div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#xBC30;&#xD3EC;">&#xBC30;&#xD3EC;</h2>
+<ul>
+<li><code>Actions</code> -&gt; <code>Deploy API</code> &#xC120;&#xD0DD;</li>
+<li>Deployment Stage : <code>[New Stage]</code> &#xC120;&#xD0DD;</li>
+<li>Stage name : <code>prod</code> &#xC785;&#xB825;</li>
+<li><code>Deploy</code> &#xBC84;&#xD2BC; &#xC120;&#xD0DD;</li>
+<li><code>Invoke URL</code> &#xBCF5;&#xC0AC;</li>
 </ul>
 <p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.06.png?raw=true"></p>
-<h2 id="테스트"><a href="#테스트" class="headerlink" title="테스트"></a>테스트</h2><ul>
-<li><code>Invoke URL</code> + <code>/test/luna</code> 로 Web Browser에서 주소 입력<ul>
-<li>위 <strong>JSON</strong> 같은 모양으로 출력되면 성공</li>
+<h2 id="&#xD14C;&#xC2A4;&#xD2B8;">&#xD14C;&#xC2A4;&#xD2B8;</h2>
+<ul>
+<li><code>Invoke URL</code> + <code>/test/luna</code> &#xB85C; Web Browser&#xC5D0;&#xC11C; &#xC8FC;&#xC18C; &#xC785;&#xB825;</li>
+<li>&#xC704; <strong>JSON</strong> &#xAC19;&#xC740; &#xBAA8;&#xC591;&#xC73C;&#xB85C; &#xCD9C;&#xB825;&#xB418;&#xBA74; &#xC131;&#xACF5;</li>
+<li><code>Invoke URL</code> + <code>/test/luna?id=345;dept=&#xAC1C;&#xBC1C;&#xD300;</code>&#xACFC; &#xAC19;&#xC774; <strong>QueryString</strong> &#xC744; &#xD3EC;&#xD568;&#xD558;&#xC5EC; &#xD638;&#xCD9C;</li>
+<li>&#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; <strong>querystring</strong> &#xC5D0;&#xC11C; &#xD655;&#xC778;&#xB418;&#xBA74; &#xC131;&#xACF5;</li>
 </ul>
-</li>
-<li><code>Invoke URL</code> + <code>/test/luna?id=345;dept=개발팀</code>과 같이 <strong>QueryString</strong> 을 포함하여 호출<ul>
-<li>아래와 같이 <strong>querystring</strong> 에서 확인되면 성공</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;</div><div class="line">  "event": &#123;</div><div class="line">    "body-json": &#123;&#125;,</div><div class="line">    "params": &#123;</div><div class="line">      "path": &#123;</div><div class="line">        "name": "Luna"</div><div class="line">      &#125;,</div><div class="line">      "querystring": &#123;</div><div class="line">        "dept": "개발팀",</div><div class="line">        "id": "345"</div><div class="line">      &#125;,</div><div class="line">      ...</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="POST로-배포"><a href="#POST로-배포" class="headerlink" title="POST로 배포"></a>POST로 배포</h2><ul>
-<li><code>API Gateway</code>에 <code>testAPI-luna</code>로 이동</li>
-<li><code>/{name}</code>이 선택된 상태에서 <code>Actions</code> -&gt; <code>Create Method</code> 선택<ul>
-<li><code>POST</code> 선택 후 확인<ul>
-<li>Lambda Region : 람다를 생성한 region 선택</li>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">{</div><div class="line">  &quot;event&quot;: {</div><div class="line">    &quot;body-json&quot;: {},</div><div class="line">    &quot;params&quot;: {</div><div class="line">      &quot;path&quot;: {</div><div class="line">        &quot;name&quot;: &quot;Luna&quot;</div><div class="line">      },</div><div class="line">      &quot;querystring&quot;: {</div><div class="line">        &quot;dept&quot;: &quot;&#xAC1C;&#xBC1C;&#xD300;&quot;,</div><div class="line">        &quot;id&quot;: &quot;345&quot;</div><div class="line">      },</div><div class="line">      ...</div><div class="line">    }</div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="post&#xB85C;-&#xBC30;&#xD3EC;">POST&#xB85C; &#xBC30;&#xD3EC;</h2>
+<ul>
+<li><code>API Gateway</code>&#xC5D0; <code>testAPI-luna</code>&#xB85C; &#xC774;&#xB3D9;</li>
+<li><code>/{name}</code>&#xC774; &#xC120;&#xD0DD;&#xB41C; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; <code>Actions</code> -&gt; <code>Create Method</code> &#xC120;&#xD0DD;</li>
+<li><code>POST</code> &#xC120;&#xD0DD; &#xD6C4; &#xD655;&#xC778;
+<ul>
+<li>Lambda Region : &#xB78C;&#xB2E4;&#xB97C; &#xC0DD;&#xC131;&#xD55C; region &#xC120;&#xD0DD;</li>
 <li>Lambda Function : <code>testLambda-luna</code></li>
-</ul>
-</li>
-<li>바로 <code>Test</code> 버튼을 눌러서 확인<ul>
-<li>Path {name} : 원하는 값 입력</li>
-<li>Request Body에 아래 <strong>JSON</strong> 값 입력</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"id"</span>: <span class="string">"123"</span>,</div><div class="line">  <span class="attr">"age"</span>: <span class="string">"25"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</ul></li>
+<li>&#xBC14;&#xB85C; <code>Test</code> &#xBC84;&#xD2BC;&#xC744; &#xB20C;&#xB7EC;&#xC11C; &#xD655;&#xC778;
 <ul>
-<li>결과</li>
+<li>Path {name} : &#xC6D0;&#xD558;&#xB294; &#xAC12; &#xC785;&#xB825;</li>
+<li>Request Body&#xC5D0; &#xC544;&#xB798; <strong>JSON</strong> &#xAC12; &#xC785;&#xB825;</li>
+</ul></li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "event": &#123;</div><div class="line">    "id": "123",</div><div class="line">    "age": "25"</div><div class="line">  &#125;,</div><div class="line">  "context": &#123;</div><div class="line">    ...</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;123&quot;</span>,</div><div class="line">  <span class="attr">&quot;age&quot;</span>: <span class="string">&quot;25&quot;</span></div><div class="line">}</div></pre></td></tr></table></figure>
 <ul>
-<li><code>name</code> 값이 정상적으로 전달되지 않았으므로 <code>GET</code> 작업한것 처럼 <strong>template</strong> 설정<ul>
-<li><code>Integration Request</code> 선택<ul>
-<li><code>Body Mapping Templates</code> 선택<ul>
-<li><code>Add mapping template</code> 선택<ul>
-<li><code>application/json</code> 입력<ul>
-<li><code>No, use current settings</code> 선택</li>
+<li>&#xACB0;&#xACFC;</li>
 </ul>
-</li>
-<li>Generate template: <code>Method Request passthrough</code> 선택<ul>
-<li><code>Save</code> 선택</li>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  &quot;event&quot;: {</div><div class="line">    &quot;id&quot;: &quot;123&quot;,</div><div class="line">    &quot;age&quot;: &quot;25&quot;</div><div class="line">  },</div><div class="line">  &quot;context&quot;: {</div><div class="line">    ...</div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
+<ul>
+<li><code>name</code> &#xAC12;&#xC774; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xC804;&#xB2EC;&#xB418;&#xC9C0; &#xC54A;&#xC558;&#xC73C;&#xBBC0;&#xB85C; <code>GET</code> &#xC791;&#xC5C5;&#xD55C;&#xAC83; &#xCC98;&#xB7FC; <strong>template</strong> &#xC124;&#xC815;</li>
+<li><code>Integration Request</code> &#xC120;&#xD0DD;
+<ul>
+<li><code>Body Mapping Templates</code> &#xC120;&#xD0DD;</li>
+<li><code>Add mapping template</code> &#xC120;&#xD0DD;
+<ul>
+<li><code>application/json</code> &#xC785;&#xB825;</li>
+<li><code>No, use current settings</code> &#xC120;&#xD0DD;</li>
+<li>Generate template: <code>Method Request passthrough</code> &#xC120;&#xD0DD;</li>
+<li><code>Save</code> &#xC120;&#xD0DD;</li>
+</ul></li>
+</ul></li>
+<li><code>Test</code> &#xB85C; &#xB4E4;&#xC5B4;&#xAC00;&#xC11C; &#xC704;&#xC640; &#xAC19;&#xC740; <code>JSON</code> &#xC785;&#xB825;</li>
 </ul>
-</li>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  &quot;event&quot;: {</div><div class="line">    &quot;body-json&quot;: {</div><div class="line">      &quot;id&quot;: &quot;123&quot;,</div><div class="line">      &quot;age&quot;: &quot;25&quot;</div><div class="line">    },</div><div class="line">    &quot;params&quot;: {</div><div class="line">      &quot;path&quot;: {</div><div class="line">        &quot;name&quot;: &quot;Luna&quot;</div><div class="line">      },</div><div class="line">      &quot;querystring&quot;: {},</div><div class="line">      &quot;header&quot;: {}</div><div class="line">    },</div><div class="line">    ...</div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#xB2E4;&#xC2DC;-&#xBC30;&#xD3EC;">&#xB2E4;&#xC2DC; &#xBC30;&#xD3EC;</h2>
+<ul>
+<li><code>Actions</code> -&gt; <code>Deploy API</code> &#xC120;&#xD0DD;</li>
+<li>Deployment Stage : <code>[New Stage]</code> &#xC120;&#xD0DD;</li>
+<li>Stage name : <code>prod</code> &#xC785;&#xB825;</li>
+<li><code>Deploy</code> &#xBC84;&#xD2BC; &#xC120;&#xD0DD;</li>
+<li><code>Invoke URL</code> &#xBCF5;&#xC0AC;</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>Test</code> 로 들어가서 위와 같은 <code>JSON</code> 입력</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "event": &#123;</div><div class="line">    "body-json": &#123;</div><div class="line">      "id": "123",</div><div class="line">      "age": "25"</div><div class="line">    &#125;,</div><div class="line">    "params": &#123;</div><div class="line">      "path": &#123;</div><div class="line">        "name": "Luna"</div><div class="line">      &#125;,</div><div class="line">      "querystring": &#123;&#125;,</div><div class="line">      "header": &#123;&#125;</div><div class="line">    &#125;,</div><div class="line">    ...</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="다시-배포"><a href="#다시-배포" class="headerlink" title="다시 배포"></a>다시 배포</h2><ul>
-<li><code>Actions</code> -&gt; <code>Deploy API</code> 선택<ul>
-<li>Deployment Stage : <code>[New Stage]</code> 선택</li>
-<li>Stage name : <code>prod</code> 입력</li>
-<li><code>Deploy</code> 버튼 선택</li>
-<li><code>Invoke URL</code> 복사</li>
-</ul>
-</li>
-</ul>
-<h2 id="Postman-을-통해서-테스트"><a href="#Postman-을-통해서-테스트" class="headerlink" title="Postman 을 통해서 테스트"></a>Postman 을 통해서 테스트</h2><ul>
-<li>만약 설치되지 않았다면, Chrome App <code>Postman</code> 설치 후 실행</li>
-<li><code>POST</code> 메서드로 선택</li>
-<li>주소에 <code>Invoke URL</code> + <code>/test/luna?id=345</code> 입력</li>
-<li><code>Headers</code> 탭 선택<ul>
-<li><code>headerValue1</code> : <code>123</code> 입력</li>
-</ul>
-</li>
+<h2 id="postman-&#xC744;-&#xD1B5;&#xD574;&#xC11C;-&#xD14C;&#xC2A4;&#xD2B8;">Postman &#xC744; &#xD1B5;&#xD574;&#xC11C; &#xD14C;&#xC2A4;&#xD2B8;</h2>
+<ul>
+<li>&#xB9CC;&#xC57D; &#xC124;&#xCE58;&#xB418;&#xC9C0; &#xC54A;&#xC558;&#xB2E4;&#xBA74;, Chrome App <code>Postman</code> &#xC124;&#xCE58; &#xD6C4; &#xC2E4;&#xD589;</li>
+<li><code>POST</code> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xC120;&#xD0DD;</li>
+<li>&#xC8FC;&#xC18C;&#xC5D0; <code>Invoke URL</code> + <code>/test/luna?id=345</code> &#xC785;&#xB825;</li>
+<li><code>Headers</code> &#xD0ED; &#xC120;&#xD0DD;</li>
+<li><code>headerValue1</code> : <code>123</code> &#xC785;&#xB825;</li>
 </ul>
 <p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.07.png?raw=true"></p>
 <ul>
-<li><code>Body</code> 탭 선택<ul>
-<li>위 예제의 <strong>JSON</strong> 입력</li>
-</ul>
-</li>
+<li><code>Body</code> &#xD0ED; &#xC120;&#xD0DD;</li>
+<li>&#xC704; &#xC608;&#xC81C;&#xC758; <strong>JSON</strong> &#xC785;&#xB825;</li>
 </ul>
 <p><img src="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/images/lambda_apigateway.08.png?raw=true"></p>
 <ul>
-<li><code>Send</code> 선택</li>
-<li>결과</li>
+<li><code>Send</code> &#xC120;&#xD0DD;</li>
+<li>&#xACB0;&#xACFC;</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  "event": &#123;</div><div class="line">    "body-json": &#123;</div><div class="line">      "id": "123",</div><div class="line">      "age": "25"</div><div class="line">    &#125;,</div><div class="line">    "params": &#123;</div><div class="line">      "path": &#123;</div><div class="line">        "name": "luna"</div><div class="line">      &#125;,</div><div class="line">      "querystring": &#123;</div><div class="line">        "id": "345"</div><div class="line">      &#125;,</div><div class="line">      "header": &#123;</div><div class="line">        "Accept": "*/*",</div><div class="line">        "Accept-Encoding": "gzip, deflate, br",</div><div class="line">        "Accept-Language": "ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4",</div><div class="line">        ...</div><div class="line">        "Content-Type": "application/json",</div><div class="line">        "headerValue1": "123",</div><div class="line">        ...</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    "stage-variables": &#123;&#125;,</div><div class="line">    "context": &#123;</div><div class="line">      ...</div><div class="line">      "http-method": "POST",</div><div class="line">      ...</div><div class="line">      "source-ip": "112.217.228.202",</div><div class="line">      "user": "",</div><div class="line">      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36",</div><div class="line">      ...</div><div class="line">      "resource-path": "/test/&#123;name&#125;"</div><div class="line">    &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  "context": &#123;</div><div class="line">    ...</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="활용"><a href="#활용" class="headerlink" title="활용"></a>활용</h2><ul>
-<li><code>Lambda</code>에서 전달받은 값 활용<ul>
-<li><code>event</code><ul>
-<li><code>body-json</code> : BODY에서 전달해온 값</li>
-<li><code>params</code><ul>
-<li><code>path</code> : URL 상에서 경로로 얻어오는 변수들</li>
-</ul>
-</li>
-<li><code>header</code> : HEADER에서 전달해온 값</li>
-<li><code>querystring</code> : URL 상의 QueryString로 전달된 변수들</li>
-<li><code>context</code><ul>
-<li><code>http-method</code> : 호출한 METHOD (GET, POST, …)</li>
-<li><code>resource-path</code> : 하나의 Lambda에서 여러 URL을 처리할 경우 경로 정보</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><ul>
-<li>아웃사이더님 Blog : <a href="https://blog.outsider.ne.kr/1205" target="_blank" rel="external">https://blog.outsider.ne.kr/1205</a> , <a href="https://blog.outsider.ne.kr/1206" target="_blank" rel="external">https://blog.outsider.ne.kr/1206</a></li>
-<li>AWS : <a href="http://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html" target="_blank" rel="external">http://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html</a></li>
-</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  &quot;event&quot;: {</div><div class="line">    &quot;body-json&quot;: {</div><div class="line">      &quot;id&quot;: &quot;123&quot;,</div><div class="line">      &quot;age&quot;: &quot;25&quot;</div><div class="line">    },</div><div class="line">    &quot;params&quot;: {</div><div class="line">      &quot;path&quot;: {</div><div class="line">        &quot;name&quot;: &quot;luna&quot;</div><div class="line">      },</div><div class="line">      &quot;querystring&quot;: {</div><div class="line">        &quot;id&quot;: &quot;345&quot;</div><div class="line">      },</div><div class="line">      &quot;header&quot;: {</div><div class="line">        &quot;Accept&quot;: &quot;*/*&quot;,</div><div class="line">        &quot;Accept-Encoding&quot;: &quot;gzip, deflate, br&quot;,</div><div class="line">        &quot;Accept-Language&quot;: &quot;ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4&quot;,</div><div class="line">        ...</div><div class="line">        &quot;Content-Type&quot;: &quot;application/json&quot;,</div><div class="line">        &quot;headerValue1&quot;: &quot;123&quot;,</div><div class="line">        ...</div><div class="line">      }</div><div class="line">    },</div><div class="line">    &quot;stage-variables&quot;: {},</div><div class="line">    &quot;context&quot;: {</div><div class="line">      ...</div><div class="line">      &quot;http-method&quot;: &quot;POST&quot;,</div><div class="line">      ...</div><div class="line">      &quot;source-ip&quot;: &quot;112.217.228.202&quot;,</div><div class="line">      &quot;user&quot;: &quot;&quot;,</div><div class="line">      &quot;user-agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36&quot;,</div><div class="line">      ...</div><div class="line">      &quot;resource-path&quot;: &quot;/test/{name}&quot;</div><div class="line">    }</div><div class="line">    }</div><div class="line">  },</div><div class="line">  &quot;context&quot;: {</div><div class="line">    ...</div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#xD65C;&#xC6A9;">&#xD65C;&#xC6A9;</h2>
 <ul>
-<li>원문 : <a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateWay.01.md" target="_blank" rel="external">https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateWay.01.md</a></li>
+<li><code>Lambda</code>&#xC5D0;&#xC11C; &#xC804;&#xB2EC;&#xBC1B;&#xC740; &#xAC12; &#xD65C;&#xC6A9;</li>
+<li><code>event</code>
+<ul>
+<li><code>body-json</code> : BODY&#xC5D0;&#xC11C; &#xC804;&#xB2EC;&#xD574;&#xC628; &#xAC12;</li>
+<li><code>params</code></li>
+<li><code>path</code> : URL &#xC0C1;&#xC5D0;&#xC11C; &#xACBD;&#xB85C;&#xB85C; &#xC5BB;&#xC5B4;&#xC624;&#xB294; &#xBCC0;&#xC218;&#xB4E4;</li>
+<li><code>header</code> : HEADER&#xC5D0;&#xC11C; &#xC804;&#xB2EC;&#xD574;&#xC628; &#xAC12;</li>
+<li><code>querystring</code> : URL &#xC0C1;&#xC758; QueryString&#xB85C; &#xC804;&#xB2EC;&#xB41C; &#xBCC0;&#xC218;&#xB4E4;</li>
+<li><code>context</code></li>
+<li><code>http-method</code> : &#xD638;&#xCD9C;&#xD55C; METHOD (GET, POST, &#x2026;)</li>
+<li><code>resource-path</code> : &#xD558;&#xB098;&#xC758; Lambda&#xC5D0;&#xC11C; &#xC5EC;&#xB7EC; URL&#xC744; &#xCC98;&#xB9AC;&#xD560; &#xACBD;&#xC6B0; &#xACBD;&#xB85C; &#xC815;&#xBCF4;</li>
+</ul></li>
 </ul>
-<p>잘못되었거나, 변경된 점, 기타 추가 사항에 대한 피드백은 언제나 환영합니다. - <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x73;&#101;&#111;&#107;&#x6a;&#111;&#x6f;&#x6e;&#46;&#x79;&#x75;&#110;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x73;&#101;&#111;&#107;&#x6a;&#111;&#x6f;&#x6e;&#46;&#x79;&#x75;&#110;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
-<h3 id="다음글"><a href="#다음글" class="headerlink" title="다음글"></a>다음글</h3><ul>
-<li>Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route) : <a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.02.Route.md" target="_blank" rel="external">https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.02.Route.md</a></li>
+<h2 id="&#xCC38;&#xACE0;">&#xCC38;&#xACE0;</h2>
+<ul>
+<li>&#xC544;&#xC6C3;&#xC0AC;&#xC774;&#xB354;&#xB2D8; Blog : <a href="https://blog.outsider.ne.kr/1205" class="uri" target="_blank" rel="external">https://blog.outsider.ne.kr/1205</a> , <a href="https://blog.outsider.ne.kr/1206" class="uri" target="_blank" rel="external">https://blog.outsider.ne.kr/1206</a></li>
+<li><p>AWS : <a href="http://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html" class="uri" target="_blank" rel="external">http://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html</a></p></li>
+<li><p>&#xC6D0;&#xBB38; : <a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateWay.01.md" target="_blank" rel="external">https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateWay.01.md</a></p></li>
+</ul>
+<p>&#xC798;&#xBABB;&#xB418;&#xC5C8;&#xAC70;&#xB098;, &#xBCC0;&#xACBD;&#xB41C; &#xC810;, &#xAE30;&#xD0C0; &#xCD94;&#xAC00; &#xC0AC;&#xD56D;&#xC5D0; &#xB300;&#xD55C; &#xD53C;&#xB4DC;&#xBC31;&#xC740; &#xC5B8;&#xC81C;&#xB098; &#xD658;&#xC601;&#xD569;&#xB2C8;&#xB2E4;. - <a href="mailto:seokjoon.yun@gmail.com" target="_blank" rel="external">seokjoon.yun@gmail.com</a></p>
+<h3 id="&#xB2E4;&#xC74C;&#xAE00;">&#xB2E4;&#xC74C;&#xAE00;</h3>
+<ul>
+<li>Lambda &#xC640; API Gateway &#xC5F0;&#xB3D9; #2 (ANY, Deploy Staging, Node.JS Route) : <a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.02.Route.md" target="_blank" rel="external">https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.02.Route.md</a></li>
 </ul>
 
         </div>
@@ -405,7 +370,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/11/22/Lambda+APIGateWay.01/" data-id="cj1y8qg0z003u1z7bx07135t8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/11/22/Lambda+APIGateWay.01/" data-id="cj243031l0040kc7bhog2ego0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -534,20 +499,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/11/08/JavaScript.Squel/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/11/22/Lambda+APIGateway.02.Route/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Squel.js
+            AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기 (2) - Route
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2016/11/22/Lambda+APIGateway.02.Route/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/11/08/JavaScript.Squel/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기 (2) - Route</p>
+        <p class="article-nav-title">Squel.js</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -561,7 +526,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -571,7 +536,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 12.22px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
         </div>
     </div>
 
@@ -653,6 +618,6 @@
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div>
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

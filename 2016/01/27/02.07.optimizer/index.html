@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
     <title>SQLP 2-3 Optimizing SQL | Dev Star SJ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  3장 SQL 최적화 기본 원리여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다.(아마 SQPD의 경우 2과목까지가 범위이므로 SQL">
+    <meta name="description" content="2&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xAE30;&amp;#xBCF8; &amp;#xBC0F; &amp;#xD65C;&amp;#xC6A9;  20&amp;#xBB38;&amp;#xC81C; &amp;#xAC01; &amp;#xC0C1;&amp;#xD669;&amp;#xBCC4;&amp;#xB85C; SQL&amp;#xBB38; &amp;#xC791;&amp;#xC131;&amp;#xC774; &amp;#xAC00;&amp;#xB2A5;&amp;#xD560; &amp;#xC815;&amp;#x">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 2-3 Optimizing SQL">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/01/27/02.07.optimizer/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  3장 SQL 최적화 기본 원리여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다.(아마 SQPD의 경우 2과목까지가 범위이므로 SQL">
+<meta property="og:description" content="2&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xAE30;&amp;#xBCF8; &amp;#xBC0F; &amp;#xD65C;&amp;#xC6A9;  20&amp;#xBB38;&amp;#xC81C; &amp;#xAC01; &amp;#xC0C1;&amp;#xD669;&amp;#xBCC4;&amp;#xB85C; SQL&amp;#xBB38; &amp;#xC791;&amp;#xC131;&amp;#xC774; &amp;#xAC00;&amp;#xB2A5;&amp;#xD560; &amp;#xC815;&amp;#x">
 <meta property="og:updated_time" content="2017-04-24T00:00:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 2-3 Optimizing SQL">
-<meta name="twitter:description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  3장 SQL 최적화 기본 원리여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다.(아마 SQPD의 경우 2과목까지가 범위이므로 SQL">
+<meta name="twitter:description" content="2&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xAE30;&amp;#xBCF8; &amp;#xBC0F; &amp;#xD65C;&amp;#xC6A9;  20&amp;#xBB38;&amp;#xC81C; &amp;#xAC01; &amp;#xC0C1;&amp;#xD669;&amp;#xBCC4;&amp;#xB85C; SQL&amp;#xBB38; &amp;#xC791;&amp;#xC131;&amp;#xC774; &amp;#xAC00;&amp;#xB2A5;&amp;#xD560; &amp;#xC815;&amp;#x">
     
 
     
@@ -37,7 +37,7 @@
         <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     
@@ -45,7 +45,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
         <header id="header">
     <div id="header-outer" class="outer">
         <div class="container">
@@ -69,7 +69,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -164,25 +164,24 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="2과목-SQL-기본-및-활용"><a href="#2과목-SQL-기본-및-활용" class="headerlink" title="2과목 SQL 기본 및 활용"></a>2과목 SQL 기본 및 활용</h2><ul>
-<li>20문제</li>
-<li>각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다.</li>
-<li>기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.</li>
-</ul>
-<h3 id="3장-SQL-최적화-기본-원리"><a href="#3장-SQL-최적화-기본-원리" class="headerlink" title="3장 SQL 최적화 기본 원리"></a>3장 SQL 최적화 기본 원리</h3><p>여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다.<br>(아마 SQPD의 경우 2과목까지가 범위이므로 SQLD용 문제를 내기위한 용도인듯 합니다.)</p>
-<h4 id="Optimizer"><a href="#Optimizer" class="headerlink" title="Optimizer"></a>Optimizer</h4><ul>
-<li>Optimizer : SQL문에 대한 최적의 실행 방법을 결정하는 역할</li>
-<li>Execution Plan (실행계획) : Optimizer가 생성한 최적의 실행 계획</li>
-</ul>
+            <h2 id="&#xACFC;&#xBAA9;-sql-&#xAE30;&#xBCF8;-&#xBC0F;-&#xD65C;&#xC6A9;">2&#xACFC;&#xBAA9; SQL &#xAE30;&#xBCF8; &#xBC0F; &#xD65C;&#xC6A9;</h2>
 <ul>
-<li><p>Optimizer 종류</p>
-<ul>
-<li>RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성</li>
-<li>CBO (Cost-based Optimizer) : 통계정보를 기반으로 여러가지 실행계획을 생성하여 그중 최저비용의 실행계획을 선택</li>
+<li>20&#xBB38;&#xC81C;</li>
+<li>&#xAC01; &#xC0C1;&#xD669;&#xBCC4;&#xB85C; SQL&#xBB38; &#xC791;&#xC131;&#xC774; &#xAC00;&#xB2A5;&#xD560; &#xC815;&#xB3C4;&#xB85C; &#xC5F0;&#xC2B5;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xAE30;&#xBCF8;&#xC801;&#xC778; SQL&#xBB38;&#xBC95; &#xBC0F; &#xD568;&#xC218;&#xB294; &#xC0DD;&#xB7B5;&#xD558;&#xACE0; Tuning&#xC5D0; &#xD65C;&#xC6A9;&#xB420;&#xC218; &#xC788;&#xB294; &#xAC83; &#xC704;&#xC8FC;&#xB85C; &#xC815;&#xB9AC;&#xD558;&#xACE0;&#xC790; &#xD569;&#xB2C8;&#xB2E4;.</li>
 </ul>
-</li>
-<li><p>Rule-based Optimizer 규칙</p>
-<ol>
+<h3 id="&#xC7A5;-sql-&#xCD5C;&#xC801;&#xD654;-&#xAE30;&#xBCF8;-&#xC6D0;&#xB9AC;">3&#xC7A5; SQL &#xCD5C;&#xC801;&#xD654; &#xAE30;&#xBCF8; &#xC6D0;&#xB9AC;</h3>
+<p>&#xC5EC;&#xAE30;&#xC11C;&#xB294; &#xAC04;&#xB2E8;&#xD788; &#xB2E4;&#xB8E8;&#xACE0; 3&#xACFC;&#xBAA9;&#xC5D0;&#xC11C; &#xC790;&#xC138;&#xD788; &#xB2E4;&#xB8F0; &#xC608;&#xC815;&#xC774;&#xBBC0;&#xB85C; &#xADF8;&#xB0E5; &#xB118;&#xC5B4;&#xAC00;&#xB3C4; &#xB429;&#xB2C8;&#xB2E4;. (&#xC544;&#xB9C8; SQPD&#xC758; &#xACBD;&#xC6B0; 2&#xACFC;&#xBAA9;&#xAE4C;&#xC9C0;&#xAC00; &#xBC94;&#xC704;&#xC774;&#xBBC0;&#xB85C; SQLD&#xC6A9; &#xBB38;&#xC81C;&#xB97C; &#xB0B4;&#xAE30;&#xC704;&#xD55C; &#xC6A9;&#xB3C4;&#xC778;&#xB4EF; &#xD569;&#xB2C8;&#xB2E4;.)</p>
+<h4 id="optimizer">Optimizer</h4>
+<ul>
+<li>Optimizer : SQL&#xBB38;&#xC5D0; &#xB300;&#xD55C; &#xCD5C;&#xC801;&#xC758; &#xC2E4;&#xD589; &#xBC29;&#xBC95;&#xC744; &#xACB0;&#xC815;&#xD558;&#xB294; &#xC5ED;&#xD560;</li>
+<li><p>Execution Plan (&#xC2E4;&#xD589;&#xACC4;&#xD68D;) : Optimizer&#xAC00; &#xC0DD;&#xC131;&#xD55C; &#xCD5C;&#xC801;&#xC758; &#xC2E4;&#xD589; &#xACC4;&#xD68D;</p></li>
+<li>Optimizer &#xC885;&#xB958;</li>
+<li>RBO (Rule-based Optimizer) : &#xADDC;&#xCE59;(&#xC6B0;&#xC120; &#xC21C;&#xC704;)&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC2E4;&#xD589;&#xACC4;&#xD68D; &#xC0DD;&#xC131;</li>
+<li><p>CBO (Cost-based Optimizer) : &#xD1B5;&#xACC4;&#xC815;&#xBCF4;&#xB97C; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xC2E4;&#xD589;&#xACC4;&#xD68D;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xADF8;&#xC911; &#xCD5C;&#xC800;&#xBE44;&#xC6A9;&#xC758; &#xC2E4;&#xD589;&#xACC4;&#xD68D;&#xC744; &#xC120;&#xD0DD;</p></li>
+<li>Rule-based Optimizer &#xADDC;&#xCE59;</li>
+</ul>
+<ol style="list-style-type: decimal">
 <li>Single row by rowid</li>
 <li>Sigle row by cluster join</li>
 <li>Single row by hash cluster key with unique or primary key</li>
@@ -199,64 +198,49 @@
 <li>ORDER BY on indexed column</li>
 <li>Full table scan</li>
 </ol>
-</li>
-</ul>
-<p>요약하자면</p>
-<blockquote>
-<p>Single row (rowid &lt; unique or primary key) &lt;&lt; Index ( Equal (composite &lt; single) &lt;&lt; Range (bounded &lt; unbounded) ) &lt;&lt; Full table scan</p>
-</blockquote>
-<h4 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h4><h5 id="1-B-Tree-Index"><a href="#1-B-Tree-Index" class="headerlink" title="1. B-Tree Index"></a>1. B-Tree Index</h5><ul>
-<li>구성<ul>
-<li>Root Block : Branch Block 중 가장 상위 Block</li>
-<li>Branch Block : 다음 단계를 가리키는 Pointer를 가지고 있음</li>
-<li>Leaf Block : Index를 구성하는 칼럼의 데이터와 rowid, 인접한 Leaf Block의 Pointer를 가지고 있음</li>
-</ul>
-</li>
-</ul>
-<h5 id="2-Cluster-Index-MS-SQL-IOT-Oracle"><a href="#2-Cluster-Index-MS-SQL-IOT-Oracle" class="headerlink" title="2. Cluster Index (MS-SQL) , IOT (Oracle)"></a>2. Cluster Index (MS-SQL) , IOT (Oracle)</h5><p>PK순으로 저장. Index의 Leaf Block에 Table 의 모든 데이터 저장</p>
-<h5 id="3-Bitmap-Index"><a href="#3-Bitmap-Index" class="headerlink" title="3. Bitmap Index"></a>3. Bitmap Index</h5><p>일종의 Hash + Linked List 형태</p>
-<h5 id="4-FBI-Function-Based-Index"><a href="#4-FBI-Function-Based-Index" class="headerlink" title="4. FBI (Function-Based Index)"></a>4. FBI (Function-Based Index)</h5><p>함수값 순으로 Index에 저장</p>
-<h4 id="Full-Table-Scan-vs-Index-Scan"><a href="#Full-Table-Scan-vs-Index-Scan" class="headerlink" title="Full Table Scan vs Index Scan"></a>Full Table Scan vs Index Scan</h4><ul>
-<li><p>Optimizer 가 Full Table Scan을 하는 경우</p>
+<p>&#xC694;&#xC57D;&#xD558;&#xC790;&#xBA74; &gt; Single row (rowid &lt; unique or primary key) &lt;&lt; Index ( Equal (composite &lt; single) &lt;&lt; Range (bounded &lt; unbounded) ) &lt;&lt; Full table scan</p>
+<h4 id="index">Index</h4>
+<h5 id="b-tree-index">1. B-Tree Index</h5>
 <ul>
-<li>SQL에 조건(WHERE)이 없을 경우</li>
-<li>조건은 있는데 사용 가능한 INDEX가 없는 경우</li>
-<li>Optimizer가 판단하여 Full Table Scan이 더 유리할때 : Index는 Single Block I/O, Table은 Multi Block I/O</li>
-<li>기타 : 병렬처리, Hint 등…</li>
+<li>&#xAD6C;&#xC131;</li>
+<li>Root Block : Branch Block &#xC911; &#xAC00;&#xC7A5; &#xC0C1;&#xC704; Block</li>
+<li>Branch Block : &#xB2E4;&#xC74C; &#xB2E8;&#xACC4;&#xB97C; &#xAC00;&#xB9AC;&#xD0A4;&#xB294; Pointer&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC74C;</li>
+<li>Leaf Block : Index&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xCE7C;&#xB7FC;&#xC758; &#xB370;&#xC774;&#xD130;&#xC640; rowid, &#xC778;&#xC811;&#xD55C; Leaf Block&#xC758; Pointer&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC74C;</li>
 </ul>
-</li>
-<li><p>Index Scan 종류</p>
+<h5 id="cluster-index-ms-sql-iot-oracle">2. Cluster Index (MS-SQL) , IOT (Oracle)</h5>
+<p>PK&#xC21C;&#xC73C;&#xB85C; &#xC800;&#xC7A5;. Index&#xC758; Leaf Block&#xC5D0; Table &#xC758; &#xBAA8;&#xB4E0; &#xB370;&#xC774;&#xD130; &#xC800;&#xC7A5;</p>
+<h5 id="bitmap-index">3. Bitmap Index</h5>
+<p>&#xC77C;&#xC885;&#xC758; Hash + Linked List &#xD615;&#xD0DC;</p>
+<h5 id="fbi-function-based-index">4. FBI (Function-Based Index)</h5>
+<p>&#xD568;&#xC218;&#xAC12; &#xC21C;&#xC73C;&#xB85C; Index&#xC5D0; &#xC800;&#xC7A5;</p>
+<h4 id="full-table-scan-vs-index-scan">Full Table Scan vs Index Scan</h4>
 <ul>
-<li>Index Unique Scan : Unique Index에서 = 조건으로 검색</li>
-<li>Index Range Scan : 조건이 = 가 아니거나 Non-unique Index를 이용</li>
-<li>Index Range Scan Descending : MIN, MAX 값등을 쉽게 찾기 위해서 사용</li>
-<li>Index Fast Scan : 검색하는 모든 컬럼이 Index에 포함된 경우 Table을 찾지않고 Index만으로 검색</li>
-<li>Index Skip Scan : Index의 선두 컬럼이 검색 조건에 없을 경우 사용하는 방법</li>
+<li>Optimizer &#xAC00; Full Table Scan&#xC744; &#xD558;&#xB294; &#xACBD;&#xC6B0;</li>
+<li>SQL&#xC5D0; &#xC870;&#xAC74;(WHERE)&#xC774; &#xC5C6;&#xC744; &#xACBD;&#xC6B0;</li>
+<li>&#xC870;&#xAC74;&#xC740; &#xC788;&#xB294;&#xB370; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; INDEX&#xAC00; &#xC5C6;&#xB294; &#xACBD;&#xC6B0;</li>
+<li>Optimizer&#xAC00; &#xD310;&#xB2E8;&#xD558;&#xC5EC; Full Table Scan&#xC774; &#xB354; &#xC720;&#xB9AC;&#xD560;&#xB54C; : Index&#xB294; Single Block I/O, Table&#xC740; Multi Block I/O</li>
+<li><p>&#xAE30;&#xD0C0; : &#xBCD1;&#xB82C;&#xCC98;&#xB9AC;, Hint &#xB4F1;&#x2026;</p></li>
+<li>Index Scan &#xC885;&#xB958;</li>
+<li>Index Unique Scan : Unique Index&#xC5D0;&#xC11C; = &#xC870;&#xAC74;&#xC73C;&#xB85C; &#xAC80;&#xC0C9;</li>
+<li>Index Range Scan : &#xC870;&#xAC74;&#xC774; = &#xAC00; &#xC544;&#xB2C8;&#xAC70;&#xB098; Non-unique Index&#xB97C; &#xC774;&#xC6A9;</li>
+<li>Index Range Scan Descending : MIN, MAX &#xAC12;&#xB4F1;&#xC744; &#xC27D;&#xAC8C; &#xCC3E;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;</li>
+<li>Index Fast Scan : &#xAC80;&#xC0C9;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xCEEC;&#xB7FC;&#xC774; Index&#xC5D0; &#xD3EC;&#xD568;&#xB41C; &#xACBD;&#xC6B0; Table&#xC744; &#xCC3E;&#xC9C0;&#xC54A;&#xACE0; Index&#xB9CC;&#xC73C;&#xB85C; &#xAC80;&#xC0C9;</li>
+<li><p>Index Skip Scan : Index&#xC758; &#xC120;&#xB450; &#xCEEC;&#xB7FC;&#xC774; &#xAC80;&#xC0C9; &#xC870;&#xAC74;&#xC5D0; &#xC5C6;&#xC744; &#xACBD;&#xC6B0; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xBC95;</p></li>
 </ul>
-</li>
-</ul>
-<h4 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h4><ul>
-<li><p>NL Join (Nested-loop)</p>
+<h4 id="join">JOIN</h4>
 <ul>
-<li>Driving Table을 먼저 읽은 다음에 Outer Table과 JOIN</li>
-<li>Driving Table에서 조건에 맞는 모든 row 만큼 JOIN이 이루어지므로 선행 테이블에서 작업량을 줄이는 것이 중요</li>
-<li>양쪽 중 한쪽만 Index가 있는 경우 Outer Table쪽의 Index를 사용하는 것이 유리 (Driving은 Full Scan)</li>
-<li>JOIN 과정은 random access</li>
-</ul>
-</li>
-<li><p>Sort Merge Join</p>
-<ul>
-<li>Join 칼럼을 기준으로 데이터를 정렬한 뒤에 JOIN을 수행</li>
-<li>대량의 JOIN일 경우 NL Join의 random access보다 유리</li>
-</ul>
-</li>
-<li><p>Hash Join</p>
-<ul>
-<li>선행 테이블(Build Input)에서 JOIN하는 컬럼의 Hash값을 메모리에 생성</li>
-<li>후행 테이블(Prove Input)에 Hash값을 메모리에서 찾아서 JOIN</li>
-<li>범위 검색은 불가능 하고 = 조건으로만 가능</li>
-</ul>
-</li>
+<li>NL Join (Nested-loop)</li>
+<li>Driving Table&#xC744; &#xBA3C;&#xC800; &#xC77D;&#xC740; &#xB2E4;&#xC74C;&#xC5D0; Outer Table&#xACFC; JOIN</li>
+<li>Driving Table&#xC5D0;&#xC11C; &#xC870;&#xAC74;&#xC5D0; &#xB9DE;&#xB294; &#xBAA8;&#xB4E0; row &#xB9CC;&#xD07C; JOIN&#xC774; &#xC774;&#xB8E8;&#xC5B4;&#xC9C0;&#xBBC0;&#xB85C; &#xC120;&#xD589; &#xD14C;&#xC774;&#xBE14;&#xC5D0;&#xC11C; &#xC791;&#xC5C5;&#xB7C9;&#xC744; &#xC904;&#xC774;&#xB294; &#xAC83;&#xC774; &#xC911;&#xC694;</li>
+<li>&#xC591;&#xCABD; &#xC911; &#xD55C;&#xCABD;&#xB9CC; Index&#xAC00; &#xC788;&#xB294; &#xACBD;&#xC6B0; Outer Table&#xCABD;&#xC758; Index&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC720;&#xB9AC; (Driving&#xC740; Full Scan)</li>
+<li><p>JOIN &#xACFC;&#xC815;&#xC740; random access</p></li>
+<li>Sort Merge Join</li>
+<li>Join &#xCE7C;&#xB7FC;&#xC744; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC815;&#xB82C;&#xD55C; &#xB4A4;&#xC5D0; JOIN&#xC744; &#xC218;&#xD589;</li>
+<li><p>&#xB300;&#xB7C9;&#xC758; JOIN&#xC77C; &#xACBD;&#xC6B0; NL Join&#xC758; random access&#xBCF4;&#xB2E4; &#xC720;&#xB9AC;</p></li>
+<li>Hash Join</li>
+<li>&#xC120;&#xD589; &#xD14C;&#xC774;&#xBE14;(Build Input)&#xC5D0;&#xC11C; JOIN&#xD558;&#xB294; &#xCEEC;&#xB7FC;&#xC758; Hash&#xAC12;&#xC744; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0; &#xC0DD;&#xC131;</li>
+<li>&#xD6C4;&#xD589; &#xD14C;&#xC774;&#xBE14;(Prove Input)&#xC5D0; Hash&#xAC12;&#xC744; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0;&#xC11C; &#xCC3E;&#xC544;&#xC11C; JOIN</li>
+<li><p>&#xBC94;&#xC704; &#xAC80;&#xC0C9;&#xC740; &#xBD88;&#xAC00;&#xB2A5; &#xD558;&#xACE0; = &#xC870;&#xAC74;&#xC73C;&#xB85C;&#xB9CC; &#xAC00;&#xB2A5;</p></li>
 </ul>
 
         </div>
@@ -265,7 +249,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/01/27/02.07.optimizer/" data-id="cj1y8qfz2000e1z7bx3f7bf2e" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/01/27/02.07.optimizer/" data-id="cj2430301000gkc7bucz6cc2s" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -394,20 +378,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/01/26/02.06.plsql/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/01/29/03.01.architecture/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            SQLP 2-2-5 PL/SQL
+            SQLP 3-1-1 Oracle Architecture
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2016/01/29/03.01.architecture/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/01/26/02.06.plsql/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">SQLP 3-1-1 Oracle Architecture</p>
+        <p class="article-nav-title">SQLP 2-2-5 PL/SQL</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -421,7 +405,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -431,7 +415,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 12.22px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
         </div>
     </div>
 
@@ -513,6 +497,6 @@
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div>
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

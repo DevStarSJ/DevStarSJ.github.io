@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
     <title>SQLP 2-2-2 GROUP function | Dev Star SJ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  2장 SQL 활용 (#2) 표준에서 정한 데이터 분석 3가지 함수군   Aggregate function : 앞에서 본 GROUP BY 에서 사용한 집계함수 (">
+    <meta name="description" content="2&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xAE30;&amp;#xBCF8; &amp;#xBC0F; &amp;#xD65C;&amp;#xC6A9;  20&amp;#xBB38;&amp;#xC81C; &amp;#xAC01; &amp;#xC0C1;&amp;#xD669;&amp;#xBCC4;&amp;#xB85C; SQL&amp;#xBB38; &amp;#xC791;&amp;#xC131;&amp;#xC774; &amp;#xAC00;&amp;#xB2A5;&amp;#xD560; &amp;#xC815;&amp;#x">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 2-2-2 GROUP function">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/01/25/02.03.group/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  2장 SQL 활용 (#2) 표준에서 정한 데이터 분석 3가지 함수군   Aggregate function : 앞에서 본 GROUP BY 에서 사용한 집계함수 (">
+<meta property="og:description" content="2&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xAE30;&amp;#xBCF8; &amp;#xBC0F; &amp;#xD65C;&amp;#xC6A9;  20&amp;#xBB38;&amp;#xC81C; &amp;#xAC01; &amp;#xC0C1;&amp;#xD669;&amp;#xBCC4;&amp;#xB85C; SQL&amp;#xBB38; &amp;#xC791;&amp;#xC131;&amp;#xC774; &amp;#xAC00;&amp;#xB2A5;&amp;#xD560; &amp;#xC815;&amp;#x">
 <meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.03.group.01.png?raw=true">
 <meta property="og:updated_time" content="2017-04-23T23:56:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 2-2-2 GROUP function">
-<meta name="twitter:description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  2장 SQL 활용 (#2) 표준에서 정한 데이터 분석 3가지 함수군   Aggregate function : 앞에서 본 GROUP BY 에서 사용한 집계함수 (">
+<meta name="twitter:description" content="2&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xAE30;&amp;#xBCF8; &amp;#xBC0F; &amp;#xD65C;&amp;#xC6A9;  20&amp;#xBB38;&amp;#xC81C; &amp;#xAC01; &amp;#xC0C1;&amp;#xD669;&amp;#xBCC4;&amp;#xB85C; SQL&amp;#xBB38; &amp;#xC791;&amp;#xC131;&amp;#xC774; &amp;#xAC00;&amp;#xB2A5;&amp;#xD560; &amp;#xC815;&amp;#x">
 <meta name="twitter:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.03.group.01.png?raw=true">
     
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     
@@ -47,7 +47,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
         <header id="header">
     <div id="header-outer" class="outer">
         <div class="container">
@@ -71,7 +71,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -166,74 +166,82 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="2과목-SQL-기본-및-활용"><a href="#2과목-SQL-기본-및-활용" class="headerlink" title="2과목 SQL 기본 및 활용"></a>2과목 SQL 기본 및 활용</h2><ul>
-<li>20문제</li>
-<li>각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다.</li>
-<li>기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.</li>
-</ul>
-<h3 id="2장-SQL-활용-2"><a href="#2장-SQL-활용-2" class="headerlink" title="2장 SQL 활용 (#2)"></a>2장 SQL 활용 (#2)</h3><ul>
-<li>표준에서 정한 데이터 분석 3가지 함수군</li>
-</ul>
+            <h2 id="&#xACFC;&#xBAA9;-sql-&#xAE30;&#xBCF8;-&#xBC0F;-&#xD65C;&#xC6A9;">2&#xACFC;&#xBAA9; SQL &#xAE30;&#xBCF8; &#xBC0F; &#xD65C;&#xC6A9;</h2>
 <ul>
-<li>Aggregate function : 앞에서 본 GROUP BY 에서 사용한 집계함수 (SUM, AVG, MIN, MAX, …)</li>
-<li>Group function : 단계별 소계를 계산. SQL을 한번만 읽어 빠르게 보고서 작성이 가능하도록 도와주는 함수들 (ROLLUP, CUBE, GROUPING SET)</li>
-<li>Window function : 행간의 비교, 관계를 지원. DW에서 발전한 기능 (RANK로 대표됨. 함수명은 앞의 것들과 같지만 사용법이 다름)</li>
+<li>20&#xBB38;&#xC81C;</li>
+<li>&#xAC01; &#xC0C1;&#xD669;&#xBCC4;&#xB85C; SQL&#xBB38; &#xC791;&#xC131;&#xC774; &#xAC00;&#xB2A5;&#xD560; &#xC815;&#xB3C4;&#xB85C; &#xC5F0;&#xC2B5;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xAE30;&#xBCF8;&#xC801;&#xC778; SQL&#xBB38;&#xBC95; &#xBC0F; &#xD568;&#xC218;&#xB294; &#xC0DD;&#xB7B5;&#xD558;&#xACE0; Tuning&#xC5D0; &#xD65C;&#xC6A9;&#xB420;&#xC218; &#xC788;&#xB294; &#xAC83; &#xC704;&#xC8FC;&#xB85C; &#xC815;&#xB9AC;&#xD558;&#xACE0;&#xC790; &#xD569;&#xB2C8;&#xB2E4;.</li>
 </ul>
-<h4 id="GROUP-FUNCTION-그룹함수"><a href="#GROUP-FUNCTION-그룹함수" class="headerlink" title="GROUP FUNCTION (그룹함수)"></a>GROUP FUNCTION (그룹함수)</h4><p>솔직히 SQL 작성시 사용할 만한 함수는 ROLLUP 하나뿐이다.<br>나머지는 시험에 나올 수 있으므로 그냥 어떤 역할을 한다는 정도만 알아두면 될듯하다.</p>
-<h5 id="1-ROLLUP"><a href="#1-ROLLUP" class="headerlink" title="1. ROLLUP"></a>1. ROLLUP</h5><p>소그룹간의 소계(subtotal)를 계산</p>
-<p>부서별 업무별 인원수와 연봉의 소계를 일반적은 query로 다음과 같이 작성이 가능하다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DNAME, JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL</div><div class="line">  <span class="keyword">FROM</span> DEPT A, EMP B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME, JOB</div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> DNAME, JOB;</div></pre></td></tr></table></figure></p>
+<h3 id="&#xC7A5;-sql-&#xD65C;&#xC6A9;-2">2&#xC7A5; SQL &#xD65C;&#xC6A9; (#2)</h3>
+<ul>
+<li>&#xD45C;&#xC900;&#xC5D0;&#xC11C; &#xC815;&#xD55C; &#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D; 3&#xAC00;&#xC9C0; &#xD568;&#xC218;&#xAD70;</li>
+<li>Aggregate function : &#xC55E;&#xC5D0;&#xC11C; &#xBCF8; GROUP BY &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD55C; &#xC9D1;&#xACC4;&#xD568;&#xC218; (SUM, AVG, MIN, MAX, &#x2026;)</li>
+<li>Group function : &#xB2E8;&#xACC4;&#xBCC4; &#xC18C;&#xACC4;&#xB97C; &#xACC4;&#xC0B0;. SQL&#xC744; &#xD55C;&#xBC88;&#xB9CC; &#xC77D;&#xC5B4; &#xBE60;&#xB974;&#xAC8C; &#xBCF4;&#xACE0;&#xC11C; &#xC791;&#xC131;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB3C4;&#xB85D; &#xB3C4;&#xC640;&#xC8FC;&#xB294; &#xD568;&#xC218;&#xB4E4; (ROLLUP, CUBE, GROUPING SET)</li>
+<li>Window function : &#xD589;&#xAC04;&#xC758; &#xBE44;&#xAD50;, &#xAD00;&#xACC4;&#xB97C; &#xC9C0;&#xC6D0;. DW&#xC5D0;&#xC11C; &#xBC1C;&#xC804;&#xD55C; &#xAE30;&#xB2A5; (RANK&#xB85C; &#xB300;&#xD45C;&#xB428;. &#xD568;&#xC218;&#xBA85;&#xC740; &#xC55E;&#xC758; &#xAC83;&#xB4E4;&#xACFC; &#xAC19;&#xC9C0;&#xB9CC; &#xC0AC;&#xC6A9;&#xBC95;&#xC774; &#xB2E4;&#xB984;)</li>
+</ul>
+<h4 id="group-function-&#xADF8;&#xB8F9;&#xD568;&#xC218;">GROUP FUNCTION (&#xADF8;&#xB8F9;&#xD568;&#xC218;)</h4>
+<p>&#xC194;&#xC9C1;&#xD788; SQL &#xC791;&#xC131;&#xC2DC; &#xC0AC;&#xC6A9;&#xD560; &#xB9CC;&#xD55C; &#xD568;&#xC218;&#xB294; ROLLUP &#xD558;&#xB098;&#xBFD0;&#xC774;&#xB2E4;.<br>
+&#xB098;&#xBA38;&#xC9C0;&#xB294; &#xC2DC;&#xD5D8;&#xC5D0; &#xB098;&#xC62C; &#xC218; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xADF8;&#xB0E5; &#xC5B4;&#xB5A4; &#xC5ED;&#xD560;&#xC744; &#xD55C;&#xB2E4;&#xB294; &#xC815;&#xB3C4;&#xB9CC; &#xC54C;&#xC544;&#xB450;&#xBA74; &#xB420;&#xB4EF;&#xD558;&#xB2E4;.</p>
+<h5 id="rollup">1. ROLLUP</h5>
+<p>&#xC18C;&#xADF8;&#xB8F9;&#xAC04;&#xC758; &#xC18C;&#xACC4;(subtotal)&#xB97C; &#xACC4;&#xC0B0;</p>
+<p>&#xBD80;&#xC11C;&#xBCC4; &#xC5C5;&#xBB34;&#xBCC4; &#xC778;&#xC6D0;&#xC218;&#xC640; &#xC5F0;&#xBD09;&#xC758; &#xC18C;&#xACC4;&#xB97C; &#xC77C;&#xBC18;&#xC801;&#xC740; query&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC791;&#xC131;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;. <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DNAME, JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL</div><div class="line">  <span class="keyword">FROM</span> DEPT A, EMP B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME, JOB</div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> DNAME, JOB;</div></pre></td></tr></table></figure></p>
 <p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.03.group.01.png?raw=true"></p>
-<p>위 예제의 경우 부서별, 업무별의 대한 소계를 구했다.<br>여기다가 부서별 소계 와 전체 합계까지 같이 출력하려면 어떻게 해야할까 ?<br>부서별 소계를 구하는 SQL과 전체 합계를 구하는 SQL을 각각 호출해서 전체를 UNION ALL 하는 방법이 가장 손쉬운 방법이다.  </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DNAME, JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL, <span class="number">1</span> <span class="keyword">AS</span> <span class="keyword">DEPTH</span></div><div class="line">  <span class="keyword">FROM</span> DEPT A, EMP B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME, JOB</div><div class="line"> <span class="keyword">UNION</span> ALL</div><div class="line"><span class="keyword">SELECT</span> DNAME, <span class="string">'TOTAL'</span> <span class="keyword">AS</span> JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL, <span class="number">2</span> <span class="keyword">AS</span> <span class="keyword">DEPTH</span></div><div class="line">  <span class="keyword">FROM</span> DEPT A, EMP B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME</div><div class="line"> <span class="keyword">UNION</span> ALL</div><div class="line"><span class="keyword">SELECT</span> <span class="string">'TOTAL'</span> <span class="keyword">AS</span> DNAME, <span class="string">''</span> <span class="keyword">AS</span> JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL, <span class="number">3</span> <span class="keyword">AS</span> <span class="keyword">DEPTH</span></div><div class="line">  <span class="keyword">FROM</span> EMP</div></pre></td></tr></table></figure>
+<p>&#xC704; &#xC608;&#xC81C;&#xC758; &#xACBD;&#xC6B0; &#xBD80;&#xC11C;&#xBCC4;, &#xC5C5;&#xBB34;&#xBCC4;&#xC758; &#xB300;&#xD55C; &#xC18C;&#xACC4;&#xB97C; &#xAD6C;&#xD588;&#xB2E4;.<br>
+&#xC5EC;&#xAE30;&#xB2E4;&#xAC00; &#xBD80;&#xC11C;&#xBCC4; &#xC18C;&#xACC4; &#xC640; &#xC804;&#xCCB4; &#xD569;&#xACC4;&#xAE4C;&#xC9C0; &#xAC19;&#xC774; &#xCD9C;&#xB825;&#xD558;&#xB824;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C; &#xD574;&#xC57C;&#xD560;&#xAE4C; ?<br>
+&#xBD80;&#xC11C;&#xBCC4; &#xC18C;&#xACC4;&#xB97C; &#xAD6C;&#xD558;&#xB294; SQL&#xACFC; &#xC804;&#xCCB4; &#xD569;&#xACC4;&#xB97C; &#xAD6C;&#xD558;&#xB294; SQL&#xC744; &#xAC01;&#xAC01; &#xD638;&#xCD9C;&#xD574;&#xC11C; &#xC804;&#xCCB4;&#xB97C; UNION ALL &#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774; &#xAC00;&#xC7A5; &#xC190;&#xC26C;&#xC6B4; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DNAME, JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL, <span class="number">1</span> <span class="keyword">AS</span> <span class="keyword">DEPTH</span></div><div class="line">  <span class="keyword">FROM</span> DEPT A, EMP B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME, JOB</div><div class="line"> <span class="keyword">UNION</span> ALL</div><div class="line"><span class="keyword">SELECT</span> DNAME, <span class="string">&apos;TOTAL&apos;</span> <span class="keyword">AS</span> JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL, <span class="number">2</span> <span class="keyword">AS</span> <span class="keyword">DEPTH</span></div><div class="line">  <span class="keyword">FROM</span> DEPT A, EMP B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DNAME</div><div class="line"> <span class="keyword">UNION</span> ALL</div><div class="line"><span class="keyword">SELECT</span> <span class="string">&apos;TOTAL&apos;</span> <span class="keyword">AS</span> DNAME, <span class="string">&apos;&apos;</span> <span class="keyword">AS</span> JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL, <span class="number">3</span> <span class="keyword">AS</span> <span class="keyword">DEPTH</span></div><div class="line">  <span class="keyword">FROM</span> EMP</div></pre></td></tr></table></figure>
 <p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.03.group.02.png?raw=true"></p>
-<p>그 결과들을 다시 순서대로 할려면 UNION ALL로 묶은 것을 subquery로 해서 SELECT문을 한번 더 써야 한다.<br>위 SQL을 그냥 A라고 하겠다.  </p>
+<p>&#xADF8; &#xACB0;&#xACFC;&#xB4E4;&#xC744; &#xB2E4;&#xC2DC; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xD560;&#xB824;&#xBA74; UNION ALL&#xB85C; &#xBB36;&#xC740; &#xAC83;&#xC744; subquery&#xB85C; &#xD574;&#xC11C; SELECT&#xBB38;&#xC744; &#xD55C;&#xBC88; &#xB354; &#xC368;&#xC57C; &#xD55C;&#xB2E4;. &#xC704; SQL&#xC744; &#xADF8;&#xB0E5; A&#xB77C;&#xACE0; &#xD558;&#xACA0;&#xB2E4;.</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DNAME, JOB, TOTAL_EMP, SUM_SAL</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> ... ) A</div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> DNAME, <span class="keyword">DEPTH</span>, JOB;</div></pre></td></tr></table></figure>
 <p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.03.group.03.png?raw=true"></p>
-<p>상당히 복잡한 과정을 거쳐서 소계를 구했는데,<br>그냥 ROLLUP을 이용하면 쉽게 작성이 가능하다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DNAME, JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL</div><div class="line">  <span class="keyword">FROM</span> EMP A, DEPT B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">ROLLUP</span> (DNAME, JOB)</div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> DNAME, JOB;</div></pre></td></tr></table></figure></p>
+<p>&#xC0C1;&#xB2F9;&#xD788; &#xBCF5;&#xC7A1;&#xD55C; &#xACFC;&#xC815;&#xC744; &#xAC70;&#xCCD0;&#xC11C; &#xC18C;&#xACC4;&#xB97C; &#xAD6C;&#xD588;&#xB294;&#xB370;,<br>
+&#xADF8;&#xB0E5; ROLLUP&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xC27D;&#xAC8C; &#xC791;&#xC131;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;. <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DNAME, JOB, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP, <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL</div><div class="line">  <span class="keyword">FROM</span> EMP A, DEPT B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">ROLLUP</span> (DNAME, JOB)</div><div class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> DNAME, JOB;</div></pre></td></tr></table></figure></p>
 <p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.03.group.04.png?raw=true"></p>
 <ul>
-<li>GROUPING 함수 : 해당 컬럼을 기준으로 소계를 한 결과에 대해서는 GROUPING(컬럼) = 1을 출력한다.  </li>
+<li>GROUPING &#xD568;&#xC218; : &#xD574;&#xB2F9; &#xCEEC;&#xB7FC;&#xC744; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xC18C;&#xACC4;&#xB97C; &#xD55C; &#xACB0;&#xACFC;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; GROUPING(&#xCEEC;&#xB7FC;) = 1&#xC744; &#xCD9C;&#xB825;&#xD55C;&#xB2E4;.</li>
 </ul>
-<p>위 결과에서 각 부서별 합계를 출력하는 row에 대해서는 GROUPING(JOB) = 1 이 되며,<br>총 계에 대해서는 GROUPING(DNAME) = 1, GROUPING(JOB) = 1 이 출력된다.<br>이 함수를 이용해서 그룹별 소계, 총 합계를 출력하는 row에 별도 label을 주고자 할 경우 작성법은 다음과 같다.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DECODE</span> (<span class="keyword">GROUPING</span>(DNAME), <span class="number">1</span>, <span class="string">'Total DEPT'</span>, DNAME) <span class="keyword">AS</span> DNAME,</div><div class="line">       <span class="keyword">DECODE</span> (<span class="keyword">GROUPING</span>(JOB), <span class="number">1</span>, <span class="string">'Total JOB'</span> , JOB) <span class="keyword">AS</span> JOB,</div><div class="line">       <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP,</div><div class="line">       <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL</div><div class="line">  <span class="keyword">FROM</span> EMP A, DEPT B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">ROLLUP</span> (DNAME, JOB);</div></pre></td></tr></table></figure>
+<p>&#xC704; &#xACB0;&#xACFC;&#xC5D0;&#xC11C; &#xAC01; &#xBD80;&#xC11C;&#xBCC4; &#xD569;&#xACC4;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; row&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; GROUPING(JOB) = 1 &#xC774; &#xB418;&#xBA70;,<br>
+&#xCD1D; &#xACC4;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; GROUPING(DNAME) = 1, GROUPING(JOB) = 1 &#xC774; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.<br>
+&#xC774; &#xD568;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xADF8;&#xB8F9;&#xBCC4; &#xC18C;&#xACC4;, &#xCD1D; &#xD569;&#xACC4;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; row&#xC5D0; &#xBCC4;&#xB3C4; label&#xC744; &#xC8FC;&#xACE0;&#xC790; &#xD560; &#xACBD;&#xC6B0; &#xC791;&#xC131;&#xBC95;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DECODE</span> (<span class="keyword">GROUPING</span>(DNAME), <span class="number">1</span>, <span class="string">&apos;Total DEPT&apos;</span>, DNAME) <span class="keyword">AS</span> DNAME,</div><div class="line">       <span class="keyword">DECODE</span> (<span class="keyword">GROUPING</span>(JOB), <span class="number">1</span>, <span class="string">&apos;Total JOB&apos;</span> , JOB) <span class="keyword">AS</span> JOB,</div><div class="line">       <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> TOTAL_EMP,</div><div class="line">       <span class="keyword">SUM</span>(SAL) <span class="keyword">AS</span> SUM_SAL</div><div class="line">  <span class="keyword">FROM</span> EMP A, DEPT B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line"> <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">ROLLUP</span> (DNAME, JOB);</div></pre></td></tr></table></figure>
 <p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/02.03.group.05.png?raw=true"></p>
 <ul>
-<li>ROLLUP을 부분적으로 적용</li>
+<li>ROLLUP&#xC744; &#xBD80;&#xBD84;&#xC801;&#xC73C;&#xB85C; &#xC801;&#xC6A9;</li>
 </ul>
-<ol>
-<li>소계에서 제외<ul>
-<li>항상 모든 GROUP BY에 사용된 컬럼에 대해서 ROLLUP을 해야하는 것은 아니다.  </li>
-<li>만약 DNAME, JOB 별로 GROUP BY를 하되 부서별 소계를 필요하지만, 전체 합계는 필요없을 경우  </li>
-<li><code>GROUP BY DNAME, ROLLUP(JOB)</code> 라고 쓰면 위 결과에서 마지막줄인 <code>Total DEPT</code>가 출력되지 않는다.  </li>
-</ul>
-</li>
-<li>2개 이상의 컬럼으로 구분<ul>
-<li>위의 경우 DNAME, JOB가 종속관계이다. DNAME 안에서 JOB별로 구분하였다.</li>
-<li>만약 DNAME 아래에 JOB, MGR이 같은 것끼리 묶어서 소계를 구하고자 할때에는 두 컬럼 이상을 괄호로 묶으면 된다.  </li>
-<li><code>GROUP BY ROLLUP( DNAME, (JOB, MGR))</code> 이라고 쓰면 JOB, MGR을 계층짓지않고, JOB, MGR이 모두 같은 것을 하나의 그룹으로 묶어서 소계를 구한다.</li>
-</ul>
-</li>
+<ol style="list-style-type: decimal">
+<li>&#xC18C;&#xACC4;&#xC5D0;&#xC11C; &#xC81C;&#xC678;</li>
 </ol>
-<h5 id="2-CUBE"><a href="#2-CUBE" class="headerlink" title="2. CUBE"></a>2. CUBE</h5><p>결합 가능한 모든 값에 대하여 다차원 집계를 생성한다.<br>위 ROLLUP에서 사용한 예제에서 ROLLUP대신 CUBE를 쓸 경우 : <code>GROUP BY CUBE(DNAME, JOB)</code></p>
 <ul>
-<li>DNAME 별 JOB의 소계</li>
-<li>JOB 별 DNAME의 소계</li>
-<li>전체 합계<br>를 모두 출력한다.</li>
+<li>&#xD56D;&#xC0C1; &#xBAA8;&#xB4E0; GROUP BY&#xC5D0; &#xC0AC;&#xC6A9;&#xB41C; &#xCEEC;&#xB7FC;&#xC5D0; &#xB300;&#xD574;&#xC11C; ROLLUP&#xC744; &#xD574;&#xC57C;&#xD558;&#xB294; &#xAC83;&#xC740; &#xC544;&#xB2C8;&#xB2E4;.<br>
+</li>
+<li>&#xB9CC;&#xC57D; DNAME, JOB &#xBCC4;&#xB85C; GROUP BY&#xB97C; &#xD558;&#xB418; &#xBD80;&#xC11C;&#xBCC4; &#xC18C;&#xACC4;&#xB97C; &#xD544;&#xC694;&#xD558;&#xC9C0;&#xB9CC;, &#xC804;&#xCCB4; &#xD569;&#xACC4;&#xB294; &#xD544;&#xC694;&#xC5C6;&#xC744; &#xACBD;&#xC6B0;<br>
+</li>
+<li><code>GROUP BY DNAME, ROLLUP(JOB)</code> &#xB77C;&#xACE0; &#xC4F0;&#xBA74; &#xC704; &#xACB0;&#xACFC;&#xC5D0;&#xC11C; &#xB9C8;&#xC9C0;&#xB9C9;&#xC904;&#xC778; <code>Total DEPT</code>&#xAC00; &#xCD9C;&#xB825;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.<br>
+</li>
 </ul>
-<p>즉, CUBE 내의 컬럼들의 순서를 바꿔가면서 ROLLUP을 수행한 뒤에 UNION 한것과 같은 결과이다.<br>그만큼 연산량이 많다.  </p>
-<p>또 다른 차이점은 GROUPING 함수의 경우<br>ROLLUP에서는 계층이 있으므로 GROUPING(DNAME) = 1 이면서 GROUPING(JOB) = 0 인 값이 없었다.<br>CUBE에서는 GROUPING(DNAME) = 1 이면서 GROUPING(JOB) = 0이 가능하다. JOB별 all DNAME에 대한 소계의 경우이다.</p>
-<h5 id="3-GROUPING-SETS"><a href="#3-GROUPING-SETS" class="headerlink" title="3. GROUPING SETS"></a>3. GROUPING SETS</h5><p>다양한 소계들을 한번의 SQL로 구하는데 사용된다.<br>나열한 컬럼들을 평등한 관계이므로 순서를 바꿔도 상관없다.  </p>
-<p>위 예제에서 GROUPING SETS를 쓸 경우  : <code>GROUP BY GROUPING SETS(DNAME, JOB)</code></p>
+<ol start="2" style="list-style-type: decimal">
+<li>2&#xAC1C; &#xC774;&#xC0C1;&#xC758; &#xCEEC;&#xB7FC;&#xC73C;&#xB85C; &#xAD6C;&#xBD84;</li>
+</ol>
 <ul>
-<li>DNAME별 소계</li>
-<li>JOB별 소계<br>를 UNION ALL 해준 결과를 출력해준다.</li>
+<li>&#xC704;&#xC758; &#xACBD;&#xC6B0; DNAME, JOB&#xAC00; &#xC885;&#xC18D;&#xAD00;&#xACC4;&#xC774;&#xB2E4;. DNAME &#xC548;&#xC5D0;&#xC11C; JOB&#xBCC4;&#xB85C; &#xAD6C;&#xBD84;&#xD558;&#xC600;&#xB2E4;.</li>
+<li>&#xB9CC;&#xC57D; DNAME &#xC544;&#xB798;&#xC5D0; JOB, MGR&#xC774; &#xAC19;&#xC740; &#xAC83;&#xB07C;&#xB9AC; &#xBB36;&#xC5B4;&#xC11C; &#xC18C;&#xACC4;&#xB97C; &#xAD6C;&#xD558;&#xACE0;&#xC790; &#xD560;&#xB54C;&#xC5D0;&#xB294; &#xB450; &#xCEEC;&#xB7FC; &#xC774;&#xC0C1;&#xC744; &#xAD04;&#xD638;&#xB85C; &#xBB36;&#xC73C;&#xBA74; &#xB41C;&#xB2E4;.<br>
+</li>
+<li><code>GROUP BY ROLLUP( DNAME, (JOB, MGR))</code> &#xC774;&#xB77C;&#xACE0; &#xC4F0;&#xBA74; JOB, MGR&#xC744; &#xACC4;&#xCE35;&#xC9D3;&#xC9C0;&#xC54A;&#xACE0;, JOB, MGR&#xC774; &#xBAA8;&#xB450; &#xAC19;&#xC740; &#xAC83;&#xC744; &#xD558;&#xB098;&#xC758; &#xADF8;&#xB8F9;&#xC73C;&#xB85C; &#xBB36;&#xC5B4;&#xC11C; &#xC18C;&#xACC4;&#xB97C; &#xAD6C;&#xD55C;&#xB2E4;.</li>
 </ul>
-<p>GROUPING SET도 2개 이상의 컬럼으로 구분이 가능하다. ROLLUP에서 본것 같이 괄호로 컬럼들을 묶어주면 된다.<br><code>GROUP BY GROUPING SETS ( (DNAME, JOB, MGR) , (DNAME, JOB) , DNAME )</code> 이라고 할 경우</p>
-<ul>
-<li>DNAME-JOB-MGR 별 소계</li>
-<li>DNAME-JOB 별 소계</li>
-<li>DNAME 별 소계<br>의 결과들을 UNION ALL 한 것과 같은 결과를 출력해준다.</li>
-</ul>
+<h5 id="cube">2. CUBE</h5>
+<p>&#xACB0;&#xD569; &#xAC00;&#xB2A5;&#xD55C; &#xBAA8;&#xB4E0; &#xAC12;&#xC5D0; &#xB300;&#xD558;&#xC5EC; &#xB2E4;&#xCC28;&#xC6D0; &#xC9D1;&#xACC4;&#xB97C; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;.<br>
+&#xC704; ROLLUP&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD55C; &#xC608;&#xC81C;&#xC5D0;&#xC11C; ROLLUP&#xB300;&#xC2E0; CUBE&#xB97C; &#xC4F8; &#xACBD;&#xC6B0; : <code>GROUP BY CUBE(DNAME, JOB)</code> - DNAME &#xBCC4; JOB&#xC758; &#xC18C;&#xACC4; - JOB &#xBCC4; DNAME&#xC758; &#xC18C;&#xACC4; - &#xC804;&#xCCB4; &#xD569;&#xACC4; &#xB97C; &#xBAA8;&#xB450; &#xCD9C;&#xB825;&#xD55C;&#xB2E4;.</p>
+<p>&#xC989;, CUBE &#xB0B4;&#xC758; &#xCEEC;&#xB7FC;&#xB4E4;&#xC758; &#xC21C;&#xC11C;&#xB97C; &#xBC14;&#xAFD4;&#xAC00;&#xBA74;&#xC11C; ROLLUP&#xC744; &#xC218;&#xD589;&#xD55C; &#xB4A4;&#xC5D0; UNION &#xD55C;&#xAC83;&#xACFC; &#xAC19;&#xC740; &#xACB0;&#xACFC;&#xC774;&#xB2E4;.<br>
+&#xADF8;&#xB9CC;&#xD07C; &#xC5F0;&#xC0B0;&#xB7C9;&#xC774; &#xB9CE;&#xB2E4;.</p>
+<p>&#xB610; &#xB2E4;&#xB978; &#xCC28;&#xC774;&#xC810;&#xC740; GROUPING &#xD568;&#xC218;&#xC758; &#xACBD;&#xC6B0;<br>
+ROLLUP&#xC5D0;&#xC11C;&#xB294; &#xACC4;&#xCE35;&#xC774; &#xC788;&#xC73C;&#xBBC0;&#xB85C; GROUPING(DNAME) = 1 &#xC774;&#xBA74;&#xC11C; GROUPING(JOB) = 0 &#xC778; &#xAC12;&#xC774; &#xC5C6;&#xC5C8;&#xB2E4;.<br>
+CUBE&#xC5D0;&#xC11C;&#xB294; GROUPING(DNAME) = 1 &#xC774;&#xBA74;&#xC11C; GROUPING(JOB) = 0&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;. JOB&#xBCC4; all DNAME&#xC5D0; &#xB300;&#xD55C; &#xC18C;&#xACC4;&#xC758; &#xACBD;&#xC6B0;&#xC774;&#xB2E4;.</p>
+<h5 id="grouping-sets">3. GROUPING SETS</h5>
+<p>&#xB2E4;&#xC591;&#xD55C; &#xC18C;&#xACC4;&#xB4E4;&#xC744; &#xD55C;&#xBC88;&#xC758; SQL&#xB85C; &#xAD6C;&#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.<br>
+&#xB098;&#xC5F4;&#xD55C; &#xCEEC;&#xB7FC;&#xB4E4;&#xC744; &#xD3C9;&#xB4F1;&#xD55C; &#xAD00;&#xACC4;&#xC774;&#xBBC0;&#xB85C; &#xC21C;&#xC11C;&#xB97C; &#xBC14;&#xAFD4;&#xB3C4; &#xC0C1;&#xAD00;&#xC5C6;&#xB2E4;.</p>
+<p>&#xC704; &#xC608;&#xC81C;&#xC5D0;&#xC11C; GROUPING SETS&#xB97C; &#xC4F8; &#xACBD;&#xC6B0; : <code>GROUP BY GROUPING SETS(DNAME, JOB)</code> - DNAME&#xBCC4; &#xC18C;&#xACC4; - JOB&#xBCC4; &#xC18C;&#xACC4; &#xB97C; UNION ALL &#xD574;&#xC900; &#xACB0;&#xACFC;&#xB97C; &#xCD9C;&#xB825;&#xD574;&#xC900;&#xB2E4;.</p>
+<p>GROUPING SET&#xB3C4; 2&#xAC1C; &#xC774;&#xC0C1;&#xC758; &#xCEEC;&#xB7FC;&#xC73C;&#xB85C; &#xAD6C;&#xBD84;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;. ROLLUP&#xC5D0;&#xC11C; &#xBCF8;&#xAC83; &#xAC19;&#xC774; &#xAD04;&#xD638;&#xB85C; &#xCEEC;&#xB7FC;&#xB4E4;&#xC744; &#xBB36;&#xC5B4;&#xC8FC;&#xBA74; &#xB41C;&#xB2E4;.<br>
+<code>GROUP BY GROUPING SETS ( (DNAME, JOB, MGR) , (DNAME, JOB) , DNAME )</code> &#xC774;&#xB77C;&#xACE0; &#xD560; &#xACBD;&#xC6B0; - DNAME-JOB-MGR &#xBCC4; &#xC18C;&#xACC4; - DNAME-JOB &#xBCC4; &#xC18C;&#xACC4; - DNAME &#xBCC4; &#xC18C;&#xACC4; &#xC758; &#xACB0;&#xACFC;&#xB4E4;&#xC744; UNION ALL &#xD55C; &#xAC83;&#xACFC; &#xAC19;&#xC740; &#xACB0;&#xACFC;&#xB97C; &#xCD9C;&#xB825;&#xD574;&#xC900;&#xB2E4;.</p>
 
         </div>
         <footer class="article-footer">
@@ -241,7 +249,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/01/25/02.03.group/" data-id="cj1y8qfyj00051z7bfxkha4v6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/01/25/02.03.group/" data-id="cj24302zu0008kc7bjcwmuea7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -370,20 +378,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/01/23/02.02.sql.adv/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/01/25/02.04.window/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            SQLP 2-2-1 SET, Hierarchical Query, Sub-query
+            SQLP 2-2-3 Window function
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2016/01/25/02.04.window/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/01/23/02.02.sql.adv/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">SQLP 2-2-3 Window function</p>
+        <p class="article-nav-title">SQLP 2-2-1 SET, Hierarchical Query, Sub-query</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -397,7 +405,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -407,7 +415,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 12.22px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
         </div>
     </div>
 
@@ -489,6 +497,6 @@
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div>
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
     <title>SQLP 3-3 Optimizer | Dev Star SJ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning3장 Optimizer 원리3.1 OptimizerSQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진 Optimizer 종류 RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성 CBO (Cost-based Optimizer) : 통계">
+    <meta name="description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 3&amp;#xC7A5; Optimizer &amp;#xC6D0;&amp;#xB9AC; 3.1 Optimizer SQL&amp;#xC744; &amp;#xAC00;&amp;#xC7A5; &amp;#xBE60;&amp;#xB974;&amp;#xACE0; &amp;#xD6A8;&amp;#xC728;&amp;#xC801">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 3-3 Optimizer">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/04/03.04.optimizer/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning3장 Optimizer 원리3.1 OptimizerSQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진 Optimizer 종류 RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성 CBO (Cost-based Optimizer) : 통계">
+<meta property="og:description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 3&amp;#xC7A5; Optimizer &amp;#xC6D0;&amp;#xB9AC; 3.1 Optimizer SQL&amp;#xC744; &amp;#xAC00;&amp;#xC7A5; &amp;#xBE60;&amp;#xB974;&amp;#xACE0; &amp;#xD6A8;&amp;#xC728;&amp;#xC801">
 <meta property="og:updated_time" content="2017-04-24T00:04:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 3-3 Optimizer">
-<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning3장 Optimizer 원리3.1 OptimizerSQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진 Optimizer 종류 RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성 CBO (Cost-based Optimizer) : 통계">
+<meta name="twitter:description" content="3&amp;#xACFC;&amp;#xBAA9; SQL &amp;#xACE0;&amp;#xAE09; &amp;#xD65C;&amp;#xC6A9; &amp;#xBC0F; Tuning 3&amp;#xC7A5; Optimizer &amp;#xC6D0;&amp;#xB9AC; 3.1 Optimizer SQL&amp;#xC744; &amp;#xAC00;&amp;#xC7A5; &amp;#xBE60;&amp;#xB974;&amp;#xACE0; &amp;#xD6A8;&amp;#xC728;&amp;#xC801">
     
 
     
@@ -37,7 +37,7 @@
         <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     
@@ -45,7 +45,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
         <header id="header">
     <div id="header-outer" class="outer">
         <div class="container">
@@ -69,7 +69,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -164,185 +164,174 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="3과목-SQL-고급-활용-및-Tuning"><a href="#3과목-SQL-고급-활용-및-Tuning" class="headerlink" title="3과목 SQL 고급 활용 및 Tuning"></a>3과목 SQL 고급 활용 및 Tuning</h1><h2 id="3장-Optimizer-원리"><a href="#3장-Optimizer-원리" class="headerlink" title="3장 Optimizer 원리"></a>3장 Optimizer 원리</h2><h3 id="3-1-Optimizer"><a href="#3-1-Optimizer" class="headerlink" title="3.1 Optimizer"></a>3.1 Optimizer</h3><p>SQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진</p>
-<h4 id="Optimizer-종류"><a href="#Optimizer-종류" class="headerlink" title="Optimizer 종류"></a>Optimizer 종류</h4><ul>
-<li>RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성</li>
-<li>CBO (Cost-based Optimizer) : 통계정보를 기반으로 여러가지 실행계획을 생성하여 그중 최저비용의 실행계획을 선택</li>
+            <h1 id="&#xACFC;&#xBAA9;-sql-&#xACE0;&#xAE09;-&#xD65C;&#xC6A9;-&#xBC0F;-tuning">3&#xACFC;&#xBAA9; SQL &#xACE0;&#xAE09; &#xD65C;&#xC6A9; &#xBC0F; Tuning</h1>
+<h2 id="&#xC7A5;-optimizer-&#xC6D0;&#xB9AC;">3&#xC7A5; Optimizer &#xC6D0;&#xB9AC;</h2>
+<h3 id="optimizer">3.1 Optimizer</h3>
+<p>SQL&#xC744; &#xAC00;&#xC7A5; &#xBE60;&#xB974;&#xACE0; &#xD6A8;&#xC728;&#xC801;&#xC73C;&#xB85C; &#xC218;&#xD589;&#xD560; &#xCD5C;&#xC801;(&#xCD5C;&#xC800;&#xBE44;&#xC6A9;)&#xC758; &#xCC98;&#xB9AC;&#xACBD;&#xB85C;&#xB97C; &#xC0DD;&#xC131;&#xD574;&#xC8FC;&#xB294; DBMS &#xD575;&#xC2EC;&#xC5D4;&#xC9C4;</p>
+<h4 id="optimizer-&#xC885;&#xB958;">Optimizer &#xC885;&#xB958;</h4>
+<ul>
+<li>RBO (Rule-based Optimizer) : &#xADDC;&#xCE59;(&#xC6B0;&#xC120; &#xC21C;&#xC704;)&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC2E4;&#xD589;&#xACC4;&#xD68D; &#xC0DD;&#xC131;</li>
+<li>CBO (Cost-based Optimizer) : &#xD1B5;&#xACC4;&#xC815;&#xBCF4;&#xB97C; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xC2E4;&#xD589;&#xACC4;&#xD68D;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xADF8;&#xC911; &#xCD5C;&#xC800;&#xBE44;&#xC6A9;&#xC758; &#xC2E4;&#xD589;&#xACC4;&#xD68D;&#xC744; &#xC120;&#xD0DD;</li>
 </ul>
-<h4 id="최적화-과정"><a href="#최적화-과정" class="headerlink" title="최적화 과정"></a>최적화 과정</h4><ol>
-<li>Parser : SQL Parsing. SQL의 문법(Syntax) , 의미 (Semantic)을 확인</li>
-<li>Optimizer<ul>
-<li>Query Transformer : Parsing된 SQL을 표준 형태로 변환</li>
-<li>Estimator : 통계정보를 이용하여 선택도, 카디널리티 등으로 Execution Plan의 총 비용을 계산</li>
-<li>Plan Generator : 후보군이 될만한 Execution Plan을 생성</li>
-</ul>
-</li>
-<li>Row-Source Generator : 최종 선택된 Execution Plan을 SQL 엔진이 실행할 수 있는 코드 생성</li>
-<li>SQL Engine : SQL을 실행</li>
+<h4 id="&#xCD5C;&#xC801;&#xD654;-&#xACFC;&#xC815;">&#xCD5C;&#xC801;&#xD654; &#xACFC;&#xC815;</h4>
+<ol style="list-style-type: decimal">
+<li>Parser : SQL Parsing. SQL&#xC758; &#xBB38;&#xBC95;(Syntax) , &#xC758;&#xBBF8; (Semantic)&#xC744; &#xD655;&#xC778;</li>
+<li>Optimizer
+<ul>
+<li>Query Transformer : Parsing&#xB41C; SQL&#xC744; &#xD45C;&#xC900; &#xD615;&#xD0DC;&#xB85C; &#xBCC0;&#xD658;</li>
+<li>Estimator : &#xD1B5;&#xACC4;&#xC815;&#xBCF4;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC120;&#xD0DD;&#xB3C4;, &#xCE74;&#xB514;&#xB110;&#xB9AC;&#xD2F0; &#xB4F1;&#xC73C;&#xB85C; Execution Plan&#xC758; &#xCD1D; &#xBE44;&#xC6A9;&#xC744; &#xACC4;&#xC0B0;</li>
+<li>Plan Generator : &#xD6C4;&#xBCF4;&#xAD70;&#xC774; &#xB420;&#xB9CC;&#xD55C; Execution Plan&#xC744; &#xC0DD;&#xC131;</li>
+</ul></li>
+<li>Row-Source Generator : &#xCD5C;&#xC885; &#xC120;&#xD0DD;&#xB41C; Execution Plan&#xC744; SQL &#xC5D4;&#xC9C4;&#xC774; &#xC2E4;&#xD589;&#xD560; &#xC218; &#xC788;&#xB294; &#xCF54;&#xB4DC; &#xC0DD;&#xC131;</li>
+<li>SQL Engine : SQL&#xC744; &#xC2E4;&#xD589;</li>
 </ol>
 <ul>
-<li>최적화 목표<ol>
-<li>전체 처리속도 최적화 (all_rows) : 결과집합을 끝까지 읽는 것을 전제. 대부분 DBMS의 기본옵션</li>
-<li>최초 응답속도 최적화 (first_rows) : 결과중 일부만 읽다가 멈추는 것을 전제.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ ALL_ROWS */</span> ... ; <span class="comment">-- 전체 처리속도 최적화</span></div><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ FIRST_ROWS(10) */</span> ... ; <span class="comment">-- 처음 10개의 row만 읽고 멈추는 것을 전제로 최적화</span></div></pre></td></tr></table></figure>
-</li>
+<li>&#xCD5C;&#xC801;&#xD654; &#xBAA9;&#xD45C;</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>&#xC804;&#xCCB4; &#xCC98;&#xB9AC;&#xC18D;&#xB3C4; &#xCD5C;&#xC801;&#xD654; (all_rows) : &#xACB0;&#xACFC;&#xC9D1;&#xD569;&#xC744; &#xB05D;&#xAE4C;&#xC9C0; &#xC77D;&#xB294; &#xAC83;&#xC744; &#xC804;&#xC81C;. &#xB300;&#xBD80;&#xBD84; DBMS&#xC758; &#xAE30;&#xBCF8;&#xC635;&#xC158;</li>
+<li>&#xCD5C;&#xCD08; &#xC751;&#xB2F5;&#xC18D;&#xB3C4; &#xCD5C;&#xC801;&#xD654; (first_rows) : &#xACB0;&#xACFC;&#xC911; &#xC77C;&#xBD80;&#xB9CC; &#xC77D;&#xB2E4;&#xAC00; &#xBA48;&#xCD94;&#xB294; &#xAC83;&#xC744; &#xC804;&#xC81C;. <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ ALL_ROWS */</span> ... ; <span class="comment">-- &#xC804;&#xCCB4; &#xCC98;&#xB9AC;&#xC18D;&#xB3C4; &#xCD5C;&#xC801;&#xD654;</span></div><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ FIRST_ROWS(10) */</span> ... ; <span class="comment">-- &#xCC98;&#xC74C; 10&#xAC1C;&#xC758; row&#xB9CC; &#xC77D;&#xACE0; &#xBA48;&#xCD94;&#xB294; &#xAC83;&#xC744; &#xC804;&#xC81C;&#xB85C; &#xCD5C;&#xC801;&#xD654;</span></div></pre></td></tr></table></figure></li>
 </ol>
-</li>
-</ul>
-<h4 id="Optimizer-통계유형"><a href="#Optimizer-통계유형" class="headerlink" title="Optimizer 통계유형"></a>Optimizer 통계유형</h4><ul>
-<li>Table : 전체 레코드 수, 총 블록 수, 빈 블록 수, 한 행당 평균 크기 등</li>
-<li>Index : 높이, 리프 블록 수, 클러스터링 팩터, 인덱스 레코드 수 등</li>
-<li>Column : 값의 수, MIN, MAX, 밀도, NULL값 개수, 히스토그램 등</li>
-<li>System : CPU 속도, 평균 I/O 속도, 초당 I/O 처리량 등</li>
-</ul>
-<h4 id="통계정보를-이용한-비용계산-원리"><a href="#통계정보를-이용한-비용계산-원리" class="headerlink" title="통계정보를 이용한 비용계산 원리"></a>통계정보를 이용한 비용계산 원리</h4><ul>
-<li>선택도 (Selectivity) : 1 / Distinct Value 수</li>
-<li>카디널리티 (Cardinality) : 총 Row 수 X 선택도</li>
-<li>히스토그램 (Histogram) : Column의 분포도<ul>
-<li>도수분포 히스토그램 : 값별로 빈도수(Frequency Number)를 저장</li>
-<li>높이균형 히스토그램 : 각 버킷의 높이를 같게 하고 빈도 수가 많은 값(popular value)는 여러 버킷에 할당. 컬럼이 가진 값의 수가 아주 많을 경우 효과적</li>
-</ul>
-</li>
-<li>비용 (Cost)<ul>
-<li>I/O 비용 모델 : 예상되는 I/O 요청(Call) 횟수로 평가</li>
-<li>CPU 비용 모델 : I/O비용 모델 + 시간 개념을 더해 비용 산정</li>
-</ul>
-</li>
-</ul>
-<h4 id="Optimizer-Hint"><a href="#Optimizer-Hint" class="headerlink" title="Optimizer Hint"></a>Optimizer Hint</h4><ul>
-<li>Optimizer도 잘못된 판단을 할 수 있으므로, 개발자가 직접 실행방식을 원하는대로 유도하는 방법</li>
-<li>Hint가 무시되는 경우<ol>
-<li>문법적으로 틀린 경우</li>
-<li>의미적으로 틀린 경우 : RBO에서 CBO Hint (ex. first_rows_10), unnest 와 push_subq를 같이 쓴 경우</li>
-<li>잘못된 참조 사용 : 없는 Table, Index, Alias 지정</li>
-<li>논리적으로 불가능 : JOIN에 등치(=)조건 없이 Hash Join으로 유도, Nullable 칼럼에 대해 Index를 활용해 COUNT(*) 계산시도</li>
-</ol>
-</li>
-</ul>
+<h4 id="optimizer-&#xD1B5;&#xACC4;&#xC720;&#xD615;">Optimizer &#xD1B5;&#xACC4;&#xC720;&#xD615;</h4>
 <ul>
-<li>Hint 종류는 별도로 정리할 예정</li>
+<li>Table : &#xC804;&#xCCB4; &#xB808;&#xCF54;&#xB4DC; &#xC218;, &#xCD1D; &#xBE14;&#xB85D; &#xC218;, &#xBE48; &#xBE14;&#xB85D; &#xC218;, &#xD55C; &#xD589;&#xB2F9; &#xD3C9;&#xADE0; &#xD06C;&#xAE30; &#xB4F1;</li>
+<li>Index : &#xB192;&#xC774;, &#xB9AC;&#xD504; &#xBE14;&#xB85D; &#xC218;, &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xD329;&#xD130;, &#xC778;&#xB371;&#xC2A4; &#xB808;&#xCF54;&#xB4DC; &#xC218; &#xB4F1;</li>
+<li>Column : &#xAC12;&#xC758; &#xC218;, MIN, MAX, &#xBC00;&#xB3C4;, NULL&#xAC12; &#xAC1C;&#xC218;, &#xD788;&#xC2A4;&#xD1A0;&#xADF8;&#xB7A8; &#xB4F1;</li>
+<li>System : CPU &#xC18D;&#xB3C4;, &#xD3C9;&#xADE0; I/O &#xC18D;&#xB3C4;, &#xCD08;&#xB2F9; I/O &#xCC98;&#xB9AC;&#xB7C9; &#xB4F1;</li>
 </ul>
-<h3 id="3-2-Query-Transformation-쿼리-변환"><a href="#3-2-Query-Transformation-쿼리-변환" class="headerlink" title="3.2 Query Transformation (쿼리 변환)"></a>3.2 Query Transformation (쿼리 변환)</h3><ul>
-<li>Optimizer가 SQL을 분석하여 동일하지만 더 나은 성능의 SQL로 재작성</li>
-<li>Query Transformer가 담당</li>
-</ul>
-<h4 id="Query-변환-방식"><a href="#Query-변환-방식" class="headerlink" title="Query 변환 방식"></a>Query 변환 방식</h4><ul>
-<li>Heuristic Query 변환 : 결과만 보장된다면 무조건 수행. Rule-based 최적화 기법</li>
-<li>Cost-based Query 변환 :  변환된 Query의 비용이 더 낮을 때만 그것을 사용</li>
-</ul>
-<h4 id="Subquery-Unnesting"><a href="#Subquery-Unnesting" class="headerlink" title="Subquery Unnesting"></a>Subquery Unnesting</h4><ul>
-<li>Nested Subquery를 풀어서 Main-query와의 JOIN된 형태로 변환<ul>
-<li>Optimizer는 JOIN방식에 대해서 여러가지 최적화 기법을 시도 할 수 있다.</li>
-<li>만약 Nested Subquery를 그대로 두고 최적화를 해야 한다면 각각의 Subquery, Main-query별로 최적화를 해야하는데, 이렇게 부분의 최적화가 전체 수행 성능의 최적화를 보장하진 못한다.</li>
-<li>관련 Hint<ul>
-<li>UNNEST : Unnesting 하여 JOIN방식으로 유도</li>
-<li>NO_UNNEST : 그래도 둔 상태에서 Filter 방식으로 최적화 유도</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> DEPTNO <span class="keyword">FROM</span> DEPT); <span class="comment">-- Main (M) : Sub (1) 관계에서는 Unnesting이 대부분 유리</span></div><div class="line"><span class="comment">-- 변환</span></div><div class="line"><span class="keyword">SELECT</span> EMP.* <span class="keyword">FROM</span> DEPT, EMP <span class="keyword">WHERE</span> EMP.DEPT = DEPT.DEPTNO;</div></pre></td></tr></table></figure>
+<h4 id="&#xD1B5;&#xACC4;&#xC815;&#xBCF4;&#xB97C;-&#xC774;&#xC6A9;&#xD55C;-&#xBE44;&#xC6A9;&#xACC4;&#xC0B0;-&#xC6D0;&#xB9AC;">&#xD1B5;&#xACC4;&#xC815;&#xBCF4;&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xBE44;&#xC6A9;&#xACC4;&#xC0B0; &#xC6D0;&#xB9AC;</h4>
 <ul>
-<li>Subquery가 M쪽 집합이거나 Non-unique Index일 경우<ul>
-<li>예를 들어 <code>SELECT * FROM DEPT WHERE DEPTNO IN (SELECT DEPTNO FROM EMP)</code>와 같은 경우</li>
-<li>위 방법과 같이 Unnesting하면 결과가 달라지게 된다. (EMP에는 같은 DEPTNO가 많다.)</li>
-<li>이럴 경우 Optimizer는 2 가지 방법 중 하나를 선택한다.<ul>
-<li>Sort Unique : Subquery쪽 Table이 1쪽임을 호가신할 수 없는 경우 먼저 Sort Unique를 수행한 후에 JOIN</li>
-<li>Semi Join : Driving Table의 한 row가 Inner Table의 한 row와 JOIN에 성공하면 Outer Table의 다음 row를 진행.  Main-query 쪽 Table이 먼저 Driving될 경우</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="View-Merging"><a href="#View-Merging" class="headerlink" title="View Merging"></a>View Merging</h4><ul>
-<li>일반 View, Inline View를 JOIN으로 풀어서 변환</li>
-<li>사람 눈으로 볼땐 Query가 블록화 되어 보기 편하지만 Optimizer는 가급적 풀어서 JOIN형태로 변환한 뒤 최적화를 시도</li>
-<li>단순한 View는 Merging하여도 성능이 나빠지지 않는다.</li>
-<li>복잡한 연산을 포함하는 View는 Merging하면 성능이 나빠질 수 있다.</li>
-</ul>
+<li>&#xC120;&#xD0DD;&#xB3C4; (Selectivity) : 1 / Distinct Value &#xC218;</li>
+<li>&#xCE74;&#xB514;&#xB110;&#xB9AC;&#xD2F0; (Cardinality) : &#xCD1D; Row &#xC218; X &#xC120;&#xD0DD;&#xB3C4;</li>
+<li>&#xD788;&#xC2A4;&#xD1A0;&#xADF8;&#xB7A8; (Histogram) : Column&#xC758; &#xBD84;&#xD3EC;&#xB3C4;
 <ul>
-<li><p>Inline View Merging 예제</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> A.* </div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> JOB = <span class="string">'SALESMAN'</span>) A,</div><div class="line">       (<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> DEPT <span class="keyword">WHERE</span> LOC = <span class="string">'CHICAGO'</span>) B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO;</div><div class="line"></div><div class="line"><span class="comment">-- 변환</span></div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> *</div><div class="line">  <span class="keyword">FROM</span> EMP A, DEPT B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line">   <span class="keyword">AND</span> A.JOB = <span class="string">'SALESMAN'</span></div><div class="line">   <span class="keyword">AND</span> B.LOC = <span class="string">'CHICAGO'</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>View Merging 예제</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">CREATE OR REPLACE VIEW EMP_SALESMAN</div><div class="line">AS</div><div class="line">SELECT * FROM EMP WHERE JOB = 'SALESMAN';</div><div class="line"></div><div class="line">SELECE E.*</div><div class="line">  FROM EMP_SALESMAN E, DEPT D</div><div class="line"> WHERE D.DEPTNO = E.DEPTNO</div><div class="line">   AND E.SAL &gt;= 1500;</div><div class="line"></div><div class="line">-- 변환</div><div class="line"></div><div class="line">SELECT E.*</div><div class="line">  FROM EMP E, DEPT D</div><div class="line"> WHERE D.DEPTNO = E.DEPTNO</div><div class="line">   AND E.JOB = 'SALESMAN'</div><div class="line">   AND E.SAL &gt;= 1500;</div></pre></td></tr></table></figure>
-</li>
-<li><p>View Merging시 성능이 나빠질 수 있는 연산</p>
+<li>&#xB3C4;&#xC218;&#xBD84;&#xD3EC; &#xD788;&#xC2A4;&#xD1A0;&#xADF8;&#xB7A8; : &#xAC12;&#xBCC4;&#xB85C; &#xBE48;&#xB3C4;&#xC218;(Frequency Number)&#xB97C; &#xC800;&#xC7A5;</li>
+<li>&#xB192;&#xC774;&#xADE0;&#xD615; &#xD788;&#xC2A4;&#xD1A0;&#xADF8;&#xB7A8; : &#xAC01; &#xBC84;&#xD0B7;&#xC758; &#xB192;&#xC774;&#xB97C; &#xAC19;&#xAC8C; &#xD558;&#xACE0; &#xBE48;&#xB3C4; &#xC218;&#xAC00; &#xB9CE;&#xC740; &#xAC12;(popular value)&#xB294; &#xC5EC;&#xB7EC; &#xBC84;&#xD0B7;&#xC5D0; &#xD560;&#xB2F9;. &#xCEEC;&#xB7FC;&#xC774; &#xAC00;&#xC9C4; &#xAC12;&#xC758; &#xC218;&#xAC00; &#xC544;&#xC8FC; &#xB9CE;&#xC744; &#xACBD;&#xC6B0; &#xD6A8;&#xACFC;&#xC801;</li>
+</ul></li>
+<li>&#xBE44;&#xC6A9; (Cost)
 <ul>
-<li>GROUP BY 절</li>
-<li>DISTINCT 연산</li>
+<li>I/O &#xBE44;&#xC6A9; &#xBAA8;&#xB378; : &#xC608;&#xC0C1;&#xB418;&#xB294; I/O &#xC694;&#xCCAD;(Call) &#xD69F;&#xC218;&#xB85C; &#xD3C9;&#xAC00;</li>
+<li>CPU &#xBE44;&#xC6A9; &#xBAA8;&#xB378; : I/O&#xBE44;&#xC6A9; &#xBAA8;&#xB378; + &#xC2DC;&#xAC04; &#xAC1C;&#xB150;&#xC744; &#xB354;&#xD574; &#xBE44;&#xC6A9; &#xC0B0;&#xC815;</li>
+</ul></li>
 </ul>
-</li>
-<li><p>View Merging이 불가능한 연산</p>
+<h4 id="optimizer-hint">Optimizer Hint</h4>
 <ul>
-<li>집합(SET) : UNION, UNION ALL, INTERSECT, MINUS</li>
-<li>CONNECT BY 절</li>
-<li>ROWNUM pseudo 칼럼</li>
-<li>집계 함수 (AVG, CONUT, MAX, MIN, SUM, …)</li>
-<li>분석 함수 (Analytic Function)</li>
+<li>Optimizer&#xB3C4; &#xC798;&#xBABB;&#xB41C; &#xD310;&#xB2E8;&#xC744; &#xD560; &#xC218; &#xC788;&#xC73C;&#xBBC0;&#xB85C;, &#xAC1C;&#xBC1C;&#xC790;&#xAC00; &#xC9C1;&#xC811; &#xC2E4;&#xD589;&#xBC29;&#xC2DD;&#xC744; &#xC6D0;&#xD558;&#xB294;&#xB300;&#xB85C; &#xC720;&#xB3C4;&#xD558;&#xB294; &#xBC29;&#xBC95;</li>
+<li>Hint&#xAC00; &#xBB34;&#xC2DC;&#xB418;&#xB294; &#xACBD;&#xC6B0;
+<ol style="list-style-type: decimal">
+<li>&#xBB38;&#xBC95;&#xC801;&#xC73C;&#xB85C; &#xD2C0;&#xB9B0; &#xACBD;&#xC6B0;</li>
+<li>&#xC758;&#xBBF8;&#xC801;&#xC73C;&#xB85C; &#xD2C0;&#xB9B0; &#xACBD;&#xC6B0; : RBO&#xC5D0;&#xC11C; CBO Hint (ex. first_rows_10), unnest &#xC640; push_subq&#xB97C; &#xAC19;&#xC774; &#xC4F4; &#xACBD;&#xC6B0;</li>
+<li>&#xC798;&#xBABB;&#xB41C; &#xCC38;&#xC870; &#xC0AC;&#xC6A9; : &#xC5C6;&#xB294; Table, Index, Alias &#xC9C0;&#xC815;</li>
+<li>&#xB17C;&#xB9AC;&#xC801;&#xC73C;&#xB85C; &#xBD88;&#xAC00;&#xB2A5; : JOIN&#xC5D0; &#xB4F1;&#xCE58;(=)&#xC870;&#xAC74; &#xC5C6;&#xC774; Hash Join&#xC73C;&#xB85C; &#xC720;&#xB3C4;, Nullable &#xCE7C;&#xB7FC;&#xC5D0; &#xB300;&#xD574; Index&#xB97C; &#xD65C;&#xC6A9;&#xD574; COUNT(*) &#xACC4;&#xC0B0;&#xC2DC;&#xB3C4;</li>
+</ol></li>
+<li>Hint &#xC885;&#xB958;&#xB294; &#xBCC4;&#xB3C4;&#xB85C; &#xC815;&#xB9AC;&#xD560; &#xC608;&#xC815;</li>
 </ul>
-</li>
-<li><p>관련 Hint : MERGE, NO_MERGE</p>
-</li>
-</ul>
-<h4 id="Predicate-Pushing-조건절-푸싱"><a href="#Predicate-Pushing-조건절-푸싱" class="headerlink" title="Predicate Pushing (조건절 푸싱)"></a>Predicate Pushing (조건절 푸싱)</h4><ul>
-<li>조건절을 가능한 빨리 처리되도록 View 안으로 밀어넣어서 처리량을 최소화 하는 방식</li>
-</ul>
+<h3 id="query-transformation-&#xCFFC;&#xB9AC;-&#xBCC0;&#xD658;">3.2 Query Transformation (&#xCFFC;&#xB9AC; &#xBCC0;&#xD658;)</h3>
 <ul>
-<li><p>종류</p>
+<li>Optimizer&#xAC00; SQL&#xC744; &#xBD84;&#xC11D;&#xD558;&#xC5EC; &#xB3D9;&#xC77C;&#xD558;&#xC9C0;&#xB9CC; &#xB354; &#xB098;&#xC740; &#xC131;&#xB2A5;&#xC758; SQL&#xB85C; &#xC7AC;&#xC791;&#xC131;</li>
+<li>Query Transformer&#xAC00; &#xB2F4;&#xB2F9;</li>
+</ul>
+<h4 id="query-&#xBCC0;&#xD658;-&#xBC29;&#xC2DD;">Query &#xBCC0;&#xD658; &#xBC29;&#xC2DD;</h4>
 <ul>
-<li>Predicate Pushdown : Query 블록 밖에 있는 조건절은 안으로 밀어 넣음</li>
-<li>Predicate Pullup : Query 블록 안의 조건절을 밖으로 내오와서, 다른 Query 블록 안으로 Pushdown하는데 사용</li>
-<li>Join Predicate Pushdown : NL Join 수행시 Driving Table에서 읽은 값을 Inner View Query 쪽으로 밀어 넣음</li>
+<li>Heuristic Query &#xBCC0;&#xD658; : &#xACB0;&#xACFC;&#xB9CC; &#xBCF4;&#xC7A5;&#xB41C;&#xB2E4;&#xBA74; &#xBB34;&#xC870;&#xAC74; &#xC218;&#xD589;. Rule-based &#xCD5C;&#xC801;&#xD654; &#xAE30;&#xBC95;</li>
+<li>Cost-based Query &#xBCC0;&#xD658; : &#xBCC0;&#xD658;&#xB41C; Query&#xC758; &#xBE44;&#xC6A9;&#xC774; &#xB354; &#xB0AE;&#xC744; &#xB54C;&#xB9CC; &#xADF8;&#xAC83;&#xC744; &#xC0AC;&#xC6A9;</li>
 </ul>
-</li>
-<li><p>Predicate Pushdown</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DEPTNO, AVG_SAL</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL) AVG_SAL <span class="keyword">FROM</span> EMP <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO)</div><div class="line"> <span class="keyword">WHERE</span> DEPTNO = <span class="number">30</span>;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Inline View 안에서 DEPTNO에 대해서만 GROUP BY 하여 데이터량을 줄일 수 있다.</p>
+<h4 id="subquery-unnesting">Subquery Unnesting</h4>
 <ul>
-<li>Predicate Pullup<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> *</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL)           <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO = <span class="number">10</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E1,</div><div class="line">       (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">MIN</span>(SAL), <span class="keyword">MAX</span>(SAL) <span class="keyword">FROM</span> EMP                   <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E2</div><div class="line"> <span class="keyword">WHERE</span> E1.DEPTNO = E2.DEPTNO;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>E1의 조건을 Pullup하여 E2로 Pushdown하여 데이터량을 줄일 수 있다.</p>
+<li>Nested Subquery&#xB97C; &#xD480;&#xC5B4;&#xC11C; Main-query&#xC640;&#xC758; JOIN&#xB41C; &#xD615;&#xD0DC;&#xB85C; &#xBCC0;&#xD658;</li>
+<li>Optimizer&#xB294; JOIN&#xBC29;&#xC2DD;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xCD5C;&#xC801;&#xD654; &#xAE30;&#xBC95;&#xC744; &#xC2DC;&#xB3C4; &#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>&#xB9CC;&#xC57D; Nested Subquery&#xB97C; &#xADF8;&#xB300;&#xB85C; &#xB450;&#xACE0; &#xCD5C;&#xC801;&#xD654;&#xB97C; &#xD574;&#xC57C; &#xD55C;&#xB2E4;&#xBA74; &#xAC01;&#xAC01;&#xC758; Subquery, Main-query&#xBCC4;&#xB85C; &#xCD5C;&#xC801;&#xD654;&#xB97C; &#xD574;&#xC57C;&#xD558;&#xB294;&#xB370;, &#xC774;&#xB807;&#xAC8C; &#xBD80;&#xBD84;&#xC758; &#xCD5C;&#xC801;&#xD654;&#xAC00; &#xC804;&#xCCB4; &#xC218;&#xD589; &#xC131;&#xB2A5;&#xC758; &#xCD5C;&#xC801;&#xD654;&#xB97C; &#xBCF4;&#xC7A5;&#xD558;&#xC9C4; &#xBABB;&#xD55C;&#xB2E4;.</li>
+<li>&#xAD00;&#xB828; Hint
 <ul>
-<li>Join Predicate Pushdown<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> D.DEPTNO, D.DNAME, E.AVG_SAL</div><div class="line">  <span class="keyword">FROM</span> DEPT D,</div><div class="line">       (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL) AVG_SAL <span class="keyword">FROM</span> EMP <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E</div><div class="line"> <span class="keyword">WHERE</span> E.DEPTNO(+) = D.DEPTNO;</div></pre></td></tr></table></figure>
-</li>
+<li>UNNEST : Unnesting &#xD558;&#xC5EC; JOIN&#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC720;&#xB3C4;</li>
+<li>NO_UNNEST : &#xADF8;&#xB798;&#xB3C4; &#xB454; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; Filter &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xCD5C;&#xC801;&#xD654; &#xC720;&#xB3C4;</li>
+</ul></li>
 </ul>
-<p>D에 존재하는 DEPTNO에 대해서만 E에서 수행하여 데이터량을 줄일 수 있다.</p>
-<h3 id="조건절-이행-Transitive-Predicate-Generation-Transitive-Closure"><a href="#조건절-이행-Transitive-Predicate-Generation-Transitive-Closure" class="headerlink" title="조건절 이행(Transitive Predicate Generation, Transitive Closure)"></a>조건절 이행(Transitive Predicate Generation, Transitive Closure)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> DEPT D, EMP E</div><div class="line"> <span class="keyword">WHERE</span> E.JOB = <span class="string">'MANAGER'</span></div><div class="line">   <span class="keyword">AND</span> E.DEPTNO = <span class="number">10</span></div><div class="line">   <span class="keyword">AND</span> D.DEPTNO = E.DEPTNO</div></pre></td></tr></table></figure>
-<p>E의 <code>DEPTNO = 10</code> 조건을 D에서도 수행</p>
-<h3 id="불필요한-JOIN-제거-Join-Elimination"><a href="#불필요한-JOIN-제거-Join-Elimination" class="headerlink" title="불필요한 JOIN 제거 (Join Elimination)"></a>불필요한 JOIN 제거 (Join Elimination)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> E.* <span class="keyword">FROM</span> DEPT D, EMP E <span class="keyword">WHERE</span> D.DEPTNO = E.DEPTNO;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> DEPTNO <span class="keyword">FROM</span> DEPT); <span class="comment">-- Main (M) : Sub (1) &#xAD00;&#xACC4;&#xC5D0;&#xC11C;&#xB294; Unnesting&#xC774; &#xB300;&#xBD80;&#xBD84; &#xC720;&#xB9AC;</span></div><div class="line"><span class="comment">-- &#xBCC0;&#xD658;</span></div><div class="line"><span class="keyword">SELECT</span> EMP.* <span class="keyword">FROM</span> DEPT, EMP <span class="keyword">WHERE</span> EMP.DEPT = DEPT.DEPTNO;</div></pre></td></tr></table></figure>
 <ul>
-<li>D의 참조가 전혀 없으므로 제거</li>
-<li>단, PK, FK의 제약조건이 있어야만 가능.<ul>
-<li>PK가 없는 경우 Join Cardinality를 파악할 수 없으므로 결과가 달라 질 수 있음</li>
-<li>FK가 설정되어 있다하더라도 EMP의 DEPTNO가 Nullable이면 결과가 달라질 수 있음</li>
-</ul>
-</li>
-</ul>
-<h3 id="OR-조건을-UNION으로-변환"><a href="#OR-조건을-UNION으로-변환" class="headerlink" title="OR 조건을 UNION으로 변환"></a>OR 조건을 UNION으로 변환</h3><ul>
-<li>OR 조건을 그대로 둘 경우 Full Table Scan으로 처리되거나 각각의 Column별 Index를 활용하여 Bitmap 연산을 하는 Index Combine으로 작동할 경우가 있다.</li>
-<li>관련 Hint<ul>
-<li>USE_CONCAT : UNION ALL 표현 (OR-Expansion)을 유도</li>
-<li>NO_EXPAND : 나누지 말고 그대로 실행</li>
-</ul>
-</li>
-</ul>
-<h3 id="집합-연산을-JOIN-연산으로"><a href="#집합-연산을-JOIN-연산으로" class="headerlink" title="집합 연산을 JOIN 연산으로"></a>집합 연산을 JOIN 연산으로</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> JOB, MGR <span class="keyword">FROM</span> EMP</div><div class="line"><span class="keyword">MINUS</span></div><div class="line"><span class="keyword">SELECT</span> JOB, MGR <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO = <span class="number">10</span>;</div></pre></td></tr></table></figure>
-<p>위 문장을 실행하면 Table Full Scan 후 Sort Unique 하는 연산을 2번 수행 후에 결과집합을 구하게 된다.<br>이 경우 아래와 같은 형태로 Query 변환을 하여 실행을 한다.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> JOB, MGR <span class="keyword">FROM</span> EMP E</div><div class="line"> <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="string">'X'</span> <span class="keyword">FROM</span> EMP</div><div class="line">                    <span class="keyword">WHERE</span> DEPTBO = <span class="number">10</span></div><div class="line">                      <span class="keyword">AND</span> SYS_OP_MAP_NONNULL(JOB) = SYS_OP_MAP_NONNULL(E.JOB)</div><div class="line">                      <span class="keyword">AND</span> SYS_OP_MAP_NONNULL(MGR) = SYS_OP_MAP_NONNULL(E.MGR)</div></pre></td></tr></table></figure>
+<li>Subquery&#xAC00; M&#xCABD; &#xC9D1;&#xD569;&#xC774;&#xAC70;&#xB098; Non-unique Index&#xC77C; &#xACBD;&#xC6B0;</li>
+<li>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; <code>SELECT * FROM DEPT WHERE DEPTNO IN (SELECT DEPTNO FROM EMP)</code>&#xC640; &#xAC19;&#xC740; &#xACBD;&#xC6B0;</li>
+<li>&#xC704; &#xBC29;&#xBC95;&#xACFC; &#xAC19;&#xC774; Unnesting&#xD558;&#xBA74; &#xACB0;&#xACFC;&#xAC00; &#xB2EC;&#xB77C;&#xC9C0;&#xAC8C; &#xB41C;&#xB2E4;. (EMP&#xC5D0;&#xB294; &#xAC19;&#xC740; DEPTNO&#xAC00; &#xB9CE;&#xB2E4;.)</li>
+<li>&#xC774;&#xB7F4; &#xACBD;&#xC6B0; Optimizer&#xB294; 2 &#xAC00;&#xC9C0; &#xBC29;&#xBC95; &#xC911; &#xD558;&#xB098;&#xB97C; &#xC120;&#xD0DD;&#xD55C;&#xB2E4;.
 <ul>
-<li>SYS_OP_MAP_NONNULL() : null끼리 비교시 true값을 반환하도록 처리</li>
+<li>Sort Unique : Subquery&#xCABD; Table&#xC774; 1&#xCABD;&#xC784;&#xC744; &#xD638;&#xAC00;&#xC2E0;&#xD560; &#xC218; &#xC5C6;&#xB294; &#xACBD;&#xC6B0; &#xBA3C;&#xC800; Sort Unique&#xB97C; &#xC218;&#xD589;&#xD55C; &#xD6C4;&#xC5D0; JOIN</li>
+<li>Semi Join : Driving Table&#xC758; &#xD55C; row&#xAC00; Inner Table&#xC758; &#xD55C; row&#xC640; JOIN&#xC5D0; &#xC131;&#xACF5;&#xD558;&#xBA74; Outer Table&#xC758; &#xB2E4;&#xC74C; row&#xB97C; &#xC9C4;&#xD589;. Main-query &#xCABD; Table&#xC774; &#xBA3C;&#xC800; Driving&#xB420; &#xACBD;&#xC6B0;</li>
+</ul></li>
 </ul>
-<h3 id="JOIN-Column에-IS-NOT-NULL-조건-추가"><a href="#JOIN-Column에-IS-NOT-NULL-조건-추가" class="headerlink" title="JOIN Column에 IS NOT NULL 조건 추가"></a>JOIN Column에 IS NOT NULL 조건 추가</h3><ul>
-<li>어차피 NULL인 Column은 JOIN에 실패한다. 그러기 때문에 미리 NULL인 Column에 대해서 Filtering 하면 불필요한 액세스를 줄일 수 있다. (Oracle의 경우 해당 Column의 NULL값 비중이 5% 이상이면 내부적으로 추가해준다.)</li>
+<h4 id="view-merging">View Merging</h4>
+<ul>
+<li>&#xC77C;&#xBC18; View, Inline View&#xB97C; JOIN&#xC73C;&#xB85C; &#xD480;&#xC5B4;&#xC11C; &#xBCC0;&#xD658;</li>
+<li>&#xC0AC;&#xB78C; &#xB208;&#xC73C;&#xB85C; &#xBCFC;&#xB550; Query&#xAC00; &#xBE14;&#xB85D;&#xD654; &#xB418;&#xC5B4; &#xBCF4;&#xAE30; &#xD3B8;&#xD558;&#xC9C0;&#xB9CC; Optimizer&#xB294; &#xAC00;&#xAE09;&#xC801; &#xD480;&#xC5B4;&#xC11C; JOIN&#xD615;&#xD0DC;&#xB85C; &#xBCC0;&#xD658;&#xD55C; &#xB4A4; &#xCD5C;&#xC801;&#xD654;&#xB97C; &#xC2DC;&#xB3C4;</li>
+<li>&#xB2E8;&#xC21C;&#xD55C; View&#xB294; Merging&#xD558;&#xC5EC;&#xB3C4; &#xC131;&#xB2A5;&#xC774; &#xB098;&#xBE60;&#xC9C0;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+<li><p>&#xBCF5;&#xC7A1;&#xD55C; &#xC5F0;&#xC0B0;&#xC744; &#xD3EC;&#xD568;&#xD558;&#xB294; View&#xB294; Merging&#xD558;&#xBA74; &#xC131;&#xB2A5;&#xC774; &#xB098;&#xBE60;&#xC9C8; &#xC218; &#xC788;&#xB2E4;.</p></li>
+<li><p>Inline View Merging &#xC608;&#xC81C; <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> A.* </div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> JOB = <span class="string">&apos;SALESMAN&apos;</span>) A,</div><div class="line">       (<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> DEPT <span class="keyword">WHERE</span> LOC = <span class="string">&apos;CHICAGO&apos;</span>) B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO;</div><div class="line"></div><div class="line"><span class="comment">-- &#xBCC0;&#xD658;</span></div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> *</div><div class="line">  <span class="keyword">FROM</span> EMP A, DEPT B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line">   <span class="keyword">AND</span> A.JOB = <span class="string">&apos;SALESMAN&apos;</span></div><div class="line">   <span class="keyword">AND</span> B.LOC = <span class="string">&apos;CHICAGO&apos;</span>;</div></pre></td></tr></table></figure></p></li>
+<li><p>View Merging &#xC608;&#xC81C; <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">CREATE OR REPLACE VIEW EMP_SALESMAN</div><div class="line">AS</div><div class="line">SELECT * FROM EMP WHERE JOB = &apos;SALESMAN&apos;;</div><div class="line"></div><div class="line">SELECE E.*</div><div class="line">  FROM EMP_SALESMAN E, DEPT D</div><div class="line"> WHERE D.DEPTNO = E.DEPTNO</div><div class="line">   AND E.SAL &gt;= 1500;</div><div class="line"></div><div class="line">-- &#xBCC0;&#xD658;</div><div class="line"></div><div class="line">SELECT E.*</div><div class="line">  FROM EMP E, DEPT D</div><div class="line"> WHERE D.DEPTNO = E.DEPTNO</div><div class="line">   AND E.JOB = &apos;SALESMAN&apos;</div><div class="line">   AND E.SAL &gt;= 1500;</div></pre></td></tr></table></figure></p></li>
+<li>View Merging&#xC2DC; &#xC131;&#xB2A5;&#xC774; &#xB098;&#xBE60;&#xC9C8; &#xC218; &#xC788;&#xB294; &#xC5F0;&#xC0B0;</li>
+<li>GROUP BY &#xC808;</li>
+<li><p>DISTINCT &#xC5F0;&#xC0B0;</p></li>
+<li>View Merging&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD55C; &#xC5F0;&#xC0B0;</li>
+<li>&#xC9D1;&#xD569;(SET) : UNION, UNION ALL, INTERSECT, MINUS</li>
+<li>CONNECT BY &#xC808;</li>
+<li>ROWNUM pseudo &#xCE7C;&#xB7FC;</li>
+<li>&#xC9D1;&#xACC4; &#xD568;&#xC218; (AVG, CONUT, MAX, MIN, SUM, &#x2026;)</li>
+<li><p>&#xBD84;&#xC11D; &#xD568;&#xC218; (Analytic Function)</p></li>
+<li><p>&#xAD00;&#xB828; Hint : MERGE, NO_MERGE</p></li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> EMPNO, DNAME</div><div class="line">  <span class="keyword">FROM</span> EMP E, DEPT D</div><div class="line"> <span class="keyword">WHERE</span> D.DEPTNO = E.DEPTNO</div><div class="line">   <span class="keyword">AND</span> SAL &lt;= <span class="number">2900</span></div><div class="line">   <span class="keyword">AND</span> E.DEPTNO <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>  <span class="comment">-- Optimizer가 추가</span></div><div class="line">   <span class="keyword">AND</span> D.DEPTNO <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>  <span class="comment">-- Optimizer가 추가</span></div></pre></td></tr></table></figure>
-<h3 id="Filter-조건-추가"><a href="#Filter-조건-추가" class="headerlink" title="Filter 조건 추가"></a>Filter 조건 추가</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> SAL BETERRN :<span class="keyword">MIN</span> <span class="keyword">AND</span> :<span class="keyword">MAX</span></div></pre></td></tr></table></figure>
-<p>위 Query에서 :MIN 이 :MAX보다 크면 당연히 결과는 공집합이다.<br>이 경우 :MIN 값이 :MAX보다 작거나 같다는 Filter조건을 임의로 추가해서 실행해준다.</p>
-<h3 id="WHERE-비교-순서"><a href="#WHERE-비교-순서" class="headerlink" title="WHERE 비교 순서"></a>WHERE 비교 순서</h3><p>WHERE 절에 비교할 컬럼이 많은 경우 그 중 작업량을 많이 줄여줄거라 판단한 조건부터 먼저 비교한다.</p>
+<h4 id="predicate-pushing-&#xC870;&#xAC74;&#xC808;-&#xD478;&#xC2F1;">Predicate Pushing (&#xC870;&#xAC74;&#xC808; &#xD478;&#xC2F1;)</h4>
+<ul>
+<li><p>&#xC870;&#xAC74;&#xC808;&#xC744; &#xAC00;&#xB2A5;&#xD55C; &#xBE68;&#xB9AC; &#xCC98;&#xB9AC;&#xB418;&#xB3C4;&#xB85D; View &#xC548;&#xC73C;&#xB85C; &#xBC00;&#xC5B4;&#xB123;&#xC5B4;&#xC11C; &#xCC98;&#xB9AC;&#xB7C9;&#xC744; &#xCD5C;&#xC18C;&#xD654; &#xD558;&#xB294; &#xBC29;&#xC2DD;</p></li>
+<li>&#xC885;&#xB958;</li>
+<li>Predicate Pushdown : Query &#xBE14;&#xB85D; &#xBC16;&#xC5D0; &#xC788;&#xB294; &#xC870;&#xAC74;&#xC808;&#xC740; &#xC548;&#xC73C;&#xB85C; &#xBC00;&#xC5B4; &#xB123;&#xC74C;</li>
+<li>Predicate Pullup : Query &#xBE14;&#xB85D; &#xC548;&#xC758; &#xC870;&#xAC74;&#xC808;&#xC744; &#xBC16;&#xC73C;&#xB85C; &#xB0B4;&#xC624;&#xC640;&#xC11C;, &#xB2E4;&#xB978; Query &#xBE14;&#xB85D; &#xC548;&#xC73C;&#xB85C; Pushdown&#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;</li>
+<li><p>Join Predicate Pushdown : NL Join &#xC218;&#xD589;&#xC2DC; Driving Table&#xC5D0;&#xC11C; &#xC77D;&#xC740; &#xAC12;&#xC744; Inner View Query &#xCABD;&#xC73C;&#xB85C; &#xBC00;&#xC5B4; &#xB123;&#xC74C;</p></li>
+<li><p>Predicate Pushdown <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DEPTNO, AVG_SAL</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL) AVG_SAL <span class="keyword">FROM</span> EMP <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO)</div><div class="line"> <span class="keyword">WHERE</span> DEPTNO = <span class="number">30</span>;</div></pre></td></tr></table></figure></p></li>
+</ul>
+<p>Inline View &#xC548;&#xC5D0;&#xC11C; DEPTNO&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; GROUP BY &#xD558;&#xC5EC; &#xB370;&#xC774;&#xD130;&#xB7C9;&#xC744; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</p>
+<ul>
+<li>Predicate Pullup <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> *</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL)           <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO = <span class="number">10</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E1,</div><div class="line">       (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">MIN</span>(SAL), <span class="keyword">MAX</span>(SAL) <span class="keyword">FROM</span> EMP                   <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E2</div><div class="line"> <span class="keyword">WHERE</span> E1.DEPTNO = E2.DEPTNO;</div></pre></td></tr></table></figure></li>
+</ul>
+<p>E1&#xC758; &#xC870;&#xAC74;&#xC744; Pullup&#xD558;&#xC5EC; E2&#xB85C; Pushdown&#xD558;&#xC5EC; &#xB370;&#xC774;&#xD130;&#xB7C9;&#xC744; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</p>
+<ul>
+<li>Join Predicate Pushdown <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> D.DEPTNO, D.DNAME, E.AVG_SAL</div><div class="line">  <span class="keyword">FROM</span> DEPT D,</div><div class="line">       (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL) AVG_SAL <span class="keyword">FROM</span> EMP <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E</div><div class="line"> <span class="keyword">WHERE</span> E.DEPTNO(+) = D.DEPTNO;</div></pre></td></tr></table></figure></li>
+</ul>
+<p>D&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; DEPTNO&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; E&#xC5D0;&#xC11C; &#xC218;&#xD589;&#xD558;&#xC5EC; &#xB370;&#xC774;&#xD130;&#xB7C9;&#xC744; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</p>
+<h3 id="&#xC870;&#xAC74;&#xC808;-&#xC774;&#xD589;transitive-predicate-generation-transitive-closure">&#xC870;&#xAC74;&#xC808; &#xC774;&#xD589;(Transitive Predicate Generation, Transitive Closure)</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> DEPT D, EMP E</div><div class="line"> <span class="keyword">WHERE</span> E.JOB = <span class="string">&apos;MANAGER&apos;</span></div><div class="line">   <span class="keyword">AND</span> E.DEPTNO = <span class="number">10</span></div><div class="line">   <span class="keyword">AND</span> D.DEPTNO = E.DEPTNO</div></pre></td></tr></table></figure>
+<p>E&#xC758; <code>DEPTNO = 10</code> &#xC870;&#xAC74;&#xC744; D&#xC5D0;&#xC11C;&#xB3C4; &#xC218;&#xD589;</p>
+<h3 id="&#xBD88;&#xD544;&#xC694;&#xD55C;-join-&#xC81C;&#xAC70;-join-elimination">&#xBD88;&#xD544;&#xC694;&#xD55C; JOIN &#xC81C;&#xAC70; (Join Elimination)</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> E.* <span class="keyword">FROM</span> DEPT D, EMP E <span class="keyword">WHERE</span> D.DEPTNO = E.DEPTNO;</div></pre></td></tr></table></figure>
+<ul>
+<li>D&#xC758; &#xCC38;&#xC870;&#xAC00; &#xC804;&#xD600; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; &#xC81C;&#xAC70;</li>
+<li>&#xB2E8;, PK, FK&#xC758; &#xC81C;&#xC57D;&#xC870;&#xAC74;&#xC774; &#xC788;&#xC5B4;&#xC57C;&#xB9CC; &#xAC00;&#xB2A5;.</li>
+<li>PK&#xAC00; &#xC5C6;&#xB294; &#xACBD;&#xC6B0; Join Cardinality&#xB97C; &#xD30C;&#xC545;&#xD560; &#xC218; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; &#xACB0;&#xACFC;&#xAC00; &#xB2EC;&#xB77C; &#xC9C8; &#xC218; &#xC788;&#xC74C;</li>
+<li>FK&#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xB2E4;&#xD558;&#xB354;&#xB77C;&#xB3C4; EMP&#xC758; DEPTNO&#xAC00; Nullable&#xC774;&#xBA74; &#xACB0;&#xACFC;&#xAC00; &#xB2EC;&#xB77C;&#xC9C8; &#xC218; &#xC788;&#xC74C;</li>
+</ul>
+<h3 id="or-&#xC870;&#xAC74;&#xC744;-union&#xC73C;&#xB85C;-&#xBCC0;&#xD658;">OR &#xC870;&#xAC74;&#xC744; UNION&#xC73C;&#xB85C; &#xBCC0;&#xD658;</h3>
+<ul>
+<li>OR &#xC870;&#xAC74;&#xC744; &#xADF8;&#xB300;&#xB85C; &#xB458; &#xACBD;&#xC6B0; Full Table Scan&#xC73C;&#xB85C; &#xCC98;&#xB9AC;&#xB418;&#xAC70;&#xB098; &#xAC01;&#xAC01;&#xC758; Column&#xBCC4; Index&#xB97C; &#xD65C;&#xC6A9;&#xD558;&#xC5EC; Bitmap &#xC5F0;&#xC0B0;&#xC744; &#xD558;&#xB294; Index Combine&#xC73C;&#xB85C; &#xC791;&#xB3D9;&#xD560; &#xACBD;&#xC6B0;&#xAC00; &#xC788;&#xB2E4;.</li>
+<li>&#xAD00;&#xB828; Hint</li>
+<li>USE_CONCAT : UNION ALL &#xD45C;&#xD604; (OR-Expansion)&#xC744; &#xC720;&#xB3C4;</li>
+<li>NO_EXPAND : &#xB098;&#xB204;&#xC9C0; &#xB9D0;&#xACE0; &#xADF8;&#xB300;&#xB85C; &#xC2E4;&#xD589;</li>
+</ul>
+<h3 id="&#xC9D1;&#xD569;-&#xC5F0;&#xC0B0;&#xC744;-join-&#xC5F0;&#xC0B0;&#xC73C;&#xB85C;">&#xC9D1;&#xD569; &#xC5F0;&#xC0B0;&#xC744; JOIN &#xC5F0;&#xC0B0;&#xC73C;&#xB85C;</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> JOB, MGR <span class="keyword">FROM</span> EMP</div><div class="line"><span class="keyword">MINUS</span></div><div class="line"><span class="keyword">SELECT</span> JOB, MGR <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO = <span class="number">10</span>;</div></pre></td></tr></table></figure>
+<p>&#xC704; &#xBB38;&#xC7A5;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xBA74; Table Full Scan &#xD6C4; Sort Unique &#xD558;&#xB294; &#xC5F0;&#xC0B0;&#xC744; 2&#xBC88; &#xC218;&#xD589; &#xD6C4;&#xC5D0; &#xACB0;&#xACFC;&#xC9D1;&#xD569;&#xC744; &#xAD6C;&#xD558;&#xAC8C; &#xB41C;&#xB2E4;.<br>
+&#xC774; &#xACBD;&#xC6B0; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xD615;&#xD0DC;&#xB85C; Query &#xBCC0;&#xD658;&#xC744; &#xD558;&#xC5EC; &#xC2E4;&#xD589;&#xC744; &#xD55C;&#xB2E4;.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> JOB, MGR <span class="keyword">FROM</span> EMP E</div><div class="line"> <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="string">&apos;X&apos;</span> <span class="keyword">FROM</span> EMP</div><div class="line">                    <span class="keyword">WHERE</span> DEPTBO = <span class="number">10</span></div><div class="line">                      <span class="keyword">AND</span> SYS_OP_MAP_NONNULL(JOB) = SYS_OP_MAP_NONNULL(E.JOB)</div><div class="line">                      <span class="keyword">AND</span> SYS_OP_MAP_NONNULL(MGR) = SYS_OP_MAP_NONNULL(E.MGR)</div></pre></td></tr></table></figure>
+<ul>
+<li>SYS_OP_MAP_NONNULL() : null&#xB07C;&#xB9AC; &#xBE44;&#xAD50;&#xC2DC; true&#xAC12;&#xC744; &#xBC18;&#xD658;&#xD558;&#xB3C4;&#xB85D; &#xCC98;&#xB9AC;</li>
+</ul>
+<h3 id="join-column&#xC5D0;-is-not-null-&#xC870;&#xAC74;-&#xCD94;&#xAC00;">JOIN Column&#xC5D0; IS NOT NULL &#xC870;&#xAC74; &#xCD94;&#xAC00;</h3>
+<ul>
+<li>&#xC5B4;&#xCC28;&#xD53C; NULL&#xC778; Column&#xC740; JOIN&#xC5D0; &#xC2E4;&#xD328;&#xD55C;&#xB2E4;. &#xADF8;&#xB7EC;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBBF8;&#xB9AC; NULL&#xC778; Column&#xC5D0; &#xB300;&#xD574;&#xC11C; Filtering &#xD558;&#xBA74; &#xBD88;&#xD544;&#xC694;&#xD55C; &#xC561;&#xC138;&#xC2A4;&#xB97C; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;. (Oracle&#xC758; &#xACBD;&#xC6B0; &#xD574;&#xB2F9; Column&#xC758; NULL&#xAC12; &#xBE44;&#xC911;&#xC774; 5% &#xC774;&#xC0C1;&#xC774;&#xBA74; &#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; &#xCD94;&#xAC00;&#xD574;&#xC900;&#xB2E4;.)</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> EMPNO, DNAME</div><div class="line">  <span class="keyword">FROM</span> EMP E, DEPT D</div><div class="line"> <span class="keyword">WHERE</span> D.DEPTNO = E.DEPTNO</div><div class="line">   <span class="keyword">AND</span> SAL &lt;= <span class="number">2900</span></div><div class="line">   <span class="keyword">AND</span> E.DEPTNO <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>  <span class="comment">-- Optimizer&#xAC00; &#xCD94;&#xAC00;</span></div><div class="line">   <span class="keyword">AND</span> D.DEPTNO <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>  <span class="comment">-- Optimizer&#xAC00; &#xCD94;&#xAC00;</span></div></pre></td></tr></table></figure>
+<h3 id="filter-&#xC870;&#xAC74;-&#xCD94;&#xAC00;">Filter &#xC870;&#xAC74; &#xCD94;&#xAC00;</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> SAL BETERRN :<span class="keyword">MIN</span> <span class="keyword">AND</span> :<span class="keyword">MAX</span></div></pre></td></tr></table></figure>
+<p>&#xC704; Query&#xC5D0;&#xC11C; :MIN &#xC774; :MAX&#xBCF4;&#xB2E4; &#xD06C;&#xBA74; &#xB2F9;&#xC5F0;&#xD788; &#xACB0;&#xACFC;&#xB294; &#xACF5;&#xC9D1;&#xD569;&#xC774;&#xB2E4;.<br>
+&#xC774; &#xACBD;&#xC6B0; :MIN &#xAC12;&#xC774; :MAX&#xBCF4;&#xB2E4; &#xC791;&#xAC70;&#xB098; &#xAC19;&#xB2E4;&#xB294; Filter&#xC870;&#xAC74;&#xC744; &#xC784;&#xC758;&#xB85C; &#xCD94;&#xAC00;&#xD574;&#xC11C; &#xC2E4;&#xD589;&#xD574;&#xC900;&#xB2E4;.</p>
+<h3 id="where-&#xBE44;&#xAD50;-&#xC21C;&#xC11C;">WHERE &#xBE44;&#xAD50; &#xC21C;&#xC11C;</h3>
+<p>WHERE &#xC808;&#xC5D0; &#xBE44;&#xAD50;&#xD560; &#xCEEC;&#xB7FC;&#xC774; &#xB9CE;&#xC740; &#xACBD;&#xC6B0; &#xADF8; &#xC911; &#xC791;&#xC5C5;&#xB7C9;&#xC744; &#xB9CE;&#xC774; &#xC904;&#xC5EC;&#xC904;&#xAC70;&#xB77C; &#xD310;&#xB2E8;&#xD55C; &#xC870;&#xAC74;&#xBD80;&#xD130; &#xBA3C;&#xC800; &#xBE44;&#xAD50;&#xD55C;&#xB2E4;.</p>
 
         </div>
         <footer class="article-footer">
@@ -350,7 +339,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/04/03.04.optimizer/" data-id="cj1y8qfzb000q1z7bpymtfmyt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/04/03.04.optimizer/" data-id="cj243030b000skc7bduk418wl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -479,20 +468,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/02/02/03.03.lock/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/02/05/03.05.index/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            SQLP 3-2 Lock과 Transaction 동시성 제어
+            SQLP 3-4-1 Index
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2016/02/05/03.05.index/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/02/02/03.03.lock/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">SQLP 3-4-1 Index</p>
+        <p class="article-nav-title">SQLP 3-2 Lock과 Transaction 동시성 제어</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -506,7 +495,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -516,7 +505,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 12.22px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
         </div>
     </div>
 
@@ -598,6 +587,6 @@
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div>
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

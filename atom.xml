@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Dev Star SJ</title>
+  <subtitle>DevStarSJ</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://DevStarSJ.github.io/"/>
+  <updated>2017-04-23T08:21:19.000Z</updated>
+  <id>http://DevStarSJ.github.io/</id>
+  
+  <author>
+    <name>Yun Seok-joon</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AWS Lambda + API Gateway Binary Response 예제</title>
+    <link href="http://DevStarSJ.github.io/2017/04/08/AWS-Lambda-BinaryResponse/"/>
+    <id>http://DevStarSJ.github.io/2017/04/08/AWS-Lambda-BinaryResponse/</id>
+    <published>2017-04-07T15:00:00.000Z</published>
+    <updated>2017-04-23T08:21:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;aws-lambda-api-gateway-binary-response-&amp;#xC608;&amp;#xC81C;&quot;&gt;AWS Lambda + API Gateway Binary Response &amp;#xC608;&amp;#xC81C;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;A
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</title>
+    <link href="http://DevStarSJ.github.io/2017/03/26/Lambda.Chatbot.01/"/>
+    <id>http://DevStarSJ.github.io/2017/03/26/Lambda.Chatbot.01/</id>
+    <published>2017-03-25T15:00:00.000Z</published>
+    <updated>2017-04-23T09:23:32.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;aws-lambda&amp;#xC5D0;-python-slack-chatbot&amp;#xC744;-&amp;#xD1B5;&amp;#xD574;&amp;#xC11C;-&amp;#xBBF8;&amp;#xC138;&amp;#xBA3C;&amp;#xC9C0;-&amp;#xB300;&amp;#xAE30;&amp;#xC815;&amp;#
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lambda에서 Lambda를 호출하는 방법</title>
+    <link href="http://DevStarSJ.github.io/2017/03/19/Lambda.invoke.Lambda/"/>
+    <id>http://DevStarSJ.github.io/2017/03/19/Lambda.invoke.Lambda/</id>
+    <published>2017-03-18T15:00:00.000Z</published>
+    <updated>2017-04-23T09:24:55.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Lambda에서-Lambda를-호출하는-방법&quot;&gt;&lt;a href=&quot;#Lambda에서-Lambda를-호출하는-방법&quot; class=&quot;headerlink&quot; title=&quot;Lambda에서 Lambda를 호출하는 방법&quot;&gt;&lt;/a&gt;Lambda에서 Lambd
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Lambda 사용에 관련된 Tip</title>
+    <link href="http://DevStarSJ.github.io/2017/03/11/Lambda.Tips.01/"/>
+    <id>http://DevStarSJ.github.io/2017/03/11/Lambda.Tips.01/</id>
+    <published>2017-03-10T15:00:00.000Z</published>
+    <updated>2017-04-23T09:24:20.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;aws-lambda-&amp;#xC0AC;&amp;#xC6A9;&amp;#xC5D0;-&amp;#xAD00;&amp;#xB828;&amp;#xB41C;-tip&quot;&gt;AWS Lambda &amp;#xC0AC;&amp;#xC6A9;&amp;#xC5D0; &amp;#xAD00;&amp;#xB828;&amp;#xB41C; Tip&lt;/
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Monolith to Serverless using AWS Lambda (3)</title>
+    <link href="http://DevStarSJ.github.io/2017/02/26/MonolithToServerless.03/"/>
+    <id>http://DevStarSJ.github.io/2017/02/26/MonolithToServerless.03/</id>
+    <published>2017-02-25T15:00:00.000Z</published>
+    <updated>2017-04-23T09:32:51.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;monolith-to-serverless-using-aws-lambda&quot;&gt;Monolith to Serverless using AWS Lambda&lt;/h1&gt;
+&lt;h2 id=&quot;&amp;#xAE30;&amp;#xC874;-&amp;#xBAA8;&amp;#xB178;&amp;#xB9
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="Serverless" scheme="http://DevStarSJ.github.io/tags/Serverless/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Monolith to Serverless using AWS Lambda (2)</title>
+    <link href="http://DevStarSJ.github.io/2017/02/25/MonolithToServerless.02/"/>
+    <id>http://DevStarSJ.github.io/2017/02/25/MonolithToServerless.02/</id>
+    <published>2017-02-24T15:00:00.000Z</published>
+    <updated>2017-04-23T09:28:21.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;monolith-to-serverless-using-aws-lambda&quot;&gt;Monolith to Serverless using AWS Lambda&lt;/h1&gt;
+&lt;h2 id=&quot;&amp;#xAE30;&amp;#xC874;-&amp;#xBAA8;&amp;#xB178;&amp;#xB9
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="Serverless" scheme="http://DevStarSJ.github.io/tags/Serverless/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Monolith to Serverless using AWS Lambda (1)</title>
+    <link href="http://DevStarSJ.github.io/2017/02/23/MonolithToServerless.01/"/>
+    <id>http://DevStarSJ.github.io/2017/02/23/MonolithToServerless.01/</id>
+    <published>2017-02-22T15:00:00.000Z</published>
+    <updated>2017-04-23T09:28:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;monolith-to-serverless-using-aws-lambda&quot;&gt;Monolith to Serverless using AWS Lambda&lt;/h1&gt;
+&lt;h2 id=&quot;&amp;#xAE30;&amp;#xC874;-&amp;#xBAA8;&amp;#xB178;&amp;#xB9
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="Serverless" scheme="http://DevStarSJ.github.io/tags/Serverless/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Get Request Body in Action Method</title>
+    <link href="http://DevStarSJ.github.io/2017/01/23/CSharp.Aspnet.RequestBodyLog/"/>
+    <id>http://DevStarSJ.github.io/2017/01/23/CSharp.Aspnet.RequestBodyLog/</id>
+    <published>2017-01-22T15:00:00.000Z</published>
+    <updated>2017-04-23T10:21:54.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;get-request-body-in-action-method&quot;&gt;Get Request Body in Action Method&lt;/h1&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt
+    
+    </summary>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/"/>
+    
+      <category term="ASP.NET" scheme="http://DevStarSJ.github.io/categories/C/ASP-NET/"/>
+    
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
+    
+      <category term="ASP.NET" scheme="http://DevStarSJ.github.io/tags/ASP-NET/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Lambda에 C# Handler 만들기</title>
+    <link href="http://DevStarSJ.github.io/2016/12/03/Lambda.CSharp/"/>
+    <id>http://DevStarSJ.github.io/2016/12/03/Lambda.CSharp/</id>
+    <published>2016-12-02T15:00:00.000Z</published>
+    <updated>2017-04-23T08:21:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;aws-lambda&amp;#xC5D0;-c-handler-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&quot;&gt;AWS Lambda&amp;#xC5D0; C# Handler &amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;AWS La
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lambda Node.JS Packaging</title>
+    <link href="http://DevStarSJ.github.io/2016/11/27/Lambda.Packaging.Node/"/>
+    <id>http://DevStarSJ.github.io/2016/11/27/Lambda.Packaging.Node/</id>
+    <published>2016-11-27T06:54:51.000Z</published>
+    <updated>2017-04-23T08:21:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;lambda-node.js-packaging&quot;&gt;Lambda Node.JS Packaging&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Labmda&lt;/strong&gt;&amp;#xC5D0; &lt;strong&gt;Node.JS&lt;/strong&gt;&amp;#xB85C; &amp;#xAD6C;
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lambda Python Packaging</title>
+    <link href="http://DevStarSJ.github.io/2016/11/24/Lambda.Packaging.Python/"/>
+    <id>http://DevStarSJ.github.io/2016/11/24/Lambda.Packaging.Python/</id>
+    <published>2016-11-24T07:54:51.000Z</published>
+    <updated>2017-04-23T08:21:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;lambda-python-packaging&quot;&gt;Lambda Python Packaging&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;AWS Lambda&lt;/strong&gt;&amp;#xC5D0; &amp;#xB300;&amp;#xD574; &amp;#xB2E4;&amp;#xB8E8;&amp;#xB29
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Lambda에 Python Handler 만들기</title>
+    <link href="http://DevStarSJ.github.io/2016/11/24/Lambda.Python/"/>
+    <id>http://DevStarSJ.github.io/2016/11/24/Lambda.Python/</id>
+    <published>2016-11-24T06:54:51.000Z</published>
+    <updated>2017-04-23T08:21:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;aws-lambda&amp;#xC5D0;-python-handler-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&quot;&gt;AWS Lambda&amp;#xC5D0; Python Handler &amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&lt;/h1&gt;
+&lt;p&gt;AWS L
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기 (3) - Proxy</title>
+    <link href="http://DevStarSJ.github.io/2016/11/22/Lambda+APIGateway.03.Proxy/"/>
+    <id>http://DevStarSJ.github.io/2016/11/22/Lambda+APIGateway.03.Proxy/</id>
+    <published>2016-11-22T07:54:51.000Z</published>
+    <updated>2017-04-23T08:21:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;aws-lambda&amp;#xC640;-api-gateway&amp;#xB97C;-&amp;#xC774;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C;-serverless-web-api-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;-3&quot;&gt;AWS Lambda&amp;#x
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기 (2) - Route</title>
+    <link href="http://DevStarSJ.github.io/2016/11/22/Lambda+APIGateway.02.Route/"/>
+    <id>http://DevStarSJ.github.io/2016/11/22/Lambda+APIGateway.02.Route/</id>
+    <published>2016-11-22T06:54:51.000Z</published>
+    <updated>2017-04-23T08:21:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;aws-lambda&amp;#xC640;-api-gateway&amp;#xB97C;-&amp;#xC774;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C;-serverless-web-api-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;-2&quot;&gt;AWS Lambda&amp;#x
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기</title>
+    <link href="http://DevStarSJ.github.io/2016/11/22/Lambda+APIGateWay.01/"/>
+    <id>http://DevStarSJ.github.io/2016/11/22/Lambda+APIGateWay.01/</id>
+    <published>2016-11-22T05:54:51.000Z</published>
+    <updated>2017-04-23T08:21:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;aws-lambda&amp;#xC640;-api-gateway&amp;#xB97C;-&amp;#xC774;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C;-serverless-web-api-&amp;#xB9CC;&amp;#xB4E4;&amp;#xAE30;&quot;&gt;AWS Lambda&amp;#xC6
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Squel.js</title>
+    <link href="http://DevStarSJ.github.io/2016/11/08/JavaScript.Squel/"/>
+    <id>http://DevStarSJ.github.io/2016/11/08/JavaScript.Squel/</id>
+    <published>2016-11-07T15:00:00.000Z</published>
+    <updated>2017-04-23T09:39:53.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;squel.js&quot;&gt;Squel.js&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;JavaScript&lt;/strong&gt; &amp;#xC758; &lt;code&gt;SQL query string&lt;/code&gt;&amp;#xC758; &amp;#xC791;&amp;#xC131;&amp;#xC744; &amp;#xB3
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://DevStarSJ.github.io/categories/JavaScript/"/>
+    
+      <category term="Node.JS" scheme="http://DevStarSJ.github.io/categories/JavaScript/Node-JS/"/>
+    
+    
+      <category term="JavaScript" scheme="http://DevStarSJ.github.io/tags/JavaScript/"/>
+    
+      <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Client WebSocket Example without ASP.NET</title>
+    <link href="http://DevStarSJ.github.io/2016/08/31/CSharp.ClientWebSocketExample/"/>
+    <id>http://DevStarSJ.github.io/2016/08/31/CSharp.ClientWebSocketExample/</id>
+    <published>2016-08-30T17:00:00.000Z</published>
+    <updated>2017-04-23T10:51:07.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;client-websocket-example-without-asp.net&quot;&gt;Client WebSocket Example without ASP.NET&lt;/h1&gt;
+&lt;p&gt;ASP.NET&amp;#xC744; &amp;#xC0AC;&amp;#xC6A9;&amp;#xD558;&amp;
+    
+    </summary>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/"/>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/C/"/>
+    
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chapter 7 Exceptions, Memory, and Performance</title>
+    <link href="http://DevStarSJ.github.io/2016/08/16/TypeScript.07.Exceptions,%20Memory,%20and%20Performance/"/>
+    <id>http://DevStarSJ.github.io/2016/08/16/TypeScript.07.Exceptions, Memory, and Performance/</id>
+    <published>2016-08-15T15:00:00.000Z</published>
+    <updated>2017-04-23T09:46:06.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;chapter-7-exceptions-memory-and-performance&quot;&gt;Chapter 7 Exceptions, Memory, and Performance&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;#xC608;&amp;#xC678;(Exception)
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://DevStarSJ.github.io/categories/JavaScript/"/>
+    
+      <category term="TypeScript" scheme="http://DevStarSJ.github.io/categories/JavaScript/TypeScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://DevStarSJ.github.io/tags/JavaScript/"/>
+    
+      <category term="TypeScript" scheme="http://DevStarSJ.github.io/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C# Attribute 상속 후 override 할 경우 부모 값도 잘 가져오는지 확인</title>
+    <link href="http://DevStarSJ.github.io/2016/08/10/CSharp.AttributeInherit/"/>
+    <id>http://DevStarSJ.github.io/2016/08/10/CSharp.AttributeInherit/</id>
+    <published>2016-08-09T17:00:00.000Z</published>
+    <updated>2017-04-23T10:45:18.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;c-attribute-&amp;#xC0C1;&amp;#xC18D;-&amp;#xD6C4;-override-&amp;#xD560;-&amp;#xACBD;&amp;#xC6B0;-&amp;#xBD80;&amp;#xBAA8;-&amp;#xAC12;&amp;#xB3C4;-&amp;#xC798;-&amp;#xAC00;&amp;#xC838;
+    
+    </summary>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/"/>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/C/"/>
+    
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Doing Math with Python</title>
+    <link href="http://DevStarSJ.github.io/2016/07/09/Python.DoingMathWithPython/"/>
+    <id>http://DevStarSJ.github.io/2016/07/09/Python.DoingMathWithPython/</id>
+    <published>2016-07-08T15:00:00.000Z</published>
+    <updated>2017-04-30T02:56:32.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Doing-Math-with-Python-파이썬으로-풀어보는-수학&quot;&gt;&lt;a href=&quot;#Doing-Math-with-Python-파이썬으로-풀어보는-수학&quot; class=&quot;headerlink&quot; title=&quot;Doing Math with Pyth
+    
+    </summary>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/categories/Python/"/>
+    
+      <category term="DoingMathWithPython" scheme="http://DevStarSJ.github.io/categories/Python/DoingMathWithPython/"/>
+    
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Math" scheme="http://DevStarSJ.github.io/tags/Math/"/>
+    
+  </entry>
+  
+</feed>

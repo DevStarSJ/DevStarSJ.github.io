@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
     <title>AWS Lambda + API Gateway Binary Response 예제 | Dev Star SJ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="AWS,Lambda,APIGateway" />
     
-    <meta name="description" content="AWS Lambda + API Gateway Binary Response 예제API Gateway의 Binary Response가 가능하기 때문에 이미지 파일(png, jpg)나 pdf 다운로드 같은걸 Lambda를 이용해서 구현이 가능하다.AWS 에서 제공해주는 예제는 AWS Compute Blog에 있는 Binary Support for API Inte">
+    <meta name="description" content="AWS Lambda + API Gateway Binary Response &amp;#xC608;&amp;#xC81C; API Gateway&amp;#xC758; Binary Response&amp;#xAC00; &amp;#xAC00;&amp;#xB2A5;&amp;#xD558;&amp;#xAE30; &amp;#xB54C;&amp;#xBB38;&amp;#xC5D0; &amp;#xC774;&amp;#xBBF8;&amp;#xC9C0; &amp;#xD30C;&amp;#xC77C">
 <meta name="keywords" content="AWS,Lambda,APIGateway">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS Lambda + API Gateway Binary Response 예제">
 <meta property="og:url" content="http://DevStarSJ.github.io/2017/04/08/AWS-Lambda-BinaryResponse/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="AWS Lambda + API Gateway Binary Response 예제API Gateway의 Binary Response가 가능하기 때문에 이미지 파일(png, jpg)나 pdf 다운로드 같은걸 Lambda를 이용해서 구현이 가능하다.AWS 에서 제공해주는 예제는 AWS Compute Blog에 있는 Binary Support for API Inte">
+<meta property="og:description" content="AWS Lambda + API Gateway Binary Response &amp;#xC608;&amp;#xC81C; API Gateway&amp;#xC758; Binary Response&amp;#xAC00; &amp;#xAC00;&amp;#xB2A5;&amp;#xD558;&amp;#xAE30; &amp;#xB54C;&amp;#xBB38;&amp;#xC5D0; &amp;#xC774;&amp;#xBBF8;&amp;#xC9C0; &amp;#xD30C;&amp;#xC77C">
 <meta property="og:image" content="http://devstarsj.github.io/images/br1.png">
 <meta property="og:updated_time" content="2017-04-23T08:21:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AWS Lambda + API Gateway Binary Response 예제">
-<meta name="twitter:description" content="AWS Lambda + API Gateway Binary Response 예제API Gateway의 Binary Response가 가능하기 때문에 이미지 파일(png, jpg)나 pdf 다운로드 같은걸 Lambda를 이용해서 구현이 가능하다.AWS 에서 제공해주는 예제는 AWS Compute Blog에 있는 Binary Support for API Inte">
+<meta name="twitter:description" content="AWS Lambda + API Gateway Binary Response &amp;#xC608;&amp;#xC81C; API Gateway&amp;#xC758; Binary Response&amp;#xAC00; &amp;#xAC00;&amp;#xB2A5;&amp;#xD558;&amp;#xAE30; &amp;#xB54C;&amp;#xBB38;&amp;#xC5D0; &amp;#xC774;&amp;#xBBF8;&amp;#xC9C0; &amp;#xD30C;&amp;#xC77C">
 <meta name="twitter:image" content="http://devstarsj.github.io/images/br1.png">
     
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     
@@ -47,7 +47,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
         <header id="header">
     <div id="header-outer" class="outer">
         <div class="container">
@@ -71,7 +71,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -166,94 +166,132 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="AWS-Lambda-API-Gateway-Binary-Response-예제"><a href="#AWS-Lambda-API-Gateway-Binary-Response-예제" class="headerlink" title="AWS Lambda + API Gateway Binary Response 예제"></a>AWS Lambda + API Gateway Binary Response 예제</h1><p><strong>API Gatewa</strong>y의 Binary Response가 가능하기 때문에 이미지 파일(png, jpg)나 pdf 다운로드 같은걸 <strong>Lambda</strong>를 이용해서 구현이 가능하다.<br>AWS 에서 제공해주는 예제는 AWS Compute Blog에 있는 <a href="https://aws.amazon.com/blogs/compute/binary-support-for-api-integrations-with-amazon-api-gateway" target="_blank" rel="external">Binary Support for API Integrations with Amazon API Gateway</a> 란 포스팅이 있는데 이것을 읽고 실제로 구현을 하기에는 조금 부족하다.</p>
-<p>그래서 바로 사용 가능한 예제 코드를 작성해 보았다.</p>
-<p>이번에 회사(직방)에서 <code>html to pdf</code> API 내재화 (예전에는 외부 유료 서비스 사용) 작업을 진행하면서 Binary Response에 대해서 경험을 하게 되었다.<br>그 과정에서 많은 삽질(?)을 하게 되었는데, 이런 예제 코드만 하나 검색으로 찾을 수 있었어도 시간을 많이 아낄수 있었을 꺼란 생각이 들었다.</p>
-<h2 id="1-Lambda-코드-작성"><a href="#1-Lambda-코드-작성" class="headerlink" title="1. Lambda 코드 작성"></a>1. Lambda 코드 작성</h2><p>Node.JS를 이용해서 작성하였다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="meta">"use strict"</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</div><div class="line"><span class="keyword">const</span> qs = <span class="built_in">require</span>(<span class="string">"querystring"</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> FILE = &#123;</div><div class="line">    <span class="attr">JPG</span>: <span class="string">"test.jpg"</span>,</div><div class="line">    <span class="attr">PNG</span>: <span class="string">"test.png"</span>,</div><div class="line">    <span class="attr">PDF</span>: <span class="string">"test.pdf"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> CONTENT_TYPE = &#123;</div><div class="line">    <span class="attr">JPG</span>: <span class="string">"image/jpg"</span>,</div><div class="line">    <span class="attr">PNG</span>: <span class="string">"image/png"</span>,</div><div class="line">    <span class="attr">PDF</span>: <span class="string">"application/pdf"</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> &#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.info(<span class="built_in">JSON</span>.stringify(event,<span class="literal">null</span>,<span class="number">2</span>));</div><div class="line"></div><div class="line">    <span class="keyword">const</span> qs = event.queryStringParameters || &#123;&#125;;</div><div class="line">    <span class="keyword">const</span> path = event.pathParameters.proxy;</div><div class="line">    <span class="keyword">const</span> body = getBody(event);</div><div class="line"></div><div class="line">    <span class="keyword">const</span> KEY = path.indexOf(<span class="string">"jpg"</span>) &gt;= <span class="number">0</span> ? <span class="string">"JPG"</span> :</div><div class="line">                path.indexOf(<span class="string">"png"</span>) &gt;= <span class="number">0</span> ? <span class="string">"PNG"</span> :</div><div class="line">                                           <span class="string">"PDF"</span>;</div><div class="line"></div><div class="line">    <span class="keyword">const</span> content = fs.readFileSync(FILE[KEY]);</div><div class="line"></div><div class="line">    <span class="keyword">const</span> response = &#123;</div><div class="line">        <span class="attr">statusCode</span>: <span class="number">200</span>,</div><div class="line">        <span class="attr">headers</span>: &#123;</div><div class="line">            <span class="string">"Content-Type"</span>: CONTENT_TYPE[KEY],</div><div class="line">            <span class="string">"Content-Disposition"</span>: <span class="string">`inline; filename="<span class="subst">$&#123;FILE[KEY]&#125;</span>"`</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">body</span>: <span class="keyword">new</span> Buffer(content).toString(<span class="string">"base64"</span>),</div><div class="line">        <span class="attr">isBase64Encoded</span>: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    callback(<span class="literal">null</span>, response);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBody</span>(<span class="params">event</span>)</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (!event.body)</div><div class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="keyword">const</span> rawBody = event.isBase64Encoded ? <span class="keyword">new</span> Buffer(event.body, <span class="string">"base64"</span>).toString() : event.body;</div><div class="line"></div><div class="line">    <span class="keyword">const</span> body = event.headers[<span class="string">"Content-Type"</span>] === <span class="string">"application/x-www-form-urlencoded"</span> ?</div><div class="line">        qs.parse(rawBody) : rawBody;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> body;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>코드 대해서는 간략하게만 설명하겠다.</p>
-<p>경로상에 <code>pdf</code>, <code>png</code>, <code>jpg</code> 가 있는 경우 각각 그 예제 바이너리를 리턴해주는 간단한 API다.</p>
-<p>API Gateway의 Lambda Proxy Integration를 이용해서 <code>event</code>를 받을 예정이다.<br>예전에는 <code>{proxy+}</code> 리소스를 사용해야지만 프락시 통합이 사용가능했지만, 이제는 각각의 리소스, 메서드를 직접 지정하더라도 프락스 통합 사용이 가능하므로 이걸 사용하지 않을 이유가 없다.</p>
-<p>이번 예제에서 <code>body</code>를 사용하지는 않을 예정이라 <code>getBody</code> 함수가 사실상 필요는 없지만, 바이너리로 <code>body</code>를 받을 경우에는 해당 코드를 참고해서 처리하면 된다.</p>
-<p><img src="/images/br1.png" alt=""></p>
-<p>위 그림과 같이 <code>isBase64Encoded</code> 값을 보고 <code>body</code>를 인코딩 해줘야 한다.<br>인코딩 여부를 우리가 정할 수 있는지는 잘 모르겠지만, API Gateway에서 알아서 판단하여 인코딩 해주는것 같다.<br>여러 번의 테스트를 해보니 <code>isBase64Encoded</code>가 <em>false</em>로 계속 전달되다가 API Gateway deploy 이후 <em>true</em>로 바뀐적도 있다.</p>
-<p>JavaScript에서의 switch-case 문에 대한 구현은 개인적으로 위와 같이 Object를 만들어서 key-value pair를 활용하는게 깔끔해 보인다.</p>
-<h2 id="2-Lambda-배포"><a href="#2-Lambda-배포" class="headerlink" title="2. Lambda 배포"></a>2. Lambda 배포</h2><p>위 작성한 코드와 <code>test.jpg</code>, <code>test.png</code>, <code>test.pdf</code> 를 같은 폴더에 복사한 뒤 같이 압축해 주자.</p>
-<p><img src="images/BinaryResponse.01.png" alt=""></p>
+            <h1 id="aws-lambda-api-gateway-binary-response-&#xC608;&#xC81C;">AWS Lambda + API Gateway Binary Response &#xC608;&#xC81C;</h1>
+<p><strong>API Gatewa</strong>y&#xC758; Binary Response&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC774;&#xBBF8;&#xC9C0; &#xD30C;&#xC77C;(png, jpg)&#xB098; pdf &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xAC19;&#xC740;&#xAC78; <strong>Lambda</strong>&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xAD6C;&#xD604;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;. AWS &#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD574;&#xC8FC;&#xB294; &#xC608;&#xC81C;&#xB294; AWS Compute Blog&#xC5D0; &#xC788;&#xB294; <a href="https://aws.amazon.com/blogs/compute/binary-support-for-api-integrations-with-amazon-api-gateway" target="_blank" rel="external">Binary Support for API Integrations with Amazon API Gateway</a> &#xB780; &#xD3EC;&#xC2A4;&#xD305;&#xC774; &#xC788;&#xB294;&#xB370; &#xC774;&#xAC83;&#xC744; &#xC77D;&#xACE0; &#xC2E4;&#xC81C;&#xB85C; &#xAD6C;&#xD604;&#xC744; &#xD558;&#xAE30;&#xC5D0;&#xB294; &#xC870;&#xAE08; &#xBD80;&#xC871;&#xD558;&#xB2E4;.</p>
+<p>&#xADF8;&#xB798;&#xC11C; &#xBC14;&#xB85C; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; &#xC608;&#xC81C; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD574; &#xBCF4;&#xC558;&#xB2E4;.</p>
+<p>&#xC774;&#xBC88;&#xC5D0; &#xD68C;&#xC0AC;(&#xC9C1;&#xBC29;)&#xC5D0;&#xC11C; <code>html to pdf</code> API &#xB0B4;&#xC7AC;&#xD654; (&#xC608;&#xC804;&#xC5D0;&#xB294; &#xC678;&#xBD80; &#xC720;&#xB8CC; &#xC11C;&#xBE44;&#xC2A4; &#xC0AC;&#xC6A9;) &#xC791;&#xC5C5;&#xC744; &#xC9C4;&#xD589;&#xD558;&#xBA74;&#xC11C; Binary Response&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xACBD;&#xD5D8;&#xC744; &#xD558;&#xAC8C; &#xB418;&#xC5C8;&#xB2E4;. &#xADF8; &#xACFC;&#xC815;&#xC5D0;&#xC11C; &#xB9CE;&#xC740; &#xC0BD;&#xC9C8;(?)&#xC744; &#xD558;&#xAC8C; &#xB418;&#xC5C8;&#xB294;&#xB370;, &#xC774;&#xB7F0; &#xC608;&#xC81C; &#xCF54;&#xB4DC;&#xB9CC; &#xD558;&#xB098; &#xAC80;&#xC0C9;&#xC73C;&#xB85C; &#xCC3E;&#xC744; &#xC218; &#xC788;&#xC5C8;&#xC5B4;&#xB3C4; &#xC2DC;&#xAC04;&#xC744; &#xB9CE;&#xC774; &#xC544;&#xB084;&#xC218; &#xC788;&#xC5C8;&#xC744; &#xAEBC;&#xB780; &#xC0DD;&#xAC01;&#xC774; &#xB4E4;&#xC5C8;&#xB2E4;.</p>
+<h2 id="lambda-&#xCF54;&#xB4DC;-&#xC791;&#xC131;">1. Lambda &#xCF54;&#xB4DC; &#xC791;&#xC131;</h2>
+<p>Node.JS&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC791;&#xC131;&#xD558;&#xC600;&#xB2E4;.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&quot;use strict&quot;</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</div><div class="line"><span class="keyword">const</span> qs = <span class="built_in">require</span>(<span class="string">&quot;querystring&quot;</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> FILE = {</div><div class="line">    <span class="attr">JPG</span>: <span class="string">&quot;test.jpg&quot;</span>,</div><div class="line">    <span class="attr">PNG</span>: <span class="string">&quot;test.png&quot;</span>,</div><div class="line">    <span class="attr">PDF</span>: <span class="string">&quot;test.pdf&quot;</span></div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">const</span> CONTENT_TYPE = {</div><div class="line">    <span class="attr">JPG</span>: <span class="string">&quot;image/jpg&quot;</span>,</div><div class="line">    <span class="attr">PNG</span>: <span class="string">&quot;image/png&quot;</span>,</div><div class="line">    <span class="attr">PDF</span>: <span class="string">&quot;application/pdf&quot;</span></div><div class="line">};</div><div class="line"></div><div class="line">exports.handler = <span class="function">(<span class="params">event, context, callback</span>) =&gt;</span> {</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.info(<span class="built_in">JSON</span>.stringify(event,<span class="literal">null</span>,<span class="number">2</span>));</div><div class="line"></div><div class="line">    <span class="keyword">const</span> qs = event.queryStringParameters || {};</div><div class="line">    <span class="keyword">const</span> path = event.pathParameters.proxy;</div><div class="line">    <span class="keyword">const</span> body = getBody(event);</div><div class="line"></div><div class="line">    <span class="keyword">const</span> KEY = path.indexOf(<span class="string">&quot;jpg&quot;</span>) &gt;= <span class="number">0</span> ? <span class="string">&quot;JPG&quot;</span> :</div><div class="line">                path.indexOf(<span class="string">&quot;png&quot;</span>) &gt;= <span class="number">0</span> ? <span class="string">&quot;PNG&quot;</span> :</div><div class="line">                                           <span class="string">&quot;PDF&quot;</span>;</div><div class="line"></div><div class="line">    <span class="keyword">const</span> content = fs.readFileSync(FILE[KEY]);</div><div class="line"></div><div class="line">    <span class="keyword">const</span> response = {</div><div class="line">        <span class="attr">statusCode</span>: <span class="number">200</span>,</div><div class="line">        <span class="attr">headers</span>: {</div><div class="line">            <span class="string">&quot;Content-Type&quot;</span>: CONTENT_TYPE[KEY],</div><div class="line">            <span class="string">&quot;Content-Disposition&quot;</span>: <span class="string">`inline; filename=&quot;<span class="subst">${FILE[KEY]}</span>&quot;`</span></div><div class="line">        },</div><div class="line">        <span class="attr">body</span>: <span class="keyword">new</span> Buffer(content).toString(<span class="string">&quot;base64&quot;</span>),</div><div class="line">        <span class="attr">isBase64Encoded</span>: <span class="literal">true</span></div><div class="line">    }</div><div class="line"></div><div class="line">    callback(<span class="literal">null</span>, response);</div><div class="line">};</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBody</span>(<span class="params">event</span>)</span></div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (!event.body)</div><div class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="keyword">const</span> rawBody = event.isBase64Encoded ? <span class="keyword">new</span> Buffer(event.body, <span class="string">&quot;base64&quot;</span>).toString() : event.body;</div><div class="line"></div><div class="line">    <span class="keyword">const</span> body = event.headers[<span class="string">&quot;Content-Type&quot;</span>] === <span class="string">&quot;application/x-www-form-urlencoded&quot;</span> ?</div><div class="line">        qs.parse(rawBody) : rawBody;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> body;</div><div class="line">}</div></pre></td></tr></table></figure>
+<p>&#xCF54;&#xB4DC; &#xB300;&#xD574;&#xC11C;&#xB294; &#xAC04;&#xB7B5;&#xD558;&#xAC8C;&#xB9CC; &#xC124;&#xBA85;&#xD558;&#xACA0;&#xB2E4;.</p>
+<p>&#xACBD;&#xB85C;&#xC0C1;&#xC5D0; <code>pdf</code>, <code>png</code>, <code>jpg</code> &#xAC00; &#xC788;&#xB294; &#xACBD;&#xC6B0; &#xAC01;&#xAC01; &#xADF8; &#xC608;&#xC81C; &#xBC14;&#xC774;&#xB108;&#xB9AC;&#xB97C; &#xB9AC;&#xD134;&#xD574;&#xC8FC;&#xB294; &#xAC04;&#xB2E8;&#xD55C; API&#xB2E4;.</p>
+<p>API Gateway&#xC758; Lambda Proxy Integration&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; <code>event</code>&#xB97C; &#xBC1B;&#xC744; &#xC608;&#xC815;&#xC774;&#xB2E4;. &#xC608;&#xC804;&#xC5D0;&#xB294; <code>{proxy+}</code> &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C;&#xC9C0;&#xB9CC; &#xD504;&#xB77D;&#xC2DC; &#xD1B5;&#xD569;&#xC774; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;&#xD588;&#xC9C0;&#xB9CC;, &#xC774;&#xC81C;&#xB294; &#xAC01;&#xAC01;&#xC758; &#xB9AC;&#xC18C;&#xC2A4;, &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC9C1;&#xC811; &#xC9C0;&#xC815;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xD504;&#xB77D;&#xC2A4; &#xD1B5;&#xD569; &#xC0AC;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xBBC0;&#xB85C; &#xC774;&#xAC78; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC744; &#xC774;&#xC720;&#xAC00; &#xC5C6;&#xB2E4;.</p>
+<p>&#xC774;&#xBC88; &#xC608;&#xC81C;&#xC5D0;&#xC11C; <code>body</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0;&#xB294; &#xC54A;&#xC744; &#xC608;&#xC815;&#xC774;&#xB77C; <code>getBody</code> &#xD568;&#xC218;&#xAC00; &#xC0AC;&#xC2E4;&#xC0C1; &#xD544;&#xC694;&#xB294; &#xC5C6;&#xC9C0;&#xB9CC;, &#xBC14;&#xC774;&#xB108;&#xB9AC;&#xB85C; <code>body</code>&#xB97C; &#xBC1B;&#xC744; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xD574;&#xB2F9; &#xCF54;&#xB4DC;&#xB97C; &#xCC38;&#xACE0;&#xD574;&#xC11C; &#xCC98;&#xB9AC;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<div class="figure">
+<img src="/images/br1.png">
+
+</div>
+<p>&#xC704; &#xADF8;&#xB9BC;&#xACFC; &#xAC19;&#xC774; <code>isBase64Encoded</code> &#xAC12;&#xC744; &#xBCF4;&#xACE0; <code>body</code>&#xB97C; &#xC778;&#xCF54;&#xB529; &#xD574;&#xC918;&#xC57C; &#xD55C;&#xB2E4;. &#xC778;&#xCF54;&#xB529; &#xC5EC;&#xBD80;&#xB97C; &#xC6B0;&#xB9AC;&#xAC00; &#xC815;&#xD560; &#xC218; &#xC788;&#xB294;&#xC9C0;&#xB294; &#xC798; &#xBAA8;&#xB974;&#xACA0;&#xC9C0;&#xB9CC;, API Gateway&#xC5D0;&#xC11C; &#xC54C;&#xC544;&#xC11C; &#xD310;&#xB2E8;&#xD558;&#xC5EC; &#xC778;&#xCF54;&#xB529; &#xD574;&#xC8FC;&#xB294;&#xAC83; &#xAC19;&#xB2E4;. &#xC5EC;&#xB7EC; &#xBC88;&#xC758; &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xD574;&#xBCF4;&#xB2C8; <code>isBase64Encoded</code>&#xAC00; <em>false</em>&#xB85C; &#xACC4;&#xC18D; &#xC804;&#xB2EC;&#xB418;&#xB2E4;&#xAC00; API Gateway deploy &#xC774;&#xD6C4; <em>true</em>&#xB85C; &#xBC14;&#xB010;&#xC801;&#xB3C4; &#xC788;&#xB2E4;.</p>
+<p>JavaScript&#xC5D0;&#xC11C;&#xC758; switch-case &#xBB38;&#xC5D0; &#xB300;&#xD55C; &#xAD6C;&#xD604;&#xC740; &#xAC1C;&#xC778;&#xC801;&#xC73C;&#xB85C; &#xC704;&#xC640; &#xAC19;&#xC774; Object&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; key-value pair&#xB97C; &#xD65C;&#xC6A9;&#xD558;&#xB294;&#xAC8C; &#xAE54;&#xB054;&#xD574; &#xBCF4;&#xC778;&#xB2E4;.</p>
+<h2 id="lambda-&#xBC30;&#xD3EC;">2. Lambda &#xBC30;&#xD3EC;</h2>
+<p>&#xC704; &#xC791;&#xC131;&#xD55C; &#xCF54;&#xB4DC;&#xC640; <code>test.jpg</code>, <code>test.png</code>, <code>test.pdf</code> &#xB97C; &#xAC19;&#xC740; &#xD3F4;&#xB354;&#xC5D0; &#xBCF5;&#xC0AC;&#xD55C; &#xB4A4; &#xAC19;&#xC774; &#xC555;&#xCD95;&#xD574; &#xC8FC;&#xC790;.</p>
+<div class="figure">
+<img src="images/BinaryResponse.01.png">
+
+</div>
 <blockquote>
 <p>zip -r test.zip .</p>
 </blockquote>
-<p>그리고 AWS Lambda Console로 가서 <strong>binaryTest</strong> 란 이름으로 Function을 생성하자.</p>
-<p>런타임은 <strong>Node.js 6.10</strong> 을 선택하고 해당 압축파일을 업로딩하자.</p>
-<p>다른 설정은 적당히 알아서 하면 된다.</p>
-<p>이 예제는 S3나 다른 AWS 상의 리소스를 사용하지 않으니 <strong>Role</strong> 설정도 따로 복잡하게 할 것이 없다.</p>
-<p>단, 메모리와 타임아웃은 적당히 여유있게 주길 바란다.<br>바이너리 처리 자체가 파일을 읽고, 쓰는 작업이 필요하기 때문에 메모리가 많이 필요 할 수도 있고, 시간도 생각보다 오래 걸릴수 있기 때문이다.</p>
-<h2 id="3-API-Gateway-생성-및-설정"><a href="#3-API-Gateway-생성-및-설정" class="headerlink" title="3. API Gateway 생성 및 설정"></a>3. API Gateway 생성 및 설정</h2><h3 id="3-1-일단-API-생성"><a href="#3-1-일단-API-생성" class="headerlink" title="3.1 일단 API 생성"></a>3.1 일단 API 생성</h3><p><img src="images/BinaryResponse.02.png" alt=""></p>
-<p>그냥 <code>binaryTest</code>로 하나 생성한다.</p>
-<h3 id="3-2-리소스-추가"><a href="#3-2-리소스-추가" class="headerlink" title="3.2 리소스 추가"></a>3.2 리소스 추가</h3><p><code>Action</code> -&gt; <code>Create Method</code> 를 누른 뒤 <code>proxy resource</code>를 체크하고 <code>Create Resource</code>를 눌러주자.</p>
-<p><img src="images/BinaryResponse.03.png" alt=""></p>
-<p>이번 예제에서는 모든 경로에 대해서 하나의 Lambda를 실행시킬 것이다.<br>단, 이 방법은 유효하지 않은 경로 등에 대해서도 모두 Lambda를 실행시키게 되므로 쓸데없는 비용이 발생 할 수도 있다는건 알아둬야 한다.<br>Lambda에서 처리 가능한 경로에 대해서만 호출을 할 것이라면 리소스를 유효한 것만 따로 생성하는게 좋다.</p>
-<p>해당 프락시 리소스에서 실행시킬 Lambda를 설정해 주자.</p>
-<p><img src="images/BinaryResponse.04.png" alt="image"></p>
-<p>위에서 생성한 binaryTest Lambda Function으로 설정하자.</p>
-<h3 id="3-3-Binary-Support-추가"><a href="#3-3-Binary-Support-추가" class="headerlink" title="3.3 Binary Support 추가"></a>3.3 Binary Support 추가</h3><p>API Gateway 상의 <code>Binary Support</code> 탭을 눌러서 들어가자.</p>
-<p><img src="images/BinaryResponse.05.png" alt="image"></p>
-<p>해당 API를 호출할 때 <code>headers</code>에서 <code>Accept</code>로 요청하는 형태들에 대해서 미리 정의해 줘야 한다.</p>
-<p>만약 브라우저에서 url로 바로 호출할 것이라면 <code>*/*</code>를 추가해 줘야 한다.</p>
-<p>그 밖의 다른 곳에서 요청시 <code>Accept</code>로 명시해주는 형태에 대해서 추가를 해줘야 <code>API Gateway</code>에서 바이너리 형태로 응답을 제공한다.</p>
-<h3 id="3-4-배포"><a href="#3-4-배포" class="headerlink" title="3.4 배포"></a>3.4 배포</h3><p>다시 <code>Resources</code> 탭으로 가서 <code>Actions</code> -&gt; <code>Deploy API</code>를 눌러서 배포를 하자.</p>
-<p><img src="images/BinaryResponse.06.png" alt=""></p>
-<p>그냥 늘 하던데로 <code>prod</code>라는 이름으로 배포를 했다.</p>
-<h2 id="4-테스트"><a href="#4-테스트" class="headerlink" title="4. 테스트"></a>4. 테스트</h2><p>배포를 하면 <strong>url</strong>이 생성된다.</p>
-<p><img src="images/BinaryResponse.07.png" alt=""></p>
-<p>이 url 뒤에 <code>/pdf</code> , <code>/png</code> , <code>/jpg</code>를 붙여서 호출하여 바이너리 다운로드가 정상적으로 되는지 확인해 보자.</p>
-<p>브라우저에서 직접 호출하면 바로 화면에 나타나겠고, <code>curl</code> 이나 <code>POSTMAN</code>을 사용할려면 <code>header</code>에 <code>Accept</code>값을 넣어서 호출하면 된다.</p>
+<p>&#xADF8;&#xB9AC;&#xACE0; AWS Lambda Console&#xB85C; &#xAC00;&#xC11C; <strong>binaryTest</strong> &#xB780; &#xC774;&#xB984;&#xC73C;&#xB85C; Function&#xC744; &#xC0DD;&#xC131;&#xD558;&#xC790;.</p>
+<p>&#xB7F0;&#xD0C0;&#xC784;&#xC740; <strong>Node.js 6.10</strong> &#xC744; &#xC120;&#xD0DD;&#xD558;&#xACE0; &#xD574;&#xB2F9; &#xC555;&#xCD95;&#xD30C;&#xC77C;&#xC744; &#xC5C5;&#xB85C;&#xB529;&#xD558;&#xC790;.</p>
+<p>&#xB2E4;&#xB978; &#xC124;&#xC815;&#xC740; &#xC801;&#xB2F9;&#xD788; &#xC54C;&#xC544;&#xC11C; &#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<p>&#xC774; &#xC608;&#xC81C;&#xB294; S3&#xB098; &#xB2E4;&#xB978; AWS &#xC0C1;&#xC758; &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xB2C8; <strong>Role</strong> &#xC124;&#xC815;&#xB3C4; &#xB530;&#xB85C; &#xBCF5;&#xC7A1;&#xD558;&#xAC8C; &#xD560; &#xAC83;&#xC774; &#xC5C6;&#xB2E4;.</p>
+<p>&#xB2E8;, &#xBA54;&#xBAA8;&#xB9AC;&#xC640; &#xD0C0;&#xC784;&#xC544;&#xC6C3;&#xC740; &#xC801;&#xB2F9;&#xD788; &#xC5EC;&#xC720;&#xC788;&#xAC8C; &#xC8FC;&#xAE38; &#xBC14;&#xB780;&#xB2E4;. &#xBC14;&#xC774;&#xB108;&#xB9AC; &#xCC98;&#xB9AC; &#xC790;&#xCCB4;&#xAC00; &#xD30C;&#xC77C;&#xC744; &#xC77D;&#xACE0;, &#xC4F0;&#xB294; &#xC791;&#xC5C5;&#xC774; &#xD544;&#xC694;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBA54;&#xBAA8;&#xB9AC;&#xAC00; &#xB9CE;&#xC774; &#xD544;&#xC694; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xACE0;, &#xC2DC;&#xAC04;&#xB3C4; &#xC0DD;&#xAC01;&#xBCF4;&#xB2E4; &#xC624;&#xB798; &#xAC78;&#xB9B4;&#xC218; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.</p>
+<h2 id="api-gateway-&#xC0DD;&#xC131;-&#xBC0F;-&#xC124;&#xC815;">3. API Gateway &#xC0DD;&#xC131; &#xBC0F; &#xC124;&#xC815;</h2>
+<h3 id="&#xC77C;&#xB2E8;-api-&#xC0DD;&#xC131;">3.1 &#xC77C;&#xB2E8; API &#xC0DD;&#xC131;</h3>
+<div class="figure">
+<img src="images/BinaryResponse.02.png">
+
+</div>
+<p>&#xADF8;&#xB0E5; <code>binaryTest</code>&#xB85C; &#xD558;&#xB098; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;.</p>
+<h3 id="&#xB9AC;&#xC18C;&#xC2A4;-&#xCD94;&#xAC00;">3.2 &#xB9AC;&#xC18C;&#xC2A4; &#xCD94;&#xAC00;</h3>
+<p><code>Action</code> -&gt; <code>Create Method</code> &#xB97C; &#xB204;&#xB978; &#xB4A4; <code>proxy resource</code>&#xB97C; &#xCCB4;&#xD06C;&#xD558;&#xACE0; <code>Create Resource</code>&#xB97C; &#xB20C;&#xB7EC;&#xC8FC;&#xC790;.</p>
+<div class="figure">
+<img src="images/BinaryResponse.03.png">
+
+</div>
+<p>&#xC774;&#xBC88; &#xC608;&#xC81C;&#xC5D0;&#xC11C;&#xB294; &#xBAA8;&#xB4E0; &#xACBD;&#xB85C;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xD558;&#xB098;&#xC758; Lambda&#xB97C; &#xC2E4;&#xD589;&#xC2DC;&#xD0AC; &#xAC83;&#xC774;&#xB2E4;. &#xB2E8;, &#xC774; &#xBC29;&#xBC95;&#xC740; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xB85C; &#xB4F1;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB3C4; &#xBAA8;&#xB450; Lambda&#xB97C; &#xC2E4;&#xD589;&#xC2DC;&#xD0A4;&#xAC8C; &#xB418;&#xBBC0;&#xB85C; &#xC4F8;&#xB370;&#xC5C6;&#xB294; &#xBE44;&#xC6A9;&#xC774; &#xBC1C;&#xC0DD; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xB2E4;&#xB294;&#xAC74; &#xC54C;&#xC544;&#xB46C;&#xC57C; &#xD55C;&#xB2E4;. Lambda&#xC5D0;&#xC11C; &#xCC98;&#xB9AC; &#xAC00;&#xB2A5;&#xD55C; &#xACBD;&#xB85C;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xD638;&#xCD9C;&#xC744; &#xD560; &#xAC83;&#xC774;&#xB77C;&#xBA74; &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xC720;&#xD6A8;&#xD55C; &#xAC83;&#xB9CC; &#xB530;&#xB85C; &#xC0DD;&#xC131;&#xD558;&#xB294;&#xAC8C; &#xC88B;&#xB2E4;.</p>
+<p>&#xD574;&#xB2F9; &#xD504;&#xB77D;&#xC2DC; &#xB9AC;&#xC18C;&#xC2A4;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xC2DC;&#xD0AC; Lambda&#xB97C; &#xC124;&#xC815;&#xD574; &#xC8FC;&#xC790;.</p>
+<div class="figure">
+<img src="images/BinaryResponse.04.png" alt="image">
+<p class="caption">image</p>
+</div>
+<p>&#xC704;&#xC5D0;&#xC11C; &#xC0DD;&#xC131;&#xD55C; binaryTest Lambda Function&#xC73C;&#xB85C; &#xC124;&#xC815;&#xD558;&#xC790;.</p>
+<h3 id="binary-support-&#xCD94;&#xAC00;">3.3 Binary Support &#xCD94;&#xAC00;</h3>
+<p>API Gateway &#xC0C1;&#xC758; <code>Binary Support</code> &#xD0ED;&#xC744; &#xB20C;&#xB7EC;&#xC11C; &#xB4E4;&#xC5B4;&#xAC00;&#xC790;.</p>
+<div class="figure">
+<img src="images/BinaryResponse.05.png" alt="image">
+<p class="caption">image</p>
+</div>
+<p>&#xD574;&#xB2F9; API&#xB97C; &#xD638;&#xCD9C;&#xD560; &#xB54C; <code>headers</code>&#xC5D0;&#xC11C; <code>Accept</code>&#xB85C; &#xC694;&#xCCAD;&#xD558;&#xB294; &#xD615;&#xD0DC;&#xB4E4;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xBBF8;&#xB9AC; &#xC815;&#xC758;&#xD574; &#xC918;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>&#xB9CC;&#xC57D; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xC11C; url&#xB85C; &#xBC14;&#xB85C; &#xD638;&#xCD9C;&#xD560; &#xAC83;&#xC774;&#xB77C;&#xBA74; <code>*/*</code>&#xB97C; &#xCD94;&#xAC00;&#xD574; &#xC918;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>&#xADF8; &#xBC16;&#xC758; &#xB2E4;&#xB978; &#xACF3;&#xC5D0;&#xC11C; &#xC694;&#xCCAD;&#xC2DC; <code>Accept</code>&#xB85C; &#xBA85;&#xC2DC;&#xD574;&#xC8FC;&#xB294; &#xD615;&#xD0DC;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xCD94;&#xAC00;&#xB97C; &#xD574;&#xC918;&#xC57C; <code>API Gateway</code>&#xC5D0;&#xC11C; &#xBC14;&#xC774;&#xB108;&#xB9AC; &#xD615;&#xD0DC;&#xB85C; &#xC751;&#xB2F5;&#xC744; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;.</p>
+<h3 id="&#xBC30;&#xD3EC;">3.4 &#xBC30;&#xD3EC;</h3>
+<p>&#xB2E4;&#xC2DC; <code>Resources</code> &#xD0ED;&#xC73C;&#xB85C; &#xAC00;&#xC11C; <code>Actions</code> -&gt; <code>Deploy API</code>&#xB97C; &#xB20C;&#xB7EC;&#xC11C; &#xBC30;&#xD3EC;&#xB97C; &#xD558;&#xC790;.</p>
+<div class="figure">
+<img src="images/BinaryResponse.06.png">
+
+</div>
+<p>&#xADF8;&#xB0E5; &#xB298; &#xD558;&#xB358;&#xB370;&#xB85C; <code>prod</code>&#xB77C;&#xB294; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xBC30;&#xD3EC;&#xB97C; &#xD588;&#xB2E4;.</p>
+<h2 id="&#xD14C;&#xC2A4;&#xD2B8;">4. &#xD14C;&#xC2A4;&#xD2B8;</h2>
+<p>&#xBC30;&#xD3EC;&#xB97C; &#xD558;&#xBA74; <strong>url</strong>&#xC774; &#xC0DD;&#xC131;&#xB41C;&#xB2E4;.</p>
+<div class="figure">
+<img src="images/BinaryResponse.07.png">
+
+</div>
+<p>&#xC774; url &#xB4A4;&#xC5D0; <code>/pdf</code> , <code>/png</code> , <code>/jpg</code>&#xB97C; &#xBD99;&#xC5EC;&#xC11C; &#xD638;&#xCD9C;&#xD558;&#xC5EC; &#xBC14;&#xC774;&#xB108;&#xB9AC; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xAC00; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB418;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD574; &#xBCF4;&#xC790;.</p>
+<p>&#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xC11C; &#xC9C1;&#xC811; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xBC14;&#xB85C; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB098;&#xACA0;&#xACE0;, <code>curl</code> &#xC774;&#xB098; <code>POSTMAN</code>&#xC744; &#xC0AC;&#xC6A9;&#xD560;&#xB824;&#xBA74; <code>header</code>&#xC5D0; <code>Accept</code>&#xAC12;&#xC744; &#xB123;&#xC5B4;&#xC11C; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
 <blockquote>
-<p>curl -X GET -H “{Accept:application/pdf}”  <a href="https://xxx/prod/pdf" target="_blank" rel="external">https://xxx/prod/pdf</a> &gt; test.pdf</p>
+<p>curl -X GET -H &#x201C;{Accept:application/pdf}&#x201D; https://xxx/prod/pdf &gt; test.pdf</p>
 </blockquote>
-<p>POSTMAN의 경우 이미지는 바로 화면에 보여주지만, pdf는 정상적으로 보여주지 못한다.</p>
-<h1 id="Lambda-Binary-작업-Tip-Native-Module-사용"><a href="#Lambda-Binary-작업-Tip-Native-Module-사용" class="headerlink" title="Lambda Binary 작업 Tip(?) : Native Module 사용"></a>Lambda Binary 작업 Tip(?) : Native Module 사용</h1><p>Lambda로 binary response 작업을 할려면 몇가지만 미리 알아두더라도 삽질(?) 할 시간을 아낄 수 있다.</p>
-<h3 id="Lambda가-실행되는-환경은-Linux-이다"><a href="#Lambda가-실행되는-환경은-Linux-이다" class="headerlink" title="Lambda가 실행되는 환경은 Linux 이다."></a>Lambda가 실행되는 환경은 Linux 이다.</h3><p><a href="http://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html" target="_blank" rel="external">Lambda Execution Environment and Available Libraries</a> 에서 정확한 정보를 확인할 수 있다.</p>
-<h3 id="Lambda에-50mb-정도의-디스크-사용이-가능하다"><a href="#Lambda에-50mb-정도의-디스크-사용이-가능하다" class="headerlink" title="Lambda에 50mb 정도의 디스크 사용이 가능하다."></a>Lambda에 50mb 정도의 디스크 사용이 가능하다.</h3><p><code>/tmp</code> 폴더내에 파일을 임시로 저장하고 사용하는게 가능하다.<br>하지만 Lambda가 warm start로 실행될 경우 이미 만들어진 Lambda를 재사용하므로 해당 폴더에 임시로 만들어 놓은 파일은 계속 남아있게 된다.<br>임시로 파일을 만들어서 활용할 경우 동일한 이름을 사용해서 항상 덮어쓰거나 아니면 해당 파일을 다 사용한 후에는 지워주는 코드를 넣어주도록 하자.</p>
-<h3 id="Native-Module을-사용할-경우"><a href="#Native-Module을-사용할-경우" class="headerlink" title="Native Module을 사용할 경우"></a>Native Module을 사용할 경우</h3><p>바이너리 응답을 주는 기능 구현을 위해서는 native module을 사용하는 경우가 많다.</p>
-<p>native module를 사용한다면, 기본적으로 아래와 같은 과정으로 개발을 할 것이다.</p>
+<p>POSTMAN&#xC758; &#xACBD;&#xC6B0; &#xC774;&#xBBF8;&#xC9C0;&#xB294; &#xBC14;&#xB85C; &#xD654;&#xBA74;&#xC5D0; &#xBCF4;&#xC5EC;&#xC8FC;&#xC9C0;&#xB9CC;, pdf&#xB294; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xBCF4;&#xC5EC;&#xC8FC;&#xC9C0; &#xBABB;&#xD55C;&#xB2E4;.</p>
+<h1 id="lambda-binary-&#xC791;&#xC5C5;-tip-native-module-&#xC0AC;&#xC6A9;">Lambda Binary &#xC791;&#xC5C5; Tip(?) : Native Module &#xC0AC;&#xC6A9;</h1>
+<p>Lambda&#xB85C; binary response &#xC791;&#xC5C5;&#xC744; &#xD560;&#xB824;&#xBA74; &#xBA87;&#xAC00;&#xC9C0;&#xB9CC; &#xBBF8;&#xB9AC; &#xC54C;&#xC544;&#xB450;&#xB354;&#xB77C;&#xB3C4; &#xC0BD;&#xC9C8;(?) &#xD560; &#xC2DC;&#xAC04;&#xC744; &#xC544;&#xB084; &#xC218; &#xC788;&#xB2E4;.</p>
+<h3 id="lambda&#xAC00;-&#xC2E4;&#xD589;&#xB418;&#xB294;-&#xD658;&#xACBD;&#xC740;-linux-&#xC774;&#xB2E4;.">Lambda&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xD658;&#xACBD;&#xC740; Linux &#xC774;&#xB2E4;.</h3>
+<p><a href="http://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html" target="_blank" rel="external">Lambda Execution Environment and Available Libraries</a> &#xC5D0;&#xC11C; &#xC815;&#xD655;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<h3 id="lambda&#xC5D0;-50mb-&#xC815;&#xB3C4;&#xC758;-&#xB514;&#xC2A4;&#xD06C;-&#xC0AC;&#xC6A9;&#xC774;-&#xAC00;&#xB2A5;&#xD558;&#xB2E4;.">Lambda&#xC5D0; 50mb &#xC815;&#xB3C4;&#xC758; &#xB514;&#xC2A4;&#xD06C; &#xC0AC;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</h3>
+<p><code>/tmp</code> &#xD3F4;&#xB354;&#xB0B4;&#xC5D0; &#xD30C;&#xC77C;&#xC744; &#xC784;&#xC2DC;&#xB85C; &#xC800;&#xC7A5;&#xD558;&#xACE0; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xAC8C; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.<br>
+&#xD558;&#xC9C0;&#xB9CC; Lambda&#xAC00; warm start&#xB85C; &#xC2E4;&#xD589;&#xB420; &#xACBD;&#xC6B0; &#xC774;&#xBBF8; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; Lambda&#xB97C; &#xC7AC;&#xC0AC;&#xC6A9;&#xD558;&#xBBC0;&#xB85C; &#xD574;&#xB2F9; &#xD3F4;&#xB354;&#xC5D0; &#xC784;&#xC2DC;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4; &#xB193;&#xC740; &#xD30C;&#xC77C;&#xC740; &#xACC4;&#xC18D; &#xB0A8;&#xC544;&#xC788;&#xAC8C; &#xB41C;&#xB2E4;. &#xC784;&#xC2DC;&#xB85C; &#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; &#xD65C;&#xC6A9;&#xD560; &#xACBD;&#xC6B0; &#xB3D9;&#xC77C;&#xD55C; &#xC774;&#xB984;&#xC744; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xD56D;&#xC0C1; &#xB36E;&#xC5B4;&#xC4F0;&#xAC70;&#xB098; &#xC544;&#xB2C8;&#xBA74; &#xD574;&#xB2F9; &#xD30C;&#xC77C;&#xC744; &#xB2E4; &#xC0AC;&#xC6A9;&#xD55C; &#xD6C4;&#xC5D0;&#xB294; &#xC9C0;&#xC6CC;&#xC8FC;&#xB294; &#xCF54;&#xB4DC;&#xB97C; &#xB123;&#xC5B4;&#xC8FC;&#xB3C4;&#xB85D; &#xD558;&#xC790;.</p>
+<h3 id="native-module&#xC744;-&#xC0AC;&#xC6A9;&#xD560;-&#xACBD;&#xC6B0;">Native Module&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xACBD;&#xC6B0;</h3>
+<p>&#xBC14;&#xC774;&#xB108;&#xB9AC; &#xC751;&#xB2F5;&#xC744; &#xC8FC;&#xB294; &#xAE30;&#xB2A5; &#xAD6C;&#xD604;&#xC744; &#xC704;&#xD574;&#xC11C;&#xB294; native module&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xB2E4;.</p>
+<p>native module&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xBA74;, &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xACFC;&#xC815;&#xC73C;&#xB85C; &#xAC1C;&#xBC1C;&#xC744; &#xD560; &#xAC83;&#xC774;&#xB2E4;.</p>
 <ul>
-<li>해당 native module을 설치한다. (macos의 경우 brew를 사용)</li>
-<li>해당 모듈의 wrapper npm이 있는지 검색한다.</li>
-<li>있다면 그걸 활용한다.</li>
-<li>없다면 직접 shell에서 실행시켜주는 wrapper를 구현해서 사용한다.</li>
+<li>&#xD574;&#xB2F9; native module&#xC744; &#xC124;&#xCE58;&#xD55C;&#xB2E4;. (macos&#xC758; &#xACBD;&#xC6B0; brew&#xB97C; &#xC0AC;&#xC6A9;)</li>
+<li>&#xD574;&#xB2F9; &#xBAA8;&#xB4C8;&#xC758; wrapper npm&#xC774; &#xC788;&#xB294;&#xC9C0; &#xAC80;&#xC0C9;&#xD55C;&#xB2E4;.</li>
+<li>&#xC788;&#xB2E4;&#xBA74; &#xADF8;&#xAC78; &#xD65C;&#xC6A9;&#xD55C;&#xB2E4;.</li>
+<li>&#xC5C6;&#xB2E4;&#xBA74; &#xC9C1;&#xC811; shell&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xC2DC;&#xCF1C;&#xC8FC;&#xB294; wrapper&#xB97C; &#xAD6C;&#xD604;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</li>
 </ul>
-<p>이걸 Lambda로 배포하려면 해당 native module을 같이 배포해야한다.<br>그래서 아래 과정이 추가된다.</p>
+<p>&#xC774;&#xAC78; Lambda&#xB85C; &#xBC30;&#xD3EC;&#xD558;&#xB824;&#xBA74; &#xD574;&#xB2F9; native module&#xC744; &#xAC19;&#xC774; &#xBC30;&#xD3EC;&#xD574;&#xC57C;&#xD55C;&#xB2E4;.<br>
+&#xADF8;&#xB798;&#xC11C; &#xC544;&#xB798; &#xACFC;&#xC815;&#xC774; &#xCD94;&#xAC00;&#xB41C;&#xB2E4;.</p>
 <ul>
-<li>wrapper npm을 활용한 경우라면 그 소스코드를 살펴보면서 해당 모듈을 시스템 상에 설치된 것을 사용하는지, 아니면 npm으로 설치할때 같이 다운로드 되는지 살펴본다.</li>
-<li>시스템상 설치된 것을 사용한다면 native module의 실행파일을 압축해 본다.</li>
-<li>압축 후 용량이 50mb가 넘으면 포기한다. ㅠㅠ</li>
-<li>50 mb 이하라면 Lambda 를 배포할 폴더 아래에 해당 파일을 복사한다.</li>
-<li>옮긴 실행 파일을 실행하도록 wrapper를 수정한다.</li>
+<li>wrapper npm&#xC744; &#xD65C;&#xC6A9;&#xD55C; &#xACBD;&#xC6B0;&#xB77C;&#xBA74; &#xADF8; &#xC18C;&#xC2A4;&#xCF54;&#xB4DC;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xBA74;&#xC11C; &#xD574;&#xB2F9; &#xBAA8;&#xB4C8;&#xC744; &#xC2DC;&#xC2A4;&#xD15C; &#xC0C1;&#xC5D0; &#xC124;&#xCE58;&#xB41C; &#xAC83;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xC9C0;, &#xC544;&#xB2C8;&#xBA74; npm&#xC73C;&#xB85C; &#xC124;&#xCE58;&#xD560;&#xB54C; &#xAC19;&#xC774; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xB418;&#xB294;&#xC9C0; &#xC0B4;&#xD3B4;&#xBCF8;&#xB2E4;.</li>
+<li>&#xC2DC;&#xC2A4;&#xD15C;&#xC0C1; &#xC124;&#xCE58;&#xB41C; &#xAC83;&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xBA74; native module&#xC758; &#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC744; &#xC555;&#xCD95;&#xD574; &#xBCF8;&#xB2E4;.</li>
+<li>&#xC555;&#xCD95; &#xD6C4; &#xC6A9;&#xB7C9;&#xC774; 50mb&#xAC00; &#xB118;&#xC73C;&#xBA74; &#xD3EC;&#xAE30;&#xD55C;&#xB2E4;. &#x3160;&#x3160;</li>
+<li>50 mb &#xC774;&#xD558;&#xB77C;&#xBA74; Lambda &#xB97C; &#xBC30;&#xD3EC;&#xD560; &#xD3F4;&#xB354; &#xC544;&#xB798;&#xC5D0; &#xD574;&#xB2F9; &#xD30C;&#xC77C;&#xC744; &#xBCF5;&#xC0AC;&#xD55C;&#xB2E4;.</li>
+<li>&#xC62E;&#xAE34; &#xC2E4;&#xD589; &#xD30C;&#xC77C;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xB3C4;&#xB85D; wrapper&#xB97C; &#xC218;&#xC815;&#xD55C;&#xB2E4;.</li>
 </ul>
-<p>여기서 반드시 명싱해야 할것은 Lambda의 실행환경은 Linux이다.  </p>
-<p>지금 내 개발환경이 macos인 경우 이것을 그대로 Lambda로 배포하면 실행이 안된다.  </p>
-<p>해당 native module을 Linux용으로 바꿔서 배포해야한다.</p>
+<p>&#xC5EC;&#xAE30;&#xC11C; &#xBC18;&#xB4DC;&#xC2DC; &#xBA85;&#xC2F1;&#xD574;&#xC57C; &#xD560;&#xAC83;&#xC740; Lambda&#xC758; &#xC2E4;&#xD589;&#xD658;&#xACBD;&#xC740; Linux&#xC774;&#xB2E4;.</p>
+<p>&#xC9C0;&#xAE08; &#xB0B4; &#xAC1C;&#xBC1C;&#xD658;&#xACBD;&#xC774; macos&#xC778; &#xACBD;&#xC6B0; &#xC774;&#xAC83;&#xC744; &#xADF8;&#xB300;&#xB85C; Lambda&#xB85C; &#xBC30;&#xD3EC;&#xD558;&#xBA74; &#xC2E4;&#xD589;&#xC774; &#xC548;&#xB41C;&#xB2E4;.</p>
+<p>&#xD574;&#xB2F9; native module&#xC744; Linux&#xC6A9;&#xC73C;&#xB85C; &#xBC14;&#xAFD4;&#xC11C; &#xBC30;&#xD3EC;&#xD574;&#xC57C;&#xD55C;&#xB2E4;.</p>
 <ul>
-<li>wrapper npm에서 native module을 같이 다운로드 받게 되어 있다면, 코드를 살펴보자.<ul>
-<li>분명 OS 타입별로 각각 다른 파일을 다운로드 하는 분기 코드가 있을 것이다. 그걸 보고 Linux용 실행파일을 다운로드 받자.</li>
-</ul>
-</li>
-<li>시스템 상에 설치된 실행파일을 사용하는 경우라면 따로 Linux용을 다운로드 받자.</li>
-<li>로컬에서 테스트로 실행시켜볼 환경과 Lambda로 배포할 환경을 따로 만들어야 한다.<ul>
-<li>배포 스크립트를 만들면 편하다.<ul>
-<li>폴더 생성</li>
-<li>Lambda 코드 복사</li>
+<li>wrapper npm&#xC5D0;&#xC11C; native module&#xC744; &#xAC19;&#xC774; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xBC1B;&#xAC8C; &#xB418;&#xC5B4; &#xC788;&#xB2E4;&#xBA74;, &#xCF54;&#xB4DC;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xC790;.</li>
+<li>&#xBD84;&#xBA85; OS &#xD0C0;&#xC785;&#xBCC4;&#xB85C; &#xAC01;&#xAC01; &#xB2E4;&#xB978; &#xD30C;&#xC77C;&#xC744; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xD558;&#xB294; &#xBD84;&#xAE30; &#xCF54;&#xB4DC;&#xAC00; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;. &#xADF8;&#xAC78; &#xBCF4;&#xACE0; Linux&#xC6A9; &#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC744; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xBC1B;&#xC790;.</li>
+<li>&#xC2DC;&#xC2A4;&#xD15C; &#xC0C1;&#xC5D0; &#xC124;&#xCE58;&#xB41C; &#xC2E4;&#xD589;&#xD30C;&#xC77C;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xB77C;&#xBA74; &#xB530;&#xB85C; Linux&#xC6A9;&#xC744; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xBC1B;&#xC790;.</li>
+<li>&#xB85C;&#xCEEC;&#xC5D0;&#xC11C; &#xD14C;&#xC2A4;&#xD2B8;&#xB85C; &#xC2E4;&#xD589;&#xC2DC;&#xCF1C;&#xBCFC; &#xD658;&#xACBD;&#xACFC; Lambda&#xB85C; &#xBC30;&#xD3EC;&#xD560; &#xD658;&#xACBD;&#xC744; &#xB530;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</li>
+<li>&#xBC30;&#xD3EC; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xB9CC;&#xB4E4;&#xBA74; &#xD3B8;&#xD558;&#xB2E4;.
+<ul>
+<li>&#xD3F4;&#xB354; &#xC0DD;&#xC131;</li>
+<li>Lambda &#xCF54;&#xB4DC; &#xBCF5;&#xC0AC;</li>
 <li><code>npm i --only=production</code></li>
-<li>native module을 linux 용으로 복사</li>
-<li>배포</li>
+<li>native module&#xC744; linux &#xC6A9;&#xC73C;&#xB85C; &#xBCF5;&#xC0AC;</li>
+<li>&#xBC30;&#xD3EC;</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="OS에-따라-Native-Module의-결과가-다를-수-있다"><a href="#OS에-따라-Native-Module의-결과가-다를-수-있다" class="headerlink" title="OS에 따라 Native Module의 결과가 다를 수 있다."></a>OS에 따라 Native Module의 결과가 다를 수 있다.</h3><p>같은 native module이라도 각 OS별로 다르게 동작할 수 있다.<br>이 사실을 모르고 결과물을 개발 환경에 맞춰서 진행하다보면 Lambda 배포 후 결과가 다른걸 보고 또 다시 삽질을 해야할 수 있다.<br>그러니 일단 동작하는게 확인되면 Lambda로 배포한 후 그 결과를 확인해보고 진행하는게 좋다.</p>
-<h2 id="마치며…"><a href="#마치며…" class="headerlink" title="마치며…"></a>마치며…</h2><p>잘못되었거나, 변경된 점, 기타 추가 사항에 대한 피드백은 언제나 환영합니다. - <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#115;&#101;&#111;&#x6b;&#106;&#x6f;&#111;&#110;&#46;&#121;&#x75;&#x6e;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#115;&#101;&#111;&#x6b;&#106;&#x6f;&#111;&#110;&#46;&#121;&#x75;&#x6e;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a>  </p>
+<h3 id="os&#xC5D0;-&#xB530;&#xB77C;-native-module&#xC758;-&#xACB0;&#xACFC;&#xAC00;-&#xB2E4;&#xB97C;-&#xC218;-&#xC788;&#xB2E4;.">OS&#xC5D0; &#xB530;&#xB77C; Native Module&#xC758; &#xACB0;&#xACFC;&#xAC00; &#xB2E4;&#xB97C; &#xC218; &#xC788;&#xB2E4;.</h3>
+<p>&#xAC19;&#xC740; native module&#xC774;&#xB77C;&#xB3C4; &#xAC01; OS&#xBCC4;&#xB85C; &#xB2E4;&#xB974;&#xAC8C; &#xB3D9;&#xC791;&#xD560; &#xC218; &#xC788;&#xB2E4;.<br>
+&#xC774; &#xC0AC;&#xC2E4;&#xC744; &#xBAA8;&#xB974;&#xACE0; &#xACB0;&#xACFC;&#xBB3C;&#xC744; &#xAC1C;&#xBC1C; &#xD658;&#xACBD;&#xC5D0; &#xB9DE;&#xCDB0;&#xC11C; &#xC9C4;&#xD589;&#xD558;&#xB2E4;&#xBCF4;&#xBA74; Lambda &#xBC30;&#xD3EC; &#xD6C4; &#xACB0;&#xACFC;&#xAC00; &#xB2E4;&#xB978;&#xAC78; &#xBCF4;&#xACE0; &#xB610; &#xB2E4;&#xC2DC; &#xC0BD;&#xC9C8;&#xC744; &#xD574;&#xC57C;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xADF8;&#xB7EC;&#xB2C8; &#xC77C;&#xB2E8; &#xB3D9;&#xC791;&#xD558;&#xB294;&#xAC8C; &#xD655;&#xC778;&#xB418;&#xBA74; Lambda&#xB85C; &#xBC30;&#xD3EC;&#xD55C; &#xD6C4; &#xADF8; &#xACB0;&#xACFC;&#xB97C; &#xD655;&#xC778;&#xD574;&#xBCF4;&#xACE0; &#xC9C4;&#xD589;&#xD558;&#xB294;&#xAC8C; &#xC88B;&#xB2E4;.</p>
+<h2 id="&#xB9C8;&#xCE58;&#xBA70;">&#xB9C8;&#xCE58;&#xBA70;&#x2026;</h2>
+<p>&#xC798;&#xBABB;&#xB418;&#xC5C8;&#xAC70;&#xB098;, &#xBCC0;&#xACBD;&#xB41C; &#xC810;, &#xAE30;&#xD0C0; &#xCD94;&#xAC00; &#xC0AC;&#xD56D;&#xC5D0; &#xB300;&#xD55C; &#xD53C;&#xB4DC;&#xBC31;&#xC740; &#xC5B8;&#xC81C;&#xB098; &#xD658;&#xC601;&#xD569;&#xB2C8;&#xB2E4;. - <a href="mailto:seokjoon.yun@gmail.com" target="_blank" rel="external">seokjoon.yun@gmail.com</a></p>
 
         </div>
         <footer class="article-footer">
@@ -261,7 +299,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2017/04/08/AWS-Lambda-BinaryResponse/" data-id="cj1y8qfzz001r1z7bp2tv9c8y" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2017/04/08/AWS-Lambda-BinaryResponse/" data-id="cj243030u001tkc7b7aorsejl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -390,20 +428,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/03/26/Lambda.Chatbot.01/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/04/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/03/26/Lambda.Chatbot.01/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Hello World</p>
+        <p class="article-nav-title">AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -417,7 +445,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DoingMathWithPython/">DoingMathWithPython</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -427,7 +455,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 12.22px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+            <a href="/tags/APIGateway/" style="font-size: 16.67px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 15.56px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 13.33px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 17.78px;">AWS</a> <a href="/tags/C/" style="font-size: 18.89px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.11px;">CI/CD</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.11px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 12.22px;">JavaScript</a> <a href="/tags/Lambda/" style="font-size: 17.78px;">Lambda</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/Node-JS/" style="font-size: 14.44px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 12.22px;">Serverless</a> <a href="/tags/TypeScript/" style="font-size: 11.11px;">TypeScript</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
         </div>
     </div>
 
@@ -509,6 +537,6 @@
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div>
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
