@@ -15,12 +15,12 @@
 <meta property="og:url" content="http://DevStarSJ.github.io/2017/04/08/AWS-Lambda-BinaryResponse/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
 <meta property="og:description" content="AWS Lambda + API Gateway Binary Response 예제API Gateway의 Binary Response가 가능하기 때문에 이미지 파일(png, jpg)나 pdf 다운로드 같은걸 Lambda를 이용해서 구현이 가능하다.AWS 에서 제공해주는 예제는 AWS Compute Blog에 있는 Binary Support for API Inte">
-<meta property="og:image" content="http://devstarsj.github.io/images/br1.png">
-<meta property="og:updated_time" content="2017-04-23T08:21:19.000Z">
+<meta property="og:image" content="http://devstarsj.github.io/images/BinaryResponse.00.png">
+<meta property="og:updated_time" content="2017-05-23T23:29:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AWS Lambda + API Gateway Binary Response 예제">
 <meta name="twitter:description" content="AWS Lambda + API Gateway Binary Response 예제API Gateway의 Binary Response가 가능하기 때문에 이미지 파일(png, jpg)나 pdf 다운로드 같은걸 Lambda를 이용해서 구현이 가능하다.AWS 에서 제공해주는 예제는 AWS Compute Blog에 있는 Binary Support for API Inte">
-<meta name="twitter:image" content="http://devstarsj.github.io/images/br1.png">
+<meta name="twitter:image" content="http://devstarsj.github.io/images/BinaryResponse.00.png">
     
 
     
@@ -175,11 +175,11 @@
 <p>경로상에 <code>pdf</code>, <code>png</code>, <code>jpg</code> 가 있는 경우 각각 그 예제 바이너리를 리턴해주는 간단한 API다.</p>
 <p>API Gateway의 Lambda Proxy Integration를 이용해서 <code>event</code>를 받을 예정이다.<br>예전에는 <code>{proxy+}</code> 리소스를 사용해야지만 프락시 통합이 사용가능했지만, 이제는 각각의 리소스, 메서드를 직접 지정하더라도 프락스 통합 사용이 가능하므로 이걸 사용하지 않을 이유가 없다.</p>
 <p>이번 예제에서 <code>body</code>를 사용하지는 않을 예정이라 <code>getBody</code> 함수가 사실상 필요는 없지만, 바이너리로 <code>body</code>를 받을 경우에는 해당 코드를 참고해서 처리하면 된다.</p>
-<p><img src="/images/br1.png" alt=""></p>
+<p><img src="/images/BinaryResponse.00.png" alt=""></p>
 <p>위 그림과 같이 <code>isBase64Encoded</code> 값을 보고 <code>body</code>를 인코딩 해줘야 한다.<br>인코딩 여부를 우리가 정할 수 있는지는 잘 모르겠지만, API Gateway에서 알아서 판단하여 인코딩 해주는것 같다.<br>여러 번의 테스트를 해보니 <code>isBase64Encoded</code>가 <em>false</em>로 계속 전달되다가 API Gateway deploy 이후 <em>true</em>로 바뀐적도 있다.</p>
 <p>JavaScript에서의 switch-case 문에 대한 구현은 개인적으로 위와 같이 Object를 만들어서 key-value pair를 활용하는게 깔끔해 보인다.</p>
 <h2 id="2-Lambda-배포"><a href="#2-Lambda-배포" class="headerlink" title="2. Lambda 배포"></a>2. Lambda 배포</h2><p>위 작성한 코드와 <code>test.jpg</code>, <code>test.png</code>, <code>test.pdf</code> 를 같은 폴더에 복사한 뒤 같이 압축해 주자.</p>
-<p><img src="images/BinaryResponse.01.png" alt=""></p>
+<p><img src="/images/BinaryResponse.01.png" alt=""></p>
 <blockquote>
 <p>zip -r test.zip .</p>
 </blockquote>
@@ -188,24 +188,24 @@
 <p>다른 설정은 적당히 알아서 하면 된다.</p>
 <p>이 예제는 S3나 다른 AWS 상의 리소스를 사용하지 않으니 <strong>Role</strong> 설정도 따로 복잡하게 할 것이 없다.</p>
 <p>단, 메모리와 타임아웃은 적당히 여유있게 주길 바란다.<br>바이너리 처리 자체가 파일을 읽고, 쓰는 작업이 필요하기 때문에 메모리가 많이 필요 할 수도 있고, 시간도 생각보다 오래 걸릴수 있기 때문이다.</p>
-<h2 id="3-API-Gateway-생성-및-설정"><a href="#3-API-Gateway-생성-및-설정" class="headerlink" title="3. API Gateway 생성 및 설정"></a>3. API Gateway 생성 및 설정</h2><h3 id="3-1-일단-API-생성"><a href="#3-1-일단-API-생성" class="headerlink" title="3.1 일단 API 생성"></a>3.1 일단 API 생성</h3><p><img src="images/BinaryResponse.02.png" alt=""></p>
+<h2 id="3-API-Gateway-생성-및-설정"><a href="#3-API-Gateway-생성-및-설정" class="headerlink" title="3. API Gateway 생성 및 설정"></a>3. API Gateway 생성 및 설정</h2><h3 id="3-1-일단-API-생성"><a href="#3-1-일단-API-생성" class="headerlink" title="3.1 일단 API 생성"></a>3.1 일단 API 생성</h3><p><img src="/images/BinaryResponse.02.png" alt=""></p>
 <p>그냥 <code>binaryTest</code>로 하나 생성한다.</p>
 <h3 id="3-2-리소스-추가"><a href="#3-2-리소스-추가" class="headerlink" title="3.2 리소스 추가"></a>3.2 리소스 추가</h3><p><code>Action</code> -&gt; <code>Create Method</code> 를 누른 뒤 <code>proxy resource</code>를 체크하고 <code>Create Resource</code>를 눌러주자.</p>
-<p><img src="images/BinaryResponse.03.png" alt=""></p>
+<p><img src="/images/BinaryResponse.03.png" alt=""></p>
 <p>이번 예제에서는 모든 경로에 대해서 하나의 Lambda를 실행시킬 것이다.<br>단, 이 방법은 유효하지 않은 경로 등에 대해서도 모두 Lambda를 실행시키게 되므로 쓸데없는 비용이 발생 할 수도 있다는건 알아둬야 한다.<br>Lambda에서 처리 가능한 경로에 대해서만 호출을 할 것이라면 리소스를 유효한 것만 따로 생성하는게 좋다.</p>
 <p>해당 프락시 리소스에서 실행시킬 Lambda를 설정해 주자.</p>
-<p><img src="images/BinaryResponse.04.png" alt="image"></p>
+<p><img src="/images/BinaryResponse.04.png" alt="image"></p>
 <p>위에서 생성한 binaryTest Lambda Function으로 설정하자.</p>
 <h3 id="3-3-Binary-Support-추가"><a href="#3-3-Binary-Support-추가" class="headerlink" title="3.3 Binary Support 추가"></a>3.3 Binary Support 추가</h3><p>API Gateway 상의 <code>Binary Support</code> 탭을 눌러서 들어가자.</p>
-<p><img src="images/BinaryResponse.05.png" alt="image"></p>
+<p><img src="/images/BinaryResponse.05.png" alt="image"></p>
 <p>해당 API를 호출할 때 <code>headers</code>에서 <code>Accept</code>로 요청하는 형태들에 대해서 미리 정의해 줘야 한다.</p>
 <p>만약 브라우저에서 url로 바로 호출할 것이라면 <code>*/*</code>를 추가해 줘야 한다.</p>
 <p>그 밖의 다른 곳에서 요청시 <code>Accept</code>로 명시해주는 형태에 대해서 추가를 해줘야 <code>API Gateway</code>에서 바이너리 형태로 응답을 제공한다.</p>
 <h3 id="3-4-배포"><a href="#3-4-배포" class="headerlink" title="3.4 배포"></a>3.4 배포</h3><p>다시 <code>Resources</code> 탭으로 가서 <code>Actions</code> -&gt; <code>Deploy API</code>를 눌러서 배포를 하자.</p>
-<p><img src="images/BinaryResponse.06.png" alt=""></p>
+<p><img src="/images/BinaryResponse.06.png" alt=""></p>
 <p>그냥 늘 하던데로 <code>prod</code>라는 이름으로 배포를 했다.</p>
 <h2 id="4-테스트"><a href="#4-테스트" class="headerlink" title="4. 테스트"></a>4. 테스트</h2><p>배포를 하면 <strong>url</strong>이 생성된다.</p>
-<p><img src="images/BinaryResponse.07.png" alt=""></p>
+<p><img src="/images/BinaryResponse.07.png" alt=""></p>
 <p>이 url 뒤에 <code>/pdf</code> , <code>/png</code> , <code>/jpg</code>를 붙여서 호출하여 바이너리 다운로드가 정상적으로 되는지 확인해 보자.</p>
 <p>브라우저에서 직접 호출하면 바로 화면에 나타나겠고, <code>curl</code> 이나 <code>POSTMAN</code>을 사용할려면 <code>header</code>에 <code>Accept</code>값을 넣어서 호출하면 된다.</p>
 <blockquote>
@@ -253,7 +253,7 @@
 </li>
 </ul>
 <h3 id="OS에-따라-Native-Module의-결과가-다를-수-있다"><a href="#OS에-따라-Native-Module의-결과가-다를-수-있다" class="headerlink" title="OS에 따라 Native Module의 결과가 다를 수 있다."></a>OS에 따라 Native Module의 결과가 다를 수 있다.</h3><p>같은 native module이라도 각 OS별로 다르게 동작할 수 있다.<br>이 사실을 모르고 결과물을 개발 환경에 맞춰서 진행하다보면 Lambda 배포 후 결과가 다른걸 보고 또 다시 삽질을 해야할 수 있다.<br>그러니 일단 동작하는게 확인되면 Lambda로 배포한 후 그 결과를 확인해보고 진행하는게 좋다.</p>
-<h2 id="마치며…"><a href="#마치며…" class="headerlink" title="마치며…"></a>마치며…</h2><p>잘못되었거나, 변경된 점, 기타 추가 사항에 대한 피드백은 언제나 환영합니다. - <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#x73;&#x65;&#111;&#107;&#x6a;&#111;&#x6f;&#110;&#46;&#x79;&#117;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x73;&#x65;&#111;&#107;&#x6a;&#111;&#x6f;&#110;&#46;&#x79;&#117;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a>  </p>
+<h2 id="마치며…"><a href="#마치며…" class="headerlink" title="마치며…"></a>마치며…</h2><p>잘못되었거나, 변경된 점, 기타 추가 사항에 대한 피드백은 언제나 환영합니다. - <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#101;&#x6f;&#x6b;&#x6a;&#x6f;&#x6f;&#110;&#x2e;&#x79;&#x75;&#110;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#x73;&#101;&#x6f;&#x6b;&#x6a;&#x6f;&#x6f;&#110;&#x2e;&#x79;&#x75;&#110;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a>  </p>
 
         </div>
         <footer class="article-footer">
