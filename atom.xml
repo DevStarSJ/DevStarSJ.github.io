@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2017-05-23T23:29:46.000Z</updated>
+  <updated>2017-05-24T02:17:00.000Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C# LINQ Outer Join</title>
+    <link href="http://DevStarSJ.github.io/2017/05/24/CSharp.LinqOuterJoin/"/>
+    <id>http://DevStarSJ.github.io/2017/05/24/CSharp.LinqOuterJoin/</id>
+    <published>2017-05-24T01:30:00.000Z</published>
+    <updated>2017-05-24T02:17:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;C-LINQ-Outer-Join&quot;&gt;&lt;a href=&quot;#C-LINQ-Outer-Join&quot; class=&quot;headerlink&quot; title=&quot;C# LINQ Outer Join&quot;&gt;&lt;/a&gt;C# LINQ Outer Join&lt;/h2&gt;&lt;p&gt;LINQ로 ou
+    
+    </summary>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/"/>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/C/"/>
+    
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>AWS Lambda + API Gateway Binary Response 예제</title>
@@ -466,30 +488,6 @@
   </entry>
   
   <entry>
-    <title>Drive 창조적인 사람들을 움직이는 자발적 동기부여의 힘</title>
-    <link href="http://DevStarSJ.github.io/2016/10/20/Drive/"/>
-    <id>http://DevStarSJ.github.io/2016/10/20/Drive/</id>
-    <published>2016-10-19T15:00:00.000Z</published>
-    <updated>2017-04-30T03:46:19.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Drive&quot;&gt;&lt;a href=&quot;#Drive&quot; class=&quot;headerlink&quot; title=&quot;Drive&quot;&gt;&lt;/a&gt;Drive&lt;/h1&gt;&lt;p&gt;The Surprising Truth About What Motivates Us&lt;br&gt;창조적인 사람들을 
-    
-    </summary>
-    
-      <category term="Book" scheme="http://DevStarSJ.github.io/categories/Book/"/>
-    
-      <category term="Review" scheme="http://DevStarSJ.github.io/categories/Book/Review/"/>
-    
-    
-      <category term="Book" scheme="http://DevStarSJ.github.io/tags/Book/"/>
-    
-      <category term="Review" scheme="http://DevStarSJ.github.io/tags/Review/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Zero to One</title>
     <link href="http://DevStarSJ.github.io/2016/10/20/ZeroToOne/"/>
     <id>http://DevStarSJ.github.io/2016/10/20/ZeroToOne/</id>
@@ -516,26 +514,26 @@
   </entry>
   
   <entry>
-    <title>Think Bayes</title>
-    <link href="http://DevStarSJ.github.io/2016/09/21/Python.ThinkBayes/"/>
-    <id>http://DevStarSJ.github.io/2016/09/21/Python.ThinkBayes/</id>
-    <published>2016-09-20T15:00:00.000Z</published>
-    <updated>2017-04-30T03:15:02.000Z</updated>
+    <title>Drive 창조적인 사람들을 움직이는 자발적 동기부여의 힘</title>
+    <link href="http://DevStarSJ.github.io/2016/10/20/Drive/"/>
+    <id>http://DevStarSJ.github.io/2016/10/20/Drive/</id>
+    <published>2016-10-19T15:00:00.000Z</published>
+    <updated>2017-04-30T03:46:19.000Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Think-Bayes-파이썬을-활용한-베이지안-통계&quot;&gt;&lt;a href=&quot;#Think-Bayes-파이썬을-활용한-베이지안-통계&quot; class=&quot;headerlink&quot; title=&quot;Think Bayes (파이썬을 활용한 베이지안 통계)&quot;&gt;&lt;/a&gt;
+      &lt;h1 id=&quot;Drive&quot;&gt;&lt;a href=&quot;#Drive&quot; class=&quot;headerlink&quot; title=&quot;Drive&quot;&gt;&lt;/a&gt;Drive&lt;/h1&gt;&lt;p&gt;The Surprising Truth About What Motivates Us&lt;br&gt;창조적인 사람들을 
     
     </summary>
     
-      <category term="Python" scheme="http://DevStarSJ.github.io/categories/Python/"/>
+      <category term="Book" scheme="http://DevStarSJ.github.io/categories/Book/"/>
     
-      <category term="DataScience" scheme="http://DevStarSJ.github.io/categories/Python/DataScience/"/>
+      <category term="Review" scheme="http://DevStarSJ.github.io/categories/Book/Review/"/>
     
     
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+      <category term="Book" scheme="http://DevStarSJ.github.io/tags/Book/"/>
     
-      <category term="DataScience" scheme="http://DevStarSJ.github.io/tags/DataScience/"/>
+      <category term="Review" scheme="http://DevStarSJ.github.io/tags/Review/"/>
     
   </entry>
   
