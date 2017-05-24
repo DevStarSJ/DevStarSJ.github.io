@@ -15,12 +15,12 @@
 <meta property="og:url" content="http://DevStarSJ.github.io/2017/05/24/CSharp.LinqOuterJoin/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
 <meta property="og:description" content="C# LINQ Outer JoinLINQ로 outer join 을 하는 방법을 검색해서 나오는 방법들이 대부분 Microsoft 공식 페이지에 나와있는 방법대로 하는 것들인데 문제는 그게 제대로 동작하지 않는다. https://docs.microsoft.com/en-us/dotnet/articles/csharp/linq/perform-left-outer-j">
-<meta property="og:image" content="http://devstarsj.github.io/2017/05/24/CSharp.LinqOuterJoin/images/LinqOuterJoin.01.png">
-<meta property="og:updated_time" content="2017-05-24T02:17:00.000Z">
+<meta property="og:image" content="http://devstarsj.github.io/images/LinqOuterJoin.01.png">
+<meta property="og:updated_time" content="2017-05-24T02:22:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C# LINQ Outer Join">
 <meta name="twitter:description" content="C# LINQ Outer JoinLINQ로 outer join 을 하는 방법을 검색해서 나오는 방법들이 대부분 Microsoft 공식 페이지에 나와있는 방법대로 하는 것들인데 문제는 그게 제대로 동작하지 않는다. https://docs.microsoft.com/en-us/dotnet/articles/csharp/linq/perform-left-outer-j">
-<meta name="twitter:image" content="http://devstarsj.github.io/2017/05/24/CSharp.LinqOuterJoin/images/LinqOuterJoin.01.png">
+<meta name="twitter:image" content="http://devstarsj.github.io/images/LinqOuterJoin.01.png">
     
 
     
@@ -180,7 +180,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> EMP <span class="keyword">VALUES</span> (<span class="number">0</span>, <span class="string">'LUNA'</span>, <span class="string">'MASTER'</span>,     <span class="number">7782</span>, <span class="string">'1982-01-23'</span>, <span class="number">1300</span>, <span class="literal">NULL</span>, <span class="number">0</span>);</div></pre></td></tr></table></figure>
 <h3 id="LINQ-실행"><a href="#LINQ-실행" class="headerlink" title="LINQ 실행"></a>LINQ 실행</h3><p>테스트를 위해 실행시킨 LINQ 문장은 아래와 같다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var emp = context.EMP.ToList();</div><div class="line">var dept = context.DEPT.ToList();</div><div class="line"></div><div class="line">var j1 = context.EMP.Join(context.DEPT, e =&gt; e.DEPTNO, d =&gt; d.DEPTNO, (e, d) =&gt; new &#123;e, d&#125;).ToList();</div><div class="line">var j2 = context.EMP.Join(context.DEPT.DefaultIfEmpty(), e =&gt; e.DEPTNO, d =&gt; d.DEPTNO, (e, d) =&gt; new &#123; e, d &#125;).ToList();</div><div class="line"></div><div class="line">var j3 = context.EMP.GroupJoin(context.DEPT, e =&gt; e.DEPTNO, d =&gt; d.DEPTNO, (e, d) =&gt; new &#123; e, d &#125;).ToList();</div><div class="line"></div><div class="line">var j4 = context.DEPT.GroupJoin(context.EMP, d =&gt; d.DEPTNO, e =&gt; e.DEPTNO, (d, e) =&gt; new &#123; d, e &#125;).ToList();</div><div class="line"></div><div class="line">var j5 = context.EMP.GroupJoin(context.DEPT, e =&gt; e.DEPTNO, d =&gt; d.DEPTNO, (e, d) =&gt; new &#123; e, d = d.DefaultIfEmpty() &#125;)</div><div class="line">    .SelectMany(j =&gt; j.d.Select(d =&gt; new &#123; j.e, d&#125;))</div><div class="line">    .ToList();</div><div class="line"></div><div class="line">var j6 = context.EMP.GroupJoin(context.DEPT, e =&gt; e.DEPTNO, d =&gt; d.DEPTNO, (e, d) =&gt; new &#123; e, d = d.FirstOrDefault() &#125;).ToList();</div></pre></td></tr></table></figure>
-<p><img src="images/LinqOuterJoin.01.png" alt=""></p>
+<p><img src="/images/LinqOuterJoin.01.png" alt=""></p>
 <p>실행 결과에 대해서 <code>IEnumerable</code>의 <code>Count</code>를 먼저 살펴보자.</p>
 <p><strong>EMP</strong> 와 <strong>DEPT</strong>는 테이블에 들어가 있는 레코드 수가 그대로 반영되었다.  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var j1 = context.EMP.Join(context.DEPT, </div><div class="line">    e =&gt; e.DEPTNO, d =&gt; d.DEPTNO,</div><div class="line">    (e, d) =&gt; new &#123;e, d&#125;)</div><div class="line">    .ToList();</div></pre></td></tr></table></figure>
@@ -189,14 +189,14 @@
 <p><strong>j2</strong>는 Microsoft 공식 문서에 나와있는 방법대로 inner table 쪽에 <code>DefaultIfEmpty</code>를 수행했는데도 14개로 inner join한 것과 같은 결과가 나왔다.  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var j3 = context.EMP.GroupJoin(context.DEPT,</div><div class="line">    e =&gt; e.DEPTNO, d =&gt; d.DEPTNO,</div><div class="line">    (e, d) =&gt; new &#123; e, d &#125;)</div><div class="line">    .ToList();</div></pre></td></tr></table></figure>
 <p><strong>j3</strong>을 보니 우리가 원하던대로 15개의 결과가 나왔다.<br>결과를 좀 더 자세히 보니 <strong>LUNA</strong>에 조인된 <code>d</code>가 <code>null</code>로 들어와있다.</p>
-<p><img src="images/LinqOuterJoin.03.png" alt=""></p>
+<p><img src="/images/LinqOuterJoin.03.png" alt=""></p>
 <p>이제 원하는 결과를 얻었다고 생각이되지만, 나머지 항목에 대해서는 <code>d</code>가 <code>Collection</code>으로 되어 있으며 그 안에 <code>DEPT</code>가 1개씩 들어가 있어서 별로 보기에 좋지가 않다.<br>일단 여기서 넘어가고 아래에서 좀 더 이쁘게 만들어 보겠다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var j4 = context.DEPT.GroupJoin(context.EMP,</div><div class="line">    d =&gt; d.DEPTNO, e =&gt; e.DEPTNO,</div><div class="line">    (d, e) =&gt; new &#123; d, e &#125;)</div><div class="line">    .ToList();</div></pre></td></tr></table></figure>
 <p>위에서 설명한 <code>GroupJoin</code>이 어떻게 동작하는지 보기위해서 <strong>j4</strong>에서는 <code>DEPT</code>를 outer table로 하고 <code>EMP</code>를 inner table로 하여 수행해 보았다.<br><code>d</code>에 해당하는 <code>e</code>에 여러개의 <code>EMP</code>가 <code>Collection</code>으로 들어가 있는게 확인 가능하다.</p>
-<p><img src="images/LinqOuterJoin.02.png" alt=""></p>
+<p><img src="/images/LinqOuterJoin.02.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var j5 = context.EMP.GroupJoin(context.DEPT,</div><div class="line">    e =&gt; e.DEPTNO, d =&gt; d.DEPTNO,</div><div class="line">    (e, d) =&gt; new &#123; e, d = d.DefaultIfEmpty() &#125;)</div><div class="line">    .SelectMany(j =&gt; j.d.Select(d =&gt; new &#123; j.e, d&#125;))</div><div class="line">    .ToList();</div><div class="line"></div><div class="line">var j6 = context.EMP.GroupJoin(context.DEPT,</div><div class="line">    e =&gt; e.DEPTNO, d =&gt; d.DEPTNO,</div><div class="line">    (e, d) =&gt; new &#123; e, d = d.FirstOrDefault() &#125;)</div><div class="line">    .ToList();</div></pre></td></tr></table></figure>
 <p><strong>j5</strong>와 <strong>j6</strong>는 <strong>j3</strong>에서 이쁘지 않았던 모양을 좀 더 사용하기 좋도록 만든 것이다.<br><strong>j3</strong>에서 만든 <code>Collection</code>을 풀어서 flat하게 만들어주는게 <strong>j5</strong>, <strong>j6</strong>이다.<br>이 경우에서는 둘의 결과는 똑같다.</p>
-<p><img src="images/LinqOuterJoin.04.png" alt=""></p>
+<p><img src="/images/LinqOuterJoin.04.png" alt=""></p>
 <p>하지만 모든 경우에 있어서 둘의 결과가 똑같지는 않다.  </p>
 <p><strong>j5</strong>에서는 <code>EMP</code>에 해당하는 <code>DEPT</code>가 여러 개 있는 경우 그걸 여러개의 결과로 나눠준다.<br><strong>j6</strong>에서는 <code>EMP</code>에 해당하는 <code>DEPT</code>가 여러 개가 있더라도 그중 1개만 결과로 남고 나머지는 무시된다.  </p>
 <p>위에서 생성한 테이블에서는 outer join을 할려는 목적이 <code>DEPT</code>가 1개이거나 없거나 하는 경우라서 <strong>j6</strong>방법으로 사용해도 되지만, 대부분의 경우에는 <strong>j5</strong> 방법대로 해야한다.</p>
