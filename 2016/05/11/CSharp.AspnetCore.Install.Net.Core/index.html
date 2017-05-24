@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Dev Star SJ">
 <meta property="og:description" content=".NET Core Install for Ubuntu 14.04.NET Core를 Ubuntu에 설치하는 과정에 대해서 소개해드리겠습니다. Ubuntu 설치는 필자의 경우는 Microsoft Azure에 설치하였습니다.(참고로 Azure에 Ubuntu설치시 SSH (22)번 빼고는 모두 막혀있습니다. Portal에서 원하시는 포트를 열어야 합니다.) 1. .">
 <meta property="og:image" content="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.01.png?raw=true">
-<meta property="og:updated_time" content="2017-04-23T10:32:41.000Z">
+<meta property="og:updated_time" content="2017-05-24T03:25:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=".NET Core Install for Ubuntu 14.04">
 <meta name="twitter:description" content=".NET Core Install for Ubuntu 14.04.NET Core를 Ubuntu에 설치하는 과정에 대해서 소개해드리겠습니다. Ubuntu 설치는 필자의 경우는 Microsoft Azure에 설치하였습니다.(참고로 Azure에 Ubuntu설치시 SSH (22)번 빼고는 모두 막혀있습니다. Portal에서 원하시는 포트를 열어야 합니다.) 1. .">
@@ -192,9 +192,9 @@
 <p>패키지를 project에 다운로드 합니다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet restore</div></pre></td></tr></table></figure>
 <p><code>Startup.cs</code>파일을 추가하려 다음의 내용으로 작성합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using Microsoft.AspNetCore.Builder;</div><div class="line">using Microsoft.AspNetCore.Hosting;</div><div class="line">using Microsoft.AspNetCore.Http;</div><div class="line"></div><div class="line">namespace aspnetcoreapp</div><div class="line">&#123;</div><div class="line">    public class Startup</div><div class="line">    &#123;</div><div class="line">        public void Configure(IApplicationBuilder app)</div><div class="line">        &#123;</div><div class="line">            app.Run(context =&gt;</div><div class="line">            &#123;</div><div class="line">                return context.Response.WriteAsync(&quot;Hello from ASP.NET Core!&quot;);</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> System;</div><div class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Builder;</div><div class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Hosting;</div><div class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Http;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> <span class="title">aspnetcoreapp</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Startup</span></div><div class="line">    &#123;</div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Configure</span>(<span class="params">IApplicationBuilder app</span>)</span></div><div class="line">        &#123;</div><div class="line">            app.Run(context =&gt;</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">return</span> context.Response.WriteAsync(<span class="string">"Hello from ASP.NET Core!"</span>);</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><code>Program.cs</code>파일을 다음과 같이 수정해주세요.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using Microsoft.AspNetCore.Hosting;</div><div class="line"></div><div class="line">namespace aspnetcoreapp</div><div class="line">&#123;</div><div class="line">    public class Program</div><div class="line">    &#123;</div><div class="line">        public static void Main(string[] args)</div><div class="line">        &#123;</div><div class="line">            var host = new WebHostBuilder()</div><div class="line">                .UseKestrel()</div><div class="line">                .UseStartup&lt;Startup&gt;()</div><div class="line">                .Build();</div><div class="line"></div><div class="line">            host.Run();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> System;</div><div class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Hosting;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> <span class="title">aspnetcoreapp</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Program</span></div><div class="line">    &#123;</div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">var</span> host = <span class="keyword">new</span> WebHostBuilder()</div><div class="line">                .UseKestrel()</div><div class="line">                .UseStartup&lt;Startup&gt;()</div><div class="line">                .Build();</div><div class="line"></div><div class="line">            host.Run();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>그런 다음 실행합니다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dotnet run</div></pre></td></tr></table></figure>
 <p><img src="https://github.com/DevStarSJ/Study/raw/master/Blog/ASP.NET/ASP.NET.Core/image/install.ubuntu.02.png?raw=true"></p>
@@ -226,7 +226,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/05/11/CSharp.AspnetCore.Install.Net.Core/" data-id="cj326snql002tcy7bts7vy5oj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/05/11/CSharp.AspnetCore.Install.Net.Core/" data-id="cj32fflan006jww7ba5wwvi7y" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -355,20 +355,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/05/11/CSharp.AspnetCore.Depoly.VS.Git/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/05/11/CSharp.AspnetCore.WebSocket/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Deploying .NET Core Web App with Visual Studio and Git
+            WebSockets in .NET Core
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2016/05/09/CSharp.AspnetCore.SignalR/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/05/11/CSharp.AspnetCore.Depoly.VS.Git/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Using SignalR in ASP.NET Core</p>
+        <p class="article-nav-title">Deploying .NET Core Web App with Visual Studio and Git</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
