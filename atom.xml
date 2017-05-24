@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2017-05-24T03:25:06.000Z</updated>
+  <updated>2017-05-24T06:43:18.000Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Using Partial View as a Component</title>
+    <link href="http://DevStarSJ.github.io/2017/05/24/ASPNET.UsingPartialViewAsaComponent/"/>
+    <id>http://DevStarSJ.github.io/2017/05/24/ASPNET.UsingPartialViewAsaComponent/</id>
+    <published>2017-05-24T06:20:00.000Z</published>
+    <updated>2017-05-24T06:43:18.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Using-Partial-View-as-a-Component&quot;&gt;&lt;a href=&quot;#Using-Partial-View-as-a-Component&quot; class=&quot;headerlink&quot; title=&quot;Using Partial View as a Co
+    
+    </summary>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/"/>
+    
+      <category term="ASP.NET" scheme="http://DevStarSJ.github.io/categories/C/ASP-NET/"/>
+    
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>C# LINQ Outer Join</title>
@@ -484,30 +506,6 @@
       <category term="JavaScript" scheme="http://DevStarSJ.github.io/tags/JavaScript/"/>
     
       <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Drive 창조적인 사람들을 움직이는 자발적 동기부여의 힘</title>
-    <link href="http://DevStarSJ.github.io/2016/10/20/Drive/"/>
-    <id>http://DevStarSJ.github.io/2016/10/20/Drive/</id>
-    <published>2016-10-19T15:00:00.000Z</published>
-    <updated>2017-04-30T03:46:19.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Drive&quot;&gt;&lt;a href=&quot;#Drive&quot; class=&quot;headerlink&quot; title=&quot;Drive&quot;&gt;&lt;/a&gt;Drive&lt;/h1&gt;&lt;p&gt;The Surprising Truth About What Motivates Us&lt;br&gt;창조적인 사람들을 
-    
-    </summary>
-    
-      <category term="Book" scheme="http://DevStarSJ.github.io/categories/Book/"/>
-    
-      <category term="Review" scheme="http://DevStarSJ.github.io/categories/Book/Review/"/>
-    
-    
-      <category term="Book" scheme="http://DevStarSJ.github.io/tags/Book/"/>
-    
-      <category term="Review" scheme="http://DevStarSJ.github.io/tags/Review/"/>
     
   </entry>
   
