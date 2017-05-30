@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>사용자 정의 MFC Control의 Message 처리 | Dev Star SJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="CPP,MFC" />
+    
+    <meta name="description" content="사용자 정의 MFC Control의 Message 처리CWnd를 상속받아서 사용자가 작성한 MFC Control의 메세지 처리하는 방법을 소개해드리겠습니다.   통상적으로 Dialog, View, FormView (앞으로 편의상 Dialog라 칭함)에 Control을 올려서 사용하는데,그 구현자체를 Control안에서 하는 경우도 있지만,해당 Control">
+<meta name="keywords" content="CPP,MFC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="사용자 정의 MFC Control의 Message 처리">
+<meta property="og:url" content="http://DevStarSJ.github.io/2016/02/16/mfc.wnd.message/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="사용자 정의 MFC Control의 Message 처리CWnd를 상속받아서 사용자가 작성한 MFC Control의 메세지 처리하는 방법을 소개해드리겠습니다.   통상적으로 Dialog, View, FormView (앞으로 편의상 Dialog라 칭함)에 Control을 올려서 사용하는데,그 구현자체를 Control안에서 하는 경우도 있지만,해당 Control">
+<meta property="og:updated_time" content="2017-05-29T23:33:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="사용자 정의 MFC Control의 Message 처리">
+<meta name="twitter:description" content="사용자 정의 MFC Control의 Message 처리CWnd를 상속받아서 사용자가 작성한 MFC Control의 메세지 처리하는 방법을 소개해드리겠습니다.   통상적으로 Dialog, View, FormView (앞으로 편의상 Dialog라 칭함)에 Control을 올려서 사용하는데,그 구현자체를 Control안에서 하는 경우도 있지만,해당 Control">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">DevStarSJ</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/">Book</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/Review/">Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/">CPP</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/MFC/">MFC</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/CPP/">CPP</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/CPP/MFC/">MFC</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-mfc.wnd.message" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        사용자 정의 MFC Control의 Message 처리
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/02/16/mfc.wnd.message/" class="article-date">
+            <time datetime="2016-02-16T06:28:00.000Z" itemprop="datePublished">2016-02-16</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/CPP/">CPP</a>, <a class="tag-link" href="/tags/MFC/">MFC</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="사용자-정의-MFC-Control의-Message-처리"><a href="#사용자-정의-MFC-Control의-Message-처리" class="headerlink" title="사용자 정의 MFC Control의 Message 처리"></a>사용자 정의 MFC Control의 Message 처리</h1><p>CWnd를 상속받아서 사용자가 작성한 MFC Control의 메세지 처리하는 방법을 소개해드리겠습니다.  </p>
+<p>통상적으로 Dialog, View, FormView (앞으로 편의상 Dialog라 칭함)에 Control을 올려서 사용하는데,<br>그 구현자체를 Control안에서 하는 경우도 있지만,<br>해당 Control을 사용하고 있는 Dialog에서 구현을 해야하는 경우도 있습니다.<br>2개 이상의 Control을 같이 활용하려면 그렇게 해야 하죠.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Textbox에 숫자를 적어두고 Button을 눌렀을 경우 해당 숫자를 화면에 AfxMessageBox로 출력하는 경우  </div><div class="line">해당 처리는 Button에서 하는게 아니라 Textbox와 Button을 가지고 있는 Dialog에서 하는게 편합니다.</div></pre></td></tr></table></figure>
+<p>3가지 방법이 있습니다.</p>
+<ol>
+<li>Message로 처리</li>
+<li>Command로 처리</li>
+<li>Notify로 처리</li>
+</ol>
+<p>각각에 대해서 소개해 드리겠습니다.</p>
+<h2 id="준비사항"><a href="#준비사항" class="headerlink" title="준비사항"></a>준비사항</h2><p>먼저 간단하게 Dialog 기반으로 MFC Application Project를 생성해주세요.</p>
+<p>그런 다음 아래의 2개의 File을 추가합니다.</p>
+<h5 id="UserWnd-h"><a href="#UserWnd-h" class="headerlink" title="UserWnd.h"></a>UserWnd.h</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"afxwin.h"</span></span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> WM_USER_WND		       WM_USER + 10001          <span class="comment">// User-defined Message (#1)</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CUserWnd</span> :</span> <span class="keyword">public</span> CWnd</div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	HWND m_hwndDlg = <span class="literal">nullptr</span>;                               <span class="comment">// HWND of Parent Dialog (#2)</span></div><div class="line"></div><div class="line"><span class="keyword">protected</span>:</div><div class="line">	DECLARE_MESSAGE_MAP()                                   <span class="comment">// Message Map Macro (#3)</span></div><div class="line">	<span class="function">afx_msg <span class="keyword">void</span> <span class="title">OnLButtonDown</span><span class="params">(UINT nFlags, CPoint point)</span></span>;  <span class="comment">// Mouse left button click event (#4)</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>#1 : 사용자 정의 메세지 입니다.</li>
+<li>#2 : 메세지를 보낼려면 해당 메세지를 받을 Dialog의 pointer나 HWND값이 필요합니다.<ul>
+<li>HWND를 알고 있는 경우 : <code>::SendMessage(m_hwndDlg, 메세지, WPARAM, LPARAM);</code></li>
+<li>Dialog의 pointer를 알고 있는 경우 : <code>pointer-&gt;SendMessage(메세지, WPARAM, LPARAM);</code></li>
+</ul>
+</li>
+<li>#3 : Message Map을 사용할려면 헤더파일에 선언해줘야할 매크로 입니다.</li>
+<li>#4 : 예제로 마우스 왼쪽 버튼을 눌렀을 경우 Dialog로 Message를 전달하기 위하여 해당 메세지를 사용했습니다.</li>
+</ul>
+<h5 id="UserWnd-cpp"><a href="#UserWnd-cpp" class="headerlink" title="UserWnd.cpp"></a>UserWnd.cpp</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"UserWnd.h"</span></span></div><div class="line"></div><div class="line">BEGIN_MESSAGE_MAP(CUserWnd, CWnd)                        <span class="comment">// Message Map (#1)</span></div><div class="line">	ON_WM_LBUTTONDOWN()                                  <span class="comment">// Mouse left button click event (#2)</span></div><div class="line">END_MESSAGE_MAP()</div><div class="line"></div><div class="line"><span class="keyword">void</span> CUserWnd::OnLButtonDown(UINT nFlags, CPoint point)  <span class="comment">// Mouse left button click event (#3)</span></div><div class="line">&#123;</div><div class="line">	HWND hWnd = GetSafeHwnd();</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (hWnd == <span class="literal">NULL</span>) <span class="keyword">return</span>;</div><div class="line">	<span class="keyword">if</span> (!::IsWindow(hWnd)) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> nID = GetDlgCtrlID();</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (m_hwndDlg != <span class="literal">nullptr</span>)</div><div class="line">	&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	CWnd::OnLButtonDown(nFlags, point);                  <span class="comment">// Call Parent Function (#4)</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>#1 : Message Map 정의 부분입니다.<ul>
+<li>첫번째 인자 : 해당 class를 적어줍니다.</li>
+<li>두번째 인자 : 부모 class를 적어줍니다. 해당 class 내에 적어주지 않은 메세지에 대해서는 부모 class에서 처리하게 됩니다.<ul>
+<li>만약 CXTPChartControl을 상속받아서 만든 사용자 정의 Control일 경우 두번째 인자에 CXTPChartControl을 적어줘야 합니다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>#2 : MFC에서 미리 정의해놓은 것으로 마우스 왼쪽 버튼 눌렀을때 OnLButtonDown()을 실행하게 됩니다.</li>
+<li>#3 : 사용자 정의 메세지를 보내기위해 필요한 값들 HWND, ControlID를 가지고 있습니다. if 구문 안에서 각각의 메세지 타입에 따른 구현이 달라집니다.</li>
+<li>#4 : 부모 class에서 해당 메세지에 대한 동작을 계속 하도록 호출해 줍니다. 부모 class의 작업이 필요없다면 이 줄은 삭제하면 됩니다.</li>
+</ul>
+<h5 id="Resource-h"><a href="#Resource-h" class="headerlink" title="Resource.h"></a>Resource.h</h5><ul>
+<li>UserWnd의 Control ID를 생성해줍니다.</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> IDC_USER_WND					10001</span></div></pre></td></tr></table></figure>
+<h5 id="Dialog-Header-file-필자의-경우-UserCtrlMsgDlg-h"><a href="#Dialog-Header-file-필자의-경우-UserCtrlMsgDlg-h" class="headerlink" title="Dialog Header file (필자의 경우 UserCtrlMsgDlg.h)"></a>Dialog Header file (필자의 경우 UserCtrlMsgDlg.h)</h5><ul>
+<li>UserWnd.h를 추가해 주세요.</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"UserWnd.h"</span></span></div></pre></td></tr></table></figure>
+<ul>
+<li>CUserWnd 타입의 멤버를 선언해 주세요.</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CUserWnd m_wndUser;</div></pre></td></tr></table></figure>
+<h5 id="Dialog-cpp-file-필자의-경우-UserCtrlMsgDlg-cpp"><a href="#Dialog-cpp-file-필자의-경우-UserCtrlMsgDlg-cpp" class="headerlink" title="Dialog cpp file (필자의 경우 UserCtrlMsgDlg.cpp)"></a>Dialog cpp file (필자의 경우 UserCtrlMsgDlg.cpp)</h5><ul>
+<li>OnInitDialog() 에서 UserWnd를 생성해 줍니다.</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// <span class="doctag">TODO:</span> Add extra initialization here</span></div><div class="line">m_wndUser.m_hwndDlg = GetSafeHwnd();</div><div class="line">m_wndUser.Create(<span class="literal">NULL</span>, _T(<span class="string">""</span>), WS_VISIBLE | WS_BORDER, CRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>), <span class="keyword">this</span>, IDC_USER_WND);</div></pre></td></tr></table></figure>
+<p>이로서 준비는 끝났습니다.<br>위에서 언급한 3가지 방법 (Message, Notify, Command)에 대해서 어떤 방법으로 구현을 하더라도 이 준비과정은 똑같습니다.  </p>
+<h2 id="1-Message-방식"><a href="#1-Message-방식" class="headerlink" title="1. Message 방식"></a>1. Message 방식</h2><ul>
+<li>Dialog에 해당 User Control을 1개만 사용할 경우 유용합니다.</li>
+<li>Dialog에 Message로 전달하는 방식입니다.</li>
+<li>return값을 받을수 있기 때문에 User Control에서 그 값에 따라 처리가 가능합니다.</li>
+<li>대신 Message 전달 이후 return값을 받아야 하므로 해당 처리가 끝날때까지 대기하게 됩니다.</li>
+<li>Dialog에 같은 User Control이 여러 개 있을 경우 모두 같은 Message로 전달되므로, Parameter로 Control ID를 보내는 등의 방법을 사용하여 Dialog에서 처리하는 함수 내부에서 구분하여 사용해야 합니다.</li>
+</ul>
+<h5 id="UserWnd-cpp-1"><a href="#UserWnd-cpp-1" class="headerlink" title="UserWnd.cpp"></a>UserWnd.cpp</h5><p>OnLButtonDown 함수 내부에 아래와 같이 1줄을 추가</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> CUserWnd::OnLButtonDown(UINT nFlags, CPoint point)</div><div class="line">&#123;</div><div class="line">	HWND hWnd = GetSafeHwnd();</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (hWnd == <span class="literal">NULL</span>) <span class="keyword">return</span>;</div><div class="line">	<span class="keyword">if</span> (!::IsWindow(hWnd)) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> nID = GetDlgCtrlID();</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (m_hwndDlg != <span class="literal">nullptr</span>)</div><div class="line">	&#123;</div><div class="line">		::SendMessage(m_hwndDlg, WM_USER_WND, nID, <span class="literal">NULL</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	CWnd::OnLButtonDown(nFlags, point);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="Dialog-Header-file-필자의-경우-UserCtrlMsgDlg-h-1"><a href="#Dialog-Header-file-필자의-경우-UserCtrlMsgDlg-h-1" class="headerlink" title="Dialog Header file (필자의 경우 UserCtrlMsgDlg.h)"></a>Dialog Header file (필자의 경우 UserCtrlMsgDlg.h)</h5><p>Message를 처리할 함수를 선언해주세요.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function">afx_msg LRESULT <span class="title">OnUserWnd</span><span class="params">(WPARAM wParam, LPARAM lPraram)</span></span>;</div></pre></td></tr></table></figure>
+<h5 id="Dialog-cpp-file-필자의-경우-UserCtrlMsgDlg-cpp-1"><a href="#Dialog-cpp-file-필자의-경우-UserCtrlMsgDlg-cpp-1" class="headerlink" title="Dialog cpp file (필자의 경우 UserCtrlMsgDlg.cpp)"></a>Dialog cpp file (필자의 경우 UserCtrlMsgDlg.cpp)</h5><p>Message Map에 아래 1줄을 추가해주세요.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ON_MESSAGE(WM_USER_WND, OnUserWnd)</div></pre></td></tr></table></figure>
+<ul>
+<li>ON_MESSAGE 경우 Message번호 와 실행할 함수를 인자로 설정해줍니다.</li>
+</ul>
+<p>Command를 처리할 함수를 구현합니다.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">LRESULT CUserCtrlMsgDlg::OnUserWnd(WPARAM wParam, LPARAM lPraram)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> nID = (<span class="keyword">int</span>)wParam; <span class="comment">// 해당 ID를 비교해서 Control 구분 가능</span></div><div class="line"></div><div class="line">	AfxMessageBox(_T(<span class="string">"ON MESSAGE"</span>));</div><div class="line"></div><div class="line">	<span class="keyword">return</span> TRUE;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>이제 실행 후 왼쪽 상단의 검은색 선 안을 누르면 해당 메세지가 출력되는 것을 확인 할 수 있습니다.</p>
+<h2 id="2-Notify-방식"><a href="#2-Notify-방식" class="headerlink" title="2. Notify 방식"></a>2. Notify 방식</h2><ul>
+<li>Dialog에 해당 User Control이 여러개 있고, 전달한 메세지 종류가 2가지 이상인 경우 유용합니다.</li>
+<li>Dialog에 Notify로 알려주고 User Control은 계속 남은 처리를 진행합니다.</li>
+</ul>
+<h5 id="UserWnd-cpp-2"><a href="#UserWnd-cpp-2" class="headerlink" title="UserWnd.cpp"></a>UserWnd.cpp</h5><p>OnLButtonDown 함수 내부에 아래와 같이 NMHDR 선언과 SendMessage를 추가</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> CUserWnd::OnLButtonDown(UINT nFlags, CPoint point)</div><div class="line">&#123;</div><div class="line">	HWND hWnd = GetSafeHwnd();</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (hWnd == <span class="literal">NULL</span>) <span class="keyword">return</span>;</div><div class="line">	<span class="keyword">if</span> (!::IsWindow(hWnd)) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> nID = GetDlgCtrlID();</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (m_hwndDlg != <span class="literal">nullptr</span>)</div><div class="line">	&#123;</div><div class="line">		NMHDR nmhdr;</div><div class="line">		nmhdr.code = WM_USER_WND;</div><div class="line">		nmhdr.idFrom = nID;</div><div class="line">		nmhdr.hwndFrom = hWnd;</div><div class="line">		::SendMessage(m_hwndDlg, WM_NOTIFY, nID, (LPARAM)&amp;nmhdr);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	CWnd::OnLButtonDown(nFlags, point);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="Dialog-Header-file-필자의-경우-UserCtrlMsgDlg-h-2"><a href="#Dialog-Header-file-필자의-경우-UserCtrlMsgDlg-h-2" class="headerlink" title="Dialog Header file (필자의 경우 UserCtrlMsgDlg.h)"></a>Dialog Header file (필자의 경우 UserCtrlMsgDlg.h)</h5><p>Message를 처리할 함수를 선언해주세요.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function">afx_msg <span class="keyword">void</span> <span class="title">OnNotyfyUserWnd</span><span class="params">(NMHDR* pNMHDR, LRESULT* pResult)</span></span>;</div></pre></td></tr></table></figure>
+<h5 id="Dialog-cpp-file-필자의-경우-UserCtrlMsgDlg-cpp-2"><a href="#Dialog-cpp-file-필자의-경우-UserCtrlMsgDlg-cpp-2" class="headerlink" title="Dialog cpp file (필자의 경우 UserCtrlMsgDlg.cpp)"></a>Dialog cpp file (필자의 경우 UserCtrlMsgDlg.cpp)</h5><p>Message Map에 아래 1줄을 추가해주세요.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ON_NOTIFY(WM_USER_WND, IDC_USER_WND, OnNotyfyUserWnd)</div></pre></td></tr></table></figure>
+<ul>
+<li>ON_NOTIFY 경우 Message번호, Contril ID와 실행할 함수를 인자로 설정해줍니다.</li>
+</ul>
+<p>Command를 처리할 함수를 구현합니다.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> CUserCtrlMsgDlg::OnNotyfyUserWnd(NMHDR* pNMHDR, LRESULT* pResult)</div><div class="line">&#123;</div><div class="line">	AfxMessageBox(_T(<span class="string">"ON NOTIFY"</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="3-Command-방식"><a href="#3-Command-방식" class="headerlink" title="3. Command 방식"></a>3. Command 방식</h2><ul>
+<li>Dialog에 해당 User Control 별로 전달할 메세지가 1가지 밖에 없을 경우 유용합니다.<ul>
+<li>e.g. button의 경우 눌렀을 경우에만 메세지를 전달하면 되고, 나머지 경우는 전달하지 않아도 될 경우 유용합니다.</li>
+</ul>
+</li>
+</ul>
+<h5 id="UserWnd-cpp-3"><a href="#UserWnd-cpp-3" class="headerlink" title="UserWnd.cpp"></a>UserWnd.cpp</h5><p>OnLButtonDown 함수 내부에 아래와 같이 1줄을 추가</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> CUserWnd::OnLButtonDown(UINT nFlags, CPoint point)</div><div class="line">&#123;</div><div class="line">	HWND hWnd = GetSafeHwnd();</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (hWnd == <span class="literal">NULL</span>) <span class="keyword">return</span>;</div><div class="line">	<span class="keyword">if</span> (!::IsWindow(hWnd)) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> nID = GetDlgCtrlID();</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (m_hwndDlg != <span class="literal">nullptr</span>)</div><div class="line">	&#123;</div><div class="line">		::SendMessage(m_hwndDlg, WM_COMMAND, nID, <span class="literal">NULL</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	CWnd::OnLButtonDown(nFlags, point);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="Dialog-Header-file-필자의-경우-UserCtrlMsgDlg-h-3"><a href="#Dialog-Header-file-필자의-경우-UserCtrlMsgDlg-h-3" class="headerlink" title="Dialog Header file (필자의 경우 UserCtrlMsgDlg.h)"></a>Dialog Header file (필자의 경우 UserCtrlMsgDlg.h)</h5><p>Command를 처리할 함수를 선언해주세요.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function">afx_msg <span class="keyword">void</span> <span class="title">OnCommandUserWnd</span><span class="params">()</span></span>;</div></pre></td></tr></table></figure>
+<h5 id="Dialog-cpp-file-필자의-경우-UserCtrlMsgDlg-cpp-3"><a href="#Dialog-cpp-file-필자의-경우-UserCtrlMsgDlg-cpp-3" class="headerlink" title="Dialog cpp file (필자의 경우 UserCtrlMsgDlg.cpp)"></a>Dialog cpp file (필자의 경우 UserCtrlMsgDlg.cpp)</h5><p>Message Map에 아래 1줄을 추가해주세요.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ON_COMMAND(IDC_USER_WND, OnCommandUserWnd)</div></pre></td></tr></table></figure>
+<ul>
+<li>ON_COMMAND의 경우 Control ID 와 실행할 함수를 인자로 설정해줍니다.</li>
+</ul>
+<p>Command를 처리할 함수를 구현합니다.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> CUserCtrlMsgDlg::OnCommandUserWnd()</div><div class="line">&#123;</div><div class="line">	AfxMessageBox(_T(<span class="string">"ON COMMAND"</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>이제 실행 후 왼쪽 상단의 검은색 선 안을 누르면 해당 메세지가 출력되는 것을 확인 할 수 있습니다.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://DevStarSJ.github.io/2016/02/16/mfc.wnd.message/" data-id="cj3at0waj00880c7bit4cbb7f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook-square" href="https://www.facebook.com/seokjoon.yun.9" target="_blank">
+                        <i class="icon fa fa-facebook-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/DevStarSJ" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="slideshare" href="https://www.slideshare.net/seokjoonyun9" target="_blank">
+                        <i class="icon fa fa-slideshare"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/sjyun" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/1/108379332089647292574" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/02/20/Oracle.read.plan.trace/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Oracle Plan,Trace
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/02/13/05.01.sql/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">SQLP etc-1 외워야 할 SQL 문법</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Review/">Review</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/">CPP</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/MFC/">MFC</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/APIGateway/" style="font-size: 16.36px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 14.55px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 12.73px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18.18px;">AWS</a> <a href="/tags/Book/" style="font-size: 17.27px;">Book</a> <a href="/tags/C/" style="font-size: 19.09px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 10.91px;">CI/CD</a> <a href="/tags/CPP/" style="font-size: 14.55px;">CPP</a> <a href="/tags/DataScience/" style="font-size: 11.82px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 10.91px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 11.82px;">JavaScript</a> <a href="/tags/JupyterNotebook/" style="font-size: 10.91px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 18.18px;">Lambda</a> <a href="/tags/MFC/" style="font-size: 14.55px;">MFC</a> <a href="/tags/Node-JS/" style="font-size: 13.64px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 15.45px;">Python</a> <a href="/tags/Review/" style="font-size: 17.27px;">Review</a> <a href="/tags/SIMD/" style="font-size: 10px;">SIMD</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 11.82px;">Serverless</a> <a href="/tags/ToolkitPro/" style="font-size: 10.91px;">ToolkitPro</a> <a href="/tags/TypeScript/" style="font-size: 10.91px;">TypeScript</a> <a href="/tags/UAC/" style="font-size: 10px;">UAC</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Yun Seok-joon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://DevStarSJ.github.io/2016/02/16/mfc.wnd.message/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

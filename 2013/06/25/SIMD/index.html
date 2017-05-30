@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>MFC SIMD Vector Class 사용법 정리 | Dev Star SJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="CPP,MFC,SIMD" />
+    
+    <meta name="description" content="Header File : &amp;lt;dvec.h&amp;gt;  SIMD Vector Class 명명법12 &amp;lt;Type&amp;gt;&amp;lt;Signed&amp;gt;&amp;lt;Bits&amp;gt;vec&amp;lt;Nums&amp;gt;&amp;#123; F | I &amp;#125; &amp;#123; s | u &amp;#125; &amp;#123; 64 | 32 | 16 | 8 &amp;#125; vec &amp;#123; 8 | 4 | 2">
+<meta name="keywords" content="CPP,MFC,SIMD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MFC SIMD Vector Class 사용법 정리">
+<meta property="og:url" content="http://DevStarSJ.github.io/2013/06/25/SIMD/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="Header File : &amp;lt;dvec.h&amp;gt;  SIMD Vector Class 명명법12 &amp;lt;Type&amp;gt;&amp;lt;Signed&amp;gt;&amp;lt;Bits&amp;gt;vec&amp;lt;Nums&amp;gt;&amp;#123; F | I &amp;#125; &amp;#123; s | u &amp;#125; &amp;#123; 64 | 32 | 16 | 8 &amp;#125; vec &amp;#123; 8 | 4 | 2">
+<meta property="og:updated_time" content="2017-05-29T23:28:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MFC SIMD Vector Class 사용법 정리">
+<meta name="twitter:description" content="Header File : &amp;lt;dvec.h&amp;gt;  SIMD Vector Class 명명법12 &amp;lt;Type&amp;gt;&amp;lt;Signed&amp;gt;&amp;lt;Bits&amp;gt;vec&amp;lt;Nums&amp;gt;&amp;#123; F | I &amp;#125; &amp;#123; s | u &amp;#125; &amp;#123; 64 | 32 | 16 | 8 &amp;#125; vec &amp;#123; 8 | 4 | 2">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">DevStarSJ</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/">Book</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/Review/">Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/">CPP</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/MFC/">MFC</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/CPP/">CPP</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/CPP/MFC/">MFC</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-SIMD" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        MFC SIMD Vector Class 사용법 정리
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2013/06/25/SIMD/" class="article-date">
+            <time datetime="2013-06-25T06:28:00.000Z" itemprop="datePublished">2013-06-25</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/CPP/">CPP</a>, <a class="tag-link" href="/tags/MFC/">MFC</a>, <a class="tag-link" href="/tags/SIMD/">SIMD</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <ul>
+<li>Header File : <code>&lt;dvec.h&gt;</code></li>
+</ul>
+<h2 id="SIMD-Vector-Class-명명법"><a href="#SIMD-Vector-Class-명명법" class="headerlink" title="SIMD Vector Class 명명법"></a>SIMD Vector Class 명명법</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> &lt;Type&gt;&lt;Signed&gt;&lt;Bits&gt;vec&lt;Nums&gt;</div><div class="line">&#123; F | I &#125; &#123; s | u &#125; &#123; 64 | 32 | 16 | 8 &#125; vec &#123; 8 | 4 | 2 | 1 &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>F : 실수 , I : 정수</p>
+</li>
+<li><p>s : signed, u : unsigned ( I에만 사용됨)</p>
+</li>
+<li><p>64 : double, __int64 , 32 : float, int , 16: short , 8 : char</p>
+</li>
+<li><p>8,4,2,1 : pack 개수 (Bits x Nums 는 128을 넘어 갈 수 없다. )</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Ex) unsigned int 4개pack class : Iu32vec4 , float 4개 packclass : F32vec4</div></pre></td></tr></table></figure>
+<h2 id="초기화"><a href="#초기화" class="headerlink" title="초기화"></a>초기화</h2><ul>
+<li>괄호 안에 각 변수들을 지정<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Ex) Is32vec4 pint4(10,20,30,40);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="1-연산자-vec-vec-op-vec"><a href="#1-연산자-vec-vec-op-vec" class="headerlink" title="1. 연산자 ( vec = vec op vec)"></a>1. 연산자 ( vec = vec op vec)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">    = : 대입</div><div class="line">+, += : 덧셈</div><div class="line">- , -= : 뺄셈</div><div class="line">* , *=  : 곱셈</div><div class="line">/ , /+ : 나눗셈 (실수 연산만 가능)</div><div class="line">&amp; : 논리연산 AND</div><div class="line">| : 논리연산 OR</div><div class="line">^ : 논리연산 XOR</div></pre></td></tr></table></figure>
+<h3 id="2-연산자-vec-vec-op-n"><a href="#2-연산자-vec-vec-op-n" class="headerlink" title="2. 연산자 (vec = vec op n )"></a>2. 연산자 (vec = vec op n )</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;, &lt;&lt;== : Left Shift ( x2 )</div><div class="line">&gt;&gt; , &gt;&gt;== : Right Shift ( /2 )</div></pre></td></tr></table></figure>
+<h3 id="3-함수-vec-func-vec-vec"><a href="#3-함수-vec-func-vec-vec" class="headerlink" title="3. 함수 (vec = func(vec, vec)"></a>3. 함수 (vec = func(vec, vec)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">simd_min() : 최소값</div><div class="line">simd_max() : 최대값</div><div class="line">andnot() : 논리연산 And Not</div></pre></td></tr></table></figure>
+<h3 id="4-비교함수-참이면-0xff…-거짓이면-0"><a href="#4-비교함수-참이면-0xff…-거짓이면-0" class="headerlink" title="4. 비교함수 ( 참이면 0xff…, 거짓이면 0 )"></a>4. 비교함수 ( 참이면 0xff…, 거짓이면 0 )</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">cmpeq : ==</div><div class="line">cmpneq : !=</div><div class="line">cmpgt : &gt;</div><div class="line">cmpge : &gt;=</div><div class="line">cmplt : &lt;</div><div class="line">cmple : &lt;=</div><div class="line">cmpnlt : !(A &lt; B)</div><div class="line">cmpnle : !(A &lt;= B)</div><div class="line">cmpngt : !(A &gt; B)</div><div class="line">cmpnge : !(A &gt;= B)</div></pre></td></tr></table></figure>
+<h3 id="5-Select-R-Select-A-B-C-D-gt-if-A-비교-B-R-C-else-R-D"><a href="#5-Select-R-Select-A-B-C-D-gt-if-A-비교-B-R-C-else-R-D" class="headerlink" title="5. Select : R = Select(A,B,C,D)=&gt; if (A 비교 B) R = C else R = D"></a>5. Select : R = Select(A,B,C,D)=&gt; if (A 비교 B) R = C else R = D</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">select_eq : ==</div><div class="line">select_neq : !=</div><div class="line">select_gt : &gt;</div><div class="line">select_ge : &gt;=</div><div class="line">select_lt : &lt;</div><div class="line">select_le : &lt;=</div><div class="line">select_nlt : !(A &lt; B)</div><div class="line">select_nle : !(A &lt;= B)</div><div class="line">select_ngt : !(A &gt; B)</div><div class="line">select_nge : !(A &gt;= B)</div></pre></td></tr></table></figure>
+<h3 id="6-Unpacked-Pack-예제는-Is32vec4"><a href="#6-Unpacked-Pack-예제는-Is32vec4" class="headerlink" title="6. Unpacked / Pack (예제는 Is32vec4)"></a>6. Unpacked / Pack (예제는 Is32vec4)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">R = unpack_low( A, B) =&gt; R = ( B1 , A1 , B0 , A0 )</div><div class="line">R = unpack_high(A, B) =&gt; R = ( B3 , A3 , B2 , A2 )</div><div class="line">R = pack_sat(A, B) =&gt; Is16vec8 R = (B3, B2, B1, B0, A3, A2, A1, A0) : 정수형만지원</div></pre></td></tr></table></figure>
+<h3 id="7-정수-Vector-lt-gt-Array-Vector-Class에서-지원하지-앟음-intrinsic-함수-이용"><a href="#7-정수-Vector-lt-gt-Array-Vector-Class에서-지원하지-앟음-intrinsic-함수-이용" class="headerlink" title="7.정수 Vector &lt;-&gt; Array :Vector Class에서 지원하지 앟음 intrinsic 함수 이용"></a>7.정수 Vector &lt;-&gt; Array :Vector Class에서 지원하지 앟음 intrinsic 함수 이용</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Is32vec4 A = _mm_load_si128((__m128i*) p) : 배열 Pointer를 __m128i* 로 casting 후 저장  </div><div class="line">                                                            (정렬된 메모리)</div><div class="line"></div><div class="line">s32vec4 A = _mm_loadu_si128((__m128i*) p) : 정렬되지 않은 메모리에서 데이터 읽어오기</div><div class="line">_mm_store_si128((_m128i*) p , A) : A에 저장된 값들을 배열 p에순서대로 저장</div><div class="line">                                            (정렬된 메모리)</div><div class="line">_mm_storeu_si128((_m128i*) p , A) : 정렬되지 않은 메모리에 데이터 쓰기</div></pre></td></tr></table></figure>
+<h3 id="8-실수-Vector-lt-gt-Array"><a href="#8-실수-Vector-lt-gt-Array" class="headerlink" title="8. 실수 Vector &lt;-&gt; Array"></a>8. 실수 Vector &lt;-&gt; Array</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">loadu (F32vec4 R, float* a) : a[0] ~ a[3] 4개의 float 값을읽어서 R에 저장</div><div class="line">storeu(float* a, F32vec4 R) : R의 값을 a[0] ~ a[3]에저장</div><div class="line">store_nta(float* a, F32vec$ R) : 버퍼 없이 메모리 a[0] ~ a[3]에저장</div></pre></td></tr></table></figure>
+<h3 id="9-수학-함수-실수-연산만-가능"><a href="#9-수학-함수-실수-연산만-가능" class="headerlink" title="9.수학 함수 (실수 연산만 가능)"></a>9.수학 함수 (실수 연산만 가능)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">R = sqrt(A) : 제곱근 Root</div><div class="line">R = rcp(A) : 역분수 : R = 1 / A</div><div class="line">R = rsqrt(A) : 제곱근 역분수 : R = 1 / Root A</div><div class="line">R = rcp_nr(A) : Newton-Raphson법의 역분수 : R = rcp(A) * 2 –A * rcp(A) * rcp(A)</div><div class="line">R = rsqrt_nr(A) : Newton-Raphson법의 제곤근 역분수 : R = rsqrt(A)/ 2 * ( 3 – A * rsqrt(A) * rsqrt(A) )</div><div class="line">F = add_horizontal(A) : float F = A0 + A1 + A2 + A3</div></pre></td></tr></table></figure>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://DevStarSJ.github.io/2013/06/25/SIMD/" data-id="cj3at0wa2006r0c7b1b6z55ok" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook-square" href="https://www.facebook.com/seokjoon.yun.9" target="_blank">
+                        <i class="icon fa fa-facebook-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/DevStarSJ" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="slideshare" href="https://www.slideshare.net/seokjoonyun9" target="_blank">
+                        <i class="icon fa fa-slideshare"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/sjyun" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/1/108379332089647292574" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2015/10/29/hanbit.netty/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            자바 네트워크 소녀 Netty
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">14</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Review/">Review</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/">CPP</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/MFC/">MFC</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/APIGateway/" style="font-size: 16.36px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 14.55px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 12.73px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18.18px;">AWS</a> <a href="/tags/Book/" style="font-size: 17.27px;">Book</a> <a href="/tags/C/" style="font-size: 19.09px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 10.91px;">CI/CD</a> <a href="/tags/CPP/" style="font-size: 14.55px;">CPP</a> <a href="/tags/DataScience/" style="font-size: 11.82px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 10.91px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 11.82px;">JavaScript</a> <a href="/tags/JupyterNotebook/" style="font-size: 10.91px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 18.18px;">Lambda</a> <a href="/tags/MFC/" style="font-size: 14.55px;">MFC</a> <a href="/tags/Node-JS/" style="font-size: 13.64px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 15.45px;">Python</a> <a href="/tags/Review/" style="font-size: 17.27px;">Review</a> <a href="/tags/SIMD/" style="font-size: 10px;">SIMD</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 11.82px;">Serverless</a> <a href="/tags/ToolkitPro/" style="font-size: 10.91px;">ToolkitPro</a> <a href="/tags/TypeScript/" style="font-size: 10.91px;">TypeScript</a> <a href="/tags/UAC/" style="font-size: 10px;">UAC</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Yun Seok-joon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://DevStarSJ.github.io/2013/06/25/SIMD/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
