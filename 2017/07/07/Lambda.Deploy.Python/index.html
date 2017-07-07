@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>Deploy AWS Lambda using Python | Dev Star SJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="AWS,Lambda,Python" />
+    
+    <meta name="description" content="Deploy Lambda PythonAWS Lambda에 Tutorial에 대한 이전 글  Lambda 와 API Gateway 연동 #1 (GET, POST) Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route) Lambda 와 API Gateway 연동 #3 (Proxy Resource) La">
+<meta name="keywords" content="AWS,Lambda,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deploy AWS Lambda using Python">
+<meta property="og:url" content="http://DevStarSJ.github.io/2017/07/07/Lambda.Deploy.Python/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="Deploy Lambda PythonAWS Lambda에 Tutorial에 대한 이전 글  Lambda 와 API Gateway 연동 #1 (GET, POST) Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route) Lambda 와 API Gateway 연동 #3 (Proxy Resource) La">
+<meta property="og:image" content="http://devstarsj.github.io/images/Lambda.Python.Deploy.01.png">
+<meta property="og:updated_time" content="2017-07-07T01:52:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deploy AWS Lambda using Python">
+<meta name="twitter:description" content="Deploy Lambda PythonAWS Lambda에 Tutorial에 대한 이전 글  Lambda 와 API Gateway 연동 #1 (GET, POST) Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route) Lambda 와 API Gateway 연동 #3 (Proxy Resource) La">
+<meta name="twitter:image" content="http://devstarsj.github.io/images/Lambda.Python.Deploy.01.png">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">DevStarSJ</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/">Book</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/Review/">Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/">CPP</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/MFC/">MFC</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/AWS/">AWS</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/AWS/Lambda/">Lambda</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Lambda.Deploy.Python" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Deploy AWS Lambda using Python
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/07/07/Lambda.Deploy.Python/" class="article-date">
+            <time datetime="2017-07-06T23:00:00.000Z" itemprop="datePublished">2017-07-07</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/AWS/">AWS</a>, <a class="tag-link" href="/tags/Lambda/">Lambda</a>, <a class="tag-link" href="/tags/Python/">Python</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Deploy-Lambda-Python"><a href="#Deploy-Lambda-Python" class="headerlink" title="Deploy Lambda Python"></a>Deploy Lambda Python</h1><p><strong>AWS Lambda</strong>에 Tutorial에 대한 이전 글</p>
+<ul>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateWay.01.md" target="_blank" rel="external">Lambda 와 API Gateway 연동 #1 (GET, POST)</a></li>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.02.Route.md" target="_blank" rel="external">Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route)</a></li>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.03.Proxy.md" target="_blank" rel="external">Lambda 와 API Gateway 연동 #3 (Proxy Resource)</a></li>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda.Packaging.Node.md" target="_blank" rel="external">Lambda Node.JS Packaging</a></li>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda.Python.md" target="_blank" rel="external">AWS Lambda에 Python Handler 만들기</a></li>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda.Packaging.Python.md" target="_blank" rel="external">Lambda Python Packaging</a></li>
+<li><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda.CSharp.md" target="_blank" rel="external">Lambda C# </a></li>
+</ul>
+<p>AWS Lambda에서 Python 3.6 runtime을 지원하게 된 이후 Python을 이용해서 Lambda function을 구현하는 일이 더 많아졌다. 하지만 기존에 작업했던 Node.JS 와 Python 사이에는 차이점들이 있어서 개발 과정 및 배포에 대해서 고민을 좀 해야만 했다.</p>
+<h2 id="Node-JS-와-Python의-차이"><a href="#Node-JS-와-Python의-차이" class="headerlink" title="Node.JS 와 Python의 차이"></a>Node.JS 와 Python의 차이</h2><ul>
+<li><p>외부 라이브러리 사용 (import에 path를 따로 지정하지 않아도 되는 조건)</p>
+<ul>
+<li>Node.JS<ul>
+<li>npm 설치시 기본적으로 현재 폴더 내에 npm_moudles 폴더를 생성한 후에 설치</li>
+<li>packages.json 파일을 이용해서 npm으로 설치한 패키지에 대한 정보를 관리</li>
+</ul>
+</li>
+<li>Python<ul>
+<li>pip 설치시 기본적으로 Global로 설치됨<ul>
+<li><code>pip install [패키지명] -t .</code> 으로 설치하면 현재 폴대 내에 패키지가 설치됨 (파일 구조가 많이 지저분해짐)</li>
+</ul>
+</li>
+<li>requirements.txt 파일을 이용하여 pip로 설치한 패키지에 대한 정보를 관리</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>응답 방식</p>
+<ul>
+<li>Node.JS<ul>
+<li>handler에 세번째 인자로 callback을 전달받아서 그 함수 내에 인자로 Response Data를 넣어서 실행</li>
+</ul>
+</li>
+<li>Python<ul>
+<li>handler 내에서 return으로 Response Data를 전달</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Python-외부-라이브러리-관리에-대한-고민"><a href="#Python-외부-라이브러리-관리에-대한-고민" class="headerlink" title="Python 외부 라이브러리 관리에 대한 고민"></a>Python 외부 라이브러리 관리에 대한 고민</h2><p>응답 방식에 대해서는 별 다른 고민을 안해도 되지만, 외부 라이브러리 사용 방법에 대해서는 아무리 고민을 해도 완벽하게 깔끔한 방법이 떠오르지 않았다. pip 설치를 특정 폴더내에 넣으려니 import 할때마다 경로를 지정해야하는게 많이 불편했다.</p>
+<p>그래서 든 생각이 작업공간과 배포공간을 분리하는 것이다. 기존에 TypeScript Node.JS로 AWS Lambda의 Binary Response 관련 작업을 할때에는 TypeScirpt의 컴파일된 js 파일과 원본 ts 파일에 대한 분리, 로컬에서 개발시에는 macos용 binary shell 실행파일을 사용해야 하며 배포시에는 AWS Lambda에서 실행가능한 linux용 binary shell 실행파일을 배포해야하는 것 등의 이유로 작업공간과 배포공간을 분리하였다.</p>
+<p>apex를 이용해서 배포하였으며, 배포시 shell script를 이용하였다.</p>
+<p>Python 작업을 할때에는 local에서 개발할때는 모든 pip 패키지들을 Global로 설치(또는 virtualenv를 활용하여 설치)하여 개발을 하였으며 배포할때 필요한 것들에 대해서는 requirements.txt에 기록하여서 해당 폴더 내에서 로컬에 설치한 후에 같이 배포를 하면 되겠단 생각이 들었다.</p>
+<p>Global에 설치된 pip가 굉장히 많을텐데, 현재 배포할 AWS Lambda Function에 사용되는 pip 패키지들을 어떻게 requirements.txt에 정리를 할까 ? 이걸 자동으로 해주는게 가능할까 ? 란 생각이 들어서 찾아보니 가능했다.</p>
+<p><code>pipreqs</code>(<a href="https://github.com/bndr/pipreqs" target="_blank" rel="external">https://github.com/bndr/pipreqs</a>)를 이용하면 해당 폴더내의 py 파일들에 사용된 외부 라이브러리를 requirements.txt 파일로 자동으로 생성해 준다.</p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install pipreqs</div></pre></td></tr></table></figure>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Usage:</div><div class="line">        pipreqs [options] &lt;path&gt;</div><div class="line"></div><div class="line">    Options:</div><div class="line">        --use-local           Use ONLY local package info instead of querying PyPI</div><div class="line">        --pypi-server &lt;url&gt;   Use custom PyPi server</div><div class="line">        --proxy &lt;url&gt;         Use Proxy, parameter will be passed to requests library. You can also just set the</div><div class="line">                              environments parameter in your terminal:</div><div class="line">                              $ export HTTP_PROXY=&quot;http://10.10.1.10:3128&quot;</div><div class="line">                              $ export HTTPS_PROXY=&quot;https://10.10.1.10:1080&quot;</div><div class="line">        --debug               Print debug information</div><div class="line">        --ignore &lt;dirs&gt;...    Ignore extra directories</div><div class="line">        --encoding &lt;charset&gt;  Use encoding parameter for file open</div><div class="line">        --savepath &lt;file&gt;     Save the list of requirements in the given file</div><div class="line">        --print               Output the list of requirements in the standard output</div><div class="line">        --force               Overwrite existing requirements.txt</div><div class="line">        --diff &lt;file&gt;         Compare modules in requirements.txt to project imports.</div><div class="line">        --clean &lt;file&gt;        Clean up requirements.txt by removing modules that are not imported in project.</div></pre></td></tr></table></figure>
+<p>이것도 자동으로 매번 새로 생성하는 것으로 해도 되겠지만, AWS Lambda의 경우 <code>boto3</code>는 기본적으로 설치가 되어 있으므로 deploy할때 같이 올릴 필요가 없다. 더군다나 boto3는 압축을 하여도 6 MB의 용량이므로 꽤나 큰 편이다. 그래서 수동으로 필요할때마다 <code>pipreqs .</code>을 실행항 뒤 <code>boto3</code>를 지워주는 식으로 사용중이다.</p>
+<h2 id="예제-코드"><a href="#예제-코드" class="headerlink" title="예제 코드"></a>예제 코드</h2><p><code>apex</code>가 설치되어 있고 local pc 에 (home)/.aws/credentials에 AWS 접속 정보가 저장되어 있다는 가정 하에 설명하겠다.</p>
+<h3 id="폴더구조"><a href="#폴더구조" class="headerlink" title="폴더구조"></a>폴더구조</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">(작업폴더)</div><div class="line">  - src (소스코드가 저장되어 있는 폴더)</div><div class="line">    - lambda_test (AWS Lambda Function에 대한 작업 폴더)</div><div class="line">      - index.py (예제 코드)</div><div class="line">      - requirements.txt (pip 외부 패키지에 대한 정보)</div><div class="line">      - function.json (apex 배포 설정)</div><div class="line">  - deploy.sh (배포 스크립트)</div><div class="line">  - project.json (apex 배포 설정)</div></pre></td></tr></table></figure>
+<h3 id="index-py"><a href="#index-py" class="headerlink" title="index.py"></a>index.py</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">handler</span><span class="params">(event, context)</span>:</span></div><div class="line">    URL = <span class="string">'http://www.zigbang.com'</span></div><div class="line">    response = requests.get(URL)</div><div class="line">    <span class="keyword">return</span> &#123; <span class="string">'statusCode'</span> : <span class="number">200</span>,</div><div class="line">             <span class="string">'headers'</span> : &#123; <span class="string">'Content-Type'</span>: <span class="string">'text/html'</span>&#125;,</div><div class="line">             <span class="string">'body'</span> : response.text &#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    response = handler(<span class="keyword">None</span>, <span class="keyword">None</span>)</div><div class="line">    print(response)</div></pre></td></tr></table></figure>
+<p>Local에서 <code>python index.py</code> 라고 실행시 html 파일 내용이 출력되면 성공한 것이다.</p>
+<h3 id="requirements-txt"><a href="#requirements-txt" class="headerlink" title="requirements.txt"></a>requirements.txt</h3><p>해당 폴더 내에서 <code>pipreqs .</code>로 실행하면 자동으로 생성된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">requests==2.14.2</div></pre></td></tr></table></figure>
+<h3 id="function-json"><a href="#function-json" class="headerlink" title="function.json"></a>function.json</h3><p>배포 시 Lambda version에 description으로 보여지는 내용을 적어서 배포한다.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"description"</span>: <span class="string">"test depoly"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="project-json"><a href="#project-json" class="headerlink" title="project.json"></a>project.json</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"test_deploy"</span>,</div><div class="line">  <span class="attr">"nameTemplate"</span>: <span class="string">"&#123;&#123;.Function.Name&#125;&#125;"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">"Python Lambda Test Deploy"</span>,</div><div class="line">  <span class="attr">"role"</span>: <span class="string">"..."</span>,</div><div class="line">  <span class="attr">"handler"</span>:<span class="string">"index.handler"</span>,</div><div class="line">  <span class="attr">"runtime"</span>:<span class="string">"python3.6"</span>,</div><div class="line">  <span class="attr">"memory"</span>: <span class="number">128</span>,</div><div class="line">  <span class="attr">"timeout"</span>:<span class="number">30</span>,</div><div class="line">  <span class="attr">"region"</span>: <span class="string">"..."</span>,</div><div class="line">  <span class="attr">"vpc"</span>: &#123;</div><div class="line">    <span class="attr">"securityGroups"</span>:[<span class="string">"..."</span>],</div><div class="line">    <span class="attr">"subnets"</span>:[ ... ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="deploy-sh"><a href="#deploy-sh" class="headerlink" title="deploy.sh"></a>deploy.sh</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">rm -rf functions/lambda_test</div><div class="line">cp -rf src/lambda_test functions/lambda_test</div><div class="line">cd functions/lambda_test</div><div class="line">pip install -r requirements.txt -t .</div><div class="line">cd ../..</div><div class="line"></div><div class="line">apex deploy</div></pre></td></tr></table></figure>
+<p>위 파일을 모두 생성한 후 배포 스크립트를 실행한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./deploy.sh</div></pre></td></tr></table></figure>
+<p>그럼 Lambda 가 배포될 것이며, AWS API Gateway로 연결하여 Browser에서 해당 staging의 url을 입력하면 결과를 볼 수 있다.</p>
+<p>API Gateway와의 연동 방법에 대해서는 이 Post에서는 생략하겠다. 이 글 맨 위에 해당 Link로 들어가면 안내를 해놓은 글이 있으니 참고하길 바란다.</p>
+<p><img src="/images/Lambda.Python.Deploy.01.png" alt=""></p>
+<h2 id="마치며"><a href="#마치며" class="headerlink" title="마치며"></a>마치며</h2><p>Python으로 AWS Lambda에서 작업시 pip로 외부 패키지를 해당 폴더내에 설치를 해야만 해서 작업하는 동안 지저분한 폴더 및 파일들로 인하여 불편했다. 거기서부터 시작하여 나름 깨끗한 개발 환경을 만들고자 했다.</p>
+<p>혹시 더 좋은 방법으로 작업하시는 분들은 피드백 부탁드립니다.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://DevStarSJ.github.io/2017/07/07/Lambda.Deploy.Python/" data-id="cj4t7ihvh0054k87b022g34pd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook-square" href="https://www.facebook.com/seokjoon.yun.9" target="_blank">
+                        <i class="icon fa fa-facebook-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/DevStarSJ" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="slideshare" href="https://www.slideshare.net/seokjoonyun9" target="_blank">
+                        <i class="icon fa fa-slideshare"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/sjyun" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/1/108379332089647292574" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/05/24/ASPNET.UsingPartialViewAsaComponent/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Using Partial View as a Component</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">15</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Review/">Review</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/">CPP</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/MFC/">MFC</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/APIGateway/" style="font-size: 16.36px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 14.55px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 12.73px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 18.18px;">AWS</a> <a href="/tags/Book/" style="font-size: 17.27px;">Book</a> <a href="/tags/C/" style="font-size: 19.09px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 10.91px;">CI/CD</a> <a href="/tags/CPP/" style="font-size: 14.55px;">CPP</a> <a href="/tags/DataScience/" style="font-size: 11.82px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 10.91px;">DevOps</a> <a href="/tags/JavaScript/" style="font-size: 11.82px;">JavaScript</a> <a href="/tags/JupyterNotebook/" style="font-size: 10.91px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 18.18px;">Lambda</a> <a href="/tags/MFC/" style="font-size: 14.55px;">MFC</a> <a href="/tags/Node-JS/" style="font-size: 13.64px;">Node.JS</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 15.45px;">Python</a> <a href="/tags/Review/" style="font-size: 17.27px;">Review</a> <a href="/tags/SIMD/" style="font-size: 10px;">SIMD</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/Serverless/" style="font-size: 11.82px;">Serverless</a> <a href="/tags/ToolkitPro/" style="font-size: 10.91px;">ToolkitPro</a> <a href="/tags/TypeScript/" style="font-size: 10.91px;">TypeScript</a> <a href="/tags/UAC/" style="font-size: 10px;">UAC</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Yun Seok-joon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://DevStarSJ.github.io/2017/07/07/Lambda.Deploy.Python/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
