@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2017-07-07T01:52:46.000Z</updated>
+  <updated>2017-07-14T09:45:38.000Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Deploy Tensorflow Docker Image to AWS ECS</title>
+    <link href="http://DevStarSJ.github.io/2017/07/14/ecs.tensorflow/"/>
+    <id>http://DevStarSJ.github.io/2017/07/14/ecs.tensorflow/</id>
+    <published>2017-07-13T23:00:00.000Z</published>
+    <updated>2017-07-14T09:45:38.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Deploy-Tensorflow-Docker-Image-to-AWS-ECS&quot;&gt;&lt;a href=&quot;#Deploy-Tensorflow-Docker-Image-to-AWS-ECS&quot; class=&quot;headerlink&quot; title=&quot;Deploy Ten
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="ECS" scheme="http://DevStarSJ.github.io/categories/AWS/ECS/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="ECS" scheme="http://DevStarSJ.github.io/tags/ECS/"/>
+    
+      <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+  </entry>
   
   <entry>
     <title>Deploy AWS Lambda using Python</title>
@@ -333,13 +365,13 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
-    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
     
   </entry>
   
@@ -506,30 +538,6 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
-    
-      <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Squel.js</title>
-    <link href="http://DevStarSJ.github.io/2016/11/08/JavaScript.Squel/"/>
-    <id>http://DevStarSJ.github.io/2016/11/08/JavaScript.Squel/</id>
-    <published>2016-11-07T15:00:00.000Z</published>
-    <updated>2017-04-23T09:39:53.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Squel-js&quot;&gt;&lt;a href=&quot;#Squel-js&quot; class=&quot;headerlink&quot; title=&quot;Squel.js&quot;&gt;&lt;/a&gt;Squel.js&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;JavaScript&lt;/strong&gt; 의 &lt;code&gt;SQL query 
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://DevStarSJ.github.io/categories/JavaScript/"/>
-    
-      <category term="Node.JS" scheme="http://DevStarSJ.github.io/categories/JavaScript/Node-JS/"/>
-    
-    
-      <category term="JavaScript" scheme="http://DevStarSJ.github.io/tags/JavaScript/"/>
     
       <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
     
