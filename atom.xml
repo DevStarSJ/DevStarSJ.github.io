@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2017-07-27T08:15:27.000Z</updated>
+  <updated>2017-08-06T01:02:20.000Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축</title>
+    <link href="http://DevStarSJ.github.io/2017/08/01/Devops.AWS.Jenkins.Win/"/>
+    <id>http://DevStarSJ.github.io/2017/08/01/Devops.AWS.Jenkins.Win/</id>
+    <published>2017-08-01T08:00:00.000Z</published>
+    <updated>2017-08-06T01:02:20.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ASP-NET-Web-Project를-EC2-or-Elastic-BeanStalk에-배포하는-Jenkins-시스템-구축&quot;&gt;&lt;a href=&quot;#ASP-NET-Web-Project를-EC2-or-Elastic-BeanStalk에-배포하는-Je
+    
+    </summary>
+    
+      <category term="DevOps" scheme="http://DevStarSJ.github.io/categories/DevOps/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="DevOps" scheme="http://DevStarSJ.github.io/tags/DevOps/"/>
+    
+      <category term="CI/CD" scheme="http://DevStarSJ.github.io/tags/CI-CD/"/>
+    
+      <category term="Jenkins" scheme="http://DevStarSJ.github.io/tags/Jenkins/"/>
+    
+  </entry>
   
   <entry>
     <title>Using Tensorflow Predict on Azure Function</title>
@@ -31,17 +57,17 @@
       <category term="Azure" scheme="http://DevStarSJ.github.io/categories/Azure/"/>
     
     
-      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
-    
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
+      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
+    
       <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
-      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
     
   </entry>
   
@@ -63,19 +89,19 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureContainerRegistry" scheme="http://DevStarSJ.github.io/tags/AzureContainerRegistry/"/>
-    
-      <category term="AzureContainerService" scheme="http://DevStarSJ.github.io/tags/AzureContainerService/"/>
-    
       <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
-    
-      <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="AzureContainerRegistry" scheme="http://DevStarSJ.github.io/tags/AzureContainerRegistry/"/>
+    
+      <category term="AzureContainerService" scheme="http://DevStarSJ.github.io/tags/AzureContainerService/"/>
+    
+      <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -97,15 +123,15 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="S3" scheme="http://DevStarSJ.github.io/tags/S3/"/>
     
@@ -129,15 +155,15 @@
       <category term="ECS" scheme="http://DevStarSJ.github.io/categories/AWS/ECS/"/>
     
     
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="ECS" scheme="http://DevStarSJ.github.io/tags/ECS/"/>
     
@@ -161,11 +187,11 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -257,13 +283,13 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -517,41 +543,13 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
-    
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AWS Lambda에 Python Handler 만들기</title>
-    <link href="http://DevStarSJ.github.io/2016/11/24/Lambda.Python/"/>
-    <id>http://DevStarSJ.github.io/2016/11/24/Lambda.Python/</id>
-    <published>2016-11-24T06:54:51.000Z</published>
-    <updated>2017-04-23T08:21:19.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;AWS-Lambda에-Python-Handler-만들기&quot;&gt;&lt;a href=&quot;#AWS-Lambda에-Python-Handler-만들기&quot; class=&quot;headerlink&quot; title=&quot;AWS Lambda에 Python Handler 만들기&quot;&gt;
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
-    
     
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
