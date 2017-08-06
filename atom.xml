@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2017-08-06T01:02:20.000Z</updated>
+  <updated>2017-08-06T03:27:11.000Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>aws-serverless-express 소개</title>
+    <link href="http://DevStarSJ.github.io/2017/08/06/aws-serverless-express/"/>
+    <id>http://DevStarSJ.github.io/2017/08/06/aws-serverless-express/</id>
+    <published>2017-08-06T01:07:00.000Z</published>
+    <updated>2017-08-06T03:27:11.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;aws-serverless-express-소개&quot;&gt;&lt;a href=&quot;#aws-serverless-express-소개&quot; class=&quot;headerlink&quot; title=&quot;aws-serverless-express 소개&quot;&gt;&lt;/a&gt;aws-serverl
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="Serverless" scheme="http://DevStarSJ.github.io/tags/Serverless/"/>
+    
+      <category term="Node.js" scheme="http://DevStarSJ.github.io/tags/Node-js/"/>
+    
+      <category term="express" scheme="http://DevStarSJ.github.io/tags/express/"/>
+    
+  </entry>
   
   <entry>
     <title>ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축</title>
@@ -59,15 +89,15 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
-    
       <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
-    
-      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
+    
+      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
     
   </entry>
   
@@ -89,19 +119,19 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
-    
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
       <category term="AzureContainerRegistry" scheme="http://DevStarSJ.github.io/tags/AzureContainerRegistry/"/>
     
       <category term="AzureContainerService" scheme="http://DevStarSJ.github.io/tags/AzureContainerService/"/>
     
+      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
+    
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
   </entry>
   
@@ -123,15 +153,15 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
       <category term="S3" scheme="http://DevStarSJ.github.io/tags/S3/"/>
     
@@ -155,15 +185,15 @@
       <category term="ECS" scheme="http://DevStarSJ.github.io/categories/AWS/ECS/"/>
     
     
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
       <category term="ECS" scheme="http://DevStarSJ.github.io/tags/ECS/"/>
     
@@ -187,11 +217,11 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -283,13 +313,13 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -487,13 +517,13 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
-    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
     
   </entry>
   
@@ -522,34 +552,6 @@
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
     
       <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lambda Python Packaging</title>
-    <link href="http://DevStarSJ.github.io/2016/11/24/Lambda.Packaging.Python/"/>
-    <id>http://DevStarSJ.github.io/2016/11/24/Lambda.Packaging.Python/</id>
-    <published>2016-11-24T07:54:51.000Z</published>
-    <updated>2017-04-23T08:21:19.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Lambda-Python-Packaging&quot;&gt;&lt;a href=&quot;#Lambda-Python-Packaging&quot; class=&quot;headerlink&quot; title=&quot;Lambda Python Packaging&quot;&gt;&lt;/a&gt;Lambda Python Pac
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
-    
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
     
   </entry>
   
