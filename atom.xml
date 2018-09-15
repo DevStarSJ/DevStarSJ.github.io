@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2017-08-06T03:37:25.000Z</updated>
+  <updated>2018-09-15T04:49:31.090Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Using AWS SageMaker to Tune Hyperparameter of XG-Boost</title>
+    <link href="http://DevStarSJ.github.io/2018/09/15/aws-sagemaker-hpt-tutorial/"/>
+    <id>http://DevStarSJ.github.io/2018/09/15/aws-sagemaker-hpt-tutorial/</id>
+    <published>2018-09-15T01:39:00.000Z</published>
+    <updated>2018-09-15T04:49:31.090Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Using-AWS-SageMaker-to-Tune-Hyperparameter-of-XG-Boost&quot;&gt;&lt;a href=&quot;#Using-AWS-SageMaker-to-Tune-Hyperparameter-of-XG-Boost&quot; class=&quot;hea
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="SageMaker" scheme="http://DevStarSJ.github.io/categories/AWS/SageMaker/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="SageMaker" scheme="http://DevStarSJ.github.io/tags/SageMaker/"/>
+    
+      <category term="HyperparameterTuning" scheme="http://DevStarSJ.github.io/tags/HyperparameterTuning/"/>
+    
+      <category term="XGBoost" scheme="http://DevStarSJ.github.io/tags/XGBoost/"/>
+    
+  </entry>
   
   <entry>
     <title>aws-serverless-express 소개</title>
@@ -91,13 +121,13 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
-    
       <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
     
   </entry>
   
@@ -119,19 +149,19 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
-    
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
       <category term="AzureContainerRegistry" scheme="http://DevStarSJ.github.io/tags/AzureContainerRegistry/"/>
     
       <category term="AzureContainerService" scheme="http://DevStarSJ.github.io/tags/AzureContainerService/"/>
     
+      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
+    
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
   </entry>
   
@@ -157,11 +187,11 @@
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
       <category term="S3" scheme="http://DevStarSJ.github.io/tags/S3/"/>
     
@@ -187,13 +217,13 @@
     
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
       <category term="ECS" scheme="http://DevStarSJ.github.io/tags/ECS/"/>
     
@@ -524,34 +554,6 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lambda Node.JS Packaging</title>
-    <link href="http://DevStarSJ.github.io/2016/11/27/Lambda.Packaging.Node/"/>
-    <id>http://DevStarSJ.github.io/2016/11/27/Lambda.Packaging.Node/</id>
-    <published>2016-11-27T06:54:51.000Z</published>
-    <updated>2017-04-23T08:21:19.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Lambda-Node-JS-Packaging&quot;&gt;&lt;a href=&quot;#Lambda-Node-JS-Packaging&quot; class=&quot;headerlink&quot; title=&quot;Lambda Node.JS Packaging&quot;&gt;&lt;/a&gt;Lambda Node.JS
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
-    
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
-    
-      <category term="Node.JS" scheme="http://DevStarSJ.github.io/tags/Node-JS/"/>
     
   </entry>
   
