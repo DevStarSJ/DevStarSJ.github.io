@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS) | Dev Star SJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="JupyterNotebook,Matplotlib,한글폰트" />
+    
+    <meta name="description" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)이 포스트를 보기 전에 먼저 박조은님의 강의 : Matplotlib에서 한글 폰트 사용하기를 먼저 보고 따라해보기를 바란다. 그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러">
+<meta name="keywords" content="JupyterNotebook,Matplotlib,한글폰트">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)">
+<meta property="og:url" content="http://DevStarSJ.github.io/2018/10/13/jupyter.matplotlib.korean.font/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)이 포스트를 보기 전에 먼저 박조은님의 강의 : Matplotlib에서 한글 폰트 사용하기를 먼저 보고 따라해보기를 바란다. 그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러">
+<meta property="og:image" content="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.01.png">
+<meta property="og:updated_time" content="2018-10-14T12:46:34.602Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)">
+<meta name="twitter:description" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)이 포스트를 보기 전에 먼저 박조은님의 강의 : Matplotlib에서 한글 폰트 사용하기를 먼저 보고 따라해보기를 바란다. 그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.01.png">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">DevStarSJ</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/ECS/">ECS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/SageMaker/">SageMaker</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Azure/">Azure</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/">Book</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/Review/">Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/">CPP</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/MFC/">MFC</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Tips/">Tips</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-jupyter.matplotlib.korean.font" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/10/13/jupyter.matplotlib.korean.font/" class="article-date">
+            <time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/JupyterNotebook/">JupyterNotebook</a>, <a class="tag-link" href="/tags/Matplotlib/">Matplotlib</a>, <a class="tag-link" href="/tags/한글폰트/">한글폰트</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Jupyter-Notebook-Matplotlib에서-한글폰트-사용하기-macOS"><a href="#Jupyter-Notebook-Matplotlib에서-한글폰트-사용하기-macOS" class="headerlink" title="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)"></a>Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)</h1><p>이 포스트를 보기 전에 먼저 <a href="https://www.facebook.com/zzonee" target="_blank" rel="external">박조은</a>님의 <a href="https://programmers.co.kr/learn/courses/21/lessons/950" target="_blank" rel="external">강의 : Matplotlib에서 한글 폰트 사용하기</a>를 먼저 보고 따라해보기를 바란다.</p>
+<p>그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러 가지 시도를 해보고 알아낸 방법이다. 참고로 해당 설명은 <strong>macOS</strong> 기준인데, Linux도 비슷할 것이라 생각이되며, Windows의 경우도 어느 정도 참고는 할 수 있을것 같다.</p>
+<p>아래의 과정들 중 위 강의를 진행하면서 확인된 결과 필요없다고 판단되는 경우에는 skip 가능한 단계도 있을 수 있다.</p>
+<h2 id="1-관련-폴더-위치-알아내기"><a href="#1-관련-폴더-위치-알아내기" class="headerlink" title="1. 관련 폴더 위치 알아내기"></a>1. 관련 폴더 위치 알아내기</h2><p>먼저 위 강의에 있는 코드대로 실행하면서 관련 폴더의 위치를 알아 놓자.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.01.png" alt=""></p>
+<p>여기서 <code>캐시 위치</code>와 <code>설정 파일 위치</code>값을 잘 기억해 놓아야 한다.</p>
+<h2 id="2-시스템에-저장된-한글-폰트-위치-확인"><a href="#2-시스템에-저장된-한글-폰트-위치-확인" class="headerlink" title="2. 시스템에 저장된 한글 폰트 위치 확인"></a>2. 시스템에 저장된 한글 폰트 위치 확인</h2><p>위 강의 과정에서 설치된 한글 폰트가 없다고 판단되는 경우에는 아래 단계가 필요하다.</p>
+<p><strong>Launchpad</strong> 에서 <strong>서체관리자</strong> 를 찾아서 실행하라.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.03.png" alt=""></p>
+<p>거기서 적용할 한글폰트를 하나 찾는다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.04.png" alt=""></p>
+<p>필자의 경우 <strong>나눔바른고딕</strong>을 선택했다. 해당 폰트에서 마우스 우클릭하여 <strong>Finder에서 보기</strong>를 누른다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.05.png" alt=""></p>
+<p><strong>Finder</strong>에서 파일 위치를 확인해보자. 필자의 경우 <code>/Library/Fonts</code>내에 있는것이 확인되었다. 이 경로를 기억해 놓자.</p>
+<h2 id="3-한글폰트를-Matplotlib-설정-파일-위치로-복사"><a href="#3-한글폰트를-Matplotlib-설정-파일-위치로-복사" class="headerlink" title="3. 한글폰트를 Matplotlib 설정 파일 위치로 복사"></a>3. 한글폰트를 Matplotlib 설정 파일 위치로 복사</h2><p>앞에서 확인한 <code>설정 파일 위치</code> 정보가 필요하다. 그 경로 가장 마지막의 <code>matplotlibrc</code>는 파일명이고 그 바로 앞까지가 경로이다. 해당 경로 아래에 있는 <code>/fonts/ttf/</code>로 앞에서 찾은 한글 폰트 파일을 복사한다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp /Library/Fonts/Nanum*.ttf /anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/</div></pre></td></tr></table></figure>
+<h2 id="4-Matplotlib-캐시-파일-리셋"><a href="#4-Matplotlib-캐시-파일-리셋" class="headerlink" title="4. Matplotlib 캐시 파일 리셋"></a>4. Matplotlib 캐시 파일 리셋</h2><p>앞에서 확인한 <code>캐시 위치</code>로 이동해서 파일들을 확인해보자. 각자 사용자명에 따라 경로가 다를 것이다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/sjyun/.matplotlib</div><div class="line">ls</div></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.02.png" alt=""></p>
+<p>정확하지는 않지만, <strong>fontList.json</strong> 은 Python 2.0용 <strong>fontList-v300.json</strong>은 Python 3.0용으로 추정된다. 캐시 파일을 삭제한 뒤 새로 실행하면 캐시 파일이 새로 생성되는데, 그렇다고 파일 삭제는 위험하니 파일명 뒤에 .backup를 붙여주도록 하자.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mv fontList.json fontList.json.backup</div><div class="line">mv fontList-v300.json fontList-voo.json.backup</div></pre></td></tr></table></figure>
+<h2 id="5-Jupyter-Notebook-및-Matplotlib-재실행"><a href="#5-Jupyter-Notebook-및-Matplotlib-재실행" class="headerlink" title="5. Jupyter Notebook 및 Matplotlib 재실행"></a>5. Jupyter Notebook 및 Matplotlib 재실행</h2><p>이제 위 변경사항들을 새로 적용시키기 위해서는 <strong>Jupyter Notebook</strong>과 <strong>Matplotlib</strong>의 재실행이 필요하다. 다시 실행한 다음 코드상에서 <code>import matplotlib</code>를 실행하면 캐시 파일이 새로 생성 된다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.06.png" alt=""></p>
+<p>이제 다시 예제 코드를 돌려보면 한글이 제대로 나오는 것을 확인 할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.07.png" alt=""></p>
+<h2 id="6-정리"><a href="#6-정리" class="headerlink" title="6. 정리"></a>6. 정리</h2><p>한글 폰트 및 각종 필요한 위치 확인 및 예제 실행은 아래 노트북 파일을 참고하면 된다.</p>
+<p><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Python/JupyterNotebook/matplotlib.korea_font.ipynb" target="_blank" rel="external">https://github.com/DevStarSJ/Study/blob/master/Blog/Python/JupyterNotebook/matplotlib.korea_font.ipynb</a></p>
+<p>이 예제코드도 <a href="https://www.facebook.com/zzonee" target="_blank" rel="external">박조은</a>님의 <a href="https://programmers.co.kr/learn/courses/21/lessons/950" target="_blank" rel="external">강의 : Matplotlib에서 한글 폰트 사용하기</a>를 참고한 것이다.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://DevStarSJ.github.io/2018/10/13/jupyter.matplotlib.korean.font/" data-id="cjn8vamm1008bd07bjg8lm02g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook-square" href="https://www.facebook.com/seokjoon.yun.9" target="_blank">
+                        <i class="icon fa fa-facebook-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/DevStarSJ" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="slideshare" href="https://www.slideshare.net/seokjoonyun9" target="_blank">
+                        <i class="icon fa fa-slideshare"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/sjyun" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/1/108379332089647292574" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/09/15/aws-sagemaker-hpt-tutorial/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Using AWS SageMaker to Tune Hyperparameter of XG-Boost</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/ECS/">ECS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/SageMaker/">SageMaker</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Azure/">Azure</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Review/">Review</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/">CPP</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/MFC/">MFC</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/APIGateway/" style="font-size: 15px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 14.17px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 12.5px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 19.17px;">AWS</a> <a href="/tags/Azure/" style="font-size: 10.83px;">Azure</a> <a href="/tags/AzureContainerRegistry/" style="font-size: 10px;">AzureContainerRegistry</a> <a href="/tags/AzureContainerService/" style="font-size: 10px;">AzureContainerService</a> <a href="/tags/AzureFileStorage/" style="font-size: 10.83px;">AzureFileStorage</a> <a href="/tags/AzureFunction/" style="font-size: 10px;">AzureFunction</a> <a href="/tags/Book/" style="font-size: 15.83px;">Book</a> <a href="/tags/C/" style="font-size: 18.33px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.67px;">CI/CD</a> <a href="/tags/CPP/" style="font-size: 14.17px;">CPP</a> <a href="/tags/DataScience/" style="font-size: 11.67px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.67px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/ECS/" style="font-size: 10px;">ECS</a> <a href="/tags/HyperparameterTuning/" style="font-size: 10px;">HyperparameterTuning</a> <a href="/tags/JavaScript/" style="font-size: 11.67px;">JavaScript</a> <a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/JupyterNotebook/" style="font-size: 11.67px;">JupyterNotebook</a> <a href="/tags/Lambda/" style="font-size: 17.5px;">Lambda</a> <a href="/tags/MFC/" style="font-size: 14.17px;">MFC</a> <a href="/tags/MachineLearning/" style="font-size: 13.33px;">MachineLearning</a> <a href="/tags/Matplotlib/" style="font-size: 10px;">Matplotlib</a> <a href="/tags/Node-JS/" style="font-size: 13.33px;">Node.JS</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 16.67px;">Python</a> <a href="/tags/Review/" style="font-size: 15.83px;">Review</a> <a href="/tags/S3/" style="font-size: 10px;">S3</a> <a href="/tags/SIMD/" style="font-size: 10px;">SIMD</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/SageMaker/" style="font-size: 10px;">SageMaker</a> <a href="/tags/Serverless/" style="font-size: 12.5px;">Serverless</a> <a href="/tags/Tensorflow/" style="font-size: 12.5px;">Tensorflow</a> <a href="/tags/ToolkitPro/" style="font-size: 10.83px;">ToolkitPro</a> <a href="/tags/TypeScript/" style="font-size: 10.83px;">TypeScript</a> <a href="/tags/UAC/" style="font-size: 10px;">UAC</a> <a href="/tags/XGBoost/" style="font-size: 10px;">XGBoost</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/한글폰트/" style="font-size: 10px;">한글폰트</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Yun Seok-joon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://DevStarSJ.github.io/2018/10/13/jupyter.matplotlib.korean.font/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
