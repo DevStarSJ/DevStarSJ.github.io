@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2018-10-14T12:46:34.602Z</updated>
+  <updated>2018-10-20T08:37:29.696Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Coursera Kaggle 강의(How to win a data science competition) week 1 요약</title>
+    <link href="http://DevStarSJ.github.io/2018/10/20/kaggle.coursera.competition.01/"/>
+    <id>http://DevStarSJ.github.io/2018/10/20/kaggle.coursera.competition.01/</id>
+    <published>2018-10-20T08:00:00.000Z</published>
+    <updated>2018-10-20T08:37:29.696Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-1-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-a-data-science-competiti
+    
+    </summary>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/categories/DataScience/"/>
+    
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/tags/DataScience/"/>
+    
+      <category term="Kaggle" scheme="http://DevStarSJ.github.io/tags/Kaggle/"/>
+    
+  </entry>
   
   <entry>
     <title>Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)</title>
@@ -59,9 +83,9 @@
       <category term="SageMaker" scheme="http://DevStarSJ.github.io/categories/AWS/SageMaker/"/>
     
     
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
       <category term="SageMaker" scheme="http://DevStarSJ.github.io/tags/SageMaker/"/>
     
@@ -143,17 +167,17 @@
       <category term="Azure" scheme="http://DevStarSJ.github.io/categories/Azure/"/>
     
     
+      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
+    
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
-    
       <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
-    
-      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
     
   </entry>
   
@@ -175,19 +199,19 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
-    
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
       <category term="AzureContainerRegistry" scheme="http://DevStarSJ.github.io/tags/AzureContainerRegistry/"/>
     
       <category term="AzureContainerService" scheme="http://DevStarSJ.github.io/tags/AzureContainerService/"/>
     
+      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
+    
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
   </entry>
   
@@ -209,15 +233,15 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
       <category term="S3" scheme="http://DevStarSJ.github.io/tags/S3/"/>
     
@@ -241,15 +265,15 @@
       <category term="ECS" scheme="http://DevStarSJ.github.io/categories/AWS/ECS/"/>
     
     
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
       <category term="ECS" scheme="http://DevStarSJ.github.io/tags/ECS/"/>
     
@@ -273,11 +297,11 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -369,13 +393,13 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -528,30 +552,6 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="Serverless" scheme="http://DevStarSJ.github.io/tags/Serverless/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Get Request Body in Action Method</title>
-    <link href="http://DevStarSJ.github.io/2017/01/23/CSharp.Aspnet.RequestBodyLog/"/>
-    <id>http://DevStarSJ.github.io/2017/01/23/CSharp.Aspnet.RequestBodyLog/</id>
-    <published>2017-01-22T15:00:00.000Z</published>
-    <updated>2017-05-24T03:25:12.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Get-Request-Body-in-Action-Method&quot;&gt;&lt;a href=&quot;#Get-Request-Body-in-Action-Method&quot; class=&quot;headerlink&quot; title=&quot;Get Request Body in Action
-    
-    </summary>
-    
-      <category term="C#" scheme="http://DevStarSJ.github.io/categories/C/"/>
-    
-      <category term="ASP.NET" scheme="http://DevStarSJ.github.io/categories/C/ASP-NET/"/>
-    
-    
-      <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
-    
-      <category term="ASP.NET" scheme="http://DevStarSJ.github.io/tags/ASP-NET/"/>
     
   </entry>
   
