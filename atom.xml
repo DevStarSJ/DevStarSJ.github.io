@@ -40,6 +40,30 @@
   </entry>
   
   <entry>
+    <title>Coursera Kaggle 강의(How to win a data science competition) week 2-1 EDA 요약</title>
+    <link href="http://DevStarSJ.github.io/2018/10/20/kaggle.coursera.competition.02/"/>
+    <id>http://DevStarSJ.github.io/2018/10/20/kaggle.coursera.competition.02/</id>
+    <published>2018-10-20T08:00:00.000Z</published>
+    <updated>2018-10-21T04:36:34.766Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-2-1-EDA-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-a-data-science-com
+    
+    </summary>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/categories/DataScience/"/>
+    
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/tags/DataScience/"/>
+    
+      <category term="Kaggle" scheme="http://DevStarSJ.github.io/tags/Kaggle/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)</title>
     <link href="http://DevStarSJ.github.io/2018/10/13/jupyter.matplotlib.korean.font/"/>
     <id>http://DevStarSJ.github.io/2018/10/13/jupyter.matplotlib.korean.font/</id>
@@ -83,9 +107,9 @@
       <category term="SageMaker" scheme="http://DevStarSJ.github.io/categories/AWS/SageMaker/"/>
     
     
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="SageMaker" scheme="http://DevStarSJ.github.io/tags/SageMaker/"/>
     
@@ -233,15 +257,15 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="S3" scheme="http://DevStarSJ.github.io/tags/S3/"/>
     
@@ -265,8 +289,6 @@
       <category term="ECS" scheme="http://DevStarSJ.github.io/categories/AWS/ECS/"/>
     
     
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
@@ -274,6 +296,8 @@
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="ECS" scheme="http://DevStarSJ.github.io/tags/ECS/"/>
     
@@ -297,11 +321,11 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -393,13 +417,13 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
     
     
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -509,32 +533,6 @@
     <id>http://DevStarSJ.github.io/2017/02/25/MonolithToServerless.02/</id>
     <published>2017-02-24T15:00:00.000Z</published>
     <updated>2017-04-23T09:28:21.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Monolith-to-Serverless-using-AWS-Lambda&quot;&gt;&lt;a href=&quot;#Monolith-to-Serverless-using-AWS-Lambda&quot; class=&quot;headerlink&quot; title=&quot;Monolith to Se
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
-    
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="Serverless" scheme="http://DevStarSJ.github.io/tags/Serverless/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Monolith to Serverless using AWS Lambda (1)</title>
-    <link href="http://DevStarSJ.github.io/2017/02/23/MonolithToServerless.01/"/>
-    <id>http://DevStarSJ.github.io/2017/02/23/MonolithToServerless.01/</id>
-    <published>2017-02-22T15:00:00.000Z</published>
-    <updated>2017-04-23T09:28:24.000Z</updated>
     
     <summary type="html">
     
