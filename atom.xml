@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2018-10-30T02:16:17.318Z</updated>
+  <updated>2018-10-30T08:53:49.680Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Coursera Kaggle 강의(How to win a data science competition) week 4-4 Ensemble 요약</title>
+    <link href="http://DevStarSJ.github.io/2018/10/30/kaggle.coursera.competition.04.02/"/>
+    <id>http://DevStarSJ.github.io/2018/10/30/kaggle.coursera.competition.04.02/</id>
+    <published>2018-10-30T08:53:00.000Z</published>
+    <updated>2018-10-30T08:53:49.680Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-4-4-Ensemble-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-a-data-scienc
+    
+    </summary>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/categories/DataScience/"/>
+    
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/tags/DataScience/"/>
+    
+      <category term="Kaggle" scheme="http://DevStarSJ.github.io/tags/Kaggle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Coursera Kaggle 강의(How to win a data science competition) week 4-1 Hyperparameter Tuning 요약</title>
+    <link href="http://DevStarSJ.github.io/2018/10/30/kaggle.coursera.competition.04.01/"/>
+    <id>http://DevStarSJ.github.io/2018/10/30/kaggle.coursera.competition.04.01/</id>
+    <published>2018-10-30T06:08:00.000Z</published>
+    <updated>2018-10-30T07:03:23.687Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-4-1-Hyperparameter-Tuning-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-
+    
+    </summary>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/categories/DataScience/"/>
+    
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/tags/DataScience/"/>
+    
+      <category term="Kaggle" scheme="http://DevStarSJ.github.io/tags/Kaggle/"/>
+    
+  </entry>
   
   <entry>
     <title>데이터를 철학하다</title>
@@ -40,6 +88,30 @@
       <category term="Book" scheme="http://DevStarSJ.github.io/tags/Book/"/>
     
       <category term="Review" scheme="http://DevStarSJ.github.io/tags/Review/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Coursera Kaggle 강의(How to win a data science competition) week 3-1 Metrics 요약</title>
+    <link href="http://DevStarSJ.github.io/2018/10/22/kaggle.coursera.competition.03.01/"/>
+    <id>http://DevStarSJ.github.io/2018/10/22/kaggle.coursera.competition.03.01/</id>
+    <published>2018-10-22T02:04:00.000Z</published>
+    <updated>2018-10-30T03:18:11.417Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-1-Metrics-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-a-data-science
+    
+    </summary>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/categories/DataScience/"/>
+    
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/tags/DataScience/"/>
+    
+      <category term="Kaggle" scheme="http://DevStarSJ.github.io/tags/Kaggle/"/>
     
   </entry>
   
@@ -476,80 +548,6 @@
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lambda에서 Lambda를 호출하는 방법</title>
-    <link href="http://DevStarSJ.github.io/2017/03/19/Lambda.invoke.Lambda/"/>
-    <id>http://DevStarSJ.github.io/2017/03/19/Lambda.invoke.Lambda/</id>
-    <published>2017-03-18T15:00:00.000Z</published>
-    <updated>2017-04-23T09:24:55.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Lambda에서-Lambda를-호출하는-방법&quot;&gt;&lt;a href=&quot;#Lambda에서-Lambda를-호출하는-방법&quot; class=&quot;headerlink&quot; title=&quot;Lambda에서 Lambda를 호출하는 방법&quot;&gt;&lt;/a&gt;Lambda에서 Lambd
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
-    
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>마이크로서비스 아키텍처 구축</title>
-    <link href="http://DevStarSJ.github.io/2017/03/17/hanbit.Build.Microservices/"/>
-    <id>http://DevStarSJ.github.io/2017/03/17/hanbit.Build.Microservices/</id>
-    <published>2017-03-16T15:00:00.000Z</published>
-    <updated>2017-04-30T03:41:44.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;마이크로서비스-아키텍처-구축&quot;&gt;&lt;a href=&quot;#마이크로서비스-아키텍처-구축&quot; class=&quot;headerlink&quot; title=&quot;마이크로서비스 아키텍처 구축&quot;&gt;&lt;/a&gt;마이크로서비스 아키텍처 구축&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;한빛미디어&lt;/li&gt;
-&lt;
-    
-    </summary>
-    
-      <category term="Book" scheme="http://DevStarSJ.github.io/categories/Book/"/>
-    
-      <category term="Review" scheme="http://DevStarSJ.github.io/categories/Book/Review/"/>
-    
-    
-      <category term="Book" scheme="http://DevStarSJ.github.io/tags/Book/"/>
-    
-      <category term="Review" scheme="http://DevStarSJ.github.io/tags/Review/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AWS Lambda 사용에 관련된 Tip</title>
-    <link href="http://DevStarSJ.github.io/2017/03/11/Lambda.Tips.01/"/>
-    <id>http://DevStarSJ.github.io/2017/03/11/Lambda.Tips.01/</id>
-    <published>2017-03-10T15:00:00.000Z</published>
-    <updated>2017-04-23T09:24:20.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;AWS-Lambda-사용에-관련된-Tip&quot;&gt;&lt;a href=&quot;#AWS-Lambda-사용에-관련된-Tip&quot; class=&quot;headerlink&quot; title=&quot;AWS Lambda 사용에 관련된 Tip&quot;&gt;&lt;/a&gt;AWS Lambda 사용에 관련된 T
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
-    
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
   </entry>
   
