@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2018-10-21T08:44:20.245Z</updated>
+  <updated>2018-10-30T02:16:17.318Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>데이터를 철학하다</title>
+    <link href="http://DevStarSJ.github.io/2018/10/30/181030.data.philosophy/"/>
+    <id>http://DevStarSJ.github.io/2018/10/30/181030.data.philosophy/</id>
+    <published>2018-10-29T23:52:00.000Z</published>
+    <updated>2018-10-30T02:16:17.318Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;데이터를-철학하다&quot;&gt;&lt;a href=&quot;#데이터를-철학하다&quot; class=&quot;headerlink&quot; title=&quot;데이터를 철학하다&quot;&gt;&lt;/a&gt;데이터를 철학하다&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;흐름출판&lt;/li&gt;
+&lt;li&gt;정석권 지음 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    
+    </summary>
+    
+      <category term="Book" scheme="http://DevStarSJ.github.io/categories/Book/"/>
+    
+      <category term="Review" scheme="http://DevStarSJ.github.io/categories/Book/Review/"/>
+    
+    
+      <category term="Book" scheme="http://DevStarSJ.github.io/tags/Book/"/>
+    
+      <category term="Review" scheme="http://DevStarSJ.github.io/tags/Review/"/>
+    
+  </entry>
   
   <entry>
     <title>Coursera Kaggle 강의(How to win a data science competition) week 2-2 Validation 요약</title>
@@ -522,32 +550,6 @@
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Monolith to Serverless using AWS Lambda (3)</title>
-    <link href="http://DevStarSJ.github.io/2017/02/26/MonolithToServerless.03/"/>
-    <id>http://DevStarSJ.github.io/2017/02/26/MonolithToServerless.03/</id>
-    <published>2017-02-25T15:00:00.000Z</published>
-    <updated>2017-04-23T09:32:51.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Monolith-to-Serverless-using-AWS-Lambda&quot;&gt;&lt;a href=&quot;#Monolith-to-Serverless-using-AWS-Lambda&quot; class=&quot;headerlink&quot; title=&quot;Monolith to Se
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
-    
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="Serverless" scheme="http://DevStarSJ.github.io/tags/Serverless/"/>
     
   </entry>
   
