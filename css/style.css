@@ -294,7 +294,7 @@ code {
   box-sizing: border-box;
   -webkit-box-shadow: rgba(0,0,0,0.098) 0px 1px 1px 0px;
   box-shadow: rgba(0,0,0,0.098) 0px 1px 1px 0px;
-  padding-left: 340px;
+  padding-left: 250px;
   background: url("images/s-left.png") repeat-y left 0;
 }
 .main-body-inner:before,
@@ -557,8 +557,8 @@ code {
 }
 #sidebar {
   float: left;
-  margin-left: -340px;
-  width: 340px;
+  margin-left: -250px;
+  width: 250px;
 }
 #sidebar .sidebar-toggle {
   display: none;
@@ -1956,7 +1956,7 @@ i.icon:before {
     transition: opacity 0.2s ease-in;
   }
   .main-body-inner #sidebar.expend {
-    width: 340px;
+    width: 250px;
     overflow-y: auto;
     z-index: 2;
     -webkit-transition: width 0.2s ease-in;
