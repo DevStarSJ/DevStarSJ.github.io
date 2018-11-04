@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    <title>Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약 | Dev Star SJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="MachineLearning,DataScience,Kaggle" />
+    
+    <meta name="description" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약1. Mean encodings Categorical feature로 groupby하여 target의 mean 값을 feature로 추가 mean뿐 아니라 median, std, mi">
+<meta name="keywords" content="MachineLearning,DataScience,Kaggle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약">
+<meta property="og:url" content="http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/index.html">
+<meta property="og:site_name" content="Dev Star SJ">
+<meta property="og:description" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약1. Mean encodings Categorical feature로 groupby하여 target의 mean 값을 feature로 추가 mean뿐 아니라 median, std, mi">
+<meta property="og:image" content="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.15.png">
+<meta property="og:updated_time" content="2018-11-04T08:05:21.561Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약">
+<meta name="twitter:description" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약1. Mean encodings Categorical feature로 groupby하여 target의 mean 값을 feature로 추가 mean뿐 아니라 median, std, mi">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.15.png">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">DevStarSJ</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/ECS/">ECS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/Lambda/">Lambda</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/SageMaker/">SageMaker</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Azure/">Azure</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/">Book</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/Review/">Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/">C#</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET/">ASP.NET</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/C/C/">C#</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/">CPP</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CPP/MFC/">MFC</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/">Database</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/Oracle/">Oracle</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Database/SQLP/">SQLP</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/DevOps/">DevOps</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/">JavaScript</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/DataScience/">DataScience</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/Python/">Python</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/">Tips</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Tips/macOS/">macOS</a></li></ul></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/DataScience/">DataScience</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-kaggle.coursera.competition.03.02" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/11/04/kaggle.coursera.competition.03.02/" class="article-date">
+            <time datetime="2018-11-04T02:04:00.000Z" itemprop="datePublished">2018-11-04</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/DataScience/">DataScience</a>, <a class="tag-link" href="/tags/Kaggle/">Kaggle</a>, <a class="tag-link" href="/tags/MachineLearning/">MachineLearning</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-2-Advanced-Feature-Engineering-요약"><a href="#Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-2-Advanced-Feature-Engineering-요약" class="headerlink" title="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약"></a>Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약</h1><h2 id="1-Mean-encodings"><a href="#1-Mean-encodings" class="headerlink" title="1. Mean encodings"></a>1. Mean encodings</h2><ul>
+<li>Categorical feature로 <strong>groupby</strong>하여 <code>target의 mean</code> 값을 feature로 추가<ul>
+<li>mean뿐 아니라 median, std, min, max 등 해당 데이터의 성격을 잘 나타내는 통계 연산</li>
+</ul>
+</li>
+</ul>
+<p>ex)<br><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.15.png" alt=""></p>
+<p>위 그림의 경우</p>
+<ul>
+<li>Moscow : 1 2개, 0 3개 -&gt; 0.4</li>
+<li>Tver : 1 4개, 0 1개 -&gt; 0.8</li>
+<li>Klin : 0 all -&gt; 0.0</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.16.png" alt=""></p>
+<p>Label encoding의 경우 단순히 순서에 의해 부여된 숫자일뿐 target과의 관련성이 전혀 없지만, <code>Mean encoding</code>의 경우 0 ~ 1 사이 값으로 target값과 연관성이 있이 있다. 특히 0인 것과 아닌 것은 완전히 구분이 된다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.17.png" alt=""></p>
+<p>더 짧은 tree로도 더 좋은 성능을 발휘한다.</p>
+<p>적용 방법들</p>
+<ul>
+<li>Likelihood : Goods / (Goods + Bads) = mean(target)</li>
+<li>Weight of Evidence = ln(Goods / Bads) * 100</li>
+<li>Count = Goods = sum(target)</li>
+<li>Diff = Goods - Bads</li>
+</ul>
+<p>cf. Goods : 1의 개수, Bads : 0의 개수</p>
+<p>tree 개수가 증가하면면서 정확도가 계속 증가한다면 아직 overfitting이 아니라는 뜻이다.<br>이럴 때 <code>mean encoding</code>을 적용하여 더 빨리 정확도를 올릴 수 있다.<br>하지만 overfitting은 항상 주의해야 한다.<br>왜냐면 train, validation의 비율이 다를 경우 overfitting된 상태라면 결과가 좋지 않다.</p>
+<h2 id="2-Regularization-정규화"><a href="#2-Regularization-정규화" class="headerlink" title="2. Regularization (정규화)"></a>2. Regularization (정규화)</h2><h3 id="2-1-CV-Loop-regularization"><a href="#2-1-CV-Loop-regularization" class="headerlink" title="2.1 CV Loop regularization"></a>2.1 CV Loop regularization</h3><ul>
+<li>매주 직관적이고 강력한(robust)한 방법</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">y_tr = df_tr[<span class="string">'target'</span>].values</div><div class="line">skf = StratifiedKFold(y_tr, <span class="number">5</span>, shuffle=<span class="keyword">True</span>, random_state=<span class="number">123</span>)</div><div class="line"></div><div class="line"><span class="keyword">for</span> tr_ind, val_ind <span class="keyword">in</span> skf:</div><div class="line">    X_tr, X_val = df_tr.iloc[tr_ind], df_tr.iloc[val_ind]</div><div class="line">    <span class="keyword">for</span> col <span class="keyword">in</span> cols:</div><div class="line">        means = X_val[col].map(X_tr.groupby(col).target.mean())</div><div class="line">        X_val[col+<span class="string">'_mean_target'</span>] = means</div><div class="line">    train_new.iloc[val_ind] = X_val</div><div class="line"></div><div class="line">prior = df_tr[<span class="string">'target'</span>].mean() <span class="comment"># global mean</span></div><div class="line">train_new.fillna(prior, inplace=<span class="keyword">True</span>)</div></pre></td></tr></table></figure>
+<ul>
+<li>Fold를 나누어서 validation set의 feature를 train set의 <code>mean encoding</code>으로 설정 (보통 4~5 정도면 충분)<ul>
+<li>NA값은 global mean으로 설정</li>
+</ul>
+</li>
+</ul>
+<p>단 LOO (Leave one out)같은 극단적인 경우는 주의</p>
+<h3 id="2-2-Smoothing"><a href="#2-2-Smoothing" class="headerlink" title="2.2 Smoothing"></a>2.2 Smoothing</h3><p>다른 regularization을 얼만큼 적용시킬지를 <code>Alpha</code>값을 이용하여 설정</p>
+<p>$$ \frac{mean(target)<em>nrows + globalmean</em>alpha}{nrows + alpha} $$</p>
+<h3 id="2-3-Noise"><a href="#2-3-Noise" class="headerlink" title="2.3 Noise"></a>2.3 Noise</h3><p>통상적으로 노이즈를 추가하면 encoding의 품질이 저하되어서 얼마나 넣어야 할지 고민을 많이 해야 한다. LOO와 함께 사용하면 효과적이다. (자세한 설명이 없음)</p>
+<h3 id="2-4-Expanding-mean"><a href="#2-4-Expanding-mean" class="headerlink" title="2.4 Expanding mean"></a>2.4 Expanding mean</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cumsum = df_tr.groupby(col)[<span class="string">'target'</span>].cumsum() - df_tr[<span class="string">'target'</span>]</div><div class="line">cumcnt = df_tr.groupby(col).cumcount()</div><div class="line">train_new[col+<span class="string">'_mean_target'</span>] = cumsum/cumcnt</div></pre></td></tr></table></figure>
+<ul>
+<li>CatBoost애는 내장된 방식</li>
+<li>Leakage를 줄일 수 있으나 품질이 불규칙적이다.</li>
+</ul>
+<h2 id="3-Generalizations-and-extensions"><a href="#3-Generalizations-and-extensions" class="headerlink" title="3. Generalizations and extensions"></a>3. Generalizations and extensions</h2><h3 id="3-1-Regression과-Multiclass"><a href="#3-1-Regression과-Multiclass" class="headerlink" title="3.1 Regression과 Multiclass"></a>3.1 Regression과 Multiclass</h3><ul>
+<li>Regression : percentile, std, distribution bin등의 통계함수를 추가</li>
+<li>Multiclass : 각각의 class별로 encoding</li>
+</ul>
+<h3 id="3-2-Many-to-many-relation"><a href="#3-2-Many-to-many-relation" class="headerlink" title="3.2 Many-to-many relation"></a>3.2 Many-to-many relation</h3><ul>
+<li>Cross product</li>
+<li>Statistics from vectors</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.18.png" alt=""></p>
+<p>APPS를 각각의 row로 나눔</p>
+<h3 id="3-3-Time-series"><a href="#3-3-Time-series" class="headerlink" title="3.3 Time series"></a>3.3 Time series</h3><p>time-series 데이터의 경우 앞의 방법들을 사용하는게 의미 없을 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.19.png" alt=""></p>
+<p>위 예제의 경우 <code>Day-User-전날 Amount 합</code>과 <code>Day-Spend-전날 Amount 평균</code>을 feature로 추가하였다.</p>
+<h3 id="3-4-Interactions-and-numerical-features"><a href="#3-4-Interactions-and-numerical-features" class="headerlink" title="3.4 Interactions and numerical features"></a>3.4 Interactions and numerical features</h3><ul>
+<li>numeric feature를 bin하여 categorical feature로 만드는 방법이다.<ul>
+<li>EDA 과정을 통해서 숫자상의 어떤 점에서 target값의 분기가 일어나는지를 관찰하는 것이 유용하다.</li>
+</ul>
+</li>
+<li>feature 2개 이상이 상호작용적으로 동작하는 경우에는 그것들을 합하여 <code>mean encoding</code>하는 방법도 있다.</li>
+</ul>
+<h3 id="Correct-validation-reminder"><a href="#Correct-validation-reminder" class="headerlink" title="Correct validation reminder"></a>Correct validation reminder</h3><ul>
+<li>Local experiments:<br>‒ Estimate encodings on X_tr<br>‒ Map them to X_tr and X_val<br>‒ Regularize on X_tr<br>‒ Validate model on X_tr/ X_val split</li>
+<li>Submission:<br>‒ Estimate encodings on whole Train data<br>‒ Map them to Train and Test<br>‒ Regularize on Train<br>‒ Fit on Train</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.20.png" alt=""></p>
+<ul>
+<li>Main advantages:<br>‒ Compact transformation of categorical variables<br>‒ Powerful basis for feature engineering</li>
+<li>Disadvantages:<br>‒ Need careful validation, there a lot of ways to overfit<br>‒ Significant improvements only on specific datasets</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/" data-id="cjo2lfqtr009aod7b8yzaehi2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook-square" href="https://www.facebook.com/seokjoon.yun.9" target="_blank">
+                        <i class="icon fa fa-facebook-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/DevStarSJ" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="slideshare" href="https://www.slideshare.net/seokjoonyun9" target="_blank">
+                        <i class="icon fa fa-slideshare"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://www.linkedin.com/in/sjyun" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://plus.google.com/u/1/108379332089647292574" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/10/30/kaggle.coursera.competition.04.02/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Coursera Kaggle 강의(How to win a data science competition) week 4-4 Ensemble 요약</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/">AWS</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/ECS/">ECS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/Lambda/">Lambda</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/AWS/SageMaker/">SageMaker</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Azure/">Azure</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Book/">Book</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Book/Review/">Review</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET/">ASP.NET</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/ASP-NET-Core/">ASP.NET Core</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/C/">C#</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/">CPP</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CPP/MFC/">MFC</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataScience/">DataScience</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/Oracle/">Oracle</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/SQLP/">SQLP</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/Node-JS/">Node.JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/TypeScript/">TypeScript</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/DataScience/">DataScience</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/">Tips</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/JupyterNotebook/">JupyterNotebook</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tips/macOS/">macOS</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/APIGateway/" style="font-size: 15px;">APIGateway</a> <a href="/tags/ASP-NET/" style="font-size: 13.57px;">ASP.NET</a> <a href="/tags/ASP-NET-Core/" style="font-size: 12.14px;">ASP.NET Core</a> <a href="/tags/AWS/" style="font-size: 19.29px;">AWS</a> <a href="/tags/Azure/" style="font-size: 10.71px;">Azure</a> <a href="/tags/AzureContainerRegistry/" style="font-size: 10px;">AzureContainerRegistry</a> <a href="/tags/AzureContainerService/" style="font-size: 10px;">AzureContainerService</a> <a href="/tags/AzureFileStorage/" style="font-size: 10.71px;">AzureFileStorage</a> <a href="/tags/AzureFunction/" style="font-size: 10px;">AzureFunction</a> <a href="/tags/Book/" style="font-size: 16.43px;">Book</a> <a href="/tags/C/" style="font-size: 18.57px;">C#</a> <a href="/tags/CI-CD/" style="font-size: 11.43px;">CI/CD</a> <a href="/tags/CPP/" style="font-size: 13.57px;">CPP</a> <a href="/tags/DataScience/" style="font-size: 15.71px;">DataScience</a> <a href="/tags/Database/" style="font-size: 20px;">Database</a> <a href="/tags/DevOps/" style="font-size: 11.43px;">DevOps</a> <a href="/tags/Docker/" style="font-size: 10.71px;">Docker</a> <a href="/tags/ECS/" style="font-size: 10px;">ECS</a> <a href="/tags/HyperparameterTuning/" style="font-size: 10px;">HyperparameterTuning</a> <a href="/tags/JavaScript/" style="font-size: 11.43px;">JavaScript</a> <a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/JupyterNotebook/" style="font-size: 11.43px;">JupyterNotebook</a> <a href="/tags/Kaggle/" style="font-size: 14.29px;">Kaggle</a> <a href="/tags/Lambda/" style="font-size: 17.86px;">Lambda</a> <a href="/tags/MFC/" style="font-size: 13.57px;">MFC</a> <a href="/tags/MachineLearning/" style="font-size: 17.14px;">MachineLearning</a> <a href="/tags/Matplotlib/" style="font-size: 10px;">Matplotlib</a> <a href="/tags/Node-JS/" style="font-size: 12.86px;">Node.JS</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Oracle/" style="font-size: 20px;">Oracle</a> <a href="/tags/Python/" style="font-size: 16.43px;">Python</a> <a href="/tags/Review/" style="font-size: 16.43px;">Review</a> <a href="/tags/S3/" style="font-size: 10px;">S3</a> <a href="/tags/SIMD/" style="font-size: 10px;">SIMD</a> <a href="/tags/SQLP/" style="font-size: 20px;">SQLP</a> <a href="/tags/SageMaker/" style="font-size: 10px;">SageMaker</a> <a href="/tags/Serverless/" style="font-size: 12.14px;">Serverless</a> <a href="/tags/Tensorflow/" style="font-size: 12.14px;">Tensorflow</a> <a href="/tags/ToolkitPro/" style="font-size: 10.71px;">ToolkitPro</a> <a href="/tags/TypeScript/" style="font-size: 10.71px;">TypeScript</a> <a href="/tags/UAC/" style="font-size: 10px;">UAC</a> <a href="/tags/XGBoost/" style="font-size: 10px;">XGBoost</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/한글폰트/" style="font-size: 10px;">한글폰트</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Yun Seok-joon</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

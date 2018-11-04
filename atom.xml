@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2018-10-30T08:53:49.680Z</updated>
+  <updated>2018-11-04T08:05:21.561Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약</title>
+    <link href="http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/"/>
+    <id>http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/</id>
+    <published>2018-11-04T02:04:00.000Z</published>
+    <updated>2018-11-04T08:05:21.561Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-2-Advanced-Feature-Engineering-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-
+    
+    </summary>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/categories/DataScience/"/>
+    
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="DataScience" scheme="http://DevStarSJ.github.io/tags/DataScience/"/>
+    
+      <category term="Kaggle" scheme="http://DevStarSJ.github.io/tags/Kaggle/"/>
+    
+  </entry>
   
   <entry>
     <title>Coursera Kaggle 강의(How to win a data science competition) week 4-4 Ensemble 요약</title>
@@ -319,13 +343,13 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
-    
       <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
     
   </entry>
   
@@ -347,19 +371,19 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
-    
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
       <category term="AzureContainerRegistry" scheme="http://DevStarSJ.github.io/tags/AzureContainerRegistry/"/>
     
       <category term="AzureContainerService" scheme="http://DevStarSJ.github.io/tags/AzureContainerService/"/>
     
+      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
+    
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
   </entry>
   
@@ -385,11 +409,11 @@
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
       <category term="S3" scheme="http://DevStarSJ.github.io/tags/S3/"/>
     
@@ -415,13 +439,13 @@
     
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
       <category term="ECS" scheme="http://DevStarSJ.github.io/tags/ECS/"/>
     
@@ -520,34 +544,6 @@
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
       <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AWS Lambda에 Python Slack Chatbot을 통해서 미세먼지 대기정보 알림이 만들기</title>
-    <link href="http://DevStarSJ.github.io/2017/03/26/Lambda.Chatbot.01/"/>
-    <id>http://DevStarSJ.github.io/2017/03/26/Lambda.Chatbot.01/</id>
-    <published>2017-03-25T15:00:00.000Z</published>
-    <updated>2017-04-23T09:23:32.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;AWS-Lambda에-Python-Slack-Chatbot을-통해서-미세먼지-대기정보-알림이-만들기&quot;&gt;&lt;a href=&quot;#AWS-Lambda에-Python-Slack-Chatbot을-통해서-미세먼지-대기정보-알림이-만들기&quot; class=&quot;h
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
-    
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
