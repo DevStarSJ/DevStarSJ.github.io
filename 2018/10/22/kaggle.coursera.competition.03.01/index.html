@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Dev Star SJ">
 <meta property="og:description" content="Coursera Kaggle 강의(How to win a data science competition) week 3-1 Metrics 요약Metrics어떤 metric을 사용하느냐에 따라 모델이 학습하는 방향이 다르다. 우리가 풀고자하는 문제에 최적화된 metric을 선택하는 것이 중요하다. 1. Regression metrics1.1 MSE, RMSE,">
 <meta property="og:image" content="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.01.png">
-<meta property="og:updated_time" content="2018-10-30T03:18:11.417Z">
+<meta property="og:updated_time" content="2018-11-04T05:17:55.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Coursera Kaggle 강의(How to win a data science competition) week 3-1 Metrics 요약">
 <meta name="twitter:description" content="Coursera Kaggle 강의(How to win a data science competition) week 3-1 Metrics 요약Metrics어떤 metric을 사용하느냐에 따라 모델이 학습하는 방향이 다르다. 우리가 풀고자하는 문제에 최적화된 metric을 선택하는 것이 중요하다. 1. Regression metrics1.1 MSE, RMSE,">
@@ -272,14 +272,40 @@
 <li>XGBoost, LightGBM 에서만 <code>sample_weights</code>용으로 사용한다.</li>
 </ul>
 <h4 id="4-4-RMSLE"><a href="#4-4-RMSLE" class="headerlink" title="4.4 RMSLE"></a>4.4 RMSLE</h4><p>로그공간에서의 MSE 최적화 방식</p>
-<h3 id="5-Classification-metrics-optimization"><a href="#5-Classification-metrics-optimization" class="headerlink" title="5. Classification metrics optimization"></a>5. Classification metrics optimization</h3>
+<h3 id="5-Classification-metrics-optimization"><a href="#5-Classification-metrics-optimization" class="headerlink" title="5. Classification metrics optimization"></a>5. Classification metrics optimization</h3><h4 id="5-1-LogLoss-Logistic-Loss"><a href="#5-1-LogLoss-Logistic-Loss" class="headerlink" title="5.1 LogLoss (Logistic Loss)"></a>5.1 LogLoss (Logistic Loss)</h4><ul>
+<li>모델이 잘 맞추는지를 측정</li>
+<li>Regression의 MAE와 같은 존재  </li>
+<li>RandomForest빼고는 대부분 잘 맞음  <ul>
+<li>Tree-based : XGBoost, LightGBM</li>
+<li>Linear models : sklearn.&lt;&gt;Regression, sklearn.SGDRegressor, Vowpal Wabbit</li>
+<li>Neural nets : Pytorchm Keras, TF, etc.</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-2-Accuracy"><a href="#5-2-Accuracy" class="headerlink" title="5.2 Accuracy"></a>5.2 Accuracy</h4><ul>
+<li>metric이나 treshold를 최적화하는데 유용함</li>
+</ul>
+<h4 id="5-3-AUC"><a href="#5-3-AUC" class="headerlink" title="5.3 AUC"></a>5.3 AUC</h4><ul>
+<li>모델이 잘 맞추는것을 측정하거나 logloss를 최적화하기 위해 사용됨</li>
+<li>한상의 object가 올바른 순서로 정렬될 확률</li>
+<li>Tree-based : XGBoost, LightGBM</li>
+<li>Neural nets : Pytorchm Keras, TF, etc.</li>
+</ul>
+<h4 id="5-4"><a href="#5-4" class="headerlink" title="5.4"></a>5.4</h4><ul>
+<li>MSE를 최적화</li>
+<li>올바른 threshold를 찾음<ul>
+<li>Bad : np.round(predictions)</li>
+</ul>
+</li>
+</ul>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2018/10/22/kaggle.coursera.competition.03.01/" data-id="cjnvi3txo00a1pc7b6bevqddg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2018/10/22/kaggle.coursera.competition.03.01/" data-id="cjo2fgacu008vyx7bptl9p20i" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
