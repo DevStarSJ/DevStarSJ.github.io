@@ -3,23 +3,23 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약 | Dev Star SJ</title>
+    <title>Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약 | Dev Star SJ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="MachineLearning,DataScience,Kaggle" />
     
-    <meta name="description" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약1. Mean encodings Categorical feature로 groupby하여 target의 mean 값을 feature로 추가 mean뿐 아니라 median, std, mi">
+    <meta name="description" content="Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약1. Mean encodings Categorical feature로 groupby하여 target의 mean 값을 feature로 추가 mean뿐 아니라 median, std, mi">
 <meta name="keywords" content="MachineLearning,DataScience,Kaggle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약">
+<meta property="og:title" content="Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약">
 <meta property="og:url" content="http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약1. Mean encodings Categorical feature로 groupby하여 target의 mean 값을 feature로 추가 mean뿐 아니라 median, std, mi">
+<meta property="og:description" content="Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약1. Mean encodings Categorical feature로 groupby하여 target의 mean 값을 feature로 추가 mean뿐 아니라 median, std, mi">
 <meta property="og:image" content="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.15.png">
-<meta property="og:updated_time" content="2018-11-04T08:05:21.561Z">
+<meta property="og:updated_time" content="2018-11-05T06:01:57.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약">
-<meta name="twitter:description" content="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약1. Mean encodings Categorical feature로 groupby하여 target의 mean 값을 feature로 추가 mean뿐 아니라 median, std, mi">
+<meta name="twitter:title" content="Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약">
+<meta name="twitter:description" content="Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약1. Mean encodings Categorical feature로 groupby하여 target의 mean 값을 feature로 추가 mean뿐 아니라 median, std, mi">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.15.png">
     
 
@@ -137,7 +137,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-        Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약
+        Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약
         </h1>
     
 
@@ -162,7 +162,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-2-Advanced-Feature-Engineering-요약"><a href="#Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-2-Advanced-Feature-Engineering-요약" class="headerlink" title="Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약"></a>Coursera Kaggle 강의(How to win a data science competition) week 3-2 Advanced Feature Engineering 요약</h1><h2 id="1-Mean-encodings"><a href="#1-Mean-encodings" class="headerlink" title="1. Mean encodings"></a>1. Mean encodings</h2><ul>
+            <h1 id="Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-4-Advanced-Feature-Engineering-요약"><a href="#Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-4-Advanced-Feature-Engineering-요약" class="headerlink" title="Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약"></a>Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약</h1><h2 id="1-Mean-encodings"><a href="#1-Mean-encodings" class="headerlink" title="1. Mean encodings"></a>1. Mean encodings</h2><ul>
 <li>Categorical feature로 <strong>groupby</strong>하여 <code>target의 mean</code> 값을 feature로 추가<ul>
 <li>mean뿐 아니라 median, std, min, max 등 해당 데이터의 성격을 잘 나타내는 통계 연산</li>
 </ul>
@@ -201,6 +201,7 @@
 <p>단 LOO (Leave one out)같은 극단적인 경우는 주의</p>
 <h3 id="2-2-Smoothing"><a href="#2-2-Smoothing" class="headerlink" title="2.2 Smoothing"></a>2.2 Smoothing</h3><p>다른 regularization을 얼만큼 적용시킬지를 <code>Alpha</code>값을 이용하여 설정</p>
 <p>$$ \frac{mean(target)<em>nrows + globalmean</em>alpha}{nrows + alpha} $$</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.03.21.png" alt=""></p>
 <h3 id="2-3-Noise"><a href="#2-3-Noise" class="headerlink" title="2.3 Noise"></a>2.3 Noise</h3><p>통상적으로 노이즈를 추가하면 encoding의 품질이 저하되어서 얼마나 넣어야 할지 고민을 많이 해야 한다. LOO와 함께 사용하면 효과적이다. (자세한 설명이 없음)</p>
 <h3 id="2-4-Expanding-mean"><a href="#2-4-Expanding-mean" class="headerlink" title="2.4 Expanding mean"></a>2.4 Expanding mean</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cumsum = df_tr.groupby(col)[<span class="string">'target'</span>].cumsum() - df_tr[<span class="string">'target'</span>]</div><div class="line">cumcnt = df_tr.groupby(col).cumcount()</div><div class="line">train_new[col+<span class="string">'_mean_target'</span>] = cumsum/cumcnt</div></pre></td></tr></table></figure>
 <ul>
@@ -236,6 +237,128 @@
 <li>Main advantages:<br>‒ Compact transformation of categorical variables<br>‒ Powerful basis for feature engineering</li>
 <li>Disadvantages:<br>‒ Need careful validation, there a lot of ways to overfit<br>‒ Significant improvements only on specific datasets</li>
 </ul>
+<h2 id="4-Statistics-and-distance-based-features"><a href="#4-Statistics-and-distance-based-features" class="headerlink" title="4. Statistics and distance based features"></a>4. Statistics and distance based features</h2><p>1개의 feature를 <code>groupby</code>하여 계산한 다양한 통계값을 활용</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.11.png" alt=""></p>
+<p>위 그림의 경우 <code>[User_id, Page_id, Ad_price, Ad_position]</code>은 원래 있던 feature들이고 <code>[Max_price, min_price, Min_price_position]</code>은 추가로 생성한 feature들이다.</p>
+<ul>
+<li>Max_price : Page_id로 groupby한 MAX(Ad_price)</li>
+<li>min_price : Page_id로 groupby한 MIN(Ad_price)</li>
+<li>Min_price_position : Page_id내에서 Ad_price == min_price 에 해당하는 Ad_posision</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gb = df.groupby([<span class="string">'user_id'</span>, <span class="string">'page_id'</span>], as_index=<span class="keyword">False</span>)</div><div class="line">       .agg(&#123;<span class="string">'ad_price'</span>: &#123;<span class="string">'max_price'</span>: np.max, <span class="string">'min_price'</span>: np.min&#125;&#125;)</div><div class="line">gb.columns = [<span class="string">'user_id'</span>, <span class="string">'page_id'</span>, <span class="string">'min_price'</span>, <span class="string">'max_price'</span>]</div><div class="line"></div><div class="line">df = pd.merge(df, gb, how=<span class="string">'left'</span>, on=[<span class="string">'user_id'</span>, <span class="string">'page_id'</span>])</div></pre></td></tr></table></figure>
+<p>위에 예제로 보인 featue뿐만 아니라 다양한 것들을 생각해 볼 수 있다.</p>
+<ul>
+<li>user가 얼마나 많은 page를 방문했는지</li>
+<li>price의 표준편차</li>
+<li>가장 많이 방문한 page</li>
+<li>등등…</li>
+</ul>
+<p>그런데, groupby 할 수 없는 feature는 어떻게 해야할까 ? 그럴 경우 <code>kNN</code>과 같은 클러스터링 기법들로 대체가 가능하다.</p>
+<ul>
+<li>500m, 1000m 이내에 있는 집의 수</li>
+<li>500m, 1000m 이내에 있는 집의 평균 평당가</li>
+<li>500m, 1000m 이내에 있는 학교/슈퍼마켓/주차장 수</li>
+<li>가장 가까운 지하철역</li>
+</ul>
+<p>사례: <em>Springleaf</em>에 사용된 kNN feature들</p>
+<ul>
+<li>모든 변수에 대해서 <code>mean encoding</code></li>
+<li>모든 point에서 <em>Bray-Cutis metric</em>을 이용하여 2000-NN을 찾음<br><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.12.png" alt=""></li>
+<li>2000개의 이웃으로 다양한 feature들을 계산<ul>
+<li>5, 10, 15, 500, 2000개의 NN의 target mean값</li>
+<li>10개의 가까운 이웃들과의 distance mean값</li>
+<li>10개의 가까운 이웃중 target이 1/0인 것과의 distance mean</li>
+<li>등등…</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-Matrix-Factorizations-for-Feature-Extraction"><a href="#5-Matrix-Factorizations-for-Feature-Extraction" class="headerlink" title="5. Matrix Factorizations for Feature Extraction"></a>5. Matrix Factorizations for Feature Extraction</h2><p>feature 추출에 행렬 분해 기법을 활용하는 방법들이다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.13.png" alt=""></p>
+<p>예를 들어 사용자별로 연령, 지역, 관심사, 성별 등의 feature들이 있고, 이러한 정보에 따른 등급 정보가 있는 경우 이 둘을 matrix 곱으로 표현할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.14.png" alt=""></p>
+<p>text 분류기의 경우에도 보통 sparse matrix로 표현되는 것을 각각의 matrix로 표현하는 것이 가능하다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.15.png" alt=""></p>
+<p>여러 방법들을 섞어서 사용하기도 한다.</p>
+<p>Matrix Factorization 진행시</p>
+<ul>
+<li>몇개의 column만을 적용시키기도 함.</li>
+<li>다양한 것의 추가가 가능하다. (Ensemble에 효과적)</li>
+<li>손실 변환(lossy transformation)이다.<ul>
+<li>특정 작업에 의존적이므로 경험적으로 해야한다.</li>
+<li>factor는 보통 5 ~ 100 사이로 설정한다.</li>
+</ul>
+</li>
+</ul>
+<p><strong>sklearn</strong>에 Matrix Factorization의 구현체가 있음</p>
+<ul>
+<li><code>SVD</code>, <code>PCA</code> : MF용 stadard tool</li>
+<li><code>TruncatedSVD</code> : sparse matrices용</li>
+<li><code>NMF</code> (Non-negative MF) : count-like한 데이터에 좋음. 모든 데이터가 non-negative인게 보장됨</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.16.png" alt=""></p>
+<p>위 그림을 보면 <code>NMF</code>를 적용하니 linear model처럼 분리되는 것을 볼 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.17.png" alt=""></p>
+<p><code>log(X+1)</code>를 적용하는 등의 다양한 trick을 시도해 볼 수 있다.</p>
+<p>MF 적용시 train, test를 각각따로 적용하면 안된다. 둘을 함께 적용시켜야 올바른 결과가 나온다.</p>
+<ul>
+<li><p>Wrong way</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pca = PCA(n_components=<span class="number">5</span>)</div><div class="line">X_train_pca = pca.fit_transform(X_train)</div><div class="line">X_test_pca = pca.fit_transform(X_test)</div></pre></td></tr></table></figure>
+</li>
+<li><p>Right way</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">X_all = np.concatenate([X_train, X_test])</div><div class="line">pca.fit(X_all)</div><div class="line">X_train_pca = pca.transform(X_train)</div><div class="line">X_test_pca = pca.transform(X_test)</div></pre></td></tr></table></figure>
+</li>
+<li><p>MF는 차원 축소와 feature 추출에 좋다.</p>
+</li>
+<li>categorical feature를 좀 더 현실적인 값으로 변경해준다.</li>
+<li>linear model화 되도록 적절한 trick을 적용하면 유용하다.</li>
+</ul>
+<h2 id="6-Feature-interactions"><a href="#6-Feature-interactions" class="headerlink" title="6. Feature interactions"></a>6. Feature interactions</h2><p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.18.png" alt=""></p>
+<p>위 경우를 보면 category_ad와 category_site가 있는데, 정작 중요한 것은 그 둘의 조합이다. 이 경우 그 둘을 concat하여 ad_site로 하는게 더 효율적일 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.19.png" alt=""></p>
+<p>위 경우에서 FI 방법에 대해서 2가지로 생각해보다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.20.png" alt=""></p>
+<p>첫번째 방법은 앞에서 본 경우와 같이 f1과 f2를 조합하여 one-hot을 적용시킨 방법이다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.21.png" alt=""></p>
+<p>두번째 방법으로는 f1과 f2를 각각 one-hot한 다음 그 둘을 조합한다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.22.png" alt=""></p>
+<p>FI의 또 다른 예로 f1과 f2가 둘 다 numeric일 경우 그 둘을 곱하는 방법도 있다. </p>
+<p>이렇게 곱, 합, 차, 나누기 등을 적용하는 방법들을 생각해 보자.<br>모든 feature에 그렇게하기에는 조합을 할 수 있는 경우의 수가 너무나도 많다.<br>어떻게 유의미한 것들만을 골라내서 차원을 줄일 수 있을까 ?</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.23.png" alt=""></p>
+<ul>
+<li>Random Forest로 일단 돌려본 다음</li>
+<li>Feature Importance를 보고</li>
+<li>유의미한 것들만을 추출</li>
+</ul>
+<p><code>Decision Tree</code>를 이용하여 feature를 추출하는 방법도 있다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.24.png" alt=""></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># In sklearn</span></div><div class="line">tree_model.apply()</div><div class="line"></div><div class="line"><span class="comment"># In XGBoost</span></div><div class="line">booster.predict(pred_leaf=<span class="keyword">True</span>)</div></pre></td></tr></table></figure>
+<h2 id="7-tSNE"><a href="#7-tSNE" class="headerlink" title="7. tSNE"></a>7. tSNE</h2><p>앞서 <code>NMF</code>를 이용하여 linear model에 가깝게 변화시키는 것을 본 적이 있다.</p>
+<h3 id="7-1-Manifold-Learning"><a href="#7-1-Manifold-Learning" class="headerlink" title="7.1 Manifold Learning"></a>7.1 Manifold Learning</h3><p>비선형 차원 축소 방법 (non-linear method of dimensionality reduction)</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.25.png" alt=""></p>
+<p>데이터를 차원변환시켜서 해석하기 쉬운형태로 분리하는게 가능하다.</p>
+<h3 id="7-2-MNIST의-tSNE-반영-결과"><a href="#7-2-MNIST의-tSNE-반영-결과" class="headerlink" title="7.2 MNIST의 tSNE 반영 결과"></a>7.2 MNIST의 tSNE 반영 결과</h3><p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.26.png" alt=""></p>
+<p>2차원 공간에 투영된 700차원 공간</p>
+<p><code>Perplexity</code> hyperparameter를 어떻게 설정하느냐에 따라 결과가 달라진다.</p>
+<p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Kaggle/Coursera.competition/image/coursera.competition.04.27.png" alt=""></p>
+<p>여기에 대해 정리된 내용은 다음과 같다.</p>
+<ul>
+<li><code>Perplexity</code> hyperparameter값에 크게 의존적이다.<ul>
+<li>5 ~ 100 사이 값이 결과가 대체로 좋았다.</li>
+</ul>
+</li>
+<li>확률적 특징때문에 같은 데이터, perplexity 갑이라도 다른 결과가 나온다.<ul>
+<li>train, test는 같이 투영되어야 한다.</li>
+</ul>
+</li>
+<li>feature가 많으면 오래 걸린다.<ul>
+<li>그래서 보통 투영하기전에 차원축소를 한다.</li>
+</ul>
+</li>
+<li>tSNE의 구현체는 <code>sklearn</code>에 있다.<ul>
+<li>하지만, 파이썬의 개별패키지로 하는게 더 빠르기 때문에 추천하지는 않는다.</li>
+</ul>
+</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -243,7 +366,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/" data-id="cjo2lfqtr009aod7b8yzaehi2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/" data-id="cjo3whqqx0096mq7bwkxqsr9n" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
