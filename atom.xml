@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2018-11-24T05:46:25.394Z</updated>
+  <updated>2018-11-24T05:46:25.393Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://DevStarSJ.github.io/2018/11/24/aws-batch-tutorial/"/>
     <id>http://DevStarSJ.github.io/2018/11/24/aws-batch-tutorial/</id>
     <published>2018-11-24T03:08:00.000Z</published>
-    <updated>2018-11-24T05:46:25.394Z</updated>
+    <updated>2018-11-24T05:46:25.393Z</updated>
     
     <summary type="html">
     
@@ -44,7 +44,7 @@
     <link href="http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/"/>
     <id>http://DevStarSJ.github.io/2018/11/04/kaggle.coursera.competition.03.02/</id>
     <published>2018-11-04T02:04:00.000Z</published>
-    <updated>2018-11-05T06:01:57.387Z</updated>
+    <updated>2018-11-05T06:01:57.386Z</updated>
     
     <summary type="html">
     
@@ -180,7 +180,7 @@
     <link href="http://DevStarSJ.github.io/2018/10/21/kaggle.coursera.competition.02.02/"/>
     <id>http://DevStarSJ.github.io/2018/10/21/kaggle.coursera.competition.02.02/</id>
     <published>2018-10-21T08:44:00.000Z</published>
-    <updated>2018-10-21T08:44:20.245Z</updated>
+    <updated>2018-10-21T08:44:20.244Z</updated>
     
     <summary type="html">
     
@@ -232,7 +232,7 @@
     <link href="http://DevStarSJ.github.io/2018/10/20/kaggle.coursera.competition.01/"/>
     <id>http://DevStarSJ.github.io/2018/10/20/kaggle.coursera.competition.01/</id>
     <published>2018-10-20T08:00:00.000Z</published>
-    <updated>2018-10-20T08:37:29.696Z</updated>
+    <updated>2018-10-20T08:37:29.695Z</updated>
     
     <summary type="html">
     
@@ -398,13 +398,13 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
-    
       <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
     
   </entry>
   
@@ -430,19 +430,19 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
-    
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
       <category term="AzureContainerRegistry" scheme="http://DevStarSJ.github.io/tags/AzureContainerRegistry/"/>
     
       <category term="AzureContainerService" scheme="http://DevStarSJ.github.io/tags/AzureContainerService/"/>
     
+      <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
+    
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
   </entry>
   
@@ -470,11 +470,11 @@
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
       <category term="S3" scheme="http://DevStarSJ.github.io/tags/S3/"/>
     
@@ -502,13 +502,13 @@
     
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
-      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
-    
-      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
       <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
     
       <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
+    
+      <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
+    
+      <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
     
       <category term="ECS" scheme="http://DevStarSJ.github.io/tags/ECS/"/>
     
