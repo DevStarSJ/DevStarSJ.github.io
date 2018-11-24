@@ -175,8 +175,11 @@
     
 
         <p class="article-excerpt">
-            사용자 정의 MFC Control의 Message 처리CWnd를 상속받아서 사용자가 작성한 MFC Control의 메세지 처리하는 방법을 소개해드리겠습니다.  
-통상적으로 Dialog, View, FormView (앞으로 편의상 Dialog라 칭함)에 Control을 올려서 사용하는데,그 구현자체를 Control안에서 하는 경우도 있지만,해당 Control
+            사용자 정의 MFC Control의 Message 처리
+CWnd를 상속받아서 사용자가 작성한 MFC Control의 메세지 처리하는 방법을 소개해드리겠습니다.
+통상적으로 Dialog, View, FormView (앞으로 편의상 Dialog라 칭함)에 Control을 올려서 사용하는데,
+그 구현자체를 Control안에서 하는 경우도 있지만,
+해당 Contro
         </p>
     </div>
 </article>
@@ -192,7 +195,7 @@
         <a href="/2016/02/13/05.01.sql/" class="thumbnail">
     
     
-        <span style="background-image:url(https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/05.01.sql.01.png?raw=true)" alt="SQLP etc-1 외워야 할 SQL 문법" class="thumbnail-image"></span>
+        <span class="thumbnail-image thumbnail-none"></span>
     
     
         
@@ -221,8 +224,11 @@
     
 
         <p class="article-excerpt">
-            핵심정리5. 외워야 할 SQL 문법1. Hirarchical SQL (계층형 질의)root에서 시작해서 주어진 조건에 맞게 전개하는 방식으로 Query
-123456SELECT ...  FROM table_name WHERE ... START WITH (root condition) CONNECT BY [NOCYCLE] PRIOR (root id) = (chi
+            핵심정리
+5. 외워야 할 SQL 문법
+1. Hirarchical SQL (계층형 질의)
+root에서 시작해서 주어진 조건에 맞게 전개하는 방식으로 Query
+123456SELECT ...  FROM table_name WHERE ... START WITH (root condition) CONNECT BY [NOCYCLE] PRIOR (root id) = (
         </p>
     </div>
 </article>
@@ -271,16 +277,21 @@
     
 
         <p class="article-excerpt">
-            3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.4 Partition 활용
+            3과목 SQL 고급 활용 및 Tuning
+5장 고급 SQL Tuning
+5.4 Partition 활용
+
+
 Partitioning 이란 ?
 
 Table, Index를 Partition 단위로 나누어 저장
 Partition Key에 따라 물리적으로 별도의 Segment에 저장
 
 
+
 Partition 장점
 
-관리적 측면 : Partition 단위 백업, 추가, 삭제, 변
+관리적 측면 : Partition 단위 백업, 추가, 
         </p>
     </div>
 </article>
@@ -325,8 +336,12 @@ Partition 장점
     
 
         <p class="article-excerpt">
-            3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.3 DML Tuning
+            3과목 SQL 고급 활용 및 Tuning
+5장 고급 SQL Tuning
+5.3 DML Tuning
+
 DML 수행시
+
 Table 변경
 Index 변경 : Update  수행시 Index는 Delete &amp; Insert 수행
 Redo, Undo 생성
@@ -334,8 +349,11 @@ Redo, Undo 생성
 
 
 5.3.1 Insert Tuning
+
 Direct Path Insert
-Freelist 조회없이, Buffer
+
+
+Freelist 조회없이,
         </p>
     </div>
 </article>
@@ -384,13 +402,18 @@ Freelist 조회없이, Buffer
     
 
         <p class="article-excerpt">
-            3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.2 Sort Tuning5.2.1 Sort Tuning 전략
+            3과목 SQL 고급 활용 및 Tuning
+5장 고급 SQL Tuning
+5.2 Sort Tuning
+5.2.1 Sort Tuning 전략
+
 Data Modeling 측면에서 검토
+
 GROUP BY, DISTINCT, UNION 연산이 자주 일어난다면 정규화를 잘하면 많이 해소된다.
 M:M 관계에서 조회하려면 Sort 연산이 많이 일어난다.
 
 
-Sort 발생하지 않도
+Sort 발생
         </p>
     </div>
 </article>
@@ -406,7 +429,7 @@ Sort 발생하지 않도
         <a href="/2016/02/09/04.01.onesql/" class="thumbnail">
     
     
-        <span style="background-image:url(https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/04.01.onesql.01.png?raw=true)" alt="SQLP 3-5-1 One SQL" class="thumbnail-image"></span>
+        <span class="thumbnail-image thumbnail-none"></span>
     
     
         
@@ -435,9 +458,13 @@ Sort 발생하지 않도
     
 
         <p class="article-excerpt">
-            3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.1 One SQL 구현 기법5.1.1 CASE(DECODE) 활용One SQL 기법중 가장 기본인 CASE를 이용하여 record로 나눠져 있는 데이터를 한 row에 표현하는 방법이다.  
+            3과목 SQL 고급 활용 및 Tuning
+5장 고급 SQL Tuning
+5.1 One SQL 구현 기법
+5.1.1 CASE(DECODE) 활용
+One SQL 기법중 가장 기본인 CASE를 이용하여 record로 나눠져 있는 데이터를 한 row에 표현하는 방법이다.
 12345월별납입방법별집계# 고객번호# 납입월# 납입방법코드* 납입금액
-위 Table을 읽어서 아
+위 Table을 읽어서
         </p>
     </div>
 </article>
@@ -457,7 +484,7 @@ Sort 발생하지 않도
         <a href="/2016/02/07/03.07.join.adv/" class="thumbnail">
     
     
-        <span style="background-image:url(https://github.com/DevStarSJ/Study/raw/master/Blog/Database/Oracle/sqlp/image/03.07.sql.adv.01.png?raw=true)" alt="SQLP 3-4-3 고급 Join 기법" class="thumbnail-image"></span>
+        <span class="thumbnail-image thumbnail-none"></span>
     
     
         
@@ -486,8 +513,13 @@ Sort 발생하지 않도
     
 
         <p class="article-excerpt">
-            3과목 SQL 고급 활용 및 Tuning4장 Index와 Join4.4 고급 Join 기법Inline View 활용대부분의 JOIN은 1:M 관계이다.M쪽 집합을 1쪽 집합 단위로 Grouping해야 한다면 미리 Grouping한 뒤 JOIN하는 것이 유리하다.
-12345SELECT MIN(b.상품명) 상품명, SUM(a.판매수량) 판매수량, SUM(a.판
+            3과목 SQL 고급 활용 및 Tuning
+4장 Index와 Join
+4.4 고급 Join 기법
+Inline View 활용
+대부분의 JOIN은 1:M 관계이다.
+M쪽 집합을 1쪽 집합 단위로 Grouping해야 한다면 미리 Grouping한 뒤 JOIN하는 것이 유리하다.
+12345SELECT MIN(b.상품명) 상품명, SUM(a.판매수량) 판매수량, SU
         </p>
     </div>
 </article>
@@ -532,9 +564,14 @@ Sort 발생하지 않도
     
 
         <p class="article-excerpt">
-            3과목 SQL 고급 활용 및 Tuning4장 Index와 Join4.3 JOINNested Loop Join
+            3과목 SQL 고급 활용 및 Tuning
+4장 Index와 Join
+4.3 JOIN
+Nested Loop Join
+
+
 Index 상황
-12345* PK_DELP        : DEPT.DEPTNO* DEPT_LOC_IDX   : DEPT.LOC* PK_EMP         : EMP.EMPNO* EMP_DEPTNO_IDX : EMP.DEPTNO* EMP_SAL_I
+12345* PK_DELP        : DEPT.DEPTNO* DEPT_LOC_IDX   : DEPT.LOC* PK_EMP         : EMP.EMPNO* EMP_DEPTNO_IDX : EMP.DEPTNO* EMP_
         </p>
     </div>
 </article>
@@ -583,14 +620,20 @@ Index 상황
     
 
         <p class="article-excerpt">
-            3과목 SQL 고급 활용 및 Tuning4장 Index와 Join4.1 IndexIndex의 NULL값
+            3과목 SQL 고급 활용 및 Tuning
+4장 Index와 Join
+4.1 Index
+Index의 NULL값
+
 Oracle : 모두 NULL인 값은 저장하지 않음. NULL은 맨 뒤에 저장
 MS-SQL : 모두 NULL인 값도 저장. NULL은 맨 앞에 저장
 
 Index 탐색
+
 수직 탐색
+
 수평적 탐색을 위한 시작점을 찾는 과정
-Root Node에서 Leaf Node
+Root Node에서 Lea
         </p>
     </div>
 </article>
@@ -635,8 +678,11 @@ Root Node에서 Leaf Node
     
 
         <p class="article-excerpt">
-            Codejock Xtreme ToolkitPro Chart Control TutorialToolkitPro의 Chart Control 인 CXTPChartContorl의 간단한 사용법을 소개해 드리도록 하겠습니다.기본적으로 ToolkitPro를 설치하고 환경설정하는 방법은 생략하겠습니다.아래 Link를 참조해 주세요.
-먼저 MFC Application Pr
+            Codejock Xtreme ToolkitPro Chart Control Tutorial
+ToolkitPro의 Chart Control 인 CXTPChartContorl의 간단한 사용법을 소개해 드리도록 하겠습니다.
+기본적으로 ToolkitPro를 설치하고 환경설정하는 방법은 생략하겠습니다.
+아래 Link를 참조해 주세요.
+먼저 MFC Application
         </p>
     </div>
 </article>

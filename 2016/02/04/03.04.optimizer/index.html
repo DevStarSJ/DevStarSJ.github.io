@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning3장 Optimizer 원리3.1 OptimizerSQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진 Optimizer 종류 RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성 CBO (Cost-based Optimizer) : 통계">
+    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning 3장 Optimizer 원리 3.1 Optimizer SQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진 Optimizer 종류  RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성 CBO (Cost-based Optimizer)">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 3-3 Optimizer">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/04/03.04.optimizer/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning3장 Optimizer 원리3.1 OptimizerSQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진 Optimizer 종류 RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성 CBO (Cost-based Optimizer) : 통계">
+<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning 3장 Optimizer 원리 3.1 Optimizer SQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진 Optimizer 종류  RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성 CBO (Cost-based Optimizer)">
 <meta property="og:updated_time" content="2017-04-24T00:04:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 3-3 Optimizer">
-<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning3장 Optimizer 원리3.1 OptimizerSQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진 Optimizer 종류 RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성 CBO (Cost-based Optimizer) : 통계">
+<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning 3장 Optimizer 원리 3.1 Optimizer SQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진 Optimizer 종류  RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성 CBO (Cost-based Optimizer)">
     
 
     
@@ -160,76 +160,97 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="3과목-SQL-고급-활용-및-Tuning"><a href="#3과목-SQL-고급-활용-및-Tuning" class="headerlink" title="3과목 SQL 고급 활용 및 Tuning"></a>3과목 SQL 고급 활용 및 Tuning</h1><h2 id="3장-Optimizer-원리"><a href="#3장-Optimizer-원리" class="headerlink" title="3장 Optimizer 원리"></a>3장 Optimizer 원리</h2><h3 id="3-1-Optimizer"><a href="#3-1-Optimizer" class="headerlink" title="3.1 Optimizer"></a>3.1 Optimizer</h3><p>SQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진</p>
-<h4 id="Optimizer-종류"><a href="#Optimizer-종류" class="headerlink" title="Optimizer 종류"></a>Optimizer 종류</h4><ul>
+            <h1>3과목 SQL 고급 활용 및 Tuning</h1>
+<h2>3장 Optimizer 원리</h2>
+<h3>3.1 Optimizer</h3>
+<p>SQL을 가장 빠르고 효율적으로 수행할 최적(최저비용)의 처리경로를 생성해주는 DBMS 핵심엔진</p>
+<h4>Optimizer 종류</h4>
+<ul>
 <li>RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성</li>
 <li>CBO (Cost-based Optimizer) : 통계정보를 기반으로 여러가지 실행계획을 생성하여 그중 최저비용의 실행계획을 선택</li>
 </ul>
-<h4 id="최적화-과정"><a href="#최적화-과정" class="headerlink" title="최적화 과정"></a>최적화 과정</h4><ol>
+<h4>최적화 과정</h4>
+<ol>
 <li>Parser : SQL Parsing. SQL의 문법(Syntax) , 의미 (Semantic)을 확인</li>
-<li>Optimizer<ul>
-<li>Query Transformer : Parsing된 SQL을 표준 형태로 변환</li>
-<li>Estimator : 통계정보를 이용하여 선택도, 카디널리티 등으로 Execution Plan의 총 비용을 계산</li>
-<li>Plan Generator : 후보군이 될만한 Execution Plan을 생성</li>
-</ul>
-</li>
+<li>Optimizer</li>
+</ol>
+<pre><code>- Query Transformer : Parsing된 SQL을 표준 형태로 변환
+- Estimator : 통계정보를 이용하여 선택도, 카디널리티 등으로 Execution Plan의 총 비용을 계산
+- Plan Generator : 후보군이 될만한 Execution Plan을 생성
+</code></pre>
+<ol start="3">
 <li>Row-Source Generator : 최종 선택된 Execution Plan을 SQL 엔진이 실행할 수 있는 코드 생성</li>
 <li>SQL Engine : SQL을 실행</li>
 </ol>
 <ul>
-<li>최적화 목표<ol>
+<li>최적화 목표
+<ol>
 <li>전체 처리속도 최적화 (all_rows) : 결과집합을 끝까지 읽는 것을 전제. 대부분 DBMS의 기본옵션</li>
-<li>최초 응답속도 최적화 (first_rows) : 결과중 일부만 읽다가 멈추는 것을 전제.<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ ALL_ROWS */</span> ... ; <span class="comment">-- 전체 처리속도 최적화</span></div><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ FIRST_ROWS(10) */</span> ... ; <span class="comment">-- 처음 10개의 row만 읽고 멈추는 것을 전제로 최적화</span></div></pre></td></tr></table></figure>
-</li>
+<li>최초 응답속도 최적화 (first_rows) : 결과중 일부만 읽다가 멈추는 것을 전제.
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ ALL_ROWS */</span> ... ; <span class="comment">-- 전체 처리속도 최적화</span></div><div class="line"><span class="keyword">SELECT</span> <span class="comment">/*+ FIRST_ROWS(10) */</span> ... ; <span class="comment">-- 처음 10개의 row만 읽고 멈추는 것을 전제로 최적화</span></div></pre></td></tr></table></figure></li>
 </ol>
 </li>
 </ul>
-<h4 id="Optimizer-통계유형"><a href="#Optimizer-통계유형" class="headerlink" title="Optimizer 통계유형"></a>Optimizer 통계유형</h4><ul>
+<h4>Optimizer 통계유형</h4>
+<ul>
 <li>Table : 전체 레코드 수, 총 블록 수, 빈 블록 수, 한 행당 평균 크기 등</li>
 <li>Index : 높이, 리프 블록 수, 클러스터링 팩터, 인덱스 레코드 수 등</li>
 <li>Column : 값의 수, MIN, MAX, 밀도, NULL값 개수, 히스토그램 등</li>
 <li>System : CPU 속도, 평균 I/O 속도, 초당 I/O 처리량 등</li>
 </ul>
-<h4 id="통계정보를-이용한-비용계산-원리"><a href="#통계정보를-이용한-비용계산-원리" class="headerlink" title="통계정보를 이용한 비용계산 원리"></a>통계정보를 이용한 비용계산 원리</h4><ul>
+<h4>통계정보를 이용한 비용계산 원리</h4>
+<ul>
 <li>선택도 (Selectivity) : 1 / Distinct Value 수</li>
 <li>카디널리티 (Cardinality) : 총 Row 수 X 선택도</li>
-<li>히스토그램 (Histogram) : Column의 분포도<ul>
+<li>히스토그램 (Histogram) : Column의 분포도
+<ul>
 <li>도수분포 히스토그램 : 값별로 빈도수(Frequency Number)를 저장</li>
 <li>높이균형 히스토그램 : 각 버킷의 높이를 같게 하고 빈도 수가 많은 값(popular value)는 여러 버킷에 할당. 컬럼이 가진 값의 수가 아주 많을 경우 효과적</li>
 </ul>
 </li>
-<li>비용 (Cost)<ul>
+<li>비용 (Cost)
+<ul>
 <li>I/O 비용 모델 : 예상되는 I/O 요청(Call) 횟수로 평가</li>
 <li>CPU 비용 모델 : I/O비용 모델 + 시간 개념을 더해 비용 산정</li>
 </ul>
 </li>
 </ul>
-<h4 id="Optimizer-Hint"><a href="#Optimizer-Hint" class="headerlink" title="Optimizer Hint"></a>Optimizer Hint</h4><ul>
-<li>Optimizer도 잘못된 판단을 할 수 있으므로, 개발자가 직접 실행방식을 원하는대로 유도하는 방법</li>
-<li>Hint가 무시되는 경우<ol>
+<h4>Optimizer Hint</h4>
+<ul>
+<li>
+<p>Optimizer도 잘못된 판단을 할 수 있으므로, 개발자가 직접 실행방식을 원하는대로 유도하는 방법</p>
+</li>
+<li>
+<p>Hint가 무시되는 경우</p>
+<ol>
 <li>문법적으로 틀린 경우</li>
 <li>의미적으로 틀린 경우 : RBO에서 CBO Hint (ex. first_rows_10), unnest 와 push_subq를 같이 쓴 경우</li>
 <li>잘못된 참조 사용 : 없는 Table, Index, Alias 지정</li>
 <li>논리적으로 불가능 : JOIN에 등치(=)조건 없이 Hash Join으로 유도, Nullable 칼럼에 대해 Index를 활용해 COUNT(*) 계산시도</li>
 </ol>
 </li>
+<li>
+<p>Hint 종류는 별도로 정리할 예정</p>
+</li>
 </ul>
+<h3>3.2 Query Transformation (쿼리 변환)</h3>
 <ul>
-<li>Hint 종류는 별도로 정리할 예정</li>
-</ul>
-<h3 id="3-2-Query-Transformation-쿼리-변환"><a href="#3-2-Query-Transformation-쿼리-변환" class="headerlink" title="3.2 Query Transformation (쿼리 변환)"></a>3.2 Query Transformation (쿼리 변환)</h3><ul>
 <li>Optimizer가 SQL을 분석하여 동일하지만 더 나은 성능의 SQL로 재작성</li>
 <li>Query Transformer가 담당</li>
 </ul>
-<h4 id="Query-변환-방식"><a href="#Query-변환-방식" class="headerlink" title="Query 변환 방식"></a>Query 변환 방식</h4><ul>
+<h4>Query 변환 방식</h4>
+<ul>
 <li>Heuristic Query 변환 : 결과만 보장된다면 무조건 수행. Rule-based 최적화 기법</li>
 <li>Cost-based Query 변환 :  변환된 Query의 비용이 더 낮을 때만 그것을 사용</li>
 </ul>
-<h4 id="Subquery-Unnesting"><a href="#Subquery-Unnesting" class="headerlink" title="Subquery Unnesting"></a>Subquery Unnesting</h4><ul>
-<li>Nested Subquery를 풀어서 Main-query와의 JOIN된 형태로 변환<ul>
+<h4>Subquery Unnesting</h4>
+<ul>
+<li>Nested Subquery를 풀어서 Main-query와의 JOIN된 형태로 변환
+<ul>
 <li>Optimizer는 JOIN방식에 대해서 여러가지 최적화 기법을 시도 할 수 있다.</li>
 <li>만약 Nested Subquery를 그대로 두고 최적화를 해야 한다면 각각의 Subquery, Main-query별로 최적화를 해야하는데, 이렇게 부분의 최적화가 전체 수행 성능의 최적화를 보장하진 못한다.</li>
-<li>관련 Hint<ul>
+<li>관련 Hint
+<ul>
 <li>UNNEST : Unnesting 하여 JOIN방식으로 유도</li>
 <li>NO_UNNEST : 그래도 둔 상태에서 Filter 방식으로 최적화 유도</li>
 </ul>
@@ -237,12 +258,14 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> DEPTNO <span class="keyword">FROM</span> DEPT); <span class="comment">-- Main (M) : Sub (1) 관계에서는 Unnesting이 대부분 유리</span></div><div class="line"><span class="comment">-- 변환</span></div><div class="line"><span class="keyword">SELECT</span> EMP.* <span class="keyword">FROM</span> DEPT, EMP <span class="keyword">WHERE</span> EMP.DEPT = DEPT.DEPTNO;</div></pre></td></tr></table></figure>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO <span class="keyword">IN</span> (<span class="keyword">SELECT</span> DEPTNO <span class="keyword">FROM</span> DEPT); <span class="comment">-- Main (M) : Sub (1) 관계에서는 Unnesting이 대부분 유리</span></div><div class="line"><span class="comment">-- 변환</span></div><div class="line"><span class="keyword">SELECT</span> EMP.* <span class="keyword">FROM</span> DEPT, EMP <span class="keyword">WHERE</span> EMP.DEPT = DEPT.DEPTNO;</div></pre></td></tr></table></figure></p>
 <ul>
-<li>Subquery가 M쪽 집합이거나 Non-unique Index일 경우<ul>
+<li>Subquery가 M쪽 집합이거나 Non-unique Index일 경우
+<ul>
 <li>예를 들어 <code>SELECT * FROM DEPT WHERE DEPTNO IN (SELECT DEPTNO FROM EMP)</code>와 같은 경우</li>
 <li>위 방법과 같이 Unnesting하면 결과가 달라지게 된다. (EMP에는 같은 DEPTNO가 많다.)</li>
-<li>이럴 경우 Optimizer는 2 가지 방법 중 하나를 선택한다.<ul>
+<li>이럴 경우 Optimizer는 2 가지 방법 중 하나를 선택한다.
+<ul>
 <li>Sort Unique : Subquery쪽 Table이 1쪽임을 호가신할 수 없는 경우 먼저 Sort Unique를 수행한 후에 JOIN</li>
 <li>Semi Join : Driving Table의 한 row가 Inner Table의 한 row와 JOIN에 성공하면 Outer Table의 다음 row를 진행.  Main-query 쪽 Table이 먼저 Driving될 경우</li>
 </ul>
@@ -250,95 +273,115 @@
 </ul>
 </li>
 </ul>
-<h4 id="View-Merging"><a href="#View-Merging" class="headerlink" title="View Merging"></a>View Merging</h4><ul>
+<h4>View Merging</h4>
+<ul>
 <li>일반 View, Inline View를 JOIN으로 풀어서 변환</li>
 <li>사람 눈으로 볼땐 Query가 블록화 되어 보기 편하지만 Optimizer는 가급적 풀어서 JOIN형태로 변환한 뒤 최적화를 시도</li>
 <li>단순한 View는 Merging하여도 성능이 나빠지지 않는다.</li>
 <li>복잡한 연산을 포함하는 View는 Merging하면 성능이 나빠질 수 있다.</li>
 </ul>
 <ul>
-<li><p>Inline View Merging 예제</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> A.* </div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> JOB = <span class="string">'SALESMAN'</span>) A,</div><div class="line">       (<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> DEPT <span class="keyword">WHERE</span> LOC = <span class="string">'CHICAGO'</span>) B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO;</div><div class="line"></div><div class="line"><span class="comment">-- 변환</span></div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> *</div><div class="line">  <span class="keyword">FROM</span> EMP A, DEPT B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line">   <span class="keyword">AND</span> A.JOB = <span class="string">'SALESMAN'</span></div><div class="line">   <span class="keyword">AND</span> B.LOC = <span class="string">'CHICAGO'</span>;</div></pre></td></tr></table></figure>
+<li>
+<p>Inline View Merging 예제
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> A.* </div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> JOB = <span class="string">'SALESMAN'</span>) A,</div><div class="line">       (<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> DEPT <span class="keyword">WHERE</span> LOC = <span class="string">'CHICAGO'</span>) B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO;</div><div class="line"></div><div class="line"><span class="comment">-- 변환</span></div><div class="line"></div><div class="line"><span class="keyword">SELECT</span> *</div><div class="line">  <span class="keyword">FROM</span> EMP A, DEPT B</div><div class="line"> <span class="keyword">WHERE</span> A.DEPTNO = B.DEPTNO</div><div class="line">   <span class="keyword">AND</span> A.JOB = <span class="string">'SALESMAN'</span></div><div class="line">   <span class="keyword">AND</span> B.LOC = <span class="string">'CHICAGO'</span>;</div></pre></td></tr></table></figure></p>
 </li>
-<li><p>View Merging 예제</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">CREATE OR REPLACE VIEW EMP_SALESMAN</div><div class="line">AS</div><div class="line">SELECT * FROM EMP WHERE JOB = 'SALESMAN';</div><div class="line"></div><div class="line">SELECE E.*</div><div class="line">  FROM EMP_SALESMAN E, DEPT D</div><div class="line"> WHERE D.DEPTNO = E.DEPTNO</div><div class="line">   AND E.SAL &gt;= 1500;</div><div class="line"></div><div class="line">-- 변환</div><div class="line"></div><div class="line">SELECT E.*</div><div class="line">  FROM EMP E, DEPT D</div><div class="line"> WHERE D.DEPTNO = E.DEPTNO</div><div class="line">   AND E.JOB = 'SALESMAN'</div><div class="line">   AND E.SAL &gt;= 1500;</div></pre></td></tr></table></figure>
+<li>
+<p>View Merging 예제
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">CREATE OR REPLACE VIEW EMP_SALESMAN</div><div class="line">AS</div><div class="line">SELECT * FROM EMP WHERE JOB = 'SALESMAN';</div><div class="line"></div><div class="line">SELECE E.*</div><div class="line">  FROM EMP_SALESMAN E, DEPT D</div><div class="line"> WHERE D.DEPTNO = E.DEPTNO</div><div class="line">   AND E.SAL &gt;= 1500;</div><div class="line"></div><div class="line">-- 변환</div><div class="line"></div><div class="line">SELECT E.*</div><div class="line">  FROM EMP E, DEPT D</div><div class="line"> WHERE D.DEPTNO = E.DEPTNO</div><div class="line">   AND E.JOB = 'SALESMAN'</div><div class="line">   AND E.SAL &gt;= 1500;</div></pre></td></tr></table></figure></p>
 </li>
-<li><p>View Merging시 성능이 나빠질 수 있는 연산</p>
+<li>
+<p>View Merging시 성능이 나빠질 수 있는 연산</p>
 <ul>
 <li>GROUP BY 절</li>
 <li>DISTINCT 연산</li>
 </ul>
 </li>
-<li><p>View Merging이 불가능한 연산</p>
+<li>
+<p>View Merging이 불가능한 연산</p>
 <ul>
 <li>집합(SET) : UNION, UNION ALL, INTERSECT, MINUS</li>
 <li>CONNECT BY 절</li>
 <li>ROWNUM pseudo 칼럼</li>
-<li>집계 함수 (AVG, CONUT, MAX, MIN, SUM, …)</li>
+<li>집계 함수 (AVG, CONUT, MAX, MIN, SUM, ...)</li>
 <li>분석 함수 (Analytic Function)</li>
 </ul>
 </li>
-<li><p>관련 Hint : MERGE, NO_MERGE</p>
+<li>
+<p>관련 Hint : MERGE, NO_MERGE</p>
 </li>
 </ul>
-<h4 id="Predicate-Pushing-조건절-푸싱"><a href="#Predicate-Pushing-조건절-푸싱" class="headerlink" title="Predicate Pushing (조건절 푸싱)"></a>Predicate Pushing (조건절 푸싱)</h4><ul>
+<h4>Predicate Pushing (조건절 푸싱)</h4>
+<ul>
 <li>조건절을 가능한 빨리 처리되도록 View 안으로 밀어넣어서 처리량을 최소화 하는 방식</li>
 </ul>
 <ul>
-<li><p>종류</p>
+<li>
+<p>종류</p>
 <ul>
 <li>Predicate Pushdown : Query 블록 밖에 있는 조건절은 안으로 밀어 넣음</li>
 <li>Predicate Pullup : Query 블록 안의 조건절을 밖으로 내오와서, 다른 Query 블록 안으로 Pushdown하는데 사용</li>
 <li>Join Predicate Pushdown : NL Join 수행시 Driving Table에서 읽은 값을 Inner View Query 쪽으로 밀어 넣음</li>
 </ul>
 </li>
-<li><p>Predicate Pushdown</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DEPTNO, AVG_SAL</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL) AVG_SAL <span class="keyword">FROM</span> EMP <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO)</div><div class="line"> <span class="keyword">WHERE</span> DEPTNO = <span class="number">30</span>;</div></pre></td></tr></table></figure>
+<li>
+<p>Predicate Pushdown
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> DEPTNO, AVG_SAL</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL) AVG_SAL <span class="keyword">FROM</span> EMP <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO)</div><div class="line"> <span class="keyword">WHERE</span> DEPTNO = <span class="number">30</span>;</div></pre></td></tr></table></figure></p>
 </li>
 </ul>
 <p>Inline View 안에서 DEPTNO에 대해서만 GROUP BY 하여 데이터량을 줄일 수 있다.</p>
 <ul>
-<li>Predicate Pullup<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> *</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL)           <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO = <span class="number">10</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E1,</div><div class="line">       (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">MIN</span>(SAL), <span class="keyword">MAX</span>(SAL) <span class="keyword">FROM</span> EMP                   <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E2</div><div class="line"> <span class="keyword">WHERE</span> E1.DEPTNO = E2.DEPTNO;</div></pre></td></tr></table></figure>
-</li>
+<li>Predicate Pullup
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> *</div><div class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL)           <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO = <span class="number">10</span> <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E1,</div><div class="line">       (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">MIN</span>(SAL), <span class="keyword">MAX</span>(SAL) <span class="keyword">FROM</span> EMP                   <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E2</div><div class="line"> <span class="keyword">WHERE</span> E1.DEPTNO = E2.DEPTNO;</div></pre></td></tr></table></figure></li>
 </ul>
 <p>E1의 조건을 Pullup하여 E2로 Pushdown하여 데이터량을 줄일 수 있다.</p>
 <ul>
-<li>Join Predicate Pushdown<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> D.DEPTNO, D.DNAME, E.AVG_SAL</div><div class="line">  <span class="keyword">FROM</span> DEPT D,</div><div class="line">       (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL) AVG_SAL <span class="keyword">FROM</span> EMP <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E</div><div class="line"> <span class="keyword">WHERE</span> E.DEPTNO(+) = D.DEPTNO;</div></pre></td></tr></table></figure>
-</li>
+<li>Join Predicate Pushdown
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> D.DEPTNO, D.DNAME, E.AVG_SAL</div><div class="line">  <span class="keyword">FROM</span> DEPT D,</div><div class="line">       (<span class="keyword">SELECT</span> DEPTNO, <span class="keyword">AVG</span>(SAL) AVG_SAL <span class="keyword">FROM</span> EMP <span class="keyword">GROUP</span> <span class="keyword">BY</span> DEPTNO) E</div><div class="line"> <span class="keyword">WHERE</span> E.DEPTNO(+) = D.DEPTNO;</div></pre></td></tr></table></figure></li>
 </ul>
 <p>D에 존재하는 DEPTNO에 대해서만 E에서 수행하여 데이터량을 줄일 수 있다.</p>
-<h3 id="조건절-이행-Transitive-Predicate-Generation-Transitive-Closure"><a href="#조건절-이행-Transitive-Predicate-Generation-Transitive-Closure" class="headerlink" title="조건절 이행(Transitive Predicate Generation, Transitive Closure)"></a>조건절 이행(Transitive Predicate Generation, Transitive Closure)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> DEPT D, EMP E</div><div class="line"> <span class="keyword">WHERE</span> E.JOB = <span class="string">'MANAGER'</span></div><div class="line">   <span class="keyword">AND</span> E.DEPTNO = <span class="number">10</span></div><div class="line">   <span class="keyword">AND</span> D.DEPTNO = E.DEPTNO</div></pre></td></tr></table></figure>
+<h3>조건절 이행(Transitive Predicate Generation, Transitive Closure)</h3>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> DEPT D, EMP E</div><div class="line"> <span class="keyword">WHERE</span> E.JOB = <span class="string">'MANAGER'</span></div><div class="line">   <span class="keyword">AND</span> E.DEPTNO = <span class="number">10</span></div><div class="line">   <span class="keyword">AND</span> D.DEPTNO = E.DEPTNO</div></pre></td></tr></table></figure></p>
 <p>E의 <code>DEPTNO = 10</code> 조건을 D에서도 수행</p>
-<h3 id="불필요한-JOIN-제거-Join-Elimination"><a href="#불필요한-JOIN-제거-Join-Elimination" class="headerlink" title="불필요한 JOIN 제거 (Join Elimination)"></a>불필요한 JOIN 제거 (Join Elimination)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> E.* <span class="keyword">FROM</span> DEPT D, EMP E <span class="keyword">WHERE</span> D.DEPTNO = E.DEPTNO;</div></pre></td></tr></table></figure>
+<h3>불필요한 JOIN 제거 (Join Elimination)</h3>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> E.* <span class="keyword">FROM</span> DEPT D, EMP E <span class="keyword">WHERE</span> D.DEPTNO = E.DEPTNO;</div></pre></td></tr></table></figure></p>
 <ul>
 <li>D의 참조가 전혀 없으므로 제거</li>
-<li>단, PK, FK의 제약조건이 있어야만 가능.<ul>
+<li>단, PK, FK의 제약조건이 있어야만 가능.
+<ul>
 <li>PK가 없는 경우 Join Cardinality를 파악할 수 없으므로 결과가 달라 질 수 있음</li>
 <li>FK가 설정되어 있다하더라도 EMP의 DEPTNO가 Nullable이면 결과가 달라질 수 있음</li>
 </ul>
 </li>
 </ul>
-<h3 id="OR-조건을-UNION으로-변환"><a href="#OR-조건을-UNION으로-변환" class="headerlink" title="OR 조건을 UNION으로 변환"></a>OR 조건을 UNION으로 변환</h3><ul>
+<h3>OR 조건을 UNION으로 변환</h3>
+<ul>
 <li>OR 조건을 그대로 둘 경우 Full Table Scan으로 처리되거나 각각의 Column별 Index를 활용하여 Bitmap 연산을 하는 Index Combine으로 작동할 경우가 있다.</li>
-<li>관련 Hint<ul>
+<li>관련 Hint
+<ul>
 <li>USE_CONCAT : UNION ALL 표현 (OR-Expansion)을 유도</li>
 <li>NO_EXPAND : 나누지 말고 그대로 실행</li>
 </ul>
 </li>
 </ul>
-<h3 id="집합-연산을-JOIN-연산으로"><a href="#집합-연산을-JOIN-연산으로" class="headerlink" title="집합 연산을 JOIN 연산으로"></a>집합 연산을 JOIN 연산으로</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> JOB, MGR <span class="keyword">FROM</span> EMP</div><div class="line"><span class="keyword">MINUS</span></div><div class="line"><span class="keyword">SELECT</span> JOB, MGR <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO = <span class="number">10</span>;</div></pre></td></tr></table></figure>
-<p>위 문장을 실행하면 Table Full Scan 후 Sort Unique 하는 연산을 2번 수행 후에 결과집합을 구하게 된다.<br>이 경우 아래와 같은 형태로 Query 변환을 하여 실행을 한다.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> JOB, MGR <span class="keyword">FROM</span> EMP E</div><div class="line"> <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="string">'X'</span> <span class="keyword">FROM</span> EMP</div><div class="line">                    <span class="keyword">WHERE</span> DEPTBO = <span class="number">10</span></div><div class="line">                      <span class="keyword">AND</span> SYS_OP_MAP_NONNULL(JOB) = SYS_OP_MAP_NONNULL(E.JOB)</div><div class="line">                      <span class="keyword">AND</span> SYS_OP_MAP_NONNULL(MGR) = SYS_OP_MAP_NONNULL(E.MGR)</div></pre></td></tr></table></figure>
+<h3>집합 연산을 JOIN 연산으로</h3>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> JOB, MGR <span class="keyword">FROM</span> EMP</div><div class="line"><span class="keyword">MINUS</span></div><div class="line"><span class="keyword">SELECT</span> JOB, MGR <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> DEPTNO = <span class="number">10</span>;</div></pre></td></tr></table></figure></p>
+<p>위 문장을 실행하면 Table Full Scan 후 Sort Unique 하는 연산을 2번 수행 후에 결과집합을 구하게 된다.<br>
+이 경우 아래와 같은 형태로 Query 변환을 하여 실행을 한다.</p>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> JOB, MGR <span class="keyword">FROM</span> EMP E</div><div class="line"> <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="string">'X'</span> <span class="keyword">FROM</span> EMP</div><div class="line">                    <span class="keyword">WHERE</span> DEPTBO = <span class="number">10</span></div><div class="line">                      <span class="keyword">AND</span> SYS_OP_MAP_NONNULL(JOB) = SYS_OP_MAP_NONNULL(E.JOB)</div><div class="line">                      <span class="keyword">AND</span> SYS_OP_MAP_NONNULL(MGR) = SYS_OP_MAP_NONNULL(E.MGR)</div></pre></td></tr></table></figure></p>
 <ul>
 <li>SYS_OP_MAP_NONNULL() : null끼리 비교시 true값을 반환하도록 처리</li>
 </ul>
-<h3 id="JOIN-Column에-IS-NOT-NULL-조건-추가"><a href="#JOIN-Column에-IS-NOT-NULL-조건-추가" class="headerlink" title="JOIN Column에 IS NOT NULL 조건 추가"></a>JOIN Column에 IS NOT NULL 조건 추가</h3><ul>
+<h3>JOIN Column에 IS NOT NULL 조건 추가</h3>
+<ul>
 <li>어차피 NULL인 Column은 JOIN에 실패한다. 그러기 때문에 미리 NULL인 Column에 대해서 Filtering 하면 불필요한 액세스를 줄일 수 있다. (Oracle의 경우 해당 Column의 NULL값 비중이 5% 이상이면 내부적으로 추가해준다.)</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> EMPNO, DNAME</div><div class="line">  <span class="keyword">FROM</span> EMP E, DEPT D</div><div class="line"> <span class="keyword">WHERE</span> D.DEPTNO = E.DEPTNO</div><div class="line">   <span class="keyword">AND</span> SAL &lt;= <span class="number">2900</span></div><div class="line">   <span class="keyword">AND</span> E.DEPTNO <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>  <span class="comment">-- Optimizer가 추가</span></div><div class="line">   <span class="keyword">AND</span> D.DEPTNO <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>  <span class="comment">-- Optimizer가 추가</span></div></pre></td></tr></table></figure>
-<h3 id="Filter-조건-추가"><a href="#Filter-조건-추가" class="headerlink" title="Filter 조건 추가"></a>Filter 조건 추가</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> SAL BETERRN :<span class="keyword">MIN</span> <span class="keyword">AND</span> :<span class="keyword">MAX</span></div></pre></td></tr></table></figure>
-<p>위 Query에서 :MIN 이 :MAX보다 크면 당연히 결과는 공집합이다.<br>이 경우 :MIN 값이 :MAX보다 작거나 같다는 Filter조건을 임의로 추가해서 실행해준다.</p>
-<h3 id="WHERE-비교-순서"><a href="#WHERE-비교-순서" class="headerlink" title="WHERE 비교 순서"></a>WHERE 비교 순서</h3><p>WHERE 절에 비교할 컬럼이 많은 경우 그 중 작업량을 많이 줄여줄거라 판단한 조건부터 먼저 비교한다.</p>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> EMPNO, DNAME</div><div class="line">  <span class="keyword">FROM</span> EMP E, DEPT D</div><div class="line"> <span class="keyword">WHERE</span> D.DEPTNO = E.DEPTNO</div><div class="line">   <span class="keyword">AND</span> SAL &lt;= <span class="number">2900</span></div><div class="line">   <span class="keyword">AND</span> E.DEPTNO <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>  <span class="comment">-- Optimizer가 추가</span></div><div class="line">   <span class="keyword">AND</span> D.DEPTNO <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>  <span class="comment">-- Optimizer가 추가</span></div></pre></td></tr></table></figure></p>
+<h3>Filter 조건 추가</h3>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> SAL BETERRN :<span class="keyword">MIN</span> <span class="keyword">AND</span> :<span class="keyword">MAX</span></div></pre></td></tr></table></figure></p>
+<p>위 Query에서 :MIN 이 :MAX보다 크면 당연히 결과는 공집합이다.<br>
+이 경우 :MIN 값이 :MAX보다 작거나 같다는 Filter조건을 임의로 추가해서 실행해준다.</p>
+<h3>WHERE 비교 순서</h3>
+<p>WHERE 절에 비교할 컬럼이 많은 경우 그 중 작업량을 많이 줄여줄거라 판단한 조건부터 먼저 비교한다.</p>
 
         </div>
         <footer class="article-footer">
@@ -346,7 +389,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/04/03.04.optimizer/" data-id="cjov18q43000tdw7bfu6uy5yw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/04/03.04.optimizer/" data-id="cjov1rqsd000rhs7bf2nyuy1t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

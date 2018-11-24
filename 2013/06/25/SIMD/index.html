@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="CPP,MFC,SIMD" />
     
-    <meta name="description" content="Header File : &amp;lt;dvec.h&amp;gt;  SIMD Vector Class 명명법12 &amp;lt;Type&amp;gt;&amp;lt;Signed&amp;gt;&amp;lt;Bits&amp;gt;vec&amp;lt;Nums&amp;gt;&amp;#123; F | I &amp;#125; &amp;#123; s | u &amp;#125; &amp;#123; 64 | 32 | 16 | 8 &amp;#125; vec &amp;#123; 8 | 4 | 2">
+    <meta name="description" content="Header File : &amp;lt;dvec.h&amp;gt;  SIMD Vector Class 명명법 12 &amp;lt;Type&amp;gt;&amp;lt;Signed&amp;gt;&amp;lt;Bits&amp;gt;vec&amp;lt;Nums&amp;gt;&amp;#123; F | I &amp;#125; &amp;#123; s | u &amp;#125; &amp;#123; 64 | 32 | 16 | 8 &amp;#125; vec &amp;#123; 8 | 4 | 2">
 <meta name="keywords" content="CPP,MFC,SIMD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MFC SIMD Vector Class 사용법 정리">
 <meta property="og:url" content="http://DevStarSJ.github.io/2013/06/25/SIMD/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="Header File : &amp;lt;dvec.h&amp;gt;  SIMD Vector Class 명명법12 &amp;lt;Type&amp;gt;&amp;lt;Signed&amp;gt;&amp;lt;Bits&amp;gt;vec&amp;lt;Nums&amp;gt;&amp;#123; F | I &amp;#125; &amp;#123; s | u &amp;#125; &amp;#123; 64 | 32 | 16 | 8 &amp;#125; vec &amp;#123; 8 | 4 | 2">
+<meta property="og:description" content="Header File : &amp;lt;dvec.h&amp;gt;  SIMD Vector Class 명명법 12 &amp;lt;Type&amp;gt;&amp;lt;Signed&amp;gt;&amp;lt;Bits&amp;gt;vec&amp;lt;Nums&amp;gt;&amp;#123; F | I &amp;#125; &amp;#123; s | u &amp;#125; &amp;#123; 64 | 32 | 16 | 8 &amp;#125; vec &amp;#123; 8 | 4 | 2">
 <meta property="og:updated_time" content="2017-05-29T23:28:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MFC SIMD Vector Class 사용법 정리">
-<meta name="twitter:description" content="Header File : &amp;lt;dvec.h&amp;gt;  SIMD Vector Class 명명법12 &amp;lt;Type&amp;gt;&amp;lt;Signed&amp;gt;&amp;lt;Bits&amp;gt;vec&amp;lt;Nums&amp;gt;&amp;#123; F | I &amp;#125; &amp;#123; s | u &amp;#125; &amp;#123; 64 | 32 | 16 | 8 &amp;#125; vec &amp;#123; 8 | 4 | 2">
+<meta name="twitter:description" content="Header File : &amp;lt;dvec.h&amp;gt;  SIMD Vector Class 명명법 12 &amp;lt;Type&amp;gt;&amp;lt;Signed&amp;gt;&amp;lt;Bits&amp;gt;vec&amp;lt;Nums&amp;gt;&amp;#123; F | I &amp;#125; &amp;#123; s | u &amp;#125; &amp;#123; 64 | 32 | 16 | 8 &amp;#125; vec &amp;#123; 8 | 4 | 2">
     
 
     
@@ -163,38 +163,54 @@
             <ul>
 <li>Header File : <code>&lt;dvec.h&gt;</code></li>
 </ul>
-<h2 id="SIMD-Vector-Class-명명법"><a href="#SIMD-Vector-Class-명명법" class="headerlink" title="SIMD Vector Class 명명법"></a>SIMD Vector Class 명명법</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> &lt;Type&gt;&lt;Signed&gt;&lt;Bits&gt;vec&lt;Nums&gt;</div><div class="line">&#123; F | I &#125; &#123; s | u &#125; &#123; 64 | 32 | 16 | 8 &#125; vec &#123; 8 | 4 | 2 | 1 &#125;</div></pre></td></tr></table></figure>
+<h2>SIMD Vector Class 명명법</h2>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> &lt;Type&gt;&lt;Signed&gt;&lt;Bits&gt;vec&lt;Nums&gt;</div><div class="line">&#123; F | I &#125; &#123; s | u &#125; &#123; 64 | 32 | 16 | 8 &#125; vec &#123; 8 | 4 | 2 | 1 &#125;</div></pre></td></tr></table></figure></p>
 <ul>
-<li><p>F : 실수 , I : 정수</p>
+<li>
+<p>F : 실수 , I : 정수</p>
 </li>
-<li><p>s : signed, u : unsigned ( I에만 사용됨)</p>
+<li>
+<p>s : signed, u : unsigned ( I에만 사용됨)</p>
 </li>
-<li><p>64 : double, __int64 , 32 : float, int , 16: short , 8 : char</p>
+<li>
+<p>64 : double, __int64 , 32 : float, int , 16: short , 8 : char</p>
 </li>
-<li><p>8,4,2,1 : pack 개수 (Bits x Nums 는 128을 넘어 갈 수 없다. )</p>
+<li>
+<p>8,4,2,1 : pack 개수 (Bits x Nums 는 128을 넘어 갈 수 없다. )</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Ex) unsigned int 4개pack class : Iu32vec4 , float 4개 packclass : F32vec4</div></pre></td></tr></table></figure>
-<h2 id="초기화"><a href="#초기화" class="headerlink" title="초기화"></a>초기화</h2><ul>
-<li>괄호 안에 각 변수들을 지정<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Ex) Is32vec4 pint4(10,20,30,40);</div></pre></td></tr></table></figure>
-</li>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Ex) unsigned int 4개pack class : Iu32vec4 , float 4개 packclass : F32vec4</div></pre></td></tr></table></figure></p>
+<h2>초기화</h2>
+<ul>
+<li>괄호 안에 각 변수들을 지정
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Ex) Is32vec4 pint4(10,20,30,40);</div></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="1-연산자-vec-vec-op-vec"><a href="#1-연산자-vec-vec-op-vec" class="headerlink" title="1. 연산자 ( vec = vec op vec)"></a>1. 연산자 ( vec = vec op vec)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">    = : 대입</div><div class="line">+, += : 덧셈</div><div class="line">- , -= : 뺄셈</div><div class="line">* , *=  : 곱셈</div><div class="line">/ , /+ : 나눗셈 (실수 연산만 가능)</div><div class="line">&amp; : 논리연산 AND</div><div class="line">| : 논리연산 OR</div><div class="line">^ : 논리연산 XOR</div></pre></td></tr></table></figure>
-<h3 id="2-연산자-vec-vec-op-n"><a href="#2-연산자-vec-vec-op-n" class="headerlink" title="2. 연산자 (vec = vec op n )"></a>2. 연산자 (vec = vec op n )</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;, &lt;&lt;== : Left Shift ( x2 )</div><div class="line">&gt;&gt; , &gt;&gt;== : Right Shift ( /2 )</div></pre></td></tr></table></figure>
-<h3 id="3-함수-vec-func-vec-vec"><a href="#3-함수-vec-func-vec-vec" class="headerlink" title="3. 함수 (vec = func(vec, vec)"></a>3. 함수 (vec = func(vec, vec)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">simd_min() : 최소값</div><div class="line">simd_max() : 최대값</div><div class="line">andnot() : 논리연산 And Not</div></pre></td></tr></table></figure>
-<h3 id="4-비교함수-참이면-0xff…-거짓이면-0"><a href="#4-비교함수-참이면-0xff…-거짓이면-0" class="headerlink" title="4. 비교함수 ( 참이면 0xff…, 거짓이면 0 )"></a>4. 비교함수 ( 참이면 0xff…, 거짓이면 0 )</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">cmpeq : ==</div><div class="line">cmpneq : !=</div><div class="line">cmpgt : &gt;</div><div class="line">cmpge : &gt;=</div><div class="line">cmplt : &lt;</div><div class="line">cmple : &lt;=</div><div class="line">cmpnlt : !(A &lt; B)</div><div class="line">cmpnle : !(A &lt;= B)</div><div class="line">cmpngt : !(A &gt; B)</div><div class="line">cmpnge : !(A &gt;= B)</div></pre></td></tr></table></figure>
-<h3 id="5-Select-R-Select-A-B-C-D-gt-if-A-비교-B-R-C-else-R-D"><a href="#5-Select-R-Select-A-B-C-D-gt-if-A-비교-B-R-C-else-R-D" class="headerlink" title="5. Select : R = Select(A,B,C,D)=&gt; if (A 비교 B) R = C else R = D"></a>5. Select : R = Select(A,B,C,D)=&gt; if (A 비교 B) R = C else R = D</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">select_eq : ==</div><div class="line">select_neq : !=</div><div class="line">select_gt : &gt;</div><div class="line">select_ge : &gt;=</div><div class="line">select_lt : &lt;</div><div class="line">select_le : &lt;=</div><div class="line">select_nlt : !(A &lt; B)</div><div class="line">select_nle : !(A &lt;= B)</div><div class="line">select_ngt : !(A &gt; B)</div><div class="line">select_nge : !(A &gt;= B)</div></pre></td></tr></table></figure>
-<h3 id="6-Unpacked-Pack-예제는-Is32vec4"><a href="#6-Unpacked-Pack-예제는-Is32vec4" class="headerlink" title="6. Unpacked / Pack (예제는 Is32vec4)"></a>6. Unpacked / Pack (예제는 Is32vec4)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">R = unpack_low( A, B) =&gt; R = ( B1 , A1 , B0 , A0 )</div><div class="line">R = unpack_high(A, B) =&gt; R = ( B3 , A3 , B2 , A2 )</div><div class="line">R = pack_sat(A, B) =&gt; Is16vec8 R = (B3, B2, B1, B0, A3, A2, A1, A0) : 정수형만지원</div></pre></td></tr></table></figure>
-<h3 id="7-정수-Vector-lt-gt-Array-Vector-Class에서-지원하지-앟음-intrinsic-함수-이용"><a href="#7-정수-Vector-lt-gt-Array-Vector-Class에서-지원하지-앟음-intrinsic-함수-이용" class="headerlink" title="7.정수 Vector &lt;-&gt; Array :Vector Class에서 지원하지 앟음 intrinsic 함수 이용"></a>7.정수 Vector &lt;-&gt; Array :Vector Class에서 지원하지 앟음 intrinsic 함수 이용</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Is32vec4 A = _mm_load_si128((__m128i*) p) : 배열 Pointer를 __m128i* 로 casting 후 저장  </div><div class="line">                                                            (정렬된 메모리)</div><div class="line"></div><div class="line">s32vec4 A = _mm_loadu_si128((__m128i*) p) : 정렬되지 않은 메모리에서 데이터 읽어오기</div><div class="line">_mm_store_si128((_m128i*) p , A) : A에 저장된 값들을 배열 p에순서대로 저장</div><div class="line">                                            (정렬된 메모리)</div><div class="line">_mm_storeu_si128((_m128i*) p , A) : 정렬되지 않은 메모리에 데이터 쓰기</div></pre></td></tr></table></figure>
-<h3 id="8-실수-Vector-lt-gt-Array"><a href="#8-실수-Vector-lt-gt-Array" class="headerlink" title="8. 실수 Vector &lt;-&gt; Array"></a>8. 실수 Vector &lt;-&gt; Array</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">loadu (F32vec4 R, float* a) : a[0] ~ a[3] 4개의 float 값을읽어서 R에 저장</div><div class="line">storeu(float* a, F32vec4 R) : R의 값을 a[0] ~ a[3]에저장</div><div class="line">store_nta(float* a, F32vec$ R) : 버퍼 없이 메모리 a[0] ~ a[3]에저장</div></pre></td></tr></table></figure>
-<h3 id="9-수학-함수-실수-연산만-가능"><a href="#9-수학-함수-실수-연산만-가능" class="headerlink" title="9.수학 함수 (실수 연산만 가능)"></a>9.수학 함수 (실수 연산만 가능)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">R = sqrt(A) : 제곱근 Root</div><div class="line">R = rcp(A) : 역분수 : R = 1 / A</div><div class="line">R = rsqrt(A) : 제곱근 역분수 : R = 1 / Root A</div><div class="line">R = rcp_nr(A) : Newton-Raphson법의 역분수 : R = rcp(A) * 2 –A * rcp(A) * rcp(A)</div><div class="line">R = rsqrt_nr(A) : Newton-Raphson법의 제곤근 역분수 : R = rsqrt(A)/ 2 * ( 3 – A * rsqrt(A) * rsqrt(A) )</div><div class="line">F = add_horizontal(A) : float F = A0 + A1 + A2 + A3</div></pre></td></tr></table></figure>
+<h3>1. 연산자 ( vec = vec op vec)</h3>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">    = : 대입</div><div class="line">+, += : 덧셈</div><div class="line">- , -= : 뺄셈</div><div class="line">* , *=  : 곱셈</div><div class="line">/ , /+ : 나눗셈 (실수 연산만 가능)</div><div class="line">&amp; : 논리연산 AND</div><div class="line">| : 논리연산 OR</div><div class="line">^ : 논리연산 XOR</div></pre></td></tr></table></figure></p>
+<h3>2. 연산자 (vec = vec op n )</h3>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;, &lt;&lt;== : Left Shift ( x2 )</div><div class="line">&gt;&gt; , &gt;&gt;== : Right Shift ( /2 )</div></pre></td></tr></table></figure></p>
+<h3>3. 함수 (vec = func(vec, vec)</h3>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">simd_min() : 최소값</div><div class="line">simd_max() : 최대값</div><div class="line">andnot() : 논리연산 And Not</div></pre></td></tr></table></figure></p>
+<h3>4. 비교함수 ( 참이면 0xff…, 거짓이면 0 )</h3>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">cmpeq : ==</div><div class="line">cmpneq : !=</div><div class="line">cmpgt : &gt;</div><div class="line">cmpge : &gt;=</div><div class="line">cmplt : &lt;</div><div class="line">cmple : &lt;=</div><div class="line">cmpnlt : !(A &lt; B)</div><div class="line">cmpnle : !(A &lt;= B)</div><div class="line">cmpngt : !(A &gt; B)</div><div class="line">cmpnge : !(A &gt;= B)</div></pre></td></tr></table></figure></p>
+<h3>5. Select : R = Select(A,B,C,D)=&gt; if (A 비교 B) R = C else R = D</h3>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">select_eq : ==</div><div class="line">select_neq : !=</div><div class="line">select_gt : &gt;</div><div class="line">select_ge : &gt;=</div><div class="line">select_lt : &lt;</div><div class="line">select_le : &lt;=</div><div class="line">select_nlt : !(A &lt; B)</div><div class="line">select_nle : !(A &lt;= B)</div><div class="line">select_ngt : !(A &gt; B)</div><div class="line">select_nge : !(A &gt;= B)</div></pre></td></tr></table></figure></p>
+<h3>6. Unpacked / Pack (예제는 Is32vec4)</h3>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">R = unpack_low( A, B) =&gt; R = ( B1 , A1 , B0 , A0 )</div><div class="line">R = unpack_high(A, B) =&gt; R = ( B3 , A3 , B2 , A2 )</div><div class="line">R = pack_sat(A, B) =&gt; Is16vec8 R = (B3, B2, B1, B0, A3, A2, A1, A0) : 정수형만지원</div></pre></td></tr></table></figure></p>
+<h3>7.정수 Vector &lt;-&gt; Array :Vector Class에서 지원하지 앟음 intrinsic 함수 이용</h3>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Is32vec4 A = _mm_load_si128((__m128i*) p) : 배열 Pointer를 __m128i* 로 casting 후 저장  </div><div class="line">                                                            (정렬된 메모리)</div><div class="line"></div><div class="line">s32vec4 A = _mm_loadu_si128((__m128i*) p) : 정렬되지 않은 메모리에서 데이터 읽어오기</div><div class="line">_mm_store_si128((_m128i*) p , A) : A에 저장된 값들을 배열 p에순서대로 저장</div><div class="line">                                            (정렬된 메모리)</div><div class="line">_mm_storeu_si128((_m128i*) p , A) : 정렬되지 않은 메모리에 데이터 쓰기</div></pre></td></tr></table></figure></p>
+<h3>8. 실수 Vector &lt;-&gt; Array</h3>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">loadu (F32vec4 R, float* a) : a[0] ~ a[3] 4개의 float 값을읽어서 R에 저장</div><div class="line">storeu(float* a, F32vec4 R) : R의 값을 a[0] ~ a[3]에저장</div><div class="line">store_nta(float* a, F32vec$ R) : 버퍼 없이 메모리 a[0] ~ a[3]에저장</div></pre></td></tr></table></figure></p>
+<h3>9.수학 함수 (실수 연산만 가능)</h3>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">R = sqrt(A) : 제곱근 Root</div><div class="line">R = rcp(A) : 역분수 : R = 1 / A</div><div class="line">R = rsqrt(A) : 제곱근 역분수 : R = 1 / Root A</div><div class="line">R = rcp_nr(A) : Newton-Raphson법의 역분수 : R = rcp(A) * 2 –A * rcp(A) * rcp(A)</div><div class="line">R = rsqrt_nr(A) : Newton-Raphson법의 제곤근 역분수 : R = rsqrt(A)/ 2 * ( 3 – A * rsqrt(A) * rsqrt(A) )</div><div class="line">F = add_horizontal(A) : float F = A0 + A1 + A2 + A3</div></pre></td></tr></table></figure></p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2013/06/25/SIMD/" data-id="cjov18q5z007bdw7butf4c8kd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2013/06/25/SIMD/" data-id="cjov1rqub007bhs7b3y01nauc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

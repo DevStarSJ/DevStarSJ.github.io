@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  3장 SQL 최적화 기본 원리여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다.(아마 SQPD의 경우 2과목까지가 범위이므로 SQL">
+    <meta name="description" content="2과목 SQL 기본 및 활용  20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  3장 SQL 최적화 기본 원리 여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다. (아마 SQPD의 경우 2과목까지가 범위이므로">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 2-3 Optimizing SQL">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/01/27/02.07.optimizer/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  3장 SQL 최적화 기본 원리여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다.(아마 SQPD의 경우 2과목까지가 범위이므로 SQL">
+<meta property="og:description" content="2과목 SQL 기본 및 활용  20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  3장 SQL 최적화 기본 원리 여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다. (아마 SQPD의 경우 2과목까지가 범위이므로">
 <meta property="og:updated_time" content="2017-04-24T00:00:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 2-3 Optimizing SQL">
-<meta name="twitter:description" content="2과목 SQL 기본 및 활용 20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  3장 SQL 최적화 기본 원리여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다.(아마 SQPD의 경우 2과목까지가 범위이므로 SQL">
+<meta name="twitter:description" content="2과목 SQL 기본 및 활용  20문제 각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다. 기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.  3장 SQL 최적화 기본 원리 여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다. (아마 SQPD의 경우 2과목까지가 범위이므로">
     
 
     
@@ -160,24 +160,30 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="2과목-SQL-기본-및-활용"><a href="#2과목-SQL-기본-및-활용" class="headerlink" title="2과목 SQL 기본 및 활용"></a>2과목 SQL 기본 및 활용</h2><ul>
+            <h2>2과목 SQL 기본 및 활용</h2>
+<ul>
 <li>20문제</li>
 <li>각 상황별로 SQL문 작성이 가능할 정도로 연습해야 합니다.</li>
 <li>기본적인 SQL문법 및 함수는 생략하고 Tuning에 활용될수 있는 것 위주로 정리하고자 합니다.</li>
 </ul>
-<h3 id="3장-SQL-최적화-기본-원리"><a href="#3장-SQL-최적화-기본-원리" class="headerlink" title="3장 SQL 최적화 기본 원리"></a>3장 SQL 최적화 기본 원리</h3><p>여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다.<br>(아마 SQPD의 경우 2과목까지가 범위이므로 SQLD용 문제를 내기위한 용도인듯 합니다.)</p>
-<h4 id="Optimizer"><a href="#Optimizer" class="headerlink" title="Optimizer"></a>Optimizer</h4><ul>
+<h3>3장 SQL 최적화 기본 원리</h3>
+<p>여기서는 간단히 다루고 3과목에서 자세히 다룰 예정이므로 그냥 넘어가도 됩니다.
+(아마 SQPD의 경우 2과목까지가 범위이므로 SQLD용 문제를 내기위한 용도인듯 합니다.)</p>
+<h4>Optimizer</h4>
+<ul>
 <li>Optimizer : SQL문에 대한 최적의 실행 방법을 결정하는 역할</li>
 <li>Execution Plan (실행계획) : Optimizer가 생성한 최적의 실행 계획</li>
 </ul>
 <ul>
-<li><p>Optimizer 종류</p>
+<li>
+<p>Optimizer 종류</p>
 <ul>
 <li>RBO (Rule-based Optimizer) : 규칙(우선 순위)를 가지고 실행계획 생성</li>
 <li>CBO (Cost-based Optimizer) : 통계정보를 기반으로 여러가지 실행계획을 생성하여 그중 최저비용의 실행계획을 선택</li>
 </ul>
 </li>
-<li><p>Rule-based Optimizer 규칙</p>
+<li>
+<p>Rule-based Optimizer 규칙</p>
 <ol>
 <li>Single row by rowid</li>
 <li>Sigle row by cluster join</li>
@@ -201,27 +207,36 @@
 <blockquote>
 <p>Single row (rowid &lt; unique or primary key) &lt;&lt; Index ( Equal (composite &lt; single) &lt;&lt; Range (bounded &lt; unbounded) ) &lt;&lt; Full table scan</p>
 </blockquote>
-<h4 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h4><h5 id="1-B-Tree-Index"><a href="#1-B-Tree-Index" class="headerlink" title="1. B-Tree Index"></a>1. B-Tree Index</h5><ul>
-<li>구성<ul>
+<h4>Index</h4>
+<h5>1. B-Tree Index</h5>
+<ul>
+<li>구성
+<ul>
 <li>Root Block : Branch Block 중 가장 상위 Block</li>
 <li>Branch Block : 다음 단계를 가리키는 Pointer를 가지고 있음</li>
 <li>Leaf Block : Index를 구성하는 칼럼의 데이터와 rowid, 인접한 Leaf Block의 Pointer를 가지고 있음</li>
 </ul>
 </li>
 </ul>
-<h5 id="2-Cluster-Index-MS-SQL-IOT-Oracle"><a href="#2-Cluster-Index-MS-SQL-IOT-Oracle" class="headerlink" title="2. Cluster Index (MS-SQL) , IOT (Oracle)"></a>2. Cluster Index (MS-SQL) , IOT (Oracle)</h5><p>PK순으로 저장. Index의 Leaf Block에 Table 의 모든 데이터 저장</p>
-<h5 id="3-Bitmap-Index"><a href="#3-Bitmap-Index" class="headerlink" title="3. Bitmap Index"></a>3. Bitmap Index</h5><p>일종의 Hash + Linked List 형태</p>
-<h5 id="4-FBI-Function-Based-Index"><a href="#4-FBI-Function-Based-Index" class="headerlink" title="4. FBI (Function-Based Index)"></a>4. FBI (Function-Based Index)</h5><p>함수값 순으로 Index에 저장</p>
-<h4 id="Full-Table-Scan-vs-Index-Scan"><a href="#Full-Table-Scan-vs-Index-Scan" class="headerlink" title="Full Table Scan vs Index Scan"></a>Full Table Scan vs Index Scan</h4><ul>
-<li><p>Optimizer 가 Full Table Scan을 하는 경우</p>
+<h5>2. Cluster Index (MS-SQL) , IOT (Oracle)</h5>
+<p>PK순으로 저장. Index의 Leaf Block에 Table 의 모든 데이터 저장</p>
+<h5>3. Bitmap Index</h5>
+<p>일종의 Hash + Linked List 형태</p>
+<h5>4. FBI (Function-Based Index)</h5>
+<p>함수값 순으로 Index에 저장</p>
+<h4>Full Table Scan vs Index Scan</h4>
+<ul>
+<li>
+<p>Optimizer 가 Full Table Scan을 하는 경우</p>
 <ul>
 <li>SQL에 조건(WHERE)이 없을 경우</li>
 <li>조건은 있는데 사용 가능한 INDEX가 없는 경우</li>
 <li>Optimizer가 판단하여 Full Table Scan이 더 유리할때 : Index는 Single Block I/O, Table은 Multi Block I/O</li>
-<li>기타 : 병렬처리, Hint 등…</li>
+<li>기타 : 병렬처리, Hint 등...</li>
 </ul>
 </li>
-<li><p>Index Scan 종류</p>
+<li>
+<p>Index Scan 종류</p>
 <ul>
 <li>Index Unique Scan : Unique Index에서 = 조건으로 검색</li>
 <li>Index Range Scan : 조건이 = 가 아니거나 Non-unique Index를 이용</li>
@@ -231,8 +246,10 @@
 </ul>
 </li>
 </ul>
-<h4 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h4><ul>
-<li><p>NL Join (Nested-loop)</p>
+<h4>JOIN</h4>
+<ul>
+<li>
+<p>NL Join (Nested-loop)</p>
 <ul>
 <li>Driving Table을 먼저 읽은 다음에 Outer Table과 JOIN</li>
 <li>Driving Table에서 조건에 맞는 모든 row 만큼 JOIN이 이루어지므로 선행 테이블에서 작업량을 줄이는 것이 중요</li>
@@ -240,13 +257,15 @@
 <li>JOIN 과정은 random access</li>
 </ul>
 </li>
-<li><p>Sort Merge Join</p>
+<li>
+<p>Sort Merge Join</p>
 <ul>
 <li>Join 칼럼을 기준으로 데이터를 정렬한 뒤에 JOIN을 수행</li>
 <li>대량의 JOIN일 경우 NL Join의 random access보다 유리</li>
 </ul>
 </li>
-<li><p>Hash Join</p>
+<li>
+<p>Hash Join</p>
 <ul>
 <li>선행 테이블(Build Input)에서 JOIN하는 컬럼의 Hash값을 메모리에 생성</li>
 <li>후행 테이블(Prove Input)에 Hash값을 메모리에서 찾아서 JOIN</li>
@@ -261,7 +280,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/01/27/02.07.optimizer/" data-id="cjov18q3w000ddw7bmv89r8mn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/01/27/02.07.optimizer/" data-id="cjov1rqs9000hhs7bezvxi6gr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

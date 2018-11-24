@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="Oracle Plan, Trace 읽는 법SQL Tuning을 하기 위해서 가장 기본으로 알아야 하는 것이 Plan과 Trce를 읽는 방법입니다.그래야 어느 곳이 비효율적인지를 알아내서 그 부분을 중심으로 Tuning 전략을 세울 수 있습니다.   아래 내용중 SELECT Tuning시 중요하게 봐야할 사항은 다음과 같습니다.  실행 순서 : Plan, T">
+    <meta name="description" content="Oracle Plan, Trace 읽는 법 SQL Tuning을 하기 위해서 가장 기본으로 알아야 하는 것이 Plan과 Trce를 읽는 방법입니다. 그래야 어느 곳이 비효율적인지를 알아내서 그 부분을 중심으로 Tuning 전략을 세울 수 있습니다. 아래 내용중 SELECT Tuning시 중요하게 봐야할 사항은 다음과 같습니다.  실행 순서 : Plan, T">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle Plan,Trace">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/20/Oracle.read.plan.trace/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="Oracle Plan, Trace 읽는 법SQL Tuning을 하기 위해서 가장 기본으로 알아야 하는 것이 Plan과 Trce를 읽는 방법입니다.그래야 어느 곳이 비효율적인지를 알아내서 그 부분을 중심으로 Tuning 전략을 세울 수 있습니다.   아래 내용중 SELECT Tuning시 중요하게 봐야할 사항은 다음과 같습니다.  실행 순서 : Plan, T">
+<meta property="og:description" content="Oracle Plan, Trace 읽는 법 SQL Tuning을 하기 위해서 가장 기본으로 알아야 하는 것이 Plan과 Trce를 읽는 방법입니다. 그래야 어느 곳이 비효율적인지를 알아내서 그 부분을 중심으로 Tuning 전략을 세울 수 있습니다. 아래 내용중 SELECT Tuning시 중요하게 봐야할 사항은 다음과 같습니다.  실행 순서 : Plan, T">
 <meta property="og:updated_time" content="2017-04-24T00:25:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle Plan,Trace">
-<meta name="twitter:description" content="Oracle Plan, Trace 읽는 법SQL Tuning을 하기 위해서 가장 기본으로 알아야 하는 것이 Plan과 Trce를 읽는 방법입니다.그래야 어느 곳이 비효율적인지를 알아내서 그 부분을 중심으로 Tuning 전략을 세울 수 있습니다.   아래 내용중 SELECT Tuning시 중요하게 봐야할 사항은 다음과 같습니다.  실행 순서 : Plan, T">
+<meta name="twitter:description" content="Oracle Plan, Trace 읽는 법 SQL Tuning을 하기 위해서 가장 기본으로 알아야 하는 것이 Plan과 Trce를 읽는 방법입니다. 그래야 어느 곳이 비효율적인지를 알아내서 그 부분을 중심으로 Tuning 전략을 세울 수 있습니다. 아래 내용중 SELECT Tuning시 중요하게 봐야할 사항은 다음과 같습니다.  실행 순서 : Plan, T">
     
 
     
@@ -160,40 +160,51 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Oracle-Plan-Trace-읽는-법"><a href="#Oracle-Plan-Trace-읽는-법" class="headerlink" title="Oracle Plan, Trace 읽는 법"></a>Oracle Plan, Trace 읽는 법</h1><p>SQL Tuning을 하기 위해서 가장 기본으로 알아야 하는 것이 Plan과 Trce를 읽는 방법입니다.<br>그래야 어느 곳이 비효율적인지를 알아내서 그 부분을 중심으로 Tuning 전략을 세울 수 있습니다.  </p>
+            <h1>Oracle Plan, Trace 읽는 법</h1>
+<p>SQL Tuning을 하기 위해서 가장 기본으로 알아야 하는 것이 Plan과 Trce를 읽는 방법입니다.<br>
+그래야 어느 곳이 비효율적인지를 알아내서 그 부분을 중심으로 Tuning 전략을 세울 수 있습니다.</p>
 <p>아래 내용중 SELECT Tuning시 중요하게 봐야할 사항은 다음과 같습니다.</p>
 <ul>
 <li>실행 순서 : Plan, Trace 동일</li>
 <li>Trace 결과 : Row Source Operation의 각 수치들의 의미 (rows, cr만 알아도 됩니다.)</li>
 </ul>
-<h2 id="1-Plan-읽는-법"><a href="#1-Plan-읽는-법" class="headerlink" title="1. Plan 읽는 법"></a>1. Plan 읽는 법</h2><ul>
+<h2>1. Plan 읽는 법</h2>
+<ul>
 <li>Plan은 SQL을 실행하기 전에 Optimizer에 의해 선택된 최적의 실행 경로 및 계산되어진 예상 Cost를 보여줍니다.</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">*************************[Explain Plan Time: 2016/02/21 14:01:15]*************************</div><div class="line">Execution Plan</div><div class="line">-----------------------------------------------------------</div><div class="line">   0      SELECT STATEMENT Optimizer=ALL_ROWS (Cost=5 Card=5 Bytes=325)</div><div class="line">   1    0   SORT (ORDER BY) (Cost=9 Card=5 Bytes=325)</div><div class="line">   2    1     UNION-ALL</div><div class="line">   3    2       COUNT (STOPKEY)</div><div class="line">   4    3         VIEW (Cost=5 Card=1 Bytes=65)</div><div class="line">   5    4           SORT (ORDER BY STOPKEY) (Card=1 Bytes=14)</div><div class="line">   6    5             FILTER</div><div class="line">   7    6               TABLE ACCESS (FULL) OF 'BBS' (TABLE) (Cost=3 Card=10 Bytes=140)</div><div class="line">   8    2       VIEW (Cost=4 Card=4 Bytes=260)</div><div class="line">   9    8         SORT (ORDER BY) (Cost=4 Card=4 Bytes=56)</div><div class="line">  10    9           COUNT (STOPKEY)</div><div class="line">  11   10             TABLE ACCESS (FULL) OF 'BBS' (TABLE) (Cost=3 Card=5 Bytes=70)</div><div class="line">-----------------------------------------------------------</div><div class="line"></div><div class="line">Predicate information (identified by operation id):</div><div class="line">-----------------------------------------------------------</div><div class="line">   3 - filter(ROWNUM&lt;=4)</div><div class="line">   5 - filter(ROWNUM&lt;=4)</div><div class="line">   6 - filter(NULL IS NOT NULL)</div><div class="line">   7 - filter("NUM"&lt;10)</div><div class="line">  10 - filter(ROWNUM&lt;=4)</div><div class="line">  11 - filter("NUM"&gt;10)</div><div class="line">-----------------------------------------------------------</div></pre></td></tr></table></figure>
-<h3 id="1-1-실행순서-access-path"><a href="#1-1-실행순서-access-path" class="headerlink" title="1.1 실행순서 (access path)"></a>1.1 실행순서 (access path)</h3><ul>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">*************************[Explain Plan Time: 2016/02/21 14:01:15]*************************</div><div class="line">Execution Plan</div><div class="line">-----------------------------------------------------------</div><div class="line">   0      SELECT STATEMENT Optimizer=ALL_ROWS (Cost=5 Card=5 Bytes=325)</div><div class="line">   1    0   SORT (ORDER BY) (Cost=9 Card=5 Bytes=325)</div><div class="line">   2    1     UNION-ALL</div><div class="line">   3    2       COUNT (STOPKEY)</div><div class="line">   4    3         VIEW (Cost=5 Card=1 Bytes=65)</div><div class="line">   5    4           SORT (ORDER BY STOPKEY) (Card=1 Bytes=14)</div><div class="line">   6    5             FILTER</div><div class="line">   7    6               TABLE ACCESS (FULL) OF 'BBS' (TABLE) (Cost=3 Card=10 Bytes=140)</div><div class="line">   8    2       VIEW (Cost=4 Card=4 Bytes=260)</div><div class="line">   9    8         SORT (ORDER BY) (Cost=4 Card=4 Bytes=56)</div><div class="line">  10    9           COUNT (STOPKEY)</div><div class="line">  11   10             TABLE ACCESS (FULL) OF 'BBS' (TABLE) (Cost=3 Card=5 Bytes=70)</div><div class="line">-----------------------------------------------------------</div><div class="line"></div><div class="line">Predicate information (identified by operation id):</div><div class="line">-----------------------------------------------------------</div><div class="line">   3 - filter(ROWNUM&lt;=4)</div><div class="line">   5 - filter(ROWNUM&lt;=4)</div><div class="line">   6 - filter(NULL IS NOT NULL)</div><div class="line">   7 - filter("NUM"&lt;10)</div><div class="line">  10 - filter(ROWNUM&lt;=4)</div><div class="line">  11 - filter("NUM"&gt;10)</div><div class="line">-----------------------------------------------------------</div></pre></td></tr></table></figure></p>
+<h3>1.1 실행순서 (access path)</h3>
+<ul>
 <li>sibling 사이에서는 먼저 나온 것을 먼저 처리</li>
 <li>child가 있는 경우 child부터 다 처리하고 parent 처리하기</li>
 </ul>
 <p>이 두가지만 기억하면 됩니다.</p>
-<p>위 Plan을 기준으로 처리 순서는 다음과 같습니다.<br>(0 ~ 11까지 있는 왼쪽의 Index를 사용하겠습니다.)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">7 -&gt; 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 11 -&gt; 10 -&gt; 9 -&gt; 8 -&gt; 2 -&gt; 1 -&gt; 0</div></pre></td></tr></table></figure>
+<p>위 Plan을 기준으로 처리 순서는 다음과 같습니다.<br>
+(0 ~ 11까지 있는 왼쪽의 Index를 사용하겠습니다.)</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">7 -&gt; 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 11 -&gt; 10 -&gt; 9 -&gt; 8 -&gt; 2 -&gt; 1 -&gt; 0</div></pre></td></tr></table></figure></p>
 <ul>
 <li>(4) UNION-ALL 아래에 2개의 child(3,8)가 있습니다.</li>
 <li>이 둘중 위에 있는 (3)부터 처리를 해야하는데 (3)은 child가 있으므로 가장 안쪽부터 처리합니다.</li>
 <li>(3)의 child를 다 처리한 후에 자신의 sibling인 (8)을 처리해야하는데, (8)도 child가 있으므로 안쪽부터 처리합니다.</li>
 <li>(3, 8)이 모두 처리된 후에 (2)부터 쭉 처리하면 됩니다.</li>
 </ul>
-<h3 id="1-2-예상-성능지표-Cost-based-Optimizer-Mode에서만-표시"><a href="#1-2-예상-성능지표-Cost-based-Optimizer-Mode에서만-표시" class="headerlink" title="1.2 예상 성능지표 (Cost-based Optimizer Mode에서만 표시)"></a>1.2 예상 성능지표 (Cost-based Optimizer Mode에서만 표시)</h3><ul>
-<li>Cost : Cost 예상 지수. 클수록 성능상 (CPU 점유, Disk I/O, 수행시간 등…) 안좋다는 의미입니다.</li>
+<h3>1.2 예상 성능지표 (Cost-based Optimizer Mode에서만 표시)</h3>
+<ul>
+<li>Cost : Cost 예상 지수. 클수록 성능상 (CPU 점유, Disk I/O, 수행시간 등...) 안좋다는 의미입니다.</li>
 <li>Card : (Computed Cardinality) : CBO상 계산된 예상되는 return row 입니다.</li>
 <li>Bytes : return row의 byte수 입니다.</li>
 </ul>
-<h3 id="1-3-Predicate-information"><a href="#1-3-Predicate-information" class="headerlink" title="1.3 Predicate information"></a>1.3 Predicate information</h3><p>각 단계별 filter 조건이 어떻게 적용되었다는 정보를 보여줍니다.  </p>
-<h2 id="2-Trace-읽는-법"><a href="#2-Trace-읽는-법" class="headerlink" title="2. Trace 읽는 법"></a>2. Trace 읽는 법</h2><ul>
+<h3>1.3 Predicate information</h3>
+<p>각 단계별 filter 조건이 어떻게 적용되었다는 정보를 보여줍니다.</p>
+<h2>2. Trace 읽는 법</h2>
+<ul>
 <li>Trace는 실제 실행된 경로와 그 성능상 중요 수치들을 보여줍니다.</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">Compile Time  : 2015/07/09 13:31:22</div><div class="line">Trace File    : c:\oracle\diag\rdbms\orcl\orcl\trace\orcl_ora_11048.trc</div><div class="line">Trace Version : 11.2.0.1.0</div><div class="line">********************************************************************************</div><div class="line"></div><div class="line">SELECT * FROM SCOTT.EMP</div><div class="line"> WHERE DEPTNO = :"SYS_B_0"</div><div class="line"></div><div class="line">Call     Count CPU Time Elapsed Time       Disk      Query    Current       Rows</div><div class="line">------- ------ -------- ------------ ---------- ---------- ---------- ----------</div><div class="line">Parse        1    0.000        0.000          0          0          0          0</div><div class="line">Execute      1    0.000        0.001          0          0          0          0</div><div class="line">Fetch        1    0.000        0.000          0          3          0          0</div><div class="line">------- ------ -------- ------------ ---------- ---------- ---------- ----------</div><div class="line">Total        3    0.000        0.001          0          3          0          0</div><div class="line"></div><div class="line">Misses in library cache during parse   : 1</div><div class="line">Optimizer Goal : ALL_ROWS</div><div class="line">Parsing user : SYS (ID=0)</div><div class="line"></div><div class="line"></div><div class="line">Rows     Row Source Operation</div><div class="line">-------  -----------------------------------------------------------------------</div><div class="line">      0  TABLE ACCESS FULL EMP (cr=3 pr=0 pw=0 time=0 us cost=2 size=190 card=5</div></pre></td></tr></table></figure>
-<h3 id="2-1-Row-Source-Operation-읽는법"><a href="#2-1-Row-Source-Operation-읽는법" class="headerlink" title="2.1 Row Source Operation 읽는법"></a>2.1 Row Source Operation 읽는법</h3><p>상대적으로 중요한 Row Source Operation 읽는 법부터 소개해드리겠습니다.<br>Plan과 같은 형식으로 실행 경로를 보여 줍니다.<br>읽는 법은 Plan과 같으며 괄호 안에 나오는 성능지표 값을 해석하는 것이 중요합니다.</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">Compile Time  : 2015/07/09 13:31:22</div><div class="line">Trace File    : c:\oracle\diag\rdbms\orcl\orcl\trace\orcl_ora_11048.trc</div><div class="line">Trace Version : 11.2.0.1.0</div><div class="line">********************************************************************************</div><div class="line"></div><div class="line">SELECT * FROM SCOTT.EMP</div><div class="line"> WHERE DEPTNO = :"SYS_B_0"</div><div class="line"></div><div class="line">Call     Count CPU Time Elapsed Time       Disk      Query    Current       Rows</div><div class="line">------- ------ -------- ------------ ---------- ---------- ---------- ----------</div><div class="line">Parse        1    0.000        0.000          0          0          0          0</div><div class="line">Execute      1    0.000        0.001          0          0          0          0</div><div class="line">Fetch        1    0.000        0.000          0          3          0          0</div><div class="line">------- ------ -------- ------------ ---------- ---------- ---------- ----------</div><div class="line">Total        3    0.000        0.001          0          3          0          0</div><div class="line"></div><div class="line">Misses in library cache during parse   : 1</div><div class="line">Optimizer Goal : ALL_ROWS</div><div class="line">Parsing user : SYS (ID=0)</div><div class="line"></div><div class="line"></div><div class="line">Rows     Row Source Operation</div><div class="line">-------  -----------------------------------------------------------------------</div><div class="line">      0  TABLE ACCESS FULL EMP (cr=3 pr=0 pw=0 time=0 us cost=2 size=190 card=5</div></pre></td></tr></table></figure></p>
+<h3>2.1 Row Source Operation 읽는법</h3>
+<p>상대적으로 중요한 Row Source Operation 읽는 법부터 소개해드리겠습니다.<br>
+Plan과 같은 형식으로 실행 경로를 보여 줍니다.<br>
+읽는 법은 Plan과 같으며 괄호 안에 나오는 성능지표 값을 해석하는 것이 중요합니다.</p>
 <ul>
 <li>Rows (왼쪽) : return row 수 입니다. 해당 단계에서 몇건의 row가 결과로 return 되었는지 알려줍니다.</li>
 <li>cr : (Consistent Mode Block Read) 총 읽은 block수 입니다. 의미상은 DB Buffer Cache에서 읽은 block수 이지만, disk상에서 읽은 경우에도 buffer로 먼저 올린 후에 읽어야 하므로 사실상 disk + cache에서 읽은 총 수라고 해석하면 됩니다.</li>
@@ -204,9 +215,11 @@
 <li>size : data size</li>
 <li>card : (cardinality)</li>
 </ul>
-<h3 id="2-2-Call-Table"><a href="#2-2-Call-Table" class="headerlink" title="2.2 Call Table"></a>2.2 Call Table</h3><p>Tunning시 사실상 크게 볼 필요 없습니다.  </p>
+<h3>2.2 Call Table</h3>
+<p>Tunning시 사실상 크게 볼 필요 없습니다.</p>
 <ul>
-<li>Call<ul>
+<li>Call
+<ul>
 <li>Parse : Cursor를 Parsing하고 Execution Plan을 생성하는 단계</li>
 <li>Execute : Cursor를 실행하는 단계</li>
 <li>Fetch : 결과 Record를 Fetch하는 단계</li>
@@ -220,7 +233,8 @@
 <li>Current : Current Mode에서 읽은 Block수 (Table을 액세스하는 시점에 읽은 수정할 Block)</li>
 <li>Rows : 읽거나 갱신한 처리 건수</li>
 </ul>
-<h2 id="참조-Slide"><a href="#참조-Slide" class="headerlink" title="참조 Slide"></a>참조 Slide</h2><p>좀 더 자세한 사항을 알고 싶으시면 아래 Slide를 참고해주세요.</p>
+<h2>참조 Slide</h2>
+<p>좀 더 자세한 사항을 알고 싶으시면 아래 Slide를 참고해주세요.</p>
 <ul>
 <li><code>[Oracle Architecture][2015 04-17] Consistent vs Current</code> : <a href="http://www.slideshare.net/seokjoonyun9/oracle-architecture2015-0417-consistent-vs-current" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/oracle-architecture2015-0417-consistent-vs-current</a></li>
 <li><code>[2015-06-12] Oracle 성능 최적화 및 품질 고도화 1</code> : <a href="http://www.slideshare.net/seokjoonyun9/20150612-oracle-1" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/20150612-oracle-1</a></li>
@@ -233,7 +247,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/20/Oracle.read.plan.trace/" data-id="cjov18q5v006vdw7b121lp2v8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/20/Oracle.read.plan.trace/" data-id="cjov1rqu6006rhs7bh101t78w" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

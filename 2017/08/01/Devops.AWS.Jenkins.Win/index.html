@@ -8,18 +8,18 @@
     
         <meta name="keywords" content="AWS,DevOps,CI/CD,Jenkins" />
     
-    <meta name="description" content="ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축1. EC2 생성 ec2 생성 Visual Studio를 설치할려면 최소 2.5GB이상의 메모리 (t2.medium) MSBuild만 설치할 것이라면 훨씬 작은 것도 가능. 1G 메모리를 가진 (t2.micro) Security Group">
+    <meta name="description" content="ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축 1. EC2 생성  ec2 생성  Visual Studio를 설치할려면 최소 2.5GB이상의 메모리 (t2.medium) MSBuild만 설치할 것이라면 훨씬 작은 것도 가능. 1G 메모리를 가진 (t2.micro) Security Gro">
 <meta name="keywords" content="AWS,DevOps,CI&#x2F;CD,Jenkins">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축">
 <meta property="og:url" content="http://DevStarSJ.github.io/2017/08/01/Devops.AWS.Jenkins.Win/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축1. EC2 생성 ec2 생성 Visual Studio를 설치할려면 최소 2.5GB이상의 메모리 (t2.medium) MSBuild만 설치할 것이라면 훨씬 작은 것도 가능. 1G 메모리를 가진 (t2.micro) Security Group">
+<meta property="og:description" content="ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축 1. EC2 생성  ec2 생성  Visual Studio를 설치할려면 최소 2.5GB이상의 메모리 (t2.medium) MSBuild만 설치할 것이라면 훨씬 작은 것도 가능. 1G 메모리를 가진 (t2.micro) Security Gro">
 <meta property="og:image" content="http://devstarsj.github.io/images/msbuild.03.png">
 <meta property="og:updated_time" content="2017-08-06T01:02:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축">
-<meta name="twitter:description" content="ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축1. EC2 생성 ec2 생성 Visual Studio를 설치할려면 최소 2.5GB이상의 메모리 (t2.medium) MSBuild만 설치할 것이라면 훨씬 작은 것도 가능. 1G 메모리를 가진 (t2.micro) Security Group">
+<meta name="twitter:description" content="ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축 1. EC2 생성  ec2 생성  Visual Studio를 설치할려면 최소 2.5GB이상의 메모리 (t2.medium) MSBuild만 설치할 것이라면 훨씬 작은 것도 가능. 1G 메모리를 가진 (t2.micro) Security Gro">
 <meta name="twitter:image" content="http://devstarsj.github.io/images/msbuild.03.png">
     
 
@@ -162,18 +162,25 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="ASP-NET-Web-Project를-EC2-or-Elastic-BeanStalk에-배포하는-Jenkins-시스템-구축"><a href="#ASP-NET-Web-Project를-EC2-or-Elastic-BeanStalk에-배포하는-Jenkins-시스템-구축" class="headerlink" title="ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축"></a>ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축</h1><h2 id="1-EC2-생성"><a href="#1-EC2-생성" class="headerlink" title="1. EC2 생성"></a>1. EC2 생성</h2><ul>
-<li>ec2 생성<ul>
+            <h1>ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축</h1>
+<h2>1. EC2 생성</h2>
+<ul>
+<li>ec2 생성
+<ul>
 <li><strong>Visual Studio</strong>를 설치할려면 최소 2.5GB이상의 메모리 (t2.medium)</li>
 <li><strong>MSBuild</strong>만 설치할 것이라면 훨씬 작은 것도 가능. 1G 메모리를 가진 (t2.micro)</li>
 <li>Security Group 에 8080 포트에 접속 허용 ip 대역 설정</li>
 </ul>
 </li>
 </ul>
-<h2 id="2-필요한-설치-파일들"><a href="#2-필요한-설치-파일들" class="headerlink" title="2. 필요한 설치 파일들"></a>2. 필요한 설치 파일들</h2><ul>
-<li>Copy files to ec2<ul>
+<h2>2. 필요한 설치 파일들</h2>
+<ul>
+<li>
+<p>Copy files to ec2</p>
+<ul>
 <li>Jenkins : <a href="https://jenkins.io/download" target="_blank" rel="external">https://jenkins.io/download</a></li>
-<li>MSBuild Tools<ul>
+<li>MSBuild Tools
+<ul>
 <li>MSBuild Tools 2015 기준 : <a href="https://www.microsoft.com/ko-kr/download/details.aspx?id=48159" target="_blank" rel="external">https://www.microsoft.com/ko-kr/download/details.aspx?id=48159</a></li>
 <li>AWS CLI : <a href="http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-windows.html#install-msi-on-windows" target="_blank" rel="external">http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-windows.html#install-msi-on-windows</a></li>
 <li>AWS Tools and SDK : <a href="https://aws.amazon.com/ko/visualstudio" target="_blank" rel="external">https://aws.amazon.com/ko/visualstudio</a></li>
@@ -184,28 +191,40 @@
 </li>
 </ul>
 </li>
-<li><p>설치 : 전부다</p>
+<li>
+<p>설치 : 전부다</p>
 </li>
-<li><p>Visual Studio를 설치할 경우 Web 설치가 아닌 offline 설치용 ISO를 구해야함</p>
-</li>
-</ul>
-<h2 id="3-MSBuild-실행-확인"><a href="#3-MSBuild-실행-확인" class="headerlink" title="3. MSBuild 실행 확인"></a>3. MSBuild 실행 확인</h2><ul>
-<li><p>MSBuild.exe 가 실행될수 있도록 환경변수에 PATH 등록<br><img src="/images/msbuild.03.png" alt=""></p>
-</li>
-<li><p>이제 빌드가 정상적으로 되는지 확인</p>
-</li>
-<li><p>혹시 안되면 Visual Studio 가 설치된 PC의 <code>MSbuild</code> 폴더 내부를 전부 다 복사</p>
-</li>
-<li><p>대부분 문제가 되는건 <code>MSBuild</code> 자체보다는 <code>Web Deploy</code> 설치 및 버전이 문제가 됨</p>
-</li>
-<li><p>참고그림 : Web Deploy 설치전 ec2와 Visual Studio가 설치된 개발PC의 폴더 내용들</p>
+<li>
+<p>Visual Studio를 설치할 경우 Web 설치가 아닌 offline 설치용 ISO를 구해야함</p>
 </li>
 </ul>
-<p><img src="/images/msbuild.01.png" alt=""><br><img src="/images/msbuild.02.png" alt=""></p>
-<h2 id="4-AWS-Deploy-확인"><a href="#4-AWS-Deploy-확인" class="headerlink" title="4. AWS Deploy 확인"></a>4. AWS Deploy 확인</h2><p>이제 빌드가 정상적으로 되는건 확인 단, Deploy가 안됨</p>
+<h2>3. MSBuild 실행 확인</h2>
+<ul>
+<li>
+<p>MSBuild.exe 가 실행될수 있도록 환경변수에 PATH 등록
+<img src="/images/msbuild.03.png" alt=""></p>
+</li>
+<li>
+<p>이제 빌드가 정상적으로 되는지 확인</p>
+</li>
+<li>
+<p>혹시 안되면 Visual Studio 가 설치된 PC의 <code>MSbuild</code> 폴더 내부를 전부 다 복사</p>
+</li>
+<li>
+<p>대부분 문제가 되는건 <code>MSBuild</code> 자체보다는 <code>Web Deploy</code> 설치 및 버전이 문제가 됨</p>
+</li>
+<li>
+<p>참고그림 : Web Deploy 설치전 ec2와 Visual Studio가 설치된 개발PC의 폴더 내용들</p>
+</li>
+</ul>
+<p><img src="/images/msbuild.01.png" alt="">
+<img src="/images/msbuild.02.png" alt=""></p>
+<h2>4. AWS Deploy 확인</h2>
+<p>이제 빌드가 정상적으로 되는건 확인 단, Deploy가 안됨</p>
 <p><code>aws configure --profile 프로파일명</code> 식으로 AWS 프로파일 등록</p>
 <p>디플로이까지 성공 확인</p>
-<h2 id="5-Jenkins-설치-후-item-등록"><a href="#5-Jenkins-설치-후-item-등록" class="headerlink" title="5. Jenkins 설치 후 item 등록"></a>5. Jenkins 설치 후 item 등록</h2><p>이하 생략…</p>
+<h2>5. Jenkins 설치 후 item 등록</h2>
+<p>이하 생략...</p>
 
         </div>
         <footer class="article-footer">
@@ -213,7 +232,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2017/08/01/Devops.AWS.Jenkins.Win/" data-id="cjov18q57004gdw7balu6tpkk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2017/08/01/Devops.AWS.Jenkins.Win/" data-id="cjov1rqtk004ghs7bp5g9jz0q" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

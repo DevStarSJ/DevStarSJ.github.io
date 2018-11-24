@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="JavaScript,Node.JS" />
     
-    <meta name="description" content="Squel.jsJavaScript 의 SQL query string의 작성을 도와주는 package 입니다.C# 의 LINQ와 비슷한 형식으로 함수들의 체인을 이용해서 정의하면 해당 기능을 동작하는 query string을 작성해 줍니다. 단순히 query string만을 만들어 주는 역할만을 합니다.이게 장점일수도 단점일수도 있는데, C# 의 LINQ의">
+    <meta name="description" content="Squel.js JavaScript 의 SQL query string의 작성을 도와주는 package 입니다. C# 의 LINQ와 비슷한 형식으로 함수들의 체인을 이용해서 정의하면 해당 기능을 동작하는 query string을 작성해 줍니다. 단순히 query string만을 만들어 주는 역할만을 합니다. 이게 장점일수도 단점일수도 있는데, C# 의 LIN">
 <meta name="keywords" content="JavaScript,Node.JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Squel.js">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/11/08/JavaScript.Squel/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="Squel.jsJavaScript 의 SQL query string의 작성을 도와주는 package 입니다.C# 의 LINQ와 비슷한 형식으로 함수들의 체인을 이용해서 정의하면 해당 기능을 동작하는 query string을 작성해 줍니다. 단순히 query string만을 만들어 주는 역할만을 합니다.이게 장점일수도 단점일수도 있는데, C# 의 LINQ의">
+<meta property="og:description" content="Squel.js JavaScript 의 SQL query string의 작성을 도와주는 package 입니다. C# 의 LINQ와 비슷한 형식으로 함수들의 체인을 이용해서 정의하면 해당 기능을 동작하는 query string을 작성해 줍니다. 단순히 query string만을 만들어 주는 역할만을 합니다. 이게 장점일수도 단점일수도 있는데, C# 의 LIN">
 <meta property="og:updated_time" content="2017-04-23T09:39:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Squel.js">
-<meta name="twitter:description" content="Squel.jsJavaScript 의 SQL query string의 작성을 도와주는 package 입니다.C# 의 LINQ와 비슷한 형식으로 함수들의 체인을 이용해서 정의하면 해당 기능을 동작하는 query string을 작성해 줍니다. 단순히 query string만을 만들어 주는 역할만을 합니다.이게 장점일수도 단점일수도 있는데, C# 의 LINQ의">
+<meta name="twitter:description" content="Squel.js JavaScript 의 SQL query string의 작성을 도와주는 package 입니다. C# 의 LINQ와 비슷한 형식으로 함수들의 체인을 이용해서 정의하면 해당 기능을 동작하는 query string을 작성해 줍니다. 단순히 query string만을 만들어 주는 역할만을 합니다. 이게 장점일수도 단점일수도 있는데, C# 의 LIN">
     
 
     
@@ -160,86 +160,133 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Squel-js"><a href="#Squel-js" class="headerlink" title="Squel.js"></a>Squel.js</h1><p><strong>JavaScript</strong> 의 <code>SQL query string</code>의 작성을 도와주는 package 입니다.<br><strong>C#</strong> 의 <code>LINQ</code>와 비슷한 형식으로 함수들의 체인을 이용해서 정의하면 해당 기능을 동작하는 <code>query string</code>을 작성해 줍니다.</p>
-<p>단순히 <code>query string</code>만을 만들어 주는 역할만을 합니다.<br>이게 장점일수도 단점일수도 있는데, <strong>C#</strong> 의 <code>LINQ</code>의 경우에는 <code>Inline View</code>나 <code>Subquery</code>, <code>JOIN</code>을 표현하기가 상당히 복잡했습니다. 그래서 단순한 문장이 아닌 경우는 그냥 <code>raw query</code>로 작성하는게 더 편했습니다.<br>하지만 <code>squel</code>의 경우에는 어차피 결과물은 <code>String</code>이기 때문에 이것들을 잘 조합하면 얼마든지 복잡한 문장도 표현이 가능합니다.</p>
-<p>여기에서는 자주 사용되는 간단한 예제들을 중심으로 소개를 드릴 예정이며,<br>자세한 내용은 공식 사이트 <a href="https://hiddentao.com/squel" target="_blank" rel="external">https://hiddentao.com/squel</a> 를 참조해주세요.</p>
-<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install squel</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> squel = <span class="built_in">require</span>(<span class="string">"squel"</span>);</div></pre></td></tr></table></figure>
-<h3 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/your/path/to/squel.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="built_in">console</span>.log( squel.VERSION );    <span class="comment">/** version string **/</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h2><h3 id="SELECT-문장"><a href="#SELECT-문장" class="headerlink" title="SELECT 문장"></a>SELECT 문장</h3><ul>
-<li><code>select()</code> : <strong>SELECT</strong> 에 대한 query builder 인스턴스를 생성합니다.</li>
-<li><code>from(&quot;table&quot;, alias = null)</code> : <strong>FROM</strong> 절에 해당하는 테이블을 지정합니다. <code>alias</code> 생략 가능</li>
-<li><code>field(&quot;column&quot;)</code> : 읽어올 컬럼들을 지정합니다. <code>field</code>절을 실행한 순서대로 왼쪽부터 출력됩니다.</li>
-<li><code>where(&quot;condition&quot;)</code> : <strong>WHERE</strong> 절 조건을 지정합니다.</li>
-<li><code>distinct()</code> : <strong>DISTINCT</strong> 한 결과로 출력합니다. (중복제거)</li>
-<li><code>order(&quot;column&quot;, ASC = true)</code> : <strong>ORDER BY</strong> 절에 해당하는 sorting연산을 수행합니다. <code>order</code>절을 수행한 순서대로 왼쪽부터 기술되며 <strong>ASC</strong>, <strong>DESC</strong> 여부를 2번째 인자에 <code>true</code>,<code>false</code>로 전달이 가능합니다.</li>
-<li><code>group()</code> : <strong>GROUP BY</strong> 절에 해당하는 그룹화 기능을 수행합니다.</li>
-<li><code>having(&quot;condition&quot;)</code> : <strong>HAVING</strong> 절에 해당하는 조건을 지정합니다.</li>
-<li><code>limit(number)</code> : <strong>TOP-N</strong> query를 수행합니다. 앞서 지정한 <code>limit</code>기능을 제거하고 싶으면 <code>.limit(0)</code>을 수행하면 됩니다.</li>
-<li><code>offset(number)</code> : <strong>SKIP</strong> 연산을 수행합니다. <code>limit</code>와 마찬가지로 <code>.offset(0)</code>을 수행하면 앞서 지정한 <code>offset</code>기능을 제거할 수 있습니다.</li>
-<li><code>function(&#39;string&#39;)</code> : Scalar 값이나 DB Function 수행시 활용이 가능합니다.</li>
-<li>JOIN<ul>
+            <h1>Squel.js</h1>
+<p><strong>JavaScript</strong> 의 <code>SQL query string</code>의 작성을 도와주는 package 입니다.
+<strong>C#</strong> 의 <code>LINQ</code>와 비슷한 형식으로 함수들의 체인을 이용해서 정의하면 해당 기능을 동작하는 <code>query string</code>을 작성해 줍니다.</p>
+<p>단순히 <code>query string</code>만을 만들어 주는 역할만을 합니다.
+이게 장점일수도 단점일수도 있는데, <strong>C#</strong> 의 <code>LINQ</code>의 경우에는 <code>Inline View</code>나 <code>Subquery</code>, <code>JOIN</code>을 표현하기가 상당히 복잡했습니다. 그래서 단순한 문장이 아닌 경우는 그냥 <code>raw query</code>로 작성하는게 더 편했습니다.
+하지만 <code>squel</code>의 경우에는 어차피 결과물은 <code>String</code>이기 때문에 이것들을 잘 조합하면 얼마든지 복잡한 문장도 표현이 가능합니다.</p>
+<p>여기에서는 자주 사용되는 간단한 예제들을 중심으로 소개를 드릴 예정이며,
+자세한 내용은 공식 사이트 <a href="https://hiddentao.com/squel" target="_blank" rel="external">https://hiddentao.com/squel</a> 를 참조해주세요.</p>
+<h2>설치</h2>
+<h3>Node.js</h3>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install squel</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> squel = <span class="built_in">require</span>(<span class="string">"squel"</span>);</div></pre></td></tr></table></figure></p>
+<h3>Browser</h3>
+<p><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/your/path/to/squel.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="built_in">console</span>.log( squel.VERSION );    <span class="comment">/** version string **/</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2>사용법</h2>
+<h3>SELECT 문장</h3>
+<ul>
+<li>
+<p><code>select()</code> : <strong>SELECT</strong> 에 대한 query builder 인스턴스를 생성합니다.</p>
+</li>
+<li>
+<p><code>from(&quot;table&quot;, alias = null)</code> : <strong>FROM</strong> 절에 해당하는 테이블을 지정합니다. <code>alias</code> 생략 가능</p>
+</li>
+<li>
+<p><code>field(&quot;column&quot;)</code> : 읽어올 컬럼들을 지정합니다. <code>field</code>절을 실행한 순서대로 왼쪽부터 출력됩니다.</p>
+</li>
+<li>
+<p><code>where(&quot;condition&quot;)</code> : <strong>WHERE</strong> 절 조건을 지정합니다.</p>
+</li>
+<li>
+<p><code>distinct()</code> : <strong>DISTINCT</strong> 한 결과로 출력합니다. (중복제거)</p>
+</li>
+<li>
+<p><code>order(&quot;column&quot;, ASC = true)</code> : <strong>ORDER BY</strong> 절에 해당하는 sorting연산을 수행합니다. <code>order</code>절을 수행한 순서대로 왼쪽부터 기술되며 <strong>ASC</strong>, <strong>DESC</strong> 여부를 2번째 인자에 <code>true</code>,<code>false</code>로 전달이 가능합니다.</p>
+</li>
+<li>
+<p><code>group()</code> : <strong>GROUP BY</strong> 절에 해당하는 그룹화 기능을 수행합니다.</p>
+</li>
+<li>
+<p><code>having(&quot;condition&quot;)</code> : <strong>HAVING</strong> 절에 해당하는 조건을 지정합니다.</p>
+</li>
+<li>
+<p><code>limit(number)</code> : <strong>TOP-N</strong> query를 수행합니다. 앞서 지정한 <code>limit</code>기능을 제거하고 싶으면 <code>.limit(0)</code>을 수행하면 됩니다.</p>
+</li>
+<li>
+<p><code>offset(number)</code> : <strong>SKIP</strong> 연산을 수행합니다. <code>limit</code>와 마찬가지로 <code>.offset(0)</code>을 수행하면 앞서 지정한 <code>offset</code>기능을 제거할 수 있습니다.</p>
+</li>
+<li>
+<p><code>function('string')</code> : Scalar 값이나 DB Function 수행시 활용이 가능합니다.</p>
+</li>
+<li>
+<p>JOIN</p>
+<ul>
 <li><code>join(&quot;table&quot;, alias = null, onCondition = null)</code> : INNER JOIN을 수행합니다. <code>alias</code>와 <code>ON절</code>은 필요 없을시 생략이 가능합니다.</li>
 <li><code>outer_join(...)</code> : 해당 하수에서 지정한 테이블을 OUTER JOIN으로 지정</li>
 <li><code>left_join(...)</code> : LEFT OUTER JOIN</li>
 <li><code>right_join(...)</code> : RIGHT OUTER JOIN</li>
 </ul>
 </li>
-<li><p><code>union(&#39;squel select instance&#39;)</code> : <strong>UNION</strong> 연산을 수행합니다.</p>
+<li>
+<p><code>union('squel select instance')</code> : <strong>UNION</strong> 연산을 수행합니다.</p>
 </li>
-<li><p>모든 필요한 기능을 다 수행한 후 <code>toString()</code>를 실행하면 <code>query string</code>이 생성됩니다.</p>
+<li>
+<p>모든 필요한 기능을 다 수행한 후 <code>toString()</code>를 실행하면 <code>query string</code>이 생성됩니다.</p>
 </li>
-<li><p><code>UNION ALL</code> 연산에 대한 대해서는 현재 제공되고 있지 않습니다. 필요할 경우 그냥 <code>string concatenation</code>을 해야합니다.</p>
+<li>
+<p><code>UNION ALL</code> 연산에 대한 대해서는 현재 제공되고 있지 않습니다. 필요할 경우 그냥 <code>string concatenation</code>을 해야합니다.</p>
 </li>
-<li><p>모든 조건(<code>condition</code>)에 대해서는 <code>string format</code>형식으로 입력이 가능합니다. (ex. <code>where(&#39;id = ?&#39;, 1)</code>)</p>
+<li>
+<p>모든 조건(<code>condition</code>)에 대해서는 <code>string format</code>형식으로 입력이 가능합니다. (ex. <code>where('id = ?', 1)</code>)</p>
 </li>
-<li><p>관련 예제들</p>
+<li>
+<p>관련 예제들</p>
 </li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> squel = <span class="built_in">require</span>(<span class="string">"squel"</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> q = squel.select()</div><div class="line">  .from(<span class="string">"emp"</span>, <span class="string">"e"</span>)</div><div class="line">  .field(<span class="string">"**"</span>)</div><div class="line">  .toString();</div></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ** <span class="keyword">FROM</span> emp <span class="string">`e`</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = squel.select()</div><div class="line">  .from(<span class="string">'emp'</span>, <span class="string">'e'</span>)</div><div class="line">  .where(<span class="string">'e.id IN ?'</span>, idList)</div><div class="line">  .where(<span class="string">'e.sal &gt; ?'</span>, <span class="number">2000</span>)</div><div class="line">  .join(<span class="string">'dept'</span>, <span class="string">'d'</span>, <span class="string">'e.deptno = d.id'</span>)</div><div class="line">  .field(<span class="string">'e.name'</span>)</div><div class="line">  .field(<span class="string">'d.name'</span>)</div><div class="line">  .toString();</div></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> e.name, d.name  </div><div class="line">  <span class="keyword">FROM</span> emp <span class="string">`e`</span> <span class="keyword">INNER</span> <span class="keyword">JOIN</span> dept <span class="string">`d`</span> <span class="keyword">ON</span> (e.deptno = d.id)  </div><div class="line"> <span class="keyword">WHERE</span> (e.id <span class="keyword">IN</span> (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))  </div><div class="line">   <span class="keyword">AND</span> (e.sal &gt; <span class="number">2000</span>)</div></pre></td></tr></table></figure>
-<h2 id="UPDATE-INSERT-DELETE"><a href="#UPDATE-INSERT-DELETE" class="headerlink" title="UPDATE / INSERT / DELETE"></a>UPDATE / INSERT / DELETE</h2><p><strong>UPDATE</strong> 와 <strong>INSERT</strong>, <strong>DELETE</strong> 문장 작성에 대한 함수는 거의 비슷하므로 같이 다루겠습니다.<br><strong>SELECT</strong> 에서 사용된 함수들에 대해서는 중복으로 설명 드리지 않겠습니다.</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> squel = <span class="built_in">require</span>(<span class="string">"squel"</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> q = squel.select()</div><div class="line">  .from(<span class="string">"emp"</span>, <span class="string">"e"</span>)</div><div class="line">  .field(<span class="string">"**"</span>)</div><div class="line">  .toString();</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ** <span class="keyword">FROM</span> emp <span class="string">`e`</span></div></pre></td></tr></table></figure></p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = squel.select()</div><div class="line">  .from(<span class="string">'emp'</span>, <span class="string">'e'</span>)</div><div class="line">  .where(<span class="string">'e.id IN ?'</span>, idList)</div><div class="line">  .where(<span class="string">'e.sal &gt; ?'</span>, <span class="number">2000</span>)</div><div class="line">  .join(<span class="string">'dept'</span>, <span class="string">'d'</span>, <span class="string">'e.deptno = d.id'</span>)</div><div class="line">  .field(<span class="string">'e.name'</span>)</div><div class="line">  .field(<span class="string">'d.name'</span>)</div><div class="line">  .toString();</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> e.name, d.name  </div><div class="line">  <span class="keyword">FROM</span> emp <span class="string">`e`</span> <span class="keyword">INNER</span> <span class="keyword">JOIN</span> dept <span class="string">`d`</span> <span class="keyword">ON</span> (e.deptno = d.id)  </div><div class="line"> <span class="keyword">WHERE</span> (e.id <span class="keyword">IN</span> (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))  </div><div class="line">   <span class="keyword">AND</span> (e.sal &gt; <span class="number">2000</span>)</div></pre></td></tr></table></figure></p>
+<h2>UPDATE / INSERT / DELETE</h2>
+<p><strong>UPDATE</strong> 와 <strong>INSERT</strong>, <strong>DELETE</strong> 문장 작성에 대한 함수는 거의 비슷하므로 같이 다루겠습니다.
+<strong>SELECT</strong> 에서 사용된 함수들에 대해서는 중복으로 설명 드리지 않겠습니다.</p>
 <ul>
-<li><code>update()</code> : <strong>UPDATE</strong> 에 대한 query builder 인스턴스를 생성합니다.<ul>
+<li><code>update()</code> : <strong>UPDATE</strong> 에 대한 query builder 인스턴스를 생성합니다.
+<ul>
 <li><code>table(&quot;table&quot;, alias = null)</code> : 수행할 테이블을 지정합니다.</li>
 </ul>
 </li>
-<li><code>insert()</code> : <strong>INSERT</strong> 에 대한 query builder 인스턴스를 생성합니다.<ul>
+<li><code>insert()</code> : <strong>INSERT</strong> 에 대한 query builder 인스턴스를 생성합니다.
+<ul>
 <li><code>into(&quot;table&quot;, alias = null)</code> : 수행할 테이블을 지정합니다.</li>
 </ul>
 </li>
-<li><code>delete()</code> : <strong>DELETE</strong> 에 대한 query builder 인스턴스를 생성합니다.<ul>
+<li><code>delete()</code> : <strong>DELETE</strong> 에 대한 query builder 인스턴스를 생성합니다.
+<ul>
 <li><code>from(&quot;table&quot;, alias = null)</code> : 수행할 테이블을 지정합니다.</li>
 </ul>
 </li>
-<li><code>set(&#39;field&#39;, value, options = null)</code> : <code>UPDATE</code>, <code>INSERT</code>에서 해당 컬럼에 저장할 값을 지정합니다.<ul>
+<li><code>set('field', value, options = null)</code> : <code>UPDATE</code>, <code>INSERT</code>에서 해당 컬럼에 저장할 값을 지정합니다.
+<ul>
 <li><code>value</code>에 함수를 지정할 경우 문자열로 인식하여 따옴표를 씌우게 되는데 그럼 함수로 동작하지 않습니다.</li>
 <li>그럴 경우 options 란에 <code>{ dontQuote: true}</code>를 입력해주면 <code>value</code>에 따옴표 표시를 하지 않아서 함수로 동작하게 가능합니다.</li>
 </ul>
 </li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> uf = squel.update()</div><div class="line">  .table(<span class="string">'emp'</span>)</div><div class="line">  .set(<span class="string">'hire_date'</span>, <span class="string">'GETDATE()'</span>, &#123; <span class="attr">dontQuote</span>: <span class="literal">true</span> &#125;)</div><div class="line">  .where(<span class="string">'dept = ?'</span>, <span class="number">10</span>)</div><div class="line">  .toString();</div></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> emp <span class="keyword">SET</span> hire_date = <span class="keyword">GETDATE</span>() <span class="keyword">WHERE</span> (dept = <span class="number">10</span>)</div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> uf = squel.update()</div><div class="line">  .table(<span class="string">'emp'</span>)</div><div class="line">  .set(<span class="string">'hire_date'</span>, <span class="string">'GETDATE()'</span>, &#123; <span class="attr">dontQuote</span>: <span class="literal">true</span> &#125;)</div><div class="line">  .where(<span class="string">'dept = ?'</span>, <span class="number">10</span>)</div><div class="line">  .toString();</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> emp <span class="keyword">SET</span> hire_date = <span class="keyword">GETDATE</span>() <span class="keyword">WHERE</span> (dept = <span class="number">10</span>)</div></pre></td></tr></table></figure></p>
 <ul>
 <li><code>setFields({JSON})</code> : 입력된 JSON의 key와 value로 <code>set()</code>함수를 수행합니다.</li>
 <li><code>setFieldsRows([JSON LIST])</code> : <strong>INSERT</strong> 에서만 수행이 가능하며 여러 줄 입력으로 <code>setFields()</code> 함수를 수행합니다.</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> im = squel.insert()</div><div class="line">  .into(<span class="string">'emp'</span>)</div><div class="line">  .setFieldsRows([&#123;<span class="attr">id</span>:<span class="number">1</span>, <span class="attr">name</span>:<span class="string">"Luna"</span>&#125;, &#123;<span class="attr">id</span>:<span class="number">2</span>, <span class="attr">name</span>:<span class="string">"Star"</span>&#125;])</div><div class="line">  .toString();</div></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp (<span class="keyword">id</span>, <span class="keyword">name</span>) <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="string">'Luna'</span>), (<span class="number">2</span>, <span class="string">'Star'</span>)</div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> im = squel.insert()</div><div class="line">  .into(<span class="string">'emp'</span>)</div><div class="line">  .setFieldsRows([&#123;<span class="attr">id</span>:<span class="number">1</span>, <span class="attr">name</span>:<span class="string">"Luna"</span>&#125;, &#123;<span class="attr">id</span>:<span class="number">2</span>, <span class="attr">name</span>:<span class="string">"Star"</span>&#125;])</div><div class="line">  .toString();</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp (<span class="keyword">id</span>, <span class="keyword">name</span>) <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="string">'Luna'</span>), (<span class="number">2</span>, <span class="string">'Star'</span>)</div></pre></td></tr></table></figure></p>
 <ul>
 <li><code>fromQuery</code> : <strong>SELECT</strong> 수행 결과를 <strong>INSERT</strong> 합니다.</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> is = squel.insert()</div><div class="line">  .into(<span class="string">'emp'</span>)</div><div class="line">  .fromQuery(</div><div class="line">    [<span class="string">'id'</span>, <span class="string">'name'</span>],</div><div class="line">    squel</div><div class="line">      .select()</div><div class="line">      .from(<span class="string">'candidates'</span>)</div><div class="line">      .field(<span class="string">'id'</span>)</div><div class="line">      .field(<span class="string">'name'</span>)</div><div class="line">  )</div><div class="line">  .toString();</div></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp (<span class="keyword">id</span>, <span class="keyword">name</span>) (<span class="keyword">SELECT</span> <span class="keyword">id</span>, <span class="keyword">name</span> <span class="keyword">FROM</span> candidates)</div></pre></td></tr></table></figure>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> is = squel.insert()</div><div class="line">  .into(<span class="string">'emp'</span>)</div><div class="line">  .fromQuery(</div><div class="line">    [<span class="string">'id'</span>, <span class="string">'name'</span>],</div><div class="line">    squel</div><div class="line">      .select()</div><div class="line">      .from(<span class="string">'candidates'</span>)</div><div class="line">      .field(<span class="string">'id'</span>)</div><div class="line">      .field(<span class="string">'name'</span>)</div><div class="line">  )</div><div class="line">  .toString();</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp (<span class="keyword">id</span>, <span class="keyword">name</span>) (<span class="keyword">SELECT</span> <span class="keyword">id</span>, <span class="keyword">name</span> <span class="keyword">FROM</span> candidates)</div></pre></td></tr></table></figure></p>
 <ul>
 <li>나머지 함수들 <code>where()</code>, <code>limit()</code>, <code>order()</code>, <code>JOIN 연산</code> 등은 <strong>SELECT</strong> 와 동일합니다.</li>
 </ul>
-<h2 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h2><p>위에서 살펴본 예제들은 모두 <strong>Binding Parameters</strong> 를 사용하지 않고 query에 하드코딩 되어 있습니다.<br><strong>parameterized query</strong> 로 생성하려면 <code>.toString()</code> 대신에 <code>.toParam()</code>을 실행하면 됩니다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> pq = squel.select()</div><div class="line">  .from(<span class="string">`emp`</span>)</div><div class="line">  .where(<span class="string">'id = ?'</span>, <span class="number">10</span>)</div><div class="line">  .where(<span class="string">'dept = ?'</span>, <span class="number">20</span>)</div><div class="line">  .field(<span class="string">'*'</span>)</div><div class="line">  .toParam();</div></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123; text: 'SELECT * FROM emp WHERE (id = ?) AND (dept = ?)',</div><div class="line">  values: [ 10, 20 ] &#125;</div></pre></td></tr></table></figure>
-<p><code>?</code>가 아니라 <strong>numbered parameter</strong> (<code>$1</code>, <code>$2</code>, …)를 사용하려면 <code>toParam()</code>의 인자로 <code>{ numberedParameters: true, numberedParametersStartAt: 1 }</code> 을 전달하면 됩니다.</p>
+<h2>Parameters</h2>
+<p>위에서 살펴본 예제들은 모두 <strong>Binding Parameters</strong> 를 사용하지 않고 query에 하드코딩 되어 있습니다.
+<strong>parameterized query</strong> 로 생성하려면 <code>.toString()</code> 대신에 <code>.toParam()</code>을 실행하면 됩니다.</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> pq = squel.select()</div><div class="line">  .from(<span class="string">`emp`</span>)</div><div class="line">  .where(<span class="string">'id = ?'</span>, <span class="number">10</span>)</div><div class="line">  .where(<span class="string">'dept = ?'</span>, <span class="number">20</span>)</div><div class="line">  .field(<span class="string">'*'</span>)</div><div class="line">  .toParam();</div></pre></td></tr></table></figure></p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123; text: 'SELECT * FROM emp WHERE (id = ?) AND (dept = ?)',</div><div class="line">  values: [ 10, 20 ] &#125;</div></pre></td></tr></table></figure></p>
+<p><code>?</code>가 아니라 <strong>numbered parameter</strong> (<code>$1</code>, <code>$2</code>, ...)를 사용하려면 <code>toParam()</code>의 인자로 <code>{ numberedParameters: true, numberedParametersStartAt: 1 }</code> 을 전달하면 됩니다.</p>
 
         </div>
         <footer class="article-footer">
@@ -247,7 +294,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/11/08/JavaScript.Squel/" data-id="cjov18q5c0050dw7bhusl3odc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/11/08/JavaScript.Squel/" data-id="cjov1rqtp0050hs7byicngjqc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

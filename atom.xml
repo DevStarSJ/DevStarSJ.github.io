@@ -24,7 +24,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Introduce-to-AWS-Batch&quot;&gt;&lt;a href=&quot;#Introduce-to-AWS-Batch&quot; class=&quot;headerlink&quot; title=&quot;Introduce to AWS Batch&quot;&gt;&lt;/a&gt;Introduce to AWS Bat
+      &lt;h1&gt;Introduce to AWS Batch&lt;/h1&gt;
+&lt;h2&gt;1. Introduction to AWS Batch&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;AWS batch&lt;/strong&gt;는 ECR (Amazon Elastic Container Registry)
     
     </summary>
     
@@ -46,7 +48,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-4-Advanced-Feature-Engineering-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-
+      &lt;h1&gt;Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약&lt;/h1&gt;
+&lt;h2&gt;1. Mean encodings&lt;/h2&gt;
+&lt;ul&gt;
+
     
     </summary>
     
@@ -70,7 +75,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-4-4-Ensemble-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-a-data-scienc
+      &lt;h1&gt;Coursera Kaggle 강의(How to win a data science competition) week 4-4 Ensemble 요약&lt;/h1&gt;
+&lt;h2&gt;Ensemble&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;여러가지 머신 러닝 모델을 결합하는 방법&lt;/l
     
     </summary>
     
@@ -94,7 +102,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-4-1-Hyperparameter-Tuning-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-
+      &lt;h1&gt;Coursera Kaggle 강의(How to win a data science competition) week 4-1 Hyperparameter Tuning 요약&lt;/h1&gt;
+&lt;h2&gt;Hyperparameter Tuning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li
     
     </summary>
     
@@ -118,11 +129,12 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;데이터를-철학하다&quot;&gt;&lt;a href=&quot;#데이터를-철학하다&quot; class=&quot;headerlink&quot; title=&quot;데이터를 철학하다&quot;&gt;&lt;/a&gt;데이터를 철학하다&lt;/h2&gt;&lt;ul&gt;
+      &lt;h2&gt;데이터를 철학하다&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;흐름출판&lt;/li&gt;
-&lt;li&gt;정석권 지음 &lt;/li&gt;
+&lt;li&gt;정석권 지음&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Revie
     
     </summary>
     
@@ -146,7 +158,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-3-1-Metrics-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-a-data-science
+      &lt;h1&gt;Coursera Kaggle 강의(How to win a data science competition) week 3-1 Metrics 요약&lt;/h1&gt;
+&lt;h2&gt;Metrics&lt;/h2&gt;
+&lt;p&gt;어떤 metric을 사용하느냐에 따라 모델이 학습하는 방향이
     
     </summary>
     
@@ -170,7 +184,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-2-2-Validation-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-a-data-scie
+      &lt;h1&gt;Coursera Kaggle 강의(How to win a data science competition) week 2-2 Validation 요약&lt;/h1&gt;
+&lt;h2&gt;Validation&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Validation&lt;/strong&gt;
     
     </summary>
     
@@ -194,7 +210,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-2-1-EDA-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-a-data-science-com
+      &lt;h1&gt;Coursera Kaggle 강의(How to win a data science competition) week 2-1 EDA 요약&lt;/h1&gt;
+&lt;h2&gt;Exploratory Data Analysis&lt;/h2&gt;
+&lt;h3&gt;1.Exploratory Data
     
     </summary>
     
@@ -218,7 +236,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Coursera-Kaggle-강의-How-to-win-a-data-science-competition-week-1-요약&quot;&gt;&lt;a href=&quot;#Coursera-Kaggle-강의-How-to-win-a-data-science-competiti
+      &lt;h1&gt;Coursera Kaggle 강의(How to win a data science competition) week 1 요약&lt;/h1&gt;
+&lt;p&gt;참고로 Kaggle 대회에 대한 소개, HW/SW 이야기 등은 모두 생략하였으며, Machine Learni
     
     </summary>
     
@@ -242,7 +261,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Jupyter-Notebook-Matplotlib에서-한글폰트-사용하기-macOS&quot;&gt;&lt;a href=&quot;#Jupyter-Notebook-Matplotlib에서-한글폰트-사용하기-macOS&quot; class=&quot;headerlink&quot; title=&quot;Ju
+      &lt;h1&gt;Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)&lt;/h1&gt;
+&lt;p&gt;이 포스트를 보기 전에 먼저 &lt;a href=&quot;https://www.facebook.com/zzonee&quot; target=&quot;_blank&quot; rel=&quot;e
     
     </summary>
     
@@ -268,7 +288,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Using-AWS-SageMaker-to-Tune-Hyperparameter-of-XG-Boost&quot;&gt;&lt;a href=&quot;#Using-AWS-SageMaker-to-Tune-Hyperparameter-of-XG-Boost&quot; class=&quot;hea
+      &lt;h1&gt;Using AWS SageMaker to Tune Hyperparameter of XG-Boost&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;AWS SageMaker&lt;/strong&gt;를 이용한 XG-Boost 하이퍼파라미터 최적화 방법 소개&lt;/p&gt;
+&lt;h2&gt;1.
     
     </summary>
     
@@ -298,7 +320,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;aws-serverless-express-소개&quot;&gt;&lt;a href=&quot;#aws-serverless-express-소개&quot; class=&quot;headerlink&quot; title=&quot;aws-serverless-express 소개&quot;&gt;&lt;/a&gt;aws-serverl
+      &lt;h1&gt;aws-serverless-express 소개&lt;/h1&gt;
+&lt;h2&gt;aws-serverless-express ?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/awslabs/aws-serverless-express&quot; target=&quot;
     
     </summary>
     
@@ -328,7 +352,12 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;ASP-NET-Web-Project를-EC2-or-Elastic-BeanStalk에-배포하는-Jenkins-시스템-구축&quot;&gt;&lt;a href=&quot;#ASP-NET-Web-Project를-EC2-or-Elastic-BeanStalk에-배포하는-Je
+      &lt;h1&gt;ASP.NET Web Project를 EC2 or Elastic BeanStalk에 배포하는 Jenkins 시스템 구축&lt;/h1&gt;
+&lt;h2&gt;1. EC2 생성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ec2 생성
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Visual Studi
     
     </summary>
     
@@ -354,7 +383,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Using-Tensorflow-Predict-on-Azure-Function&quot;&gt;&lt;a href=&quot;#Using-Tensorflow-Predict-on-Azure-Function&quot; class=&quot;headerlink&quot; title=&quot;Using Te
+      &lt;h1&gt;Using Tensorflow Predict on Azure Function&lt;/h1&gt;
+&lt;h2&gt;참고사항&lt;/h2&gt;
+&lt;p&gt;똑같은 구성으로 &lt;strong&gt;AWS&lt;/strong&gt;에 배포하는 글은 이전에 작성한게 있으니 참고하면 된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;
     
     </summary>
     
@@ -365,13 +398,13 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
+      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
+    
       <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
-    
-      <category term="AzureFunction" scheme="http://DevStarSJ.github.io/tags/AzureFunction/"/>
     
   </entry>
   
@@ -384,7 +417,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Deploy-Tensorflow-Docker-Image-to-Azure&quot;&gt;&lt;a href=&quot;#Deploy-Tensorflow-Docker-Image-to-Azure&quot; class=&quot;headerlink&quot; title=&quot;Deploy Tensorf
+      &lt;h1&gt;Deploy Tensorflow Docker Image to Azure&lt;/h1&gt;
+&lt;h2&gt;참고사항&lt;/h2&gt;
+&lt;p&gt;똑같은 구성으로 &lt;strong&gt;AWS&lt;/strong&gt;에 배포하는 글은 이전에 작성한게 있으니 참고하면 된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
     
     </summary>
     
@@ -393,19 +430,19 @@
     
       <category term="Azure" scheme="http://DevStarSJ.github.io/tags/Azure/"/>
     
-      <category term="AzureContainerRegistry" scheme="http://DevStarSJ.github.io/tags/AzureContainerRegistry/"/>
-    
-      <category term="AzureContainerService" scheme="http://DevStarSJ.github.io/tags/AzureContainerService/"/>
-    
       <category term="AzureFileStorage" scheme="http://DevStarSJ.github.io/tags/AzureFileStorage/"/>
-    
-      <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="AzureContainerRegistry" scheme="http://DevStarSJ.github.io/tags/AzureContainerRegistry/"/>
+    
+      <category term="AzureContainerService" scheme="http://DevStarSJ.github.io/tags/AzureContainerService/"/>
+    
+      <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
   </entry>
   
@@ -418,7 +455,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Using-Tensorflow-Predict-on-AWS-Lambda-Function&quot;&gt;&lt;a href=&quot;#Using-Tensorflow-Predict-on-AWS-Lambda-Function&quot; class=&quot;headerlink&quot; title
+      &lt;h1&gt;Using Tensorflow Predict on AWS Lambda Function&lt;/h1&gt;
+&lt;h2&gt;왜 이런 생각을 ???&lt;/h2&gt;
+&lt;p&gt;앞서 &lt;strong&gt;AWS ECS&lt;/strong&gt;에서 &lt;strong&gt;Tensorflow&lt;/strong&gt;를
     
     </summary>
     
@@ -431,11 +470,11 @@
     
       <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
     
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
       <category term="S3" scheme="http://DevStarSJ.github.io/tags/S3/"/>
     
@@ -450,7 +489,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Deploy-Tensorflow-Docker-Image-to-AWS-ECS&quot;&gt;&lt;a href=&quot;#Deploy-Tensorflow-Docker-Image-to-AWS-ECS&quot; class=&quot;headerlink&quot; title=&quot;Deploy Ten
+      &lt;h1&gt;Deploy Tensorflow Docker Image to AWS ECS&lt;/h1&gt;
+&lt;h2&gt;왜 이런 생각을 ???&lt;/h2&gt;
+&lt;p&gt;Tensorflow 를 이용해서 학습시키는 것에 대한 예제코드는 많이 봐왔지만, 이렇게 학습시켜서 어떻게 서비스를 
     
     </summary>
     
@@ -461,13 +502,13 @@
     
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
     
-      <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
-    
-      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
-    
       <category term="Tensorflow" scheme="http://DevStarSJ.github.io/tags/Tensorflow/"/>
     
       <category term="MachineLearning" scheme="http://DevStarSJ.github.io/tags/MachineLearning/"/>
+    
+      <category term="Docker" scheme="http://DevStarSJ.github.io/tags/Docker/"/>
+    
+      <category term="Python" scheme="http://DevStarSJ.github.io/tags/Python/"/>
     
       <category term="ECS" scheme="http://DevStarSJ.github.io/tags/ECS/"/>
     
@@ -482,7 +523,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Deploy-Lambda-Python&quot;&gt;&lt;a href=&quot;#Deploy-Lambda-Python&quot; class=&quot;headerlink&quot; title=&quot;Deploy Lambda Python&quot;&gt;&lt;/a&gt;Deploy Lambda Python&lt;/h1&gt;&lt;
+      &lt;h1&gt;Deploy Lambda Python&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;AWS Lambda&lt;/strong&gt;에 Tutorial에 대한 이전 글&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/DevStarSJ/Study/blo
     
     </summary>
     
@@ -508,7 +552,9 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Using-Partial-View-as-a-Component&quot;&gt;&lt;a href=&quot;#Using-Partial-View-as-a-Component&quot; class=&quot;headerlink&quot; title=&quot;Using Partial View as a Co
+      &lt;h2&gt;Using Partial View as a Component&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Partial View&lt;/strong&gt;를 이용해서 View의 특정부분을 분리하여 관리가 가능하다.&lt;br&gt;
+&lt;strong&gt;Partial View&lt;/stron
     
     </summary>
     
@@ -530,7 +576,9 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;C-LINQ-Outer-Join&quot;&gt;&lt;a href=&quot;#C-LINQ-Outer-Join&quot; class=&quot;headerlink&quot; title=&quot;C# LINQ Outer Join&quot;&gt;&lt;/a&gt;C# LINQ Outer Join&lt;/h2&gt;&lt;p&gt;LINQ로 ou
+      &lt;h2&gt;C# LINQ Outer Join&lt;/h2&gt;
+&lt;p&gt;LINQ로 outer join 을 하는 방법을 검색해서 나오는 방법들이 대부분 Microsoft 공식 페이지에 나와있는 방법대로 하는 것들인데 문제는 그게 제대로 동작하지 않는다.&lt;/p&gt;
+&lt;p&gt;&lt;
     
     </summary>
     

@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning2장 Lock과 Transaction 동시성 제어2.1 LockShared Lock vs. Exclusive Lock Shared Lock (공유 Lock) 데이터를 읽을 때 사용 다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨 즉, Shared Lock이 걸려있는 상태에서 Exc">
+    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning 2장 Lock과 Transaction 동시성 제어 2.1 Lock Shared Lock vs. Exclusive Lock  Shared Lock (공유 Lock)  데이터를 읽을 때 사용 다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨  즉, Shared Lock이 걸려있는 상태">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 3-2 Lock과 Transaction 동시성 제어">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/02/03.03.lock/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning2장 Lock과 Transaction 동시성 제어2.1 LockShared Lock vs. Exclusive Lock Shared Lock (공유 Lock) 데이터를 읽을 때 사용 다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨 즉, Shared Lock이 걸려있는 상태에서 Exc">
+<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning 2장 Lock과 Transaction 동시성 제어 2.1 Lock Shared Lock vs. Exclusive Lock  Shared Lock (공유 Lock)  데이터를 읽을 때 사용 다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨  즉, Shared Lock이 걸려있는 상태">
 <meta property="og:updated_time" content="2017-04-24T00:03:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 3-2 Lock과 Transaction 동시성 제어">
-<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning2장 Lock과 Transaction 동시성 제어2.1 LockShared Lock vs. Exclusive Lock Shared Lock (공유 Lock) 데이터를 읽을 때 사용 다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨 즉, Shared Lock이 걸려있는 상태에서 Exc">
+<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning 2장 Lock과 Transaction 동시성 제어 2.1 Lock Shared Lock vs. Exclusive Lock  Shared Lock (공유 Lock)  데이터를 읽을 때 사용 다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨  즉, Shared Lock이 걸려있는 상태">
     
 
     
@@ -160,38 +160,50 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="3과목-SQL-고급-활용-및-Tuning"><a href="#3과목-SQL-고급-활용-및-Tuning" class="headerlink" title="3과목 SQL 고급 활용 및 Tuning"></a>3과목 SQL 고급 활용 및 Tuning</h1><h2 id="2장-Lock과-Transaction-동시성-제어"><a href="#2장-Lock과-Transaction-동시성-제어" class="headerlink" title="2장 Lock과 Transaction 동시성 제어"></a>2장 Lock과 Transaction 동시성 제어</h2><h3 id="2-1-Lock"><a href="#2-1-Lock" class="headerlink" title="2.1 Lock"></a>2.1 Lock</h3><h4 id="Shared-Lock-vs-Exclusive-Lock"><a href="#Shared-Lock-vs-Exclusive-Lock" class="headerlink" title="Shared Lock vs. Exclusive Lock"></a>Shared Lock vs. Exclusive Lock</h4><ul>
-<li>Shared Lock (공유 Lock)<ul>
+            <h1>3과목 SQL 고급 활용 및 Tuning</h1>
+<h2>2장 Lock과 Transaction 동시성 제어</h2>
+<h3>2.1 Lock</h3>
+<h4>Shared Lock vs. Exclusive Lock</h4>
+<ul>
+<li>Shared Lock (공유 Lock)
+<ul>
 <li>데이터를 읽을 때 사용</li>
-<li>다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨<ul>
+<li>다른 Shared Lock과는 호환되지만, Exclusive Lock과는 호환이 안됨
+<ul>
 <li>즉, Shared Lock이 걸려있는 상태에서 Exclusive Lock은 Blocking 됨</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Exclusive Lock (베타적 Lock)<ul>
+<li>Exclusive Lock (베타적 Lock)
+<ul>
 <li>데이터를 변경할 때 사용</li>
 <li>모든 종류의 Lock과 호환이 안됨</li>
 </ul>
 </li>
 </ul>
-<h4 id="Blocking과-Deadlock"><a href="#Blocking과-Deadlock" class="headerlink" title="Blocking과 Deadlock"></a>Blocking과 Deadlock</h4><ul>
-<li>Blocking<ul>
+<h4>Blocking과 Deadlock</h4>
+<ul>
+<li>
+<p>Blocking</p>
+<ul>
 <li>Lock 경합이 발생하여 특정 세션이 작업을 진행하지 못하고 멈춘 상태</li>
 <li>Blocking 상태를 해소하는 방법은 Commit or Rollback 뿐</li>
 </ul>
 </li>
-<li><p>Lock에 의한 성능 최소화 방안</p>
+<li>
+<p>Lock에 의한 성능 최소화 방안</p>
 <ul>
 <li>Transaction의 원자성을 훼손하지 않는 선에서 최대한 짧게 정의</li>
 <li>같은 데이터를 갱신하는 Transaction이 동시에 수행되지 않도록 설계</li>
 <li>Transaction Isolation Level을 지나치게 상향 조정하지 않음</li>
 <li>Transaction을 잘 설계하여 대기 현상을 피하도록 프로그래밍</li>
-<li>주간의 대용량 갱신작업이 불가피하다면 timeout을 이용  <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> T <span class="keyword">WHERE</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span> <span class="keyword">NOWAIT</span> <span class="comment">-- 대기없이 Exception  </span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> T <span class="keyword">WHERE</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span> <span class="keyword">WAIT</span> <span class="number">3</span> <span class="comment">-- 3초 대기 후 Exception</span></div></pre></td></tr></table></figure>
-</li>
+<li>주간의 대용량 갱신작업이 불가피하다면 timeout을 이용<br>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> T <span class="keyword">WHERE</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span> <span class="keyword">NOWAIT</span> <span class="comment">-- 대기없이 Exception  </span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> T <span class="keyword">WHERE</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span> <span class="keyword">WAIT</span> <span class="number">3</span> <span class="comment">-- 3초 대기 후 Exception</span></div></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>Deadlock (교착상태)</p>
+<li>
+<p>Deadlock (교착상태)</p>
 <ul>
 <li>두 세션이 각각 Lock을 건 상태에서 서로의 Lock걸린 리소스를 액세스하려 할 경우 영원히 대기상태에 빠지는 것</li>
 <li>유일한 해결 방법은 둘 중 한 세션에 에러를 발생시키는 것</li>
@@ -199,21 +211,26 @@
 </ul>
 </li>
 </ul>
-<h4 id="Oracle-Lock"><a href="#Oracle-Lock" class="headerlink" title="Oracle Lock"></a>Oracle Lock</h4><ul>
-<li>Oracle에서는 어떠한 읽기 작업도 Lock에 영향을 받지 않는다.<ul>
+<h4>Oracle Lock</h4>
+<ul>
+<li>Oracle에서는 어떠한 읽기 작업도 Lock에 영향을 받지 않는다.
+<ul>
 <li>Undo 데이터를 활용한 다중버전 동시성 제어 메커니즘을 활용한다.</li>
-<li>단,  SELECT … FOR UPDATE 제외</li>
+<li>단,  SELECT ... FOR UPDATE 제외</li>
 </ul>
 </li>
-<li>Row Lock<ul>
+<li>Row Lock
+<ul>
 <li>항상 Exclusive Lock</li>
-<li>INSERT, UPDATE, DELETE, SELECT … FOR UPDATE를 수행한 Transaction에 의해 설정되며 해당 Transaction이 Commit 이나 Rollback할때까지 다른 Transaction은 해당 Row를 변경할 수 없다.</li>
+<li>INSERT, UPDATE, DELETE, SELECT ... FOR UPDATE를 수행한 Transaction에 의해 설정되며 해당 Transaction이 Commit 이나 Rollback할때까지 다른 Transaction은 해당 Row를 변경할 수 없다.</li>
 </ul>
 </li>
-<li>Table Lock<ul>
+<li>Table Lock
+<ul>
 <li>Row Lock을 얻는 순간, 해당 Table에 대한 Table Lock도 얻는다.</li>
 <li>현재 Transaction이 갱신 중인 Table에 대해 호환되지 않는 DDL 수행을 방지한다.</li>
-<li>5종류의 Lock이 있음<ul>
+<li>5종류의 Lock이 있음
+<ul>
 <li>RS (Row Share) : X제외 모두 허용</li>
 <li>RX (Row Exclusive) : RS, RX 허용</li>
 <li>S (Share) : RS, S 허용</li>
@@ -225,73 +242,89 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">LOCK</span> <span class="keyword">TABLE</span> emp <span class="keyword">IN</span> <span class="keyword">ROW</span> <span class="keyword">SHARE</span> <span class="keyword">MODE</span>;</div><div class="line"><span class="keyword">LOCK</span> <span class="keyword">TABLE</span> emp <span class="keyword">IN</span> <span class="keyword">ROW</span> EXCLUSIVE <span class="keyword">MODE</span>;</div><div class="line">...</div></pre></td></tr></table></figure>
-<h3 id="2-1-Transaction"><a href="#2-1-Transaction" class="headerlink" title="2.1 Transaction"></a>2.1 Transaction</h3><h4 id="Transaction-특징"><a href="#Transaction-특징" class="headerlink" title="Transaction 특징"></a>Transaction 특징</h4><ol>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">LOCK</span> <span class="keyword">TABLE</span> emp <span class="keyword">IN</span> <span class="keyword">ROW</span> <span class="keyword">SHARE</span> <span class="keyword">MODE</span>;</div><div class="line"><span class="keyword">LOCK</span> <span class="keyword">TABLE</span> emp <span class="keyword">IN</span> <span class="keyword">ROW</span> EXCLUSIVE <span class="keyword">MODE</span>;</div><div class="line">...</div></pre></td></tr></table></figure></p>
+<h3>2.1 Transaction</h3>
+<h4>Transaction 특징</h4>
+<ol>
 <li>원자성 (Atomicity) : 업무상 최소단위</li>
 <li>일관성 (Consistency) : 실행 전후 데이터베이스 상태가 모순되지 않아야 함</li>
 <li>격리성 (Isolation) : 실행 중 다른 Transaction이 접근할 수 없음</li>
 <li>영속성 (Durability) : 성공적으로 수행하면, 데이터베이스에 영속적으로 저장</li>
 </ol>
-<h4 id="낮은-Isolation-Level에서의-현상"><a href="#낮은-Isolation-Level에서의-현상" class="headerlink" title="낮은 Isolation Level에서의 현상"></a>낮은 Isolation Level에서의 현상</h4><ol>
-<li>Dirty Read<ul>
+<h4>낮은 Isolation Level에서의 현상</h4>
+<ol>
+<li>Dirty Read</li>
+</ol>
+<ul>
 <li>Commit하지 않은 데이터를 읽음. 이미 읽은 뒤 다시 Rollback 될 수 있음.</li>
 </ul>
-</li>
-<li>Non-Repeatable Read<ul>
+<ol start="2">
+<li>Non-Repeatable Read</li>
+</ol>
+<ul>
 <li>한 Transaction 내의 같은 Query에 대해서 값이 바뀌는 현상</li>
 <li>처음 값을 읽은 뒤 다른 Transaction이 해당 값을 변경한 경우</li>
 </ul>
-</li>
-<li>Phantom Read<ul>
+<ol start="3">
+<li>Phantom Read</li>
+</ol>
+<ul>
 <li>한 Transaction 내에 같은 Query에 대해서 처음에 없었던 값이 읽히는 현상</li>
 <li>처음 값을 읽은 뒤 다른 Transaction이 새로운 값을 입력한 경우</li>
 </ul>
-</li>
-</ol>
-<h4 id="Transaction-Isolation-Level"><a href="#Transaction-Isolation-Level" class="headerlink" title="Transaction Isolation Level"></a>Transaction Isolation Level</h4><ol>
+<h4>Transaction Isolation Level</h4>
+<ol>
 <li>Read Uncommitted : 다른 Transaction이 처리 중인 값을 읽는 것을 허용 (이걸 허용하는 DB는 거의 없음)</li>
 <li>Read Committed : Dirty Read 방지</li>
 <li>Repeatable Read : Non-Repeatable Read 방지</li>
-<li>Serializable Read : Phantom Read 방지<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> <span class="keyword">TRANSACTION</span> <span class="keyword">ISOLATION</span> <span class="keyword">LEVEL</span> <span class="keyword">READ</span> <span class="keyword">SERIALIZABLE</span>;</div></pre></td></tr></table></figure>
-</li>
+<li>Serializable Read : Phantom Read 방지
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> <span class="keyword">TRANSACTION</span> <span class="keyword">ISOLATION</span> <span class="keyword">LEVEL</span> <span class="keyword">READ</span> <span class="keyword">SERIALIZABLE</span>;</div></pre></td></tr></table></figure></li>
 </ol>
 <ul>
 <li>Transaction Isolation Level을 높일수록 Lock에 의존적이다보니 동시성이 저하된다.</li>
 <li>Oracle에서는 다중버전 동시성 제어(Multiversion Concurrency Control)을 사용한다.</li>
 </ul>
-<h4 id="동시성-제어-Concurrency-Control"><a href="#동시성-제어-Concurrency-Control" class="headerlink" title="동시성 제어 (Concurrency Control)"></a>동시성 제어 (Concurrency Control)</h4><ul>
-<li><p>비관적 동시성 제어 (Pessimistic Concurrency Control)</p>
+<h4>동시성 제어 (Concurrency Control)</h4>
+<ul>
+<li>
+<p>비관적 동시성 제어 (Pessimistic Concurrency Control)</p>
 <ul>
 <li>같은 데이터를 동시에 수정할 것이라고 가정</li>
-<li>먼저 Lock을 걸고 Transaction이 완료될때까지 유지<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span>;</div><div class="line"><span class="keyword">UPDATE</span> ...</div><div class="line"><span class="keyword">COMMIT</span>;</div></pre></td></tr></table></figure>
-</li>
+<li>먼저 Lock을 걸고 Transaction이 완료될때까지 유지
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">FOR</span> <span class="keyword">UPDATE</span>;</div><div class="line"><span class="keyword">UPDATE</span> ...</div><div class="line"><span class="keyword">COMMIT</span>;</div></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>낙관적 동시성 제어 (Optimistic Concurrency Control)</p>
+<li>
+<p>낙관적 동시성 제어 (Optimistic Concurrency Control)</p>
 <ul>
 <li>같은 데이터를 동시에 수정하지 않을 것이라고 가정</li>
-<li>데이터 읽을 때 Lock을 걸지 않지만, 수정할때 변경되었는지 확인<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">INTO</span> :a, :b, :c, :d ... ;</div><div class="line"><span class="keyword">UPDATE</span> ... <span class="keyword">WHERE</span> col1 = :a <span class="keyword">AND</span> col2 = :b ...;</div></pre></td></tr></table></figure>
-</li>
+<li>데이터 읽을 때 Lock을 걸지 않지만, 수정할때 변경되었는지 확인
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> ... <span class="keyword">INTO</span> :a, :b, :c, :d ... ;</div><div class="line"><span class="keyword">UPDATE</span> ... <span class="keyword">WHERE</span> col1 = :a <span class="keyword">AND</span> col2 = :b ...;</div></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
-<h4 id="다중버전-동시성-제어-Multiversion-Concurrency-Control"><a href="#다중버전-동시성-제어-Multiversion-Concurrency-Control" class="headerlink" title="다중버전 동시성 제어 (Multiversion Concurrency Control)"></a>다중버전 동시성 제어 (Multiversion Concurrency Control)</h4><ul>
+<h4>다중버전 동시성 제어 (Multiversion Concurrency Control)</h4>
+<ul>
 <li>데이터를 변경할 때마다 Undo 영역에 저장</li>
 <li>Query (또는 Transaction) 시작 시점 이후 변경된 값에 대해서는 Undo 영역에 저장된 정보를 이용해서 일관성 있는 버전(CR Copy)를 생성하여 읽음</li>
 </ul>
 <ul>
-<li>문장수준 읽기 일관성 (Statement-Level Read Consistency)<ul>
+<li>문장수준 읽기 일관성 (Statement-Level Read Consistency)
+<ul>
 <li>단일 SQL 내에서의 일관성 유지</li>
 <li>Query 시작시점 이후 변경값에 대해서는 CR Copy 값을 읽음</li>
 </ul>
 </li>
-<li>트랜잭션 수준 읽기 인관성 (Transaction-Level Read Consistency)<ul>
+<li>트랜잭션 수준 읽기 인관성 (Transaction-Level Read Consistency)
+<ul>
 <li>Transaction 시작시점 이후 변경값에 대해서는 CR Copy 값을 읽음</li>
 </ul>
 </li>
-<li>Snapshot too old<ul>
+<li>Snapshot too old
+<ul>
 <li>Undo 영역의 정보가 다른 Transaction에 의해 재사용됨으로 CR Copy를 생성할 수 없을 경우 발생</li>
-<li>줄일 수 있는 방법<ul>
+<li>줄일 수 있는 방법
+<ul>
 <li>Undo 영역 크기 증가</li>
 <li>Commit을 자주하지 않음</li>
 <li>fetch across commit 형태의 프로그램 작성을 피함</li>
@@ -305,7 +338,8 @@
 </ul>
 </li>
 </ul>
-<h3 id="관련-내용-Slide"><a href="#관련-내용-Slide" class="headerlink" title="관련 내용 Slide"></a>관련 내용 Slide</h3><ul>
+<h3>관련 내용 Slide</h3>
+<ul>
 <li>Oracle Transaction Isolation Level : <a href="http://www.slideshare.net/seokjoonyun9/2015-0515-oracle-transaction-concurrency-control-read-consistency" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/2015-0515-oracle-transaction-concurrency-control-read-consistency</a></li>
 <li>Oracle Concurrency Control : <a href="http://www.slideshare.net/seokjoonyun9/20150522-oracle-ways-of-concurrency-control" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/20150522-oracle-ways-of-concurrency-control</a></li>
 <li>Oracle Snapshot too Old : <a href="http://www.slideshare.net/seokjoonyun9/oracle-architecture2015-0424-bblock-cleanout-and-snapshottooold" target="_blank" rel="external">http://www.slideshare.net/seokjoonyun9/oracle-architecture2015-0424-bblock-cleanout-and-snapshottooold</a></li>
@@ -318,7 +352,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/02/03.03.lock/" data-id="cjov18q3z000ldw7bbkg10gz8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/02/03.03.lock/" data-id="cjov1rqse000ths7bwv4chthc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

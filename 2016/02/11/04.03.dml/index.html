@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.3 DML Tuning DML 수행시 Table 변경 Index 변경 : Update  수행시 Index는 Delete &amp;amp; Insert 수행 Redo, Undo 생성    5.3.1 Insert Tuning Direct Path Insert Freelist 조회없이, Buffer">
+    <meta name="description" content="3과목 SQL 고급 활용 및 Tuning 5장 고급 SQL Tuning 5.3 DML Tuning  DML 수행시  Table 변경 Index 변경 : Update  수행시 Index는 Delete &amp;amp; Insert 수행 Redo, Undo 생성    5.3.1 Insert Tuning  Direct Path Insert   Freelist 조회없이,">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLP 3-5-3 DML Tuning">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/11/04.03.dml/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.3 DML Tuning DML 수행시 Table 변경 Index 변경 : Update  수행시 Index는 Delete &amp;amp; Insert 수행 Redo, Undo 생성    5.3.1 Insert Tuning Direct Path Insert Freelist 조회없이, Buffer">
+<meta property="og:description" content="3과목 SQL 고급 활용 및 Tuning 5장 고급 SQL Tuning 5.3 DML Tuning  DML 수행시  Table 변경 Index 변경 : Update  수행시 Index는 Delete &amp;amp; Insert 수행 Redo, Undo 생성    5.3.1 Insert Tuning  Direct Path Insert   Freelist 조회없이,">
 <meta property="og:updated_time" content="2017-04-24T00:16:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLP 3-5-3 DML Tuning">
-<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning5장 고급 SQL Tuning5.3 DML Tuning DML 수행시 Table 변경 Index 변경 : Update  수행시 Index는 Delete &amp;amp; Insert 수행 Redo, Undo 생성    5.3.1 Insert Tuning Direct Path Insert Freelist 조회없이, Buffer">
+<meta name="twitter:description" content="3과목 SQL 고급 활용 및 Tuning 5장 고급 SQL Tuning 5.3 DML Tuning  DML 수행시  Table 변경 Index 변경 : Update  수행시 Index는 Delete &amp;amp; Insert 수행 Redo, Undo 생성    5.3.1 Insert Tuning  Direct Path Insert   Freelist 조회없이,">
     
 
     
@@ -160,42 +160,54 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="3과목-SQL-고급-활용-및-Tuning"><a href="#3과목-SQL-고급-활용-및-Tuning" class="headerlink" title="3과목 SQL 고급 활용 및 Tuning"></a>3과목 SQL 고급 활용 및 Tuning</h1><h2 id="5장-고급-SQL-Tuning"><a href="#5장-고급-SQL-Tuning" class="headerlink" title="5장 고급 SQL Tuning"></a>5장 고급 SQL Tuning</h2><h3 id="5-3-DML-Tuning"><a href="#5-3-DML-Tuning" class="headerlink" title="5.3 DML Tuning"></a>5.3 DML Tuning</h3><ul>
-<li>DML 수행시<ul>
+            <h1>3과목 SQL 고급 활용 및 Tuning</h1>
+<h2>5장 고급 SQL Tuning</h2>
+<h3>5.3 DML Tuning</h3>
+<ul>
+<li>DML 수행시
+<ul>
 <li>Table 변경</li>
 <li>Index 변경 : Update  수행시 Index는 Delete &amp; Insert 수행</li>
 <li>Redo, Undo 생성</li>
 </ul>
 </li>
 </ul>
-<h4 id="5-3-1-Insert-Tuning"><a href="#5-3-1-Insert-Tuning" class="headerlink" title="5.3.1 Insert Tuning"></a>5.3.1 Insert Tuning</h4><ol>
-<li>Direct Path Insert<ul>
+<h4>5.3.1 Insert Tuning</h4>
+<ol>
+<li>Direct Path Insert</li>
+</ol>
+<ul>
 <li>Freelist 조회없이, Buffer Cache를 거치지 않고 datafile에 바로 입력하는 방식</li>
 <li>INSERT SELECT 문장에 <code>/*+ append */</code> Hint 사용</li>
 <li>Parallel Mode로 INSERT</li>
 <li>direct 옵션을 지정하고 SQL#Loader(sqlldr)로 데이터 로드</li>
-<li>CTAS (CREATE TABLE … AS SELECT) 문장을 수행</li>
+<li>CTAS (CREATE TABLE ... AS SELECT) 문장을 수행</li>
 </ul>
-</li>
-<li>nologging 모드 Insert<ul>
+<ol start="2">
+<li>nologging 모드 Insert</li>
+</ol>
+<ul>
 <li><code>ALTER TABLE 테이블명 NOLOGGING;</code></li>
 <li>Redo Log까지 최소화 (DPI에서는 Freelist 조회X, Buffer Cache X)</li>
 <li>Direct Path Insert 시에만 작동</li>
 <li>단 Exclusive Mode Table Lock이 걸리므로 다른 Transaction이 해당 Table에 DML 수행을 차단</li>
-<li>nologging 상태에서 입력한 데이터는 장애 발생시 복구가 불가능<ul>
-<li>입력후 바로 Backup을 해야 함 </li>
-<li>언제든 재생 가능한 데이터라면 상관없음<ul>
+<li>nologging 상태에서 입력한 데이터는 장애 발생시 복구가 불가능
+<ul>
+<li>입력후 바로 Backup을 해야 함</li>
+<li>언제든 재생 가능한 데이터라면 상관없음
+<ul>
 <li>e.g. 배치 프로그램에서 중간 단계 임시 Table</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-</ol>
-<h5 id="5-3-2-Update-Tuning"><a href="#5-3-2-Update-Tuning" class="headerlink" title="5.3.2 Update Tuning"></a>5.3.2 Update Tuning</h5><h5 id="1-Truncate-amp-Insert-방식"><a href="#1-Truncate-amp-Insert-방식" class="headerlink" title="1. Truncate &amp; Insert 방식"></a>1. Truncate &amp; Insert 방식</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> contract <span class="keyword">SET</span> <span class="keyword">status</span> = <span class="string">'9999'</span> <span class="keyword">WHERE</span> ord_date &lt; _TO_DATE(<span class="string">'20000101'</span>, <span class="string">'yyyymmdd);</span></div></pre></td></tr></table></figure>
+<h5>5.3.2 Update Tuning</h5>
+<h5>1. Truncate &amp; Insert 방식</h5>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> contract <span class="keyword">SET</span> <span class="keyword">status</span> = <span class="string">'9999'</span> <span class="keyword">WHERE</span> ord_date &lt; _TO_DATE(<span class="string">'20000101'</span>, <span class="string">'yyyymmdd);</span></div></pre></td></tr></table></figure></p>
 <ul>
-<li>대량의 데이터를 UPDATE하면 상당히 오랜시간이 걸린다.<ul>
+<li>대량의 데이터를 UPDATE하면 상당히 오랜시간이 걸린다.
+<ul>
 <li>UPDATE 자체 작업</li>
 <li>Index Delete &amp; Insert</li>
 <li>Datafile을 Buffer Cache로 load한 후에 갱신</li>
@@ -205,59 +217,68 @@
 </li>
 <li>그래서 차라리 Table을 새로 생성하여서 작업을 한 후에 Index를 생성하는 것이 더 효율적일 수 있다.</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tmp_cont <span class="keyword">AS</span> <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> contract;  <span class="comment">-- 임시 Table로 데이터 복사</span></div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> cont_pk;              <span class="comment">-- INDEX 삭제</span></div><div class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> contract.cont_idx;</div><div class="line"></div><div class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> contract;                          <span class="comment">-- Table 데이터 삭제 (No Undo)</span></div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> contract (ord_no, ord_date, <span class="keyword">status</span>)   <span class="comment">-- UPDATE 문에 대응하는 INSERT INTO SELECT 문</span></div><div class="line"><span class="keyword">SELECT</span> ord_no, ord_date,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> ord_date &gt;= <span class="keyword">TO_DATE</span>(<span class="string">'20000101'</span>, <span class="string">'yyyymmdd'</span>) <span class="keyword">then</span> <span class="string">'9999'</span> <span class="keyword">ELSE</span> <span class="keyword">status</span> <span class="keyword">END</span></div><div class="line"> <span class="keyword">FROM</span> tmp_cont;</div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> contract <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> cont_pk PRIMARY <span class="keyword">KEY</span> (ord_no, ord_date);    <span class="comment">-- INDEX 다시 생성</span></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> cont_idx <span class="keyword">ON</span> contract(ord_date, <span class="keyword">status</span>);</div><div class="line"></div><div class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> tmp_cont;                              <span class="comment">-- 임시 Table 삭제</span></div></pre></td></tr></table></figure>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tmp_cont <span class="keyword">AS</span> <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> contract;  <span class="comment">-- 임시 Table로 데이터 복사</span></div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> cont_pk;              <span class="comment">-- INDEX 삭제</span></div><div class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> contract.cont_idx;</div><div class="line"></div><div class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> contract;                          <span class="comment">-- Table 데이터 삭제 (No Undo)</span></div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> contract (ord_no, ord_date, <span class="keyword">status</span>)   <span class="comment">-- UPDATE 문에 대응하는 INSERT INTO SELECT 문</span></div><div class="line"><span class="keyword">SELECT</span> ord_no, ord_date,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> ord_date &gt;= <span class="keyword">TO_DATE</span>(<span class="string">'20000101'</span>, <span class="string">'yyyymmdd'</span>) <span class="keyword">then</span> <span class="string">'9999'</span> <span class="keyword">ELSE</span> <span class="keyword">status</span> <span class="keyword">END</span></div><div class="line"> <span class="keyword">FROM</span> tmp_cont;</div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> contract <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> cont_pk PRIMARY <span class="keyword">KEY</span> (ord_no, ord_date);    <span class="comment">-- INDEX 다시 생성</span></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> cont_idx <span class="keyword">ON</span> contract(ord_date, <span class="keyword">status</span>);</div><div class="line"></div><div class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> tmp_cont;                              <span class="comment">-- 임시 Table 삭제</span></div></pre></td></tr></table></figure></p>
 <p>이 작업은 UPDATE 뿐만 아니라 DELETE 에도 적용이 가능하다.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> contract <span class="keyword">WHERE</span> ord_date &lt; <span class="keyword">TO_DATE</span>(<span class="string">'20010101'</span>,<span class="string">'yyyymmdd'</span>);</div></pre></td></tr></table></figure>
-<p>위 문장을 수행하는 것보다 아래가 더 효율적일 수 있다.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tmp_cont                  <span class="comment">-- DELETE 문에 대응하는 CTAS</span></div><div class="line"><span class="keyword">AS</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> contract</div><div class="line"> <span class="keyword">WHERE</span> ord_date &gt;= <span class="keyword">TO_DATE</span>(<span class="string">'20010101'</span>,<span class="string">'yyyymmdd'</span>);</div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> cont_pk;</div><div class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> contract.cont_pk;</div><div class="line"></div><div class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> contract;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> contract</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> tmp_cont;</div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> cont_pk PRIMARY <span class="keyword">KEY</span> (ord_no, ord_date);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> cont_idx <span class="keyword">ON</span> contract(ord_date, <span class="keyword">status</span>);</div><div class="line"></div><div class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> tmp_cont;</div></pre></td></tr></table></figure></p>
-<h5 id="2-Join을-내포한-Update-Tuning"><a href="#2-Join을-내포한-Update-Tuning" class="headerlink" title="2. Join을 내포한 Update Tuning"></a>2. Join을 내포한 Update Tuning</h5><ul>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> contract <span class="keyword">WHERE</span> ord_date &lt; <span class="keyword">TO_DATE</span>(<span class="string">'20010101'</span>,<span class="string">'yyyymmdd'</span>);</div></pre></td></tr></table></figure></p>
+<p>위 문장을 수행하는 것보다 아래가 더 효율적일 수 있다.
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tmp_cont                  <span class="comment">-- DELETE 문에 대응하는 CTAS</span></div><div class="line"><span class="keyword">AS</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> contract</div><div class="line"> <span class="keyword">WHERE</span> ord_date &gt;= <span class="keyword">TO_DATE</span>(<span class="string">'20010101'</span>,<span class="string">'yyyymmdd'</span>);</div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> cont_pk;</div><div class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> contract.cont_pk;</div><div class="line"></div><div class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> contract;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> contract</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> tmp_cont;</div><div class="line"></div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> cont_pk PRIMARY <span class="keyword">KEY</span> (ord_no, ord_date);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> cont_idx <span class="keyword">ON</span> contract(ord_date, <span class="keyword">status</span>);</div><div class="line"></div><div class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> tmp_cont;</div></pre></td></tr></table></figure></p>
+<h5>2. Join을 내포한 Update Tuning</h5>
+<ul>
 <li>UPDATE 자체 성능보다는 Join 과정의 비효율 때문에 성능이 느려지는 경우가 더 많다.</li>
 </ul>
 <ul>
-<li><p>최근 1달안에 거래내역이 있는 고객의 최종거래일시와 1달간의 거래금액을 UPDATE하는 문장에 대한 예제이다.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 고객</div><div class="line">   <span class="keyword">SET</span> (최종거래일시, 최근거래금액) = (<span class="keyword">SELECT</span> <span class="keyword">MAX</span>(거래일시), <span class="keyword">SUM</span>(거래금액)</div><div class="line">                                         <span class="keyword">FROM</span> 거래</div><div class="line">                                        <span class="keyword">WHERE</span> 고객번호 = 고객.고객번호</div><div class="line">                                          <span class="keyword">AND</span> 거래일시 &gt;= TRUNC(ADD_MONTHS(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>)))</div><div class="line"> <span class="keyword">WHERE</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> 거래</div><div class="line">                <span class="keyword">WHERE</span> 고객번호 = 고객.고객번호</div><div class="line">                  <span class="keyword">AND</span> 거래일시 &gt;= TRUNC(ADD_MONTHS(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>)));</div></pre></td></tr></table></figure>
+<li>
+<p>최근 1달안에 거래내역이 있는 고객의 최종거래일시와 1달간의 거래금액을 UPDATE하는 문장에 대한 예제이다.
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 고객</div><div class="line">   <span class="keyword">SET</span> (최종거래일시, 최근거래금액) = (<span class="keyword">SELECT</span> <span class="keyword">MAX</span>(거래일시), <span class="keyword">SUM</span>(거래금액)</div><div class="line">                                         <span class="keyword">FROM</span> 거래</div><div class="line">                                        <span class="keyword">WHERE</span> 고객번호 = 고객.고객번호</div><div class="line">                                          <span class="keyword">AND</span> 거래일시 &gt;= TRUNC(ADD_MONTHS(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>)))</div><div class="line"> <span class="keyword">WHERE</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> 거래</div><div class="line">                <span class="keyword">WHERE</span> 고객번호 = 고객.고객번호</div><div class="line">                  <span class="keyword">AND</span> 거래일시 &gt;= TRUNC(ADD_MONTHS(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>)));</div></pre></td></tr></table></figure></p>
 </li>
-<li><p>문제점</p>
+<li>
+<p>문제점</p>
 <ul>
 <li>거래 Table을 2번 참조했다.</li>
 <li>[고객번호 + 거래일시] Index가 필요하다.</li>
 <li>Index에 데이터가 많으면 Random 액세스로 Join을 수행하기 때문에 비효율적이다.</li>
 </ul>
 </li>
-<li><p>해결방안1</p>
+<li>
+<p>해결방안1</p>
 <ul>
 <li>Sub-query에서 <code>unnest</code> 와 <code>hash_sj</code> Hint를 이용해서 Semi Join 방법을 유도</li>
 <li>그래도 여전히 Table을 2번 참조하긴 해야 한다.</li>
 </ul>
 </li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 고객</div><div class="line">   <span class="keyword">SET</span> (최종거래일시, 최근거래금액) = (<span class="keyword">SELECT</span> <span class="keyword">MAX</span>(거래일시), <span class="keyword">SUM</span>(거래금액)</div><div class="line">                                         <span class="keyword">FROM</span> 거래</div><div class="line">                                        <span class="keyword">WHERE</span> 고객번호 = 고객.고객번호</div><div class="line">                                          <span class="keyword">AND</span> 거래일시 &gt;= TRUNC(ADD_MONTHS(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>)))</div><div class="line"> <span class="keyword">WHERE</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="comment">/*+ unnest hash_sj */</span> <span class="number">1</span></div><div class="line">                <span class="keyword">FROM</span> 거래</div><div class="line">               <span class="keyword">WHERE</span> 고객번호 = 고객.고객번호</div><div class="line">                 <span class="keyword">AND</span> 거래일시 &gt;= TRUNC(ADD_MONTH(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>)));</div></pre></td></tr></table></figure>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 고객</div><div class="line">   <span class="keyword">SET</span> (최종거래일시, 최근거래금액) = (<span class="keyword">SELECT</span> <span class="keyword">MAX</span>(거래일시), <span class="keyword">SUM</span>(거래금액)</div><div class="line">                                         <span class="keyword">FROM</span> 거래</div><div class="line">                                        <span class="keyword">WHERE</span> 고객번호 = 고객.고객번호</div><div class="line">                                          <span class="keyword">AND</span> 거래일시 &gt;= TRUNC(ADD_MONTHS(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>)))</div><div class="line"> <span class="keyword">WHERE</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="comment">/*+ unnest hash_sj */</span> <span class="number">1</span></div><div class="line">                <span class="keyword">FROM</span> 거래</div><div class="line">               <span class="keyword">WHERE</span> 고객번호 = 고객.고객번호</div><div class="line">                 <span class="keyword">AND</span> 거래일시 &gt;= TRUNC(ADD_MONTH(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>)));</div></pre></td></tr></table></figure></p>
 <ul>
-<li>해결방안2<ul>
+<li>해결방안2
+<ul>
 <li>수정가능 조인뷰 (Updatable Join View) 활용</li>
 </ul>
 </li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> <span class="comment">/*+ bypass_ujvc */</span></div><div class="line">       (<span class="keyword">SELECT</span> c.최종거래일시, c.최근거래금액, t.거래일시, t.거래금액</div><div class="line">          <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> 고객번호, <span class="keyword">MAX</span>(거래일시) 거래일시, <span class="keyword">SUM</span>(거래금액) 거래금액</div><div class="line">                  <span class="keyword">FROM</span> 거래</div><div class="line">                 <span class="keyword">WHERE</span> 거래일시 &gt;= TRUNC(ADD_MONTH(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>))</div><div class="line">                 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 고객번호) t,</div><div class="line">               고객 c</div><div class="line">         <span class="keyword">WHERE</span> c.고객번호 = t.고객번호)</div><div class="line">   <span class="keyword">SET</span> 최종거래일시 = 거래일시,</div><div class="line">       최근거래금액 = 거래금액;</div></pre></td></tr></table></figure>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> <span class="comment">/*+ bypass_ujvc */</span></div><div class="line">       (<span class="keyword">SELECT</span> c.최종거래일시, c.최근거래금액, t.거래일시, t.거래금액</div><div class="line">          <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> 고객번호, <span class="keyword">MAX</span>(거래일시) 거래일시, <span class="keyword">SUM</span>(거래금액) 거래금액</div><div class="line">                  <span class="keyword">FROM</span> 거래</div><div class="line">                 <span class="keyword">WHERE</span> 거래일시 &gt;= TRUNC(ADD_MONTH(<span class="keyword">SYSDATE</span>, <span class="number">-1</span>))</div><div class="line">                 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 고객번호) t,</div><div class="line">               고객 c</div><div class="line">         <span class="keyword">WHERE</span> c.고객번호 = t.고객번호)</div><div class="line">   <span class="keyword">SET</span> 최종거래일시 = 거래일시,</div><div class="line">       최근거래금액 = 거래금액;</div></pre></td></tr></table></figure></p>
 <ul>
-<li><p>Updatable Join View 란 ?</p>
+<li>
+<p>Updatable Join View 란 ?</p>
 <ul>
 <li>Join View : FROM 절에 2 개의 Table을 가진 View</li>
-<li>Unique Index가 있는 Table 쪽의 Unique 한 경우에만 UPDATE가 가능<ul>
+<li>Unique Index가 있는 Table 쪽의 Unique 한 경우에만 UPDATE가 가능
+<ul>
 <li>GROUP BY를 통하면 결과가 무조건 Unique한데도 불구하고 Unique Index가 없으면 수정 불가</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>Oracle MERGE문 활용</p>
+<li>
+<p>Oracle MERGE문 활용</p>
 </li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">MERGE</span> <span class="keyword">INTO</span> 대상테이블 t <span class="keyword">using</span> 소스테이블 s <span class="keyword">ON</span> (t.id = s.id)  <span class="comment">-- 조건</span></div><div class="line"><span class="keyword">WHEN</span> <span class="keyword">MATCHED</span> <span class="keyword">THEN</span></div><div class="line">    <span class="keyword">UPDATE</span> <span class="keyword">SET</span> t.a = s.a, ...</div><div class="line"><span class="keyword">WHEN</span> <span class="keyword">NOT</span> <span class="keyword">MATCHED</span> <span class="keyword">THEN</span></div><div class="line">    <span class="keyword">INSERT</span> (t.컬렴<span class="keyword">list</span>) <span class="keyword">VALUES</span> (s.컬럼<span class="keyword">list</span>);</div></pre></td></tr></table></figure>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">MERGE</span> <span class="keyword">INTO</span> 대상테이블 t <span class="keyword">using</span> 소스테이블 s <span class="keyword">ON</span> (t.id = s.id)  <span class="comment">-- 조건</span></div><div class="line"><span class="keyword">WHEN</span> <span class="keyword">MATCHED</span> <span class="keyword">THEN</span></div><div class="line">    <span class="keyword">UPDATE</span> <span class="keyword">SET</span> t.a = s.a, ...</div><div class="line"><span class="keyword">WHEN</span> <span class="keyword">NOT</span> <span class="keyword">MATCHED</span> <span class="keyword">THEN</span></div><div class="line">    <span class="keyword">INSERT</span> (t.컬렴<span class="keyword">list</span>) <span class="keyword">VALUES</span> (s.컬럼<span class="keyword">list</span>);</div></pre></td></tr></table></figure></p>
 <ul>
 <li>Oracle 9i, MS-SQL 2008부터 지원</li>
 <li>Oracle 10g부터는 UPDATE, INSERT 를 선택적으로 따로 처리가 가능</li>
 </ul>
 <p>MERGE문으로 앞에서 본 Updatable Join View를 대체 할 수 있다.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">MERGE</span> <span class="keyword">INTO</span> 고객 c</div><div class="line">     <span class="keyword">USING</span> (<span class="keyword">SELECT</span> 고객번호, <span class="keyword">MAX</span>(거래일시) 거래일시, <span class="keyword">SUM</span>(거래금액) 거래금액</div><div class="line">             <span class="keyword">FROM</span> 거래</div><div class="line">            <span class="keyword">WHERE</span> 거래일시 &gt;= TRUNC(ADD_MONTHS(<span class="keyword">SYSDATE</span>,<span class="number">-1</span>))</div><div class="line">            <span class="keyword">GROUP</span> <span class="keyword">BY</span> 고객번호) t</div><div class="line">        <span class="keyword">ON</span> (c.고객번호 = t.고객번호)</div><div class="line"><span class="keyword">WHEN</span> <span class="keyword">MATCHED</span> <span class="keyword">THEN</span></div><div class="line">    <span class="keyword">UPDATE</span> <span class="keyword">SET</span> c.최종거래일시 = t.거래일시,</div><div class="line">               c.최근거래금액 = t.거래금액</div></pre></td></tr></table></figure>
+<p><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">MERGE</span> <span class="keyword">INTO</span> 고객 c</div><div class="line">     <span class="keyword">USING</span> (<span class="keyword">SELECT</span> 고객번호, <span class="keyword">MAX</span>(거래일시) 거래일시, <span class="keyword">SUM</span>(거래금액) 거래금액</div><div class="line">             <span class="keyword">FROM</span> 거래</div><div class="line">            <span class="keyword">WHERE</span> 거래일시 &gt;= TRUNC(ADD_MONTHS(<span class="keyword">SYSDATE</span>,<span class="number">-1</span>))</div><div class="line">            <span class="keyword">GROUP</span> <span class="keyword">BY</span> 고객번호) t</div><div class="line">        <span class="keyword">ON</span> (c.고객번호 = t.고객번호)</div><div class="line"><span class="keyword">WHEN</span> <span class="keyword">MATCHED</span> <span class="keyword">THEN</span></div><div class="line">    <span class="keyword">UPDATE</span> <span class="keyword">SET</span> c.최종거래일시 = t.거래일시,</div><div class="line">               c.최근거래금액 = t.거래금액</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -265,7 +286,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/11/04.03.dml/" data-id="cjov18q4b001hdw7bsl0bvohe" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/11/04.03.dml/" data-id="cjov1rqsl001ehs7bd0kgru55" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

@@ -8,18 +8,18 @@
     
         <meta name="keywords" content="JupyterNotebook,Matplotlib,한글폰트" />
     
-    <meta name="description" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)이 포스트를 보기 전에 먼저 박조은님의 강의 : Matplotlib에서 한글 폰트 사용하기를 먼저 보고 따라해보기를 바란다. 그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러">
+    <meta name="description" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS) 이 포스트를 보기 전에 먼저 박조은님의 강의 : Matplotlib에서 한글 폰트 사용하기를 먼저 보고 따라해보기를 바란다. 그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러">
 <meta name="keywords" content="JupyterNotebook,Matplotlib,한글폰트">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)">
 <meta property="og:url" content="http://DevStarSJ.github.io/2018/10/13/jupyter.matplotlib.korean.font/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)이 포스트를 보기 전에 먼저 박조은님의 강의 : Matplotlib에서 한글 폰트 사용하기를 먼저 보고 따라해보기를 바란다. 그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러">
+<meta property="og:description" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS) 이 포스트를 보기 전에 먼저 박조은님의 강의 : Matplotlib에서 한글 폰트 사용하기를 먼저 보고 따라해보기를 바란다. 그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러">
 <meta property="og:image" content="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.01.png">
 <meta property="og:updated_time" content="2018-10-14T12:46:34.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)">
-<meta name="twitter:description" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)이 포스트를 보기 전에 먼저 박조은님의 강의 : Matplotlib에서 한글 폰트 사용하기를 먼저 보고 따라해보기를 바란다. 그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러">
+<meta name="twitter:description" content="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS) 이 포스트를 보기 전에 먼저 박조은님의 강의 : Matplotlib에서 한글 폰트 사용하기를 먼저 보고 따라해보기를 바란다. 그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.01.png">
     
 
@@ -162,13 +162,16 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Jupyter-Notebook-Matplotlib에서-한글폰트-사용하기-macOS"><a href="#Jupyter-Notebook-Matplotlib에서-한글폰트-사용하기-macOS" class="headerlink" title="Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)"></a>Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)</h1><p>이 포스트를 보기 전에 먼저 <a href="https://www.facebook.com/zzonee" target="_blank" rel="external">박조은</a>님의 <a href="https://programmers.co.kr/learn/courses/21/lessons/950" target="_blank" rel="external">강의 : Matplotlib에서 한글 폰트 사용하기</a>를 먼저 보고 따라해보기를 바란다.</p>
+            <h1>Jupyter Notebook Matplotlib에서 한글폰트 사용하기 (macOS)</h1>
+<p>이 포스트를 보기 전에 먼저 <a href="https://www.facebook.com/zzonee" target="_blank" rel="external">박조은</a>님의 <a href="https://programmers.co.kr/learn/courses/21/lessons/950" target="_blank" rel="external">강의 : Matplotlib에서 한글 폰트 사용하기</a>를 먼저 보고 따라해보기를 바란다.</p>
 <p>그런데, 이 글을 보고 있단것은 아마 위 강의대로 다 따라해보았는데도 제대로 안됬을 경우라 생각된다. 사실 필자도 저 강의대로 했는데 안되어서 여러 가지 시도를 해보고 알아낸 방법이다. 참고로 해당 설명은 <strong>macOS</strong> 기준인데, Linux도 비슷할 것이라 생각이되며, Windows의 경우도 어느 정도 참고는 할 수 있을것 같다.</p>
 <p>아래의 과정들 중 위 강의를 진행하면서 확인된 결과 필요없다고 판단되는 경우에는 skip 가능한 단계도 있을 수 있다.</p>
-<h2 id="1-관련-폴더-위치-알아내기"><a href="#1-관련-폴더-위치-알아내기" class="headerlink" title="1. 관련 폴더 위치 알아내기"></a>1. 관련 폴더 위치 알아내기</h2><p>먼저 위 강의에 있는 코드대로 실행하면서 관련 폴더의 위치를 알아 놓자.</p>
+<h2>1. 관련 폴더 위치 알아내기</h2>
+<p>먼저 위 강의에 있는 코드대로 실행하면서 관련 폴더의 위치를 알아 놓자.</p>
 <p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.01.png" alt=""></p>
 <p>여기서 <code>캐시 위치</code>와 <code>설정 파일 위치</code>값을 잘 기억해 놓아야 한다.</p>
-<h2 id="2-시스템에-저장된-한글-폰트-위치-확인"><a href="#2-시스템에-저장된-한글-폰트-위치-확인" class="headerlink" title="2. 시스템에 저장된 한글 폰트 위치 확인"></a>2. 시스템에 저장된 한글 폰트 위치 확인</h2><p>위 강의 과정에서 설치된 한글 폰트가 없다고 판단되는 경우에는 아래 단계가 필요하다.</p>
+<h2>2. 시스템에 저장된 한글 폰트 위치 확인</h2>
+<p>위 강의 과정에서 설치된 한글 폰트가 없다고 판단되는 경우에는 아래 단계가 필요하다.</p>
 <p><strong>Launchpad</strong> 에서 <strong>서체관리자</strong> 를 찾아서 실행하라.</p>
 <p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.03.png" alt=""></p>
 <p>거기서 적용할 한글폰트를 하나 찾는다.</p>
@@ -176,18 +179,22 @@
 <p>필자의 경우 <strong>나눔바른고딕</strong>을 선택했다. 해당 폰트에서 마우스 우클릭하여 <strong>Finder에서 보기</strong>를 누른다.</p>
 <p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.05.png" alt=""></p>
 <p><strong>Finder</strong>에서 파일 위치를 확인해보자. 필자의 경우 <code>/Library/Fonts</code>내에 있는것이 확인되었다. 이 경로를 기억해 놓자.</p>
-<h2 id="3-한글폰트를-Matplotlib-설정-파일-위치로-복사"><a href="#3-한글폰트를-Matplotlib-설정-파일-위치로-복사" class="headerlink" title="3. 한글폰트를 Matplotlib 설정 파일 위치로 복사"></a>3. 한글폰트를 Matplotlib 설정 파일 위치로 복사</h2><p>앞에서 확인한 <code>설정 파일 위치</code> 정보가 필요하다. 그 경로 가장 마지막의 <code>matplotlibrc</code>는 파일명이고 그 바로 앞까지가 경로이다. 해당 경로 아래에 있는 <code>/fonts/ttf/</code>로 앞에서 찾은 한글 폰트 파일을 복사한다.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp /Library/Fonts/Nanum*.ttf /anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/</div></pre></td></tr></table></figure>
-<h2 id="4-Matplotlib-캐시-파일-리셋"><a href="#4-Matplotlib-캐시-파일-리셋" class="headerlink" title="4. Matplotlib 캐시 파일 리셋"></a>4. Matplotlib 캐시 파일 리셋</h2><p>앞에서 확인한 <code>캐시 위치</code>로 이동해서 파일들을 확인해보자. 각자 사용자명에 따라 경로가 다를 것이다.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/sjyun/.matplotlib</div><div class="line">ls</div></pre></td></tr></table></figure>
+<h2>3. 한글폰트를 Matplotlib 설정 파일 위치로 복사</h2>
+<p>앞에서 확인한 <code>설정 파일 위치</code> 정보가 필요하다. 그 경로 가장 마지막의 <code>matplotlibrc</code>는 파일명이고 그 바로 앞까지가 경로이다. 해당 경로 아래에 있는 <code>/fonts/ttf/</code>로 앞에서 찾은 한글 폰트 파일을 복사한다.</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp /Library/Fonts/Nanum*.ttf /anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/</div></pre></td></tr></table></figure></p>
+<h2>4. Matplotlib 캐시 파일 리셋</h2>
+<p>앞에서 확인한 <code>캐시 위치</code>로 이동해서 파일들을 확인해보자. 각자 사용자명에 따라 경로가 다를 것이다.</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/sjyun/.matplotlib</div><div class="line">ls</div></pre></td></tr></table></figure></p>
 <p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.02.png" alt=""></p>
 <p>정확하지는 않지만, <strong>fontList.json</strong> 은 Python 2.0용 <strong>fontList-v300.json</strong>은 Python 3.0용으로 추정된다. 캐시 파일을 삭제한 뒤 새로 실행하면 캐시 파일이 새로 생성되는데, 그렇다고 파일 삭제는 위험하니 파일명 뒤에 .backup를 붙여주도록 하자.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mv fontList.json fontList.json.backup</div><div class="line">mv fontList-v300.json fontList-voo.json.backup</div></pre></td></tr></table></figure>
-<h2 id="5-Jupyter-Notebook-및-Matplotlib-재실행"><a href="#5-Jupyter-Notebook-및-Matplotlib-재실행" class="headerlink" title="5. Jupyter Notebook 및 Matplotlib 재실행"></a>5. Jupyter Notebook 및 Matplotlib 재실행</h2><p>이제 위 변경사항들을 새로 적용시키기 위해서는 <strong>Jupyter Notebook</strong>과 <strong>Matplotlib</strong>의 재실행이 필요하다. 다시 실행한 다음 코드상에서 <code>import matplotlib</code>를 실행하면 캐시 파일이 새로 생성 된다.</p>
+<p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mv fontList.json fontList.json.backup</div><div class="line">mv fontList-v300.json fontList-voo.json.backup</div></pre></td></tr></table></figure></p>
+<h2>5. Jupyter Notebook 및 Matplotlib 재실행</h2>
+<p>이제 위 변경사항들을 새로 적용시키기 위해서는 <strong>Jupyter Notebook</strong>과 <strong>Matplotlib</strong>의 재실행이 필요하다. 다시 실행한 다음 코드상에서 <code>import matplotlib</code>를 실행하면 캐시 파일이 새로 생성 된다.</p>
 <p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.06.png" alt=""></p>
 <p>이제 다시 예제 코드를 돌려보면 한글이 제대로 나오는 것을 확인 할 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Python/JupyterNotebook/image/matplotlib.korean.07.png" alt=""></p>
-<h2 id="6-정리"><a href="#6-정리" class="headerlink" title="6. 정리"></a>6. 정리</h2><p>한글 폰트 및 각종 필요한 위치 확인 및 예제 실행은 아래 노트북 파일을 참고하면 된다.</p>
+<h2>6. 정리</h2>
+<p>한글 폰트 및 각종 필요한 위치 확인 및 예제 실행은 아래 노트북 파일을 참고하면 된다.</p>
 <p><a href="https://github.com/DevStarSJ/Study/blob/master/Blog/Python/JupyterNotebook/matplotlib.korea_font.ipynb" target="_blank" rel="external">https://github.com/DevStarSJ/Study/blob/master/Blog/Python/JupyterNotebook/matplotlib.korea_font.ipynb</a></p>
 <p>이 예제코드도 <a href="https://www.facebook.com/zzonee" target="_blank" rel="external">박조은</a>님의 <a href="https://programmers.co.kr/learn/courses/21/lessons/950" target="_blank" rel="external">강의 : Matplotlib에서 한글 폰트 사용하기</a>를 참고한 것이다.</p>
 
@@ -197,7 +204,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2018/10/13/jupyter.matplotlib.korean.font/" data-id="cjov18q6k008vdw7bdkumpc3p" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2018/10/13/jupyter.matplotlib.korean.font/" data-id="cjov1rquq008vhs7by6lobfk4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

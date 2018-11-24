@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="C#,ASP.NET" />
     
-    <meta name="description" content="ASP.NET MVC URL Routing1. URL Routing이란ASP.NET MVC로 생성된 Web Application의 경우 아래와 같은 형식으로 접근이 가능합니다. 1http://mySite.com/Home/Index 기본 URL Routing 형식으로 해석을 할 경우  mySite.com : Web Application의 주소 Home : C">
+    <meta name="description" content="ASP.NET MVC URL Routing 1. URL Routing이란 ASP.NET MVC로 생성된 Web Application의 경우 아래와 같은 형식으로 접근이 가능합니다. 1http://mySite.com/Home/Index 기본 URL Routing 형식으로 해석을 할 경우  mySite.com : Web Application의 주소 Home :">
 <meta name="keywords" content="C#,ASP.NET">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ASP.NET MVC 02. URL Routing">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/05/07/CSharp.Aspnet.02.Route/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="ASP.NET MVC URL Routing1. URL Routing이란ASP.NET MVC로 생성된 Web Application의 경우 아래와 같은 형식으로 접근이 가능합니다. 1http://mySite.com/Home/Index 기본 URL Routing 형식으로 해석을 할 경우  mySite.com : Web Application의 주소 Home : C">
+<meta property="og:description" content="ASP.NET MVC URL Routing 1. URL Routing이란 ASP.NET MVC로 생성된 Web Application의 경우 아래와 같은 형식으로 접근이 가능합니다. 1http://mySite.com/Home/Index 기본 URL Routing 형식으로 해석을 할 경우  mySite.com : Web Application의 주소 Home :">
 <meta property="og:updated_time" content="2017-05-24T03:25:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ASP.NET MVC 02. URL Routing">
-<meta name="twitter:description" content="ASP.NET MVC URL Routing1. URL Routing이란ASP.NET MVC로 생성된 Web Application의 경우 아래와 같은 형식으로 접근이 가능합니다. 1http://mySite.com/Home/Index 기본 URL Routing 형식으로 해석을 할 경우  mySite.com : Web Application의 주소 Home : C">
+<meta name="twitter:description" content="ASP.NET MVC URL Routing 1. URL Routing이란 ASP.NET MVC로 생성된 Web Application의 경우 아래와 같은 형식으로 접근이 가능합니다. 1http://mySite.com/Home/Index 기본 URL Routing 형식으로 해석을 할 경우  mySite.com : Web Application의 주소 Home :">
     
 
     
@@ -160,8 +160,10 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="ASP-NET-MVC-URL-Routing"><a href="#ASP-NET-MVC-URL-Routing" class="headerlink" title="ASP.NET MVC URL Routing"></a>ASP.NET MVC URL Routing</h1><h2 id="1-URL-Routing이란"><a href="#1-URL-Routing이란" class="headerlink" title="1. URL Routing이란"></a>1. URL Routing이란</h2><p>ASP.NET MVC로 생성된 Web Application의 경우 아래와 같은 형식으로 접근이 가능합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://mySite.com/Home/Index</div></pre></td></tr></table></figure>
+            <h1>ASP.NET MVC URL Routing</h1>
+<h2>1. URL Routing이란</h2>
+<p>ASP.NET MVC로 생성된 Web Application의 경우 아래와 같은 형식으로 접근이 가능합니다.</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://mySite.com/Home/Index</div></pre></td></tr></table></figure></p>
 <p>기본 URL Routing 형식으로 해석을 할 경우</p>
 <ul>
 <li><code>mySite.com</code> : Web Application의 주소</li>
@@ -169,15 +171,22 @@
 <li><code>Index</code> : Action method 명칭</li>
 </ul>
 <p>으로 동작합니다.</p>
-<h2 id="2-RouteConfig-cs"><a href="#2-RouteConfig-cs" class="headerlink" title="2. RouteConfig.cs"></a>2. RouteConfig.cs</h2><h3 id="2-1-Global-asax-cs-를-보면-아래와-같이-Route를-설정하는-Code가-있습니다"><a href="#2-1-Global-asax-cs-를-보면-아래와-같이-Route를-설정하는-Code가-있습니다" class="headerlink" title="2.1 Global.asax.cs 를 보면 아래와 같이 Route를 설정하는 Code가 있습니다."></a>2.1 <code>Global.asax.cs</code> 를 보면 아래와 같이 Route를 설정하는 Code가 있습니다.</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RouteConfig.RegisterRoutes(RouteTable.Routes);</div></pre></td></tr></table></figure>
-<h3 id="2-2-App-Start-RouteConfig-cs-파일에-RouteConfig-RegisterRoute라는-static-method가-있습니다"><a href="#2-2-App-Start-RouteConfig-cs-파일에-RouteConfig-RegisterRoute라는-static-method가-있습니다" class="headerlink" title="2.2 \App_Start\RouteConfig.cs 파일에 RouteConfig.RegisterRoute라는 static method가 있습니다."></a>2.2 <code>\App_Start\RouteConfig.cs</code> 파일에 <code>RouteConfig.RegisterRoute</code>라는 static method가 있습니다.</h3><p>매개변수로 전달받은 <code>RouteCollection route</code>에 <code>.MapRoute()</code>로 Routing 규칙들을 추가하는 Code들이 있습니다.</p>
-<h2 id="3-MapRoute-parameters"><a href="#3-MapRoute-parameters" class="headerlink" title="3. .MapRoute() parameters"></a>3. <code>.MapRoute()</code> parameters</h2><h3 id="3-1-name"><a href="#3-1-name" class="headerlink" title="3.1 name"></a>3.1 name</h3><p>Mapping할 Routing 명칭입니다. 별 의미가 없으므로 <code>null</code>로 입력해도 됩니다.</p>
-<h3 id="3-2-url"><a href="#3-2-url" class="headerlink" title="3.2 url"></a>3.2 url</h3><p>URL 패턴을 지정합니다.<br><code>Web Application 주소/</code> 다음부터의 패턴을 지정 할 수 있습니다.  </p>
+<h2>2. RouteConfig.cs</h2>
+<h3>2.1 <code>Global.asax.cs</code> 를 보면 아래와 같이 Route를 설정하는 Code가 있습니다.</h3>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RouteConfig.RegisterRoutes(RouteTable.Routes);</div></pre></td></tr></table></figure></p>
+<h3>2.2 <code>\App_Start\RouteConfig.cs</code> 파일에 <code>RouteConfig.RegisterRoute</code>라는 static method가 있습니다.</h3>
+<p>매개변수로 전달받은 <code>RouteCollection route</code>에 <code>.MapRoute()</code>로 Routing 규칙들을 추가하는 Code들이 있습니다.</p>
+<h2>3. <code>.MapRoute()</code> parameters</h2>
+<h3>3.1 name</h3>
+<p>Mapping할 Routing 명칭입니다. 별 의미가 없으므로 <code>null</code>로 입력해도 됩니다.</p>
+<h3>3.2 url</h3>
+<p>URL 패턴을 지정합니다.<br>
+<code>Web Application 주소/</code> 다음부터의 패턴을 지정 할 수 있습니다.</p>
 <ul>
 <li>Static URL Segment : url안에 일반 문자열로 입력이 가능합니다.</li>
-<li>Dynamic URL Segment : 중괄호<code>{ }</code>내에 <code>변수명</code>을 입력하면 해당 ActionMethod에서 <code>RouteData.Vaues[&quot;변수명&quot;]</code>으로 읽을 수 있습니다.  </li>
+<li>Dynamic URL Segment : 중괄호<code>{ }</code>내에 <code>변수명</code>을 입력하면 해당 ActionMethod에서 <code>RouteData.Vaues[&quot;변수명&quot;]</code>으로 읽을 수 있습니다.</li>
 </ul>
-<p>ex) <code>url: &quot;Page{page}&quot;</code>로 설정할 경우 <code>http://mySite.com/Page3</code>으로 접근하면 해당 Route로 mapping되며 <code>{page}</code>에 3의 값이 전달됩니다.  </p>
+<p>ex) <code>url: &quot;Page{page}&quot;</code>로 설정할 경우 <code>http://mySite.com/Page3</code>으로 접근하면 해당 Route로 mapping되며 <code>{page}</code>에 3의 값이 전달됩니다.</p>
 <p>아래의 3가지 명칭은 변수명으로 지정이 불가능 합니다.</p>
 <ul>
 <li><code>controller</code> : Controller 이름을 지정합니다.</li>
@@ -185,55 +194,78 @@
 <li><code>area</code> : Area를 지정합니다.</li>
 </ul>
 <p>만약 해당 <code>Controller</code>의 <code>Action Method</code>의 <code>argument</code>와 같은 변수명으로 Mapping하게되면 <code>Action Method</code>의 <code>argument</code>로 그 값을 전달합니다.</p>
-<p>ex) <code>url : &quot;{controller}/{action}/{id}</code>로 설정하였을 경우,<br><code>http://mySite.com/Product/Index/Luna</code>란 주소로 접근할 경우<br><code>ProductController</code>에 <code>Index(string id)</code>라는 Action Method가 있으면 <code>id</code>라는 argument를 <code>Luna</code>로 전달하게 됩니다.</p>
-<h4 id="가변길이-parameter"><a href="#가변길이-parameter" class="headerlink" title="가변길이 parameter"></a>가변길이 parameter</h4><p><code>{controller}/{action}/{*all}</code> 이라고 정의한 경우 segment가 3개 이상인 경우 모두 all변수에 할당되어서 Matching됩니다.  </p>
-<h3 id="3-3-defaults"><a href="#3-3-defaults" class="headerlink" title="3.3 defaults"></a>3.3 defaults</h3><p>기본값 설정이 가능합니다.</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">defaults : <span class="keyword">new</span> &#123; controller = <span class="string">"Product"</span>, action = <span class="string">"Index"</span>, id = <span class="string">"Luna"</span> &#125;</div></pre></td></tr></table></figure>
-<p>와 같은 형식으로 지정이 가능합니다.<br>해당 URL와 매칭되는 경우 URL 패턴의 변수명과 같은 곳에 아무런 값도 안 넣은 경우 default로 설정된 값이 사용되며,<br>URL 패턴에 없는 변수명을 default로 설정한 경우 해당 변수명(또는 controller, action)에 대해서는 default로 설정된 값으로 동작합니다.  </p>
+<p>ex) <code>url : &quot;{controller}/{action}/{id}</code>로 설정하였을 경우,<br>
+<code>http://mySite.com/Product/Index/Luna</code>란 주소로 접근할 경우
+<code>ProductController</code>에 <code>Index(string id)</code>라는 Action Method가 있으면 <code>id</code>라는 argument를 <code>Luna</code>로 전달하게 됩니다.</p>
+<h4>가변길이 parameter</h4>
+<p><code>{controller}/{action}/{*all}</code> 이라고 정의한 경우 segment가 3개 이상인 경우 모두 all변수에 할당되어서 Matching됩니다.</p>
+<h3>3.3 defaults</h3>
+<p>기본값 설정이 가능합니다.</p>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">defaults : <span class="keyword">new</span> &#123; controller = <span class="string">"Product"</span>, action = <span class="string">"Index"</span>, id = <span class="string">"Luna"</span> &#125;</div></pre></td></tr></table></figure></p>
+<p>와 같은 형식으로 지정이 가능합니다.<br>
+해당 URL와 매칭되는 경우 URL 패턴의 변수명과 같은 곳에 아무런 값도 안 넣은 경우 default로 설정된 값이 사용되며,<br>
+URL 패턴에 없는 변수명을 default로 설정한 경우 해당 변수명(또는 controller, action)에 대해서는 default로 설정된 값으로 동작합니다.</p>
 <ul>
 <li>Optinal로 설정될 경우 <code>id = UrlParameter.Optional</code> 해당 segment는 입력되지 않아도 Matching 된 것으로 간주됩니다.</li>
 </ul>
-<h3 id="3-4-constratins"><a href="#3-4-constratins" class="headerlink" title="3.4 constratins"></a>3.4 constratins</h3><p>URL parameter에 제약사항을 설정합니다.  </p>
-<h4 id="3-4-1-Regular-Expression-정규표현식-을-이용하여-검사"><a href="#3-4-1-Regular-Expression-정규표현식-을-이용하여-검사" class="headerlink" title="3.4.1 Regular Expression (정규표현식)을 이용하여 검사"></a>3.4.1 Regular Expression (정규표현식)을 이용하여 검사</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constraints: <span class="keyword">new</span> &#123; page = <span class="string">@"\d+"</span> &#125;</div></pre></td></tr></table></figure>
-<p>위의 경우 page의 값은 숫자형식만 가능하게 됩니다.  </p>
-<h4 id="3-4-2-여러-개의-값을-지정하여-검사"><a href="#3-4-2-여러-개의-값을-지정하여-검사" class="headerlink" title="3.4.2 여러 개의 값을 지정하여 검사"></a>3.4.2 여러 개의 값을 지정하여 검사</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constraints: <span class="keyword">new</span> &#123; page = <span class="string">@"\d+"</span>, action=<span class="string">"^Index$|^About$"</span>&#125;</div></pre></td></tr></table></figure>
+<h3>3.4 constratins</h3>
+<p>URL parameter에 제약사항을 설정합니다.</p>
+<h4>3.4.1 Regular Expression (정규표현식)을 이용하여 검사</h4>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constraints: <span class="keyword">new</span> &#123; page = <span class="string">@"\d+"</span> &#125;</div></pre></td></tr></table></figure></p>
+<p>위의 경우 page의 값은 숫자형식만 가능하게 됩니다.</p>
+<h4>3.4.2 여러 개의 값을 지정하여 검사</h4>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constraints: <span class="keyword">new</span> &#123; page = <span class="string">@"\d+"</span>, action=<span class="string">"^Index$|^About$"</span>&#125;</div></pre></td></tr></table></figure></p>
 <p>위의 경우 추가로 action segment가 Index 나 About인 URL만 Matching합니다.</p>
-<h4 id="3-4-3-HTTP-Method를-사용하여-검사"><a href="#3-4-3-HTTP-Method를-사용하여-검사" class="headerlink" title="3.4.3 HTTP Method를 사용하여 검사"></a>3.4.3 HTTP Method를 사용하여 검사</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">constraints: <span class="keyword">new</span> &#123; page = <span class="string">@"\d+"</span>, action=<span class="string">"^Index$|^About$"</span>,</div><div class="line">    httpMethod = <span class="keyword">new</span> HttpMethodConstarint(<span class="string">"GET"</span>, <span class="string">"POST"</span>)&#125;</div></pre></td></tr></table></figure>
+<h4>3.4.3 HTTP Method를 사용하여 검사</h4>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">constraints: <span class="keyword">new</span> &#123; page = <span class="string">@"\d+"</span>, action=<span class="string">"^Index$|^About$"</span>,</div><div class="line">    httpMethod = <span class="keyword">new</span> HttpMethodConstarint(<span class="string">"GET"</span>, <span class="string">"POST"</span>)&#125;</div></pre></td></tr></table></figure></p>
 <p>위의 경우 추가로 GET, POST 요청만 처리하도록 제한합니다.</p>
-<h4 id="3-4-4-형식-범위-등의-제약조건"><a href="#3-4-4-형식-범위-등의-제약조건" class="headerlink" title="3.4.4 형식,범위 등의 제약조건"></a>3.4.4 형식,범위 등의 제약조건</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">constraints: <span class="keyword">new</span> &#123; page = <span class="string">@"\d+"</span>, action=<span class="string">"^Index$|^About$"</span>,</div><div class="line">    httpMethod = <span class="keyword">new</span> HttpMethodConstarint(<span class="string">"GET"</span>, <span class="string">"POST"</span>), </div><div class="line">    id = <span class="keyword">new</span> RangeRouteConstraint(<span class="number">10</span>, <span class="number">20</span>) &#125;</div></pre></td></tr></table></figure>
-<p>위의 경우 추가로 id값이 10에서 20 사이에 경우에만 허용합니다.  </p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> System.Web.Mvc.Routing.Constarints;</div></pre></td></tr></table></figure>
+<h4>3.4.4 형식,범위 등의 제약조건</h4>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">constraints: <span class="keyword">new</span> &#123; page = <span class="string">@"\d+"</span>, action=<span class="string">"^Index$|^About$"</span>,</div><div class="line">    httpMethod = <span class="keyword">new</span> HttpMethodConstarint(<span class="string">"GET"</span>, <span class="string">"POST"</span>), </div><div class="line">    id = <span class="keyword">new</span> RangeRouteConstraint(<span class="number">10</span>, <span class="number">20</span>) &#125;</div></pre></td></tr></table></figure></p>
+<p>위의 경우 추가로 id값이 10에서 20 사이에 경우에만 허용합니다.</p>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> System.Web.Mvc.Routing.Constarints;</div></pre></td></tr></table></figure></p>
 <p>위 namespace에 제약조건 class들이 정의되어 있으며 목록은 아래 link에서 확인이 가능합니다.</p>
 <p><a href="https://msdn.microsoft.com/ko-kr/library/system.web.mvc.routing.constraints(v=vs.118).aspx" target="_blank" rel="external">https://msdn.microsoft.com/ko-kr/library/system.web.mvc.routing.constraints(v=vs.118).aspx</a></p>
-<h3 id="3-5-namespaces"><a href="#3-5-namespaces" class="headerlink" title="3.5 namespaces"></a>3.5 namespaces</h3><p><code>string[]</code> 타입으로 여러개의 namespace 값을 전달 받습니다.<br>해당 값을 전달받은 경우 먼저 전달받은 namespace내의 controller부터 찾게 됩니다.<br>배열로 전달받은 namespace들은 모두 동일한 우선순위를 가지게 됩니다.<br>만약 특정 namespace에 우선순의를 두고자 할 경우 <code>MapRoute()</code>를 따로 설정하여야 합니다.  </p>
-<h2 id="4-Segment-Matching-규칙"><a href="#4-Segment-Matching-규칙" class="headerlink" title="4. Segment Matching 규칙"></a>4. Segment Matching 규칙</h2><ul>
+<h3>3.5 namespaces</h3>
+<p><code>string[]</code> 타입으로 여러개의 namespace 값을 전달 받습니다.<br>
+해당 값을 전달받은 경우 먼저 전달받은 namespace내의 controller부터 찾게 됩니다.<br>
+배열로 전달받은 namespace들은 모두 동일한 우선순위를 가지게 됩니다.<br>
+만약 특정 namespace에 우선순의를 두고자 할 경우 <code>MapRoute()</code>를 따로 설정하여야 합니다.</p>
+<h2>4. Segment Matching 규칙</h2>
+<ul>
 <li>위에 설정한 규칙부터 차례대로 적용합니다.</li>
 <li>그러므로 동일한 segment를 가지는 Route를 여러개 설정할 경우 좀 더 특수한 경우를 먼저 선언해야 적용됩니다.</li>
 </ul>
 <p>ex)</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">routes.MapRoute(</div><div class="line">    name: <span class="literal">null</span>,</div><div class="line">    url: <span class="string">"Luna&#123;controller&#125;/&#123;action&#125;"</span></div><div class="line">);</div><div class="line"></div><div class="line">routes.MapRoute(</div><div class="line">    name: <span class="literal">null</span>,</div><div class="line">    url: <span class="string">"&#123;controller&#125;/&#123;action&#125;"</span></div><div class="line">);</div></pre></td></tr></table></figure>
-<p>위와 같이 설정했을 경우에는  </p>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">routes.MapRoute(</div><div class="line">    name: <span class="literal">null</span>,</div><div class="line">    url: <span class="string">"Luna&#123;controller&#125;/&#123;action&#125;"</span></div><div class="line">);</div><div class="line"></div><div class="line">routes.MapRoute(</div><div class="line">    name: <span class="literal">null</span>,</div><div class="line">    url: <span class="string">"&#123;controller&#125;/&#123;action&#125;"</span></div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>위와 같이 설정했을 경우에는</p>
 <ul>
 <li><code>http://mySite.com/LunaProduct/Index</code>로 접근할 경우 <code>Product</code> controller의 <code>Index</code> Action Method를 실행하게 되며,</li>
 <li><code>http://mySite.com/Product/Index</code>로 접근할 경우에도 <code>Product</code> controller의 <code>Index</code> Action Method를 실행하게 됩니다.</li>
 </ul>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">routes.MapRoute(</div><div class="line">    name: <span class="literal">null</span>,</div><div class="line">    url: <span class="string">"&#123;controller&#125;/&#123;action&#125;"</span></div><div class="line">);</div><div class="line"></div><div class="line">routes.MapRoute(</div><div class="line">    name: <span class="literal">null</span>,</div><div class="line">    url: <span class="string">"Luna&#123;controller&#125;/&#123;action&#125;"</span></div><div class="line">);</div></pre></td></tr></table></figure>
-<p>위와 같이 설정되었을 경우 segment가 2개인 경우 무조건 위에 것만 처리되며 아래에 설정된 URL패턴으로는 검사하지 않습니다.<br>즉, </p>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">routes.MapRoute(</div><div class="line">    name: <span class="literal">null</span>,</div><div class="line">    url: <span class="string">"&#123;controller&#125;/&#123;action&#125;"</span></div><div class="line">);</div><div class="line"></div><div class="line">routes.MapRoute(</div><div class="line">    name: <span class="literal">null</span>,</div><div class="line">    url: <span class="string">"Luna&#123;controller&#125;/&#123;action&#125;"</span></div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>위와 같이 설정되었을 경우 segment가 2개인 경우 무조건 위에 것만 처리되며 아래에 설정된 URL패턴으로는 검사하지 않습니다.<br>
+즉,</p>
 <ul>
-<li><code>http://mySite.com/LunaProduct/Index</code>로 접근할 경우 <code>LunaProduct</code> controller의 <code>Index</code> Action Method를 실행하게 되며, (없으면 404 오류)  </li>
+<li><code>http://mySite.com/LunaProduct/Index</code>로 접근할 경우 <code>LunaProduct</code> controller의 <code>Index</code> Action Method를 실행하게 되며, (없으면 404 오류)</li>
 <li><code>http://mySite.com/Product/Index</code>로 접근할 경우에도 <code>Product</code> controller의 <code>Index</code> Action Method를 실행하게 됩니다.</li>
 </ul>
-<h2 id="5-Attribute-Routing"><a href="#5-Attribute-Routing" class="headerlink" title="5. Attribute Routing"></a>5. Attribute Routing</h2><p>위에 살펴본 것은 Rule-based Routing (규칙기반 라우팅)이었습니다.<br>각각의 Action Method에 Attribute를 이용하여 적용하는 방법도 있습니다.  </p>
-<h3 id="5-1-Attribute-Route가-동작하도록-설정"><a href="#5-1-Attribute-Route가-동작하도록-설정" class="headerlink" title="5.1 Attribute Route가 동작하도록 설정"></a>5.1 Attribute Route가 동작하도록 설정</h3><p><code>RouteConfig.cs</code>의 <code>RegisterRoutes(RouteCollection routes)</code>함수 내에  <code>routes.MapMvcAttributeRoutes();</code>를 호출하면 Attribute 기반의 Route 기능을 활성화합ㄴ다.</p>
-<h3 id="5-2-Attribute-Route-설정"><a href="#5-2-Attribute-Route-설정" class="headerlink" title="5.2  Attribute Route 설정"></a>5.2  Attribute Route 설정</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CustomerController</span> : <span class="title">Controller</span></div><div class="line">&#123;</div><div class="line">    [Route(<span class="string">"Test"</span>)]</div><div class="line">    <span class="function"><span class="keyword">public</span> ActionResult <span class="title">Index</span>(<span class="params"></span>)</span></div><div class="line">    &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2>5. Attribute Routing</h2>
+<p>위에 살펴본 것은 Rule-based Routing (규칙기반 라우팅)이었습니다.<br>
+각각의 Action Method에 Attribute를 이용하여 적용하는 방법도 있습니다.</p>
+<h3>5.1 Attribute Route가 동작하도록 설정</h3>
+<p><code>RouteConfig.cs</code>의 <code>RegisterRoutes(RouteCollection routes)</code>함수 내에  <code>routes.MapMvcAttributeRoutes();</code>를 호출하면 Attribute 기반의 Route 기능을 활성화합ㄴ다.</p>
+<h3>5.2  Attribute Route 설정</h3>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CustomerController</span> : <span class="title">Controller</span></div><div class="line">&#123;</div><div class="line">    [Route(<span class="string">"Test"</span>)]</div><div class="line">    <span class="function"><span class="keyword">public</span> ActionResult <span class="title">Index</span>(<span class="params"></span>)</span></div><div class="line">    &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>와 같이 경우 <code>http://mySite.com/Test</code>로 접근할 경우 <code>Customer</code> Controller의 <code>Index</code> Action method가 실행됩니다.</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[Route(<span class="string">"User/Add/&#123;user&#125;/&#123;id&#125;"</span>]</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">string</span> <span class="title">Create</span>(<span class="params"><span class="keyword">string</span> user, <span class="keyword">int</span> id</span>) </span>&#123; ... &#125;</div></pre></td></tr></table></figure>
-<p><code>user</code>와 <code>id</code>가 인자로 전달됩니다.<br>각각의 인자에 제약조건 설정도 가능합니다.</p>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[Route(<span class="string">"User/Add/&#123;user&#125;/&#123;id&#125;"</span>]</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">string</span> <span class="title">Create</span>(<span class="params"><span class="keyword">string</span> user, <span class="keyword">int</span> id</span>) </span>&#123; ... &#125;</div></pre></td></tr></table></figure></p>
+<p><code>user</code>와 <code>id</code>가 인자로 전달됩니다.<br>
+각각의 인자에 제약조건 설정도 가능합니다.</p>
 <ul>
 <li><code>{id:int}</code> : id는 int 값으로전달이 가능합니다.</li>
 <li><code>{password:alpha:length(6)}</code> : password에 alpha와 length 2가지 제약조건을 설정합니다.</li>
 </ul>
-<h3 id="5-3-Prefix-접두어-사용"><a href="#5-3-Prefix-접두어-사용" class="headerlink" title="5.3 Prefix(접두어) 사용"></a>5.3 Prefix(접두어) 사용</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[RoutePrefix(<span class="string">"User"</span>)]</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UserController</span> : <span class="title">Controller</span></div><div class="line">&#123;</div><div class="line">    [Route(<span class="string">"~/Test"</span>)]</div><div class="line">    <span class="function"><span class="keyword">public</span> ActionResult <span class="title">Index</span>(<span class="params"></span>) </span>&#123; ... &#125;</div><div class="line">    </div><div class="line">    [Route(<span class="string">"Add/&#123;user&#125;"</span>)]</div><div class="line">    <span class="function"><span class="keyword">public</span> ActionResult <span class="title">Create</span>(<span class="params"><span class="keyword">string</span> user</span>) </span>&#123; ... &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3>5.3 Prefix(접두어) 사용</h3>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[RoutePrefix(<span class="string">"User"</span>)]</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UserController</span> : <span class="title">Controller</span></div><div class="line">&#123;</div><div class="line">    [Route(<span class="string">"~/Test"</span>)]</div><div class="line">    <span class="function"><span class="keyword">public</span> ActionResult <span class="title">Index</span>(<span class="params"></span>) </span>&#123; ... &#125;</div><div class="line">    </div><div class="line">    [Route(<span class="string">"Add/&#123;user&#125;"</span>)]</div><div class="line">    <span class="function"><span class="keyword">public</span> ActionResult <span class="title">Create</span>(<span class="params"><span class="keyword">string</span> user</span>) </span>&#123; ... &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <ul>
 <li><code>http://mySite.com/User/Add/Luna</code>로 접근할 경우 <code>Create</code> Action method가 실행됩니다.</li>
 <li><code>http://mySite.com/Test</code>로 접근할 경우 <code>Index</code>가 실행됩니다. 즉,  <code>~/</code>로 설정할 경우 Prefix가 무시됩니다.</li>
@@ -245,7 +277,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/05/07/CSharp.Aspnet.02.Route/" data-id="cjov18q4n002ddw7bxy3lrl8u" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/05/07/CSharp.Aspnet.02.Route/" data-id="cjov1rqt4002lhs7bfqn1rk5z" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

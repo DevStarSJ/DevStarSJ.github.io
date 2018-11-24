@@ -161,7 +161,7 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><code>SignalR</code>을 <code>ASP.NET 5 Template</code>에서 사용하기 위해서는 <code>Startup.cs</code>의 <code>public void Configure(IApplicationBuilder app, ...)</code>에서 아래와 같은 구문이 필요합니다.</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Startup</span></div><div class="line">&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Configure</span>(<span class="params">IApplicationBuilder app</span>)</span></div><div class="line">	&#123;</div><div class="line">		app.UseServices(services =&gt;</div><div class="line">		&#123;</div><div class="line">			services.AddSignalR();</div><div class="line">		&#125;);</div><div class="line">		app.UseFileServer();</div><div class="line">		app.UseSignalR();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Startup</span></div><div class="line">&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Configure</span>(<span class="params">IApplicationBuilder app</span>)</span></div><div class="line">	&#123;</div><div class="line">		app.UseServices(services =&gt;</div><div class="line">		&#123;</div><div class="line">			services.AddSignalR();</div><div class="line">		&#125;);</div><div class="line">		app.UseFileServer();</div><div class="line">		app.UseSignalR();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p><code>app.UserServices()</code>를 사용하기 위해서는 <code>Microsoft.AspNet.RequestContainer</code> assembly를 포함시켜야 <code>IApplicationBuilder</code>의 extention method인 <code>UseServices</code>의 사용이 가능한데, 현재 version에서는 <code>ASP.NET 4.5.1</code>을 지원하지 않아서 사용이 불가능 합니다.</p>
 <p><a href="https://github.com/aspnet/Hosting/tree/8f16060f941b71551be09015d76efb86770d84d7/src/Microsoft.AspNet.RequestContainer" target="_blank" rel="external">https://github.com/aspnet/Hosting/tree/8f16060f941b71551be09015d76efb86770d84d7/src/Microsoft.AspNet.RequestContainer</a></p>
 <p>위 Github repository의 <code>ContainerExtensions.cs</code>에 구현되어 있습니다.</p>
@@ -174,7 +174,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/05/09/CSharp.AspnetCore.SignalR/" data-id="cjov18q4v0039dw7bkiwfgsrs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/05/09/CSharp.AspnetCore.SignalR/" data-id="cjov1rqta003dhs7bdstugrx4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -303,11 +303,11 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/05/11/CSharp.AspnetCore.Depoly.VS.Git/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/05/11/CSharp.AspnetCore.WebSocket/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Deploying .NET Core Web App with Visual Studio and Git
+            WebSockets in .NET Core
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>

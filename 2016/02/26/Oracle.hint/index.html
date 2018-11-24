@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Database,Oracle,SQLP" />
     
-    <meta name="description" content="LEADING(테이블) : 해당 Table 부터 읽음 QB_NAME(이름) : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다. JOIN 방법 USE_NL(테이블) : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도   Se">
+    <meta name="description" content="LEADING(테이블) : 해당 Table 부터 읽음 QB_NAME(이름) : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다. JOIN 방법  USE_NL(테이블) : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도   S">
 <meta name="keywords" content="Database,Oracle,SQLP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle hint">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/02/26/Oracle.hint/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="LEADING(테이블) : 해당 Table 부터 읽음 QB_NAME(이름) : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다. JOIN 방법 USE_NL(테이블) : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도   Se">
+<meta property="og:description" content="LEADING(테이블) : 해당 Table 부터 읽음 QB_NAME(이름) : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다. JOIN 방법  USE_NL(테이블) : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도   S">
 <meta property="og:updated_time" content="2017-04-24T00:20:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle hint">
-<meta name="twitter:description" content="LEADING(테이블) : 해당 Table 부터 읽음 QB_NAME(이름) : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다. JOIN 방법 USE_NL(테이블) : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도   Se">
+<meta name="twitter:description" content="LEADING(테이블) : 해당 Table 부터 읽음 QB_NAME(이름) : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다. JOIN 방법  USE_NL(테이블) : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도   S">
     
 
     
@@ -163,31 +163,37 @@
             <ul>
 <li><code>LEADING(테이블)</code> : 해당 Table 부터 읽음</li>
 <li><code>QB_NAME(이름)</code> : 해당 query block에 이름을 지어준다. 그래서 다른 곳에서 이름@테이블명 으로 해당 테이블을 지정 할 수 있다.</li>
-<li>JOIN 방법<ul>
+<li>JOIN 방법
+<ul>
 <li><code>USE_NL(테이블)</code> : outer table을 테이블(inner table)과 Nested Loop Join 방식으로 JOIN을 시도</li>
 </ul>
 </li>
-<li>Semi Join : 1 row만 JOIN에 성공하면 더이상 inner쪽을 보지 않고 outer의 다음 row를 찾음<ul>
+<li>Semi Join : 1 row만 JOIN에 성공하면 더이상 inner쪽을 보지 않고 outer의 다음 row를 찾음
+<ul>
 <li><code>NL_SJ</code>, <code>HASH_SJ</code>, <code>MERGE_SJ</code></li>
 </ul>
 </li>
-<li>Anti Join : 일치하지 않는 data를 추출 (NOT IN, NOT EXISTS, MINUS)<ul>
+<li>Anti Join : 일치하지 않는 data를 추출 (NOT IN, NOT EXISTS, MINUS)
+<ul>
 <li><code>NL_AJ</code>, <code>HASH_AJ</code>, <code>MERGE_AJ</code></li>
 </ul>
 </li>
-<li>Subquery Unnesting 관련<ul>
+<li>Subquery Unnesting 관련
+<ul>
 <li><code>UNNEST</code> : 풀어서 JOIN 방식으로 유도</li>
 <li><code>NO_UNNEST</code> : 풀지말고 Filter 방식으로 최적화 유도</li>
 </ul>
 </li>
-<li>View Merging<ul>
+<li>View Merging
+<ul>
 <li><code>NO_MERGE(테이블)</code> : main query 와 inline view를 JOIN으로 풀지말고 inline view를 먼저 실행</li>
 <li><code>MERGE(테이블)</code> : main query와 inline view를 JOIN으로 풀어서 최적화를 시도</li>
 </ul>
 </li>
 <li><code>PUSH_PRED(인라인뷰)</code> : (Push Predicate, 조건절 Push) main query에서 먼저 filtering하여 그 결과를 inline view의 filter 조건으로 넣어라.</li>
 <li><code>PUSH_SUBQ</code> : (Push Subquery) 실행계획상 가능한 앞 단계에서 subquery filtering을 하여 main query의 범위를 줄이고자 할때, NO_UNNEST와 같이 사용되어야 함</li>
-<li>Concatenation (주로 OR절 처리)<ul>
+<li>Concatenation (주로 OR절 처리)
+<ul>
 <li><code>USE_CONCAT</code> : UNION ALL로 표현</li>
 <li><code>NO_EXPAND</code> : 나누지 말고 그대로 실행</li>
 </ul>
@@ -203,7 +209,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/02/26/Oracle.hint/" data-id="cjov18q5t006ndw7b39s5udon" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/02/26/Oracle.hint/" data-id="cjov1rqu5006nhs7bmn4lo1pa" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

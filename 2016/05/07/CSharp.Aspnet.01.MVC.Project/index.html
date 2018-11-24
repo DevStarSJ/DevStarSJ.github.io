@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="C#,ASP.NET" />
     
-    <meta name="description" content="MVC Project 항목요약 /App_Data : File기반 저장소의 데이터 파일,XML 파일 등을 저장 /App_Start : Route, Filter, Contents 등에 대한 정의 같은 Project에 대한 주요 구성 설정들 /RouteConfig.cs : Route 정보    /Areas : 큰 Application을 작은 Area로 나누는 방">
+    <meta name="description" content="MVC Project 항목요약  /App_Data : File기반 저장소의 데이터 파일,XML 파일 등을 저장 /App_Start : Route, Filter, Contents 등에 대한 정의 같은 Project에 대한 주요 구성 설정들  /RouteConfig.cs : Route 정보   /Areas : 큰 Application을 작은 Area로 나누는">
 <meta name="keywords" content="C#,ASP.NET">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ASP.NET MVC 01. Project">
 <meta property="og:url" content="http://DevStarSJ.github.io/2016/05/07/CSharp.Aspnet.01.MVC.Project/index.html">
 <meta property="og:site_name" content="Dev Star SJ">
-<meta property="og:description" content="MVC Project 항목요약 /App_Data : File기반 저장소의 데이터 파일,XML 파일 등을 저장 /App_Start : Route, Filter, Contents 등에 대한 정의 같은 Project에 대한 주요 구성 설정들 /RouteConfig.cs : Route 정보    /Areas : 큰 Application을 작은 Area로 나누는 방">
+<meta property="og:description" content="MVC Project 항목요약  /App_Data : File기반 저장소의 데이터 파일,XML 파일 등을 저장 /App_Start : Route, Filter, Contents 등에 대한 정의 같은 Project에 대한 주요 구성 설정들  /RouteConfig.cs : Route 정보   /Areas : 큰 Application을 작은 Area로 나누는">
 <meta property="og:updated_time" content="2017-04-23T10:33:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ASP.NET MVC 01. Project">
-<meta name="twitter:description" content="MVC Project 항목요약 /App_Data : File기반 저장소의 데이터 파일,XML 파일 등을 저장 /App_Start : Route, Filter, Contents 등에 대한 정의 같은 Project에 대한 주요 구성 설정들 /RouteConfig.cs : Route 정보    /Areas : 큰 Application을 작은 Area로 나누는 방">
+<meta name="twitter:description" content="MVC Project 항목요약  /App_Data : File기반 저장소의 데이터 파일,XML 파일 등을 저장 /App_Start : Route, Filter, Contents 등에 대한 정의 같은 Project에 대한 주요 구성 설정들  /RouteConfig.cs : Route 정보   /Areas : 큰 Application을 작은 Area로 나누는">
     
 
     
@@ -160,10 +160,12 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="MVC-Project-항목요약"><a href="#MVC-Project-항목요약" class="headerlink" title="MVC Project 항목요약"></a>MVC Project 항목요약</h2><ul>
+            <h2>MVC Project 항목요약</h2>
+<ul>
 <li><code>/App_Data</code> : File기반 저장소의 데이터 파일,XML 파일 등을 저장</li>
-<li><code>/App_Start</code> : Route, Filter, Contents 등에 대한 정의 같은 Project에 대한 주요 구성 설정들<ul>
-<li><code>/RouteConfig.cs</code> : Route 정보 </li>
+<li><code>/App_Start</code> : Route, Filter, Contents 등에 대한 정의 같은 Project에 대한 주요 구성 설정들
+<ul>
+<li><code>/RouteConfig.cs</code> : Route 정보</li>
 </ul>
 </li>
 <li><code>/Areas</code> : 큰 Application을 작은 Area로 나누는 방법</li>
@@ -172,25 +174,30 @@
 <li><code>/Controllers</code> : Controller classes</li>
 <li><code>/Models</code> : VewModel, Domain Model 들. 별도 Project에 Domain Model을 정의하는 방법을 더 많이 선호</li>
 <li><code>/Scripts</code> : JavaScript Library</li>
-<li><code>/Views</code> : View, PartialView<ul>
-<li><code>/Web.config</code> : View가 동작하는데 필요한 구성, ISS에 의해 View 파일 자체가 서비스되지 않도록 제한하는데 필요한 구성, View에 import하는 namespace에 대한 정보 등…</li>
+<li><code>/Views</code> : View, PartialView
+<ul>
+<li><code>/Web.config</code> : View가 동작하는데 필요한 구성, ISS에 의해 View 파일 자체가 서비스되지 않도록 제한하는데 필요한 구성, View에 import하는 namespace에 대한 정보 등...</li>
 <li><code>/Share</code> : 특정 Controller에 종속되지 않는 Layout, View</li>
 </ul>
 </li>
 <li><code>/Global.asax</code> : 전역 ASP.NET Application class.</li>
 <li><code>/Web.config</code> : Application을 위한 구성 파일</li>
 </ul>
-<h2 id="MVC-규약"><a href="#MVC-규약" class="headerlink" title="MVC 규약"></a>MVC 규약</h2><ul>
-<li><p>Controller</p>
+<h2>MVC 규약</h2>
+<ul>
+<li>
+<p>Controller</p>
 <ul>
 <li><code>/Controllers/명칭Controller.cs</code> 란 이름으로 저장</li>
 <li>HTML helper method에서 <code>명칭</code>만 입력하면 <code>명칭</code>Controller class를 자동으로 찾아줌</li>
 </ul>
 </li>
-<li><p>View</p>
+<li>
+<p>View</p>
 <ul>
 <li><code>/Views/명칭</code> 폴더안에 저장</li>
-<li>해당 Controller의 Action method 명칭으로 View이름을 정함 : <code>return View();</code><ul>
+<li>해당 Controller의 Action method 명칭으로 View이름을 정함 : <code>return View();</code>
+<ul>
 <li>ex) ProductController의 Index에 대한 View는 /View/Product/Index.cshtml 이란 이름으로 작성</li>
 </ul>
 </li>
@@ -198,7 +205,8 @@
 <li>Controller 명칭의 폴더에서 View를 먼저 찾은 후 <code>/Views/Shared</code> 폴더에서 찾는다.</li>
 </ul>
 </li>
-<li><p>Layout</p>
+<li>
+<p>Layout</p>
 <ul>
 <li><code>_</code>(언더바)로 시작</li>
 <li>기본적으로 <code>/Views/_ViewStart.cshtml</code>을 모든 View에 적용</li>
@@ -214,7 +222,7 @@
 
 
 
-    <a data-url="http://DevStarSJ.github.io/2016/05/07/CSharp.Aspnet.01.MVC.Project/" data-id="cjov18q4m002adw7b6ox834cz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://DevStarSJ.github.io/2016/05/07/CSharp.Aspnet.01.MVC.Project/" data-id="cjov1rqt3002ihs7b48lcyrtg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
