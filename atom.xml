@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2018-11-24T05:46:25.393Z</updated>
+  <updated>2018-11-24T06:26:00.659Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://DevStarSJ.github.io/2018/11/24/aws-batch-tutorial/"/>
     <id>http://DevStarSJ.github.io/2018/11/24/aws-batch-tutorial/</id>
     <published>2018-11-24T03:08:00.000Z</published>
-    <updated>2018-11-24T05:46:25.393Z</updated>
+    <updated>2018-11-24T06:26:00.659Z</updated>
     
     <summary type="html">
     
@@ -31,6 +31,8 @@
     </summary>
     
       <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+      <category term="Batch" scheme="http://DevStarSJ.github.io/categories/AWS/Batch/"/>
     
     
       <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
