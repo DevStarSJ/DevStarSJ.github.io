@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://DevStarSJ.github.io/"/>
-  <updated>2018-11-05T06:01:57.387Z</updated>
+  <updated>2018-11-24T05:46:25.394Z</updated>
   <id>http://DevStarSJ.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduce to AWS Batch</title>
+    <link href="http://DevStarSJ.github.io/2018/11/24/aws-batch-tutorial/"/>
+    <id>http://DevStarSJ.github.io/2018/11/24/aws-batch-tutorial/</id>
+    <published>2018-11-24T03:08:00.000Z</published>
+    <updated>2018-11-24T05:46:25.394Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Introduce-to-AWS-Batch&quot;&gt;&lt;a href=&quot;#Introduce-to-AWS-Batch&quot; class=&quot;headerlink&quot; title=&quot;Introduce to AWS Batch&quot;&gt;&lt;/a&gt;Introduce to AWS Bat
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
+    
+    
+      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
+    
+      <category term="Batch" scheme="http://DevStarSJ.github.io/tags/Batch/"/>
+    
+  </entry>
   
   <entry>
     <title>Coursera Kaggle 강의(How to win a data science competition) week 3,4 Advanced Feature Engineering 요약</title>
@@ -518,32 +540,6 @@
     
     
       <category term="C#" scheme="http://DevStarSJ.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AWS Lambda + API Gateway Binary Response 예제</title>
-    <link href="http://DevStarSJ.github.io/2017/04/08/AWS-Lambda-BinaryResponse/"/>
-    <id>http://DevStarSJ.github.io/2017/04/08/AWS-Lambda-BinaryResponse/</id>
-    <published>2017-04-07T15:00:00.000Z</published>
-    <updated>2017-05-23T23:29:46.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;AWS-Lambda-API-Gateway-Binary-Response-예제&quot;&gt;&lt;a href=&quot;#AWS-Lambda-API-Gateway-Binary-Response-예제&quot; class=&quot;headerlink&quot; title=&quot;AWS Lambda
-    
-    </summary>
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/categories/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/categories/AWS/Lambda/"/>
-    
-    
-      <category term="AWS" scheme="http://DevStarSJ.github.io/tags/AWS/"/>
-    
-      <category term="Lambda" scheme="http://DevStarSJ.github.io/tags/Lambda/"/>
-    
-      <category term="APIGateway" scheme="http://DevStarSJ.github.io/tags/APIGateway/"/>
     
   </entry>
   
