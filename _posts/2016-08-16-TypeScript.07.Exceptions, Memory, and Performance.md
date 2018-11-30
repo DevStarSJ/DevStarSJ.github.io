@@ -2,8 +2,8 @@
 layout: post
 title: "Chapter 7 Exceptions, Memory, and Performance"
 subtitle:  
-categories: JavaScript
-tags: TypeScript
+categories: development
+tags: javascript
 comments: true
 ---
 

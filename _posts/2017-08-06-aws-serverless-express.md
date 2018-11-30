@@ -2,8 +2,8 @@
 layout: post
 title: "aws-serverless-express 소개"
 subtitle:  
-categories: AWS
-tags: Lambda
+categories: cloud
+tags: aws
 comments: true
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 title: "Squel.js"
 subtitle:  
-categories: JavaScript
-tags: Node.JS
+categories: development
+tags: javascript
 comments: true
 ---
 

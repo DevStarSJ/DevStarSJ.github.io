@@ -2,8 +2,8 @@
 layout: post
 title: "Using AWS SageMaker to Tune Hyperparameter of XG-Boost"
 subtitle:  
-categories: cloud
-tags: aws
+categories: data
+tags: ml
 comments: true
 ---
 

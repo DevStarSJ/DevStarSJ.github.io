@@ -2,8 +2,8 @@
 layout: post
 title: "Chapter 3 Object Orientation in TypeScript"
 subtitle:  
-categories: JavaScript
-tags: TypeScript
+categories: development
+tags: javascript
 comments: true
 ---
 

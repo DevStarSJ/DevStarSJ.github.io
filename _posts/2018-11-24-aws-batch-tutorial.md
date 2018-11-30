@@ -2,8 +2,8 @@
 layout: post
 title: "Introduce to AWS Batch"
 subtitle:  
-categories: AWS
-tags: Batch
+categories: cloud
+tags: aws
 comments: true
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 title: "Monolith to Serverless using AWS Lambda (2)"
 subtitle:  
-categories: AWS
-tags: Lambda
+categories: cloud
+tags: aws
 comments: true
 ---
 
@@ -11,7 +11,7 @@ comments: true
 
 ## 기존 모노리스 API 서버를 AWS Lambda를 이용하여 서버리스로 변경하기
 
-[이전글 : 1편. 서버리스를 하려는 이유](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Serverless/MonolithToServerless.01.md)
+[이전글 : 1편. 서버리스를 하려는 이유](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Serverless/2017-02-23-MonolithToServerless.01.md)
 
 ### 2편. 장애 대응 플랜
 
@@ -195,4 +195,4 @@ API 배포 초반에는 거의 배포하자마자 바로 장애가 났었다. �
 
 다음 글에는 람다 배포 후 들이닥치게 되는 각종 리미트들... 리미트 뒤에 숨어있는 또 다른 리미트들에 대한 이야기를 쓸 예정이다.
 
-[다음글 : 3편. Lambda 배포 후 겪게되는 일들](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Serverless/MonolithToServerless.03.md)
+[다음글 : 3편. Lambda 배포 후 겪게되는 일들](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Serverless/2017-02-26-MonolithToServerless.03.md)
