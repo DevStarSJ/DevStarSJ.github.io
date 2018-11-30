@@ -2,8 +2,8 @@
 layout: post
 title: "MFC UAC 관련 사항 정리"
 subtitle:  
-categories: CPP
-tags: MFC
+categories: devlopment
+tags: c++
 comments: true
 ---
 

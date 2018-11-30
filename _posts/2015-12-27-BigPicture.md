@@ -2,8 +2,8 @@
 layout: post
 title: "선대인의 빅픽처 저성장 시대의 생존 경제학"
 subtitle:  
-categories: Book
-tags: Review
+categories: book
+tags:  
 comments: true
 ---
 
