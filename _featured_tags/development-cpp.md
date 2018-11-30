@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: OS
-slug: os
+title: C++
+slug: c++
 category: development
 menu: false
-order: 6
+order: 2
 ---
