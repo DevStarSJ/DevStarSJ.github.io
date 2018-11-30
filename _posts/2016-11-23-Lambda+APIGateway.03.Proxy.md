@@ -6,7 +6,6 @@ categories: cloud
 tags: aws
 comments: true
 ---
-# AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기 (3)
 
 ## API Gateway Proxy Resource 활용
 

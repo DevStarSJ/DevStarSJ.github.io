@@ -7,8 +7,6 @@ tags: aws
 comments: true
 ---
 
-# Monolith to Serverless using AWS Lambda
-
 ## 기존 모노리스 API 서버를 AWS Lambda를 이용하여 서버리스로 변경하기
 
 [이전글 : 1편. 서버리스를 하려는 이유](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Serverless/2017-02-23-MonolithToServerless.01.md)  

@@ -7,10 +7,7 @@ tags: aws
 comments: true
 ---
 
-# Using AWS SageMaker to Tune Hyperparameter of XG-Boost
-
 **AWS SageMaker**를 이용한 XG-Boost 하이퍼파라미터 최적화 방법 소개
-
 
 ## 1. Introduction to AWS SageMaker
 

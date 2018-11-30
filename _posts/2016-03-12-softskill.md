@@ -7,7 +7,6 @@ tags:
 comments: true
 ---
 
-### 소프트스킬 : 평범한 개발자의 비범한 인생 전략 71가지
 - 길벗
 - 존 손메즈 지음 / 이미령, 김태곤 옮김
 - 책소개 Link : <http://www.gilbut.co.kr/book/bookView.aspx?bookcode=BN001351&page=1&TF=T>

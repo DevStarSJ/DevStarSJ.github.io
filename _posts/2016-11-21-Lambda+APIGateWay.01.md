@@ -6,7 +6,6 @@ categories: cloud
 tags: aws
 comments: true
 ---
-# AWS Lambda와 API Gateway를 이용해서 Serverless Web API 만들기
 
 **[AWS Lambda](https://aws.amazon.com/ko/lambda/details)** 란 코드를 AWS 내에 올려두고 필요할 때에만 해당 코드를 실행해주는 서비스를 말합니다.
 서버를 24시간 가동시키게 아니라, 그냥 해당 코드가 실행되면서 사용하는 컴퓨팅 시간에 대해서만 과금을 하는 방식입니다.

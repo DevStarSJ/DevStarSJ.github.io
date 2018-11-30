@@ -7,8 +7,6 @@ tags: javascript
 comments: true
 ---
 
-# Squel.js
-
 **JavaScript** 의 `SQL query string`의 작성을 도와주는 package 입니다.
 **C#** 의 `LINQ`와 비슷한 형식으로 함수들의 체인을 이용해서 정의하면 해당 기능을 동작하는 `query string`을 작성해 줍니다.
 

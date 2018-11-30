@@ -7,8 +7,6 @@ tags: azure
 comments: true
 ---
 
-# Deploy Tensorflow Docker Image to Azure
-
 ## 참고사항
 
 똑같은 구성으로 **AWS**에 배포하는 글은 이전에 작성한게 있으니 참고하면 된다.

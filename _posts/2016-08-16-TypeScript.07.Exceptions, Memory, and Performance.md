@@ -1,13 +1,11 @@
 ﻿---
 layout: post
-title: "Chapter 7 Exceptions, Memory, and Performance"
+title: "TypeScript Chapter 7 Exceptions, Memory, and Performance"
 subtitle:  
 categories: development
 tags: javascript
 comments: true
 ---
-
-# Chapter 7 Exceptions, Memory, and Performance
 
 - 예외(Exception) 및 메모리 관리(MM : Memory Management)를 잘 알면 프로그램 작성에 도움이 됨
 - TypeScript, JavaScript의 예외가 C#, Java, PHP 등 다른 언어를 다뤄본 개발자들에게는 친숙해 보이겠지만, 미묘한 차이가 있음

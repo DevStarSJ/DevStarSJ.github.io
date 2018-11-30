@@ -1,13 +1,11 @@
 ﻿---
 layout: post
-title: "Chapter 3 Object Orientation in TypeScript"
+title: "TypeScript Chapter 3 Object Orientation in TypeScript"
 subtitle:  
 categories: development
 tags: javascript
 comments: true
 ---
-
-# Chapter 3 Object Orientation in TypeScript
 
 >소프트웨어를 디자인하는 방법 2가지가 있습니다.
 하나는 간단하게 만들어서 명백하게 결함을 없게하는 것이고,

@@ -7,9 +7,6 @@ tags: aws
 comments: true
 ---
 
-# AWS Lambda + API Gateway Binary Response 예제
-
-
 **API Gatewa**y의 Binary Response가 가능하기 때문에 이미지 파일(png, jpg)나 pdf 다운로드 같은걸 **Lambda**를 이용해서 구현이 가능하다.
 AWS 에서 제공해주는 예제는 AWS Compute Blog에 있는 [Binary Support for API Integrations with Amazon API Gateway](https://aws.amazon.com/blogs/compute/binary-support-for-api-integrations-with-amazon-api-gateway) 란 포스팅이 있는데 이것을 읽고 실제로 구현을 하기에는 조금 부족하다.
 

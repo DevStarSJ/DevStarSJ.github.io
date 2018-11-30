@@ -7,8 +7,6 @@ tags: aws
 comments: true
 ---
 
-# aws-serverless-express 소개
-
 ## aws-serverless-express ?
 
 [aws-serverless-express](https://github.com/awslabs/aws-serverless-express) ?  

@@ -7,7 +7,6 @@ tags:
 comments: true
 ---
 
-### 선대인의 빅픽처 저성장 시대의 생존 경제학
 - 웅진지식하우스
 - 선대인
 - 책소개 Link : <http://book.naver.com/bookdb/book_detail.nhn?bid=9770144>

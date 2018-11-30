@@ -7,8 +7,6 @@ tags: aws
 comments: true
 ---
 
-# Deploy Lambda Python
-
 **AWS Lambda**에 Tutorial에 대한 이전 글
 
 - [Lambda 와 API Gateway 연동 #1 (GET, POST)](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateWay.01.md)
