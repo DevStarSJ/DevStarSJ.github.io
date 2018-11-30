@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "소프트스킬 평범한 개발자의 비범한 인생 전략 71가지"
+title: "소프트스킬 : 평범한 개발자의 비범한 인생 전략 71가지"
 subtitle:  
-categories: Book
-tags: Review
+categories: book
+tags:  
 comments: true
 ---
 
