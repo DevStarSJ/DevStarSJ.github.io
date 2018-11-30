@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Basic
-slug: basic
-category: gcp
+title: Mac
+slug: mac
+category: computer
 menu: false
 order: 1
 ---

@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: CS231n
-slug: cs231
+title: Machine Learning
+slug: ml
 category: data
 menu: false
-order: 8
+order: 1
 ---

@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Reinforcement-Learning
-slug: rl
+title: Data Science
+slug: ds
 category: data
 menu: false
-order: 9
+order: 2
 ---

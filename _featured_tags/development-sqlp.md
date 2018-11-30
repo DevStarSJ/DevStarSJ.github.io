@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Pytorch
-slug: pytorch
-category: data
+title: SQLP
+slug: sqlp
+category: development
 menu: false
 order: 7
 ---

@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Web
-slug: web
+title: DevOps
+slug: devops
 category: development
 menu: false
-order: 2
+order: 5
 ---

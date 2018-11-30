@@ -1,10 +1,10 @@
 ---
 layout: list
-title: ETC
-slug: etc
+title: Book
+slug: book
 menu: true
-submenu: true
+submenu: false
 order: 5
 description: >
-  기타 정보
+  Book Review
 ---

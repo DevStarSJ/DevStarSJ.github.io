@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Scala
-slug: scala
+title: JavaScript
+slug: javascript
 category: development
 menu: false
-order: 5
+order: 3
 ---

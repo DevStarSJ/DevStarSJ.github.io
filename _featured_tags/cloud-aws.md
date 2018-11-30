@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Lecture
-slug: lecture
-category: etc
+title: AWS
+slug: aws
+category: cloud
 menu: false
 order: 1
 ---

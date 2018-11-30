@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Linux
-slug: linux
+title: Oracle
+slug: oracle
 category: development
 menu: false
-order: 1
+order: 6
 ---
