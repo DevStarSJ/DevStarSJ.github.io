@@ -1,7 +1,7 @@
 
 ## Github Blog
 - <https://DevStarSJ.github.io>
-- 이 블로그는 [변승윤](https://github.com/zzsza/zzsza.github.io)님 블로그 테마를 기반으로 제작되었습니다
+- 이 블로그는 [변성윤](https://github.com/zzsza/zzsza.github.io)님 블로그 테마를 기반으로 제작되었습니다
 	- 박민님 테마 대비 다른 점은 검색 시스템을 붙인 점입니다
 - 본 테마(혹은 박민님 테마)를 사용하고 싶으신 경우, issue 또는 메일(<seokjoon.yun@gmail.com>)로 사용 요청을 해주세요. 이 블로그의 소스는 제 피와 땀으로 만들었기 때문에 요청을 주시는 것이 예의라고 생각합니다 :)(사실 요청하신 분들에게 거절할 생각도 없습니다)
 
