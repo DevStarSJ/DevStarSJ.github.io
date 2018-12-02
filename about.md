@@ -26,9 +26,12 @@ order: 10
 
 | Company | Period | Role | Tasks |
 |:----------:|:---------------:|:---------------:|--------------------------------------------------------------------------------------------------------------------------------	|
-| (주)JS-System | 2010.10 ~ 2014.07 | 책임연구원 | Sonic Beam Simulator on Submarine `Architecture & Lead Programmer` : **MFC** (windows application), **CUDA, OpenMP, SIMD** <br> - Factory Automation <br>&nbsp;&nbsp;&nbsp;- SQC(통계적 공정 관리) 외 다수 : Project Manager & Lead Programmer : **C# / VB (windows application)**, **MS-SQL / Oracle** <br>&nbsp;&nbsp;&nbsp;- SMS (PCB 불량 추적) CAD Rendering (ODB++) : Architecture & Lead Programmer : C#, MS-SQL |
-| (주)삼성전자 | 2003.01 ~ 2004.11 | 연구원 | Washer & Dryer microprocessor (Toshiba) : **Ansi C** |
-| (주)BND |2001.12 ~ 2002.07 | 연구원 | Samsung cellphone UI & Browser porting : **Ansi C** |
+| 직방 | 16.10 ~ Current | Machine Learning Engineer & Backend Programmer | 아파트 시세 생성 + `Machine Learning` : **Python, XGBoost 외 다수, AWS** <br> Serverless API - Realtime Binary Response (image converter, pdf, excel) : **Node.JS(TypeScript), AWS** <br> B2B Service : **ASP.NET (C#)** |
+| SPE | 16.04 ~ 16.09 | 차장 | `Web UI Controller on IoT` Rasberry Pi 3 : **ASP.NET Core (C#)** on Mono |
+| WareValley | 14.07 ~ 16.04 | 선임연구원 | Orange DB Tool : **MFC , Oracle, DB2, Tibero, Altibase, MS-SQL, Sybase ASE/IQ, PetaSQL** <br> Orange License Key : **MFC, C#** |
+| JS-System | 10.10 ~ 14.07 | Architecture & Lead Programmer | Sonic Beam Simulator on Submarine + `CUDA` : **MFC** (windows application), **CUDA, OpenMP, SIMD** <br> Factory Automation <br>&nbsp;&nbsp;- SQC(통계적 공정 관리) 외 다수 : **C# / VB (windows application)**, **MS-SQL / Oracle** <br>&nbsp;&nbsp;- SMS (PCB 불량 추적) `CAD Rendering (ODB++)` : C#, MS-SQL |
+| 삼성전자 | 03.01 ~ 04.11 | 연구원 | Washer & Dryer microprocessor (Toshiba) : **Ansi C** |
+| BND |01.12 ~ 02.07 | 연구원 | Samsung cellphone UI & Browser porting : **Ansi C** |
 
 
 ## 프로젝트
