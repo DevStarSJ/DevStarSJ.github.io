@@ -7,23 +7,6 @@ tags: azure
 comments: true
 ---
 
-## 참고사항
-
-똑같은 구성으로 **AWS**에 배포하는 글은 이전에 작성한게 있으니 참고하면 된다.
-
-- [Deploy Tensorflow Docker Image to AWS ECS](https://github.com/DevStarSJ/Study/blob/master/Blog/Python/TensorFlow/ms/ecs.tensorflow.md)
-- [Using Tensorflow Predict on AWS Lambda Function](https://github.com/DevStarSJ/Study/blob/master/Blog/Python/TensorFlow/ms/lambda.tensorflow.md)
-
-이 작업을 시작하게 된 이유와 개념적인 구성에 대한 설명은 위 Link의 글들을 참고하길 바란다
-즉 학습, 저장, 서비스 를 어떻게 동작시키는 것을 목적으로 하였는지에 대한 설명은 이 글에서는 생략하겠다.
-
-Azure에 구성을 한 것은 이 글 포함 2개의 글이 있다.
-
-- [Deploy Tensorflow Docker Image to Azure](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/Azure/AzureContainer.TensorflowDockerImage.md)
-- [Using Tensorflow Predict on Azure Function](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/Azure/AzureFunction.TensorflowPredict.md)
-
-## 왜 이런 생각을 ???
-
 앞서 **Azure Container Service**에서 **Tensorflow**를 이용하여 학습을 진행하여 그 결과를 **Azure File Storage**에 저장하는 방법에 대해서 글을 적었다.
 
 [Deploy Tensorflow Docker Image to Azure](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/Azure/AzureContainer.TensorflowDockerImage.md)
@@ -58,7 +41,7 @@ Azure에 구성을 한 것은 이 글 포함 2개의 글이 있다.
     - `Location` : `Japan West` 그나마 거리 가까운것 중에 가장 저렴한 것으로 설정
     - `Storage` : 그냥 기존에 생성해 놓은것으로 같이 쓰도록 설정
     - `Create`를 눌루서 생성
-    - ![](images/azure.function.01.png)
+    - ![](https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Cloud/Azure/images/azure.function.01.png)
 
 그럼 대쉬보드 상에서 생성되는 것을 볼 수 있다. 생성이 끝나면 바로 설정 창으로 이동된다.
 
@@ -70,11 +53,11 @@ Azure에 구성을 한 것은 이 글 포함 2개의 글이 있다.
 
 우측 상단의 `Get Function URL`을 눌러서 호출 가능한 주소를 확인하자.
 
-![](images/azure.function.02.png)
+![](https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Cloud/Azure/images/azure.function.02.png)
 
 해당 URL을 복사해서 Browser 주소창에 붙인후 뒤에 `&Name=Luna`를 추가해서 호출하면 결과 확인이 가능하다.
 
-![](images/azure.function.03.png)
+![](https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Cloud/Azure/images/azure.function.03.png)
 
 이제 코드를 작성해 보자.
 
@@ -87,7 +70,7 @@ Azure에 구성을 한 것은 이 글 포함 2개의 글이 있다.
 
 먼저 사용한 **nuget** 들을 `project.json`파일에 정의해야 한다. 해당 파일이 생성되어 있지 않다면 만들어야 한다.
 
-![](images/azure.function.04.png)
+![](https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Cloud/Azure/images/azure.function.04.png)
 
 ### project.json
 ```JSON
@@ -260,7 +243,7 @@ private static CloudStorageAccount CreateStorageAccountFromConnectionString(stri
 
 그런 다음 호출 URL을 복사하고 그 뒤에다가 `&x=[0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0]`값을 추가한 뒤 브라우저로 호출을 해보자.
 
-![](images/azure.function.05.png)
+![](https://raw.githubusercontent.com/DevStarSJ/Study/master/Blog/Cloud/Azure/images/azure.function.05.png)
 
 제대로 응답이 오는게 확인이 가능하다.
 
@@ -275,3 +258,17 @@ private static CloudStorageAccount CreateStorageAccountFromConnectionString(stri
 
 여기에는 김성훈 교수님이 미리 만들어 놓은 [data-04-zoo.csv](https://github.com/hunkim/DeepLearningZeroToAll/blob/master/data-04-zoo.csv) 파일을 이용하겠다.
 
+## 참고사항
+
+똑같은 구성으로 **AWS**에 배포하는 글은 이전에 작성한게 있으니 참고하면 된다.
+
+- [Deploy Tensorflow Docker Image to AWS ECS](https://devstarsj.github.io/cloud/2017/07/14/ecs.tensorflow)
+- [Using Tensorflow Predict on AWS Lambda Function](https://devstarsj.github.io/cloud/2017/07/18/lambda.tensorflow)
+
+이 작업을 시작하게 된 이유와 개념적인 구성에 대한 설명은 위 Link의 글들을 참고하길 바란다
+즉 학습, 저장, 서비스 를 어떻게 동작시키는 것을 목적으로 하였는지에 대한 설명은 이 글에서는 생략하겠다.
+
+Azure에 구성을 한 것은 이 글 포함 2개의 글이 있다.
+
+- [Deploy Tensorflow Docker Image to Azure](https://devstarsj.github.io/cloud/2017/07/26/AzureContainer.TensorflowDockerImage)
+- [Using Tensorflow Predict on Azure Function](https://devstarsj.github.io/cloud/2017/07/27/AzureFunction.TensorflowPredict)

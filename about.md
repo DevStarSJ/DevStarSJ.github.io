@@ -40,6 +40,11 @@ order: 10
 
 ## 발표
 
+- [Deploy serverless Tensorflow predict service on Microsoft Azure](https://onoffmix.com/event/110570)
+- Pycon 튜토리얼 세션 - [파이썬으로 기초 산수 풀기](https://www.pycon.kr/2016apac/program/tutorial/7) with 심상진님
+- 한국군사과학기술학회 (2014.06) : Performance Improvement for Cylindrical Array Sonar Simulator Beam Pattern Generation Stave Status Changes, Using CUDA 논문 발표
+[slide](https://www.slideshare.net/seokjoonyun9/cuda-33834381) (논문 내용 아님)
+
 
 ## 작성 문서
 
