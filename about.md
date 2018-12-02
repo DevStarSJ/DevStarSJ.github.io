@@ -60,7 +60,7 @@ order: 10
 ## 발표
 
 - 데이터야 놀자 2018 : [아파트 시세, 어쩌다 머신러닝까지](https://datayanolja.github.io/speakers/seokjoonyun.html) [slide](https://www.slideshare.net/seokjoonyun9/ss-119941642)
-- [AWS DevDays 2017 Serverless 트랙](https://aws.amazon.com/ko/events/devday-seoul/serverless_IoT/#serverless) 윤석찬님과 공동발표 (10분) : [Image Converter on AWS Serverless Express](https://www.slideshare.net/seokjoonyun9/aws-dev-day-seoul-2017-buliding-serverless-web-app-image-converter)
+- [AWS DevDays 2017 Serverless 트랙](https://aws.amazon.com/ko/events/devday-seoul/serverless_IoT/#serverless) 윤석찬님과 공동발표 (10분) : Image Converter on AWS Serverless Express [slide](https://www.slideshare.net/seokjoonyun9/aws-dev-day-seoul-2017-buliding-serverless-web-app-image-converter)
 - [Deploy serverless Tensorflow predict service on Microsoft Azure](https://onoffmix.com/event/110570) : [slide](https://devstarsj.github.io/cloud/2017/07/27/AzureFunction.TensorflowPredict)
 - Pycon 튜토리얼 세션 - [파이썬으로 기초 산수 풀기](https://www.pycon.kr/2016apac/program/tutorial/7) with 심상진님
 - 한국군사과학기술학회 (2014.06) : Performance Improvement for Cylindrical Array Sonar Simulator Beam Pattern Generation Stave Status Changes, Using CUDA 논문 발표
