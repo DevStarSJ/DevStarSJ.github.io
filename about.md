@@ -25,11 +25,11 @@ order: 10
 자세한 내용이 궁금하시면 따로 연락 부탁드려요.
 
 | Company | Period | Role | Tasks |
-|:----------:|:---------------:|:---------------:|--------------------------------------------------------------------------------------------------------------------------------	|
-| 직방 | 16.10 ~ Current | Machine Learning Engineer & Backend Programmer | 아파트 시세 생성 + `Machine Learning` : **Python, XGBoost 외 다수, AWS** <br> Serverless API - Realtime Binary Response (image converter, pdf, excel) : **Node.JS(TypeScript), AWS** <br> B2B Service : **ASP.NET (C#)** |
+|:---:|:---:|:---:|---|
+| 직방 | 16.10 ~ Current | ML & Backend | 아파트 시세 생성 + `Machine Learning` : **Python, XGBoost 외 다수, AWS** <br> Serverless API - Realtime Binary Response (image converter, pdf, excel) : **Node.JS(TypeScript), AWS** <br> B2B Service : **ASP.NET (C#)** |
 | SPE | 16.04 ~ 16.09 | 차장 | `Web UI Controller on IoT` Rasberry Pi 3 : **ASP.NET Core (C#)** on Mono |
 | WareValley | 14.07 ~ 16.04 | 선임연구원 | Orange DB Tool : **MFC , Oracle, DB2, Tibero, Altibase, MS-SQL, Sybase ASE/IQ, PetaSQL** <br> Orange License Key : **MFC, C#** |
-| JS-System | 10.10 ~ 14.07 | Architecture & Lead Programmer | Sonic Beam Simulator on Submarine + `CUDA` : **MFC** (windows application), **CUDA, OpenMP, SIMD** <br> Factory Automation <br>&nbsp;&nbsp;- SQC(통계적 공정 관리) 외 다수 : **C# / VB (windows application)**, **MS-SQL / Oracle** <br>&nbsp;&nbsp;- SMS (PCB 불량 추적) `CAD Rendering (ODB++)` : C#, MS-SQL |
+| JS-System | 10.10 ~ 14.07 | Arch. & Lead P. | Sonic Beam Simulator on Submarine + `CUDA` : **MFC** (windows application), **CUDA, OpenMP, SIMD** <br> Factory Automation <br>&nbsp;&nbsp;- SQC(통계적 공정 관리) 외 다수 : **C# / VB (windows application)**, **MS-SQL / Oracle** <br>&nbsp;&nbsp;- SMS (PCB 불량 추적) `CAD Rendering (ODB++)` : C#, MS-SQL |
 | 삼성전자 | 03.01 ~ 04.11 | 연구원 | Washer & Dryer microprocessor (Toshiba) : **Ansi C** |
 | BND |01.12 ~ 02.07 | 연구원 | Samsung cellphone UI & Browser porting : **Ansi C** |
 
