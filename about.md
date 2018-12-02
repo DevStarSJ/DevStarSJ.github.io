@@ -26,7 +26,7 @@ order: 10
 
 | Company | Period | Role | Tasks |
 |:----------:|:---------------:|:---------------:|--------------------------------------------------------------------------------------------------------------------------------	|
-| (주)JS-System | 2010.10 ~ 2014.07 | 책임연구원 | - Sonic Beam Simulator on Submarine - **Architecture & Lead Programmer** : **MFC** (windows application), **CUDA, OpenMP, SIMD** <br> - Factory Automation <br>&nbsp;&nbsp;&nbsp;- SQC(통계적 공정 관리) 외 다수 : Project Manager & Lead Programmer : **C# / VB (windows application)**, **MS-SQL / Oracle** <br>&nbsp;&nbsp;&nbsp;- SMS (PCB 불량 추적) CAD Rendering (ODB++) : Architecture & Lead Programmer : C#, MS-SQL |
+| (주)JS-System | 2010.10 ~ 2014.07 | 책임연구원 | Sonic Beam Simulator on Submarine `Architecture & Lead Programmer` : **MFC** (windows application), **CUDA, OpenMP, SIMD** <br> - Factory Automation <br>&nbsp;&nbsp;&nbsp;- SQC(통계적 공정 관리) 외 다수 : Project Manager & Lead Programmer : **C# / VB (windows application)**, **MS-SQL / Oracle** <br>&nbsp;&nbsp;&nbsp;- SMS (PCB 불량 추적) CAD Rendering (ODB++) : Architecture & Lead Programmer : C#, MS-SQL |
 | (주)삼성전자 | 2003.01 ~ 2004.11 | 연구원 | Washer & Dryer microprocessor (Toshiba) : **Ansi C** |
 | (주)BND |2001.12 ~ 2002.07 | 연구원 | Samsung cellphone UI & Browser porting : **Ansi C** |
 
