@@ -9,7 +9,7 @@ comments: true
 
 앞서 **Azure Container Service**에서 **Tensorflow**를 이용하여 학습을 진행하여 그 결과를 **Azure File Storage**에 저장하는 방법에 대해서 글을 적었다.
 
-[Deploy Tensorflow Docker Image to Azure](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/Azure/AzureContainer.TensorflowDockerImage.md)
+[Deploy Tensorflow Docker Image to Azure](https://devstarsj.github.io/cloud/2017/07/26/AzureContainer.TensorflowDockerImage)
 
 학습 결과를 **Azure File Storage**에 남긴 이유는 크게 2가지였다.
 
