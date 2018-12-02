@@ -7,8 +7,6 @@ tags: aws
 comments: true
 ---
 
-## 1. Introduction to AWS Batch
-
 **AWS batch**는 ECR (Amazon Elastic Container Registry)또는 EC2 AMI (Amazon Machine Image)를 이용해서 작업을 수행시키는 서비스이다.
 
 [Amazon Batch](https://aws.amazon.com/batch)

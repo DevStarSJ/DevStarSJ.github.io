@@ -7,15 +7,11 @@ tags: aws
 comments: true
 ---
 
-## Routing 예제
-
 Web API를 구현하기 위해서는 여러가지 URL에 대해서 각각 다른 기능을 구현하는것은 필수적입니다.
 각각의 URL을 별도의 Lambda로 구현하여 API Gateway에서 연결하는 방법도 있지만 하나의 Lambda에서 처리하는 방법에 대해서 알아 보도록 하겠습니다.
 이번에는 전편과는 다르게 약간의 설명을 하면서 진행하겠습니다.
 전편의 내용을 안다는 가정하에 진행하겠습니다.
-처음 이 글부터 보시는 분들은 아래 Link에서 내용을 숙지한 후에 진행해 주세요.
-
-<https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateWay.01.md>
+처음 이 글부터 보시는 분들은 글아래 Link에서 내용을 숙지한 후에 진행해 주세요.
 
 ## API Gateway 설정
 
@@ -261,3 +257,12 @@ exports.handler = (event, context, callback) => {
 ### 다음글
 
 - Lambda 와 API Gateway 연동 #3 (Proxy Resource) : <https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.03.Proxy.md>
+
+**다른 글 목록**
+- [Lambda 와 API Gateway 연동 #1 (GET, POST)](https://devstarsj.github.io/cloud/2016/11/21/Lambda+APIGateWay.01)
+- [Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route)](https://devstarsj.github.io/cloud/2016/11/22/Lambda+APIGateway.02.Route)
+- [Lambda 와 API Gateway 연동 #3 (Proxy Resource)](https://devstarsj.github.io/cloud/2016/11/23/Lambda+APIGateway.03.Proxy)
+- [Lambda Node.JS Packaging](https://devstarsj.github.io/cloud/2016/11/27/Lambda.Packaging.Node)
+- [AWS Lambda에 Python Handler 만들기](https://devstarsj.github.io/cloud/2016/11/24/AwsLambda.Python)
+- [Lambda Python Packaging](https://devstarsj.github.io/cloud/2016/11/26/Lambda.Packaging.Python)
+- [AWS Lambda에 C# Handler 만들기](https://devstarsj.github.io/cloud/2016/12/03/AwsLambda.CSharp)

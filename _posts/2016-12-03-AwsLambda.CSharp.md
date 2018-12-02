@@ -254,13 +254,15 @@ public Stream FunctionHandler(Stream stream, ILambdaContext context)
 
 **AWS Lambda**에 대해 다루는 7번째 글입니다.
 
-- [Lambda 와 API Gateway 연동 #1 (GET, POST)](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/2016-11-21-Lambda+APIGateWay.01.md)
-- [Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route)](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/2016-11-22-Lambda+APIGateway.02.Route.md)
-- [Lambda 와 API Gateway 연동 #3 (Proxy Resource)](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/2016-11-23-Lambda+APIGateway.03.Proxy.md)
-- [Lambda Node.JS Packaging](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/2016-11-27-Lambda.Packaging.Node.md)
-- [AWS Lambda에 Python Handler 만들기](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/2016-11-24-AwsLambda.Python.md)
-- [Lambda Python Packaging](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/2016-11-26-Lambda.Packaging.Python.md)
-- [AWS Lambda에 C# Handler 만들기](https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/2016-12-03-AwsLambda.CSharp.md)
+**Lambda** 및 **API Gateway** 배포에 대해서는 예전에 포스팅 한 글들을 참조 바란다.
+
+- [Lambda 와 API Gateway 연동 #1 (GET, POST)](https://devstarsj.github.io/cloud/2016/11/21/Lambda+APIGateWay.01)
+- [Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route)](https://devstarsj.github.io/cloud/2016/11/22/Lambda+APIGateway.02.Route)
+- [Lambda 와 API Gateway 연동 #3 (Proxy Resource)](https://devstarsj.github.io/cloud/2016/11/23/Lambda+APIGateway.03.Proxy)
+- [Lambda Node.JS Packaging](https://devstarsj.github.io/cloud/2016/11/27/Lambda.Packaging.Node)
+- [AWS Lambda에 Python Handler 만들기](https://devstarsj.github.io/cloud/2016/11/24/AwsLambda.Python)
+- [Lambda Python Packaging](https://devstarsj.github.io/cloud/2016/11/26/Lambda.Packaging.Python)
+- [AWS Lambda에 C# Handler 만들기](https://devstarsj.github.io/cloud/2016/12/03/AwsLambda.CSharp)
 
 ### 참고
 

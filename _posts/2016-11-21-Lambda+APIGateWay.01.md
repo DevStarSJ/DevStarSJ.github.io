@@ -353,4 +353,13 @@ exports.handler = (event, context, callback) => {
 
 ### 다음글
 
-- Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route) : <https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda%2BAPIGateway.02.Route.md>
+- [Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route)](https://devstarsj.github.io/cloud/2016/11/22/Lambda+APIGateway.02.Route)
+
+**다른 글 목록**
+- [Lambda 와 API Gateway 연동 #1 (GET, POST)](https://devstarsj.github.io/cloud/2016/11/21/Lambda+APIGateWay.01)
+- [Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route)](https://devstarsj.github.io/cloud/2016/11/22/Lambda+APIGateway.02.Route)
+- [Lambda 와 API Gateway 연동 #3 (Proxy Resource)](https://devstarsj.github.io/cloud/2016/11/23/Lambda+APIGateway.03.Proxy)
+- [Lambda Node.JS Packaging](https://devstarsj.github.io/cloud/2016/11/27/Lambda.Packaging.Node)
+- [AWS Lambda에 Python Handler 만들기](https://devstarsj.github.io/cloud/2016/11/24/AwsLambda.Python)
+- [Lambda Python Packaging](https://devstarsj.github.io/cloud/2016/11/26/Lambda.Packaging.Python)
+- [AWS Lambda에 C# Handler 만들기](https://devstarsj.github.io/cloud/2016/12/03/AwsLambda.CSharp)

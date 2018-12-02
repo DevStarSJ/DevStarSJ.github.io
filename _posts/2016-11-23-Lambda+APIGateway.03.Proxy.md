@@ -7,8 +7,6 @@ tags: aws
 comments: true
 ---
 
-## API Gateway Proxy Resource 활용
-
 **API Gateway**에서 각각의 route path(API Gateway에서는 Resource로 불림) 및
 http-method(API Gateway에서는 Method로 불림)에 대해서 **Lambda**를 설정하는 것은 여간 번거러운 작업이 아닙니다.
 그 경우에 따라 각각 다른 **Lambda**로 연결이 되는 경우라면 당연히 따로 설정을 해야하지만,
@@ -257,3 +255,12 @@ exports.handler = (event, context, callback) => {
 ### 다음글
 
 - Lambda Node.JS Packaging : <https://github.com/DevStarSJ/Study/blob/master/Blog/Cloud/AWS/Lambda.Packaging.Node.md>
+
+**다른 글 목록**
+- [Lambda 와 API Gateway 연동 #1 (GET, POST)](https://devstarsj.github.io/cloud/2016/11/21/Lambda+APIGateWay.01)
+- [Lambda 와 API Gateway 연동 #2 (ANY, Deploy Staging, Node.JS Route)](https://devstarsj.github.io/cloud/2016/11/22/Lambda+APIGateway.02.Route)
+- [Lambda 와 API Gateway 연동 #3 (Proxy Resource)](https://devstarsj.github.io/cloud/2016/11/23/Lambda+APIGateway.03.Proxy)
+- [Lambda Node.JS Packaging](https://devstarsj.github.io/cloud/2016/11/27/Lambda.Packaging.Node)
+- [AWS Lambda에 Python Handler 만들기](https://devstarsj.github.io/cloud/2016/11/24/AwsLambda.Python)
+- [Lambda Python Packaging](https://devstarsj.github.io/cloud/2016/11/26/Lambda.Packaging.Python)
+- [AWS Lambda에 C# Handler 만들기](https://devstarsj.github.io/cloud/2016/12/03/AwsLambda.CSharp)
