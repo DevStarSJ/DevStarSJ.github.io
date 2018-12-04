@@ -26,8 +26,8 @@ author:
   email:             seokjoon.yun@gmail.com
 
 # Fallback image and color
-image:               /assets/img/nap.jpg
-color:               '#4f86aa'
+image:               /assets/img/nap.png
+color:               '#252526'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:        "'Lato', 'Sans-serif'"
