@@ -3,8 +3,8 @@ layout: list
 title: Review
 slug: review
 menu: true
-submenu: false
+submenu: true
 order: 5
 description: >
-  Book Review
+  Review
 ---
