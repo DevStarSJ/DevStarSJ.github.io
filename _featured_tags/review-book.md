@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: AWS
-slug: aws
-category: cloud
+title: Book
+slug: book
+category: review
 menu: false
 order: 1
 ---
