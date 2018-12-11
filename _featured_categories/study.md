@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Development
-slug: development
+title: Study
+slug: study
 menu: true
 submenu: true
 order: 4
 description: >
-  Programming Language & Development Tips
+  Summary of Study or Book
 ---
