@@ -193,6 +193,7 @@ Job1, Job3는 vCPU가 72개 필요한 instance에서 실행되어야 하며, Job
 **CloudFomation**에서는 정상적으로 수정이 되는지 확인해보지는 않았다.
 
 - role.tf
+
 ```hcl
 data "aws_iam_instance_profile" "AWSEC2ContainerServiceForEC2Policy" {
     name = "AWSEC2ContainerServiceForEC2Policy"
@@ -208,6 +209,7 @@ data "aws_iam_role" "AWSServiceRoleForEC2SpotFleet" {
 ```
 
 - subnet.tf
+
 ```hcl
 variable "subnet_id" {
     type = "string"
@@ -221,6 +223,7 @@ data "aws_subnet" "subnet_default" {
 ```
 
 - security_group.tf
+
 ```hcl
 variable "security_group_id" {
     type = "string"
@@ -233,6 +236,7 @@ data "aws_security_group" "default_sg" {
 ```
 
 - ecs.tf
+
 ```hcl
 resource "aws_ecr_repository" "batch_image" {
   name = "batch_image"
@@ -241,6 +245,7 @@ resource "aws_ecr_repository" "batch_image" {
 **ECR**의 경우 미리 정의된 것을 사용할 경우 위 코드에서 `resource`만 `data`로 수정하면 된다.
 
 - batch.tf
+
 ```hcl
 resource "aws_batch_compute_environment" "env_72" {
   compute_environment_name = "env_72"
