@@ -128,7 +128,7 @@ Azure Portal(<https://portal.azure.com>)로 진입한다.
 
 **Python 3.6**으로 작성되었으며 `Azure File Storage`에서 학습데이터를 다운받아서 **Tensorflow**로 학습 후 그 결과를 **Tensorflow Saver File**, **JSON 파일** 형식으로 `Azure File Storage`에 다시 업로드하는 작업을 수행하는 코드이다.
 
-```Python
+```python
 import tensorflow as tf
 import numpy as np
 import datetime

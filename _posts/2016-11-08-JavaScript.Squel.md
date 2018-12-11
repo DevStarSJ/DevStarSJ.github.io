@@ -22,17 +22,17 @@ comments: true
 
 ### Node.js
 
-```Shell
+```shell
 npm install squel
 ```
 
-```JavaScript
+```javascript
 var squel = require("squel");
 ```
 
 ### Browser
 
-```HTML
+```html
 <script type="text/javascript" src="/your/path/to/squel.min.js"></script>
 <script>
   console.log( squel.VERSION );    /** version string **/
@@ -69,7 +69,7 @@ var squel = require("squel");
 
 - 관련 예제들
 
-```JavaScript
+```javascript
 var squel = require("squel");
 
 var q = squel.select()
@@ -78,11 +78,11 @@ var q = squel.select()
   .toString();
 ```
 
-```SQL
+```sql
 SELECT ** FROM emp `e`
 ```
 
-```JavaScript
+```javascript
 var s = squel.select()
   .from('emp', 'e')
   .where('e.id IN ?', idList)
@@ -93,7 +93,7 @@ var s = squel.select()
   .toString();
 ```
 
-```SQL
+```sql
 SELECT e.name, d.name  
   FROM emp `e` INNER JOIN dept `d` ON (e.deptno = d.id)  
  WHERE (e.id IN (1, 2, 3))  
@@ -115,7 +115,7 @@ SELECT e.name, d.name
   - `value`에 함수를 지정할 경우 문자열로 인식하여 따옴표를 씌우게 되는데 그럼 함수로 동작하지 않습니다.
   - 그럴 경우 options 란에 `{ dontQuote: true}`를 입력해주면 `value`에 따옴표 표시를 하지 않아서 함수로 동작하게 가능합니다.
 
-```JavaScript
+```javascript
 var uf = squel.update()
   .table('emp')
   .set('hire_date', 'GETDATE()', { dontQuote: true })
@@ -123,27 +123,27 @@ var uf = squel.update()
   .toString();
 ```
 
-```SQL
+```sql
 UPDATE emp SET hire_date = GETDATE() WHERE (dept = 10)
 ```
 
 - `setFields({JSON})` : 입력된 JSON의 key와 value로 `set()`함수를 수행합니다.
 - `setFieldsRows([JSON LIST])` : **INSERT** 에서만 수행이 가능하며 여러 줄 입력으로 `setFields()` 함수를 수행합니다.
 
-```JavaScript
+```javascript
 var im = squel.insert()
   .into('emp')
   .setFieldsRows([{id:1, name:"Luna"}, {id:2, name:"Star"}])
   .toString();
 ```
 
-```SQL
+```sql
 INSERT INTO emp (id, name) VALUES (1, 'Luna'), (2, 'Star')
 ```
 
 - `fromQuery` : **SELECT** 수행 결과를 **INSERT** 합니다.
 
-```JavaScript
+```javascript
 var is = squel.insert()
   .into('emp')
   .fromQuery(
@@ -157,7 +157,7 @@ var is = squel.insert()
   .toString();
 ```
 
-```SQL
+```sql
 INSERT INTO emp (id, name) (SELECT id, name FROM candidates)
 ```
 
@@ -170,7 +170,7 @@ INSERT INTO emp (id, name) (SELECT id, name FROM candidates)
 위에서 살펴본 예제들은 모두 **Binding Parameters** 를 사용하지 않고 query에 하드코딩 되어 있습니다.
 **parameterized query** 로 생성하려면 `.toString()` 대신에 `.toParam()`을 실행하면 됩니다.
 
-```JavaScript
+```javascript
 var pq = squel.select()
   .from(`emp`)
   .where('id = ?', 10)

@@ -72,7 +72,7 @@ http-method(API Gateway에서는 Method로 불림)에 대해서 **Lambda**를 �
 
 그래서 다음과 같이 **hander**를 수정 후 실행해 보았습니다.
 
-```JavaScript
+```javascript
 exports.handler = (event, context, callback) => {
    let result = router(event, context);
    //let result = {"event" : event, "context" : context}
@@ -83,7 +83,7 @@ exports.handler = (event, context, callback) => {
 결과는 똑같이 안됩니다. ;;;  
 음... 그냥 요청을 그대로 출력해 보겠습니다.
 
-```JavaScript
+```javascript
 exports.handler = (event, context, callback) => {
    //let result = router(event, context);
    let result = {"event" : event, "context" : context}
@@ -173,7 +173,7 @@ path parameter를 사용하지 않고 query string을 이용하는 방법도 있
 편의상 query string을 사용하도록 수정하였으며 `/`로 접근하던 부분은 삭제하였습니다.
 코드에 대한 자세한 설명은 2장 포스팅을 참조해 주세요.
 
-```JavaScript
+```javascript
 'use strict';
 
 function get(userId) {

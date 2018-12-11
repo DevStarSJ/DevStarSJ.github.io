@@ -19,7 +19,7 @@ AWS 에서 제공해주는 예제는 AWS Compute Blog에 있는 [Binary Support 
 
 Node.JS를 이용해서 작성하였다.
 
-```JavaScript
+```javascript
 "use strict";
 
 const fs = require("fs");

@@ -38,6 +38,14 @@
 - ```_config.yml```, ```_data```, ```_featured_categories```, ```_featured_tags```, ```about.md``` 내용 수정
 - ```favicon.ico```, ```tile-wide.png```, ```tile.png``` 원하는 이미지로 설정
 
+### 추가 라이브러리
+
+- [Rouge](https://github.com/jneen/rouge) : Code Highlighter
+
+```shell
+sudo gem install rouge
+```
+
 ### 로컬 빌드
 - Ruby가 설치되어 있어야 합니다
 - Ruby 설치는 [공식 문서](https://www.ruby-lang.org/ko/documentation/installation/) 참고

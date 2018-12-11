@@ -24,7 +24,7 @@ MFC (C++) 에서 여러가지 라이브러리를 사용하다보면
 감사드립니다. ^_^
 
 ### CString (CStringA, CStringW) to std::string
-```C++
+```cpp
 std::string S2(CString& CS)
 {
 #ifdef _UNICODE
@@ -38,7 +38,7 @@ std::string S2(CString& CS)
 ```
 
 ### std::string to CString (CStringA, CStringW)
-```C++
+```cpp
 CString S2(std::string& S)
 {
 #ifdef _UNICODE
@@ -52,7 +52,7 @@ CString S2(std::string& S)
 ```
 
 ### std::wstring to CString (CStringA, CStringW)
-```C++
+```cpp
 CString S2(std::wstring& WS)
 {
 #ifdef _UNICODE
@@ -66,7 +66,7 @@ CString S2(std::wstring& WS)
 ```
 
 ### std::string to/from std::wstring
-```C++
+```cpp
 std::string S3(std::wstring& WS)
 {
 	USES_CONVERSION;
@@ -81,14 +81,14 @@ std::wstring S3(std::string& S)
 ```
 
 ### CStringA to/from CStringW
-```C++
+```cpp
 CStringA CA
 CStringW CS(CA);
 CStringA _CA(CS);
 ```
 
 ### TCHAR* (char\*, wchat_t\*) to LPSTR, LPTSTR, LPCSTR, LPCTSTR
-```C++
+```cpp
 LPSTR S4_LPSTR(TCHAR * pChar)
 {
 #ifdef _UNICODE
@@ -124,7 +124,7 @@ LPCTSTR S4_LPCTSTR(TCHAR * pChar)
 ```
 
 ### CString to char* buffer
-```C++
+```cpp
 void SMEMCPY(char* destBuf, CString & strSrc, int nSize)
 {
 	std::string str = CWVString::S2(strSrc);

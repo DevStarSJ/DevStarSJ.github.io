@@ -145,7 +145,7 @@ Networking 과 tags에 대해서는 따로 설명을 하지 않겠다. 일반적
 
 아래 코드는 연속된 3개의 Job을 실행하는 예제 코드이다.  
 
-```Python
+```python
 import boto3
 client = boto3.client('batch')
 
@@ -193,7 +193,7 @@ Job1, Job3는 vCPU가 72개 필요한 instance에서 실행되어야 하며, Job
 **CloudFomation**에서는 정상적으로 수정이 되는지 확인해보지는 않았다.
 
 - role.tf
-```HCL
+```hcl
 data "aws_iam_instance_profile" "AWSEC2ContainerServiceForEC2Policy" {
     name = "AWSEC2ContainerServiceForEC2Policy"
 }
@@ -208,7 +208,7 @@ data "aws_iam_role" "AWSServiceRoleForEC2SpotFleet" {
 ```
 
 - subnet.tf
-```HCL
+```hcl
 variable "subnet_id" {
     type = "string"
     default = "subnet-example"
@@ -221,7 +221,7 @@ data "aws_subnet" "subnet_default" {
 ```
 
 - security_group.tf
-```HCL
+```hcl
 variable "security_group_id" {
     type = "string"
     default = "sg-example"
@@ -233,7 +233,7 @@ data "aws_security_group" "default_sg" {
 ```
 
 - ecs.tf
-```HCL
+```hcl
 resource "aws_ecr_repository" "batch_image" {
   name = "batch_image"
 }
@@ -241,7 +241,7 @@ resource "aws_ecr_repository" "batch_image" {
 **ECR**의 경우 미리 정의된 것을 사용할 경우 위 코드에서 `resource`만 `data`로 수정하면 된다.
 
 - batch.tf
-```HCL
+```hcl
 resource "aws_batch_compute_environment" "env_72" {
   compute_environment_name = "env_72"
 

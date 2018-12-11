@@ -159,7 +159,7 @@ Error 발생 사항에 대한 statusCode 전달 형태, Binary Response일 경�
 **Binary Response**에 대해서 base64로 encode한 string값을 body에 저장하여 callback 함수의 2번째 인자로 전달하는게 편하면 그렇게 하면 된다.
 
 #### Lambda의 Binary Response
-```JavaScript
+```javascript
 const content = fs.readFileSync(result.filename);
 const response = {
     statusCode: 200,
@@ -173,7 +173,7 @@ callback(null, response);
 ```
 
 #### Express의 Binary Response
-```JavaScript
+```javascript
 res.header('Content-Type', result.contentType)
    .sendFile(result.filename);
 ```
@@ -191,7 +191,7 @@ Error를 최상단의 `catch { ... }`로 전달 받은뒤 처리하는 형태였
 
 **Express**에는 이 방법 외에도 `app.use`에 Middleware로 등록해 놓는 것도 가능하다.
 
-```TypeScript
+```typescript
 app.use((err, req: Request, res: Response, next: NextFunction) => {
     console.info("error status = ", err.status);
     if (err.status && err.status < 500) {
@@ -223,7 +223,7 @@ app.use((err, req: Request, res: Response, next: NextFunction) => {
 
 `.env`라는 파일에 `KEY=VALUE` 형태로 값들을 저장해 놓은 뒤 아래와 같이 사용이 가능하다.
 
-```TypeScript
+```typescript
 import * as dotenv from "dotenv";
 dotenv.config({ path: ".env" });
 const a = process.env.KEY;
@@ -269,7 +269,7 @@ express의 types를 설치
 npm install @types/express --save-dev
 ```
 
-```TypeScript
+```typescript
 import {Router , Request , Response , NextFunction}  from 'express';
 import * as express from 'express';
 import * as asyncify from "express-asyncify";
@@ -293,20 +293,20 @@ async function index(req: Request, res: Response, next: NextFunction) {
 
 ### 2. 예제 js 코드를 ts로 고칠 경우 requre -> import로 수정
 
-```JavaScript
+```javascript
 const express = require('express')
 ```
 
 위 코드와 동일하게 동작하게 하려면 아래와 같이 수정해야 한다.
 
-```TypeScript
+```typescript
 import * as express from 'express';
 ```
 
 패키지로 제공받는 코드의 경우는 저렇게 사용하면 되며, 내가 작성한 코드는 `default` 키워드를 이용 할 수 있다.
 
 #### app.ts
-```TypeScript
+```typescript
 import {Request , Response , NextFunction}  from 'express';
 import * as express from 'express';
 import * as asyncify from "express-asyncify";
@@ -319,7 +319,7 @@ export default app;
 ```
 
 #### lambda.ts
-```TypeScript
+```typescript
 import * as awsServerlessExpress from 'aws-serverless-express';
 import * as awsServerlessExpressMiddleware from 'aws-serverless-express/middleware';
 import app from './app';
@@ -338,7 +338,7 @@ export const handler = (event, context) => awsServerlessExpress.proxy(server, ev
 ```
 
 #### app.local.ts
-```TypeScript
+```typescript
 import app from './app';
 const port = 3000;
 

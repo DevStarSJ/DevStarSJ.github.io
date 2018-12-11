@@ -72,7 +72,7 @@ comments: true
 
 눈여겨 볼 부분이 두 곳 정도 있네요.
 
-```CSharp
+```csharp
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializerAttribute(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 ```
@@ -92,7 +92,7 @@ comments: true
 저렇게 **class**로 만들기 싫다면, 그냥 `Stream`으로 주고 받는 방법도 있습니다.
 아래 내용에서는 `Stream`으로 주고 받는 방법으로 진행하도록 하겠습니다.
 
-```CSharp
+```csharp
 public string FunctionHandler(string input, ILambdaContext context)
 {
 	return input?.ToUpper();
@@ -145,14 +145,14 @@ public string FunctionHandler(string input, ILambdaContext context)
 
 2개의 `using`문을 위에 써주세요.
 
-```CSharp
+```csharp
 using System.IO;
 using System.Text;
 ```
 
 `FunctionHandler` 메서드를 아래와 같이 수정해 주세요.
 
-```CSharp
+```csharp
 public string FunctionHandler(Stream stream, ILambdaContext context)
 {
 	List<byte> bytes = new List<byte>();
@@ -198,13 +198,13 @@ public string FunctionHandler(Stream stream, ILambdaContext context)
 
 `using`문에 다음을 추가해 주세요.
 
-```CSharp
+```csharp
 using Newtonsoft.Json.Linq;
 ```
 
 `FunctionHandler` 메서드를 아래와 같이 수정해 주세요.
 
-```CSharp
+```csharp
 public Stream FunctionHandler(Stream stream, ILambdaContext context)
 {
     List<byte> bytes = new List<byte>();

@@ -49,7 +49,7 @@ Classes, Instace of classes, Methods, Inheritacne는 Chapter.01에서 이미 살
 `fs.readdirSync`와 `fs.statSync` 메서드는 **NodeJS**에 있는 것 입니다.
 
 #### List 3-1 Open Recursion
-```TypeScript
+```typescript
 interface FileItem {
 	path: string;
 	contents: string[];
@@ -133,7 +133,7 @@ var files = fileReader.getFiles('path');
 - 코드 여러곳에 나타는 `taxRateFactor`
 
 #### List 3-2 Encapsulation
-```TypeScript
+```typescript
 class Totalizer {
     private total = 0;
     private taxRateFactor = 0.2;
@@ -180,7 +180,7 @@ Listing 3-3이 거기에 대한 예제입니다.
 위임과 전달은 두 클래스간의 관계가 `ia a` 테스트에 실패하여 상속이 안되는 경우 좋은 대안입니다.
 
 #### Listing 3-3. Delegation
-```TypeScript
+```typescript
 interface ControlPanel {
     startAlarm(message: string): any;
 }
@@ -259,7 +259,7 @@ List 3-3은 위임의 간단한 예제입니다.
 리스트 중 마지막 부분에 보면 *"유사한 스트럭쳐를 많이 가진 스트럭쳐"*란 형태가 같은 *타입스크립트 스트럭쳐 타입*을 말합니다.
 
 #### Listing 3-4. Polymorphism
-```TypeScript
+```typescript
 interface Vehicle {
     moveTo(x: number, y: number);
 }
@@ -341,7 +341,7 @@ navigate(car);
 
 #### Listing 3-5. Single responsibility principle (SRP) violation
 
-```TypeScript
+```typescript
 class Movie {
     private db: DataBase;
     constructor(private title: string, private year: number) {
@@ -362,7 +362,7 @@ class Movie {
 반대로 `MovieRepository`를 변경한 경우 `Movie`는 변경할 필요가 없습니다.
 
 #### Listing 3-6. Separate reasons for change
-```TypeScript
+```typescript
 class Movie {
     constructor(private title: string, private year: number) {
     }
@@ -421,7 +421,7 @@ VIP 손님과 같이 2배로 포인트를 보상해 주려고 할때 `DoublePoin
 `getPoints()`함수 호출하면 슈퍼클래스의 함수가 무시되고 서브클레스에서 수행합니다.
 
 #### Listing 3-7. Open–closed principle (OCP)
-```TypeScript
+```typescript
 class RewardPointsCalculator {
     getPoints(transactionValue: number) {
         // 4 points per whole dollar spent
@@ -465,7 +465,7 @@ alert(pointsCalculator.getPoints(100.99));
 여기서 말하고자하는 것은 예외 처리 코드의 경우 서브클레스라고 해서 다르게 처리되어서는 안된다는 뜻입니다.
 
 #### Listing 3-8. Error classes
-```TypeScript
+```typescript
 class ApplicationError implements Error {
     constructor(public name: string, public message: string) {
     }
@@ -498,7 +498,7 @@ throw new ApplicationError('Example Error', 'An error has occurred');
 이 인터페이스는 프린터 동작을 단순히 포함하는 식이기 때문에 폴딩, 봉투 입력, 팩스, 스캔, 이메일 전송 등의 작업을 추가하는 식으로 점점 더 커질 수 있습니다.
 
 #### Listing 3-9. Printer interface
-```TypeScript
+```typescript
 interface Printer {
     copyDocument();
     printDocument(document: Document);
@@ -515,7 +515,7 @@ interface Printer {
 `List 3-10`은 기존의 `Printer` 인터페이스를 나눠서 `SimplePrinter`와 `SuperPrinter`에서 구현을 다르게 한 것을 보여줍니다.
 
 #### Listing 3-10. Segregated interfaces
-```TypeScript
+```typescript
 interface Printer {
     printDocument(document: Document);
 }
@@ -559,7 +559,7 @@ class SuperPrinter implements Printer, Stapler, Copier {
 `LightSwitch` 클래스는 `Light` 클래스에 의존성을 가지고 있습니다.
 
 #### Listing 3-11. High-level dependency on low-level class
-```TypeScript
+```typescript
 interface LightSource {
     switchOn();
     switchOff();
@@ -634,7 +634,7 @@ GOF의 디자인패턴에는 총 23가지 패턴이 있습니다.
 `List 3-13`은 휠청소 클래스에 대한 인터페이스와 2가지 기본, 고급의 2가지 전략을 보여줍니다.
 
 #### Listing 3-13. Wheel cleaning
-```TypeScript
+```typescript
 interface WheelCleaning {
     cleanWheels(): void;
 }
@@ -658,7 +658,7 @@ class ExecutiveWheelCleaning extends BasicWheelCleaning {
 `List 3-14`는 차체 청소를 위한 전략을 보여줍니다.
 
 #### Listing 3-14. Body cleaning
-```TypeScript
+```typescript
 interface BodyCleaning {
     cleanBody(): void;
 }
@@ -683,7 +683,7 @@ class ExecutiveBodyCleaning extends BasicBodyCleaning {
 세척 클래스들과 강력한 결합을 가지고 있으며, 선택된 것에 대하여 클래스를 생성합니다.
 
 #### Listing 3-15. CarWashProgram class before the abstract factory pattern
-```TypeScript
+```typescript
 class CarWashProgram {
     constructor(private washLevel: number) {
     }
@@ -720,7 +720,7 @@ class CarWashProgram {
 또한 각각의 청소를 클래스로 부터 해제하는 일이 필요할 수도 있습니다.
 
 #### Listing 3-16. Abstract factory
-```TypeScript
+```typescript
 interface ValetFactory {
     getWheelCleaning() : WheelCleaning;
     getBodyCleaning() : BodyCleaning;
@@ -731,7 +731,7 @@ interface ValetFactory {
 각각의 팩토리는 해당 등급에 맞는 청소클래스를 제공합니다.
 
 #### Listing 3-17. Concrete factories
-```TypeScript
+```typescript
 class BronzeWashFactory implements ValetFactory {
     getWheelCleaning() {
         return new BasicWheelCleaning();
@@ -766,7 +766,7 @@ class GoldWashFactory implements ValetFactory {
 이것은 컴파일 타임이나 런타임에 수행됩니다.
 
 #### Listing 3-18. Abstract factory pattern in use
-```TypeScript
+```typescript
 class CarWashProgram {
     constructor(private cleaningFactory: ValetFactory) {
     }
@@ -799,7 +799,7 @@ class CarWashProgram {
 이 함수를 통해서 **믹스인**을 적용하고 싶을 때는 언제든지 적용이 가능합니다.
 
 #### Listing 3-19. Mixin enabler function
-```TypeScript
+```typescript
 function applyMixins(derivedCtor: any, baseCtors: any[]) {
     baseCtors.forEach(baseCtor => {
         Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
@@ -816,7 +816,7 @@ function applyMixins(derivedCtor: any, baseCtors: any[]) {
 이러한 클래스는 서로 다른 조합으로 구성되어 실행이 가능합니다.
 
 #### Listing 3-20. Reusable classes
-```TypeScript
+```typescript
 class Sings {
     sing() {
         console.log('Singing');
@@ -840,7 +840,7 @@ class Acts {
 타입스크립트에서는 `implements` 키워드 뒤에 믹스인 리스트(*증강 클래스*)를 콤마로 나열해서 클래스를 구성할 수 있습니다.
 
 #### Listing 3-21. Composing classes
-```TypeScript
+```typescript
 class Actor implements Acts {
     act: () => void;
 }
@@ -861,7 +861,7 @@ applyMixins(AllRounder, [Acts, Dances, Sings]);
 이 클래스를 사용하는 것은 다른 클래스를 사용하는 것과 다르지 않습니다.
 
 #### Listing 3-22. Using the classes
-```TypeScript
+```typescript
 var actor = new Actor();
 actor.act();
 
@@ -909,7 +909,7 @@ or
 실수를 방지하기 위해서는 *증강 클래스* 안에 있는 속성에 대해서는 디폴트값을 정의하지 않는 것이 좋습니다.
 
 #### Listing 3-23. Properties not mapped
-```TypeScript
+```typescript
 class Acts {
     public message = 'Acting';
     act() {
@@ -935,7 +935,7 @@ actor.act();
 객체마다 다른 값이 필요한 경우 해당 요소는 *믹스인 함수*에서 초기화해줘야 합니다.
 
 #### Listing 3-24. Static properties are available
-```TypeScript
+```typescript
 class Acts {
     public static message = 'Acting';
     act() {

@@ -77,13 +77,13 @@ Web API를 구현하기 위해서는 여러가지 URL에 대해서 각각 다른
 
 `/`로 `GET` 요청에 대해서는 앞 장에서 사용했던 코드 그대로 전달을 하면 됩니다.
 
-```JavaScript
+```javascript
   return {"event" : event, "context" : context};
 ```
 
 `/test/{userId}`로 `GET`, `POST` 요청에 대해서는 각각 `get`, `post`라는 이름의 함수로 생성하겠습니다.
 
-```JavaScript
+```javascript
 function get(userId) {
   return {
     body: { id: userId, name: "test" }
@@ -101,7 +101,7 @@ function post(userId, header, body) {
 **JavaScript**이기 때문에 그냥 간단하게 **JSON Object**형식으로 생성을 하면 됩니다.
 `event.context["resource-path"]` -> `event.context["http-method"]` -> `각각의 기능` 순서대로 접근하면 되도록 생성하였습니다.
 
-```JavaScript
+```javascript
 const routeMap = {
   '/': {
     'GET': (event, context) => {
@@ -127,7 +127,7 @@ const routeMap = {
 이제 실질적으로 **Router**기능을 수행하는 함수를 생성해 보겠습니다.
 `event`와 `context`를 전달받아 `routeMap`에서 해당 기능들을 수행하고 그 결과를 다시 전달하는게 이 함수 기능의 전부입니다.
 
-```JavaScript
+```javascript
 function router(event, context) {
   const controller = routeMap[event.context["resource-path"]][event.context["http-method"]];
 
@@ -144,7 +144,7 @@ function router(event, context) {
 이제 모든 기능 구현은 끝났습니다.
 **Lambda**의 진입점인 `exports.handler`에서 `router` 함수를 호출해주기만 하면 됩니다.
 
-```JavaScript
+```javascript
 exports.handler = (event, context, callback) => {
    let result = router(event, context);
    callback(null, result);
@@ -155,7 +155,7 @@ exports.handler = (event, context, callback) => {
 
 앞에 설명한 내용들을 실제 소스코드로 작성하면 아래와 같이 됩니다.
 
-```JavaScript
+```javascript
 'use strict';
 
 function get(userId) {

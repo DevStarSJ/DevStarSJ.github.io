@@ -127,7 +127,7 @@ $ pip install boto3, sagemaker
 
 이제 `Jupyer Notebook`에서 노트북 파일을 만든 뒤 아래 과정대로 cell에 입력하고 실행해보자.
 
-```Python
+```python
 import sagemaker
 import boto3
 
@@ -138,7 +138,7 @@ smclient = session.client('sagemaker')
 
 `boto3`를 이용하여 `SageMaker clinet`를 생성한 것이다.
 
-```Python
+```python
 tuning_job_config = {
     "ParameterRanges": {
       "CategoricalParameterRanges": [],
@@ -196,7 +196,7 @@ tuning_job_config = {
 
 `Tuning`할 `Hyperparameter`에 대한 정의이다. 앞서 `3.1`에서 확인한 값들을 이용하여 정의하자.
 
-```Python
+```python
 from sagemaker.amazon.amazon_estimator import get_image_uri
 training_image = get_image_uri(region, 'xgboost')
 
@@ -217,7 +217,7 @@ role = 'arn:aws:iam::luna:role/service-role/AmazonSageMaker-ExecutionRole-201809
 - `role` : `SageMaker`를 실행할 권한이 있는 Role의 Arn
 
 
-```Python
+```python
 training_job_definition = {
     "AlgorithmSpecification": {
       "TrainingImage": training_image,
@@ -270,7 +270,7 @@ training_job_definition = {
 
 `Hyperparameter Tuning Job`에 대한 정의이다.
 
-```Python
+```python
 smclient.create_hyper_parameter_tuning_job(
     HyperParameterTuningJobName   = tuning_job_name,
     HyperParameterTuningJobConfig = tuning_job_config,
@@ -285,7 +285,7 @@ smclient.create_hyper_parameter_tuning_job(
 
 실행 상태를 코드로 확인하려면 아래와 같이 실행하면 된다.
 
-```Python
+```python
 smclient.describe_hyper_parameter_tuning_job(
     HyperParameterTuningJobName=tuning_job_name)
 ```

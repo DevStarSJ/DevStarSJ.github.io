@@ -38,7 +38,7 @@ comments: true
   - Role & Existing role : 일단은 적당히 선택 (만약 Lambda에서 다른 AWS 서비스 RDS, S3 등을 연동할려면 필요)
   - 아래 코드 입력 후 `Next` 선택
 
-```JavaScript
+```javascript
 'use strict';
 
 exports.handler = (event, context, callback) => {
@@ -77,7 +77,7 @@ exports.handler = (event, context, callback) => {
 
 
 
-```JavaScript
+```javascript
 'use strict';
 
 exports.handler = (event, context, callback) => {

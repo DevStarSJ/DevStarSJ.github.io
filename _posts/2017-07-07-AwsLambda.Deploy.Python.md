@@ -100,7 +100,7 @@ Usage:
 ```
 
 ### index.py
-```Python
+```python
 import requests
 
 def handler(event, context):

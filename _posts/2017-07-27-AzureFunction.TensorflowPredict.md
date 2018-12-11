@@ -98,7 +98,7 @@ comments: true
 ```
 
 ### run.csx
-```CSharp
+```csharp
 using System;
 using System.Net;
 using System.Collections.Generic;

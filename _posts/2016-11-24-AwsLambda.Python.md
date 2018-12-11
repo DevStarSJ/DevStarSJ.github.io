@@ -58,7 +58,7 @@ comments: true
   - **Handler** : `index.handler`라고 되어 있는지 확인
 - `Code` 탭 으로 와서 아래 코드 입력  
 
-```Python
+```python
 def handler(event, context):
     return { 'event': str(event), 'context': str(context) }
 ```
@@ -132,7 +132,7 @@ def handler(event, context):
 
 그래서 JSON 형식으로 응답하도록 코드를 조금 수정해 봤습니다.
 
-```Python
+```python
 import json
 
 def handler(event, context): 
@@ -152,7 +152,7 @@ def handler(event, context):
 
 바로 코드 들어갑니다.
 
-```Python
+```python
 import json
 
 def get(event):

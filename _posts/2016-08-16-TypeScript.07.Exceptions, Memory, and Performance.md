@@ -26,7 +26,7 @@ comments: true
 - 예외로 어떤 타입의 객체라도 전달이 가능하지만, 가능하다면 `Error`객체에 메세지를 포함시키는 것이 바람직함
 
 #####Listing 7-1. Using the throw keyword
-```TypeScript
+```typescript
 function errorsOnThree(input: number) {
     if (input === 3) {
         throw new Error('Three is not allowed');
@@ -42,7 +42,7 @@ var result = errorsOnThree(3);
 `toString()` 메서드를 구현해주면 콘솔에 출력되는 정보를 보기 좋게 할 수 있습니다.
 
 #####Listing 7-2. Custom error
-```TypeScript
+```typescript
 class ApplicationError implements Error {
 
     public name = 'ApplicationError';
@@ -63,7 +63,7 @@ class ApplicationError implements Error {
 - `errorsOnThree` 함수에서 잘못된 입력에 대해서 `InputError`를 발생
 
 #####Listing 7-3. Using inheritance to create special exception types
-```TypeScript
+```typescript
 class ApplicationError implements Error {
 
     public name = 'ApplicationError';
@@ -95,7 +95,7 @@ function errorsOnThree(input: number) {
 - 예외를 처리하기 위해서는 예외가 발생한 곳을 `try-catch-finally` 블록으로 감싸줘야 함
 
 #####Listing 7-4. Unconditional catch block
-```TypeScript
+```typescript
 try {
     var result = errorsOnThree(3);
 } catch (err) {
@@ -107,7 +107,7 @@ try {
 우리가 예상가능하고 처리가능한 예외에 대해서만 처리를 하고 나머지 예외에 대해서는 다시 발생시키는 것이 더 올바른 방법입니다.
 
 #####Listing 7-5. Checking the type of error
-```TypeScript
+```typescript
 try {
     var result = errorsOnThree(3);
 } catch (err) {
@@ -151,7 +151,7 @@ TypeScript 같은 고차원 언어에서는 메모리 관리가 자동으로 됩
 센서에 가까이 있을 때 검출되는 API에 대한 사용 예제를 보도록 하겠습니다.
 
 #####Listing 7-6. Asynchronous pattern
-```TypeScript
+```typescript
 var sensorChange = function (reading) {
     var proximity = reading.near ?
         'Near' : 'Far';
@@ -166,7 +166,7 @@ window.addEventListener('userproximity', sensorChange, true);
 오류가 발생할 경우에 대해서 대비하기 위해서 `try-finally` 블록을 이용해야 합니다.
 
 #####Listing 7-7. Imaginary unmanaged proximity sensor
-```TypeScript
+```typescript
 var sensorChange = function (reading) {
     var proximity = reading.near ?
         'Near' : 'Far';
@@ -226,7 +226,7 @@ GC 수행 시간은 더 걸릴 수 있지만, 메모리 누수의 발생 가능�
 `testCommunicationLines` 함수는 사이즈가 4, 10 인 경우에 대해서 계산하는 것으로 테스트 합니다.
 
 #####Listing 7-8. Calculating lines of communication
-```TypeScript
+```typescript
 class CommunicationLines {
     calculate(teamSize: number) {
         return (teamSize * (teamSize - 1)) / 2
@@ -256,7 +256,7 @@ testCommunicationLines();
 기본적으로는 10,000번 실행을 해서 총 시간 및 평균 시간을 출력합니다.
 
 #####Listing 7-9. Performance.ts runner
-```TypeScript
+```typescript
 class Performance {
     constructor(private func: Function, private iterations: number) {
     }
@@ -302,7 +302,7 @@ export = Performance;
 앞에서 작성한 `CommunicationLines` 클래스에 대한 성능 측정을 `Performance`로 성능 측정을 하는 것에 대한 예제 입니다.
 
 #####Listing 7-10. Running the performance test
-```TypeScript
+```typescript
 import perf = require('./performance');
 
 class CommunicationLines {
@@ -336,7 +336,7 @@ console.log(result.totalRunTime + ' ms');
 하지만 아래 코드와 같이 예외가 발생하게 된다면 전혀 다른 결과가 나옵니다.
 
 #####Listing 7-11. Running the performance test with exceptions
-```TypeScript
+```typescript
 import perf = require('./performance');
 
 class CommunicationLines {
