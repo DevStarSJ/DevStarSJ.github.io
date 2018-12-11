@@ -190,7 +190,7 @@ Job1, Job3는 vCPU가 72개 필요한 instance에서 실행되어야 하며, Job
 
 참고로 현재(2018-11) 기준으로 **Compute Environment**가 설정된 상태에서 수정해서 `apply`할 경우 오류가 발생하며 `rollback`이 되지 않는다. 수동으로 작업을 하려고 해도 해당 리소스를 사용하고 있는 모든 **Job queue**를 모두 `Disable` -> `Delete`한 후에 **Compute Environment**를 `Disable` -> `Delete`하고 새로 만들어야 한다.
 
-**CloudFomation**에서는 정상적으로 수정이 되는지 확인해보지는 않았다.
+**CloudFormation**에서는 정상적으로 수정이 되는지 확인해보지는 않았다.
 
 - role.tf
 
