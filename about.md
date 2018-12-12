@@ -13,6 +13,23 @@ order: 10
 
 현재 관심사는 **SRE** (Site Reliability Engineering) 및 **DevOps** 등 Server-side Infrastructure Engineering에 관심이 많습니다.
 
+## Character Stats.
+- Soft Skills : `Architecture` 5, `PM` 1, `PL` 2
+- Programming Languages : `C#` 7, `TypeScript` 5, `Python` 4, `C++` 6, `C` 4
+- Data : `SQL` 7, `MachineLearning` 2, `Spark` 1
+- Backend : `Node` 5, `ASP.NET` 6
+- Public Cloud : `AWS` 5, `Azure` 2
+- Parallelism : `CUDA` 4, `SIMD` 2, `OpenMP` 2
+
+## Main Quest
+
+- 직방(16.10 ~ Current) : `Architecture`+1, `Node`+5, `TypeScript`+5, `C#`+2, `ASP.NET`+4, `AWS`+5, `Azure`+2, `Python`+4, `MachineLearning`+2, `Spark`+1
+- SPE (16.04 ~ 16.09) : `ASP.NET`+1
+- WareValley (14.07 ~ 16.04) : `C++`+3, `C#`+1, `SQL`+4
+- JS-System (10.10 ~ 14.07) : `Architecture`+3, `PM`+1, `PL`+2, `C#`+4, `ASP.NET`+1, `C++`+3, `SQL`+3, `CUDA`+4, `SIMD`+2, `OpenMP`+2
+- 삼성전자 (03.01 ~ 04.11): `Architecture`+1, `C`+3
+- BND (01.12 ~ 02.07): `C`+1
+
 과거 관심을 가졌던 분야로는 다음의 것들이 있습니다.
 
 - Machine Learing Engineering
