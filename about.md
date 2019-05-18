@@ -9,15 +9,21 @@ order: 10
 - Github : <https://github.com/DevStarSJ>
 - Mail : seokjoon.yun@gmail.com
 
-새로운 기술을 배우는 것을 좋아하는 개발자입니다. 한 분야를 깊게 파는 **Specialist**라기 보다는 여러 분야 기술을 잘 융합하여 필요한 곳에 적용하는 **Generalist**에 가깝습니다.  
+새로운 기술을 배우는 것을 좋아하는 개발자입니다.
+한 분야를 깊게 파는 **Specialist**라기 보다는 여러 분야 기술을 잘 융합하여 필요한 곳에 적용하는 **Generalist**에 가깝습니다.
+조직 내 필요로 하는 분야에 대해서 빠르게 배워서 일을 진행하는데 능숙합니다. 
 
 현재 관심사는 **SRE** (Site Reliability Engineering) 및 **DevOps** 등 Server-side Infrastructure Engineering에 관심이 많습니다.
+
+요즘은 주로 **Ruby on Rails** (EKS) + **MySQL** (AuroraDB) 와 **React** + **MobX state tree** (static S3) 로 Web Application 개발을 하고 있습니다.
 
 ## Character Stats.
 - Soft Skills : `Architecture` 5, `PM` 1, `PL` 2
 - Programming Languages : `C#` 7, `TypeScript` 5, `Python` 4, `C++` 6, `C` 4
-- Data : `SQL` 7, `MachineLearning` 2, `Spark` 1
-- Backend : `Node` 5, `ASP.NET` 6
+- Data : `SQL` 7, `MachineLearning` 3, `Spark` 2
+- Backend : `Node` 5, `ASP.NET` 6, `Ruby on Rails` 4
+- Frontend : `React` 3, `MobX state tree` 5, `Next.JS` 1
+- Mobile : `React-Native` 2
 - Public Cloud : `AWS` 5, `Azure` 2
 - Parallelism : `CUDA` 4, `SIMD` 2, `OpenMP` 2
 
@@ -47,6 +53,9 @@ order: 10
 - Backend Development
   - Node.JS (TypeScript + serverless-express)
   - ASP.NET (C# , .NET Core)
+  - Ruby on Rails
+- Frontend Development
+  - React, MobX state tree, Next.JS
 - Public Cloud Service
   - AWS : SageMaker, EMR, EC2, Batch, ECS, S3, Lambda (serverless-express), API Gateway, CloudFront, DMS, DynamoDB, SQS, SMS 
   - Azure : VM, ACS, Function, Batch (Shipyard), DataFactory
@@ -67,7 +76,8 @@ order: 10
 
 | Company | Period | Role | Tasks |
 |:---:|:---:|:---:|---|
-| 직방 | 16.10 ~ Current | ML & Backend | 아파트 시세 생성 + `Machine Learning` : **Python, XGBoost/ LightGBM/ CatBoost/ ScikitLearn/ Keras, AWS** <br> Serverless API - Realtime Binary Response (image converter, pdf, excel) : **Node.JS(TypeScript), AWS** <br> B2B Service : **ASP.NET (C#)** |
+| JTNet | 19.01 ~ Current | Various | AWS Terraform, k8s (EKS), Jenkins(+ AWS CodeBuild), Rails Backend Server, React + MobX state tree web application |
+| 직방 | 16.10 ~ 19.01 | ML & Backend | 아파트 시세 생성 + `Machine Learning` : **Python, XGBoost/ LightGBM/ CatBoost/ ScikitLearn/ Keras, AWS** <br> Serverless API - Realtime Binary Response (image converter, pdf, excel) : **Node.JS(TypeScript), AWS** <br> B2B Service : **ASP.NET (C#)** |
 | SPE | 16.04 ~ 16.09 | 차장 | `Web UI Controller on IoT` Rasberry Pi 3 : **ASP.NET Core (C#)** on Mono |
 | WareValley | 14.07 ~ 16.04 | 선임연구원 | Orange DB Tool : **MFC , Oracle/ DB2/ Tibero/ Altibase/ MS-SQL/ SybaseASE/IQ/ PetaSQL** <br> Orange License Key : **MFC/C#** |
 | JS-System | 10.10 ~ 14.07 | Arch. & Lead P. | Sonic Beam Simulator on Submarine + `CUDA` : **MFC** (windows application), **CUDA/OpenMP/SIMD** <br> Factory Automation <br>&nbsp;&nbsp;- SQC(통계적 공정 관리) 외 다수 : **C# / VB (windows application)**, **MS-SQL / Oracle** <br>&nbsp;&nbsp;- SMS (PCB 불량 추적) `CAD Rendering (ODB++)` : C#, MS-SQL |
