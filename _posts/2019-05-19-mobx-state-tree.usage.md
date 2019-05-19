@@ -176,7 +176,7 @@ export default UserPage;
 
 서로 다른 2개의 tree가 서로 interaction해야하거나 join하는 경우에는 대해서 해결책이 전혀 없는건 아니었지만 자연스럽지 않았다.
 
-store간의 interaction의 경우 React.component에서 해당 작업을 해줬으며, join하여 obserable한 무언가를 만들어야 하는 경우에는 join하여 obserable한 특징을 잃어버리지 전에 어떻게든 그 2개의 값을 이용하도록 구성하여 다시 실행되는 것을 보장받도록 하였다.
+store간의 interaction의 경우 React.component에서 해당 작업을 해줬으며, join하여 observable한 무언가를 만들어야 하는 경우에는 join하여 observable한 특징을 잃어버리지 전에 어떻게든 그 2개의 값을 이용하도록 구성하여 다시 실행되는 것을 보장받도록 하였다.
 
 #### rootStore로 구성
 
