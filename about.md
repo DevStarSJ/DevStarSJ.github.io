@@ -76,7 +76,7 @@ order: 10
 
 | Company | Period | Role | Tasks |
 |:---:|:---:|:---:|---|
-| JTNet | 19.01 ~ Current | Various | AWS Terraform, k8s (EKS), Jenkins(+ AWS CodeBuild), Rails Backend Server, React + MobX state tree web application |
+| JTNet | 19.01 ~ Current | Various | AWS Terraform, k8s (EKS), Jenkins(+ AWS CodeBuild), Rails Backend Server + **GraphQL**, React + MobX state tree web application, Python + Pandas, Logstash + Spark(EMR) |
 | 직방 | 16.10 ~ 19.01 | ML & Backend | 아파트 시세 생성 + `Machine Learning` : **Python, XGBoost/ LightGBM/ CatBoost/ ScikitLearn/ Keras, AWS** <br> Serverless API - Realtime Binary Response (image converter, pdf, excel) : **Node.JS(TypeScript), AWS** <br> B2B Service : **ASP.NET (C#)** |
 | SPE | 16.04 ~ 16.09 | 차장 | `Web UI Controller on IoT` Rasberry Pi 3 : **ASP.NET Core (C#)** on Mono |
 | WareValley | 14.07 ~ 16.04 | 선임연구원 | Orange DB Tool : **MFC , Oracle/ DB2/ Tibero/ Altibase/ MS-SQL/ SybaseASE/IQ/ PetaSQL** <br> Orange License Key : **MFC/C#** |
