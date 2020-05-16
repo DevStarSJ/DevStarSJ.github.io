@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Review
-slug: review
+title: Culture
+slug: culture
 menu: true
 submenu: true
 order: 6
 description: >
-  Review
+  Culture for development
 ---
