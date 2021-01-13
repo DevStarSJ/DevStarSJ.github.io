@@ -99,6 +99,8 @@ Workers는 개발팀인원이겠고, Stakeholders(이해관계자)는 사내에�
 
 그리고, 문구류와 미리 준비한 간식(이라고 썼지만, 사실은 스팀팩에 가까운 소량의 카페인과 다량의 칼로리)을 책상에 배치했다. 그리고 10개의 신호등카드 묶음도 의자 앞에 하나씩 두었다.
 
+![](https://raw.githubusercontent.com/DevStarSJ/DevStarSJ.github.io/master/assets/img/post/2021-01-11-facilitation.4.4.jpg)
+
 
 그리고 Slack에 시작 30분 전쯤에 관심있으신 분들은 참여해 달라고 메세지를 소극적으로 남겼다.
 
