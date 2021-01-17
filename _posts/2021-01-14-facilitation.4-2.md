@@ -26,7 +26,7 @@ comments: true
 
 "무엇을 기대하느냐?"는 질문에 대한 개발팀원들의 답변은 기억이 안 나는데 그냥 평범한 대답이었던 것 같고, 이 워크샵을 준비한 나로서는 힘이 빠지기도 했다. Stakeholder 중 최근에 합류한 C-lv. 한 명은 Admin 시스템을 아직 잘 몰라서 알아보러 왔다고 했고, O부서 두 분은 그동안 건의하려고 생각했던 사항들을 이야기하러 왔다고 했다.
 
-![](https://raw.githubusercontent.com/DevStarSJ/DevStarSJ.github.io/master/assets/img/post/2021-01-14-facilitation.4.13.jpg)
+![](https://raw.githubusercontent.com/DevStarSJ/DevStarSJ.github.io/master/assets/img/post/2021-01-14-facilitation.4.13.png)
 
 그런 뒤 나는 **Draft Agenda**를 가리키면서 "통상적으로 프로젝트를 시작할 때 **To-Be**와 **To-Do: Priority**까지는 PO가 준비하는 것이며, 다음 단계들은 개발팀이 결정하는 사항들이다. 하지만 이번 프로젝트에서 우리는 PO없이 시작해야 하므로 전 과정을 함께 해보기 위해서 워크샵을 준비하였다."고 워크샵의 취지를 설명하였다. 즉, 여기 모인 모든 사람들이 PO가 하는 일을 체험하게 되는 것이다.
 
