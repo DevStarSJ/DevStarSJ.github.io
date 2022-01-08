@@ -53,6 +53,19 @@ order: 10
 
 ## 경력
 
+#### Goodoc
+
+- <https://www.goodoc.co.kr>
+- 2021.11 ~ 현재
+- SRE, Backend Engineer
+
+#### Kakao Enterprise
+
+- <https://www.kakaoenterprise.com>
+- 2021.03 ~ 2021.11 (9개월)
+- 카카오 아지트, 카카오워크 보드서비스 서버 개발 총괄
+  - Ruby on Rails + DKOS(Kubernetes)
+
 #### Genoplan
 
 - <https://www.genoplan.com>
