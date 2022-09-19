@@ -33,12 +33,11 @@ order: 10
 
 ## 지금은요 ?
 
-[Genoplan]<https://www.genoplan.com>에서 DevOps, Backend Developer, Agile Coach 역할을 수행중입니다.
-
-- AWS Infra 관리 및 자동화(Terraform)
-- Jenkins CI/CD 세팅 및 운영
-- 신규 서비스 Server 개발 : Ruby on Rails + GraphQL
-- Daily Scrum, Sprint Meeting 운영
+- [굿닥](https://www.goodoc.co.kr)에서 SRE, Backend Engineer를 수행합니다.
+- 2021.11 ~ 현재
+  - 병원찾기 Squad Tech Lead: 2022-06 ~ 2022-08 (플랫폼 cell로 조직이동)
+  - Backend Tech Lead: 2022-04 ~ 현재
+  - Platform Engineering Cell: 2022-08 ~ 현재
 
 ## Skills
 
@@ -58,6 +57,9 @@ order: 10
 - <https://www.goodoc.co.kr>
 - 2021.11 ~ 현재
 - SRE, Backend Engineer
+  - 병원찾기 Squad Tech Lead: 2022-06 ~ 2022-08 (플랫폼 cell로 조직이동)
+  - Backend Tech Lead: 2022-04 ~ 현재
+  - Platform Engineering Cell: 2022-08 ~ 현재
 
 #### Kakao Enterprise
 
@@ -156,8 +158,17 @@ order: 10
 - 한국군사과학기술학회 (2014.06) : Performance Improvement for Cylindrical Array Sonar Simulator Beam Pattern Generation Stave Status Changes, Using CUDA 논문 발표
   [slide](https://www.slideshare.net/seokjoonyun9/cuda-33834381) (논문 내용 아님)
 
+
+## Soft Skill 교육
+- Daily Meeting Skill: 2020.06.24 (8h)
+- Kanban Workshop: 2021.01.28 (8h)
+- Sociocracy Foundation: 2021.03.28 (8h)
+- Sociocracy 초급 공개과정: 2022.07.01 ~ 02 (16h)
+- BOSSANova 저자 (John Buck) 초빙 워크샵: 2022.09.21 ~2022.09.22 (16h)
+
 ## 기타
 
 - 데이터야 놀자 외 데이터, 파이썬 관련 컨퍼런스 자원봉사단 or 조교로 참여 다수
 - [Facebook C++ Korea](https://www.facebook.com/groups/cppkorea) 임원진 활동 (14.12 ~ 17.07)
   - [C++ 핵심 가이드라인](https://github.com/CppKorea/CppCoreGuidelines) 번역 활동 (15.09 ~ 15.12)
+
