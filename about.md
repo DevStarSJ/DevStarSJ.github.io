@@ -35,6 +35,7 @@ order: 10
 
 - [굿닥](https://www.goodoc.co.kr)에서 SRE, Backend Engineer를 수행합니다.
 - 2021.11 ~ 현재
+  - SRE Tech Lead: 2021.11 ~ 현재
   - 병원찾기 Squad Tech Lead: 2022-06 ~ 2022-08 (플랫폼 cell로 조직이동)
   - Backend Tech Lead: 2022-04 ~ 현재
   - Platform Engineering Cell: 2022-08 ~ 현재
