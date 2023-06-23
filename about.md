@@ -83,13 +83,6 @@ order: 10
   - Daily Scrum Meeting, Sprint 진행
   - Project Kick-off Workshop 설계 및 진행
 
-#### Korbit
-
-- <https://korbit.co.kr>
-- 2020.05 ~ 2020.08 (3개월)
-- Middleware Server 개발
-  - Ruby on Rails + GraphQL
-  - Kotlin + Spring JWT Authentication Server
 
 #### JTNet
 
