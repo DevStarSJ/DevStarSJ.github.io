@@ -53,6 +53,8 @@ order: 10
 
 - 2023.08 ~ 현재
 - SRE
+  - tokyo에서 동작중인 문서관리 시스템 (API, Crawler, ElasticSearch, MySQL, Redis)를 seoul로 옮기고 있습니다. (EKS, OpenSearch, Elasticache, Aurora Cluster)
+  - 기존 수작업으로 하던 관리업무들을 자동화하고 있습니다.
 
 #### 당근마켓
 
@@ -67,6 +69,10 @@ order: 10
   - 병원찾기 Squad Tech Lead: 2022-06 ~ 2022-08 (플랫폼 cell로 조직이동)
   - Backend Tech Lead: 2022-04 ~ 2023-03
   - Platform Engineering Cell: 2022-08 ~ 2023-03
+- SRE
+  - v4 Migration: 기존 Infrastructure (AWS 4개 계정, 980여개의 lambda function, 28가지 RDS, 500여대 EC2, DynamoDB, ElasticSearch, Redis, S3) 에 있던 Legacy System을 신규 AWS 계정으로 4시간의 downtime으로 장애없이 마이그레이션을 성공적으로 했습니다.
+      - lambda function -> flask server에서 동작하게 이식 후 EKS 상에서 가동
+      - 여러 가지 서버군을 하나의 Nest.JS Server로 통합
 
 #### Kakao Enterprise
 
