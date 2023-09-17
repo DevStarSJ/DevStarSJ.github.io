@@ -33,12 +33,8 @@ order: 10
 
 ## 지금은요 ?
 
-- [굿닥](https://www.goodoc.co.kr)에서 SRE, Backend Engineer를 수행합니다.
-- 2021.11 ~ 현재
-  - SRE Tech Lead: 2021.11 ~ 현재
-  - 병원찾기 Squad Tech Lead: 2022-06 ~ 2022-08 (플랫폼 cell로 조직이동)
-  - Backend Tech Lead: 2022-04 ~ 현재
-  - Platform Engineering Cell: 2022-08 ~ 현재
+- [DeepSearch](https://deepsearch.com)에서 SRE, Backend Engineer를 수행합니다.
+- 2023.08 ~ 현재
 
 ## Skills
 
@@ -53,14 +49,24 @@ order: 10
 
 ## 경력
 
+#### DeepSearch
+
+- 2023.08 ~ 현재
+- SRE
+
+#### 당근마켓
+
+- 2023.03 ~ 2023.06
+- 중고거래실에서 Rails 서버개발
+
 #### Goodoc
 
 - <https://www.goodoc.co.kr>
-- 2021.11 ~ 현재
+- 2021.11 ~ 2023.03
 - SRE, Backend Engineer
   - 병원찾기 Squad Tech Lead: 2022-06 ~ 2022-08 (플랫폼 cell로 조직이동)
-  - Backend Tech Lead: 2022-04 ~ 현재
-  - Platform Engineering Cell: 2022-08 ~ 현재
+  - Backend Tech Lead: 2022-04 ~ 2023-03
+  - Platform Engineering Cell: 2022-08 ~ 2023-03
 
 #### Kakao Enterprise
 
