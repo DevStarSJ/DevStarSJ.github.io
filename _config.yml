@@ -96,6 +96,9 @@ collections:
   wellness:
     permalink:       /wellness/:path/
     output:          true
+  wellness_ko:
+    permalink:       /wellness/ko/:path/
+    output:          true
 
 # -----------------------------------------------------------------------------
 #  Advanced configuration
