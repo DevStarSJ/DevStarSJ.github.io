@@ -1,0 +1,346 @@
+// Wellness Section Styles
+// Sage Green + Warm Cream - Clean, Calming Design
+
+// Wellness Color Palette
+$wellness-primary: #7CB590;      // Sage green
+$wellness-primary-dark: #5A9A70; // Darker sage
+$wellness-secondary: #E8F5E9;    // Light mint bg
+$wellness-accent: #4CAF50;       // Fresh green
+$wellness-cream: #FDFBF7;        // Warm cream
+$wellness-text: #2D3436;         // Dark gray text
+$wellness-text-light: #636E72;   // Light gray text
+$wellness-border: #E0E7E3;       // Soft border
+
+// Wellness Body Override
+body.wellness-theme {
+  background: $wellness-cream;
+  color: $wellness-text;
+
+  // Override accent color
+  --accent-color: #{$wellness-primary};
+  
+  // Navbar styling
+  .navbar {
+    background: rgba($wellness-cream, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid $wellness-border;
+  }
+
+  // Main content area
+  .content {
+    background: $wellness-cream;
+  }
+
+  // Sidebar
+  .sidebar {
+    background: linear-gradient(135deg, $wellness-primary 0%, $wellness-primary-dark 100%);
+    
+    .sidebar-about {
+      color: white;
+    }
+  }
+
+  // Links
+  a {
+    color: $wellness-primary-dark;
+    
+    &:hover {
+      color: $wellness-accent;
+    }
+  }
+}
+
+// Wellness Post Card Style
+.wellness-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid $wellness-border;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    
+    .category-tag {
+      background: $wellness-secondary;
+      color: $wellness-primary-dark;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .date {
+      color: $wellness-text-light;
+      font-size: 0.85rem;
+    }
+  }
+
+  h2, h3 {
+    color: $wellness-text;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      
+      &:hover {
+        color: $wellness-primary-dark;
+      }
+    }
+  }
+
+  .excerpt {
+    color: $wellness-text-light;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $wellness-primary-dark;
+    font-weight: 500;
+    text-decoration: none;
+    
+    &:hover {
+      gap: 0.75rem;
+    }
+    
+    &::after {
+      content: '→';
+      transition: transform 0.2s ease;
+    }
+  }
+}
+
+// Wellness Hero Section
+.wellness-hero {
+  background: linear-gradient(135deg, $wellness-secondary 0%, white 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+
+  h1 {
+    color: $wellness-primary-dark;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .tagline {
+    color: $wellness-text-light;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .wellness-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Wellness Post Single View
+.wellness-post {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  
+  .post-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid $wellness-secondary;
+    
+    h1 {
+      color: $wellness-text;
+      font-size: 2.2rem;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    
+    .post-meta {
+      color: $wellness-text-light;
+      font-size: 0.95rem;
+      
+      .category {
+        background: $wellness-secondary;
+        color: $wellness-primary-dark;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .post-content {
+    line-height: 1.9;
+    font-size: 1.05rem;
+    
+    h2, h3, h4 {
+      color: $wellness-primary-dark;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    h2 {
+      font-size: 1.6rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid $wellness-secondary;
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
+      color: $wellness-text;
+    }
+    
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      
+      li {
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
+      }
+    }
+    
+    blockquote {
+      background: $wellness-secondary;
+      border-left: 4px solid $wellness-primary;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 12px 12px 0;
+      
+      p {
+        margin: 0;
+        color: $wellness-text;
+        font-style: italic;
+      }
+    }
+    
+    img {
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    // Tip/Info boxes
+    .tip, .info, .warning {
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      
+      &::before {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+    }
+    
+    .tip {
+      background: #E8F5E9;
+      border-left: 4px solid #4CAF50;
+      
+      &::before {
+        content: '💡 팁';
+        color: #2E7D32;
+      }
+    }
+    
+    .info {
+      background: #E3F2FD;
+      border-left: 4px solid #2196F3;
+      
+      &::before {
+        content: 'ℹ️ 참고';
+        color: #1565C0;
+      }
+    }
+    
+    .warning {
+      background: #FFF3E0;
+      border-left: 4px solid #FF9800;
+      
+      &::before {
+        content: '⚠️ 주의';
+        color: #E65100;
+      }
+    }
+  }
+}
+
+// Category Pills for Wellness
+.wellness-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+
+  .category-pill {
+    background: white;
+    color: $wellness-primary-dark;
+    padding: 0.5rem 1.25rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 2px solid $wellness-border;
+    transition: all 0.2s ease;
+
+    &:hover, &.active {
+      background: $wellness-primary;
+      color: white;
+      border-color: $wellness-primary;
+    }
+    
+    &::before {
+      margin-right: 0.5rem;
+    }
+    
+    &.nutrition::before { content: '🥗'; }
+    &.exercise::before { content: '🏃'; }
+    &.mental::before { content: '🧘'; }
+    &.sleep::before { content: '😴'; }
+    &.lifestyle::before { content: '🌿'; }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .wellness-hero {
+    padding: 2.5rem 1.5rem;
+    
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  .wellness-card {
+    padding: 1.5rem;
+  }
+  
+  .wellness-post {
+    padding: 1.5rem;
+    border-radius: 12px;
+    
+    .post-header h1 {
+      font-size: 1.6rem;
+    }
+  }
+}

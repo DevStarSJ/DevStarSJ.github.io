@@ -1,0 +1,397 @@
+/* Wellness Theme Styles */
+/* Sage Green + Warm Cream - Clean, Calming Design */
+
+:root {
+  --wellness-primary: #7CB590;
+  --wellness-primary-dark: #5A9A70;
+  --wellness-secondary: #E8F5E9;
+  --wellness-accent: #4CAF50;
+  --wellness-cream: #FDFBF7;
+  --wellness-text: #2D3436;
+  --wellness-text-light: #636E72;
+  --wellness-border: #E0E7E3;
+}
+
+/* Body Theme Override */
+body.wellness-theme {
+  background: var(--wellness-cream) !important;
+  color: var(--wellness-text);
+}
+
+body.wellness-theme .navbar {
+  background: rgba(253, 251, 247, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--wellness-border);
+}
+
+body.wellness-theme .navbar a {
+  color: var(--wellness-primary-dark) !important;
+  font-weight: 500;
+}
+
+body.wellness-theme .content {
+  background: transparent !important;
+}
+
+body.wellness-theme .sidebar {
+  background: linear-gradient(135deg, var(--wellness-primary) 0%, var(--wellness-primary-dark) 100%) !important;
+}
+
+body.wellness-theme a {
+  color: var(--wellness-primary-dark);
+}
+
+body.wellness-theme a:hover {
+  color: var(--wellness-accent);
+}
+
+/* Wellness Hero Section */
+.wellness-hero {
+  background: linear-gradient(135deg, var(--wellness-secondary) 0%, white 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+}
+
+.wellness-hero .wellness-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.wellness-hero h1 {
+  color: var(--wellness-primary-dark);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.wellness-hero .tagline {
+  color: var(--wellness-text-light);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Category Pills */
+.wellness-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.category-pill {
+  background: white;
+  color: var(--wellness-primary-dark);
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 2px solid var(--wellness-border);
+  transition: all 0.2s ease;
+}
+
+.category-pill:hover,
+.category-pill.active {
+  background: var(--wellness-primary);
+  color: white;
+  border-color: var(--wellness-primary);
+}
+
+.category-pill.nutrition::before { content: '🥗 '; }
+.category-pill.exercise::before { content: '🏃 '; }
+.category-pill.mental::before { content: '🧘 '; }
+.category-pill.sleep::before { content: '😴 '; }
+.category-pill.lifestyle::before { content: '🌿 '; }
+
+/* Wellness Card */
+.wellness-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--wellness-border);
+  display: block;
+  text-decoration: none;
+}
+
+.wellness-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.wellness-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.wellness-card .category-tag {
+  background: var(--wellness-secondary);
+  color: var(--wellness-primary-dark);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.wellness-card .date {
+  color: var(--wellness-text-light);
+  font-size: 0.85rem;
+}
+
+.wellness-card h3,
+.wellness-card h4 {
+  color: var(--wellness-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  font-size: 1.25rem;
+}
+
+.wellness-card h3 a,
+.wellness-card h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wellness-card h3 a:hover,
+.wellness-card h4 a:hover {
+  color: var(--wellness-primary-dark);
+}
+
+.wellness-card .excerpt {
+  color: var(--wellness-text-light);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.wellness-card .read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--wellness-primary-dark);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.wellness-card .read-more::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.wellness-card .read-more:hover::after {
+  transform: translateX(4px);
+}
+
+/* Wellness Post Single View */
+.wellness-post {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wellness-post .post-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--wellness-secondary);
+}
+
+.wellness-post .post-header .category {
+  background: var(--wellness-secondary);
+  color: var(--wellness-primary-dark);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.wellness-post .post-header h1 {
+  color: var(--wellness-text);
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.wellness-post .post-meta {
+  color: var(--wellness-text-light);
+  font-size: 0.95rem;
+}
+
+.wellness-post .post-content {
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+.wellness-post .post-content h2,
+.wellness-post .post-content h3,
+.wellness-post .post-content h4 {
+  color: var(--wellness-primary-dark);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.wellness-post .post-content h2 {
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--wellness-secondary);
+}
+
+.wellness-post .post-content p {
+  margin-bottom: 1.5rem;
+  color: var(--wellness-text);
+}
+
+.wellness-post .post-content ul,
+.wellness-post .post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.wellness-post .post-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.wellness-post .post-content blockquote {
+  background: var(--wellness-secondary);
+  border-left: 4px solid var(--wellness-primary);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 12px 12px 0;
+}
+
+.wellness-post .post-content blockquote p {
+  margin: 0;
+  color: var(--wellness-text);
+  font-style: italic;
+}
+
+.wellness-post .post-content img {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tip/Info boxes */
+.wellness-post .post-content .tip,
+.wellness-post .post-content .info,
+.wellness-post .post-content .warning {
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.wellness-post .post-content .tip {
+  background: #E8F5E9;
+  border-left: 4px solid #4CAF50;
+}
+
+.wellness-post .post-content .info {
+  background: #E3F2FD;
+  border-left: 4px solid #2196F3;
+}
+
+.wellness-post .post-content .warning {
+  background: #FFF3E0;
+  border-left: 4px solid #FF9800;
+}
+
+/* Post Footer */
+.wellness-post .post-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--wellness-border);
+}
+
+.wellness-post .post-footer .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.wellness-post .post-footer .tag {
+  background: var(--wellness-secondary);
+  color: var(--wellness-primary-dark);
+  padding: 0.3rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+}
+
+/* Related Posts */
+.related-posts {
+  margin-top: 3rem;
+}
+
+.related-posts h3 {
+  color: var(--wellness-text);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.wellness-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* No Posts Message */
+.no-posts {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--wellness-text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wellness-hero {
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+  }
+
+  .wellness-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .wellness-hero .tagline {
+    font-size: 1rem;
+  }
+
+  .wellness-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .wellness-post {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .wellness-post .post-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .wellness-categories {
+    gap: 0.5rem;
+  }
+
+  .category-pill {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+}

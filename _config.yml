@@ -93,6 +93,9 @@ collections:
   projects:
     permalink:       /projects/:path/
     output:          true
+  wellness:
+    permalink:       /wellness/:path/
+    output:          true
 
 # -----------------------------------------------------------------------------
 #  Advanced configuration
