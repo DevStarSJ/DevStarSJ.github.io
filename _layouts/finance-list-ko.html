@@ -1,0 +1,94 @@
+---
+layout: compress
+---
+
+{% assign color = '#047857' %}
+
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/finance.css' | relative_url }}">
+</head>
+
+<body class="finance-theme">
+  <div class="navbar fixed-top">
+    <div class="content">
+      <a class="menu no-hover" href="{{ '/' | relative_url }}">
+        <span>← Dev Note</span>
+      </a>
+    </div>
+  </div>
+
+  <div id="_yPushState">
+    <div class="fade-in">
+      <main id="_main" class="content" role="main">
+        
+        <!-- Hero Section -->
+        <section class="finance-hero">
+          <div class="finance-icon">💰</div>
+          <h1>{{ page.title | default: '재테크' }}</h1>
+          <p class="tagline">{{ page.description | default: '스마트한 자산 관리, 투자, 그리고 부의 증식 전략' }}</p>
+        </section>
+
+        <!-- Category Filter -->
+        <nav class="finance-categories">
+          <a href="{{ '/finance/ko/' | relative_url }}" class="finance-category-pill {% unless page.filter %}active{% endunless %}">전체</a>
+          <a href="{{ '/finance/ko/investing/' | relative_url }}" class="finance-category-pill {% if page.filter == 'investing' %}active{% endif %}">투자</a>
+          <a href="{{ '/finance/ko/saving/' | relative_url }}" class="finance-category-pill {% if page.filter == 'saving' %}active{% endif %}">저축</a>
+          <a href="{{ '/finance/ko/budgeting/' | relative_url }}" class="finance-category-pill {% if page.filter == 'budgeting' %}active{% endif %}">예산관리</a>
+          <a href="{{ '/finance/ko/passive-income/' | relative_url }}" class="finance-category-pill {% if page.filter == 'passive-income' %}active{% endif %}">패시브인컴</a>
+          <a href="{{ '/finance/ko/retirement/' | relative_url }}" class="finance-category-pill {% if page.filter == 'retirement' %}active{% endif %}">은퇴</a>
+        </nav>
+
+        <!-- 광고 -->
+        <div class="finance-ad" style="margin-bottom: 2rem;">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-9969290322898689"
+               data-ad-slot="8731890621"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Post List -->
+        <section class="finance-posts">
+          {% assign posts = site.posts | where_exp: "post", "post.layout == 'finance-post-ko'" | sort: 'date' | reverse %}
+          {% if page.filter %}
+            {% assign posts = posts | where: 'category', page.filter %}
+          {% endif %}
+          
+          {% for post in posts %}
+          <article class="finance-card">
+            <div class="card-header">
+              {% if post.category %}
+              <span class="category-tag">{{ post.category }}</span>
+              {% endif %}
+              <time class="date" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%Y.%m.%d" }}
+              </time>
+            </div>
+            <h3>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            {% if post.description %}
+            <p class="excerpt">{{ post.description | truncate: 150 }}</p>
+            {% endif %}
+            <a href="{{ post.url | relative_url }}" class="read-more">자세히 보기</a>
+          </article>
+          {% endfor %}
+
+          {% if posts.size == 0 %}
+          <div class="no-posts">
+            <p>아직 등록된 글이 없습니다.</p>
+          </div>
+          {% endif %}
+        </section>
+
+        {% include footer.html %}
+      </main>
+    </div>
+    {% include sidebar.html %}
+  </div>
+
+  {% include scripts.html %}
+</body>
