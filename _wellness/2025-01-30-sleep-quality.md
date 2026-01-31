@@ -1,115 +1,115 @@
 ---
 layout: wellness-post
-title: "수면의 질을 높이는 7가지 습관"
+title: "7 Science-Backed Habits for Better Sleep Quality"
 date: 2025-01-30
 category: sleep
-tags: [수면, 불면증, 생체리듬, 숙면]
-excerpt: "잠을 오래 자는 것보다 깊이 자는 것이 중요합니다. 수면의 질을 높이는 실천 가능한 습관들을 소개합니다."
+tags: [sleep, insomnia, circadian rhythm, deep sleep, recovery]
+excerpt: "Sleeping longer isn't the answer—sleeping deeper is. Here are proven habits to dramatically improve your sleep quality."
 ---
 
-당신은 어젯밤 잘 주무셨나요? 8시간을 자도 피곤하다면, **수면의 질**에 문제가 있을 수 있습니다.
+Did you sleep well last night? If you're still tired after 8 hours, your **sleep quality** might be the problem.
 
-## 왜 수면의 질이 중요한가?
+## Why Sleep Quality Matters
 
-수면은 단순한 휴식이 아닙니다. 잠자는 동안 우리 몸은:
+Sleep isn't just rest. While you sleep, your body:
 
-- 🧠 **기억 정리**: 단기 기억을 장기 기억으로 전환
-- 💪 **근육 회복**: 성장호르몬 분비
-- 🛡️ **면역력 강화**: 면역 세포 재생
-- 🧹 **뇌 청소**: 노폐물 제거 (글림프 시스템)
+- 🧠 **Consolidates memories**: Short-term to long-term transfer
+- 💪 **Repairs muscles**: Growth hormone release
+- 🛡️ **Boosts immunity**: Immune cell regeneration
+- 🧹 **Cleans your brain**: Waste removal via glymphatic system
 
-> "6시간 깊이 자는 것이 8시간 뒤척이는 것보다 낫다."
+> "Six hours of deep sleep beats eight hours of tossing and turning."
 
-## 1. 일정한 수면 시간 유지
+## 1. Maintain a Consistent Sleep Schedule
 
-**가장 중요한 습관**입니다.
+This is **the most important habit**.
 
-- 주중/주말 상관없이 같은 시간에 기상
-- 잠자리에 드는 시간도 일정하게
-- 생체리듬(서카디안 리듬)이 안정됨
+- Wake up at the same time every day—weekends included
+- Go to bed at the same time
+- This stabilizes your circadian rhythm
 
 <div class="tip">
-알람 없이 자연스럽게 일어날 수 있다면, 당신의 수면 스케줄이 맞는 것입니다.
+If you can wake up naturally without an alarm, your sleep schedule is working.
 </div>
 
-## 2. 침실 환경 최적화
+## 2. Optimize Your Bedroom Environment
 
-### 온도
-- 최적 온도: **18~20°C**
-- 너무 따뜻하면 깊은 수면 방해
+### Temperature
+- Optimal range: **65-68°F (18-20°C)**
+- Too warm disrupts deep sleep stages
 
-### 빛
-- 완전한 암막이 이상적
-- 작은 LED 불빛도 멜라토닌 분비 방해
+### Light
+- Complete darkness is ideal
+- Even small LED lights suppress melatonin
 
-### 소음
-- 일정한 백색소음은 OK
-- 갑작스러운 소음이 문제
+### Sound
+- Consistent white noise is okay
+- Sudden noises are the problem
 
-## 3. 블루라이트 차단
+## 3. Block Blue Light
 
-취침 2시간 전부터:
+Starting 2 hours before bed:
 
-- 📱 스마트폰 야간모드 ON
-- 💻 모니터 블루라이트 필터
-- 🕯️ 따뜻한 조명으로 교체
+- 📱 Enable night mode on devices
+- 💻 Use blue light filter software
+- 🕯️ Switch to warm lighting
 
 <div class="info">
-블루라이트는 멜라토닌 분비를 최대 50%까지 억제합니다.
+Blue light can suppress melatonin production by up to 50%.
 </div>
 
-## 4. 카페인 & 알코올 제한
+## 4. Limit Caffeine & Alcohol
 
-### 카페인
-- 반감기: 5~6시간
-- 오후 2시 이후 커피 자제
-- 초콜릿, 녹차도 카페인 함유
+### Caffeine
+- Half-life: 5-6 hours
+- No coffee after 2 PM
+- Remember: chocolate and green tea contain caffeine too
 
-### 알코올
-- 잠드는 건 쉬워지지만
-- REM 수면을 방해
-- 자주 깨게 됨
+### Alcohol
+- Makes falling asleep easier BUT
+- Disrupts REM sleep
+- Causes frequent waking
 
-## 5. 규칙적인 운동
+## 5. Exercise Regularly
 
-- 주 3회 이상, 30분 이상
-- **취침 3시간 전**에는 운동 마무리
-- 너무 늦은 운동은 각성 상태 유발
+- At least 3 times per week, 30+ minutes
+- Finish workouts **3 hours before bed**
+- Late exercise can leave you wired
 
-## 6. 저녁 식사 조절
+## 6. Mind Your Evening Meals
 
-- 취침 3시간 전까지 식사 마무리
-- 과식은 소화에 에너지 소모
-- 야식은 역류성 식도염 위험
+- Finish eating 3 hours before bed
+- Overeating diverts energy to digestion
+- Late meals risk acid reflux
 
-### 수면에 도움되는 음식
-- 🍌 바나나 (마그네슘, 트립토판)
-- 🥛 따뜻한 우유
-- 🍒 체리 (천연 멜라토닌)
-- 🥜 아몬드 (마그네슘)
+### Sleep-Promoting Foods
+- 🍌 Bananas (magnesium, tryptophan)
+- 🥛 Warm milk
+- 🍒 Cherries (natural melatonin)
+- 🥜 Almonds (magnesium)
 
-## 7. 취침 루틴 만들기
+## 7. Create a Bedtime Routine
 
-잠들기 30분~1시간 전:
+30-60 minutes before sleep:
 
-1. 따뜻한 샤워/반신욕
-2. 가벼운 스트레칭
-3. 독서 (종이책)
-4. 명상 또는 호흡 운동
+1. Warm shower or bath
+2. Light stretching
+3. Reading (physical book)
+4. Meditation or breathing exercises
 
 <div class="warning">
-침대에서 스마트폰을 보면, 뇌가 "침대 = 각성"으로 학습합니다.
+Using your phone in bed trains your brain that "bed = alertness."
 </div>
 
-## 보너스: 4-7-8 호흡법
+## Bonus: The 4-7-8 Breathing Method
 
-잠이 안 올 때 시도해보세요:
+Try this when you can't fall asleep:
 
-1. **4초** 동안 코로 흡입
-2. **7초** 동안 숨 참기
-3. **8초** 동안 입으로 내쉬기
-4. 4회 반복
+1. **Inhale** through nose for **4 seconds**
+2. **Hold** for **7 seconds**
+3. **Exhale** through mouth for **8 seconds**
+4. Repeat 4 times
 
 ---
 
-오늘 밤부터 하나씩 실천해보세요. 일주일만 지켜도 달라진 아침을 경험할 수 있습니다. 🌙
+Start implementing these tonight. Just one week of consistency can transform your mornings. 🌙

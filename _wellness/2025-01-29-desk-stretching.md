@@ -1,116 +1,116 @@
 ---
 layout: wellness-post
-title: "개발자를 위한 5분 스트레칭: 거북목과 손목 통증 예방"
+title: "5-Minute Desk Stretches: Prevent Neck Pain and Carpal Tunnel"
 date: 2025-01-29
 category: exercise
-tags: [스트레칭, 거북목, 손목통증, 사무직, 개발자]
-excerpt: "하루 종일 모니터 앞에 앉아있는 개발자들을 위한 간단하지만 효과적인 스트레칭 루틴입니다."
+tags: [stretching, neck pain, carpal tunnel, office, developer, ergonomics]
+excerpt: "A quick but effective stretching routine for anyone who spends hours at a computer. Prevent tech neck and wrist problems before they start."
 ---
 
-8시간 넘게 코딩하고 나면 목이 뻣뻣하고 손목이 저리지 않나요? 당신만 그런 게 아닙니다.
+After 8+ hours of coding, does your neck feel stiff and your wrists tingle? You're not alone.
 
-## 개발자의 직업병
+## The Developer's Occupational Hazards
 
-장시간 컴퓨터 작업은 다음 문제를 유발합니다:
+Prolonged computer work causes:
 
-- 🦢 **거북목 증후군**: 목이 앞으로 나온 자세
-- 🖐️ **손목터널증후군**: 손목 신경 압박
-- 😣 **라운드 숄더**: 어깨가 앞으로 말림
-- 🦵 **고관절 굳음**: 오래 앉아 있어서
+- 🦢 **Tech neck**: Forward head posture
+- 🖐️ **Carpal tunnel syndrome**: Wrist nerve compression
+- 😣 **Rounded shoulders**: Shoulders rolling forward
+- 🦵 **Tight hip flexors**: From prolonged sitting
 
-> "예방이 치료보다 100배 쉽다."
+> "Prevention is 100 times easier than treatment."
 
-## 2시간마다 5분 투자
+## Invest 5 Minutes Every 2 Hours
 
-포모도로처럼, **2시간마다 5분** 스트레칭하세요.
+Like Pomodoro for your body—**5 minutes of stretching every 2 hours**.
 
 <div class="tip">
-캘린더에 반복 알림을 설정하세요. 처음엔 귀찮지만 습관이 됩니다.
+Set recurring calendar reminders. It feels annoying at first, but it becomes habit.
 </div>
 
 ---
 
-## 1. 목 스트레칭 (1분)
+## 1. Neck Stretches (1 minute)
 
-### 좌우 스트레칭
-1. 오른손으로 왼쪽 귀 위를 잡음
-2. 천천히 오른쪽으로 당김 (15초)
-3. 반대쪽도 동일
+### Side Stretch
+1. Place right hand over left ear
+2. Gently pull head to the right (15 sec)
+3. Repeat on opposite side
 
-### 앞뒤 스트레칭
-1. 양손을 깍지 끼고 뒤통수에
-2. 천천히 아래로 누름 (15초)
-3. 턱을 들어 천장 보기 (15초)
+### Front/Back Stretch
+1. Interlace fingers behind your head
+2. Gently press down, chin to chest (15 sec)
+3. Look up at the ceiling (15 sec)
 
-## 2. 어깨 스트레칭 (1분)
+## 2. Shoulder Stretches (1 minute)
 
-### 어깨 돌리기
-- 앞으로 10회
-- 뒤로 10회
-- 크게, 천천히
+### Shoulder Rolls
+- Forward 10 times
+- Backward 10 times
+- Big, slow circles
 
-### 가슴 펴기
-1. 양손을 등 뒤에서 깍지
-2. 팔을 쭉 펴며 가슴을 활짝
-3. 15초 유지
+### Chest Opener
+1. Interlace hands behind your back
+2. Straighten arms and lift
+3. Open your chest wide
+4. Hold for 15 seconds
 
-## 3. 손목 스트레칭 (1분)
+## 3. Wrist Stretches (1 minute)
 
-### 손목 굽히기
-1. 팔을 앞으로 뻗음
-2. 반대 손으로 손가락을 몸쪽으로 당김
-3. 손등이 보이게 (15초)
-4. 손바닥이 보이게 (15초)
-5. 반대쪽도 동일
+### Wrist Flexion/Extension
+1. Extend arm forward
+2. Use opposite hand to pull fingers toward you
+3. Palm facing out (15 sec)
+4. Palm facing in (15 sec)
+5. Repeat other side
 
-### 손목 돌리기
-- 시계 방향 10회
-- 반시계 방향 10회
+### Wrist Circles
+- Clockwise 10 times
+- Counter-clockwise 10 times
 
 <div class="warning">
-손목에 통증이 있으면 절대 무리하지 마세요. 통증이 지속되면 병원 방문을 권합니다.
+If you have wrist pain, don't push through it. Persistent pain needs medical attention.
 </div>
 
-## 4. 허리 & 고관절 (1분)
+## 4. Back & Hip Stretches (1 minute)
 
-### 의자에서 비틀기
-1. 의자에 앉은 채로
-2. 오른손으로 왼쪽 무릎 잡기
-3. 상체를 왼쪽으로 비틀기 (15초)
-4. 반대쪽도 동일
+### Seated Twist
+1. Sit in your chair
+2. Right hand on left knee
+3. Twist torso to the left (15 sec)
+4. Repeat other side
 
-### 고관절 스트레칭
-1. 일어서서 한 발을 의자에 올림
-2. 상체를 앞으로 숙임
-3. 엉덩이 앞쪽이 늘어나는 느낌 (15초)
-4. 반대쪽도 동일
+### Hip Flexor Stretch
+1. Stand up, place one foot on chair
+2. Lean torso forward
+3. Feel stretch in front of hip (15 sec each side)
 
-## 5. 눈 스트레칭 (1분)
+## 5. Eye Stretches (1 minute)
 
-### 20-20-20 규칙
-- **20분**마다
-- **20피트(6m)** 떨어진 곳을
-- **20초**간 바라보기
+### 20-20-20 Rule
+- Every **20 minutes**
+- Look at something **20 feet (6m)** away
+- For **20 seconds**
 
-### 눈 운동
-1. 눈을 꽉 감았다 뜨기 (5회)
-2. 상하좌우 천천히 굴리기
-3. 먼 곳 ↔ 가까운 곳 번갈아 보기
+### Eye Exercises
+1. Close eyes tightly, then open wide (5x)
+2. Look up, down, left, right slowly
+3. Focus near ↔ far alternately
 
-## 자세 체크리스트
+## Posture Checklist
 
-올바른 자세인지 확인하세요:
+Check yourself right now:
 
-- ✅ 모니터 상단이 눈높이
-- ✅ 팔꿈치 90도
-- ✅ 발바닥이 바닥에 닿음
-- ✅ 허리가 의자 등받이에 닿음
-- ✅ 어깨 힘 빼기
+- ✅ Monitor top at eye level
+- ✅ Elbows at 90 degrees
+- ✅ Feet flat on floor
+- ✅ Lower back touching chair back
+- ✅ Shoulders relaxed, not raised
 
 <div class="info">
-스탠딩 데스크도 좋지만, 앉았다 섰다 번갈아 하는 게 가장 좋습니다.
+Standing desks are great, but alternating between sitting and standing is even better.
 </div>
 
 ---
 
-지금 당장 해보세요. 이 글 읽는 데 3분, 스트레칭하는 데 5분. 총 8분 투자로 목과 손목을 지킬 수 있습니다. 💪
+Do it right now. 3 minutes to read this, 5 minutes to stretch. 8 minutes to save your neck and wrists. 💪

@@ -1,93 +1,93 @@
 ---
 layout: wellness-post
-title: "프리다이빙 호흡법: 더 깊이, 더 오래 잠수하는 비결"
+title: "Freediving Breathing Techniques: How to Dive Deeper and Longer"
 date: 2025-01-31
 category: exercise
-tags: [프리다이빙, 호흡법, 수중운동, 명상]
-excerpt: "프리다이빙의 핵심은 호흡입니다. 올바른 호흡법을 익히면 수중에서 더 편안하고 오래 머물 수 있습니다."
+tags: [freediving, breathing, underwater, meditation, apnea]
+excerpt: "The key to freediving is breath control. Master these breathing techniques to stay underwater longer and dive with confidence."
 ---
 
-프리다이빙은 단순한 스포츠가 아닙니다. 물속에서 자신의 한계와 마주하는 명상이자, 호흡의 예술입니다.
+Freediving isn't just a sport—it's a moving meditation, an art of breath, and a journey into your own limits.
 
-## 프리다이빙이란?
+## What is Freediving?
 
-산소통 없이 오직 한 번의 호흡으로 잠수하는 스포츠입니다. 경쟁 종목이기도 하지만, 많은 사람들이 **마음의 평화**와 **자기 발견**을 위해 프리다이빙을 시작합니다.
+Freediving is diving underwater on a single breath, without scuba gear. While it's a competitive sport, many people practice it for **mental clarity** and **self-discovery**.
 
-> "물속에서는 모든 잡념이 사라진다. 오직 나와 바다만 존재한다."
+> "Underwater, all thoughts disappear. Only you and the ocean exist."
 
-## 기본 호흡법: 복식호흡
+## The Foundation: Diaphragmatic Breathing
 
-프리다이빙의 기본은 **횡격막 호흡(복식호흡)**입니다.
+The core of freediving is **diaphragmatic breathing** (belly breathing).
 
-### 연습 방법
+### How to Practice
 
-1. **편안한 자세**로 눕거나 앉기
-2. 한 손은 가슴에, 한 손은 배에 올리기
-3. **코로 천천히 흡입** (4초) - 배가 부풀어 오르도록
-4. **잠시 멈춤** (2초)
-5. **입으로 천천히 내쉬기** (6초) - 배가 들어가도록
+1. Lie down or sit **comfortably**
+2. Place one hand on your chest, one on your belly
+3. **Inhale slowly through your nose** (4 seconds) - belly rises
+4. **Hold briefly** (2 seconds)
+5. **Exhale slowly through your mouth** (6 seconds) - belly falls
 
 <div class="tip">
-처음에는 하루 10분씩 연습하세요. 익숙해지면 자연스럽게 복식호흡이 됩니다.
+Start with just 10 minutes daily. Once it becomes natural, you'll breathe this way automatically.
 </div>
 
-## 풀 브리딩 (Full Breathing)
+## Full Breathing Technique
 
-잠수 전 폐 용량을 최대화하는 호흡법입니다.
+This maximizes lung capacity before a dive.
 
-### 3단계 호흡
+### Three-Phase Breathing
 
-1. **복부 호흡**: 배를 최대한 부풀리며 흡입
-2. **흉부 호흡**: 갈비뼈를 옆으로 확장하며 추가 흡입  
-3. **쇄골 호흡**: 어깨를 살짝 들며 마지막 공기 채우기
+1. **Abdominal phase**: Fill your belly completely
+2. **Thoracic phase**: Expand your ribcage sideways
+3. **Clavicular phase**: Raise shoulders slightly for the last bit of air
 
-## 릴렉세이션 호흡
+## Relaxation Breathing
 
-잠수 직전 2분간 하는 이완 호흡입니다.
+Perform this for 2 minutes before your dive.
 
-- **흡입**: 2초
-- **유지**: 2초  
-- **배출**: 10초 (최대한 천천히)
+- **Inhale**: 2 seconds
+- **Hold**: 2 seconds
+- **Exhale**: 10 seconds (as slowly as possible)
 
 <div class="info">
-긴장하면 산소 소비가 급격히 증가합니다. 릴렉세이션은 선택이 아닌 필수입니다.
+Tension dramatically increases oxygen consumption. Relaxation is not optional—it's essential.
 </div>
 
-## 잠수 중 주의사항
+## Critical Safety Rules
 
-### 절대 하지 말아야 할 것
+### Never Do This
 
-- ❌ **과호흡(Hyperventilation)**: CO2를 낮춰 블랙아웃 위험 증가
-- ❌ **혼자 연습**: 항상 버디와 함께
-- ❌ **무리한 시도**: 자신의 한계를 존중
+- ❌ **Hyperventilation**: Lowers CO2 and increases blackout risk
+- ❌ **Solo practice**: Always dive with a buddy
+- ❌ **Push too hard**: Respect your limits
 
-### 블랙아웃 예방
+### Blackout Prevention
 
-과호흡은 절대 금물입니다. CO2 농도가 낮아지면 뇌가 "숨 쉬어야 해"라는 신호를 늦게 보내, 갑자기 의식을 잃을 수 있습니다.
+Hyperventilation is extremely dangerous. When CO2 levels drop too low, your brain delays the "breathe now" signal, causing sudden loss of consciousness.
 
 <div class="warning">
-프리다이빙은 반드시 공인된 교육 과정을 통해 배우세요. 독학은 매우 위험합니다.
+Always learn freediving through certified courses. Self-teaching is extremely dangerous.
 </div>
 
-## 육상 훈련
+## Dry Training
 
-물에 들어가지 않아도 할 수 있는 훈련들:
+You can train without water:
 
-### CO2 테이블
-- 숨 참기 시간은 동일 (예: 2분)
-- 휴식 시간을 점점 줄임 (2분 → 1분45초 → 1분30초...)
+### CO2 Tolerance Table
+- Breath-hold time stays constant (e.g., 2 min)
+- Rest time decreases (2:00 → 1:45 → 1:30...)
 
-### O2 테이블  
-- 휴식 시간은 동일 (예: 2분)
-- 숨 참기 시간을 점점 늘림 (2분 → 2분15초 → 2분30초...)
+### O2 Table
+- Rest time stays constant (e.g., 2 min)
+- Breath-hold time increases (2:00 → 2:15 → 2:30...)
 
-## 프리다이빙의 효과
+## Benefits of Freediving
 
-- 🧘 **스트레스 감소**: 강제적인 명상 상태
-- 💪 **폐활량 증가**: 호흡 근육 강화
-- 🧠 **집중력 향상**: 현재 순간에 집중
-- 😌 **자기 신뢰**: 한계를 넘어서는 경험
+- 🧘 **Stress reduction**: Forced meditative state
+- 💪 **Increased lung capacity**: Strengthens respiratory muscles
+- 🧠 **Improved focus**: Present-moment awareness
+- 😌 **Self-confidence**: Experience of transcending limits
 
 ---
 
-프리다이빙은 인내와 겸손을 가르쳐줍니다. 바다는 절대 서두르는 사람을 환영하지 않으니까요. 🌊
+Freediving teaches patience and humility. The ocean never welcomes those who rush. 🌊

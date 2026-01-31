@@ -1,58 +1,60 @@
 ---
 layout: wellness-post
-title: "눈 건강을 위한 루테인과 지아잔틴의 효능"
-date: 2025-01-31
+title: "Lutein and Zeaxanthin: Essential Nutrients for Eye Health in the Digital Age"
+date: 2025-01-28
 category: nutrition
-tags: [눈건강, 루테인, 지아잔틴, 영양제]
-excerpt: "디지털 기기 사용이 많은 현대인의 눈 건강을 위한 필수 영양소, 루테인과 지아잔틴에 대해 알아봅니다."
+tags: [eye health, lutein, zeaxanthin, supplements, blue light]
+excerpt: "Protect your eyes from digital strain with these powerful antioxidants. Learn how lutein and zeaxanthin act as natural sunglasses for your retina."
 ---
 
-현대인의 눈은 하루 종일 혹사당하고 있습니다. 스마트폰, 컴퓨터, TV... 블루라이트에 끊임없이 노출되는 우리 눈을 지키기 위한 방법을 알아봅시다.
+Our eyes are under constant assault. Smartphones, computers, TVs... we're exposed to blue light all day long. Here's how to protect your vision.
 
-## 루테인과 지아잔틴이란?
+## What Are Lutein and Zeaxanthin?
 
-루테인(Lutein)과 지아잔틴(Zeaxanthin)은 카로티노이드 계열의 항산화 물질입니다. 특히 눈의 황반부에 집중적으로 존재하며, 자연적인 선글라스 역할을 합니다.
+Lutein and zeaxanthin are carotenoid antioxidants. They concentrate in the macula of your eye and act as **natural sunglasses**, filtering harmful light.
 
-> "황반색소는 블루라이트를 필터링하고 산화 스트레스로부터 망막을 보호합니다."
+> "Macular pigment filters blue light and protects the retina from oxidative stress."
 
-## 주요 효능
+## Key Benefits
 
-### 1. 블루라이트 차단
-디지털 기기에서 나오는 유해한 블루라이트를 흡수하여 망막 손상을 예방합니다.
+### 1. Blue Light Protection
+These nutrients absorb harmful blue light from digital devices, preventing retinal damage.
 
-### 2. 황반변성 예방
-나이가 들면서 발생할 수 있는 황반변성의 위험을 낮춰줍니다.
+### 2. Macular Degeneration Prevention
+They reduce the risk of age-related macular degeneration (AMD), a leading cause of vision loss.
 
-### 3. 눈의 피로 감소
-장시간 화면을 볼 때 느끼는 눈의 피로와 건조함을 줄여줍니다.
+### 3. Reduced Eye Fatigue
+Less strain and dryness during long screen sessions.
 
-## 하루 권장 섭취량
+## Daily Recommended Intake
 
-- **루테인**: 10~20mg
-- **지아잔틴**: 2~4mg
+- **Lutein**: 10-20mg
+- **Zeaxanthin**: 2-4mg
 
 <div class="tip">
-루테인과 지아잔틴은 지용성이므로 식사와 함께 섭취하면 흡수율이 높아집니다.
+Lutein and zeaxanthin are fat-soluble. Take them with meals containing healthy fats for better absorption.
 </div>
 
-## 루테인이 풍부한 음식
+## Foods Rich in Lutein
 
-- 시금치, 케일 등 녹색 잎채소
-- 브로콜리
-- 달걀 노른자
-- 옥수수
-- 오렌지색 파프리카
+- Spinach, kale, and dark leafy greens
+- Broccoli
+- Egg yolks
+- Corn
+- Orange bell peppers
 
-## 영양제 선택 시 주의사항
+## Choosing a Supplement
 
-1. **마리골드 꽃 추출물** 확인
-2. **루테인:지아잔틴 비율** 5:1 권장
-3. **합성이 아닌 천연 유래** 성분
+Look for:
+
+1. **Marigold flower extract** (natural source)
+2. **5:1 lutein to zeaxanthin ratio**
+3. **Natural, not synthetic** ingredients
 
 <div class="info">
-영양제는 최소 3~6개월 꾸준히 섭취해야 효과를 볼 수 있습니다.
+Supplements take 3-6 months of consistent use to show effects. Be patient.
 </div>
 
 ---
 
-눈 건강은 한번 잃으면 되돌리기 어렵습니다. 지금부터 루테인과 지아잔틴으로 소중한 눈을 지켜보세요! 🌿
+Eye health, once lost, is hard to recover. Start protecting your eyes with lutein and zeaxanthin today! 🌿
