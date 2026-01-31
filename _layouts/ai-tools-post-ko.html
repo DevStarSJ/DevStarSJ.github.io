@@ -1,0 +1,104 @@
+---
+layout: compress
+---
+
+{% assign color = '#6366F1' %}
+
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/ai-tools.css' | relative_url }}">
+</head>
+
+<body class="ai-tools-theme">
+  <div class="navbar fixed-top">
+    <div class="content">
+      <a class="menu no-hover" href="{{ '/ai-tools/ko/' | relative_url }}">
+        <span>← AI 도구</span>
+      </a>
+    </div>
+  </div>
+
+  <div id="_yPushState">
+    <div class="fade-in">
+      <main id="_main" class="content" role="main">
+        <article class="ai-tools-post">
+          <header class="post-header">
+            {% if page.category %}
+            <span class="category">{{ page.category }}</span>
+            {% endif %}
+            <h1>{{ page.title }}</h1>
+            <div class="post-meta">
+              <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%Y년 %m월 %d일" }}
+              </time>
+              {% if page.read_time %}
+              <span class="read-time">· {{ page.read_time }}분 읽기</span>
+              {% endif %}
+            </div>
+          </header>
+
+          <!-- 상단 광고 -->
+          <div class="ai-tools-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9969290322898689"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          </div>
+
+          <div class="post-content">
+            {{ content }}
+          </div>
+
+          <!-- 하단 광고 -->
+          <div class="ai-tools-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9969290322898689"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          </div>
+
+          {% if page.tags.size > 0 %}
+          <footer class="post-footer">
+            <div class="tags">
+              {% for tag in page.tags %}
+              <span class="tag">#{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </footer>
+          {% endif %}
+        </article>
+
+        <!-- Related Posts -->
+        {% assign related = site.posts | where_exp: "post", "post.layout == 'ai-tools-post-ko'" | where_exp: "post", "post.url != page.url" | slice: 0, 3 %}
+        {% if related.size > 0 %}
+        <section class="related-posts">
+          <h3>관련 글</h3>
+          <div class="ai-tools-grid">
+            {% for post in related %}
+            <a href="{{ post.url | relative_url }}" class="ai-tools-card">
+              <div class="card-header">
+                {% if post.category %}
+                <span class="category-tag">{{ post.category }}</span>
+                {% endif %}
+              </div>
+              <h4>{{ post.title }}</h4>
+            </a>
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+
+        {% include footer.html %}
+      </main>
+    </div>
+    {% include sidebar.html %}
+  </div>
+
+  {% include scripts.html %}
+</body>
