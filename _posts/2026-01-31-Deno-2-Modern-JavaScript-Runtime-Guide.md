@@ -1,62 +1,61 @@
 ---
 layout: post
-title: "Deno 2.0: Complete Guide to the Modern JavaScript Runtime"
-subtitle: Master Deno's new features, Node compatibility, and why it's production-ready
-categories: development
-tags: deno javascript typescript runtime nodejs
-comments: true
+title: "Deno 2.0 in 2026: The Modern JavaScript Runtime That's Production Ready"
+subtitle: "TypeScript-first, secure by default, with Node.js compatibility"
+date: 2026-01-31
+author: "DevStar"
+header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200"
+catalog: true
+tags:
+  - Deno
+  - JavaScript
+  - TypeScript
+  - Runtime
+  - Backend
 ---
 
-# Deno 2.0: Complete Guide to the Modern JavaScript Runtime
+# Deno 2.0 in 2026: The Modern JavaScript Runtime That's Production Ready
 
-Deno 2.0 has arrived as a mature, production-ready runtime that's backward compatible with Node.js while offering a superior developer experience. This comprehensive guide covers everything you need to start building with Deno today.
+Deno has matured from an experimental runtime to a production-ready platform. With version 2.0, it offers the best developer experience for TypeScript while maintaining strong security guarantees. Let's explore why Deno is now a serious contender for your next backend project.
 
-## Why Deno 2.0?
+![JavaScript Development](https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=800)
+*Photo by [Nubelson Fernandes](https://unsplash.com/@nublson) on Unsplash*
 
-### Key Advantages Over Node.js
+## Why Deno in 2026?
 
-| Feature | Deno | Node.js |
-|---------|------|---------|
-| TypeScript | Native, zero config | Requires setup |
-| Security | Secure by default | Full access |
-| Package Manager | Built-in (JSR) | npm required |
-| Web APIs | Native support | Limited/polyfills |
-| Testing | Built-in | External tools |
-| Formatting | Built-in | Prettier needed |
-| Node Compatibility | Full support | N/A |
+### Key Advantages
+
+| Feature | Deno 2.0 | Node.js |
+|---------|----------|---------|
+| TypeScript | Native, zero config | Requires ts-node/tsx |
+| Security | Permissions required | Full access by default |
+| Package Manager | Built-in, URL imports | npm (separate tool) |
+| Standard Library | Official, stable | Community packages |
+| Toolchain | fmt, lint, test, bench built-in | Separate tools needed |
+| Node Compatibility | Full npm support | Native |
 
 ## Getting Started
 
 ### Installation
 
 ```bash
-# macOS / Linux
+# macOS/Linux
 curl -fsSL https://deno.land/install.sh | sh
 
-# Windows (PowerShell)
+# Windows
 irm https://deno.land/install.ps1 | iex
 
 # Homebrew
 brew install deno
 
-# Verify installation
+# Verify
 deno --version
 ```
 
-### Hello World
+### First Program
 
 ```typescript
-// main.ts - No configuration needed!
-console.log("Hello from Deno!");
-
-// Run it
-// deno run main.ts
-```
-
-### TypeScript Out of the Box
-
-```typescript
-// types.ts
+// hello.ts - No configuration needed!
 interface User {
   id: number;
   name: string;
@@ -64,542 +63,492 @@ interface User {
 }
 
 async function fetchUser(id: number): Promise<User> {
-  const response = await fetch(`https://api.example.com/users/${id}`);
-  return response.json();
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+  return await response.json();
 }
 
 const user = await fetchUser(1);
-console.log(user.name); // Type-safe!
+console.log(`Hello, ${user.name}!`);
 ```
 
-## Security Model
-
-Deno is secure by default. You must explicitly grant permissions:
+Run with permissions:
 
 ```bash
-# Network access
-deno run --allow-net main.ts
+# Explicit permission for network access
+deno run --allow-net hello.ts
 
-# File system read
-deno run --allow-read main.ts
-
-# File system write
-deno run --allow-write main.ts
-
-# Environment variables
-deno run --allow-env main.ts
-
-# Run subprocess
-deno run --allow-run main.ts
-
-# All permissions (development only!)
-deno run -A main.ts
+# Or grant all permissions (development only)
+deno run -A hello.ts
 ```
 
-### Granular Permissions
-
-```bash
-# Only allow specific hosts
-deno run --allow-net=api.example.com,localhost:8080 main.ts
-
-# Only allow reading specific paths
-deno run --allow-read=/tmp,./data main.ts
-
-# Only specific env vars
-deno run --allow-env=API_KEY,DATABASE_URL main.ts
-```
-
-### Permission Prompts
+## Modern Web Server with Oak
 
 ```typescript
-// Request permissions at runtime
-const status = await Deno.permissions.request({ name: "read", path: "./data" });
+// server.ts
+import { Application, Router, Context } from "https://deno.land/x/oak@v12.6.1/mod.ts";
+import { oakCors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
 
-if (status.state === "granted") {
-  const data = await Deno.readTextFile("./data/config.json");
-  console.log(data);
+interface Todo {
+  id: string;
+  title: string;
+  completed: boolean;
+  createdAt: Date;
 }
+
+// In-memory store (use a database in production)
+const todos = new Map<string, Todo>();
+
+const router = new Router();
+
+// GET /todos
+router.get("/todos", (ctx: Context) => {
+  ctx.response.body = {
+    success: true,
+    data: Array.from(todos.values()),
+  };
+});
+
+// POST /todos
+router.post("/todos", async (ctx: Context) => {
+  const body = await ctx.request.body().value;
+  
+  const todo: Todo = {
+    id: crypto.randomUUID(),
+    title: body.title,
+    completed: false,
+    createdAt: new Date(),
+  };
+  
+  todos.set(todo.id, todo);
+  
+  ctx.response.status = 201;
+  ctx.response.body = { success: true, data: todo };
+});
+
+// PATCH /todos/:id
+router.patch("/todos/:id", async (ctx: Context) => {
+  const { id } = ctx.params;
+  const todo = todos.get(id!);
+  
+  if (!todo) {
+    ctx.response.status = 404;
+    ctx.response.body = { success: false, error: "Todo not found" };
+    return;
+  }
+  
+  const updates = await ctx.request.body().value;
+  const updated = { ...todo, ...updates };
+  todos.set(id!, updated);
+  
+  ctx.response.body = { success: true, data: updated };
+});
+
+// DELETE /todos/:id
+router.delete("/todos/:id", (ctx: Context) => {
+  const { id } = ctx.params;
+  const deleted = todos.delete(id!);
+  
+  ctx.response.body = { 
+    success: deleted,
+    message: deleted ? "Deleted" : "Not found"
+  };
+});
+
+const app = new Application();
+
+// Middleware
+app.use(oakCors());
+app.use(async (ctx, next) => {
+  const start = Date.now();
+  await next();
+  const ms = Date.now() - start;
+  console.log(`${ctx.request.method} ${ctx.request.url} - ${ms}ms`);
+});
+
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+console.log("Server running on http://localhost:8000");
+await app.listen({ port: 8000 });
 ```
 
-## Node.js Compatibility
+Run:
 
-### Using npm Packages
+```bash
+deno run --allow-net server.ts
+```
+
+## Using npm Packages
+
+Deno 2.0 has full npm compatibility:
 
 ```typescript
-// Use npm: specifier
+// npm-example.ts
 import express from "npm:express@4";
-import chalk from "npm:chalk@5";
+import { z } from "npm:zod";
+
+// Zod for validation
+const UserSchema = z.object({
+  name: z.string().min(2),
+  email: z.string().email(),
+  age: z.number().int().positive().optional(),
+});
 
 const app = express();
+app.use(express.json());
 
-app.get("/", (req, res) => {
-  console.log(chalk.green("Request received!"));
-  res.send("Hello from Deno + Express!");
-});
-
-app.listen(3000);
-```
-
-### Package.json Support
-
-```json
-// package.json works in Deno 2.0!
-{
-  "name": "my-deno-app",
-  "dependencies": {
-    "express": "^4.18.0",
-    "zod": "^3.22.0"
+app.post("/users", (req, res) => {
+  const result = UserSchema.safeParse(req.body);
+  
+  if (!result.success) {
+    return res.status(400).json({
+      error: "Validation failed",
+      issues: result.error.issues,
+    });
   }
-}
-```
-
-```typescript
-// Import just like Node.js
-import express from "express";
-import { z } from "zod";
-```
-
-### Node Built-in Modules
-
-```typescript
-// node: specifier for Node built-ins
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
-import { createServer } from "node:http";
-
-const configPath = join(process.cwd(), "config.json");
-const config = JSON.parse(readFileSync(configPath, "utf8"));
-
-createServer((req, res) => {
-  res.end("Hello!");
-}).listen(3000);
-```
-
-## JSR: JavaScript Registry
-
-JSR is Deno's modern package registry:
-
-```typescript
-// Import from JSR
-import { Hono } from "jsr:@hono/hono";
-import { z } from "jsr:@std/zod";
-
-const app = new Hono();
-
-app.get("/", (c) => c.text("Hello Hono!"));
-
-Deno.serve(app.fetch);
-```
-
-### Publishing to JSR
-
-```json
-// deno.json
-{
-  "name": "@myorg/mypackage",
-  "version": "1.0.0",
-  "exports": "./mod.ts"
-}
-```
-
-```bash
-# Publish
-deno publish
-```
-
-## Web Standard APIs
-
-Deno implements web standards natively:
-
-### Fetch API
-
-```typescript
-// Fetch is built-in
-const response = await fetch("https://api.github.com/users/denoland");
-const user = await response.json();
-console.log(user);
-
-// With options
-const data = await fetch("https://api.example.com/data", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Authorization": `Bearer ${Deno.env.get("API_KEY")}`,
-  },
-  body: JSON.stringify({ name: "Deno" }),
-});
-```
-
-### Web Streams
-
-```typescript
-// Streaming response
-async function* generateData() {
-  for (let i = 0; i < 100; i++) {
-    yield `data: ${i}\n`;
-    await new Promise((r) => setTimeout(r, 100));
-  }
-}
-
-Deno.serve(() => {
-  const stream = ReadableStream.from(generateData());
-  return new Response(stream, {
-    headers: { "Content-Type": "text/event-stream" },
+  
+  res.status(201).json({
+    message: "User created",
+    user: result.data,
   });
 });
+
+app.listen(3000, () => {
+  console.log("Express on Deno running on port 3000");
+});
 ```
 
-### Web Crypto
+## Deno Standard Library
+
+![Code Library](https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=800)
+*Photo by [Pakata Goh](https://unsplash.com/@pakata) on Unsplash*
 
 ```typescript
-// Cryptography API
-const key = await crypto.subtle.generateKey(
-  { name: "AES-GCM", length: 256 },
-  true,
-  ["encrypt", "decrypt"]
-);
+// Using the standard library
+import { serve } from "https://deno.land/std@0.208.0/http/server.ts";
+import { join } from "https://deno.land/std@0.208.0/path/mod.ts";
+import { parse } from "https://deno.land/std@0.208.0/flags/mod.ts";
+import { format } from "https://deno.land/std@0.208.0/datetime/mod.ts";
+import { crypto } from "https://deno.land/std@0.208.0/crypto/mod.ts";
 
-const encoder = new TextEncoder();
-const data = encoder.encode("Secret message");
-const iv = crypto.getRandomValues(new Uint8Array(12));
-
-const encrypted = await crypto.subtle.encrypt(
-  { name: "AES-GCM", iv },
-  key,
-  data
-);
-
-console.log("Encrypted:", new Uint8Array(encrypted));
-```
-
-## HTTP Server
-
-### Built-in Deno.serve
-
-```typescript
-// Simple server
-Deno.serve((req) => {
-  return new Response("Hello World!");
+// CLI argument parsing
+const args = parse(Deno.args, {
+  string: ["port", "host"],
+  boolean: ["help"],
+  default: { port: "8000", host: "localhost" },
 });
 
-// With options
-Deno.serve({
-  port: 8000,
-  hostname: "0.0.0.0",
-  onListen: ({ port }) => console.log(`Listening on port ${port}`),
-}, (req) => {
+if (args.help) {
+  console.log(`
+Usage: deno run --allow-net server.ts [options]
+
+Options:
+  --port    Port to listen on (default: 8000)
+  --host    Host to bind to (default: localhost)
+  --help    Show this help message
+  `);
+  Deno.exit(0);
+}
+
+// Generate a secure token
+async function generateToken(): Promise<string> {
+  const buffer = new Uint8Array(32);
+  crypto.getRandomValues(buffer);
+  return Array.from(buffer)
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+// Date formatting
+const startTime = format(new Date(), "yyyy-MM-dd HH:mm:ss");
+console.log(`Server started at ${startTime}`);
+```
+
+## Testing
+
+Built-in test runner with great defaults:
+
+```typescript
+// user_service_test.ts
+import { assertEquals, assertThrows } from "https://deno.land/std@0.208.0/assert/mod.ts";
+import { describe, it, beforeEach } from "https://deno.land/std@0.208.0/testing/bdd.ts";
+import { stub, spy } from "https://deno.land/std@0.208.0/testing/mock.ts";
+
+interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+class UserService {
+  private users = new Map<string, User>();
+  
+  create(name: string, email: string): User {
+    if (!email.includes("@")) {
+      throw new Error("Invalid email");
+    }
+    
+    const user: User = {
+      id: crypto.randomUUID(),
+      name,
+      email,
+    };
+    
+    this.users.set(user.id, user);
+    return user;
+  }
+  
+  get(id: string): User | undefined {
+    return this.users.get(id);
+  }
+  
+  list(): User[] {
+    return Array.from(this.users.values());
+  }
+}
+
+describe("UserService", () => {
+  let service: UserService;
+  
+  beforeEach(() => {
+    service = new UserService();
+  });
+  
+  describe("create", () => {
+    it("should create a user with valid data", () => {
+      const user = service.create("John Doe", "john@example.com");
+      
+      assertEquals(user.name, "John Doe");
+      assertEquals(user.email, "john@example.com");
+      assertEquals(typeof user.id, "string");
+    });
+    
+    it("should throw on invalid email", () => {
+      assertThrows(
+        () => service.create("John", "invalid-email"),
+        Error,
+        "Invalid email"
+      );
+    });
+  });
+  
+  describe("list", () => {
+    it("should return all users", () => {
+      service.create("User 1", "user1@example.com");
+      service.create("User 2", "user2@example.com");
+      
+      const users = service.list();
+      assertEquals(users.length, 2);
+    });
+  });
+});
+
+// Async tests
+Deno.test("fetchUser should return user data", async () => {
+  const mockFetch = stub(
+    globalThis,
+    "fetch",
+    () => Promise.resolve(new Response(
+      JSON.stringify({ id: 1, name: "Test User" }),
+      { status: 200 }
+    ))
+  );
+  
+  try {
+    const response = await fetch("https://api.example.com/users/1");
+    const user = await response.json();
+    
+    assertEquals(user.name, "Test User");
+  } finally {
+    mockFetch.restore();
+  }
+});
+```
+
+Run tests:
+
+```bash
+# Run all tests
+deno test
+
+# With coverage
+deno test --coverage=coverage
+
+# Generate coverage report
+deno coverage coverage --lcov > coverage.lcov
+
+# Watch mode
+deno test --watch
+```
+
+## Fresh: Full-Stack Web Framework
+
+```typescript
+// routes/index.tsx
+import { Handlers, PageProps } from "$fresh/server.ts";
+
+interface Data {
+  count: number;
+}
+
+export const handler: Handlers<Data> = {
+  async GET(req, ctx) {
+    const count = await getVisitorCount();
+    return ctx.render({ count });
+  },
+};
+
+export default function Home({ data }: PageProps<Data>) {
+  return (
+    <div class="p-4 mx-auto max-w-screen-md">
+      <h1 class="text-4xl font-bold">Welcome to Fresh!</h1>
+      <p class="my-4">
+        You are visitor #{data.count}
+      </p>
+      <Counter start={3} />
+    </div>
+  );
+}
+
+// islands/Counter.tsx - Interactive island
+import { useState } from "preact/hooks";
+
+interface Props {
+  start: number;
+}
+
+export default function Counter({ start }: Props) {
+  const [count, setCount] = useState(start);
+  
+  return (
+    <div class="flex gap-2 items-center">
+      <button
+        class="px-4 py-2 bg-blue-500 text-white rounded"
+        onClick={() => setCount(count - 1)}
+      >
+        -
+      </button>
+      <span class="text-2xl">{count}</span>
+      <button
+        class="px-4 py-2 bg-blue-500 text-white rounded"
+        onClick={() => setCount(count + 1)}
+      >
+        +
+      </button>
+    </div>
+  );
+}
+```
+
+## Deployment
+
+### Deno Deploy
+
+```typescript
+// deploy.ts - Works on Deno Deploy edge network
+Deno.serve(async (req) => {
   const url = new URL(req.url);
   
-  if (url.pathname === "/api/users") {
-    return Response.json([{ id: 1, name: "Alice" }]);
+  if (url.pathname === "/") {
+    return new Response("Hello from the edge!", {
+      headers: { "content-type": "text/plain" },
+    });
+  }
+  
+  if (url.pathname === "/api/time") {
+    return Response.json({
+      timestamp: Date.now(),
+      iso: new Date().toISOString(),
+      region: Deno.env.get("DENO_REGION") ?? "unknown",
+    });
   }
   
   return new Response("Not Found", { status: 404 });
 });
 ```
 
-### Hono Framework
-
-```typescript
-import { Hono } from "jsr:@hono/hono";
-import { cors } from "jsr:@hono/hono/cors";
-import { logger } from "jsr:@hono/hono/logger";
-
-const app = new Hono();
-
-// Middleware
-app.use("*", logger());
-app.use("/api/*", cors());
-
-// Routes
-app.get("/", (c) => c.text("Welcome!"));
-
-app.get("/api/users/:id", (c) => {
-  const id = c.req.param("id");
-  return c.json({ id, name: "User " + id });
-});
-
-app.post("/api/users", async (c) => {
-  const body = await c.req.json();
-  return c.json({ created: body }, 201);
-});
-
-// Error handling
-app.onError((err, c) => {
-  console.error(err);
-  return c.json({ error: err.message }, 500);
-});
-
-Deno.serve(app.fetch);
-```
-
-## Testing
-
-### Built-in Test Runner
-
-```typescript
-// math.ts
-export function add(a: number, b: number): number {
-  return a + b;
-}
-
-export function divide(a: number, b: number): number {
-  if (b === 0) throw new Error("Division by zero");
-  return a / b;
-}
-```
-
-```typescript
-// math_test.ts
-import { assertEquals, assertThrows } from "jsr:@std/assert";
-import { add, divide } from "./math.ts";
-
-Deno.test("add - positive numbers", () => {
-  assertEquals(add(2, 3), 5);
-});
-
-Deno.test("add - negative numbers", () => {
-  assertEquals(add(-1, -1), -2);
-});
-
-Deno.test("divide - normal division", () => {
-  assertEquals(divide(10, 2), 5);
-});
-
-Deno.test("divide - division by zero throws", () => {
-  assertThrows(
-    () => divide(10, 0),
-    Error,
-    "Division by zero"
-  );
-});
-
-Deno.test({
-  name: "async test example",
-  async fn() {
-    const response = await fetch("https://httpbin.org/get");
-    assertEquals(response.status, 200);
-  },
-  permissions: { net: true },
-});
-```
+Deploy:
 
 ```bash
-# Run tests
-deno test
+# Install deployctl
+deno install -A -r -f https://deno.land/x/deploy/deployctl.ts
 
-# With coverage
-deno test --coverage=coverage
-deno coverage coverage
+# Deploy
+deployctl deploy --project=my-project deploy.ts
 ```
-
-### BDD Style Testing
-
-```typescript
-import { describe, it, expect, beforeEach } from "jsr:@std/testing/bdd";
-
-describe("Calculator", () => {
-  let calc: Calculator;
-  
-  beforeEach(() => {
-    calc = new Calculator();
-  });
-  
-  describe("add", () => {
-    it("should add two numbers", () => {
-      expect(calc.add(2, 3)).toBe(5);
-    });
-  });
-});
-```
-
-## Database Access
-
-### PostgreSQL
-
-```typescript
-import { Pool } from "npm:pg";
-
-const pool = new Pool({
-  connectionString: Deno.env.get("DATABASE_URL"),
-});
-
-const client = await pool.connect();
-
-try {
-  const result = await client.query("SELECT * FROM users WHERE id = $1", [1]);
-  console.log(result.rows[0]);
-} finally {
-  client.release();
-}
-```
-
-### SQLite
-
-```typescript
-import { Database } from "jsr:@db/sqlite";
-
-const db = new Database("app.db");
-
-db.exec(`
-  CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    email TEXT UNIQUE
-  )
-`);
-
-const insert = db.prepare("INSERT INTO users (name, email) VALUES (?, ?)");
-insert.run("Alice", "alice@example.com");
-
-const users = db.prepare("SELECT * FROM users").all();
-console.log(users);
-```
-
-### Deno KV
-
-```typescript
-// Built-in key-value store
-const kv = await Deno.openKv();
-
-// Set a value
-await kv.set(["users", "1"], { name: "Alice", email: "alice@example.com" });
-
-// Get a value
-const result = await kv.get(["users", "1"]);
-console.log(result.value); // { name: "Alice", email: "alice@example.com" }
-
-// Atomic transactions
-await kv.atomic()
-  .set(["users", "2"], { name: "Bob" })
-  .set(["emails", "bob@example.com"], "2")
-  .commit();
-
-// List with prefix
-const entries = kv.list({ prefix: ["users"] });
-for await (const entry of entries) {
-  console.log(entry.key, entry.value);
-}
-```
-
-## Configuration
-
-### deno.json
-
-```json
-{
-  "compilerOptions": {
-    "strict": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  },
-  "imports": {
-    "@std/": "jsr:@std/",
-    "hono": "jsr:@hono/hono@^4",
-    "zod": "npm:zod@^3"
-  },
-  "tasks": {
-    "dev": "deno run --watch --allow-net main.ts",
-    "start": "deno run --allow-net main.ts",
-    "test": "deno test --allow-read",
-    "check": "deno check main.ts"
-  },
-  "fmt": {
-    "indentWidth": 2,
-    "lineWidth": 100
-  },
-  "lint": {
-    "rules": {
-      "tags": ["recommended"]
-    }
-  }
-}
-```
-
-### Tasks (Like npm scripts)
-
-```bash
-# Run a task
-deno task dev
-
-# List all tasks
-deno task
-```
-
-## Deploying Deno
 
 ### Docker
 
 ```dockerfile
-FROM denoland/deno:2.0.0
+FROM denoland/deno:1.40.0
 
 WORKDIR /app
 
 # Cache dependencies
 COPY deno.json deno.lock ./
-RUN deno cache --lock=deno.lock main.ts
+RUN deno cache --lock=deno.lock deno.json
 
 # Copy source
 COPY . .
 
-# Compile for faster startup (optional)
-RUN deno compile --allow-net --output=app main.ts
+# Compile for faster startup
+RUN deno cache --lock=deno.lock main.ts
 
+# Run
 EXPOSE 8000
-CMD ["./app"]
+CMD ["run", "--allow-net", "--allow-env", "main.ts"]
 ```
 
-### Deno Deploy
+## Configuration
 
-```typescript
-// Works on Deno Deploy with zero config
-Deno.serve((req) => {
-  return new Response("Hello from the edge!");
-});
+```json
+// deno.json
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-net --allow-env main.ts",
+    "start": "deno run --allow-net --allow-env main.ts",
+    "test": "deno test --allow-all",
+    "lint": "deno lint",
+    "fmt": "deno fmt",
+    "check": "deno check main.ts"
+  },
+  "imports": {
+    "@std/": "https://deno.land/std@0.208.0/",
+    "oak": "https://deno.land/x/oak@v12.6.1/mod.ts",
+    "zod": "npm:zod@3.22.4"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 100,
+    "indentWidth": 2
+  }
+}
 ```
 
-```bash
-# Deploy with deployctl
-deployctl deploy --project=my-app main.ts
-```
+## Best Practices
 
-## Migration from Node.js
-
-### Step by Step
-
-1. **Add deno.json** with imports map
-2. **Update imports** to use npm: or jsr:
-3. **Replace Node globals** (process → Deno.env, etc.)
-4. **Run with permissions**
-
-```typescript
-// Before (Node.js)
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
-
-// After (Deno)
-import express from "npm:express@4";
-import * as fs from "node:fs";
-import * as path from "node:path";
-```
+1. **Lock dependencies**: Use `deno.lock` for reproducible builds
+2. **Use import maps**: Centralize dependency versions in `deno.json`
+3. **Explicit permissions**: Grant minimal required permissions
+4. **Type everything**: Leverage TypeScript fully
+5. **Use standard library**: Prefer `std` over third-party when possible
 
 ## Conclusion
 
-Deno 2.0 is production-ready with:
+Deno 2.0 delivers on its promise: a modern, secure, TypeScript-first runtime that's ready for production. With full npm compatibility, you can incrementally adopt Deno while leveraging your existing JavaScript ecosystem knowledge.
 
-- **Full Node.js compatibility** - Use npm packages seamlessly
-- **Native TypeScript** - No configuration needed
-- **Secure by default** - Explicit permissions
-- **Modern tooling** - Built-in formatter, linter, tester
-- **Web standards** - Fetch, Streams, Crypto APIs
-- **Deno KV** - Built-in database
+Whether you're building APIs, CLI tools, or full-stack applications with Fresh, Deno provides an excellent developer experience with strong defaults and minimal configuration.
 
-Start your next project with Deno and experience the future of JavaScript runtimes.
+---
 
-## Resources
-
-- [Deno Documentation](https://docs.deno.com)
-- [JSR Registry](https://jsr.io)
-- [Deno Deploy](https://deno.com/deploy)
-- [Fresh Framework](https://fresh.deno.dev)
+*For more JavaScript/TypeScript content, check out our guides on TypeScript 5 features and modern testing practices.*
