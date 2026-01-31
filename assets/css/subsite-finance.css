@@ -1,0 +1,10 @@
+/* ===== Finance Theme - Green/Emerald ===== */
+.subsite-finance {
+  --color-primary: #059669;
+  --color-primary-dark: #047857;
+  --color-primary-light: #10B981;
+  --color-secondary: #34D399;
+  --color-accent: #6EE7B7;
+  --color-gradient-start: #059669;
+  --color-gradient-end: #34D399;
+}

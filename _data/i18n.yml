@@ -1,0 +1,214 @@
+# ===== Language Configuration =====
+# Multilingual support for subsites (wellness, ai-tools, finance, health-wellness-daily)
+
+en:
+  # Navigation
+  nav:
+    home: "Home"
+    categories: "Categories"
+    about: "About"
+    contact: "Contact"
+  
+  # Common UI
+  ui:
+    read_more: "Read More"
+    view_all: "View All"
+    latest_posts: "Latest Posts"
+    related_posts: "Related Posts"
+    previous: "Previous"
+    next: "Next"
+    back_to_home: "Back to Home"
+    search: "Search"
+    toc: "Table of Contents"
+    share: "Share"
+    tags: "Tags"
+    categories: "Categories"
+    posted_on: "Posted on"
+    updated_on: "Updated on"
+    min_read: "min read"
+  
+  # Footer
+  footer:
+    quick_links: "Quick Links"
+    categories: "Categories"
+    disclaimer: "This content is for informational purposes only and should not replace professional advice."
+    copyright: "All rights reserved."
+    privacy: "Privacy Policy"
+  
+  # Wellness specific
+  wellness:
+    title: "Wellness"
+    tagline: "Evidence-based guides for a healthier, happier life"
+    description: "Discover scientific wellness tips for nutrition, fitness, mental health, and lifestyle."
+    categories:
+      nutrition: "Nutrition"
+      nutrition_desc: "Healthy diet and nutrition information"
+      fitness: "Fitness"
+      fitness_desc: "Effective workout methods and tips"
+      mental_health: "Mental Health"
+      mental_health_desc: "Mind wellness and stress management"
+      sleep: "Sleep"
+      sleep_desc: "Guide to quality sleep"
+      lifestyle: "Lifestyle"
+      lifestyle_desc: "Healthy living habits"
+      supplements: "Supplements"
+      supplements_desc: "Nutritional supplement guides"
+  
+  # AI Tools specific
+  ai_tools:
+    title: "AI Tools"
+    tagline: "Discover the best AI tools to boost your productivity"
+    description: "Reviews, tutorials, and insights on the latest AI tools and technologies."
+    categories:
+      productivity: "Productivity"
+      productivity_desc: "AI tools to enhance your workflow"
+      creative: "Creative"
+      creative_desc: "AI for design, writing, and content creation"
+      development: "Development"
+      development_desc: "AI-powered coding and dev tools"
+      automation: "Automation"
+      automation_desc: "Automate tasks with AI"
+      learning: "Learning"
+      learning_desc: "AI tools for education and learning"
+  
+  # Finance specific
+  finance:
+    title: "Finance"
+    tagline: "Smart money management and investment insights"
+    description: "Personal finance tips, investment strategies, and wealth building guides."
+    categories:
+      investing: "Investing"
+      investing_desc: "Stock, ETF, and investment strategies"
+      budgeting: "Budgeting"
+      budgeting_desc: "Personal budget management"
+      retirement: "Retirement"
+      retirement_desc: "Retirement planning guides"
+      crypto: "Crypto"
+      crypto_desc: "Cryptocurrency insights"
+      passive_income: "Passive Income"
+      passive_income_desc: "Build passive income streams"
+  
+  # Health Wellness Daily specific
+  health-wellness-daily:
+    title: "Health & Wellness Daily"
+    tagline: "Evidence-based guides for a healthier, happier life"
+    description: "Discover scientific wellness tips for nutrition, fitness, mental health, and lifestyle."
+    categories:
+      nutrition: "Nutrition"
+      nutrition_desc: "Healthy diet and nutrition information"
+      fitness: "Fitness"
+      fitness_desc: "Effective workout methods and tips"
+      mental_health: "Mental Health"
+      mental_health_desc: "Mind wellness and stress management"
+      sleep: "Sleep"
+      sleep_desc: "Guide to quality sleep"
+      lifestyle: "Lifestyle"
+      lifestyle_desc: "Healthy living habits"
+      supplements: "Supplements"
+      supplements_desc: "Nutritional supplement guides"
+
+ko:
+  # Navigation
+  nav:
+    home: "홈"
+    categories: "카테고리"
+    about: "소개"
+    contact: "연락처"
+  
+  # Common UI
+  ui:
+    read_more: "더 보기"
+    view_all: "전체 보기"
+    latest_posts: "최신 글"
+    related_posts: "관련 글"
+    previous: "이전"
+    next: "다음"
+    back_to_home: "홈으로"
+    search: "검색"
+    toc: "목차"
+    share: "공유"
+    tags: "태그"
+    categories: "카테고리"
+    posted_on: "작성일"
+    updated_on: "수정일"
+    min_read: "분 읽기"
+  
+  # Footer
+  footer:
+    quick_links: "바로가기"
+    categories: "카테고리"
+    disclaimer: "이 콘텐츠는 정보 제공 목적이며 전문가 조언을 대체하지 않습니다."
+    copyright: "All rights reserved."
+    privacy: "개인정보처리방침"
+  
+  # Wellness specific
+  wellness:
+    title: "웰니스"
+    tagline: "건강하고 행복한 삶을 위한 과학적 가이드"
+    description: "영양, 운동, 정신건강, 라이프스타일에 대한 과학적 웰니스 정보를 제공합니다."
+    categories:
+      nutrition: "영양"
+      nutrition_desc: "건강한 식단과 영양 정보"
+      fitness: "운동"
+      fitness_desc: "효과적인 운동 방법과 팁"
+      mental_health: "정신건강"
+      mental_health_desc: "마음 건강과 스트레스 관리"
+      sleep: "수면"
+      sleep_desc: "질 좋은 수면을 위한 가이드"
+      lifestyle: "라이프스타일"
+      lifestyle_desc: "건강한 생활 습관"
+      supplements: "보충제"
+      supplements_desc: "영양 보충제 가이드"
+  
+  # AI Tools specific
+  ai_tools:
+    title: "AI 도구"
+    tagline: "생산성을 높여주는 최고의 AI 도구들"
+    description: "최신 AI 도구와 기술에 대한 리뷰, 튜토리얼, 인사이트를 제공합니다."
+    categories:
+      productivity: "생산성"
+      productivity_desc: "워크플로우를 향상시키는 AI 도구"
+      creative: "크리에이티브"
+      creative_desc: "디자인, 글쓰기, 콘텐츠 제작용 AI"
+      development: "개발"
+      development_desc: "AI 기반 코딩 및 개발 도구"
+      automation: "자동화"
+      automation_desc: "AI로 업무 자동화"
+      learning: "학습"
+      learning_desc: "교육 및 학습용 AI 도구"
+  
+  # Finance specific
+  finance:
+    title: "금융"
+    tagline: "현명한 돈 관리와 투자 인사이트"
+    description: "개인 재무 팁, 투자 전략, 자산 형성 가이드를 제공합니다."
+    categories:
+      investing: "투자"
+      investing_desc: "주식, ETF, 투자 전략"
+      budgeting: "예산관리"
+      budgeting_desc: "개인 예산 관리법"
+      retirement: "은퇴"
+      retirement_desc: "은퇴 설계 가이드"
+      crypto: "암호화폐"
+      crypto_desc: "암호화폐 인사이트"
+      passive_income: "패시브인컴"
+      passive_income_desc: "수동적 수입 만들기"
+  
+  # Health Wellness Daily specific
+  health-wellness-daily:
+    title: "헬스 & 웰니스 데일리"
+    tagline: "건강하고 행복한 삶을 위한 과학적 가이드"
+    description: "영양, 운동, 정신건강, 라이프스타일에 대한 과학적 웰니스 정보를 제공합니다."
+    categories:
+      nutrition: "영양"
+      nutrition_desc: "건강한 식단과 영양 정보"
+      fitness: "운동"
+      fitness_desc: "효과적인 운동 방법과 팁"
+      mental_health: "정신건강"
+      mental_health_desc: "마음 건강과 스트레스 관리"
+      sleep: "수면"
+      sleep_desc: "질 좋은 수면을 위한 가이드"
+      lifestyle: "라이프스타일"
+      lifestyle_desc: "건강한 생활 습관"
+      supplements: "보충제"
+      supplements_desc: "영양 보충제 가이드"

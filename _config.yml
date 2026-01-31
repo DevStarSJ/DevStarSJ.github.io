@@ -49,6 +49,9 @@ google_analytics:    UA-104294646-1
 # Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
 disqus_shortname:    devstarsj
 
+# Google AdSense (add your client ID, e.g., ca-pub-XXXXXXXXXX)
+# google_adsense:      ca-pub-XXXXXXXXXX
+
 # This text will appear in the footer of every page. Markdown enabled.
 copyright:           '&copy; 2013. by SeokJoon Yun'
 
@@ -93,11 +96,30 @@ collections:
   projects:
     permalink:       /projects/:path/
     output:          true
+  # Wellness Section
   wellness:
     permalink:       /wellness/:path/
     output:          true
   wellness_ko:
     permalink:       /wellness/ko/:path/
+    output:          true
+  # AI Tools Section
+  ai_tools:
+    permalink:       /ai-tools/:path/
+    output:          true
+  ai_tools_ko:
+    permalink:       /ai-tools/ko/:path/
+    output:          true
+  # Finance Section
+  finance:
+    permalink:       /finance/:path/
+    output:          true
+  finance_ko:
+    permalink:       /finance/ko/:path/
+    output:          true
+  # Health Wellness Daily Section
+  health_wellness_daily:
+    permalink:       /health-wellness-daily/:path/
     output:          true
 
 # -----------------------------------------------------------------------------
@@ -145,3 +167,72 @@ tipue_search:
     files: [search.html, index.html, tags.html]
     categories: []
     tags: []
+
+# -----------------------------------------------------------------------------
+#  Defaults for subsite collections
+# -----------------------------------------------------------------------------
+
+defaults:
+  # Wellness (English)
+  - scope:
+      path: ""
+      type: "wellness"
+    values:
+      layout: "subsite-post"
+      section: "wellness"
+      lang: "en"
+      toc: true
+  # Wellness (Korean)
+  - scope:
+      path: ""
+      type: "wellness_ko"
+    values:
+      layout: "subsite-post"
+      section: "wellness"
+      lang: "ko"
+      toc: true
+  # AI Tools (English)
+  - scope:
+      path: ""
+      type: "ai_tools"
+    values:
+      layout: "subsite-post"
+      section: "ai-tools"
+      lang: "en"
+      toc: true
+  # AI Tools (Korean)
+  - scope:
+      path: ""
+      type: "ai_tools_ko"
+    values:
+      layout: "subsite-post"
+      section: "ai-tools"
+      lang: "ko"
+      toc: true
+  # Finance (English)
+  - scope:
+      path: ""
+      type: "finance"
+    values:
+      layout: "subsite-post"
+      section: "finance"
+      lang: "en"
+      toc: true
+  # Finance (Korean)
+  - scope:
+      path: ""
+      type: "finance_ko"
+    values:
+      layout: "subsite-post"
+      section: "finance"
+      lang: "ko"
+      toc: true
+  # Health Wellness Daily
+  - scope:
+      path: ""
+      type: "health_wellness_daily"
+    values:
+      layout: "subsite-post"
+      section: "health-wellness-daily"
+      lang: "en"
+      toc: true

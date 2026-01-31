@@ -1,0 +1,10 @@
+/* ===== Health Wellness Daily Theme - Same as Wellness ===== */
+.subsite-health-wellness-daily {
+  --color-primary: #26A69A;
+  --color-primary-dark: #00897B;
+  --color-primary-light: #4DB6AC;
+  --color-secondary: #4CAF50;
+  --color-accent: #81C784;
+  --color-gradient-start: #26A69A;
+  --color-gradient-end: #4CAF50;
+}

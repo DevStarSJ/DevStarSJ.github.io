@@ -1,0 +1,173 @@
+---
+layout: subsite-default
+---
+
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign section = page.section | default: 'wellness' %}
+{% assign section_t = t[section] %}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">{{ section_t.title }}</h1>
+    <p class="hero-subtitle">{{ section_t.tagline }}</p>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section">
+  <div class="container">
+    <h2 class="section-title">{{ t.nav.categories }}</h2>
+    <div class="categories-grid">
+      {% if section == 'wellness' or section == 'health-wellness-daily' %}
+        <a href="#nutrition" class="category-card">
+          <span class="category-icon">🥗</span>
+          <h3>{{ section_t.categories.nutrition }}</h3>
+          <p>{{ section_t.categories.nutrition_desc }}</p>
+        </a>
+        <a href="#fitness" class="category-card">
+          <span class="category-icon">💪</span>
+          <h3>{{ section_t.categories.fitness }}</h3>
+          <p>{{ section_t.categories.fitness_desc }}</p>
+        </a>
+        <a href="#mental_health" class="category-card">
+          <span class="category-icon">🧠</span>
+          <h3>{{ section_t.categories.mental_health }}</h3>
+          <p>{{ section_t.categories.mental_health_desc }}</p>
+        </a>
+        <a href="#sleep" class="category-card">
+          <span class="category-icon">😴</span>
+          <h3>{{ section_t.categories.sleep }}</h3>
+          <p>{{ section_t.categories.sleep_desc }}</p>
+        </a>
+        <a href="#lifestyle" class="category-card">
+          <span class="category-icon">🌿</span>
+          <h3>{{ section_t.categories.lifestyle }}</h3>
+          <p>{{ section_t.categories.lifestyle_desc }}</p>
+        </a>
+        <a href="#supplements" class="category-card">
+          <span class="category-icon">💊</span>
+          <h3>{{ section_t.categories.supplements }}</h3>
+          <p>{{ section_t.categories.supplements_desc }}</p>
+        </a>
+      {% elsif section == 'ai-tools' %}
+        <a href="#productivity" class="category-card">
+          <span class="category-icon">⚡</span>
+          <h3>{{ section_t.categories.productivity }}</h3>
+          <p>{{ section_t.categories.productivity_desc }}</p>
+        </a>
+        <a href="#creative" class="category-card">
+          <span class="category-icon">🎨</span>
+          <h3>{{ section_t.categories.creative }}</h3>
+          <p>{{ section_t.categories.creative_desc }}</p>
+        </a>
+        <a href="#development" class="category-card">
+          <span class="category-icon">💻</span>
+          <h3>{{ section_t.categories.development }}</h3>
+          <p>{{ section_t.categories.development_desc }}</p>
+        </a>
+        <a href="#automation" class="category-card">
+          <span class="category-icon">🔄</span>
+          <h3>{{ section_t.categories.automation }}</h3>
+          <p>{{ section_t.categories.automation_desc }}</p>
+        </a>
+        <a href="#learning" class="category-card">
+          <span class="category-icon">📚</span>
+          <h3>{{ section_t.categories.learning }}</h3>
+          <p>{{ section_t.categories.learning_desc }}</p>
+        </a>
+      {% elsif section == 'finance' %}
+        <a href="#investing" class="category-card">
+          <span class="category-icon">📈</span>
+          <h3>{{ section_t.categories.investing }}</h3>
+          <p>{{ section_t.categories.investing_desc }}</p>
+        </a>
+        <a href="#budgeting" class="category-card">
+          <span class="category-icon">💵</span>
+          <h3>{{ section_t.categories.budgeting }}</h3>
+          <p>{{ section_t.categories.budgeting_desc }}</p>
+        </a>
+        <a href="#retirement" class="category-card">
+          <span class="category-icon">🏖️</span>
+          <h3>{{ section_t.categories.retirement }}</h3>
+          <p>{{ section_t.categories.retirement_desc }}</p>
+        </a>
+        <a href="#crypto" class="category-card">
+          <span class="category-icon">₿</span>
+          <h3>{{ section_t.categories.crypto }}</h3>
+          <p>{{ section_t.categories.crypto_desc }}</p>
+        </a>
+        <a href="#passive_income" class="category-card">
+          <span class="category-icon">💸</span>
+          <h3>{{ section_t.categories.passive_income }}</h3>
+          <p>{{ section_t.categories.passive_income_desc }}</p>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- Ad after categories -->
+{% include subsites/adsense.html position="after-categories" %}
+
+<!-- Latest Posts Section -->
+<section class="posts-section">
+  <div class="container">
+    <h2 class="section-title">{{ t.ui.latest_posts }}</h2>
+    <div class="posts-grid">
+      {% assign collection_name = '_' | append: section | replace: '-', '_' %}
+      {% if lang == 'ko' %}
+        {% assign collection_name = collection_name | append: '_ko' %}
+      {% endif %}
+      
+      {% comment %} Get posts from the appropriate collection {% endcomment %}
+      {% if section == 'wellness' and lang == 'ko' %}
+        {% assign posts = site.wellness_ko | sort: 'date' | reverse %}
+      {% elsif section == 'wellness' %}
+        {% assign posts = site.wellness | sort: 'date' | reverse %}
+      {% elsif section == 'ai-tools' and lang == 'ko' %}
+        {% assign posts = site.ai_tools_ko | sort: 'date' | reverse %}
+      {% elsif section == 'ai-tools' %}
+        {% assign posts = site.ai_tools | sort: 'date' | reverse %}
+      {% elsif section == 'finance' and lang == 'ko' %}
+        {% assign posts = site.finance_ko | sort: 'date' | reverse %}
+      {% elsif section == 'finance' %}
+        {% assign posts = site.finance | sort: 'date' | reverse %}
+      {% elsif section == 'health-wellness-daily' %}
+        {% assign posts = site.health_wellness_daily | sort: 'date' | reverse %}
+      {% endif %}
+      
+      {% for post in posts limit:9 %}
+      <article class="post-card">
+        {% if post.image %}
+        <div class="post-card-image" style="background-image: url('{{ post.image | relative_url }}')"></div>
+        {% else %}
+        <div class="post-card-image post-card-image--placeholder">
+          <span>{{ post.category | default: section | capitalize }}</span>
+        </div>
+        {% endif %}
+        <div class="post-card-content">
+          <div class="post-card-meta">
+            <span class="post-category">{{ post.category | capitalize }}</span>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+          </div>
+          <h3 class="post-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    
+    {% if posts.size > 9 %}
+    <div class="posts-more">
+      <a href="{{ page.url | append: 'categories/' | relative_url }}" class="btn btn-outline">{{ t.ui.view_all }}</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Ad before footer -->
+{% include subsites/adsense.html position="before-footer" %}

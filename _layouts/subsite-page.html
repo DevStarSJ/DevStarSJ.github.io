@@ -1,0 +1,25 @@
+---
+layout: subsite-default
+---
+
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign section = page.section | default: 'wellness' %}
+{% assign section_t = t[section] %}
+
+<!-- Page Header -->
+<header class="page-header">
+  <div class="container">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="page-description">{{ page.description }}</p>
+    {% endif %}
+  </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+  <div class="page-content">
+    {{ content }}
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  {% assign lang = page.lang | default: 'en' %}
+  {% assign t = site.data.i18n[lang] %}
+  {% assign section = page.section | default: 'wellness' %}
+  {% assign section_t = t[section] %}
+  
+  <!-- Theme Color -->
+  {% if section == 'wellness' %}
+  <meta name="theme-color" content="#26A69A">
+  {% elsif section == 'ai-tools' %}
+  <meta name="theme-color" content="#6366F1">
+  {% elsif section == 'finance' %}
+  <meta name="theme-color" content="#059669">
+  {% else %}
+  <meta name="theme-color" content="#26A69A">
+  {% endif %}
+  
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ section_t.title | default: section | capitalize }}</title>
+  <meta name="description" content="{{ page.description | default: page.excerpt | default: section_t.description | strip_html | truncate: 160 }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="{% if page.layout == 'subsite-post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ page.title | default: section_t.title }}">
+  <meta property="og:description" content="{{ page.description | default: page.excerpt | default: section_t.description | strip_html | truncate: 160 }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ section_t.title }}">
+  {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: section_t.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: page.excerpt | default: section_t.description | strip_html | truncate: 160 }}">
+  {% if page.image %}<meta name="twitter:image" content="{{ page.image | absolute_url }}">{% endif %}
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/subsite.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/subsite-' | append: section | append: '.css' | relative_url }}">
+  
+  {% if site.google_analytics %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+  
+  {% if site.google_adsense %}
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense }}" crossorigin="anonymous"></script>
+  {% endif %}
+</head>
+<body class="subsite subsite-{{ section }}" data-section="{{ section }}" data-lang="{{ lang }}">
+  {% include subsites/header.html %}
+  
+  <main class="main-content">
+    {{ content }}
+  </main>
+  
+  {% include subsites/footer.html %}
+  
+  <script src="{{ '/assets/js/subsite.js' | relative_url }}"></script>
+</body>
+</html>

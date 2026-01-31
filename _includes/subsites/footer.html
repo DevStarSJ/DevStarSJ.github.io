@@ -1,0 +1,67 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign section = page.section | default: 'wellness' %}
+{% assign section_t = t[section] %}
+{% assign base_path = '/' | append: section | append: '/' %}
+{% if lang == 'ko' %}
+  {% assign base_path = '/' | append: section | append: '/ko/' %}
+{% endif %}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          {% if section == 'wellness' %}
+          <span class="logo-icon">🌿</span>
+          {% elsif section == 'ai-tools' %}
+          <span class="logo-icon">🤖</span>
+          {% elsif section == 'finance' %}
+          <span class="logo-icon">💰</span>
+          {% else %}
+          <span class="logo-icon">🌿</span>
+          {% endif %}
+          <span class="footer-title">{{ section_t.title | default: section | capitalize }}</span>
+        </div>
+        <p class="footer-desc">{{ section_t.tagline }}</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>{{ t.footer.quick_links }}</h4>
+        <ul>
+          <li><a href="{{ base_path | relative_url }}">{{ t.nav.home }}</a></li>
+          <li><a href="{{ base_path | append: 'categories/' | relative_url }}">{{ t.nav.categories }}</a></li>
+          <li><a href="{{ base_path | append: 'about/' | relative_url }}">{{ t.nav.about }}</a></li>
+          <li><a href="{{ '/' | relative_url }}">Dev Note (Main)</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-categories">
+        <h4>{{ t.footer.categories }}</h4>
+        <ul>
+          {% if section == 'wellness' %}
+            <li><a href="{{ base_path | append: 'categories/#nutrition' | relative_url }}">{{ section_t.categories.nutrition }}</a></li>
+            <li><a href="{{ base_path | append: 'categories/#fitness' | relative_url }}">{{ section_t.categories.fitness }}</a></li>
+            <li><a href="{{ base_path | append: 'categories/#mental_health' | relative_url }}">{{ section_t.categories.mental_health }}</a></li>
+            <li><a href="{{ base_path | append: 'categories/#sleep' | relative_url }}">{{ section_t.categories.sleep }}</a></li>
+          {% elsif section == 'ai-tools' %}
+            <li><a href="{{ base_path | append: 'categories/#productivity' | relative_url }}">{{ section_t.categories.productivity }}</a></li>
+            <li><a href="{{ base_path | append: 'categories/#creative' | relative_url }}">{{ section_t.categories.creative }}</a></li>
+            <li><a href="{{ base_path | append: 'categories/#development' | relative_url }}">{{ section_t.categories.development }}</a></li>
+            <li><a href="{{ base_path | append: 'categories/#automation' | relative_url }}">{{ section_t.categories.automation }}</a></li>
+          {% elsif section == 'finance' %}
+            <li><a href="{{ base_path | append: 'categories/#investing' | relative_url }}">{{ section_t.categories.investing }}</a></li>
+            <li><a href="{{ base_path | append: 'categories/#budgeting' | relative_url }}">{{ section_t.categories.budgeting }}</a></li>
+            <li><a href="{{ base_path | append: 'categories/#retirement' | relative_url }}">{{ section_t.categories.retirement }}</a></li>
+            <li><a href="{{ base_path | append: 'categories/#passive_income' | relative_url }}">{{ section_t.categories.passive_income }}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ section_t.title }}. {{ t.footer.copyright }}</p>
+      <p class="footer-disclaimer">{{ t.footer.disclaimer }}</p>
+    </div>
+  </div>
+</footer>

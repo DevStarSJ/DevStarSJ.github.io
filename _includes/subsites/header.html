@@ -1,0 +1,61 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign section = page.section | default: 'wellness' %}
+{% assign section_t = t[section] %}
+{% assign base_path = '/' | append: section | append: '/' %}
+{% if lang == 'ko' %}
+  {% assign base_path = '/' | append: section | append: '/ko/' %}
+{% endif %}
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="{{ base_path | relative_url }}" class="logo">
+        {% if section == 'wellness' %}
+        <span class="logo-icon">🌿</span>
+        {% elsif section == 'ai-tools' %}
+        <span class="logo-icon">🤖</span>
+        {% elsif section == 'finance' %}
+        <span class="logo-icon">💰</span>
+        {% else %}
+        <span class="logo-icon">🌿</span>
+        {% endif %}
+        <span class="logo-text">{{ section_t.title | default: section | capitalize }}</span>
+      </a>
+      
+      <div class="nav-right">
+        <!-- Language Switcher -->
+        {% include subsites/language-switcher.html %}
+        
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-menu">
+          <li>
+            <a href="{{ base_path | relative_url }}" {% if page.url == base_path %}class="active"{% endif %}>
+              {{ t.nav.home }}
+            </a>
+          </li>
+          <li>
+            <a href="{{ base_path | append: 'categories/' | relative_url }}" {% if page.url contains 'categories' %}class="active"{% endif %}>
+              {{ t.nav.categories }}
+            </a>
+          </li>
+          <li>
+            <a href="{{ base_path | append: 'about/' | relative_url }}" {% if page.url contains 'about' %}class="active"{% endif %}>
+              {{ t.nav.about }}
+            </a>
+          </li>
+          <li class="nav-back-main">
+            <a href="{{ '/' | relative_url }}" title="Back to Main Blog">
+              ← Dev Note
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,136 @@
+---
+layout: subsite-default
+---
+
+{% assign lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign section = page.section | default: 'wellness' %}
+{% assign section_t = t[section] %}
+{% assign base_path = '/' | append: section | append: '/' %}
+{% if lang == 'ko' %}
+  {% assign base_path = '/' | append: section | append: '/ko/' %}
+{% endif %}
+
+<!-- Post Header -->
+<header class="post-header">
+  <div class="container">
+    <div class="post-meta">
+      <a href="{{ base_path | append: 'categories/#' | append: page.category | relative_url }}" class="post-category-badge">
+        {{ page.category | capitalize }}
+      </a>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.reading_time %}
+      <span class="reading-time">{{ page.reading_time }} {{ t.ui.min_read }}</span>
+      {% endif %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </div>
+</header>
+
+<!-- Ad after header -->
+{% include subsites/adsense.html position="after-header" %}
+
+<!-- Post Content -->
+<div class="container">
+  <div class="post-layout">
+    <!-- Sidebar / TOC -->
+    <aside class="post-sidebar">
+      {% if page.toc != false %}
+      <div class="toc-wrapper">
+        <h4 class="toc-title">{{ t.ui.toc }}</h4>
+        <nav class="toc">
+          {% include subsites/toc.html html=content %}
+        </nav>
+      </div>
+      {% endif %}
+    </aside>
+    
+    <!-- Main Content -->
+    <article class="post-content">
+      {{ content }}
+      
+      <!-- Tags -->
+      {% if page.tags and page.tags.size > 0 %}
+      <div class="post-tags">
+        <span class="tags-label">{{ t.ui.tags }}:</span>
+        {% for tag in page.tags %}
+        <span class="tag">#{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </article>
+  </div>
+</div>
+
+<!-- Ad in content -->
+{% include subsites/adsense.html position="in-content" %}
+
+<!-- Post Navigation -->
+{% assign posts_collection = site[section] %}
+{% if lang == 'ko' %}
+  {% assign collection_ko = section | append: '_ko' %}
+  {% assign posts_collection = site[collection_ko] %}
+{% endif %}
+
+{% assign sorted_posts = posts_collection | sort: 'date' %}
+{% assign prev_post = nil %}
+{% assign next_post = nil %}
+{% assign found = false %}
+
+{% for post in sorted_posts %}
+  {% if found %}
+    {% assign next_post = post %}
+    {% break %}
+  {% endif %}
+  {% if post.url == page.url %}
+    {% assign found = true %}
+  {% else %}
+    {% assign prev_post = post %}
+  {% endif %}
+{% endfor %}
+
+<nav class="post-navigation">
+  <div class="container">
+    {% if prev_post %}
+    <a href="{{ prev_post.url | relative_url }}" class="post-nav-link post-nav-prev">
+      <span class="post-nav-label">← {{ t.ui.previous }}</span>
+      <span class="post-nav-title">{{ prev_post.title }}</span>
+    </a>
+    {% else %}
+    <div class="post-nav-link post-nav-empty"></div>
+    {% endif %}
+    
+    {% if next_post %}
+    <a href="{{ next_post.url | relative_url }}" class="post-nav-link post-nav-next">
+      <span class="post-nav-label">{{ t.ui.next }} →</span>
+      <span class="post-nav-title">{{ next_post.title }}</span>
+    </a>
+    {% else %}
+    <div class="post-nav-link post-nav-empty"></div>
+    {% endif %}
+  </div>
+</nav>
+
+<!-- Related Posts -->
+{% assign related_posts = posts_collection | where: 'category', page.category | where_exp: 'post', 'post.url != page.url' | limit: 3 %}
+{% if related_posts.size > 0 %}
+<section class="related-posts">
+  <div class="container">
+    <h3 class="related-title">{{ t.ui.related_posts }}</h3>
+    <div class="related-grid">
+      {% for post in related_posts %}
+      <a href="{{ post.url | relative_url }}" class="related-card">
+        <h4>{{ post.title }}</h4>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Ad before footer -->
+{% include subsites/adsense.html position="before-footer" %}

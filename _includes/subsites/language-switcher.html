@@ -1,0 +1,26 @@
+{% assign current_lang = page.lang | default: 'en' %}
+{% assign section = page.section | default: 'wellness' %}
+
+<div class="language-switcher">
+  {% if current_lang == 'en' %}
+    <span class="lang-option active" title="English">EN</span>
+    <span class="lang-divider">|</span>
+    {% if page.layout == 'subsite-post' and page.ko_url %}
+      <a href="{{ page.ko_url | relative_url }}" class="lang-option" title="한국어">KO</a>
+    {% elsif page.layout == 'subsite-home' or page.layout == 'subsite-page' %}
+      <a href="{{ '/' | append: section | append: '/ko/' | relative_url }}" class="lang-option" title="한국어">KO</a>
+    {% else %}
+      <a href="{{ '/' | append: section | append: '/ko/' | relative_url }}" class="lang-option" title="한국어">KO</a>
+    {% endif %}
+  {% else %}
+    {% if page.layout == 'subsite-post' and page.en_url %}
+      <a href="{{ page.en_url | relative_url }}" class="lang-option" title="English">EN</a>
+    {% elsif page.layout == 'subsite-home' or page.layout == 'subsite-page' %}
+      <a href="{{ '/' | append: section | append: '/' | relative_url }}" class="lang-option" title="English">EN</a>
+    {% else %}
+      <a href="{{ '/' | append: section | append: '/' | relative_url }}" class="lang-option" title="English">EN</a>
+    {% endif %}
+    <span class="lang-divider">|</span>
+    <span class="lang-option active" title="한국어">KO</span>
+  {% endif %}
+</div>

@@ -1,0 +1,31 @@
+{% assign minHeader = include.minHeader | default: 2 %}
+{% assign maxHeader = include.maxHeader | default: 3 %}
+{% assign html = include.html %}
+
+{% assign nodes = html | split: '<h' %}
+{% for node in nodes %}
+  {% if node == "" %}
+    {% continue %}
+  {% endif %}
+  
+  {% assign header_level = node | slice: 0, 1 %}
+  {% assign headerNumeric = header_level | plus: 0 %}
+  
+  {% if headerNumeric >= minHeader and headerNumeric <= maxHeader %}
+    {% assign idStart = node | split: 'id="' %}
+    {% if idStart.size > 1 %}
+      {% assign idEnd = idStart[1] | split: '"' %}
+      {% assign id = idEnd[0] %}
+      
+      {% assign titleStart = node | split: '>' %}
+      {% if titleStart.size > 1 %}
+        {% assign titleEnd = titleStart[1] | split: '</h' %}
+        {% assign title = titleEnd[0] | strip_html | strip %}
+        
+        {% if title != "" %}
+<a href="#{{ id }}" class="toc-link toc-level-{{ headerNumeric }}">{{ title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
