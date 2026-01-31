@@ -395,3 +395,14 @@ body.wellness-theme a:hover {
     font-size: 0.8rem;
   }
 }
+
+/* 광고 스타일 */
+.wellness-ad {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.wellness-ad ins {
+  background: transparent;
+}
+
