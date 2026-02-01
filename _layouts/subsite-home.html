@@ -6,6 +6,10 @@ layout: subsite-default
 {% assign t = site.data.i18n[lang] %}
 {% assign section = page.section | default: 'wellness' %}
 {% assign section_t = t[section] %}
+{% assign base_path = '/' | append: section | append: '/' %}
+{% if lang == 'ko' %}
+  {% assign base_path = '/' | append: section | append: '/ko/' %}
+{% endif %}
 
 <!-- Hero Section -->
 <section class="hero">
@@ -21,87 +25,87 @@ layout: subsite-default
     <h2 class="section-title">{{ t.nav.categories }}</h2>
     <div class="categories-grid">
       {% if section == 'wellness' or section == 'health-wellness-daily' %}
-        <a href="#nutrition" class="category-card">
+        <a href="{{ base_path | append: 'nutrition/' | relative_url }}" class="category-card">
           <span class="category-icon">🥗</span>
           <h3>{{ section_t.categories.nutrition }}</h3>
           <p>{{ section_t.categories.nutrition_desc }}</p>
         </a>
-        <a href="#fitness" class="category-card">
+        <a href="{{ base_path | append: 'exercise/' | relative_url }}" class="category-card">
           <span class="category-icon">💪</span>
           <h3>{{ section_t.categories.fitness }}</h3>
           <p>{{ section_t.categories.fitness_desc }}</p>
         </a>
-        <a href="#mental_health" class="category-card">
+        <a href="{{ base_path | append: 'mental/' | relative_url }}" class="category-card">
           <span class="category-icon">🧠</span>
           <h3>{{ section_t.categories.mental_health }}</h3>
           <p>{{ section_t.categories.mental_health_desc }}</p>
         </a>
-        <a href="#sleep" class="category-card">
+        <a href="{{ base_path | append: 'sleep/' | relative_url }}" class="category-card">
           <span class="category-icon">😴</span>
           <h3>{{ section_t.categories.sleep }}</h3>
           <p>{{ section_t.categories.sleep_desc }}</p>
         </a>
-        <a href="#lifestyle" class="category-card">
+        <a href="{{ base_path | append: 'lifestyle/' | relative_url }}" class="category-card">
           <span class="category-icon">🌿</span>
           <h3>{{ section_t.categories.lifestyle }}</h3>
           <p>{{ section_t.categories.lifestyle_desc }}</p>
         </a>
-        <a href="#supplements" class="category-card">
+        <a href="{{ base_path | append: 'supplements/' | relative_url }}" class="category-card">
           <span class="category-icon">💊</span>
           <h3>{{ section_t.categories.supplements }}</h3>
           <p>{{ section_t.categories.supplements_desc }}</p>
         </a>
       {% elsif section == 'ai-tools' %}
-        <a href="#productivity" class="category-card">
+        <a href="{{ base_path | append: 'productivity/' | relative_url }}" class="category-card">
           <span class="category-icon">⚡</span>
           <h3>{{ section_t.categories.productivity }}</h3>
           <p>{{ section_t.categories.productivity_desc }}</p>
         </a>
-        <a href="#creative" class="category-card">
+        <a href="{{ base_path | append: 'creative/' | relative_url }}" class="category-card">
           <span class="category-icon">🎨</span>
           <h3>{{ section_t.categories.creative }}</h3>
           <p>{{ section_t.categories.creative_desc }}</p>
         </a>
-        <a href="#development" class="category-card">
+        <a href="{{ base_path | append: 'development/' | relative_url }}" class="category-card">
           <span class="category-icon">💻</span>
           <h3>{{ section_t.categories.development }}</h3>
           <p>{{ section_t.categories.development_desc }}</p>
         </a>
-        <a href="#automation" class="category-card">
+        <a href="{{ base_path | append: 'automation/' | relative_url }}" class="category-card">
           <span class="category-icon">🔄</span>
           <h3>{{ section_t.categories.automation }}</h3>
           <p>{{ section_t.categories.automation_desc }}</p>
         </a>
-        <a href="#learning" class="category-card">
+        <a href="{{ base_path | append: 'chatbot/' | relative_url }}" class="category-card">
           <span class="category-icon">📚</span>
           <h3>{{ section_t.categories.learning }}</h3>
           <p>{{ section_t.categories.learning_desc }}</p>
         </a>
       {% elsif section == 'finance' %}
-        <a href="#investing" class="category-card">
+        <a href="{{ base_path | append: 'investing/' | relative_url }}" class="category-card">
           <span class="category-icon">📈</span>
           <h3>{{ section_t.categories.investing }}</h3>
           <p>{{ section_t.categories.investing_desc }}</p>
         </a>
-        <a href="#budgeting" class="category-card">
+        <a href="{{ base_path | append: 'budgeting/' | relative_url }}" class="category-card">
           <span class="category-icon">💵</span>
           <h3>{{ section_t.categories.budgeting }}</h3>
           <p>{{ section_t.categories.budgeting_desc }}</p>
         </a>
-        <a href="#retirement" class="category-card">
+        <a href="{{ base_path | append: 'retirement/' | relative_url }}" class="category-card">
           <span class="category-icon">🏖️</span>
           <h3>{{ section_t.categories.retirement }}</h3>
           <p>{{ section_t.categories.retirement_desc }}</p>
         </a>
-        <a href="#crypto" class="category-card">
-          <span class="category-icon">₿</span>
-          <h3>{{ section_t.categories.crypto }}</h3>
-          <p>{{ section_t.categories.crypto_desc }}</p>
-        </a>
-        <a href="#passive_income" class="category-card">
-          <span class="category-icon">💸</span>
+        <a href="{{ base_path | append: 'saving/' | relative_url }}" class="category-card">
+          <span class="category-icon">💰</span>
           <h3>{{ section_t.categories.passive_income }}</h3>
           <p>{{ section_t.categories.passive_income_desc }}</p>
+        </a>
+        <a href="{{ base_path | append: 'passive-income/' | relative_url }}" class="category-card">
+          <span class="category-icon">💸</span>
+          <h3>Passive Income</h3>
+          <p>Build passive income streams</p>
         </a>
       {% endif %}
     </div>

@@ -1,0 +1,36 @@
+---
+layout: subsite-page
+title: Development
+section: ai-tools
+lang: en
+permalink: /ai-tools/development/
+description: AI-powered coding and dev tools
+---
+
+<section class="category-page">
+  <div class="posts-grid">
+    {% assign posts = site.ai_tools | where: 'category', 'development' | sort: 'date' | reverse %}
+    {% assign coding_posts = site.ai_tools | where: 'category', 'coding' | sort: 'date' | reverse %}
+    {% assign all_posts = posts | concat: coding_posts %}
+    {% for post in all_posts %}
+    <article class="post-card">
+      <div class="post-card-content">
+        <div class="post-card-meta">
+          <span class="post-category">Development</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </div>
+        <h3 class="post-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+    
+    {% if all_posts.size == 0 %}
+    <p>No posts in this category yet.</p>
+    {% endif %}
+  </div>
+  
+  <p style="margin-top: 2rem;"><a href="/ai-tools/" class="btn">← Back to AI Tools</a></p>
+</section>

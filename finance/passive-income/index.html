@@ -1,0 +1,34 @@
+---
+layout: subsite-page
+title: Passive Income
+section: finance
+lang: en
+permalink: /finance/passive-income/
+description: Build passive income streams
+---
+
+<section class="category-page">
+  <div class="posts-grid">
+    {% assign posts = site.finance | where: 'category', 'passive-income' | sort: 'date' | reverse %}
+    {% for post in posts %}
+    <article class="post-card">
+      <div class="post-card-content">
+        <div class="post-card-meta">
+          <span class="post-category">Passive Income</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </div>
+        <h3 class="post-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+    
+    {% if posts.size == 0 %}
+    <p>No posts in this category yet.</p>
+    {% endif %}
+  </div>
+  
+  <p style="margin-top: 2rem;"><a href="/finance/" class="btn">← Back to Finance</a></p>
+</section>
