@@ -1,0 +1,75 @@
+---
+layout: subsite-page
+title: Categories
+section: finance
+lang: en
+permalink: /finance/categories/
+---
+
+<section class="categories-section">
+  <div class="container">
+    <h1 class="page-title">Categories</h1>
+    
+    <div class="categories-grid">
+      <div class="category-card" id="investing">
+        <span class="category-icon">📈</span>
+        <h3>Investing</h3>
+        <p>Stock, ETF, and investment strategies</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance | where: 'category', 'investing' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="budgeting">
+        <span class="category-icon">💵</span>
+        <h3>Budgeting</h3>
+        <p>Personal budget management</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance | where: 'category', 'budgeting' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="retirement">
+        <span class="category-icon">🏖️</span>
+        <h3>Retirement</h3>
+        <p>Retirement planning guides</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance | where: 'category', 'retirement' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="crypto">
+        <span class="category-icon">₿</span>
+        <h3>Crypto</h3>
+        <p>Cryptocurrency insights</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance | where: 'category', 'crypto' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="passive_income">
+        <span class="category-icon">💸</span>
+        <h3>Passive Income</h3>
+        <p>Build passive income streams</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance | where: 'category', 'passive_income' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

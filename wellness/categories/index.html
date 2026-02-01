@@ -1,0 +1,87 @@
+---
+layout: subsite-page
+title: Categories
+section: wellness
+lang: en
+permalink: /wellness/categories/
+---
+
+<section class="categories-section">
+  <div class="container">
+    <h1 class="page-title">Categories</h1>
+    
+    <div class="categories-grid">
+      <div class="category-card" id="nutrition">
+        <span class="category-icon">🥗</span>
+        <h3>Nutrition</h3>
+        <p>Healthy diet and nutrition information</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness | where: 'category', 'nutrition' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="exercise">
+        <span class="category-icon">🏃</span>
+        <h3>Fitness</h3>
+        <p>Effective workout methods and tips</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness | where: 'category', 'exercise' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="mental">
+        <span class="category-icon">🧠</span>
+        <h3>Mental Health</h3>
+        <p>Mind wellness and stress management</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness | where: 'category', 'mental' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="sleep">
+        <span class="category-icon">😴</span>
+        <h3>Sleep</h3>
+        <p>Guide to quality sleep</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness | where: 'category', 'sleep' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="lifestyle">
+        <span class="category-icon">🌿</span>
+        <h3>Lifestyle</h3>
+        <p>Healthy living habits</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness | where: 'category', 'lifestyle' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="supplements">
+        <span class="category-icon">💊</span>
+        <h3>Supplements</h3>
+        <p>Nutritional supplement guides</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness | where: 'category', 'supplements' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,75 @@
+---
+layout: subsite-page
+title: Categories
+section: ai-tools
+lang: en
+permalink: /ai-tools/categories/
+---
+
+<section class="categories-section">
+  <div class="container">
+    <h1 class="page-title">Categories</h1>
+    
+    <div class="categories-grid">
+      <div class="category-card" id="productivity">
+        <span class="category-icon">⚡</span>
+        <h3>Productivity</h3>
+        <p>AI tools to enhance your workflow</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools | where: 'category', 'productivity' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="creative">
+        <span class="category-icon">🎨</span>
+        <h3>Creative</h3>
+        <p>AI for design, writing, and content creation</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools | where: 'category', 'creative' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="development">
+        <span class="category-icon">💻</span>
+        <h3>Development</h3>
+        <p>AI-powered coding and dev tools</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools | where: 'category', 'development' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="automation">
+        <span class="category-icon">🔄</span>
+        <h3>Automation</h3>
+        <p>Automate tasks with AI</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools | where: 'category', 'automation' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="learning">
+        <span class="category-icon">📚</span>
+        <h3>Learning</h3>
+        <p>AI tools for education and learning</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools | where: 'category', 'learning' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

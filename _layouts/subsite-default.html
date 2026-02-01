@@ -29,13 +29,33 @@
   <meta property="og:description" content="{{ page.description | default: page.excerpt | default: section_t.description | strip_html | truncate: 160 }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:site_name" content="{{ section_t.title }}">
-  {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
+  {% elsif section == 'wellness' %}
+  <meta property="og:image" content="{{ '/assets/img/og/wellness-og.jpg' | absolute_url }}">
+  {% elsif section == 'ai-tools' %}
+  <meta property="og:image" content="{{ '/assets/img/og/ai-tools-og.jpg' | absolute_url }}">
+  {% elsif section == 'finance' %}
+  <meta property="og:image" content="{{ '/assets/img/og/finance-og.jpg' | absolute_url }}">
+  {% else %}
+  <meta property="og:image" content="{{ '/assets/img/og/default-og.jpg' | absolute_url }}">
+  {% endif %}
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.title | default: section_t.title }}">
   <meta name="twitter:description" content="{{ page.description | default: page.excerpt | default: section_t.description | strip_html | truncate: 160 }}">
-  {% if page.image %}<meta name="twitter:image" content="{{ page.image | absolute_url }}">{% endif %}
+  {% if page.image %}
+  <meta name="twitter:image" content="{{ page.image | absolute_url }}">
+  {% elsif section == 'wellness' %}
+  <meta name="twitter:image" content="{{ '/assets/img/og/wellness-og.jpg' | absolute_url }}">
+  {% elsif section == 'ai-tools' %}
+  <meta name="twitter:image" content="{{ '/assets/img/og/ai-tools-og.jpg' | absolute_url }}">
+  {% elsif section == 'finance' %}
+  <meta name="twitter:image" content="{{ '/assets/img/og/finance-og.jpg' | absolute_url }}">
+  {% else %}
+  <meta name="twitter:image" content="{{ '/assets/img/og/default-og.jpg' | absolute_url }}">
+  {% endif %}
   
   <!-- Canonical -->
   <link rel="canonical" href="{{ page.url | absolute_url }}">

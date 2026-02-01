@@ -1,0 +1,87 @@
+---
+layout: subsite-page
+title: 카테고리
+section: wellness
+lang: ko
+permalink: /wellness/ko/categories/
+---
+
+<section class="categories-section">
+  <div class="container">
+    <h1 class="page-title">카테고리</h1>
+    
+    <div class="categories-grid">
+      <div class="category-card" id="nutrition">
+        <span class="category-icon">🥗</span>
+        <h3>영양</h3>
+        <p>건강한 식단과 영양 정보</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness_ko | where: 'category', 'nutrition' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="exercise">
+        <span class="category-icon">🏃</span>
+        <h3>운동</h3>
+        <p>효과적인 운동 방법과 팁</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness_ko | where: 'category', 'exercise' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="mental">
+        <span class="category-icon">🧠</span>
+        <h3>정신건강</h3>
+        <p>마음 건강과 스트레스 관리</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness_ko | where: 'category', 'mental' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="sleep">
+        <span class="category-icon">😴</span>
+        <h3>수면</h3>
+        <p>질 좋은 수면을 위한 가이드</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness_ko | where: 'category', 'sleep' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="lifestyle">
+        <span class="category-icon">🌿</span>
+        <h3>라이프스타일</h3>
+        <p>건강한 생활 습관</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness_ko | where: 'category', 'lifestyle' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="supplements">
+        <span class="category-icon">💊</span>
+        <h3>보충제</h3>
+        <p>영양 보충제 가이드</p>
+        <ul class="category-posts">
+          {% assign posts = site.wellness_ko | where: 'category', 'supplements' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

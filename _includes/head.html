@@ -18,12 +18,18 @@
 
 {% if page.header-img %}
   <meta property="og:image" content="{{ site.url }}/assets/{{ page.header-img }}">
-  <br/>
+{% elsif page.image %}
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
 {% elsif tag.header-img %}
   <meta property="og:image" content="{{ site.url }}/assets/{{ tag.header-img }}">
-  <br/>
+{% elsif page.section == 'wellness' %}
+  <meta property="og:image" content="{{ site.url }}/assets/img/og/wellness-og.jpg">
+{% elsif page.section == 'ai-tools' %}
+  <meta property="og:image" content="{{ site.url }}/assets/img/og/ai-tools-og.jpg">
+{% elsif page.section == 'finance' %}
+  <meta property="og:image" content="{{ site.url }}/assets/img/og/finance-og.jpg">
 {% else %}
-  <meta property="og:image" content="{{ site.url }}/assets/img/me.jpg">
+  <meta property="og:image" content="{{ site.url }}/assets/img/og/default-og.jpg">
 {% endif %}
 
 <meta property="og:image:width" content="640" />
