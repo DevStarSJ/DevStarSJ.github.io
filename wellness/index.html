@@ -1,8 +1,125 @@
 ---
-layout: subsite-home
+layout: null
 title: Wellness
 section: wellness
 lang: en
 permalink: /wellness/
 ---
-<!-- Build trigger: 1769978520 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/subsite.css">
+  <link rel="stylesheet" href="/assets/css/subsite-wellness.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; background: #f8f9fa; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    .header { background: #26A69A; color: white; padding: 1rem 0; }
+    .header a { color: white; text-decoration: none; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .nav-menu { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    .hero { background: linear-gradient(135deg, #26A69A, #00897B); color: white; padding: 4rem 0; text-align: center; }
+    .hero h1 { font-size: 2.5rem; margin: 0 0 1rem; }
+    .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .category-card { background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; color: #333; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .category-card:hover { transform: translateY(-4px); }
+    .category-icon { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .post-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .post-card-content { padding: 1rem; }
+    .post-card-title a { color: #333; text-decoration: none; }
+    .lang-switch { display: flex; gap: 0.5rem; }
+    .lang-switch a { padding: 0.25rem 0.75rem; border-radius: 4px; background: rgba(255,255,255,0.2); }
+    .lang-switch a.active { background: white; color: #26A69A; }
+    footer { background: #333; color: white; padding: 2rem 0; margin-top: 3rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/wellness/" style="font-size: 1.25rem; font-weight: 600;">🌿 Wellness</a>
+        <ul class="nav-menu">
+          <li><a href="/wellness/">Home</a></li>
+          <li><a href="/wellness/categories/">Categories</a></li>
+          <li><a href="/wellness/about/">About</a></li>
+          <li><a href="/">← Dev Note</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="/wellness/" class="active">EN</a>
+          <a href="/wellness/ko/">KO</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Wellness</h1>
+      <p>Evidence-based guides for a healthier, happier life</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 style="margin-top: 2rem;">Categories</h2>
+    <div class="categories-grid">
+      <a href="/wellness/nutrition/" class="category-card">
+        <span class="category-icon">🥗</span>
+        <h3>Nutrition</h3>
+        <p>Healthy diet and nutrition information</p>
+      </a>
+      <a href="/wellness/exercise/" class="category-card">
+        <span class="category-icon">💪</span>
+        <h3>Fitness</h3>
+        <p>Effective workout methods and tips</p>
+      </a>
+      <a href="/wellness/mental/" class="category-card">
+        <span class="category-icon">🧠</span>
+        <h3>Mental Health</h3>
+        <p>Mind wellness and stress management</p>
+      </a>
+      <a href="/wellness/sleep/" class="category-card">
+        <span class="category-icon">😴</span>
+        <h3>Sleep</h3>
+        <p>Guide to quality sleep</p>
+      </a>
+      <a href="/wellness/lifestyle/" class="category-card">
+        <span class="category-icon">🌿</span>
+        <h3>Lifestyle</h3>
+        <p>Healthy living habits</p>
+      </a>
+      <a href="/wellness/supplements/" class="category-card">
+        <span class="category-icon">💊</span>
+        <h3>Supplements</h3>
+        <p>Nutritional supplement guides</p>
+      </a>
+    </div>
+
+    <h2>Latest Posts</h2>
+    <div class="posts-grid">
+      {% assign posts = site.wellness | sort: 'date' | reverse %}
+      {% for post in posts limit:9 %}
+      <article class="post-card">
+        <div class="post-card-content">
+          <span style="color: #26A69A; font-size: 0.875rem;">{{ post.category | capitalize }}</span>
+          <h3 class="post-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p style="color: #666; font-size: 0.875rem;">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 DevStarSJ. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
