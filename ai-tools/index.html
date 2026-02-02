@@ -1,7 +1,119 @@
 ---
-layout: subsite-home
+layout: null
 title: AI Tools
 section: ai-tools
 lang: en
 permalink: /ai-tools/
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; background: #f8f9fa; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    .header { background: #6366F1; color: white; padding: 1rem 0; }
+    .header a { color: white; text-decoration: none; }
+    .nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .nav-menu { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    .hero { background: linear-gradient(135deg, #6366F1, #4F46E5); color: white; padding: 4rem 0; text-align: center; }
+    .hero h1 { font-size: 2.5rem; margin: 0 0 1rem; }
+    .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .category-card { background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; color: #333; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .category-card:hover { transform: translateY(-4px); }
+    .category-icon { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .post-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .post-card-content { padding: 1rem; }
+    .post-card-title a { color: #333; text-decoration: none; }
+    .post-card-title a:hover { color: #6366F1; }
+    .lang-switch { display: flex; gap: 0.5rem; }
+    .lang-switch a { padding: 0.25rem 0.75rem; border-radius: 4px; background: rgba(255,255,255,0.2); }
+    .lang-switch a.active { background: white; color: #6366F1; }
+    footer { background: #333; color: white; padding: 2rem 0; margin-top: 3rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/ai-tools/" style="font-size: 1.25rem; font-weight: 600;">🤖 AI Tools</a>
+        <ul class="nav-menu">
+          <li><a href="/ai-tools/">Home</a></li>
+          <li><a href="/ai-tools/categories/">Categories</a></li>
+          <li><a href="/ai-tools/about/">About</a></li>
+          <li><a href="/">← Dev Note</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="/ai-tools/" class="active">EN</a>
+          <a href="/ai-tools/ko/">KO</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>AI Tools</h1>
+      <p>Discover the best AI tools to boost your productivity</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 style="margin-top: 2rem;">Categories</h2>
+    <div class="categories-grid">
+      <a href="/ai-tools/productivity/" class="category-card">
+        <span class="category-icon">⚡</span>
+        <h3>Productivity</h3>
+        <p>AI tools to enhance your workflow</p>
+      </a>
+      <a href="/ai-tools/creative/" class="category-card">
+        <span class="category-icon">🎨</span>
+        <h3>Creative</h3>
+        <p>AI for design, writing, and content</p>
+      </a>
+      <a href="/ai-tools/development/" class="category-card">
+        <span class="category-icon">💻</span>
+        <h3>Development</h3>
+        <p>AI-powered coding tools</p>
+      </a>
+      <a href="/ai-tools/automation/" class="category-card">
+        <span class="category-icon">🔄</span>
+        <h3>Automation</h3>
+        <p>Automate tasks with AI</p>
+      </a>
+      <a href="/ai-tools/chatbot/" class="category-card">
+        <span class="category-icon">💬</span>
+        <h3>Chatbots</h3>
+        <p>AI assistants and chatbots</p>
+      </a>
+    </div>
+
+    <h2>Latest Posts</h2>
+    <div class="posts-grid">
+      {% assign posts = site.ai_tools | sort: 'date' | reverse %}
+      {% for post in posts limit:9 %}
+      <article class="post-card">
+        <div class="post-card-content">
+          <span style="color: #6366F1; font-size: 0.875rem;">{{ post.category | capitalize }}</span>
+          <h3 class="post-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p style="color: #666; font-size: 0.875rem;">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 DevStarSJ. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
