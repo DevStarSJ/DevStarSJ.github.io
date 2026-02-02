@@ -1,0 +1,34 @@
+---
+layout: subsite-page
+title: 영양
+section: wellness
+lang: ko
+permalink: /wellness/ko/nutrition/
+description: 건강한 식단과 영양 정보
+---
+
+<section class="category-page">
+  <div class="posts-grid">
+    {% assign posts = site.wellness_ko | where: 'category', 'nutrition' | sort: 'date' | reverse %}
+    {% for post in posts %}
+    <article class="post-card">
+      <div class="post-card-content">
+        <div class="post-card-meta">
+          <span class="post-category">영양</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </div>
+        <h3 class="post-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+    
+    {% if posts.size == 0 %}
+    <p>이 카테고리에는 아직 글이 없습니다.</p>
+    {% endif %}
+  </div>
+  
+  <p style="margin-top: 2rem;"><a href="/wellness/ko/" class="btn">← 웰니스 홈으로</a></p>
+</section>
