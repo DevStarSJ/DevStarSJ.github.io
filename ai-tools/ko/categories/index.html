@@ -1,0 +1,75 @@
+---
+layout: subsite-page
+title: 카테고리
+section: ai-tools
+lang: ko
+permalink: /ai-tools/ko/categories/
+---
+
+<section class="categories-section">
+  <div class="container">
+    <h1 class="page-title">카테고리</h1>
+    
+    <div class="categories-grid">
+      <div class="category-card" id="productivity">
+        <span class="category-icon">⚡</span>
+        <h3>생산성</h3>
+        <p>업무 효율을 높이는 AI 도구</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools_ko | where: 'category', 'productivity' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="creative">
+        <span class="category-icon">🎨</span>
+        <h3>크리에이티브</h3>
+        <p>디자인, 글쓰기, 콘텐츠 제작용 AI</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools_ko | where: 'category', 'creative' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="development">
+        <span class="category-icon">💻</span>
+        <h3>개발 도구</h3>
+        <p>AI 기반 코딩 및 개발 도구</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools_ko | where: 'category', 'development' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="automation">
+        <span class="category-icon">🔄</span>
+        <h3>자동화</h3>
+        <p>AI로 반복 작업 자동화</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools_ko | where: 'category', 'automation' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="chatbot">
+        <span class="category-icon">🤖</span>
+        <h3>챗봇</h3>
+        <p>AI 챗봇과 대화형 도구</p>
+        <ul class="category-posts">
+          {% assign posts = site.ai_tools_ko | where: 'category', 'chatbot' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

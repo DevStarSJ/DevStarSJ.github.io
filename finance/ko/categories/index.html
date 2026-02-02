@@ -1,0 +1,75 @@
+---
+layout: subsite-page
+title: 카테고리
+section: finance
+lang: ko
+permalink: /finance/ko/categories/
+---
+
+<section class="categories-section">
+  <div class="container">
+    <h1 class="page-title">카테고리</h1>
+    
+    <div class="categories-grid">
+      <div class="category-card" id="investing">
+        <span class="category-icon">📈</span>
+        <h3>투자</h3>
+        <p>주식, ETF, 투자 전략</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance_ko | where: 'category', 'investing' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="budgeting">
+        <span class="category-icon">💵</span>
+        <h3>예산 관리</h3>
+        <p>효과적인 예산 관리 방법</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance_ko | where: 'category', 'budgeting' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="retirement">
+        <span class="category-icon">🏖️</span>
+        <h3>은퇴 준비</h3>
+        <p>은퇴 계획과 연금</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance_ko | where: 'category', 'retirement' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="saving">
+        <span class="category-icon">🏦</span>
+        <h3>저축</h3>
+        <p>저축 목표와 전략</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance_ko | where: 'category', 'saving' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="category-card" id="passive-income">
+        <span class="category-icon">💸</span>
+        <h3>패시브 인컴</h3>
+        <p>수동적 소득 창출 방법</p>
+        <ul class="category-posts">
+          {% assign posts = site.finance_ko | where: 'category', 'passive-income' | sort: 'date' | reverse %}
+          {% for post in posts limit: 5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

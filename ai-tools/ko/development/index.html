@@ -1,0 +1,34 @@
+---
+layout: subsite-page
+title: 개발 도구
+section: ai-tools
+lang: ko
+permalink: /ai-tools/ko/development/
+description: AI 코딩 및 개발 도구
+---
+
+<section class="category-page">
+  <div class="posts-grid">
+    {% assign posts = site.ai_tools_ko | where: 'category', 'development' | sort: 'date' | reverse %}
+    {% for post in posts %}
+    <article class="post-card">
+      <div class="post-card-content">
+        <div class="post-card-meta">
+          <span class="post-category">개발 도구</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </div>
+        <h3 class="post-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+    
+    {% if posts.size == 0 %}
+    <p>이 카테고리에는 아직 글이 없습니다.</p>
+    {% endif %}
+  </div>
+  
+  <p style="margin-top: 2rem;"><a href="/ai-tools/ko/" class="btn">← AI 도구 홈으로</a></p>
+</section>
