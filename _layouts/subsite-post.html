@@ -75,7 +75,11 @@ layout: subsite-default
   {% assign posts_collection = site[collection_ko] %}
 {% endif %}
 
-{% assign sorted_posts = posts_collection | sort: 'date' %}
+{% if posts_collection %}
+  {% assign sorted_posts = posts_collection | sort: 'date' %}
+{% else %}
+  {% assign sorted_posts = "" | split: "" %}
+{% endif %}
 {% assign prev_post = nil %}
 {% assign next_post = nil %}
 {% assign found = false %}
