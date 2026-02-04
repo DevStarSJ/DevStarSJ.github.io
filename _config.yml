@@ -50,7 +50,7 @@ google_analytics:    UA-104294646-1
 disqus_shortname:    devstarsj
 
 # Google AdSense (add your client ID, e.g., ca-pub-XXXXXXXXXX)
-# google_adsense:      ca-pub-XXXXXXXXXX
+google_adsense: ca-pub-9969290322898689
 
 # This text will appear in the footer of every page. Markdown enabled.
 copyright:           '&copy; 2013. by SeokJoon Yun'
