@@ -325,7 +325,7 @@ claude --teammate-mode tmux
 Simply saying "work as a team" often creates subagents instead. **How to reliably trigger Agent Teams:**
 
 ```
-I'm going to build a developer blog. I'll use Next.js + Tailwind CSS.
+I'm going to build an e-commerce admin dashboard. I'll use React + TypeScript + Node.js.
 Plan which tasks can run in parallel,
 and how the teammates should be structured.
 
@@ -345,12 +345,12 @@ Since this is a new feature, Claude sometimes doesn't use it correctly. Includin
 Specifying a team name saves the information to files, allowing you to **reload it later**:
 
 ```
-Set the team name to "blog-creator" and create teammates as planned.
+Set the team name to "ecommerce-dashboard" and create teammates as planned.
 ```
 
 **Storage locations:**
-- Team config: `~/.claude/teams/blog-creator/config.json`
-- Tasks: `~/.claude/tasks/blog-creator/`
+- Team config: `~/.claude/teams/ecommerce-dashboard/config.json`
+- Tasks: `~/.claude/tasks/ecommerce-dashboard/`
 
 When work is done, teammates are automatically disposed, but the information saved under the team name remains, allowing you to recreate the same team structure later.
 
@@ -425,3 +425,4 @@ Enable with `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and start experimenting!
 - [Subagents Documentation](https://code.claude.com/docs/en/sub-agents)
 - [Claude Code GitHub](https://github.com/anthropics/claude-code)
 - [Claude Code Costs Guide](https://code.claude.com/docs/en/costs)
+- [Claude Code Teams Tutorial (YouTube, Korean)](https://youtu.be/Gb2VMWrUmZ0)

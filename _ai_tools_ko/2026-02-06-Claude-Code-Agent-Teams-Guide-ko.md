@@ -325,7 +325,7 @@ claude --teammate-mode tmux
 단순히 "팀으로 작업해줘"라고 하면 서브에이전트를 만드는 경우가 많습니다. **Agent Teams를 확실히 트리거하는 방법:**
 
 ```
-개발자 블로그를 만들 거야. 기술은 Next.js + Tailwind CSS 사용할 거고,
+e커머스 관리자 대시보드를 만들 거야. React + TypeScript + Node.js 사용할 거고,
 어떤 작업들을 병렬로 실행할 수 있는지,
 그리고 팀메이트는 어떻게 구성해야 하는지 계획해줘.
 
@@ -345,12 +345,12 @@ https://code.claude.com/docs/en/agent-teams
 팀 이름을 지정하면 정보가 파일로 저장되어 **나중에 다시 불러올 수 있습니다**:
 
 ```
-팀 이름은 "blog-creator"로 해주고, 계획대로 팀메이트들을 만들어서 구현해줘.
+팀 이름은 "ecommerce-dashboard"로 해주고, 계획대로 팀메이트들을 만들어서 구현해줘.
 ```
 
 **저장 위치:**
-- 팀 설정: `~/.claude/teams/blog-creator/config.json`
-- 태스크: `~/.claude/tasks/blog-creator/`
+- 팀 설정: `~/.claude/teams/ecommerce-dashboard/config.json`
+- 태스크: `~/.claude/tasks/ecommerce-dashboard/`
 
 작업이 끝나면 팀원들은 자동으로 dispose되지만, 팀 이름으로 저장된 정보는 남아있어서 나중에 같은 팀 구조로 다시 작업할 수 있습니다.
 
@@ -425,3 +425,4 @@ Claude Code Agent Teams는 AI 지원 개발의 패러다임 전환을 나타냅�
 - [Subagents 문서](https://code.claude.com/docs/en/sub-agents)
 - [Claude Code GitHub](https://github.com/anthropics/claude-code)
 - [Claude Code 비용 가이드](https://code.claude.com/docs/en/costs)
+- [클로드 코드를 10배 스마트하게 만드는법! Claude Code Teams (YouTube)](https://youtu.be/Gb2VMWrUmZ0)
