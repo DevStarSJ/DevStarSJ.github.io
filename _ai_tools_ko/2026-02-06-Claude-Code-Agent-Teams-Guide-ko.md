@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude Code Agent Teams: 복잡한 코딩 작업을 위한 멀티 에이전트 협업"
-date: 2026-02-07
+date: 2026-02-06
 category: coding
 tags: [Claude Code, Agent Teams, 멀티 에이전트, AI 코딩, Anthropic, 개발자 도구, 페어 프로그래밍]
 lang: ko

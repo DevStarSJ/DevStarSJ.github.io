@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude Code Agent Teams: Multi-Agent Collaboration for Complex Coding Tasks"
-date: 2026-02-07
+date: 2026-02-06
 category: coding
 tags: [Claude Code, Agent Teams, Multi-Agent, AI Coding, Anthropic, Developer Tools, Pair Programming]
 lang: en
