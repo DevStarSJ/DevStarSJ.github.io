@@ -284,6 +284,101 @@ Agent teams use significantly more tokens than single sessions:
 | Permissions set at spawn | Can change individual modes after, not at spawn time |
 | Split panes require tmux/iTerm2 | Not supported in VS Code terminal, Windows Terminal, Ghostty |
 
+## Pro Tips 💡
+
+### Installing and Running tmux
+
+Split-pane mode requires tmux:
+
+**macOS:**
+```bash
+brew install tmux
+```
+
+**Linux (Ubuntu/Debian):**
+```bash
+sudo apt install tmux
+```
+
+**How to run:**
+```bash
+# 1. Start a tmux session first
+tmux
+
+# 2. Run Claude Code inside tmux
+claude --dangerously-skip-permissions --teammate-mode tmux
+```
+
+When you run tmux, you'll see a green status bar at the bottom of the terminal. You need to run Claude Code in this state for Split-pane to work properly.
+
+### When settings.json Doesn't Work
+
+Since this is still experimental, settings.json configurations sometimes don't apply. In this case, **add the flag when running**:
+
+```bash
+# Use both settings.json config + runtime flag (recommended)
+claude --teammate-mode tmux
+```
+
+### Team Trigger Tips ⭐
+
+Simply saying "work as a team" often creates subagents instead. **How to reliably trigger Agent Teams:**
+
+```
+I'm going to build a developer blog. I'll use Next.js + Tailwind CSS.
+Plan which tasks can run in parallel,
+and how the teammates should be structured.
+
+Check the Agent Teams documentation at this link and plan accordingly:
+https://code.claude.com/docs/en/agent-teams
+```
+
+**Key points:**
+1. Use keywords like "parallel execution"
+2. Explicitly request "teammate structure"
+3. **Include the official docs link** → drastically increases success rate!
+
+Since this is a new feature, Claude sometimes doesn't use it correctly. Including the documentation link significantly improves the chances of proper configuration.
+
+### The Importance of Team Names
+
+Specifying a team name saves the information to files, allowing you to **reload it later**:
+
+```
+Set the team name to "blog-creator" and create teammates as planned.
+```
+
+**Storage locations:**
+- Team config: `~/.claude/teams/blog-creator/config.json`
+- Tasks: `~/.claude/tasks/blog-creator/`
+
+When work is done, teammates are automatically disposed, but the information saved under the team name remains, allowing you to recreate the same team structure later.
+
+### Connecting Independent Instances with Task ID
+
+Multiple Claude Code instances can communicate without the Team feature! The task list is globally configured:
+
+1. Create a task list in one Claude Code
+2. Inject the task ID into another Claude Code instance
+3. They automatically orchestrate and communicate with each other
+
+This shows that Anthropic designed multi-agent collaboration from the start. Agent Teams simply adds a UI to orchestrate this from the main Claude Code at once.
+
+### Recommended Execution Command
+
+Recommended way to run with all options:
+
+```bash
+# Start tmux session
+tmux
+
+# Run Claude Code (with all recommended options)
+claude --dangerously-skip-permissions --teammate-mode tmux
+
+# To resume an existing session
+claude --dangerously-skip-permissions --teammate-mode tmux -r
+```
+
 ## Troubleshooting
 
 ### Teammates Not Appearing

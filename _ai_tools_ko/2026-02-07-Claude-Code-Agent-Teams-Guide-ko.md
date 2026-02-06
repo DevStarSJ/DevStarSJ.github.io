@@ -284,6 +284,101 @@ Agent teams는 단일 세션보다 훨씬 많은 토큰을 사용합니다:
 | 생성 시 권한 설정 | 생성 후 개별 모드 변경 가능, 생성 시점에는 불가 |
 | Split panes는 tmux/iTerm2 필요 | VS Code 터미널, Windows Terminal, Ghostty 지원 안 함 |
 
+## 실전 팁 (Pro Tips) 💡
+
+### tmux 설치 및 실행
+
+Split-pane 모드를 사용하려면 tmux가 필수입니다:
+
+**macOS:**
+```bash
+brew install tmux
+```
+
+**Linux (Ubuntu/Debian):**
+```bash
+sudo apt install tmux
+```
+
+**실행 방법:**
+```bash
+# 1. 먼저 tmux 세션 시작
+tmux
+
+# 2. tmux 안에서 Claude Code 실행
+claude --dangerously-skip-permissions --teammate-mode tmux
+```
+
+tmux를 실행하면 터미널 하단에 초록색 상태 바가 나타납니다. 이 상태에서 Claude Code를 실행해야 Split-pane이 제대로 작동합니다.
+
+### settings.json이 안 될 때
+
+아직 experimental 기능이라 settings.json에 설정해도 적용이 안 될 때가 있습니다. 이럴 때는 **실행 시 플래그를 같이 넣어주세요**:
+
+```bash
+# settings.json 설정 + 실행 플래그 둘 다 사용 (권장)
+claude --teammate-mode tmux
+```
+
+### 팀 생성 트리거 팁 ⭐
+
+단순히 "팀으로 작업해줘"라고 하면 서브에이전트를 만드는 경우가 많습니다. **Agent Teams를 확실히 트리거하는 방법:**
+
+```
+개발자 블로그를 만들 거야. 기술은 Next.js + Tailwind CSS 사용할 거고,
+어떤 작업들을 병렬로 실행할 수 있는지,
+그리고 팀메이트는 어떻게 구성해야 하는지 계획해줘.
+
+다음 링크에서 Agent Teams 문서 확인하고 적합하게 계획해줘:
+https://code.claude.com/docs/en/agent-teams
+```
+
+**핵심 포인트:**
+1. "병렬로 실행"이라는 키워드 사용
+2. "팀메이트 구성" 명시적 요청
+3. **공식 문서 링크 함께 제공** → 확률 대폭 상승!
+
+새로운 기능이라 Claude가 제대로 못 쓰는 경우가 있는데, 문서 링크를 넣어주면 적합하게 구성할 확률이 훨씬 높아집니다.
+
+### 팀 이름의 중요성
+
+팀 이름을 지정하면 정보가 파일로 저장되어 **나중에 다시 불러올 수 있습니다**:
+
+```
+팀 이름은 "blog-creator"로 해주고, 계획대로 팀메이트들을 만들어서 구현해줘.
+```
+
+**저장 위치:**
+- 팀 설정: `~/.claude/teams/blog-creator/config.json`
+- 태스크: `~/.claude/tasks/blog-creator/`
+
+작업이 끝나면 팀원들은 자동으로 dispose되지만, 팀 이름으로 저장된 정보는 남아있어서 나중에 같은 팀 구조로 다시 작업할 수 있습니다.
+
+### 태스크 ID로 독립 인스턴스 연결
+
+팀 기능 없이도 여러 Claude Code 인스턴스가 통신할 수 있습니다! 태스크 리스트가 글로벌하게 설정되어 있기 때문에:
+
+1. 한 Claude Code에서 태스크 리스트 생성
+2. 태스크 ID를 다른 Claude Code 인스턴스에 주입
+3. 자동으로 서로 오케스트레이션 및 통신
+
+이것은 Anthropic이 처음부터 멀티 에이전트 협업을 염두에 두고 설계했다는 것을 보여줍니다. Agent Teams는 이 기능을 메인 Claude Code에서 한 번에 오케스트레이션하는 UI를 추가한 것입니다.
+
+### 권장 실행 명령어
+
+모든 옵션을 포함한 권장 실행 방법:
+
+```bash
+# tmux 세션 시작
+tmux
+
+# Claude Code 실행 (모든 권장 옵션 포함)
+claude --dangerously-skip-permissions --teammate-mode tmux
+
+# 기존 세션 이어서 하려면
+claude --dangerously-skip-permissions --teammate-mode tmux -r
+```
+
 ## 문제 해결
 
 ### 팀원이 나타나지 않음
