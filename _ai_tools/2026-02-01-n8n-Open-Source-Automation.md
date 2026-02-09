@@ -6,7 +6,7 @@ category: automation
 tags: [n8n, automation, workflow, open-source, zapier-alternative]
 date: 2026-02-01
 read_time: 11
-header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200"
+header-img: "https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/og_image_website_3_afd66761a9_017b94d87b.png"
 ---
 
 # n8n: The Open-Source Zapier Alternative You Need

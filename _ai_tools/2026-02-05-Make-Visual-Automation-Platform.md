@@ -6,7 +6,7 @@ category: automation
 tags: [make, integromat, automation, workflow, no-code, integration]
 date: 2026-02-05
 read_time: 13
-header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200"
+header-img: "https://images.ctfassets.net/qqlj6g4ee76j/5fNs0TxJNMm6EgGmUQiGMc/3b1eadbad6ad56a7bf92f7f1e04d4ce0/new-make-logo-rebrand.png"
 ---
 
 # Make (formerly Integromat): The Visual Automation Platform That Does Everything

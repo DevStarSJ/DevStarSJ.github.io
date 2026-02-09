@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Gamma AI: Create Stunning Presentations in Minutes (2026 Guide)"
 category: productivity
-header-img: https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200
+header-img: "https://gamma.app/og-image.png"
 tags: [gamma, ai presentation, slides, productivity, design]
 ---
 

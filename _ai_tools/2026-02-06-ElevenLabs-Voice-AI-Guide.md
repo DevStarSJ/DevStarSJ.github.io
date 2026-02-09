@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "ElevenLabs: The Ultimate AI Voice Platform for 2026"
 category: automation
-header-img: https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1200
+header-img: "https://elevenlabs.io/cover.png"
 tags: [elevenlabs, voice ai, text to speech, voice cloning, ai voice]
 ---
 

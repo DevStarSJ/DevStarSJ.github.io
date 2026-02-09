@@ -6,7 +6,7 @@ category: automation
 tags: [openclaw, ai-assistant, whatsapp, telegram, discord, chatbot, open-source]
 date: 2026-02-03
 read_time: 15
-header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
+header-img: "https://openclaw.ai/og-image.png"
 ---
 
 # OpenClaw: Build Your Own AI Assistant on WhatsApp, Telegram & Discord

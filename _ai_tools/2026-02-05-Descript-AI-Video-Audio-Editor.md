@@ -6,7 +6,7 @@ category: productivity
 tags: [descript, video-editing, audio-editing, ai-editor, podcast, content-creation]
 date: 2026-02-05
 read_time: 11
-header-img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200"
+header-img: "https://cdn.builder.io/api/v1/image/assets%2Ffcea5005d671451e9b07839c893228d0%2Fb1cf2c175fbe4a028dff4622ee1ce727"
 ---
 
 # Descript: Edit Video and Audio Like a Google Doc

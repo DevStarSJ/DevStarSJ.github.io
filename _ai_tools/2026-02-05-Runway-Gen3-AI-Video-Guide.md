@@ -6,7 +6,7 @@ category: image
 tags: [runway, ai-video, gen-3, video-generation, ai-art, content-creation]
 date: 2026-02-05
 read_time: 13
-header-img: "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=1200"
+header-img: "https://runwayml.com/product/opengraph-image.png"
 ---
 
 # Runway Gen-3 Alpha: The Complete Guide to AI Video Generation

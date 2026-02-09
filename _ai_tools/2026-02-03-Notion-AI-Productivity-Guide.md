@@ -4,7 +4,7 @@ title: "Notion AI 2026: Transform Your Productivity with AI-Powered Workspace"
 date: 2026-02-03
 category: productivity
 tags: [Notion AI, Productivity, AI Writing, Note Taking, Project Management, Knowledge Base]
-header-img: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200"
+header-img: "https://www.notion.com/front-static/meta/mwn-og-image.png"
 ---
 
 # Notion AI 2026: Transform Your Productivity with AI-Powered Workspace

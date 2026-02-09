@@ -6,7 +6,7 @@ category: chatbot
 tags: [gemini, google-ai, chatbot, ai-assistant, gemini-advanced, google-workspace]
 date: 2026-02-05
 read_time: 14
-header-img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200"
+header-img: "https://www.gstatic.com/lamda/images/gemini_aurora_thumbnail_4g_e74822ff0ca4259beb718.png"
 ---
 
 # Google Gemini Advanced: The Complete Guide to Google's Most Powerful AI

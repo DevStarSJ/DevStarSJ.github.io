@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Leonardo AI: Professional Image Generation for Creators (2026)"
 category: image
-header-img: https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?w=1200
+header-img: "https://cdn.leonardo.ai/users/384ab5c8-55d8-47a1-be22-6a274913c324/generations/f8b9cf9c-6a43-4107-b694-0e51e7068c71/Leonardo_Phoenix_A_stunning_hyperrealistic_digital_artwork_of_0.jpg"
 tags: [leonardo ai, image generation, ai art, stable diffusion, midjourney alternative]
 ---
 

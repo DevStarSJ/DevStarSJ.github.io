@@ -5,7 +5,7 @@ date: 2026-02-06
 category: coding
 tags: [Claude Code, Agent Teams, Multi-Agent, AI Coding, Anthropic, Developer Tools, Pair Programming]
 lang: en
-header-img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200"
+header-img: "https://www.anthropic.com/images/news/claude-3-5-sonnet-social.jpg"
 ---
 
 # Claude Code Agent Teams: Multi-Agent Collaboration for Complex Coding Tasks

@@ -4,7 +4,7 @@ title: "Windsurf IDE 2026: The AI-First Code Editor That Understands Your Projec
 date: 2026-02-03
 category: coding
 tags: [Windsurf, AI Coding, IDE, Code Editor, Developer Tools, Codeium, AI Programming]
-header-img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200"
+header-img: "https://exafunction.github.io/public/images/website_thumbnails/home.jpg"
 ---
 
 # Windsurf IDE 2026: The AI-First Code Editor That Understands Your Project

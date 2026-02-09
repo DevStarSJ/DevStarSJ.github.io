@@ -6,7 +6,7 @@ category: coding
 tags: [replit, ai-coding, replit-agent, no-code, full-stack, deployment]
 date: 2026-02-05
 read_time: 12
-header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200"
+header-img: "https://replit.com/public/images/opengraph.png"
 ---
 
 # Replit Agent: Build Full Apps With AI From a Single Prompt

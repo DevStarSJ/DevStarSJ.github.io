@@ -6,7 +6,7 @@ category: coding
 tags: [claude-code, claude-mem, ai-memory, context-engineering, developer-tools, plugin]
 date: 2026-02-04
 read_time: 12
-header-img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200"
+header-img: "https://repository-images.githubusercontent.com/1048065319/c84340b5-674d-4f93-ad06-452718614abb"
 ---
 
 # Claude-Mem: Give Claude Code Permanent Memory Across Sessions

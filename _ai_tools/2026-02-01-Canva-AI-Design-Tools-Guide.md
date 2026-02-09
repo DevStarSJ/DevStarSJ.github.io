@@ -6,7 +6,7 @@ category: image
 tags: [canva, ai-design, graphic-design, magic-studio, productivity]
 date: 2026-02-01
 read_time: 10
-header-img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200"
+header-img: "https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.jpg"
 ---
 
 # Canva AI: Design Like a Pro Without Design Skills

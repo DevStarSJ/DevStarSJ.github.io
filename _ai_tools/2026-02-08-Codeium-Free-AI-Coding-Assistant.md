@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Codeium: The Best Free AI Coding Assistant in 2026"
 category: coding
-header-img: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200
+header-img: "https://exafunction.github.io/public/images/website_thumbnails/home.jpg"
 ---
 
 ![Developer using AI coding assistant](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800)

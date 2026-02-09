@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "v0.dev: Vercel's AI-Powered UI Generator Explained (2026)"
 category: coding
-header-img: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200
+header-img: "https://v0.app/chat/api/og"
 tags: [v0, vercel, ai coding, ui generation, react, nextjs]
 ---
 

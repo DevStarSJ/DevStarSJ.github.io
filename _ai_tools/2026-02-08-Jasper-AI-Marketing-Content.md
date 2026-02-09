@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Jasper AI: The Ultimate Marketing Content Generator in 2026"
 category: productivity
-header-img: https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200
+header-img: "https://www.jasper.ai/hubfs/jasper-og-image.png"
 ---
 
 ![Marketing content creation](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800)

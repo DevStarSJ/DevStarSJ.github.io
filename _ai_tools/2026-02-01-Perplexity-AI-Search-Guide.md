@@ -6,7 +6,7 @@ category: chatbot
 tags: [perplexity, ai-search, research, chatbot, productivity]
 date: 2026-02-01
 read_time: 10
-header-img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200"
+header-img: "https://pplx-res.cloudinary.com/image/upload/v1/pplx-logos/perplexity-social-meta.png"
 ---
 
 # Perplexity AI: The Future of Search in 2026

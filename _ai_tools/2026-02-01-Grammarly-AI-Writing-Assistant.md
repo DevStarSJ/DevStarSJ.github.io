@@ -6,7 +6,7 @@ category: productivity
 tags: [grammarly, ai-writing, productivity, grammar, content]
 date: 2026-02-01
 read_time: 9
-header-img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200"
+header-img: "https://static-web.grammarly.com/cms/master/public/open-graph/social-24.png"
 ---
 
 # Grammarly AI: More Than Grammar in 2026

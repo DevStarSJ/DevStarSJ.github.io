@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "DALL-E 3: OpenAI's Most Advanced Image Generation Explained"
 category: image
-header-img: https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=1200
+header-img: "https://images.openai.com/blob/81f7c7e6-8d3f-475e-8c99-c9d4d0a74d8d/dall-e-3-header.png"
 ---
 
 ![AI-generated art concept](https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=800)

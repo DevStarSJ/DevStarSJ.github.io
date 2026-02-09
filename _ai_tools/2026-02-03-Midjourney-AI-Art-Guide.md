@@ -4,7 +4,7 @@ title: "Midjourney 2026: The Ultimate Guide to AI Art Generation"
 date: 2026-02-03
 category: image
 tags: [Midjourney, AI Art, Image Generation, Generative AI, Digital Art, Creative AI]
-header-img: "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=1200"
+header-img: "https://cdn.midjourney.com/76cd80f2-76c9-4c2d-a5a9-20a5df8f9a14/0_0.webp"
 ---
 
 # Midjourney 2026: The Ultimate Guide to AI Art Generation

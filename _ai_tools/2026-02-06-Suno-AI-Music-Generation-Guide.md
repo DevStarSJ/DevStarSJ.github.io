@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Suno AI: Create Professional Music with Text Prompts in 2026"
 category: image
-header-img: https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200
+header-img: "https://cdn-o.suno.com/meta-preview.jpg"
 tags: [suno, ai music, music generation, ai composer, text to music]
 ---
 

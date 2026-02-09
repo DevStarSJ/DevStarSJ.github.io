@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "HeyGen: Create Professional AI Avatar Videos in Minutes"
 category: image
-header-img: https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200
+header-img: "https://cdn.sanity.io/images/pdhqcmb1/production/579e83ff34c4c832744efaedb9681d255e58dc13-1200x630.png"
 ---
 
 ![Video production setup](https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800)

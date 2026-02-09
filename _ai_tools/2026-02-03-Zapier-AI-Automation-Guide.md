@@ -4,7 +4,7 @@ title: "Zapier AI 2026: Automate Everything with No-Code AI Workflows"
 date: 2026-02-03
 category: automation
 tags: [Zapier, Automation, No-Code, AI Workflow, Business Automation, Productivity]
-header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200"
+header-img: "https://res.cloudinary.com/zapier-media/image/upload/v1745941190/Homepage/og-homepage_zls2qi.png"
 ---
 
 # Zapier AI 2026: Automate Everything with No-Code AI Workflows

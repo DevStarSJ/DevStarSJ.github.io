@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Otter.ai: Automated Meeting Notes and Transcription That Actually Works"
 category: productivity
-header-img: https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200
+header-img: "https://otter.ai/og-image.png"
 ---
 
 ![Business meeting](https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800)
