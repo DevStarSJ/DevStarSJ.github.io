@@ -7,7 +7,7 @@ tags: [런웨이, AI영상, Gen-3, 영상생성, AI아트, 콘텐츠제작]
 date: 2026-02-05
 read_time: 13
 lang: ko
-header-img: "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=1200"
+header-img: "https://runwayml.com/product/opengraph-image.png"
 ---
 
 # Runway Gen-3 Alpha: AI 영상 생성 완전 가이드

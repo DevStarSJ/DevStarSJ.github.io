@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Otter.ai: 진짜 작동하는 자동 회의록 및 음성 인식"
 category: productivity
 lang: ko
-header-img: https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200
+header-img: "https://otter.ai/og-image.png"
 ---
 
 ![비즈니스 미팅](https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800)

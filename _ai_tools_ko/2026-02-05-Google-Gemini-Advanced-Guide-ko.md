@@ -7,7 +7,7 @@ tags: [제미나이, 구글AI, 챗봇, AI어시스턴트, 제미나이어드밴�
 date: 2026-02-05
 read_time: 14
 lang: ko
-header-img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200"
+header-img: "https://www.gstatic.com/lamda/images/gemini_aurora_thumbnail_4g_e74822ff0ca4259beb718.png"
 ---
 
 # 구글 제미나이 Advanced: 구글 최강 AI 완전 가이드

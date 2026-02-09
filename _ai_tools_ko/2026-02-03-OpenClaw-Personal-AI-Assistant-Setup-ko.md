@@ -6,7 +6,7 @@ category: automation
 tags: [openclaw, ai-비서, whatsapp, telegram, discord, 챗봇, 오픈소스]
 date: 2026-02-03
 read_time: 15
-header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
+header-img: "https://openclaw.ai/og-image.png"
 ---
 
 # OpenClaw: WhatsApp, Telegram, Discord에서 나만의 AI 비서 만들기

@@ -7,7 +7,7 @@ tags: [github-copilot, cursor, ai코딩, ide, 프로그래밍]
 date: 2026-02-01
 read_time: 12
 lang: ko
-header-img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200"
+header-img: "https://images.ctfassets.net/8aevphvgewt8/5IdZ8KizWhMOGixAmVSw0g/f81f5f263a88eabe5d3e102300d44a88/github-copilot-social-img.png"
 ---
 
 # GitHub Copilot vs Cursor: 2026년 최고의 AI 코드 에디터

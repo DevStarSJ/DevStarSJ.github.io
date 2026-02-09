@@ -3,7 +3,7 @@ layout: subsite-post
 title: "ElevenLabs: 2026년 최고의 AI 음성 플랫폼 완벽 가이드"
 category: automation
 lang: ko
-header-img: https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1200
+header-img: "https://elevenlabs.io/cover.png"
 tags: [elevenlabs, 음성 ai, tts, 음성 복제, ai 보이스]
 ---
 

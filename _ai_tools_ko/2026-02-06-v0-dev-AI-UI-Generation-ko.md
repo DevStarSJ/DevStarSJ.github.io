@@ -3,7 +3,7 @@ layout: subsite-post
 title: "v0.dev: Vercel의 AI UI 생성기 완벽 가이드 (2026)"
 category: coding
 lang: ko
-header-img: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200
+header-img: "https://v0.app/chat/api/og"
 tags: [v0, vercel, ai 코딩, ui 생성, react, nextjs]
 ---
 

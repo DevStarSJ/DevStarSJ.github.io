@@ -5,7 +5,7 @@ date: 2026-02-03
 category: productivity
 tags: [Notion AI, 생산성, AI 글쓰기, 노트 필기, 프로젝트 관리, 지식 베이스]
 lang: ko
-header-img: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200"
+header-img: "https://www.notion.com/front-static/meta/mwn-og-image.png"
 ---
 
 # Notion AI 2026: AI 기반 워크스페이스로 생산성 혁신하기

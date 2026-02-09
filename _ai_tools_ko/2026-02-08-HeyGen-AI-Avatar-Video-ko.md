@@ -3,7 +3,7 @@ layout: subsite-post
 title: "HeyGen: 몇 분 만에 전문 AI 아바타 비디오 만들기"
 category: image
 lang: ko
-header-img: https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200
+header-img: "https://cdn.sanity.io/images/pdhqcmb1/production/579e83ff34c4c832744efaedb9681d255e58dc13-1200x630.png"
 ---
 
 ![비디오 제작 셋업](https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800)

@@ -7,7 +7,7 @@ tags: [canva, ai디자인, 그래픽디자인, magic-studio, 생산성]
 date: 2026-02-01
 read_time: 10
 lang: ko
-header-img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200"
+header-img: "https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.jpg"
 ---
 
 # Canva AI: 디자인 스킬 없이 프로처럼 디자인하기

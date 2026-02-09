@@ -5,7 +5,7 @@ date: 2026-02-03
 category: coding
 tags: [Windsurf, AI 코딩, IDE, 코드 에디터, 개발자 도구, Codeium, AI 프로그래밍]
 lang: ko
-header-img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200"
+header-img: "https://exafunction.github.io/public/images/website_thumbnails/home.jpg"
 ---
 
 # Windsurf IDE 2026: 프로젝트를 이해하는 AI 우선 코드 에디터

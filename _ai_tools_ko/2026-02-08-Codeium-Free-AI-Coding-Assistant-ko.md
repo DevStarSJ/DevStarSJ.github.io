@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Codeium: 2026년 최고의 무료 AI 코딩 어시스턴트"
 category: coding
 lang: ko
-header-img: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200
+header-img: "https://exafunction.github.io/public/images/website_thumbnails/home.jpg"
 ---
 
 ![AI 코딩 어시스턴트를 사용하는 개발자](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800)

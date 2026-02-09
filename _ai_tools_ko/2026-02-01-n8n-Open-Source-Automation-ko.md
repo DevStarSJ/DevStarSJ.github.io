@@ -7,7 +7,7 @@ tags: [n8n, 자동화, 워크플로우, 오픈소스, zapier대안]
 date: 2026-02-01
 read_time: 11
 lang: ko
-header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200"
+header-img: "https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/og_image_website_3_afd66761a9_017b94d87b.png"
 ---
 
 # n8n: 당신에게 필요한 오픈소스 Zapier 대안

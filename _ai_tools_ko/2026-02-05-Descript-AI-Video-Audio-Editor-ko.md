@@ -7,7 +7,7 @@ tags: [Descript, 영상편집, 오디오편집, AI에디터, 팟캐스트, 콘�
 date: 2026-02-05
 read_time: 11
 lang: ko
-header-img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200"
+header-img: "https://cdn.builder.io/api/v1/image/assets%2Ffcea5005d671451e9b07839c893228d0%2Fb1cf2c175fbe4a028dff4622ee1ce727"
 ---
 
 # Descript: 영상과 오디오를 문서 편집하듯 수정하기

@@ -7,7 +7,7 @@ tags: [perplexity, ai검색, 리서치, 챗봇, 생산성]
 date: 2026-02-01
 read_time: 10
 lang: ko
-header-img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200"
+header-img: "https://pplx-res.cloudinary.com/image/upload/v1/pplx-logos/perplexity-social-meta.png"
 ---
 
 # Perplexity AI: 2026년 검색의 미래

@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Jasper AI: 2026년 최고의 마케팅 콘텐츠 생성 도구"
 category: productivity
 lang: ko
-header-img: https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200
+header-img: "https://www.jasper.ai/hubfs/jasper-og-image.png"
 ---
 
 ![마케팅 콘텐츠 제작](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800)

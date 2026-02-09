@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Gamma AI: 몇 분 만에 멋진 프레젠테이션 만들기 (2026 가이드)"
 category: productivity
 lang: ko
-header-img: https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200
+header-img: "https://gamma.app/og-image.png"
 tags: [gamma, ai 프레젠테이션, 슬라이드, 생산성, 디자인]
 ---
 

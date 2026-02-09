@@ -5,7 +5,7 @@ date: 2026-02-03
 category: image
 tags: [Midjourney, AI 아트, 이미지 생성, 생성형 AI, 디지털 아트, 크리에이티브 AI]
 lang: ko
-header-img: "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=1200"
+header-img: "https://cdn.midjourney.com/76cd80f2-76c9-4c2d-a5a9-20a5df8f9a14/0_0.webp"
 ---
 
 # Midjourney 2026: AI 아트 생성 완벽 가이드

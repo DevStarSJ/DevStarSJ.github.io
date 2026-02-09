@@ -7,7 +7,7 @@ tags: [claude-code, claude-mem, AI메모리, 컨텍스트엔지니어링, 개발
 date: 2026-02-04
 read_time: 12
 lang: ko
-header-img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200"
+header-img: "https://repository-images.githubusercontent.com/1048065319/c84340b5-674d-4f93-ad06-452718614abb"
 ---
 
 # Claude-Mem: Claude Code에 영구 메모리를 달아주는 플러그인

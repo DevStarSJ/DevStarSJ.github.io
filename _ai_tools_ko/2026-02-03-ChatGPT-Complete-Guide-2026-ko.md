@@ -5,7 +5,7 @@ date: 2026-02-03
 category: chatbot
 tags: [ChatGPT, OpenAI, AI 챗봇, GPT-4, 대화형 AI, AI 어시스턴트]
 lang: ko
-header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
+header-img: "https://images.openai.com/blob/a2e49de2-ba5b-4869-9c2d-db3f4571c4b5/chatgpt-header.png"
 ---
 
 # ChatGPT 완벽 가이드 2026: 세계 최고 AI 챗봇 마스터하기

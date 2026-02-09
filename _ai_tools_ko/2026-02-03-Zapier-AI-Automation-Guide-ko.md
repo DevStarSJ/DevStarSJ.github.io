@@ -5,7 +5,7 @@ date: 2026-02-03
 category: automation
 tags: [Zapier, 자동화, 노코드, AI 워크플로우, 비즈니스 자동화, 생산성]
 lang: ko
-header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200"
+header-img: "https://res.cloudinary.com/zapier-media/image/upload/v1745941190/Homepage/og-homepage_zls2qi.png"
 ---
 
 # Zapier AI 2026: 노코드 AI 워크플로우로 모든 것을 자동화하기

@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Suno AI: 텍스트만으로 전문가 수준의 음악 만들기 (2026 완벽 가이드)"
 category: image
 lang: ko
-header-img: https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200
+header-img: "https://cdn-o.suno.com/meta-preview.jpg"
 tags: [suno, ai 음악, 음악 생성, ai 작곡, 텍스트 투 뮤직]
 ---
 

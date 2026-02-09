@@ -5,7 +5,7 @@ date: 2026-02-06
 category: coding
 tags: [Claude Code, Agent Teams, 멀티 에이전트, AI 코딩, Anthropic, 개발자 도구, 페어 프로그래밍]
 lang: ko
-header-img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200"
+header-img: "https://www.anthropic.com/images/news/claude-3-5-sonnet-social.jpg"
 ---
 
 # Claude Code Agent Teams: 복잡한 코딩 작업을 위한 멀티 에이전트 협업

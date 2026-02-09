@@ -7,7 +7,7 @@ tags: [Replit, AI코딩, 리플릿에이전트, 노코드, 풀스택, 배포]
 date: 2026-02-05
 read_time: 12
 lang: ko
-header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200"
+header-img: "https://replit.com/public/images/opengraph.png"
 ---
 
 # Replit Agent: 프롬프트 하나로 풀스택 앱 만들기
