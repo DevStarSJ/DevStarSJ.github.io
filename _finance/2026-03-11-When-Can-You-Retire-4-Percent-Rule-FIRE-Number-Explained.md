@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "When Can You Retire? The 4% Rule and Your FIRE Number Explained"
 description: "The 4% rule is the most powerful concept in retirement planning. Learn exactly how to calculate your FIRE number and when you can actually retire — with real math."
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: retirement
 tags: [retirement planning, FIRE number, 4% rule, financial independence, early retirement]
 header-img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&auto=format&fit=crop"

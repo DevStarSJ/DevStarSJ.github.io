@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Hailuo AI 비디오 생성: MiniMax의 영화적 AI 동영상 도구 완전 가이드 2026"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: image
 tags: [hailuo, 비디오생성, AI, minimax, 영화적, 동영상AI]
 lang: ko

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "DeepSeek R2: GPT-4를 위협하는 중국 AI 완전 가이드 2026"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: chatbot
 tags: [deepseek, chatbot, AI, llm, 추론, 무료AI]
 lang: ko

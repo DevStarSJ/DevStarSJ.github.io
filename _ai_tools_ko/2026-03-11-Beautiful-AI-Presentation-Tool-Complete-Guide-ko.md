@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Beautiful.ai: 슬라이드를 자동으로 디자인해주는 AI 프레젠테이션 도구 완전 가이드 2026"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: productivity
 tags: [beautiful-ai, 프레젠테이션, AI, 슬라이드, 생산성, 디자인]
 lang: ko

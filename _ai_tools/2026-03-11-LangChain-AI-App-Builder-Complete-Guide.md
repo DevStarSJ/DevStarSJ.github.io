@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "LangChain Complete Guide 2026: Build Powerful AI Apps and Agents"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: automation
 tags: [langchain, AI-apps, python, agent, automation, LLM, developer]
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"

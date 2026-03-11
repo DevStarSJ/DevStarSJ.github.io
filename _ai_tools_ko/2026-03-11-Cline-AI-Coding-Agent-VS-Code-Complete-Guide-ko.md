@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Cline AI 코딩 에이전트: VS Code에서 자율적으로 코드 작성하는 오픈소스 도구 완전 가이드"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: coding
 tags: [cline, vscode, 코딩, AI, 에이전트, 오픈소스]
 lang: ko

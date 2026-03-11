@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Cline AI Coding Agent: The Open-Source VS Code Extension That Writes Code Autonomously"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: coding
 tags: [cline, vscode, coding, AI, agent, open-source]
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"

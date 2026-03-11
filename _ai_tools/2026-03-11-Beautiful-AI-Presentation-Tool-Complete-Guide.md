@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Beautiful.ai: The AI Presentation Tool That Designs Slides For You (2026 Review)"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: productivity
 tags: [beautiful-ai, presentation, AI, slides, productivity, design]
 header-img: "https://images.unsplash.com/photo-1558403194-611308249627?w=1200&auto=format&fit=crop"

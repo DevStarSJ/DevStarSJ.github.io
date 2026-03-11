@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Passive Income With Dividend Stocks: How To Build a $1,000/Month Stream"
 description: "Want to earn $1,000 every month without working? Here's the exact portfolio strategy to build a sustainable dividend income stream — with real numbers and stock picks."
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: passive-income
 tags: [dividend stocks, passive income, dividend investing, dividend portfolio, income investing]
 header-img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&auto=format&fit=crop"

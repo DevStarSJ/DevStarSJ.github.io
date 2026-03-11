@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "DeepSeek R2: The Chinese AI That's Challenging GPT-4 (Complete Guide 2026)"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: chatbot
 tags: [deepseek, chatbot, AI, llm, reasoning]
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"

@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "언제 은퇴할 수 있을까? 4% 룰과 FIRE 숫자 완벽 가이드"
 description: "4% 룰은 은퇴 계획에서 가장 강력한 개념입니다. 내 FIRE 숫자를 정확히 계산하고 언제 은퇴할 수 있는지 실제 수학으로 알아보세요."
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: retirement
 tags: [은퇴 계획, FIRE 숫자, 4% 룰, 경제적 자유, 조기 은퇴]
 lang: ko

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "LangChain 완전 가이드 2026: AI 앱과 에이전트 구축하기"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: automation
 tags: [langchain, AI앱, python, 에이전트, 자동화, LLM, 개발자]
 lang: ko

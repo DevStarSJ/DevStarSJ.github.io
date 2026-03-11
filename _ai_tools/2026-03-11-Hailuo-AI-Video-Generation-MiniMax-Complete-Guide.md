@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Hailuo AI Video Generation: MiniMax's Cinematic AI Video Tool Complete Guide 2026"
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: image
 tags: [hailuo, video-generation, AI, minimax, cinematic, video-AI]
 header-img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&auto=format&fit=crop"

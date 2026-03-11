@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "The 50/30/20 Budget Rule: Does It Actually Work In 2026?"
 description: "The 50/30/20 rule is the most popular budgeting method in the world. But does it work for modern finances? Here's an honest breakdown — and when to modify it."
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: budgeting
 tags: [budgeting, 50/30/20 rule, personal finance, money management, budget tips]
 header-img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop"

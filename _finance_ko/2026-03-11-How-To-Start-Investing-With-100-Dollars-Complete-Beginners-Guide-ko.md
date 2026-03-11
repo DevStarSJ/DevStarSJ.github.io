@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "100달러로 투자 시작하는 방법: 2026년 완벽 초보자 가이드"
 description: "투자하려면 수백만 원이 필요하다고요? 틀렸습니다. 단 100달러로 부를 쌓는 가장 현명한 방법을 알려드립니다."
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: investing
 tags: [투자 입문, 소액 투자, ETF, 로보어드바이저, 100달러 투자]
 lang: ko

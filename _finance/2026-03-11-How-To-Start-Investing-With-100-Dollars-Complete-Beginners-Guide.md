@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "How To Start Investing With $100: Complete Beginner's Guide 2026"
 description: "Think you need thousands to start investing? Wrong. Here's exactly how to grow wealth starting with just $100 — the smartest moves for beginners in 2026."
-date: 2026-03-11
+date: 2026-03-10 15:00:00
 category: investing
 tags: [investing, beginner investing, fractional shares, robo-advisors, 100 dollars investing]
 header-img: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&auto=format&fit=crop"
