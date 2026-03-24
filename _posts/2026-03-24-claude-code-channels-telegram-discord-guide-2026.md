@@ -2,7 +2,7 @@
 layout: post
 title: "Claude Code Channels: Control Your AI Agent from Telegram and Discord"
 subtitle: "How to use Claude Code's new Channels feature to push messages into your running session from anywhere"
-date: 2026-03-24 12:00:00
+date: 2026-03-23 12:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4

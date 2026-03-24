@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Claude Code Channels: Control Your AI Agent from Telegram and Discord"
 description: "Complete guide to Claude Code Channels — how to push messages into your running Claude Code session from Telegram or Discord, setup steps, use cases, and security."
-date: 2026-03-24 14:00:00
+date: 2026-03-23 15:00:00
 category: coding
 tags: [claude-code, channels, telegram, discord, mcp, anthropic, ai-agent]
 header-img: https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&auto=format&fit=crop&q=80

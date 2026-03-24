@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Claude Code 채널: 텔레그램과 디스코드로 AI 에이전트 원격 제어하기"
 description: "Claude Code Channels 완전 가이드 — 텔레그램·디스코드에서 실행 중인 Claude Code 세션으로 메시지를 푸시하는 방법, 설정 절차, 활용 사례, 보안 설명."
-date: 2026-03-24 14:00:00
+date: 2026-03-23 15:00:00
 category: coding
 lang: ko
 tags: [claude-code, channels, telegram, discord, mcp, anthropic, ai-agent]
