@@ -52,7 +52,7 @@ layout: compress
 
         <!-- Post List -->
         <section class="ai-tools-posts">
-          {% assign posts = site.posts | where_exp: "post", "post.layout == 'ai-tools-post'" | sort: 'date' | reverse %}
+          {% assign posts = site.ai_tools | sort: 'date' | reverse %}
           {% if page.filter %}
             {% assign posts = posts | where: 'category', page.filter %}
           {% endif %}

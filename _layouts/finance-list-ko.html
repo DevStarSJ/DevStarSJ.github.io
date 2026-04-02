@@ -52,7 +52,7 @@ layout: compress
 
         <!-- Post List -->
         <section class="finance-posts">
-          {% assign posts = site.posts | where_exp: "post", "post.layout == 'finance-post-ko'" | sort: 'date' | reverse %}
+          {% assign posts = site.finance_ko | sort: 'date' | reverse %}
           {% if page.filter %}
             {% assign posts = posts | where: 'category', page.filter %}
           {% endif %}
