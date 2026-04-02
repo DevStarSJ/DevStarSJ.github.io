@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "ETF vs Mutual Funds: Which Investment Vehicle Is Right for You?"
-date: 2026-03-31 16:00:03
+date: 2026-03-31 00:00:00
 category: investing
 tags: [ETF, mutual-funds, investing, index-funds, expense-ratio, portfolio]
 header-img: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&auto=format&fit=crop"

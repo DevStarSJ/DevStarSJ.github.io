@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Journaling for Mental Health: The Science-Backed Practice That Rewires Your Brain"
 subtitle: "How 15 minutes of writing per day can reduce anxiety, improve mood, and unlock emotional resilience"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "Wellness Team"
 header-img: "https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?w=1200&q=80"
 category: mental

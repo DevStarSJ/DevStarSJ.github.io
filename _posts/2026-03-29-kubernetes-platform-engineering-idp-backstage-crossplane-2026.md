@@ -2,7 +2,7 @@
 layout: post
 title: "Kubernetes Platform Engineering: Building Internal Developer Platforms in 2026"
 subtitle: "How platform teams are using Backstage, Crossplane, and GitOps to create self-service developer experiences"
-date: 2026-03-29 12:00:00
+date: 2026-03-29 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop&q=80"
 catalog: true

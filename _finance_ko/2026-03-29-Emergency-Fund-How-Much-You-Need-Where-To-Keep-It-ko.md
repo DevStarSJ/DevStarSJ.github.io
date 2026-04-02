@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "비상금 얼마나 필요할까? 금액 기준과 최적의 보관 방법"
-date: 2026-03-29 16:00:00
+date: 2026-03-29 00:00:00
 category: saving
 lang: ko
 tags: [비상금, 저축, 재정안전망, 파킹통장, 재정안정]

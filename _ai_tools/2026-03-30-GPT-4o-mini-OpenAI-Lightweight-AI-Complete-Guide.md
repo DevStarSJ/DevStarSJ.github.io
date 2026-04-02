@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "GPT-4o mini: OpenAI's Fast & Affordable AI Model — Complete Guide 2026"
-date: 2026-03-30 15:00:00
+date: 2026-03-30 00:00:00
 category: chatbot
 tags: [openai, gpt4o-mini, chatgpt, ai, chatbot]
 header-img: https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop

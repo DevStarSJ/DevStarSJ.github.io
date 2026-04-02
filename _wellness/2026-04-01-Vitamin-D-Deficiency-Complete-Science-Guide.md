@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Vitamin D Deficiency: The Silent Epidemic Affecting 1 Billion People"
 subtitle: "Why you're probably deficient and what to do about it"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "Wellness Team"
 header-img: "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=1200&q=80"
 category: nutrition

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude Code Architecture: What Makes It Different From Other AI Coding Tools"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 category: coding
 tags: [claude-code, anthropic, ai-agents, architecture, developer-tools]
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&auto=format&fit=crop"

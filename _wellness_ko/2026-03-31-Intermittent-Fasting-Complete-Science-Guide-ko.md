@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "간헐적 단식: 시간 제한 식이의 완벽한 과학 가이드"
-date: 2026-03-31 13:00:00
+date: 2026-03-31 00:00:00
 category: lifestyle
 lang: ko
 tags: [간헐적단식, 시간제한식이, 자가포식, 대사건강, 체중감소, 일주기, 장수]

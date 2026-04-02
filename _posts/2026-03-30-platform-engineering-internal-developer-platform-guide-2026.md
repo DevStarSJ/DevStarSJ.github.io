@@ -2,7 +2,7 @@
 layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Actually Get Used"
 subtitle: "From golden paths to self-service infrastructure — a practitioner's guide to IDP design, tooling, and adoption"
-date: 2026-03-30 12:00:00
+date: 2026-03-30 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80"
 catalog: true

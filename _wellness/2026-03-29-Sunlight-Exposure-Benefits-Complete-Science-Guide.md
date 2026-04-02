@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Sunlight Exposure Benefits: The Science of Your Most Underrated Health Tool"
-date: 2026-03-29 13:00:00
+date: 2026-03-29 00:00:00
 category: lifestyle
 tags: [sunlight, vitamin D, mood, serotonin, circadian rhythm, sun exposure, health benefits]
 header-img: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&auto=format&fit=crop"

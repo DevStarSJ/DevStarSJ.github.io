@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Strength Training for Longevity: The Complete Science-Based Guide to Building a Body That Lasts"
-date: 2026-03-31 13:00:00
+date: 2026-03-31 00:00:00
 category: exercise
 tags: [strength-training, longevity, muscle-mass, sarcopenia, resistance-training, aging, fitness]
 header-img: https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&auto=format&fit=crop

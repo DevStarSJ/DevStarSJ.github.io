@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Windsurf (Codeium): Cursor에 도전하는 AI IDE — 완벽 가이드 2026"
-date: 2026-03-30 15:00:00
+date: 2026-03-30 00:00:00
 category: coding
 tags: [windsurf, codeium, ai-ide, coding, ai-coding-assistant]
 lang: ko

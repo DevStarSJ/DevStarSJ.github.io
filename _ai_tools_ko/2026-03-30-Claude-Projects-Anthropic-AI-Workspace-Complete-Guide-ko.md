@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude Projects: 영구 컨텍스트를 위한 Anthropic의 AI 워크스페이스 — 완벽 가이드 2026"
-date: 2026-03-30 15:00:00
+date: 2026-03-30 00:00:00
 category: productivity
 tags: [claude, anthropic, claude-projects, ai-workspace, productivity]
 lang: ko

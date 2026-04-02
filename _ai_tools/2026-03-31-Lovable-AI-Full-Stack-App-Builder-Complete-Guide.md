@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Lovable AI: Build Full-Stack Apps with Natural Language Complete Guide 2026"
-date: 2026-03-31 15:00:00
+date: 2026-03-31 00:00:00
 category: coding
 tags: [lovable, ai-coding, app-builder, full-stack, no-code]
 header-img: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80

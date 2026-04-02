@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "수분 섭취 과학: 실제로 필요한 물의 양 (근거 기반 가이드)"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: nutrition
 tags: [수분, 물, 건강, 영양, 웰니스]
 lang: ko

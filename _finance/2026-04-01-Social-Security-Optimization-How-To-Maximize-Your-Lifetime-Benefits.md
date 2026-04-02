@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Social Security Optimization: How to Maximize Your Lifetime Benefits"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: retirement
 tags: [social-security, retirement-planning, benefits-optimization, retirement-income, claiming-strategy]
 header-img: "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=1200&auto=format&fit=crop"

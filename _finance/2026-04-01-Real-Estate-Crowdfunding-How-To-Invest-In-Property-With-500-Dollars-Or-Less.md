@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Real Estate Crowdfunding: How to Invest in Property With $500 or Less"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: passive-income
 tags: [real-estate-crowdfunding, REITs, passive-income, property-investing, Fundrise]
 header-img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&auto=format&fit=crop"

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Dividend Investing: Build a Passive Income Stream That Grows Every Year"
-date: 2026-03-31 16:00:01
+date: 2026-03-31 00:00:00
 category: passive-income
 tags: [dividends, passive-income, stocks, investing, DRIP, income-investing]
 header-img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&auto=format&fit=crop"

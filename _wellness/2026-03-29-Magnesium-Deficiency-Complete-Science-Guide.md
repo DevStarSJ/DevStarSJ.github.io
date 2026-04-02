@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Magnesium Deficiency: The Silent Epidemic Affecting 50% of Americans"
-date: 2026-03-29 13:00:00
+date: 2026-03-29 00:00:00
 category: nutrition
 tags: [magnesium, mineral deficiency, nutrition, supplements, muscle cramps]
 header-img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&auto=format&fit=crop"

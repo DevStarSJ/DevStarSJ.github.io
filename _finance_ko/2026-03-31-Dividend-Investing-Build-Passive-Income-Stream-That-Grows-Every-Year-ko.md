@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "배당 투자: 매년 성장하는 패시브 인컴 흐름 만들기"
-date: 2026-03-31 16:00:01
+date: 2026-03-31 00:00:00
 lang: ko
 category: passive-income
 tags: [배당금, 패시브인컴, 주식투자, DRIP, 배당성장주]

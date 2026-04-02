@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Sleep Hygiene: The Complete Science-Based Guide to Building a Perfect Sleep Foundation"
-date: 2026-03-31 13:00:00
+date: 2026-03-31 00:00:00
 category: sleep
 tags: [sleep-hygiene, sleep-quality, insomnia, sleep-habits, circadian-rhythm, sleep-environment, melatonin]
 header-img: https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=1200&auto=format&fit=crop

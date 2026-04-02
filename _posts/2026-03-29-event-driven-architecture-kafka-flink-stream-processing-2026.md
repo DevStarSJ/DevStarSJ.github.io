@@ -2,7 +2,7 @@
 layout: post
 title: "Event-Driven Architecture with Kafka and Flink: Stream Processing Patterns for 2026"
 subtitle: "Building real-time data pipelines that scale — from event sourcing to stateful stream processing with Apache Flink"
-date: 2026-03-29 12:00:00
+date: 2026-03-29 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop&q=80"
 catalog: true

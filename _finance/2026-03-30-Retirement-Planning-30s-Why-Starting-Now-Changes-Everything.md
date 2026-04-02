@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Retirement Planning in Your 30s: Why Starting Now Changes Everything"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: retirement
 tags: [retirement planning, retirement savings, 401k, IRA, financial independence, retire early]
 header-img: "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=1200&auto=format&fit=crop"

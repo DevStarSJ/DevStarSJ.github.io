@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "하루 1만 보 걷기: 세상에서 가장 접근하기 쉬운 운동의 과학"
 subtitle: "매일 걷기가 장기적인 건강에 최고의 투자인 이유"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "웰니스 팀"
 header-img: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&q=80"
 category: exercise

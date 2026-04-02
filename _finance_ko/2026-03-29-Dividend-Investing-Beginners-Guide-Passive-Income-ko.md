@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "배당주 투자 입문: 주식으로 만드는 패시브 인컴 가이드"
-date: 2026-03-29 16:00:00
+date: 2026-03-29 00:00:00
 category: passive-income
 lang: ko
 tags: [배당주, 패시브인컴, 배당투자, DRIP, 배당성장주]

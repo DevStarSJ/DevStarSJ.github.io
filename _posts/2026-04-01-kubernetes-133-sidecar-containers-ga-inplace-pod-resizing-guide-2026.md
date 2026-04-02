@@ -2,7 +2,7 @@
 layout: post
 title: "Kubernetes 1.33 Deep Dive: Sidecar Containers GA, In-Place Pod Resizing, and What's Next"
 subtitle: "Everything you need to know about the most impactful Kubernetes release of 2026"
-date: 2026-04-01 12:00:00
+date: 2026-04-01 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true

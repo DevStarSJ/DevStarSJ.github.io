@@ -2,7 +2,7 @@
 layout: post
 title: "Claude 3.7 Sonnet Extended Thinking: A Deep Dive into Hybrid Reasoning Models"
 subtitle: "When to use extended thinking, how it works, and real-world benchmarks compared to o3 and Gemini 2.0 Flash"
-date: 2026-04-01 12:00:00
+date: 2026-04-01 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 catalog: true

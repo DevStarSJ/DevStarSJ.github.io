@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "50/30/20 예산 규칙: 재정적 성공을 위한 가장 단순한 프레임워크"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: budgeting
 tags: [50-30-20, 예산관리, 개인금융, 돈관리, 재정계획]
 header-img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop"

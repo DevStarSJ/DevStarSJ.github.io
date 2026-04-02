@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "1년 안에 1,000만원 저축하기: 현실적인 단계별 계획"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: saving
 lang: ko
 tags: [저축, 1000만원 저축, 돈 모으기, 절약 방법, 재테크]

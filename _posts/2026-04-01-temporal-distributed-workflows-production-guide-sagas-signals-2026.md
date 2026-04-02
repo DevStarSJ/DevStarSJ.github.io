@@ -2,7 +2,7 @@
 layout: post
 title: "Temporal Dead Zones: Building Reliable Distributed Workflows with Temporal.io in 2026"
 subtitle: "From basics to production patterns: sagas, signals, schedules, and avoiding the most common pitfalls"
-date: 2026-04-01 12:00:00
+date: 2026-04-01 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Stable Diffusion 3: The Open-Source Image Generator That Rivals Midjourney"
-date: 2026-03-29 15:00:00
+date: 2026-03-29 00:00:00
 category: image
 tags: [stable-diffusion, image-generation, open-source, ai-art, automatic1111]
 header-img: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=1200&auto=format&fit=crop"

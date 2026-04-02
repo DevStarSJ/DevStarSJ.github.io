@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "제로 기반 예산법: 모든 돈에 역할을 부여하는 예산 관리 비법"
-date: 2026-03-29 16:00:00
+date: 2026-03-29 00:00:00
 category: budgeting
 lang: ko
 tags: [제로기반예산, 예산관리, 가계부, 돈관리, 소비계획]

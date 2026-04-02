@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "사회적 연결과 정신 건강: 왜 외로움이 흡연만큼 치명적인가"
-date: 2026-03-29 13:00:00
+date: 2026-03-29 00:00:00
 category: mental
 lang: ko
 tags: [사회적 연결, 외로움, 정신 건강, 인간 관계, 커뮤니티, 웰빙]

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Zone 2 Cardio Training: The Science Behind the Most Effective Fat-Burning Exercise"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: exercise
 tags: [zone2, cardio, fat-burning, endurance, fitness, longevity]
 header-img: https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=1200&auto=format&fit=crop

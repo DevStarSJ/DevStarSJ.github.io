@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "항염증 식단: 만성 염증과 싸우는 완전한 과학 기반 가이드"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: nutrition
 tags: [항염증, 염증, 식단, 만성질환, 영양, 지중해식]
 lang: ko

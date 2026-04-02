@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "부동산 크라우드펀딩: 집주인이 되지 않고도 패시브 인컴 버는 법"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: passive-income
 lang: ko
 tags: [부동산 크라우드펀딩, 패시브 인컴, 리츠, 부동산 투자, 수동 수입]

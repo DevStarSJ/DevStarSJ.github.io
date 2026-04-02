@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Taskade AI 완벽 가이드: AI 기반 프로젝트 관리 도구 2026"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: productivity
 tags: [taskade, ai, 생산성, 프로젝트관리, 협업]
 lang: ko

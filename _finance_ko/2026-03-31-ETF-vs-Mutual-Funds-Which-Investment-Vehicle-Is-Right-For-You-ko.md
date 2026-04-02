@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "ETF vs 뮤추얼 펀드: 어떤 투자 수단이 나에게 맞을까?"
-date: 2026-03-31 16:00:03
+date: 2026-03-31 00:00:00
 lang: ko
 category: investing
 tags: [ETF, 뮤추얼펀드, 투자, 인덱스펀드, 보수비율, 포트폴리오]

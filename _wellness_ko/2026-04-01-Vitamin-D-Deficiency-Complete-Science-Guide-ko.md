@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "비타민 D 결핍: 10억 명을 위협하는 침묵의 유행병"
 subtitle: "당신도 결핍일 가능성이 높다 — 원인과 해결책 완벽 정리"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "웰니스 팀"
 header-img: "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=1200&q=80"
 category: nutrition

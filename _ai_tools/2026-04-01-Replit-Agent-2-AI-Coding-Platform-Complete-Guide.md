@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Replit Agent 2.0: AI-Powered Full-Stack Coding Platform Complete Guide 2026"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: coding
 tags: [replit, ai, coding, agent, ide, development]
 header-img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&auto=format&fit=crop"

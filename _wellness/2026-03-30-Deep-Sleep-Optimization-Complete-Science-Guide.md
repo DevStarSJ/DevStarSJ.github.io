@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Deep Sleep Optimization: Science-Backed Strategies to Maximize Slow-Wave Sleep"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: sleep
 tags: [deep-sleep, slow-wave-sleep, sleep-quality, sleep-optimization, SWS, recovery]
 header-img: https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=1200&auto=format&fit=crop

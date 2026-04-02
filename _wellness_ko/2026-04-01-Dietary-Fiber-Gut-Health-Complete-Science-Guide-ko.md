@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "식이섬유: 장 건강, 체중, 장수를 위한 가장 과소평가된 영양소"
 subtitle: "섬유질이 궁극의 건강 식품인 이유 — 그리고 왜 95%의 사람들이 충분히 섭취하지 않는가"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "웰니스 팀"
 header-img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&q=80"
 category: nutrition

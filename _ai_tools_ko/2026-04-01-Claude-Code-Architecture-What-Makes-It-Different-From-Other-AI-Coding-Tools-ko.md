@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude Code 아키텍처: 다른 AI 코딩 도구와 무엇이 다른가"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 category: coding
 tags: [claude-code, anthropic, ai-agents, 아키텍처, 개발도구]
 lang: ko

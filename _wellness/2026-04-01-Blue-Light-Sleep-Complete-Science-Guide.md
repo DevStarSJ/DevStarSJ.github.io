@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Blue Light and Sleep: How Screens Are Destroying Your Sleep Quality"
 subtitle: "The science behind blue light's impact on melatonin, sleep architecture, and practical solutions"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "Wellness Team"
 header-img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
 category: sleep

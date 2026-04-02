@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Anti-Inflammatory Diet: The Complete Science-Based Guide to Fighting Chronic Inflammation"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: nutrition
 tags: [anti-inflammatory, inflammation, diet, chronic-disease, nutrition, Mediterranean]
 header-img: https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&auto=format&fit=crop

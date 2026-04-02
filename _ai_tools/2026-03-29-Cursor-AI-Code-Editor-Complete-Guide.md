@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Cursor AI: The AI Code Editor That's Changing How Developers Work"
-date: 2026-03-29 15:00:00
+date: 2026-03-29 00:00:00
 category: coding
 tags: [cursor, ai-editor, coding, vscode, copilot-alternative]
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "50/30/20 예산 규칙: 실제로 효과 있는 가장 단순한 예산법"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: budgeting
 lang: ko
 tags: [50/30/20 규칙, 가계부, 예산 계획, 돈 관리, 개인 재정 기초]

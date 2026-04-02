@@ -2,7 +2,7 @@
 layout: post
 title: "Claude Code Complete Architecture Analysis: 7 Execution Modes, 45+ Tools, Coordinator Multi-Agent, and 8 Design Patterns"
 subtitle: "An in-depth technical breakdown of Claude Code's internals — from startup sequence to multi-agent coordination"
-date: 2026-04-01 14:00:00
+date: 2026-04-01 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "제로 기반 예산: 모든 돈에 역할을 부여하고 재정을 바꾸는 법"
-date: 2026-03-31 16:00:02
+date: 2026-03-31 00:00:00
 lang: ko
 category: budgeting
 tags: [예산관리, 제로기반예산, 개인재무, 돈관리, 재정계획]

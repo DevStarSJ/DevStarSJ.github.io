@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude Projects: Anthropic's AI Workspace for Persistent Context — Complete Guide 2026"
-date: 2026-03-30 15:00:00
+date: 2026-03-30 00:00:00
 category: productivity
 tags: [claude, anthropic, claude-projects, ai-workspace, productivity]
 header-img: https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?w=1200&auto=format&fit=crop

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Suno AI 완벽 가이드: 몇 초 만에 가사 있는 완성된 노래 만들기"
-date: 2026-03-29 15:00:00
+date: 2026-03-29 00:00:00
 category: productivity
 tags: [suno, ai음악, 음악생성, 노래만들기, 창작]
 lang: ko

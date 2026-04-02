@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "The 50/30/20 Budget Rule: The Simplest Budget That Actually Works"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: budgeting
 tags: [50/30/20 rule, budgeting, budget plan, money management, personal finance basics]
 header-img: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&auto=format&fit=crop"

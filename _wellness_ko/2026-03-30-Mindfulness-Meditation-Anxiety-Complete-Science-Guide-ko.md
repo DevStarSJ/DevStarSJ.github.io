@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "불안을 위한 마음챙김 명상: 완전한 근거 기반 가이드"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: mental
 tags: [마음챙김, 명상, 불안, 정신건강, 스트레스, MBSR]
 lang: ko

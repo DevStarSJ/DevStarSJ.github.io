@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Cursor AI 완벽 가이드: 개발자 워크플로우를 바꾸는 AI 코드 에디터"
-date: 2026-03-29 15:00:00
+date: 2026-03-29 00:00:00
 category: coding
 tags: [cursor, ai에디터, 코딩, vscode, 코파일럿대안]
 lang: ko

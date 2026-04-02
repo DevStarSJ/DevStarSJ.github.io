@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Circadian Rhythm Optimization: Sync Your Body Clock for Peak Performance"
-date: 2026-03-29 13:00:00
+date: 2026-03-29 00:00:00
 category: sleep
 tags: [circadian rhythm, body clock, sleep timing, chronobiology, melatonin, light exposure]
 header-img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&auto=format&fit=crop"

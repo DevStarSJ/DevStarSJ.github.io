@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "How to Save $10,000 in a Year: A Realistic Step-by-Step Plan"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: saving
 tags: [save money, savings challenge, $10000 savings, money saving tips, personal finance]
 header-img: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&auto=format&fit=crop"

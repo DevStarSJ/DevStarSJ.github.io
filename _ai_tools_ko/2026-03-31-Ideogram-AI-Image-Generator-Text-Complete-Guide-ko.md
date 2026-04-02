@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Ideogram AI: 이미지 내 텍스트 최강 AI 이미지 생성기 완벽 가이드 2026"
-date: 2026-03-31 15:00:00
+date: 2026-03-31 00:00:00
 category: image
 tags: [ideogram, ai이미지, 텍스트이미지, 그래픽디자인, 이미지생성]
 header-img: https://images.unsplash.com/photo-1561998338-13ad7883b20f?w=1200&auto=format&fit=crop&q=80

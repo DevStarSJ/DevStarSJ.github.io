@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "소셜 시큐리티 최적화: 평생 수령액을 극대화하는 방법"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: retirement
 tags: [소셜시큐리티, 은퇴계획, 수령액최적화, 은퇴소득, 수령전략]
 header-img: "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=1200&auto=format&fit=crop"

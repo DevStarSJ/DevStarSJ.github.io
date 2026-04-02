@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "비상금 완전정복: 얼마나 모아야 하고 어디에 보관해야 할까"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: saving
 tags: [비상금, 저축, 재정안전망, 개인금융, 현금보유]
 header-img: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&auto=format&fit=crop"

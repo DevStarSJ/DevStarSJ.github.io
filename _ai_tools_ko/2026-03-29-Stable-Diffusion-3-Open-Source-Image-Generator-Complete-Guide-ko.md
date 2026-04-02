@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Stable Diffusion 3 완벽 가이드: Midjourney에 맞서는 오픈소스 이미지 AI"
-date: 2026-03-29 15:00:00
+date: 2026-03-29 00:00:00
 category: image
 tags: [스테이블디퓨전, 이미지생성, 오픈소스, AI아트, comfyui]
 lang: ko

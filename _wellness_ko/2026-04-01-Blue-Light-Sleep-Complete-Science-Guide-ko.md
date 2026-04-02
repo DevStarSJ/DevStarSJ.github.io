@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "블루라이트와 수면: 스마트폰이 수면의 질을 망치는 방법"
 subtitle: "블루라이트가 멜라토닌, 수면 구조, 일주기 리듬에 미치는 영향과 실용적 해결책"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "웰니스 팀"
 header-img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
 category: sleep

@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Dietary Fiber: The Most Underrated Nutrient for Gut Health, Weight, and Longevity"
 subtitle: "Why fiber is the ultimate health food — and why 95% of people don't get enough"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "Wellness Team"
 header-img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&q=80"
 category: nutrition

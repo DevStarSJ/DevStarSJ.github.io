@@ -2,7 +2,7 @@
 layout: post
 title: "Vector Databases in 2026: pgvector, Qdrant, and Pinecone — A Production Comparison"
 subtitle: "Which vector database should you choose for RAG, semantic search, and AI-powered applications in 2026?"
-date: 2026-03-31 12:00:00
+date: 2026-03-31 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4

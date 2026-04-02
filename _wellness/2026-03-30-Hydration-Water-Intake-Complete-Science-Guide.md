@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Hydration Science: How Much Water You Actually Need (Evidence-Based Guide)"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: nutrition
 tags: [hydration, water, health, nutrition, wellness]
 header-img: https://images.unsplash.com/photo-1523362628745-0c100150b504?w=1200&auto=format&fit=crop

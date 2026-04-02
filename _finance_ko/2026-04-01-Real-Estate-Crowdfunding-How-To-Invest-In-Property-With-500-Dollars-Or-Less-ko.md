@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "부동산 크라우드펀딩: $500 이하로 부동산에 투자하는 방법"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: passive-income
 tags: [부동산크라우드펀딩, 리츠, 패시브인컴, 부동산투자, Fundrise]
 header-img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&auto=format&fit=crop"

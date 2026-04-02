@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "장수를 위한 근력 운동: 오래 쓸 수 있는 몸을 만드는 완벽한 과학 가이드"
-date: 2026-03-31 13:00:00
+date: 2026-03-31 00:00:00
 category: exercise
 lang: ko
 tags: [근력운동, 장수, 근육량, 근감소증, 저항운동, 노화, 피트니스]

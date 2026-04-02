@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "깊은 수면 최적화: 서파 수면을 극대화하는 과학적 전략"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: sleep
 tags: [깊은수면, 서파수면, 수면품질, 수면최적화, 회복]
 lang: ko

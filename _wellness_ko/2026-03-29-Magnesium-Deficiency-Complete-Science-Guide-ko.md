@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "마그네슘 결핍: 미국인 50%에게 영향 미치는 침묵의 전염병"
-date: 2026-03-29 13:00:00
+date: 2026-03-29 00:00:00
 category: nutrition
 lang: ko
 tags: [마그네슘, 미네랄 결핍, 영양, 보충제, 근육경련]

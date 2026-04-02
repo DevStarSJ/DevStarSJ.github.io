@@ -2,7 +2,7 @@
 layout: post
 title: "Claude Code Internal Architecture Deep Dive: How Anthropic Built a Production AI Coding Agent"
 subtitle: "A technical analysis of the agent loop, tool system, permission model, context management, and MCP integration inside Claude Code"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true

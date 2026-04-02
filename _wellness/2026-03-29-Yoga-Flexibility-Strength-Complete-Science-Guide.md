@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Yoga for Flexibility & Strength: The Complete Science-Backed Guide"
-date: 2026-03-29 13:00:00
+date: 2026-03-29 00:00:00
 category: exercise
 tags: [yoga, flexibility, strength, mindfulness, fitness, stretching]
 header-img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&auto=format&fit=crop"

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Dividend Investing for Beginners: Build Passive Income with Stocks"
-date: 2026-03-29 16:00:00
+date: 2026-03-29 00:00:00
 category: passive-income
 tags: [dividend investing, passive income, dividend stocks, DRIP, income investing]
 header-img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&auto=format&fit=crop"

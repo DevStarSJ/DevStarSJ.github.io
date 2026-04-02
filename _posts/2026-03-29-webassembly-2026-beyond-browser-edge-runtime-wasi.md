@@ -2,7 +2,7 @@
 layout: post
 title: "WebAssembly in 2026: From Browser Sandbox to Universal Runtime"
 subtitle: "WASM has escaped the browser — here's how it's reshaping edge computing, serverless, and plugin systems"
-date: 2026-03-29 12:00:00
+date: 2026-03-29 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1200&auto=format&fit=crop&q=80"
 catalog: true

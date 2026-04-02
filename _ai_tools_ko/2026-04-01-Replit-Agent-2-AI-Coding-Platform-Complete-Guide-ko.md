@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Replit Agent 2.0 완벽 가이드: AI로 풀스택 앱 만들기 2026"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: coding
 tags: [replit, ai, 코딩, agent, ide, 개발]
 lang: ko

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "ElevenLabs: The Best AI Voice Generator in 2026 — Complete Guide"
-date: 2026-03-30 15:00:00
+date: 2026-03-30 00:00:00
 category: productivity
 tags: [elevenlabs, ai-voice, text-to-speech, voice-cloning, tts]
 header-img: https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=1200&auto=format&fit=crop

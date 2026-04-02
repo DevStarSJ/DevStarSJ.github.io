@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "햇빛 노출의 이점: 가장 과소평가된 건강 도구의 과학"
-date: 2026-03-29 13:00:00
+date: 2026-03-29 00:00:00
 category: lifestyle
 lang: ko
 tags: [햇빛, 비타민D, 기분, 세로토닌, 일주기 리듬, 태양 노출, 건강 이점]

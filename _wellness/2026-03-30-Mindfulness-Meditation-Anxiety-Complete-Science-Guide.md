@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Mindfulness Meditation for Anxiety: Complete Evidence-Based Guide"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: mental
 tags: [mindfulness, meditation, anxiety, mental-health, stress, MBSR]
 header-img: https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&auto=format&fit=crop

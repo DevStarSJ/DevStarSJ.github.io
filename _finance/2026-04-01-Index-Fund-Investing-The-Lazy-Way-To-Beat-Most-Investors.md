@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Index Fund Investing: The Lazy Way to Beat Most Investors"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: investing
 tags: [index-funds, passive-investing, S&P500, wealth-building, long-term]
 header-img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&auto=format&fit=crop"

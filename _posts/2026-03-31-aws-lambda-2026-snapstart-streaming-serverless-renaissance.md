@@ -2,7 +2,7 @@
 layout: post
 title: "AWS Lambda in 2026: SnapStart, Response Streaming, and the Serverless Renaissance"
 subtitle: "How Lambda's latest features close the gap with container-based deployments — and when to choose which"
-date: 2026-03-31 12:00:00
+date: 2026-03-31 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4

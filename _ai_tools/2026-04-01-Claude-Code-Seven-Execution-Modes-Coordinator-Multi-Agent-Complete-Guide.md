@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude Code's 7 Execution Modes and Coordinator Multi-Agent System: The Complete Developer Guide"
-date: 2026-04-01 14:00:00
+date: 2026-04-01 00:00:00
 category: coding
 tags: [claude, claude-code, ai, multi-agent, coordinator, automation, developer-tools, mcp]
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop"

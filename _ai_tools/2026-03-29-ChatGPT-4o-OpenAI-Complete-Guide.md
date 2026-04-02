@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "ChatGPT-4o: The Ultimate Guide to OpenAI's Most Powerful Chatbot"
-date: 2026-03-29 15:00:00
+date: 2026-03-29 00:00:00
 category: chatbot
 tags: [chatgpt, openai, gpt-4o, ai-chatbot, multimodal]
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"

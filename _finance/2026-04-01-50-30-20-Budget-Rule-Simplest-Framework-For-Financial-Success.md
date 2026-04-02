@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "The 50/30/20 Budget Rule: The Simplest Framework for Financial Success"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: budgeting
 tags: [50-30-20, budgeting, personal-finance, money-management, financial-planning]
 header-img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop"

@@ -2,7 +2,7 @@
 layout: post
 title: "Podman 5 vs Docker: The Container Runtime War Is Over (And Podman Won for Enterprises)"
 subtitle: "Why major enterprises are migrating from Docker to Podman in 2026 — and a complete migration guide"
-date: 2026-03-31 12:00:00
+date: 2026-03-31 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4

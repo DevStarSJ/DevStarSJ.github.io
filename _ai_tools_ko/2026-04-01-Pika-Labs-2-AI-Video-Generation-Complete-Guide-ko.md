@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Pika Labs 2.0 완벽 가이드: AI 영상 생성 플랫폼 2026"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: image
 tags: [pika, ai, 영상, 생성, 크리에이티브, 이미지]
 lang: ko

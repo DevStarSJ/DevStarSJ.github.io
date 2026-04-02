@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "CapCut AI Video Editor: Complete Guide for Creators 2026"
-date: 2026-03-31 15:00:00
+date: 2026-03-31 00:00:00
 category: productivity
 tags: [capcut, ai-video, video-editing, content-creation, social-media]
 header-img: https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&auto=format&fit=crop&q=80

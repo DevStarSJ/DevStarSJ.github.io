@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Suno AI: Create Full Songs with Lyrics in Seconds — Complete Guide"
-date: 2026-03-29 15:00:00
+date: 2026-03-29 00:00:00
 category: productivity
 tags: [suno, ai-music, music-generation, song-creation, creativity]
 header-img: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&auto=format&fit=crop"

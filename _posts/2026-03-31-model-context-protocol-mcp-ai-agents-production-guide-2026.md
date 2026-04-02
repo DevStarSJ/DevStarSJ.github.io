@@ -2,7 +2,7 @@
 layout: post
 title: "Model Context Protocol (MCP): Building Production AI Agents in 2026"
 subtitle: "How MCP is standardizing tool use for LLMs and enabling reliable multi-agent workflows"
-date: 2026-03-31 12:00:00
+date: 2026-03-31 00:00:00
 author: "DevStarSJ"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4

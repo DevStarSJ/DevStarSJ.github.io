@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "저널링과 정신 건강: 뇌를 재배선하는 과학적 글쓰기 실천"
 subtitle: "하루 15분 글쓰기로 불안 감소, 기분 개선, 정서적 회복력을 키우는 방법"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "웰니스 팀"
 header-img: "https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?w=1200&q=80"
 category: mental

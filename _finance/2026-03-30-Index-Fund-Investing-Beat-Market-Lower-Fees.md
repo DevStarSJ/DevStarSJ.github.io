@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Index Fund Investing: How to Beat Most Investors by Doing Less"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: investing
 tags: [index funds, passive investing, S&P 500, ETF, long-term investing, Vanguard]
 header-img: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&auto=format&fit=crop"

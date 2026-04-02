@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "인덱스 펀드 투자: 대부분의 투자자를 이기는 가장 쉬운 방법"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: investing
 tags: [인덱스펀드, 패시브투자, S&P500, 자산증식, 장기투자]
 header-img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&auto=format&fit=crop"

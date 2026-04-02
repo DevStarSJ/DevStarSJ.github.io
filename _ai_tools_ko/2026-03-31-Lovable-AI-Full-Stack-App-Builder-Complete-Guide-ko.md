@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Lovable AI: 자연어로 풀스택 앱 만들기 완벽 가이드 2026"
-date: 2026-03-31 15:00:00
+date: 2026-03-31 00:00:00
 category: coding
 tags: [lovable, ai코딩, 앱빌더, 풀스택, 노코드]
 header-img: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80

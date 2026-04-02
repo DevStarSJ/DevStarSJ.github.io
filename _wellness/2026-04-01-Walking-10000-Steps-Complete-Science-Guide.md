@@ -2,7 +2,7 @@
 layout: subsite-post
 title: "Walking 10,000 Steps: The Science Behind the World's Most Accessible Exercise"
 subtitle: "Why daily walking may be the single best investment in your long-term health"
-date: 2026-04-01 13:00:00
+date: 2026-04-01 00:00:00
 author: "Wellness Team"
 header-img: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&q=80"
 category: exercise

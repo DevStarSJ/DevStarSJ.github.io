@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Zero-Based Budgeting: Give Every Dollar a Job and Watch Your Finances Transform"
-date: 2026-03-31 16:00:02
+date: 2026-03-31 00:00:00
 category: budgeting
 tags: [budgeting, zero-based-budget, personal-finance, money-management, financial-planning]
 header-img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop"

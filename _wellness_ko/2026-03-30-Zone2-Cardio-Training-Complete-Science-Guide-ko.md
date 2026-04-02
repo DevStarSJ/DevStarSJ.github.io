@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "존 2 유산소 운동: 가장 효과적인 지방 연소 운동의 과학"
-date: 2026-03-30 13:00:00
+date: 2026-03-30 00:00:00
 category: exercise
 tags: [존2, 유산소, 지방연소, 지구력, 피트니스, 장수]
 lang: ko

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Real Estate Crowdfunding: Earn Passive Income Without Being a Landlord"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: passive-income
 tags: [real estate crowdfunding, passive income, REITs, Fundrise, real estate investing, passive real estate]
 header-img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&auto=format&fit=crop"

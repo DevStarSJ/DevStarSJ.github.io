@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "인덱스 펀드 투자: 적게 하면서 대부분의 투자자를 이기는 법"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: investing
 lang: ko
 tags: [인덱스 펀드, 패시브 투자, S&P 500, ETF, 장기투자, 뱅가드]

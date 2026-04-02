@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Runway ML: AI 영상 생성 & 크리에이티브 도구 — 완벽 가이드 2026"
-date: 2026-03-30 15:00:00
+date: 2026-03-30 00:00:00
 category: image
 tags: [runway, ai-video, gen3, video-generation, creative-ai]
 lang: ko

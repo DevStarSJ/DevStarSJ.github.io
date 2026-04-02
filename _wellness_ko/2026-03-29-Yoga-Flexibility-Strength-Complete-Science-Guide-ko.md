@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "유연성과 근력을 위한 요가: 과학 기반 완전 가이드"
-date: 2026-03-29 13:00:00
+date: 2026-03-29 00:00:00
 category: exercise
 lang: ko
 tags: [요가, 유연성, 근력, 마음챙김, 피트니스, 스트레칭]

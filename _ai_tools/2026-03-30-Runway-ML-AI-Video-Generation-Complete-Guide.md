@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Runway ML: AI Video Generation & Creative Tools — Complete Guide 2026"
-date: 2026-03-30 15:00:00
+date: 2026-03-30 00:00:00
 category: image
 tags: [runway, ai-video, gen3, video-generation, creative-ai]
 header-img: https://images.unsplash.com/photo-1536240478700-b869ad10e128?w=1200&auto=format&fit=crop

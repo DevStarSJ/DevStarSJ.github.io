@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Social Connection & Mental Health: Why Loneliness is as Deadly as Smoking"
-date: 2026-03-29 13:00:00
+date: 2026-03-29 00:00:00
 category: mental
 tags: [social connection, loneliness, mental health, relationships, community, wellbeing]
 header-img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&auto=format&fit=crop"

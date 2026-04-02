@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Emergency Fund: How Much You Really Need and Where to Keep It"
-date: 2026-03-29 16:00:00
+date: 2026-03-29 00:00:00
 category: saving
 tags: [emergency fund, savings, financial safety net, HYSA, financial security]
 header-img: "https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?w=1200&auto=format&fit=crop"

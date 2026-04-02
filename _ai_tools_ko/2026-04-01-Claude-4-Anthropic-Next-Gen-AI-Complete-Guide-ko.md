@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude 4 완벽 가이드 2026: Anthropic의 차세대 AI 어시스턴트"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: chatbot
 tags: [claude, anthropic, ai, 챗봇, llm]
 lang: ko

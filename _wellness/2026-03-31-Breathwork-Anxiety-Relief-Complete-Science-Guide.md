@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Breathwork for Anxiety Relief: The Complete Science-Based Guide to Controlling Your Nervous System"
-date: 2026-03-31 13:00:00
+date: 2026-03-31 00:00:00
 category: mental
 tags: [breathwork, anxiety, stress-relief, nervous-system, breathing-techniques, mental-health, parasympathetic]
 header-img: https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&auto=format&fit=crop

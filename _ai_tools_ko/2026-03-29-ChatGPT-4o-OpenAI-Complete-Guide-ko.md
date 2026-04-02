@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "ChatGPT-4o 완벽 가이드: OpenAI 최강 챗봇 모든 것"
-date: 2026-03-29 15:00:00
+date: 2026-03-29 00:00:00
 category: chatbot
 tags: [chatgpt, openai, gpt-4o, ai챗봇, 멀티모달]
 lang: ko

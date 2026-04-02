@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Gut Microbiome: The Complete Science-Based Guide to Your Inner Ecosystem"
-date: 2026-03-31 13:00:00
+date: 2026-03-31 00:00:00
 category: nutrition
 tags: [gut-microbiome, probiotics, prebiotics, gut-health, digestion, immunity, microbiota]
 header-img: https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&auto=format&fit=crop

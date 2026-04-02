@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude 4 by Anthropic: The Next-Generation AI Assistant Complete Guide 2026"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: chatbot
 tags: [claude, anthropic, ai, chatbot, llm]
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"

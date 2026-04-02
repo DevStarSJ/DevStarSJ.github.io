@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "How to Pay Off Debt Fast: 7 Proven Strategies That Actually Work"
-date: 2026-03-29 16:00:00
+date: 2026-03-29 00:00:00
 category: budgeting
 tags: [debt payoff, debt snowball, debt avalanche, credit card debt, financial freedom]
 header-img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop"

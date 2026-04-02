@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "빚 빨리 갚는 법: 실제로 효과 있는 7가지 전략"
-date: 2026-03-29 16:00:00
+date: 2026-03-29 00:00:00
 category: budgeting
 lang: ko
 tags: [부채상환, 눈덩이전략, 눈사태전략, 신용카드빚, 재정자유]

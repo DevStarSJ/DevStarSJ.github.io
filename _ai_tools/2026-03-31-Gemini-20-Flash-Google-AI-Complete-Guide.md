@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Gemini 2.0 Flash: Google's Fastest AI Model Complete Guide 2026"
-date: 2026-03-31 15:00:00
+date: 2026-03-31 00:00:00
 category: chatbot
 tags: [gemini, google-ai, chatbot, multimodal, ai-tools]
 header-img: https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&auto=format&fit=crop&q=80

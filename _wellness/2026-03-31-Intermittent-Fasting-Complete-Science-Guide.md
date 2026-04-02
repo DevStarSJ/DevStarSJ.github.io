@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Intermittent Fasting: The Complete Science-Based Guide to Time-Restricted Eating"
-date: 2026-03-31 13:00:00
+date: 2026-03-31 00:00:00
 category: lifestyle
 tags: [intermittent-fasting, time-restricted-eating, autophagy, metabolic-health, weight-loss, circadian, longevity]
 header-img: https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&auto=format&fit=crop

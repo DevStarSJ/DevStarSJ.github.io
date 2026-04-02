@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Zapier AI 완벽 가이드: 자연어로 전체 워크플로우를 자동화하는 법"
-date: 2026-03-29 15:00:00
+date: 2026-03-29 00:00:00
 category: automation
 tags: [zapier, 자동화, ai자동화, 워크플로우, 노코드]
 lang: ko

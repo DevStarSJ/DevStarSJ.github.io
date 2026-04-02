@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude Code 7가지 실행 모드와 Coordinator 멀티 에이전트 시스템 완벽 가이드"
-date: 2026-04-01 14:00:00
+date: 2026-04-01 00:00:00
 category: coding
 lang: ko
 tags: [claude, claude-code, ai, 멀티에이전트, coordinator, 자동화, 개발도구, mcp]

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "CapCut AI 영상 편집기: 크리에이터를 위한 완벽 가이드 2026"
-date: 2026-03-31 15:00:00
+date: 2026-03-31 00:00:00
 category: productivity
 tags: [capcut, ai영상, 영상편집, 콘텐츠제작, 소셜미디어]
 header-img: https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&auto=format&fit=crop&q=80

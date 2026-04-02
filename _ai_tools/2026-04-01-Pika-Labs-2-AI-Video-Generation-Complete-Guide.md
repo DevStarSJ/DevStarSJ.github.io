@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Pika Labs 2.0: AI Video Generation Platform Complete Guide 2026"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: image
 tags: [pika, ai, video, generation, creative, image]
 header-img: "https://images.unsplash.com/photo-1536240478700-b869ad10a2ab?w=1200&auto=format&fit=crop"

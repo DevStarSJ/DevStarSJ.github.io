@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude Code 소스 유출 사건: AI 에이전트 아키텍처에서 배운 것들"
-date: 2026-04-01 12:00:00
+date: 2026-04-01 00:00:00
 category: coding
 tags: [claude-code, anthropic, 보안, ai-tools, 소스코드]
 lang: ko

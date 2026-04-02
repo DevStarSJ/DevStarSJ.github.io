@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Emergency Fund 101: How Much You Really Need and Where to Keep It"
-date: 2026-04-01 16:00:00
+date: 2026-04-01 00:00:00
 category: saving
 tags: [emergency-fund, savings, financial-safety-net, personal-finance, cash-reserves]
 header-img: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&auto=format&fit=crop"

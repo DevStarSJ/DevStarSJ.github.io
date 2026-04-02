@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "장내 미생물: 내 몸속 생태계에 관한 완벽한 과학 가이드"
-date: 2026-03-31 13:00:00
+date: 2026-03-31 00:00:00
 category: nutrition
 lang: ko
 tags: [장내미생물, 장건강, 프로바이오틱스, 프리바이오틱스, 소화, 면역, 마이크로바이옴]

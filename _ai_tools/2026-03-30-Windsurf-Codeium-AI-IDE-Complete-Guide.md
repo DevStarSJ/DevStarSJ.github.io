@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Windsurf (Codeium): The AI IDE That Rivals Cursor — Complete Guide 2026"
-date: 2026-03-30 15:00:00
+date: 2026-03-30 00:00:00
 category: coding
 tags: [windsurf, codeium, ai-ide, coding, ai-coding-assistant]
 header-img: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop

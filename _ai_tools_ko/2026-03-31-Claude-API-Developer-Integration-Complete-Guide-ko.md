@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Claude AI API: 개발자 완벽 통합 가이드 2026"
-date: 2026-03-31 15:00:00
+date: 2026-03-31 00:00:00
 category: automation
 tags: [claude-api, anthropic, ai-api, 개발자도구, 자동화]
 header-img: https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=80

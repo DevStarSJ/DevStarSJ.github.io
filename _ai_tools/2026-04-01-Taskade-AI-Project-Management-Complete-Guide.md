@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Taskade AI: The Ultimate AI-Powered Project Management Tool Complete Guide 2026"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: productivity
 tags: [taskade, ai, productivity, project-management, collaboration]
 header-img: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&auto=format&fit=crop"

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "GPT-4o mini: OpenAI의 빠르고 저렴한 AI 모델 — 완벽 가이드 2026"
-date: 2026-03-30 15:00:00
+date: 2026-03-30 00:00:00
 category: chatbot
 tags: [openai, gpt4o-mini, chatgpt, ai, chatbot]
 lang: ko

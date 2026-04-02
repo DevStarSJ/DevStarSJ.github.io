@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Activepieces 완벽 가이드: 오픈소스 AI 자동화 플랫폼 2026"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: automation
 tags: [activepieces, 자동화, 오픈소스, 워크플로우, 노코드, ai]
 lang: ko

@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Activepieces: The Open-Source AI Automation Platform Complete Guide 2026"
-date: 2026-04-01 15:00:00
+date: 2026-04-01 00:00:00
 category: automation
 tags: [activepieces, automation, open-source, workflow, no-code, ai]
 header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200&auto=format&fit=crop"

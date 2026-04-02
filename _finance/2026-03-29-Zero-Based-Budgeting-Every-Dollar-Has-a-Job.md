@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "Zero-Based Budgeting: The Method That Gives Every Dollar a Job"
-date: 2026-03-29 16:00:00
+date: 2026-03-29 00:00:00
 category: budgeting
 tags: [zero-based budget, budgeting methods, personal finance, money management, spending plan]
 header-img: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=1200&auto=format&fit=crop"

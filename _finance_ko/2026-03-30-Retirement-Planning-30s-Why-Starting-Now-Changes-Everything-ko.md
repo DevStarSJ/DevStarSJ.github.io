@@ -1,7 +1,7 @@
 ---
 layout: subsite-post
 title: "30대의 은퇴 준비: 지금 시작하는 것이 모든 것을 바꾸는 이유"
-date: 2026-03-30 16:00:00
+date: 2026-03-30 00:00:00
 category: retirement
 lang: ko
 tags: [은퇴 준비, 노후 저축, 연금, 재정적 독립, 조기 은퇴, 노후 대비]
