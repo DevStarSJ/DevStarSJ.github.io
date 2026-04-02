@@ -139,6 +139,7 @@ async fn main(req: Request, env: Env, _ctx: Context) -> Result<Response> {
 
 **Envoy proxy** supports WASM filters — you can intercept, transform, and observe traffic without modifying your service code.
 
+{% raw %}
 ```rust
 // Custom auth filter in Rust → compiled to WASM → deployed as Envoy filter
 use proxy_wasm::traits::*;
@@ -173,6 +174,7 @@ proxy_wasm::main! {{
     });
 }}
 ```
+{% endraw %}
 
 Deploy the filter without restarting the proxy:
 
