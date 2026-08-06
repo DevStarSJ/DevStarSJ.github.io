@@ -12,12 +12,7 @@ Personal blog (https://DevStarSJ.github.io) built on Jekyll 3.8 with a modified 
 bundle exec jekyll serve        # local build + serve at localhost:4000
 ```
 
-Theme JavaScript (rarely touched — only when editing `_js/src/`):
-
-```bash
-npm run build                   # browserify + uglify → assets/js/hydejack.js
-npm run watch                   # rebuild on change
-```
+Theme JavaScript: the bundled `assets/js/hydejack.js` is committed and served as-is. The npm build toolchain (babel 6 / browserify, 2017-era) was removed to clear Dependabot alerts — to rebuild from `_js/src/`, restore `package.json`/`package-lock.json` from git history (commit `262b4a79`) or set up a modern bundler.
 
 Jupyter notebook → post: put the `.ipynb` in `_ipynbs/`, then `./ipython_to_html.sh <filename-without-extension>` appends the converted HTML into `_posts/<filename>.html`.
 
