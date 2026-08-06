@@ -12,6 +12,10 @@
     "prepare": "npm run lint && npm run test && npm run clean && npm run build",
     "resume": "json2yaml _data/resume.json > _data/resume.yml"
   },
+  "overrides": {
+    "ajv": "^6.12.6",
+    "tmp": "^0.2.6"
+  },
   "author": "Florian Klampfer <f.klampfer@gmail.com> (https://qwtel.com)",
   "license": "MIT",
   "devDependencies": {
