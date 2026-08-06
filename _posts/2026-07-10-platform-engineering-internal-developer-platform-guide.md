@@ -129,6 +129,7 @@ The platform team defines what "standard tier" means (instance type, multi-AZ, b
 
 ### 3. Scaffolding with Backstage Software Templates
 
+{% raw %}
 ```yaml
 # backstage/templates/microservice/template.yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -182,6 +183,7 @@ spec:
       input:
         repoContentsUrl: ${{ steps['create-repo'].output.repoContentsUrl }}
 ```
+{% endraw %}
 
 A developer fills in a form in the UI, clicks "Create," and gets:
 - A new GitHub repository with standard structure

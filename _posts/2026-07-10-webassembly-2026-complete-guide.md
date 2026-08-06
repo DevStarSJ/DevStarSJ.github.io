@@ -86,6 +86,7 @@ WASI (WebAssembly System Interface) 2.0, finalized in late 2025, brings:
 
 ### Running a Rust HTTP Server as WASM
 
+{% raw %}
 ```rust
 use wasi::http::types::{IncomingRequest, ResponseOutparam};
 use wasi::http::incoming_handler::Guest;
@@ -114,6 +115,7 @@ impl Guest for HttpHandler {
     }
 }
 ```
+{% endraw %}
 
 This Rust server compiles to a 350KB `.wasm` file and runs on any WASI 2.0 runtime: Wasmtime, WasmEdge, or Cloudflare Workers.
 

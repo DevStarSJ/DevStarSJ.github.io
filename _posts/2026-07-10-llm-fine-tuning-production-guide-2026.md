@@ -201,6 +201,7 @@ results = bertscore.compute(
 
 In 2026, using a frontier model (GPT-4o, Claude 3.7) to evaluate your fine-tuned model is standard practice:
 
+{% raw %}
 ```python
 import anthropic
 
@@ -225,6 +226,7 @@ Respond in JSON format: {{"accuracy": X, "completeness": X, "clarity": X, "reaso
     )
     return json.loads(response.content[0].text)
 ```
+{% endraw %}
 
 ---
 

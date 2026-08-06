@@ -336,6 +336,7 @@ spec:
 
 HashiCorp Vault's dynamic secrets are the gold standard. Instead of long-lived credentials, generate short-lived secrets on demand:
 
+{% raw %}
 ```hcl
 # Vault configuration for dynamic database credentials
 resource "vault_database_secret_backend_role" "payments_service" {
@@ -362,6 +363,7 @@ resource "vault_database_secret_backend_role" "payments_service" {
   ]
 }
 ```
+{% endraw %}
 
 ```go
 // Application fetches credentials at startup and refreshes before expiry
