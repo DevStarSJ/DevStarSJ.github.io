@@ -175,6 +175,7 @@ Compare to a Postgres instance in us-east-1 accessed from Asia: 150-250ms per qu
 
 ## Practical: Building a Global Blog with Turso + Next.js
 
+{% raw %}
 ```typescript
 // lib/db.ts
 import { createClient } from "@libsql/client";
@@ -216,6 +217,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   );
 }
 ```
+{% endraw %}
 
 Reads are served from the local SQLite file — no network call. The embedded replica syncs from Turso Cloud every 60 seconds.
 

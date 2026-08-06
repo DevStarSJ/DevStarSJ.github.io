@@ -123,6 +123,7 @@ Code review is also about mentorship, knowledge transfer, and team alignment. "T
 
 AI reviews the PR automatically on creation. Human reviewers only start after AI review is complete (or after a timeout). AI comments are labeled distinctly so reviewers know what to validate vs. trust.
 
+{% raw %}
 ```yaml
 # .github/workflows/ai-review.yml
 name: AI Code Review
@@ -144,6 +145,7 @@ jobs:
           - "!**/*.lock"
           - "!**/generated/**"
 ```
+{% endraw %}
 
 ### Pattern 2: AI Review as Blocking Check for Critical Paths
 

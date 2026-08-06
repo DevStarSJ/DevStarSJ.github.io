@@ -96,6 +96,7 @@ For RAG (Retrieval-Augmented Generation):
 ### 3. Powerful Built-in Nodes
 
 **HTTP Request Node** — Call any REST API
+{% raw %}
 ```json
 {
   "method": "POST",
@@ -104,6 +105,7 @@ For RAG (Retrieval-Augmented Generation):
   "body": "{{ $json.data }}"
 }
 ```
+{% endraw %}
 
 **Code Node** — Run JavaScript or Python
 ```javascript
@@ -265,6 +267,7 @@ Pin test data to any node so you can test downstream nodes without triggering re
 
 ### 5. Use Expressions Everywhere
 n8n's expression syntax is powerful:
+{% raw %}
 ```javascript
 // Access data from previous nodes
 {{ $node["My Node"].json.field }}
@@ -275,6 +278,7 @@ n8n's expression syntax is powerful:
 // Dynamic field access
 {{ $json["field_" + $json.type] }}
 ```
+{% endraw %}
 
 ---
 

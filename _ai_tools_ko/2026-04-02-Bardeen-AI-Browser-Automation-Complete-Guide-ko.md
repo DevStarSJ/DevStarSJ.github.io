@@ -264,6 +264,7 @@ AI Magic이 개인화된 이메일 작성 → 자동 발송
 
 ### 4. 템플릿 변수
 프롬프트에서 동적 데이터 사용:
+{% raw %}
 ```
 "{{person_name}}에게 {{company_name}}에서의 개인화된 
 2문장 오프닝을 작성해줘. 
@@ -271,6 +272,7 @@ AI Magic이 개인화된 이메일 작성 → 자동 발송
 {{company_name}} 같은 회사가 {{their_challenge}}에 
 도움을 받는 우리 제품을 언급해줘."
 ```
+{% endraw %}
 
 ## Bardeen vs 경쟁 도구
 

@@ -210,6 +210,7 @@ result = agent_executor.invoke({
 
 Track these in production:
 
+{% raw %}
 ```python
 from dataclasses import dataclass
 from typing import Optional
@@ -240,6 +241,7 @@ def evaluate_rag_response(query, response, retrieved_docs, answer):
     """
     # ... call LLM judge
 ```
+{% endraw %}
 
 ### When RAG Isn't the Answer
 

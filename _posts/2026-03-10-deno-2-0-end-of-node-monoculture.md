@@ -127,6 +127,7 @@ JSR packages are TypeScript-native (no DefinitelyTyped gymnastics), versioned wi
 
 Fresh is Deno's full-stack web framework, and version 2.0 is meaningfully better than 1.x.
 
+{% raw %}
 ```typescript
 // routes/blog/[slug].tsx — Fresh 2.0 route with server components
 import { define } from "$fresh/server.ts";
@@ -151,6 +152,7 @@ export default define.page<typeof handler>(function BlogPost({ data }) {
   );
 });
 ```
+{% endraw %}
 
 Fresh's island architecture (only ship JS for interactive components) is elegant:
 

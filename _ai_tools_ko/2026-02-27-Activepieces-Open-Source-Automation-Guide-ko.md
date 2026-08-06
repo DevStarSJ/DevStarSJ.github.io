@@ -104,6 +104,7 @@ environment:
 
 ### 예시 2: AI 기반 이메일 분류기
 
+{% raw %}
 ```
 트리거: Gmail → 새 이메일
 
@@ -118,11 +119,13 @@ environment:
   - category = "spam" → Gmail 휴지통으로 이동
   - category = "info" → 보관
 ```
+{% endraw %}
 
 이 단일 플로우가 24/7 이메일 분류를 처리합니다.
 
 ### 예시 3: AI 콘텐츠 파이프라인
 
+{% raw %}
 ```
 트리거: 웹훅 (CMS가 여기에 게시)
 
@@ -138,6 +141,7 @@ environment:
 스텝 4: Notion → 콘텐츠 캘린더에 레코드 생성
   - 제목, 날짜, 링크, 상태: 게시됨
 ```
+{% endraw %}
 
 ## AI 코파일럿 기능
 
@@ -159,6 +163,7 @@ AI 코파일럿이:
 Activepieces에는 어떤 플로우에도 삽입할 수 있는 네이티브 AI 스텝이 포함됩니다:
 
 ### OpenAI 스텝
+{% raw %}
 ```json
 {
   "model": "gpt-4o",
@@ -167,8 +172,10 @@ Activepieces에는 어떤 플로우에도 삽입할 수 있는 네이티브 AI �
   "temperature": 0.7
 }
 ```
+{% endraw %}
 
 ### Anthropic Claude 스텝
+{% raw %}
 ```json
 {
   "model": "claude-sonnet-4-5",
@@ -176,15 +183,18 @@ Activepieces에는 어떤 플로우에도 삽입할 수 있는 네이티브 AI �
   "maxTokens": 200
 }
 ```
+{% endraw %}
 
 ### 텍스트 추출기
 비구조화된 텍스트에서 구조화된 데이터 추출 — 청구서, 이메일, PDF:
+{% raw %}
 ```json
 {
   "inputText": "{{trigger.invoice_text}}",
   "fieldsToExtract": ["invoice_number", "total_amount", "due_date", "vendor_name"]
 }
 ```
+{% endraw %}
 
 ## 커스텀 TypeScript 코드 스텝
 

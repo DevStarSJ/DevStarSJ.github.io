@@ -54,6 +54,7 @@ The smart teams aren't replacing review — they're triaging it.
 
 Here's a reference architecture for an AI-powered PR quality gate:
 
+{% raw %}
 ```yaml
 # .github/workflows/ai-review.yml
 name: AI Code Review
@@ -95,6 +96,7 @@ jobs:
           review_types: "security,summary"
           max_tokens: 2000
 ```
+{% endraw %}
 
 ### The Review Action Implementation
 

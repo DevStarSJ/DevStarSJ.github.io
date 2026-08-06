@@ -90,6 +90,7 @@ spec:
 
 ### 2. Self-Service Templates
 
+{% raw %}
 ```yaml
 # scaffolder-template.yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -169,6 +170,7 @@ spec:
         repoContentsUrl: ${{ steps['create-repo'].output.repoContentsUrl }}
         catalogInfoPath: '/catalog-info.yaml'
 ```
+{% endraw %}
 
 ![Developer Working](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800)
 *Photo by [Clément Hélardot](https://unsplash.com/@clemhlrdt) on Unsplash*

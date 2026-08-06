@@ -187,6 +187,7 @@ export function SearchPage() {
 
 ### `useDeferredValue`: Staggered Rendering
 
+{% raw %}
 ```tsx
 import { useState, useDeferredValue, memo } from 'react';
 
@@ -222,6 +223,7 @@ export function Dashboard({ liveData }: { liveData: DataPoint[] }) {
   );
 }
 ```
+{% endraw %}
 
 ### Suspense + `use()`: The Modern Data Fetching Pattern
 

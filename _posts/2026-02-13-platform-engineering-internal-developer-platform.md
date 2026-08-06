@@ -68,6 +68,7 @@ yarn dev
 
 ### Defining Service Templates
 
+{% raw %}
 ```yaml
 # templates/microservice/template.yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -165,6 +166,7 @@ spec:
         icon: catalog
         entityRef: ${{ steps['register-component'].output.entityRef }}
 ```
+{% endraw %}
 
 ### Service Catalog Entry
 

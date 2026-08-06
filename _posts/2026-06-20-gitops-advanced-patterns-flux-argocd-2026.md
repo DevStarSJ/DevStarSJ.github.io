@@ -148,6 +148,7 @@ spec:
 
 ### Policy Guardrails with Kyverno
 
+{% raw %}
 ```yaml
 # Prevent tenants from escaping their namespace
 apiVersion: kyverno.io/v1
@@ -172,6 +173,7 @@ spec:
           spec:
             targetNamespace: "{{ request.object.metadata.labels['toolkit.fluxcd.io/tenant'] }}"
 ```
+{% endraw %}
 
 ---
 
@@ -220,6 +222,7 @@ spec:
 
 ### ArgoCD ApplicationSet for Multi-Cluster Rollouts
 
+{% raw %}
 ```yaml
 # Progressive rollout across clusters with ApplicationSet
 apiVersion: argoproj.io/v1alpha1
@@ -264,6 +267,7 @@ spec:
         syncOptions:
           - CreateNamespace=true
 ```
+{% endraw %}
 
 ---
 
@@ -273,6 +277,7 @@ Drift — when actual cluster state diverges from Git — is inevitable in produ
 
 ### Flux Drift Metrics (Prometheus)
 
+{% raw %}
 ```yaml
 # Flux exposes drift as metrics — alert when it persists
 apiVersion: monitoring.coreos.com/v1
@@ -312,6 +317,7 @@ spec:
           annotations:
             summary: "Flux reconciliation stuck for {{ $labels.name }}"
 ```
+{% endraw %}
 
 ### AI-Assisted Drift Explanation
 

@@ -94,6 +94,7 @@ spec:
 
 For managing multiple environments or clusters:
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -121,6 +122,7 @@ spec:
         server: '{{url}}'
         namespace: my-app
 ```
+{% endraw %}
 
 ![Kubernetes Cluster](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800)
 *Photo by [Luke Chesser](https://unsplash.com/@lukechesser) on Unsplash*
@@ -343,6 +345,7 @@ rate(argocd_app_reconcile_count[5m])
 
 ### GitHub Actions Workflow
 
+{% raw %}
 ```yaml
 name: Deploy to Production
 
@@ -374,6 +377,7 @@ jobs:
           argocd app sync my-app --prune
           argocd app wait my-app --health
 ```
+{% endraw %}
 
 ## Troubleshooting Common Issues
 

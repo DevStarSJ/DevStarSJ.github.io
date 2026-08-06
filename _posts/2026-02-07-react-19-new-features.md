@@ -158,6 +158,7 @@ export function ContactForm() {
 
 Instant UI updates while waiting for server confirmation:
 
+{% raw %}
 ```jsx
 'use client';
 
@@ -197,6 +198,7 @@ export function Comments({ comments }) {
   );
 }
 ```
+{% endraw %}
 
 ## The React Compiler
 

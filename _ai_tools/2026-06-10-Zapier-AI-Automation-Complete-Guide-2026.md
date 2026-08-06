@@ -132,10 +132,12 @@ Trigger: New mention from social listening tool
 6. Map the output to the next step
 
 **Example instruction for email summarization:**
+{% raw %}
 ```
 Summarize the following email in 3 bullet points, highlighting 
 the main request and any deadlines mentioned: {{Email Body}}
 ```
+{% endraw %}
 
 ---
 

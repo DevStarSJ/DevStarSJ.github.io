@@ -96,6 +96,7 @@ spec:
 
 The `ApplicationSet` controller is how you manage tens or hundreds of applications without copy-pasting Application manifests.
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -133,6 +134,7 @@ spec:
           prune: true
           selfHeal: true
 ```
+{% endraw %}
 
 This single ApplicationSet deploys 3 addons across every production cluster automatically — including clusters added in the future.
 
@@ -198,6 +200,7 @@ spec:
 
 Flux's image automation controllers handle a common pattern: automatically updating the image tag in Git when a new image is pushed.
 
+{% raw %}
 ```yaml
 # Watch for new image tags
 apiVersion: image.toolkit.fluxcd.io/v1beta2
@@ -249,6 +252,7 @@ spec:
   update:
     strategy: Setters
 ```
+{% endraw %}
 
 ---
 

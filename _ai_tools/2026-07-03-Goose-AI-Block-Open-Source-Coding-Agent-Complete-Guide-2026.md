@@ -188,6 +188,7 @@ goose run --with-toolkit github "Create a GitHub issue for every TODO comment in
 
 Recipes are reusable task templates stored as markdown files:
 
+{% raw %}
 ```markdown
 # recipe: add-tests.md
 ---
@@ -206,6 +207,7 @@ Requirements:
 - Aim for >90% coverage
 - Follow the project's existing test patterns
 ```
+{% endraw %}
 
 Run with:
 ```bash
@@ -276,6 +278,7 @@ Preserve existing behavior exactly. Run tests to verify after each file."
 
 Integrate Goose into your GitHub Actions workflow:
 
+{% raw %}
 ```yaml
 # .github/workflows/ai-review.yml
 name: AI Code Review
@@ -313,6 +316,7 @@ jobs:
               body: '## 🦆 Goose AI Review\n\n' + review
             });
 ```
+{% endraw %}
 
 ---
 

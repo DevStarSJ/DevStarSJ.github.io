@@ -88,6 +88,7 @@ Set PR status check (pass/fail)
 
 ## The GitHub Actions Workflow
 
+{% raw %}
 ```yaml
 # .github/workflows/ai-code-review.yml
 name: AI Code Review
@@ -144,11 +145,13 @@ jobs:
           path: review_output.json
           retention-days: 30
 ```
+{% endraw %}
 
 ---
 
 ## The Review Script
 
+{% raw %}
 ```python
 # .github/scripts/ai_review.py
 import os
@@ -237,7 +240,9 @@ If the changes look good, return {{"overall": "lgtm", "summary": "...", "issues"
 
 CODE DIFF:
 ```diff
+{% endraw %}
 {diff}
+{% raw %}
 ```"""
 
     response = client.messages.create(
@@ -292,6 +297,7 @@ Return a JSON array of security issues found (empty array if none):
 FILE: {file_path}
 DIFF:
 ```diff
+{% endraw %}
 {diff}
 ```"""
 

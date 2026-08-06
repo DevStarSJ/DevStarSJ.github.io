@@ -227,6 +227,7 @@ export function CommentForm({ postId }) {
 
 Optimistic updates without the boilerplate:
 
+{% raw %}
 ```jsx
 'use client';
 
@@ -256,6 +257,7 @@ function TodoList({ initialTodos }) {
   );
 }
 ```
+{% endraw %}
 
 ### `use()` — Reading Promises and Context
 

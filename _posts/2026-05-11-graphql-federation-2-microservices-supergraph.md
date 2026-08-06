@@ -212,6 +212,7 @@ traffic_shaping:
 
 Federation 2.0 enables **schema governance as code**. The key pattern: check schema changes in CI before merging.
 
+{% raw %}
 ```yaml
 # .github/workflows/schema-check.yml
 name: Schema Check
@@ -233,6 +234,7 @@ jobs:
           APOLLO_GRAPH_REF: my-org/my-graph@main
           SUBGRAPH_NAME: users
 ```
+{% endraw %}
 
 This check against Apollo Studio (or any compatible schema registry) will:
 

@@ -102,6 +102,7 @@ Templates are where platform engineering delivers its biggest ROI. A well-design
 
 All from a single form fill.
 
+{% raw %}
 ```yaml
 # templates/golang-service/template.yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -207,6 +208,7 @@ spec:
       - title: Open in Catalog
         entityRef: ${{ steps['register-catalog'].output.entityRef }}
 ```
+{% endraw %}
 
 ![Backstage developer portal showing service catalog and templates](https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900)
 *Photo by [Marvin Meyer](https://unsplash.com/@marvelous) on Unsplash*
@@ -219,6 +221,7 @@ Backstage's plugin system is where it gets powerful. Every company's platform is
 
 ### Building a Custom Plugin
 
+{% raw %}
 ```typescript
 // plugins/my-deployments/src/components/DeploymentList.tsx
 import React, { useEffect, useState } from 'react';
@@ -257,6 +260,7 @@ export const DeploymentList = () => {
   );
 };
 ```
+{% endraw %}
 
 ```typescript
 // Register the plugin in your Backstage app

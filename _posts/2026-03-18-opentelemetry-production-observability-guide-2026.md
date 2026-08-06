@@ -394,6 +394,7 @@ datasources:
 
 ### Key Alerts to Configure
 
+{% raw %}
 ```yaml
 # Grafana alert rule (via API or dashboard)
 groups:
@@ -427,6 +428,7 @@ groups:
         annotations:
           summary: "P99 latency > 2s on {{ $labels.http_route }}"
 ```
+{% endraw %}
 
 ---
 

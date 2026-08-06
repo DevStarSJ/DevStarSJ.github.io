@@ -145,6 +145,7 @@ spec:
 
 The killer feature: self-service service creation that enforces standards:
 
+{% raw %}
 ```yaml
 # template.yaml — in your platform templates repo
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -256,6 +257,7 @@ spec:
       - title: ArgoCD Application
         url: https://argocd.acme.internal/applications/${{ parameters.name }}
 ```
+{% endraw %}
 
 ---
 

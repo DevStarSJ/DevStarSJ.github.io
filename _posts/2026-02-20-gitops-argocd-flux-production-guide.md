@@ -137,6 +137,7 @@ spec:
 
 ### ApplicationSet: Multi-Cluster and Multi-Environment
 
+{% raw %}
 ```yaml
 # applicationset.yaml
 apiVersion: argoproj.io/v1alpha1
@@ -178,6 +179,7 @@ spec:
           prune: true
           selfHeal: true
 ```
+{% endraw %}
 
 ### Multi-Tenant RBAC with AppProjects
 

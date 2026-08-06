@@ -197,6 +197,7 @@ trivy image \
 
 Your container's vulnerability profile changes even when you don't change your code. Add scanning to your CD pipeline *and* scan running images on a schedule:
 
+{% raw %}
 ```yaml
 # .github/workflows/scan.yml
 jobs:
@@ -216,6 +217,7 @@ jobs:
         with:
           sarif_file: trivy-results.sarif
 ```
+{% endraw %}
 
 ## Layer 4: Runtime Security
 

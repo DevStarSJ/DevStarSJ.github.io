@@ -89,6 +89,7 @@ n8n은 전용 노드로 AI 기능을 깊이 통합했습니다:
 ### 3. 강력한 내장 노드
 
 **HTTP 요청 노드** — 모든 REST API 호출:
+{% raw %}
 ```json
 {
   "method": "POST",
@@ -97,6 +98,7 @@ n8n은 전용 노드로 AI 기능을 깊이 통합했습니다:
   "body": "{{ $json.data }}"
 }
 ```
+{% endraw %}
 
 **코드 노드** — JavaScript 또는 Python 실행:
 ```javascript
@@ -240,6 +242,7 @@ volumes:
 
 ### 5. 표현식 적극 활용
 n8n의 표현식 문법은 강력합니다:
+{% raw %}
 ```javascript
 // 이전 노드의 데이터 접근
 {{ $node["내 노드"].json.field }}
@@ -250,6 +253,7 @@ n8n의 표현식 문법은 강력합니다:
 // 동적 필드 접근
 {{ $json["field_" + $json.type] }}
 ```
+{% endraw %}
 
 ---
 

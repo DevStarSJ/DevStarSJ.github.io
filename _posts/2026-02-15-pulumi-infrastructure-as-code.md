@@ -454,6 +454,7 @@ const dbPassword = new RandomPassword("db-password", { length: 32 });
 
 ### GitHub Actions
 
+{% raw %}
 ```yaml
 # .github/workflows/pulumi.yml
 name: Pulumi
@@ -500,6 +501,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 ```
+{% endraw %}
 
 ## Best Practices
 

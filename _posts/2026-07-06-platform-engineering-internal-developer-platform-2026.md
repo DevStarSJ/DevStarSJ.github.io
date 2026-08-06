@@ -91,6 +91,7 @@ The developer gets a production-ready service skeleton. No infrastructure knowle
 
 ### Template Example (Backstage Software Template)
 
+{% raw %}
 ```yaml
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
@@ -139,6 +140,7 @@ spec:
         service_name: ${{ parameters.name }}
         database_type: ${{ parameters.database }}
 ```
+{% endraw %}
 
 One template. One command. Full production stack.
 
@@ -190,6 +192,7 @@ Platform team defines the composition (what "tier: production" actually means in
 
 ### ArgoCD + ApplicationSets: GitOps at Scale
 
+{% raw %}
 ```yaml
 # One ApplicationSet manages all team deployments
 apiVersion: argoproj.io/v1alpha1
@@ -218,6 +221,7 @@ spec:
           prune: true
           selfHeal: true
 ```
+{% endraw %}
 
 Teams push to their directories. ArgoCD syncs automatically. Platform team defines the structure.
 

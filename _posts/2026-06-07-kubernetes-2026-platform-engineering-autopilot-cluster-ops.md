@@ -66,6 +66,7 @@ GitOps has won the configuration management debate. The principle — your Git r
 
 ### ArgoCD ApplicationSets: Multi-Cluster Deployments Made Simple
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -94,6 +95,7 @@ spec:
           prune: true
           selfHeal: true
 ```
+{% endraw %}
 
 This single manifest deploys the application to every cluster labeled `environment: production` — automatically, with drift detection and self-healing.
 

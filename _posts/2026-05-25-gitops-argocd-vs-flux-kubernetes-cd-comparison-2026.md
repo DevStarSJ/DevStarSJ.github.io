@@ -94,6 +94,7 @@ spec:
 
 **ApplicationSet**: Generate Applications from a template. This is how you manage 50+ microservices without 50+ Application manifests:
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -119,6 +120,7 @@ spec:
         server: https://kubernetes.default.svc
         namespace: "{{path.basename}}"
 ```
+{% endraw %}
 
 ### ArgoCD Strengths
 

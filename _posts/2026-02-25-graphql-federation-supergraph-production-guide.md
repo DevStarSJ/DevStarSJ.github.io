@@ -371,6 +371,7 @@ const resolvers = {
 
 ### Rover CLI: Schema Checks in CI
 
+{% raw %}
 ```yaml
 # .github/workflows/schema-check.yml
 name: GraphQL Schema Check
@@ -398,6 +399,7 @@ jobs:
             --name orders \
             --routing-url https://orders-service.internal/graphql
 ```
+{% endraw %}
 
 Rover will detect:
 - Breaking changes to existing types/fields

@@ -173,6 +173,7 @@ Workers get `fetch` (HTTP), `KV` (key-value store), `R2` (object storage), `D1` 
 
 Spin is the most developer-friendly server-side WASM framework. It treats WASM components as first-class applications:
 
+{% raw %}
 ```toml
 # spin.toml
 spin_manifest_version = 2
@@ -192,6 +193,7 @@ allowed_outbound_hosts = ["https://api.stripe.com"]
 [component.api-handler.variables]
 stripe_key = "{{ secret_stripe_key }}"
 ```
+{% endraw %}
 
 ```bash
 # Deploy to Fermyon Cloud

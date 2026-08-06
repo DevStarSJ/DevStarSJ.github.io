@@ -331,6 +331,7 @@ React deduplicates `fetch()` calls with the same URL within a single render pass
 
 ### 2. Optimistic UI with `useOptimistic`
 
+{% raw %}
 ```tsx
 "use client";
 
@@ -360,6 +361,7 @@ function TodoList({ initialTodos }: { initialTodos: Todo[] }) {
   );
 }
 ```
+{% endraw %}
 
 ---
 

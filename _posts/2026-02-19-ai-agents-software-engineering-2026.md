@@ -149,6 +149,7 @@ This cuts time-to-PR by 40–60% for well-specified tasks while preserving human
 
 ### GitHub Actions Integration
 
+{% raw %}
 ```yaml
 # .github/workflows/agent-assist.yml
 name: AI Agent Review
@@ -172,6 +173,7 @@ jobs:
             4. Adherence to our coding standards (see CONTRIBUTING.md)
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
 ```
+{% endraw %}
 
 ![Developer looking at multiple monitors with code](https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=800)
 *Photo by [Mohammad Rahmani](https://unsplash.com/@afgprogrammer) on Unsplash*

@@ -207,6 +207,7 @@ Developer → PR → Terraform/OpenTofu Plan → Review → Merge → Apply
 
 Tools like **Atlantis** (self-hosted) and **Digger** (GitHub Actions-native) handle this well for both Terraform and OpenTofu.
 
+{% raw %}
 ```yaml
 # .github/workflows/terraform.yml
 name: Terraform
@@ -243,6 +244,7 @@ jobs:
               body: `## OpenTofu Plan\n\`\`\`\n${{ steps.plan.outputs.stdout }}\n\`\`\``
             })
 ```
+{% endraw %}
 
 ---
 

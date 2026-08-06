@@ -94,6 +94,7 @@ Benchmark scores on HumanEval and SWE-bench place Claude 4 Opus among the top-ti
 
 Teams are integrating Claude 4 Opus into CI/CD pipelines for automated code review:
 
+{% raw %}
 ```yaml
 # .github/workflows/ai-review.yml
 name: AI Code Review
@@ -108,6 +109,7 @@ jobs:
           gh pr diff ${{ github.event.pull_request.number }} | \
           claude-review --model claude-opus-4-5 --post-comment
 ```
+{% endraw %}
 
 ### Document Intelligence Pipelines
 

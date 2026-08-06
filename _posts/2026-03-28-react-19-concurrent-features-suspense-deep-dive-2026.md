@@ -199,6 +199,7 @@ function App() {
 
 Unlike `useContext`, `use()` can be called conditionally:
 
+{% raw %}
 ```javascript
 function ThemeButton({ showTheme }) {
   if (showTheme) {
@@ -209,6 +210,7 @@ function ThemeButton({ showTheme }) {
   return <button>Default Button</button>;
 }
 ```
+{% endraw %}
 
 ---
 
@@ -216,6 +218,7 @@ function ThemeButton({ showTheme }) {
 
 Provide immediate feedback to users while async operations complete in the background:
 
+{% raw %}
 ```javascript
 import { useOptimistic, useTransition } from 'react';
 
@@ -259,6 +262,7 @@ function TodoList({ todos, onAddTodo }) {
   );
 }
 ```
+{% endraw %}
 
 ---
 

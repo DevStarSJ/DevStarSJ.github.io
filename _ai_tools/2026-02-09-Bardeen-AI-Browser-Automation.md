@@ -248,10 +248,12 @@ Step-by-step:
 
 Make automations reusable:
 
+{% raw %}
 ```
 Instead of: Scrape linkedin.com/in/specific-person
 Use: Scrape {{LinkedIn URL}} where URL is input
 ```
+{% endraw %}
 
 ### 2. Add Delays
 

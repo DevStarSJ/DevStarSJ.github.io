@@ -89,6 +89,7 @@ Key Backstage plugins in 2026:
 
 Golden paths are opinionated, team-vetted templates that encode best practices. New services inherit security, observability, and compliance configuration automatically.
 
+{% raw %}
 ```yaml
 # template.yaml (Backstage Scaffolder)
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -129,6 +130,7 @@ spec:
       input:
         repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
 ```
+{% endraw %}
 
 ### 3. Self-Service Infrastructure
 

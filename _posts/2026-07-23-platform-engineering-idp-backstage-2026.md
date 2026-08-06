@@ -92,6 +92,7 @@ spec:
 
 **Templates:** Self-service creation of services, infrastructure, and workflows.
 
+{% raw %}
 ```yaml
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
@@ -135,6 +136,7 @@ spec:
       input:
         repoContentsUrl: ${{ steps['publish'].output.repoContentsUrl }}
 ```
+{% endraw %}
 
 ![Platform engineering workflow](https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=900&q=80)
 *Photo by [Ilya Pavlov](https://unsplash.com/@ilyapavlov) on Unsplash*

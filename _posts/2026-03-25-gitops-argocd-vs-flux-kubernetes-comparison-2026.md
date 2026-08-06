@@ -115,6 +115,7 @@ spec:
 
 `ApplicationSet` is ArgoCD's answer to "I have 50 microservices and don't want 50 Application YAMLs":
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -156,6 +157,7 @@ spec:
           prune: true
           selfHeal: true
 ```
+{% endraw %}
 
 ### ArgoCD Rollouts: Progressive Delivery
 
@@ -313,6 +315,7 @@ spec:
 
 One of Flux's standout features — automatically update image tags in Git when a new image is pushed:
 
+{% raw %}
 ```yaml
 # Watch for new image tags matching semver pattern
 apiVersion: image.toolkit.fluxcd.io/v1beta2
@@ -368,6 +371,7 @@ spec:
     path: ./apps
     strategy: Setters
 ```
+{% endraw %}
 
 ---
 
@@ -462,6 +466,7 @@ argocd cluster add arn:aws:eks:ap-south-1:123456789:cluster/prod-ap
 # Deploy to all clusters via ApplicationSet
 ```
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -478,6 +483,7 @@ spec:
         server: '{{server}}'
         namespace: monitoring
 ```
+{% endraw %}
 
 ### Flux Multi-Cluster
 

@@ -267,6 +267,7 @@ The pipeline is: **bi-encoder for recall → cross-encoder for precision → ext
 
 **Corrective RAG (CRAG)** adds an evaluator that automatically detects low-quality retrievals and falls back to web search:
 
+{% raw %}
 ```python
 async def crag_retrieve(query: str) -> list[Document]:
     # Try local knowledge base first
@@ -292,6 +293,7 @@ async def crag_retrieve(query: str) -> list[Document]:
     else:
         return docs
 ```
+{% endraw %}
 
 ---
 

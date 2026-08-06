@@ -137,6 +137,7 @@ requests==2.14.2
 
 ### project.json
 
+{% raw %}
 ```JSON
 {
   "name": "test_deploy",
@@ -154,6 +155,7 @@ requests==2.14.2
   }
 }
 ```
+{% endraw %}
 
 ### deploy.sh
 

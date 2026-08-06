@@ -109,6 +109,7 @@ class ReActAgent(BaseAgent):
 
 For complex tasks, separate planning from execution:
 
+{% raw %}
 ```python
 class PlanExecuteAgent(BaseAgent):
     def plan(self, goal: str) -> List[str]:
@@ -135,6 +136,7 @@ class PlanExecuteAgent(BaseAgent):
         """
         return self.executor_llm.generate(execution_prompt)
 ```
+{% endraw %}
 
 ![Neural Network Visualization](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800)
 *Photo by [Growtika](https://unsplash.com/@growtika) on Unsplash*

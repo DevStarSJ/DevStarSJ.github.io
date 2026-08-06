@@ -499,6 +499,7 @@ resource "aws_instance" "web" {
 
 ### GitHub Actions
 
+{% raw %}
 ```yaml
 name: Terraform
 
@@ -534,6 +535,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve tfplan
 ```
+{% endraw %}
 
 ## Conclusion
 

@@ -99,6 +99,7 @@ Make has excellent native AI integrations that enable intelligent automation wor
 
 The most-used AI module:
 
+{% raw %}
 ```
 [New customer email arrives]
     ↓
@@ -112,6 +113,7 @@ The most-used AI module:
     ├─→ [complaint] → [Slack: Alert #customer-support + Priority: High]
     └─→ [praise] → [Google Sheets: Log to testimonials sheet]
 ```
+{% endraw %}
 
 ### Practical AI Automation Examples
 
@@ -159,6 +161,7 @@ The most-used AI module:
 
 Make's built-in transformation functions are powerful:
 
+{% raw %}
 ```javascript
 // String manipulation
 {{lower(1.email)}}                // Lowercase email
@@ -177,6 +180,7 @@ Make's built-in transformation functions are powerful:
 {{map(1.items, "price")}}         // Extract field from all items
 {{sum(map(1.items, "price"))}}    // Sum all prices
 ```
+{% endraw %}
 
 ### Iterator and Aggregator
 

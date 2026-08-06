@@ -116,6 +116,7 @@ def get_user(username):
 
 The best implementations treat AI review as a first-pass filter, not a replacement for human judgment. Here's a practical GitHub Actions workflow:
 
+{% raw %}
 ```yaml
 name: AI Code Review
 on:
@@ -147,6 +148,7 @@ jobs:
         with:
           args: --severity-threshold=high
 ```
+{% endraw %}
 
 ## The Anti-Patterns to Avoid
 

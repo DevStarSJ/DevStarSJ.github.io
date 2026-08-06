@@ -24,6 +24,7 @@ GitHub Actions launched in 2019 and rapidly became the default choice for open-s
 
 ### Basic Pipeline
 
+{% raw %}
 ```yaml
 # .github/workflows/ci.yml
 name: CI Pipeline
@@ -84,11 +85,13 @@ jobs:
           service: my-service
           cluster: my-cluster
 ```
+{% endraw %}
 
 ### Reusable Workflows
 
 One of GitHub Actions' best features — define a workflow once, use it across repos:
 
+{% raw %}
 ```yaml
 # .github/workflows/reusable-test.yml
 on:
@@ -122,6 +125,7 @@ jobs:
       node-version: "22"
     secrets: inherit
 ```
+{% endraw %}
 
 ### Strengths
 - **Marketplace**: 20,000+ actions — Docker, AWS, GCP, everything

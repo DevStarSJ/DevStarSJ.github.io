@@ -77,6 +77,7 @@ ArgoCD's UI shows you the resource tree, health status, sync status, and diff in
 
 ApplicationSets are the mechanism for managing applications at scale:
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -109,6 +110,7 @@ spec:
         server: '{{server}}'
         namespace: '{{addon}}'
 ```
+{% endraw %}
 
 This generates an Application for every combination of cluster and addon — one ApplicationSet manages dozens of applications across dozens of clusters.
 
@@ -160,6 +162,7 @@ spec:
 
 Flux's image automation controllers are a killer feature for teams that want to automate image tag updates:
 
+{% raw %}
 ```yaml
 # Watch for new image tags and commit them to Git automatically
 apiVersion: image.toolkit.fluxcd.io/v1beta2
@@ -206,6 +209,7 @@ spec:
     push:
       branch: main
 ```
+{% endraw %}
 
 CI pushes a new image tag → Flux detects it → commits the updated tag to Git → reconciles the cluster. Full GitOps loop without manual YAML edits.
 

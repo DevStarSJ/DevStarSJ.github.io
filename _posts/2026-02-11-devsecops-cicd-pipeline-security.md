@@ -80,6 +80,7 @@ echo "✅ Security checks passed"
 
 ### GitHub Actions SAST Pipeline
 
+{% raw %}
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -115,6 +116,7 @@ jobs:
             p/secrets
             p/owasp-top-ten
 ```
+{% endraw %}
 
 ### Custom Security Rules
 
@@ -144,6 +146,7 @@ rules:
 
 ### Dependency Scanning
 
+{% raw %}
 ```yaml
 # GitHub Actions for dependency scanning
 dependency-scan:
@@ -168,6 +171,7 @@ dependency-scan:
           --failOnCVSS 7
           --enableRetired
 ```
+{% endraw %}
 
 ![Security Code Review](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800)
 *Photo by [Shahadat Rahman](https://unsplash.com/@hishahadat) on Unsplash*
@@ -234,6 +238,7 @@ HEALTHCHECK --interval=30s --timeout=3s \
 
 ### Container Image Scanning
 
+{% raw %}
 ```yaml
 # Container scanning in CI
 container-scan:
@@ -258,6 +263,7 @@ container-scan:
       with:
         sarif_file: 'trivy-results.sarif'
 ```
+{% endraw %}
 
 ## Phase 5: Dynamic Application Security Testing (DAST)
 
@@ -444,6 +450,7 @@ metrics:
 
 ## Complete Pipeline Example
 
+{% raw %}
 ```yaml
 # .github/workflows/devsecops-pipeline.yml
 name: DevSecOps Pipeline
@@ -504,6 +511,7 @@ jobs:
         with:
           target: 'https://staging.example.com'
 ```
+{% endraw %}
 
 ## Conclusion
 

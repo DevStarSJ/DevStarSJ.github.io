@@ -76,6 +76,7 @@ export default function HomePage() {
 
 ### Dynamic Routes
 
+{% raw %}
 ```typescript
 // app/blog/[slug]/page.tsx
 interface PageProps {
@@ -117,6 +118,7 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 ```
+{% endraw %}
 
 ### Route Groups
 

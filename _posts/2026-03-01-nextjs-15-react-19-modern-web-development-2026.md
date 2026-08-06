@@ -61,6 +61,7 @@ The compiler understands React's rules of hooks and component purity, automatica
 
 The new `use()` hook lets you read promises and context inside render:
 
+{% raw %}
 ```jsx
 import { use, Suspense } from 'react';
 
@@ -89,6 +90,7 @@ function App() {
   );
 }
 ```
+{% endraw %}
 
 ### Server Actions (Stable)
 

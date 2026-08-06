@@ -100,6 +100,7 @@ spec:
 ### Software Templates (Golden Paths)
 When a developer needs a new service, they don't start from scratch — they use a template:
 
+{% raw %}
 ```yaml
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
@@ -157,6 +158,7 @@ spec:
         appName: ${{ parameters.name }}
         namespace: production
 ```
+{% endraw %}
 
 With this template, a developer fills out a form, clicks "Create," and 2 minutes later has:
 - A GitHub repo with CI/CD pipelines pre-configured

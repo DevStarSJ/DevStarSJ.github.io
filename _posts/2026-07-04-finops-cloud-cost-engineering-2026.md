@@ -208,6 +208,7 @@ The leading edge of FinOps maturity: catching cost regressions in the pull reque
 
 Infracost generates cost estimates for Terraform changes:
 
+{% raw %}
 ```yaml
 # .github/workflows/infracost.yml
 name: Infracost
@@ -230,6 +231,7 @@ jobs:
       - name: Post Infracost comment
         run: infracost comment github --path=/tmp/infracost-base.json --github-token=${{ github.token }} --pull-request=${{ github.event.pull_request.number }} --repo=${{ github.repository }} --behavior=update
 ```
+{% endraw %}
 
 Now every infrastructure PR shows the estimated monthly cost delta. A PR that adds a new RDS instance shows "+$180/month" before it merges.
 

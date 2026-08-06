@@ -150,6 +150,7 @@ function NewSubmitButton({ userId, data }) {
 
 `useOptimistic` lets you display an expected final state before the server confirms it, then rolls back automatically if the request fails:
 
+{% raw %}
 ```javascript
 function TodoItem({ todo, onToggle }) {
   const [optimisticTodo, setOptimisticTodo] = useOptimistic(
@@ -175,6 +176,7 @@ function TodoItem({ todo, onToggle }) {
   );
 }
 ```
+{% endraw %}
 
 ---
 

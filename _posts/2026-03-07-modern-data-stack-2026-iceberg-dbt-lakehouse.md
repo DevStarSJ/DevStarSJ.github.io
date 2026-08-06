@@ -95,6 +95,7 @@ Raw source data (Iceberg/warehouse)
 
 Each model is a SELECT statement. dbt compiles it to a CREATE TABLE or CREATE VIEW statement and handles the dependency graph, incremental loading, and test execution.
 
+{% raw %}
 ```sql
 -- models/staging/stg_events.sql
 SELECT
@@ -125,6 +126,7 @@ SELECT
 FROM daily_events d
 JOIN {{ ref('dim_users') }} u USING (user_id)
 ```
+{% endraw %}
 
 ### dbt's New Capabilities
 

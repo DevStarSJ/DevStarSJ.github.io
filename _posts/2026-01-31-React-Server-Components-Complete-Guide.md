@@ -553,6 +553,7 @@ function Layout({ children }) {
 
 ### 3. Serialize Data at Boundaries
 
+{% raw %}
 ```tsx
 // Server Component
 async function UserProfile() {
@@ -570,6 +571,7 @@ async function UserProfile() {
   );
 }
 ```
+{% endraw %}
 
 ## Conclusion
 

@@ -120,6 +120,7 @@ HTMX Stack:
 
 ### 4. Enhanced Security: CSP Support
 
+{% raw %}
 ```html
 <!-- HTMX 2.0 fully supports Content Security Policy -->
 <!-- No more inline event handlers needed -->
@@ -136,6 +137,7 @@ HTMX Stack:
   htmx.config.selfRequestsOnly = true;  // Only same-origin requests
 </script>
 ```
+{% endraw %}
 
 ---
 
@@ -313,6 +315,7 @@ async def delete_task(request: Request, task_id: str):
 </html>
 ```
 
+{% raw %}
 ```html
 <!-- templates/tasks/item.html -->
 <li id="task-{{ task.id }}"
@@ -346,6 +349,7 @@ async def delete_task(request: Request, task_id: str):
   </template>
 </li>
 ```
+{% endraw %}
 
 ---
 

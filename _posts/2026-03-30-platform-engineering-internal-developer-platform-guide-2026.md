@@ -130,6 +130,7 @@ The catalog becomes your organization's source of truth for "what exists, who ow
 
 This is where platforms win or lose adoption. If creating a new service takes 30 minutes of CLI commands and Terraform, developers will skip the platform. If it takes 3 minutes in a UI with a form, they'll use it every time.
 
+{% raw %}
 ```yaml
 # templates/microservice/template.yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -217,6 +218,7 @@ spec:
         icon: catalog
         entityRef: ${{ steps['register'].output.entityRef }}
 ```
+{% endraw %}
 
 When a developer fills out this form, they get: a GitHub repo with pre-configured CI/CD, a registered ArgoCD application, a catalog entry, TechDocs scaffolded, and Slack channel created — all in 2 minutes, zero tickets.
 

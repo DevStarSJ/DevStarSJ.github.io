@@ -144,6 +144,7 @@ spec:
 
 This is where the magic happens. Teams create new services via Backstage without touching infrastructure:
 
+{% raw %}
 ```yaml
 # templates/nodejs-service/template.yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -253,6 +254,7 @@ spec:
       - title: Open in Catalog
         url: ${{ steps.register.output.entityRef }}
 ```
+{% endraw %}
 
 From the developer's perspective: fill in a form, click "Create," and 3 minutes later they have a GitHub repo with CI/CD, a Kubernetes namespace, an optional database, RBAC, and their service registered in the catalog. No tickets. No waiting.
 

@@ -190,6 +190,7 @@ resource.customizations.health.mycrd.example.com_MyResource: |
 
 Don't watch the UI—let ArgoCD tell you:
 
+{% raw %}
 ```yaml
 apiVersion: v1
 kind: ConfigMap
@@ -205,6 +206,7 @@ data:
     message: |
       {{.app.metadata.name}} sync failed!
 ```
+{% endraw %}
 
 ## Best Practice #7: RBAC and Projects
 

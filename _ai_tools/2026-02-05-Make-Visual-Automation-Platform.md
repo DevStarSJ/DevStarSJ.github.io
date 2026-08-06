@@ -131,6 +131,7 @@ Example: Get all rows from a spreadsheet → Process each row → Collect result
 
 The universal connector. Any app with an API can be integrated:
 
+{% raw %}
 ```
 Module: HTTP → Make a request
 URL: https://api.example.com/data
@@ -138,6 +139,7 @@ Method: POST
 Headers: Authorization: Bearer {{your_token}}
 Body: {"name": "{{name}}", "email": "{{email}}"}
 ```
+{% endraw %}
 
 This single module makes Make infinitely extensible.
 

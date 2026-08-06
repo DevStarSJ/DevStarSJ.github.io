@@ -283,11 +283,13 @@ AI Magic writes personalized email → Sends automatically
 
 ### 4. Template Variables
 Use dynamic data in your prompts:
+{% raw %}
 ```
 "Write a 2-sentence personalized opening for {{person_name}} at {{company_name}},
 referencing their recent news: {{recent_news}}.
 Mention our product helps companies like {{company_name}} with {{their_challenge}}."
 ```
+{% endraw %}
 
 ### 5. Schedule + Notify Pattern
 ```

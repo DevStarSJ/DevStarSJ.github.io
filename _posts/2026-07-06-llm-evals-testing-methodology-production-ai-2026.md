@@ -71,6 +71,7 @@ assert re.search(r'order #[A-Z]{2}\d{6}', response)
 ```
 
 **Model-graded:** For open-ended text (use another LLM as judge)
+{% raw %}
 ```python
 prompt = f"""
 You are evaluating a customer support response.
@@ -86,6 +87,7 @@ Respond as JSON: {{"accuracy": N, "helpfulness": N, "tone": N, "reasoning": "...
 """
 scores = json.loads(gpt4o(prompt))
 ```
+{% endraw %}
 
 ### 2. Safety Evals (Will it behave badly?)
 Test for outputs you explicitly don't want:

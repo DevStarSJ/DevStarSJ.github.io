@@ -84,15 +84,18 @@ FAQ를 기반으로 응답 초안을 작성한 다음,
 
 ### 기본 텍스트 처리
 
+{% raw %}
 ```
 프롬프트: "다음 이메일을 2-3개 불릿 포인트로 요약하세요.
 서두 없이 불릿만 반환하세요.
 
 이메일: {{email_body}}"
 ```
+{% endraw %}
 
 ### 분류
 
+{% raw %}
 ```
 프롬프트: "다음 고객 메시지를 아래 카테고리 중 하나로 분류하세요:
 billing, technical, general, feature_request, complaint.
@@ -100,9 +103,11 @@ billing, technical, general, feature_request, complaint.
 
 메시지: {{message_content}}"
 ```
+{% endraw %}
 
 ### 데이터 추출
 
+{% raw %}
 ```
 프롬프트: "이 청구서 텍스트에서 다음을 추출하세요:
 - vendor_name
@@ -112,6 +117,7 @@ billing, technical, general, feature_request, complaint.
 
 JSON으로 반환하세요. 청구서 텍스트: {{document_text}}"
 ```
+{% endraw %}
 
 ---
 

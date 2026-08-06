@@ -169,6 +169,7 @@ Every action in n8n is a **node**. Nodes are:
 
 ### Expressions
 n8n uses **expressions** to pass data between nodes:
+{% raw %}
 ```javascript
 // Reference previous node output
 {{ $json.email }}
@@ -182,6 +183,7 @@ n8n uses **expressions** to pass data between nodes:
 // Format data
 {{ $json.price.toFixed(2) }}
 ```
+{% endraw %}
 
 ### Error Handling
 ```javascript

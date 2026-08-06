@@ -103,6 +103,7 @@ Done! Every new GitHub issue triggers a Slack message.
 
 ### Example 2: AI-Powered Email Classifier
 
+{% raw %}
 ```
 Trigger: Gmail → New Email
 
@@ -118,11 +119,13 @@ Step 2: Router (Branch)
   - If category = "info" → Archive
 
 ```
+{% endraw %}
 
 This single flow handles your email triage 24/7.
 
 ### Example 3: Content Pipeline with AI
 
+{% raw %}
 ```
 Trigger: Webhook (your CMS posts here)
 
@@ -138,6 +141,7 @@ Step 3: Loop → For each social platform
 Step 4: Notion → Create record in content calendar
   - Title, date, links, status: Published
 ```
+{% endraw %}
 
 ## The AI Copilot Feature
 
@@ -159,6 +163,7 @@ You still review and test before publishing, but the initial build is done in se
 Activepieces includes native AI steps you can drop into any flow:
 
 ### OpenAI Step
+{% raw %}
 ```json
 {
   "model": "gpt-4o",
@@ -167,8 +172,10 @@ Activepieces includes native AI steps you can drop into any flow:
   "temperature": 0.7
 }
 ```
+{% endraw %}
 
 ### Anthropic Claude Step
+{% raw %}
 ```json
 {
   "model": "claude-sonnet-4-5",
@@ -176,15 +183,18 @@ Activepieces includes native AI steps you can drop into any flow:
   "maxTokens": 200
 }
 ```
+{% endraw %}
 
 ### Text Extractor
 Extract structured data from unstructured text — invoices, emails, PDFs:
+{% raw %}
 ```json
 {
   "inputText": "{{trigger.invoice_text}}",
   "fieldsToExtract": ["invoice_number", "total_amount", "due_date", "vendor_name"]
 }
 ```
+{% endraw %}
 
 ## Custom TypeScript Code Steps
 

@@ -55,6 +55,7 @@ Engineers find services, see ownership, and access docs in one place.
 
 Self-service templates encode best practices:
 
+{% raw %}
 ```yaml
 # backstage template for new Python service
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -101,6 +102,7 @@ spec:
       input:
         repoContentsUrl: ${{ steps['create-repo'].output.repoContentsUrl }}
 ```
+{% endraw %}
 
 New services get CI/CD, monitoring, and deployment configured automatically.
 

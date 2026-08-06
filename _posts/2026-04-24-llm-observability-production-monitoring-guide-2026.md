@@ -74,6 +74,7 @@ Tools like **Langfuse**, **Arize Phoenix**, and **Weights & Biases Weave** have 
 
 Every change to a prompt is a deployment. Treat it that way.
 
+{% raw %}
 ```yaml
 # prompt-registry.yaml
 prompts:
@@ -84,6 +85,7 @@ prompts:
     deployed_at: "2026-04-20T09:00:00Z"
     owner: "team-ai-platform"
 ```
+{% endraw %}
 
 Store your prompts in a registry (Langfuse, PromptLayer, or a simple Git-tracked YAML) and tag every LLM call with the prompt version. This makes it trivial to:
 
@@ -99,6 +101,7 @@ Popular approaches in 2026:
 
 **LLM-as-judge**: Use a smaller, faster model to score outputs on dimensions like faithfulness, relevance, and tone.
 
+{% raw %}
 ```python
 async def evaluate_response(query: str, response: str, context: str) -> dict:
     judge_prompt = f"""
@@ -123,6 +126,7 @@ async def evaluate_response(query: str, response: str, context: str) -> dict:
     
     return scores
 ```
+{% endraw %}
 
 **Guardrails**: Tools like Guardrails AI and NeMo Guardrails can validate outputs in real-time—checking for PII leakage, off-topic responses, or policy violations—before they reach users.
 
@@ -170,6 +174,7 @@ Set hard spending limits at the account level and soft alerts at the feature lev
 
 Unlike latency (easy to threshold), quality metrics require more thought:
 
+{% raw %}
 ```yaml
 # Grafana alerting rule example
 alert: LLMQualityDegraded
@@ -185,6 +190,7 @@ annotations:
   summary: "LLM output quality below threshold"
   description: "Average faithfulness score {{ $value }} over last 30m"
 ```
+{% endraw %}
 
 Key alerts to configure:
 - **Latency p99 > SLA threshold** — user-facing degradation

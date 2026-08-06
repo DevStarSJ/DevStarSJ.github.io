@@ -164,12 +164,14 @@ Make의 내장 데이터 저장소를 통해 시나리오가 실행 간 상태�
 ### HTTP/웹훅으로 모든 API 연결
 모든 앱이 Make 통합을 가진 것은 아닙니다. **HTTP** 모듈로 모든 REST API를 호출:
 
+{% raw %}
 ```json
 URL: https://api.yourapp.com/endpoint
 방법: POST
 헤더: {"Authorization": "Bearer {{token}}"}
 본문: {"data": "{{input}}"}
 ```
+{% endraw %}
 
 ---
 

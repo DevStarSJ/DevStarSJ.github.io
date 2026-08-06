@@ -379,6 +379,7 @@ spec:
 
 ### Budget Alerts with Prometheus
 
+{% raw %}
 ```yaml
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
@@ -400,6 +401,7 @@ spec:
           annotations:
             summary: "Namespace {{ $labels.namespace }} exceeding budget"
 ```
+{% endraw %}
 
 ## Quick Wins Checklist
 

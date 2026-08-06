@@ -144,6 +144,7 @@ The highest-value thing a platform team can build: **one command to get a new se
 
 With Backstage scaffolding:
 
+{% raw %}
 ```yaml
 # Template definition
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -186,6 +187,7 @@ spec:
         name: ${{ parameters.serviceName }}
         tier: ${{ parameters.tier }}
 ```
+{% endraw %}
 
 Developer runs this template → gets a repo with CI/CD, observability, service catalog entry, PagerDuty integration, and runbook template. In 5 minutes. Without talking to platform team.
 

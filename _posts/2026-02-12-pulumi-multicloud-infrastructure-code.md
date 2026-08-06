@@ -532,6 +532,7 @@ describe("Multi-Cloud Deployment", () => {
 
 ### GitHub Actions Workflow
 
+{% raw %}
 ```yaml
 # .github/workflows/infrastructure.yml
 name: Infrastructure Deployment
@@ -603,6 +604,7 @@ jobs:
           stack-name: prod
           work-dir: infrastructure
 ```
+{% endraw %}
 
 ## Best Practices
 

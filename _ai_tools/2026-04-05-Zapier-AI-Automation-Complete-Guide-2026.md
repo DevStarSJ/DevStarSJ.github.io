@@ -89,15 +89,18 @@ The most powerful single step: inject an AI call anywhere in your workflow.
 
 ### Basic Text Processing
 
+{% raw %}
 ```
 Prompt: "Summarize the following email in 2-3 bullet points. 
 Return only the bullets, no preamble.
 
 Email: {{email_body}}"
 ```
+{% endraw %}
 
 ### Classification
 
+{% raw %}
 ```
 Prompt: "Classify the following customer message into one of these categories: 
 billing, technical, general, feature_request, complaint.
@@ -105,9 +108,11 @@ Return only the category name.
 
 Message: {{message_content}}"
 ```
+{% endraw %}
 
 ### Data Extraction
 
+{% raw %}
 ```
 Prompt: "Extract the following from this invoice text:
 - vendor_name
@@ -117,9 +122,11 @@ Prompt: "Extract the following from this invoice text:
 
 Return as JSON. Invoice text: {{document_text}}"
 ```
+{% endraw %}
 
 ### Content Generation
 
+{% raw %}
 ```
 Prompt: "You are a social media manager for a tech startup.
 Write 3 LinkedIn post variations for this product update.
@@ -127,6 +134,7 @@ Keep each under 200 words. Focus on value, not features.
 
 Update: {{product_update}}"
 ```
+{% endraw %}
 
 ---
 

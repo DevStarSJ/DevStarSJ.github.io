@@ -145,6 +145,7 @@ Server Components shipped in React 19 but the mental model was still evolving. R
 
 The key insight that took me a while to internalize: **Server Components don't add to the client bundle**. A 100KB Markdown parser used in a Server Component contributes 0 bytes to what the browser downloads.
 
+{% raw %}
 ```jsx
 // app/blog/[slug]/page.tsx — Server Component (default)
 import { marked } from 'marked'; // 50KB library — stays on the server
@@ -173,6 +174,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   );
 }
 ```
+{% endraw %}
 
 ---
 
@@ -184,6 +186,7 @@ React 20 refines the concurrent rendering scheduler with better priority handlin
 
 **`useDeferredValue` has explicit staleness semantics.** You can now pass a third argument to mark stale UI:
 
+{% raw %}
 ```jsx
 function SearchResults({ query }) {
   const deferredQuery = useDeferredValue(query);
@@ -196,6 +199,7 @@ function SearchResults({ query }) {
   );
 }
 ```
+{% endraw %}
 
 **Error boundaries play better with Suspense.** The previous interaction between error boundaries and Suspense had subtle bugs in some concurrent mode scenarios. React 20 addresses several of these edge cases.
 

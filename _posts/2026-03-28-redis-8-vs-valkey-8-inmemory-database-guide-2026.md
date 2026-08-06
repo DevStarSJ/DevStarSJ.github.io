@@ -60,6 +60,7 @@ FT.SEARCH product_idx
   DIALECT 2
 ```
 
+{% raw %}
 ```python
 import redis
 import numpy as np
@@ -124,6 +125,7 @@ def semantic_search(query_embedding: np.ndarray, top_k: int = 10, category: str 
         for doc in results.docs
     ]
 ```
+{% endraw %}
 
 ### 2. Redis Triggers and Functions (GA in 8.0)
 

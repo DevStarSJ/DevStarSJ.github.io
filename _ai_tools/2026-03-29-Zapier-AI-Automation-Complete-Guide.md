@@ -73,6 +73,7 @@ Add AI processing directly in any workflow:
 - **Custom prompt** — Any GPT-4o task you can imagine
 
 **Example config:**
+{% raw %}
 ```yaml
 Step: AI by Zapier
 Action: Extract Information
@@ -86,6 +87,7 @@ Prompt: |
   Return as JSON.
 Output format: JSON
 ```
+{% endraw %}
 
 ### 4. Zapier Chatbots
 Build AI-powered chatbots without code. The chatbot can:
@@ -112,6 +114,7 @@ Build AI-powered chatbots without code. The chatbot can:
 1. **Trigger:** Gmail — New email in inbox
 2. **Filter:** Only process emails not from known contacts
 3. **AI Step:** Classify email
+   {% raw %}
    ```
    Classify this email into one of these categories:
    - sales_inquiry
@@ -124,6 +127,7 @@ Build AI-powered chatbots without code. The chatbot can:
    
    Email: {{email.body}}
    ```
+   {% endraw %}
 4. **Paths:** Branch based on category
    - `sales_inquiry` → Add to HubSpot + Notify sales Slack
    - `customer_support` → Create Zendesk ticket

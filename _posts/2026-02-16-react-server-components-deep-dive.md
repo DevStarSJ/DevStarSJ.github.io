@@ -21,6 +21,7 @@ This isn't incremental improvement—it's a paradigm shift.
 
 ### Before: Everything Ships to the Browser
 
+{% raw %}
 ```jsx
 // Traditional React - ALL of this goes to the browser
 import { format } from 'date-fns';          // 72KB
@@ -49,11 +50,13 @@ function BlogPost({ slug }) {
   );
 }
 ```
+{% endraw %}
 
 Client bundle: 150KB+ just for libraries.
 
 ### After: Server Does the Heavy Lifting
 
+{% raw %}
 ```jsx
 // Server Component - runs on server, sends HTML
 import { format } from 'date-fns';
@@ -78,6 +81,7 @@ async function BlogPost({ slug }) {
   );
 }
 ```
+{% endraw %}
 
 Client bundle: Only the `LikeButton` code ships to browser.
 

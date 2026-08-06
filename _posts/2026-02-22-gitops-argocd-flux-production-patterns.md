@@ -128,6 +128,7 @@ team-b-gitops/           # Team B owns this
 
 **ArgoCD implementation using ApplicationSets:**
 
+{% raw %}
 ```yaml
 # platform-gitops/argocd/app-set.yaml
 apiVersion: argoproj.io/v1alpha1
@@ -159,6 +160,7 @@ spec:
           prune: true
           selfHeal: true
 ```
+{% endraw %}
 
 ### Pattern 3: Config Repo + App Repo (Separate CD from CI)
 
@@ -356,6 +358,7 @@ ArgoCD tracks the Rollout's health status and shows you exactly where a deployme
 
 GitOps without alerting is just hoping. Set up alerts for drift and sync failures:
 
+{% raw %}
 ```yaml
 # ArgoCD notification template + trigger
 apiVersion: v1
@@ -382,6 +385,7 @@ data:
     channels:
     - name: platform-alerts
 ```
+{% endraw %}
 
 ---
 

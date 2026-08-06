@@ -249,10 +249,12 @@ Bardeen이 100개 이상 앱과 연결:
 
 자동화를 재사용 가능하게:
 
+{% raw %}
 ```
 대신: linkedin.com/in/specific-person 스크래핑
 사용: {{LinkedIn URL}}을 스크래핑, URL은 입력값
 ```
+{% endraw %}
 
 ### 2. 딜레이 추가
 

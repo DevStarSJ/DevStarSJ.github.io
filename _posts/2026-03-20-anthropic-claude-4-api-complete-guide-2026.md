@@ -426,6 +426,7 @@ def estimate_cost(usage, model="claude-sonnet-4-5"):
 
 ### 1. Automated Code Review System
 
+{% raw %}
 ```python
 def code_review_agent(pr_diff: str) -> dict:
     """Automated PR review with structured output."""
@@ -442,6 +443,7 @@ def code_review_agent(pr_diff: str) -> dict:
     import json
     return json.loads(response.content[0].text)
 ```
+{% endraw %}
 
 ### 2. RAG-Powered Knowledge Base
 

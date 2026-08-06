@@ -92,6 +92,7 @@ With this single file, developers get: ownership, dependencies, linked dashboard
 
 The most impactful thing a platform team can do is build **Golden Paths** — opinionated, pre-approved ways to deploy common workload types. Not mandates, but the path of least resistance.
 
+{% raw %}
 ```yaml
 # Backstage Software Template for a new microservice
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -145,6 +146,7 @@ spec:
       input:
         compositeResourceDefinition: xpostgresqlinstances.platform.myorg.io
 ```
+{% endraw %}
 
 A developer runs this template: 5 minutes later they have a GitHub repo, CI/CD pipeline, staging deployment, observability configured, and a database provisioned — without a single DevOps ticket.
 
@@ -198,6 +200,7 @@ spec:
 
 The principle: **if it's not in Git, it doesn't exist.** ArgoCD enforces this at the cluster level.
 
+{% raw %}
 ```yaml
 # ArgoCD ApplicationSet — one definition, deploys to all clusters
 apiVersion: argoproj.io/v1alpha1
@@ -230,6 +233,7 @@ spec:
         syncOptions:
           - CreateNamespace=true
 ```
+{% endraw %}
 
 Drift detection is automatic. If someone `kubectl apply`s something directly in production, ArgoCD will detect and revert it within minutes. 
 

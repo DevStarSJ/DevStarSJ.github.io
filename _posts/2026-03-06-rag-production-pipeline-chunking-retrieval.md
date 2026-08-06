@@ -203,6 +203,7 @@ The LLM generates a confident answer that's not actually supported by the retrie
 
 **Add a grounding check:**
 
+{% raw %}
 ```python
 GROUNDING_PROMPT = """
 Given the following retrieved context and the AI's answer:
@@ -219,6 +220,7 @@ def check_grounding(context, answer) -> dict:
     result = llm.complete(GROUNDING_PROMPT.format(context=context, answer=answer))
     return json.loads(result)
 ```
+{% endraw %}
 
 For high-stakes applications, fail or flag answers that aren't fully grounded. For others, include a confidence score.
 

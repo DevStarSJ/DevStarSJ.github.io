@@ -379,6 +379,7 @@ maturin publish --username __token__ --password $PYPI_TOKEN
 
 For CI, use `maturin build` with cross-compilation targets:
 
+{% raw %}
 ```yaml
 # .github/workflows/release.yml
 - uses: PyO3/maturin-action@v1
@@ -388,6 +389,7 @@ For CI, use `maturin build` with cross-compilation targets:
     sccache: 'true'
     manylinux: auto
 ```
+{% endraw %}
 
 ## Conclusion
 

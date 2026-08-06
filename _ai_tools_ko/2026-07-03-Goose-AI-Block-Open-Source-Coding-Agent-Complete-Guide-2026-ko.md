@@ -189,6 +189,7 @@ goose run --with-toolkit github "코드베이스의 모든 TODO 주석에 대한
 
 레시피는 마크다운 파일로 저장된 재사용 가능한 작업 템플릿입니다:
 
+{% raw %}
 ```markdown
 # recipe: add-tests.md
 ---
@@ -207,6 +208,7 @@ params:
 - 커버리지 90% 이상 목표
 - 프로젝트의 기존 테스트 패턴 따르기
 ```
+{% endraw %}
 
 실행:
 ```bash

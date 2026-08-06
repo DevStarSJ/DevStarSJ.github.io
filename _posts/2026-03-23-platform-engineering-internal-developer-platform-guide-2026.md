@@ -360,6 +360,7 @@ my-service/
 
 CI/CD pipeline template:
 
+{% raw %}
 ```yaml
 # .github/workflows/ci.yaml (template)
 name: CI
@@ -429,6 +430,7 @@ jobs:
           git commit -am "chore: update ${{ github.event.repository.name }} to ${{ github.sha }}"
           git push
 ```
+{% endraw %}
 
 ![Software Development Team](https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80)
 *Photo by [Annie Spratt](https://unsplash.com/@anniespratt) on Unsplash*

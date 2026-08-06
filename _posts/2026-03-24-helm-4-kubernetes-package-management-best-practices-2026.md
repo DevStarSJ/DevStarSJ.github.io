@@ -156,6 +156,7 @@ annotations:
 
 ### The `_helpers.tpl` Pattern
 
+{% raw %}
 ```yaml
 {{/*
 Expand the name of the chart.
@@ -212,9 +213,11 @@ Create the image name with tag
 {{- printf "%s/%s:%s" $registry $repository $tag }}
 {{- end }}
 ```
+{% endraw %}
 
 ### Production Deployment Template
 
+{% raw %}
 ```yaml
 # templates/deployment.yaml
 apiVersion: apps/v1
@@ -358,6 +361,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
 ```
+{% endraw %}
 
 ---
 
@@ -515,6 +519,7 @@ spec:
 
 ### Progressive Delivery with Argo Rollouts
 
+{% raw %}
 ```yaml
 # Instead of Deployment, use Rollout for canary deployments
 apiVersion: argoproj.io/v1alpha1
@@ -555,6 +560,7 @@ spec:
           - name: service-name
             value: {{ include "myapp.fullname" . }}-canary
 ```
+{% endraw %}
 
 ---
 
@@ -562,6 +568,7 @@ spec:
 
 Always include Helm tests:
 
+{% raw %}
 ```yaml
 # templates/tests/test-connection.yaml
 apiVersion: v1
@@ -592,6 +599,7 @@ spec:
             exit 1
           fi
 ```
+{% endraw %}
 
 ```bash
 # Run tests after deployment

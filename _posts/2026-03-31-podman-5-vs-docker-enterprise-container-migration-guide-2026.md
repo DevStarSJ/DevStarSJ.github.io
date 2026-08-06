@@ -320,6 +320,7 @@ Podman's near-zero idle resource usage is particularly impactful on developer la
 
 Migrating from Docker to Podman:
 
+{% raw %}
 ```bash
 # 1. Export existing containers and images
 docker save myapp:latest | podman load
@@ -345,6 +346,7 @@ podman-compose config  # validates your compose files
 # Before: -v /var/run/docker.sock:/var/run/docker.sock
 # After:  -v $XDG_RUNTIME_DIR/podman/podman.sock:/var/run/docker.sock
 ```
+{% endraw %}
 
 ---
 

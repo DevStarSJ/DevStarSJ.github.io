@@ -254,6 +254,7 @@ response = router_engine.query("How do I authenticate with the REST API?")
 
 Haystack (by deepset) is the most enterprise-focused of the three. It's designed around composable, type-safe pipelines that are easy to test, deploy, and monitor.
 
+{% raw %}
 ```python
 from haystack import Pipeline, Document
 from haystack.components.builders import PromptBuilder
@@ -298,6 +299,7 @@ result = pipeline.run({
 
 print(result["llm"]["replies"][0])
 ```
+{% endraw %}
 
 ### Pipeline Serialization and Versioning
 

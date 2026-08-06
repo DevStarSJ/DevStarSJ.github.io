@@ -382,6 +382,7 @@ buildah commit myapp-working-container myapp:latest
 
 ### GitHub Actions
 
+{% raw %}
 ```yaml
 # Using Docker (standard)
 - name: Build and push Docker image
@@ -409,6 +410,7 @@ buildah commit myapp-working-container myapp:latest
     echo "$REGISTRY_PASSWORD" | podman login -u "$REGISTRY_USER" --password-stdin ghcr.io
     podman push myapp:latest ghcr.io/${{ github.repository }}:latest
 ```
+{% endraw %}
 
 ---
 

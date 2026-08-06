@@ -109,6 +109,7 @@ Single `Application` resources don't scale when you have 50 microservices across
 
 ### Directory Generator
 
+{% raw %}
 ```yaml
 # applicationsets/microservices.yaml
 apiVersion: argoproj.io/v1alpha1
@@ -148,9 +149,11 @@ spec:
         syncOptions:
           - CreateNamespace=true
 ```
+{% endraw %}
 
 ### Matrix Generator: All Services × All Clusters
 
+{% raw %}
 ```yaml
 spec:
   generators:
@@ -181,6 +184,7 @@ spec:
         server: "{{url}}"
         namespace: "{{path.basename}}"
 ```
+{% endraw %}
 
 This single `ApplicationSet` creates one `Application` per service per cluster — no manual duplication.
 
@@ -282,6 +286,7 @@ spec:
 
 ### Flux Image Automation (Auto-Update Image Tags)
 
+{% raw %}
 ```yaml
 # Auto-update the image tag when a new image is pushed to the registry
 apiVersion: image.toolkit.fluxcd.io/v1beta2
@@ -329,6 +334,7 @@ spec:
     push:
       branch: main
 ```
+{% endraw %}
 
 With this setup, when you push a new Docker image tagged `1.8.3`, Flux automatically updates the YAML in Git and reconciles the cluster — zero human intervention.
 
@@ -417,6 +423,7 @@ spec:
         stableSubsetName: stable
 ```
 
+{% raw %}
 ```yaml
 # AnalysisTemplate for automatic pass/fail criteria
 apiVersion: argoproj.io/v1alpha1
@@ -446,6 +453,7 @@ spec:
               }[5m]
             ))
 ```
+{% endraw %}
 
 If the success rate drops below 95% during the canary phase, Argo Rollouts automatically promotes back to the stable version.
 

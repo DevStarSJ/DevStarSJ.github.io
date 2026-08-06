@@ -416,6 +416,7 @@ Three dashboards every service needs:
 
 Alert rules (start with these, tune thresholds over time):
 
+{% raw %}
 ```yaml
 # Grafana alert rules (as code)
 - alert: HighErrorRate
@@ -439,6 +440,7 @@ Alert rules (start with these, tune thresholds over time):
   annotations:
     summary: "P99 latency > 2s for {{ $labels.service }}"
 ```
+{% endraw %}
 
 ![Multi-monitor setup showing code and dashboards for system monitoring](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800)
 *Photo by [Carlos Muza](https://unsplash.com/@kmuza) on Unsplash*

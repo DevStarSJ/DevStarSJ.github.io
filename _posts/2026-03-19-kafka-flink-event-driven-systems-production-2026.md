@@ -409,6 +409,7 @@ kafka_network_requestmetrics_requestqueuesize      # broker pressure
 
 Consumer lag is the #1 operational metric. Alert when lag exceeds your SLA:
 
+{% raw %}
 ```yaml
 # Prometheus alert rule
 - alert: KafkaConsumerLagHigh
@@ -420,6 +421,7 @@ Consumer lag is the #1 operational metric. Alert when lag exceeds your SLA:
     summary: "Kafka consumer lag is high for {{ $labels.consumer_group }}"
     description: "Consumer lag is {{ $value }} messages, above threshold of 100,000"
 ```
+{% endraw %}
 
 ### Flink Metrics
 

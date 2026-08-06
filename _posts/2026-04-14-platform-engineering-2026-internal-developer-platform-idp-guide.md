@@ -109,6 +109,7 @@ Under the hood, Crossplane translates this into RDS, CloudSQL, or Azure Database
 
 The IDP's source of truth is Git. Developers commit changes; the platform automatically applies them to the right environments.
 
+{% raw %}
 ```yaml
 # ArgoCD ApplicationSet — automatically creates an Application
 # for every team folder in the monorepo
@@ -134,6 +135,7 @@ spec:
         server: https://kubernetes.default.svc
         namespace: '{{path.basename}}'
 ```
+{% endraw %}
 
 New team? Create a folder in the repo, and ArgoCD automatically provisions their namespace, RBAC, network policies, and monitoring.
 

@@ -156,6 +156,7 @@ The most common question: "How does a new Docker image get deployed?" You have t
 
 ### Approach 1: CI Pipeline Updates values.yaml
 
+{% raw %}
 ```yaml
 # CI pipeline (GitHub Actions, after building and pushing image)
 - name: Update image tag in GitOps repo
@@ -176,6 +177,7 @@ The most common question: "How does a new Docker image get deployed?" You have t
     git commit -m "chore: update payment-service to ${{ github.sha }}"
     git push
 ```
+{% endraw %}
 
 Argo CD detects the change and syncs. Simple, auditable, widely used.
 
@@ -213,6 +215,7 @@ Staging auto-sync on schedule (or PR approval)
 Prod: Manual approval required (PR + CODEOWNERS + required reviews)
 ```
 
+{% raw %}
 ```yaml
 # Using Argo CD ApplicationSets for multi-environment
 apiVersion: argoproj.io/v1alpha1
@@ -252,6 +255,7 @@ spec:
           prune: "{{autoSync}}"
           selfHeal: "{{autoSync}}"
 ```
+{% endraw %}
 
 ---
 

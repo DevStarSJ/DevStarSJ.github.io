@@ -167,6 +167,7 @@ Production automations without error handling are fragile. Make makes it easy to
 
 The **HTTP module** lets you call any API that exists — even without native integration. This is Make's superpower:
 
+{% raw %}
 ```
 HTTP Request:
 Method: POST
@@ -181,6 +182,7 @@ Body: {
   }
 }
 ```
+{% endraw %}
 
 If the app has an API, Make can talk to it. This eliminates the "we don't have an integration for that" problem.
 

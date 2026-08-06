@@ -153,12 +153,14 @@ Branch your workflow based on conditions:
 
 ### HTTP Request Node
 Call external APIs without writing server code:
+{% raw %}
 ```
 Method: POST
 URL: https://api.yourservice.com/webhook
 Headers: {"Authorization": "Bearer {{api_key}}"}
 Body: {"content": "{{processed_text}}"}
 ```
+{% endraw %}
 
 ### Iteration Node
 Loop over arrays — process multiple items, analyze lists, etc.

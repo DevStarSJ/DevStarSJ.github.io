@@ -219,6 +219,7 @@ terraform {
 
 Combine with GitHub Actions for a zero-cost CI/CD pipeline:
 
+{% raw %}
 ```yaml
 # .github/workflows/tofu.yml
 name: OpenTofu
@@ -267,6 +268,7 @@ jobs:
             body: `\`\`\`\n${plan.slice(0, 65000)}\n\`\`\``
           });
 ```
+{% endraw %}
 
 ## CDK for Terraform (CDKTF) and Pulumi: The Imperative IaC Layer
 

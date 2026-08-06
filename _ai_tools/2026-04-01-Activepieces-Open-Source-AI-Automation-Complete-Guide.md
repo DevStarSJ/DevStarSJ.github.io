@@ -60,6 +60,7 @@ Built-in AI capabilities within workflows:
 | Ask AI | Custom AI prompts with variable injection |
 
 **Example: AI email classifier**
+{% raw %}
 ```javascript
 // Flow: Classify incoming emails and route appropriately
 {
@@ -81,6 +82,7 @@ Built-in AI capabilities within workflows:
   ]
 }
 ```
+{% endraw %}
 
 ### 3. 250+ Integrations ("Pieces")
 Popular integrations available:
@@ -359,10 +361,12 @@ Always add error branches:
 
 ### 3. Use Variables Wisely
 Name variables clearly for maintainability:
+{% raw %}
 ```
 {{trigger.email.sender_name}}  ✅
 {{step1.output_data}}          ❌ (too vague)
 ```
+{% endraw %}
 
 ### 4. Test Before Going Live
 - Use the test runner with real data samples

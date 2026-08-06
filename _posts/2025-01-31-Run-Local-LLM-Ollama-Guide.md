@@ -250,6 +250,7 @@ ollama run codingassistant
 
 ### Advanced Modelfile
 
+{% raw %}
 ```dockerfile
 FROM llama3.2
 
@@ -273,6 +274,7 @@ TEMPLATE """{{ if .System }}<|system|>
 <|assistant|>
 {{ end }}{{ .Response }}"""
 ```
+{% endraw %}
 
 ## GPU Acceleration
 

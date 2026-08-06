@@ -94,6 +94,7 @@ Maintain a golden dataset of 50–200 representative inputs. Run it on every pro
 
 For open-ended quality (summarization, tone, helpfulness), use a second LLM to evaluate the first:
 
+{% raw %}
 ```python
 JUDGE_PROMPT = """
 You are evaluating the quality of an AI assistant's response.
@@ -114,6 +115,7 @@ def judge_response(query: str, response: str) -> dict:
     result = claude.complete(JUDGE_PROMPT.format(query=query, response=response))
     return json.loads(result)
 ```
+{% endraw %}
 
 **Important caveats:**
 - LLM judges have biases (prefer their own responses, prefer longer outputs)

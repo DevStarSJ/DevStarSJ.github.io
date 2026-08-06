@@ -233,6 +233,7 @@ docker:
 
 ### GitHub Actions Workflow
 
+{% raw %}
 ```yaml
 name: ML Pipeline
 
@@ -286,6 +287,7 @@ jobs:
           bentoml containerize churn_prediction:latest
           docker push $REGISTRY/churn_prediction:latest
 ```
+{% endraw %}
 
 ## Model Monitoring
 

@@ -136,6 +136,7 @@ No Terraform. No separate state management. Your cloud resources live in Git alo
 
 Managing 50 microservices across 3 environments with plain Helm was a nightmare. `ApplicationSet` solves this:
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -172,6 +173,7 @@ spec:
           prune: true
           selfHeal: true
 ```
+{% endraw %}
 
 One `ApplicationSet` generates all application/environment combinations. Add a new service → commit a folder → Argo handles the rest.
 

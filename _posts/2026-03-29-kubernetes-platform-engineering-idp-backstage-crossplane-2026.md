@@ -105,6 +105,7 @@ spec:
 
 **Scaffolder template example:**
 
+{% raw %}
 ```yaml
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
@@ -149,6 +150,7 @@ spec:
         repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
         catalogInfoPath: /catalog-info.yaml
 ```
+{% endraw %}
 
 ---
 
@@ -226,6 +228,7 @@ Argo CD is the GitOps engine. Every deployment is driven by a Git commit — no 
 
 **ApplicationSet for multi-cluster, multi-env deployments:**
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -268,6 +271,7 @@ spec:
         syncOptions:
           - CreateNamespace=true
 ```
+{% endraw %}
 
 ---
 

@@ -128,6 +128,7 @@ Access at `http://localhost:8080`
 ### Building an AI-Powered Flow Example
 **Use case:** Auto-classify and route customer support emails
 
+{% raw %}
 ```
 Trigger: New Gmail email (to support@company.com)
 ↓
@@ -142,6 +143,7 @@ Step 2: Branch
 ↓
 Step 3: Send confirmation email
 ```
+{% endraw %}
 Total setup time: ~20 minutes. No code required.
 
 ## Practical Use Cases

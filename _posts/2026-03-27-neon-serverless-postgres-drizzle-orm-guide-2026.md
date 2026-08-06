@@ -448,6 +448,7 @@ ALTER TABLE "posts" ADD CONSTRAINT "posts_author_id_users_id_fk"
 
 This is Neon's killer feature. Every PR branch gets a database branch:
 
+{% raw %}
 ```yaml
 # .github/workflows/pr.yml
 name: PR Preview
@@ -496,6 +497,7 @@ jobs:
           branch_name: pr-${{ github.event.number }}
           api_key: ${{ secrets.NEON_API_KEY }}
 ```
+{% endraw %}
 
 ---
 

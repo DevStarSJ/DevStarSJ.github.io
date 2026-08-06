@@ -95,6 +95,7 @@ spec:
 
 **ApplicationSet**: Generate multiple Applications from a template:
 
+{% raw %}
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
@@ -119,6 +120,7 @@ spec:
         server: '{{url}}'
         namespace: kube-system
 ```
+{% endraw %}
 
 ### ArgoCD Strengths
 

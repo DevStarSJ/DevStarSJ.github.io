@@ -416,6 +416,7 @@ const metricsPlugin: ApolloServerPlugin = {
 
 ### Schema Checks in CI
 
+{% raw %}
 ```yaml
 # .github/workflows/schema-check.yml
 name: Schema Check
@@ -436,6 +437,7 @@ jobs:
         env:
           APOLLO_KEY: ${{ secrets.APOLLO_KEY }}
 ```
+{% endraw %}
 
 ## Migration from Monolith
 

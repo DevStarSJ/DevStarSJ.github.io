@@ -139,6 +139,7 @@ The complexity is also real. Multi-cluster networking, unified observability, co
 - **Flux's multi-tenancy** model for GitOps across many clusters
 - **ArgoCD ApplicationSets** for templated multi-cluster deployments
 
+{% raw %}
 ```yaml
 # ArgoCD ApplicationSet for multi-cluster deployment
 apiVersion: argoproj.io/v1alpha1
@@ -162,6 +163,7 @@ spec:
         server: '{{server}}'
         namespace: guestbook
 ```
+{% endraw %}
 
 ---
 

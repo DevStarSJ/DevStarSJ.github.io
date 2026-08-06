@@ -61,6 +61,7 @@ Activepieces는 드래그 앤 드롭 플로우 빌더를 사용합니다:
 | AI 질문 | 변수 주입이 가능한 커스텀 AI 프롬프트 |
 
 **예시: AI 이메일 분류기**
+{% raw %}
 ```javascript
 // 플로우: 수신 이메일 분류 후 적절히 라우팅
 {
@@ -82,6 +83,7 @@ Activepieces는 드래그 앤 드롭 플로우 빌더를 사용합니다:
   ]
 }
 ```
+{% endraw %}
 
 ### 3. 250개 이상의 통합 ("Pieces")
 인기 있는 통합 목록:
@@ -353,10 +355,12 @@ export const companyInternalApi = createPiece({
 
 ### 3. 변수명 명확하게 사용
 유지 관리를 위해 변수 이름을 명확하게:
+{% raw %}
 ```
 {{trigger.email.sender_name}}  ✅
 {{step1.output_data}}          ❌ (너무 모호함)
 ```
+{% endraw %}
 
 ### 4. 라이브 전에 반드시 테스트
 - 실제 데이터 샘플로 테스트 실행

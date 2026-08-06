@@ -110,6 +110,7 @@ That's it. No code, no complexity.
 
 **Example: Email triage AI agent**
 
+{% raw %}
 ```
 Trigger: Gmail → New email received
 
@@ -128,6 +129,7 @@ Step 3 (urgent path): Claude → Generate draft reply
   
 Step 4 (urgent path): Gmail → Create draft reply
 ```
+{% endraw %}
 
 Full AI-powered email assistant built in 15 minutes. No code.
 

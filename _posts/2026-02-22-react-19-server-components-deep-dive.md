@@ -236,6 +236,7 @@ function ClientWrapper({ children }: { children: React.ReactNode }) {
 
 Data passed from server to client components must be serializable:
 
+{% raw %}
 ```tsx
 // ❌ Can't pass class instances, functions, or non-serializable objects
 <ClientComponent callback={() => console.log("hi")} />
@@ -243,6 +244,7 @@ Data passed from server to client components must be serializable:
 // ✅ Pass primitive data, let the client component define handlers
 <ClientComponent data={{ name: "John", age: 30 }} />
 ```
+{% endraw %}
 
 ---
 
@@ -302,6 +304,7 @@ RSC doesn't eliminate client components — it makes their purpose clearer. Use 
 - **Browser APIs** — localStorage, geolocation, IntersectionObserver
 - **Third-party libraries** that aren't server-compatible (most animation libs, charts)
 
+{% raw %}
 ```tsx
 // This MUST be a client component
 "use client"
@@ -323,6 +326,7 @@ export function AnimatedCounter({ initial }: { initial: number }) {
   );
 }
 ```
+{% endraw %}
 
 Keep client components as leaf nodes — push the "use client" boundary as deep in the tree as possible to maximize the server-rendered portion.
 

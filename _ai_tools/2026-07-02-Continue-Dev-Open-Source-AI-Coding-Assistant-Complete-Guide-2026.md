@@ -95,6 +95,7 @@ Context providers extend what Continue "knows" when answering:
 ### 5. Slash Commands
 Create custom slash commands for repetitive tasks:
 
+{% raw %}
 ```json
 {
   "slashCommands": [
@@ -106,6 +107,7 @@ Create custom slash commands for repetitive tasks:
   ]
 }
 ```
+{% endraw %}
 
 ---
 

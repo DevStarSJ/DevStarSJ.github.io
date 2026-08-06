@@ -127,6 +127,7 @@ docker compose up
 ### AI 기반 플로우 예시
 **사용 사례:** 고객 지원 이메일 자동 분류 및 라우팅
 
+{% raw %}
 ```
 트리거: 새 Gmail 이메일 (support@company.com 수신)
 ↓
@@ -141,6 +142,7 @@ docker compose up
 ↓
 3단계: 확인 이메일 발송
 ```
+{% endraw %}
 총 설정 시간: 약 20분. 코드 불필요.
 
 ## 실용적 활용 사례

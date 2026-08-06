@@ -208,6 +208,7 @@ Your retrieval returned relevant chunks. The model answered using those chunks. 
 
 Require citations, then verify them:
 
+{% raw %}
 ```python
 GROUNDED_SYSTEM_PROMPT = """
 You are a helpful assistant. Answer using ONLY the provided context.
@@ -263,6 +264,7 @@ async def answer_with_grounding_check(
         "issues": check_result.get("issues", [])
     }
 ```
+{% endraw %}
 
 For high-stakes applications (legal, medical, financial), gate answers on faithfulness check. For consumer products, log the issues and use them to improve your pipeline.
 

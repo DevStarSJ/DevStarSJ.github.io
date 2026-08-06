@@ -379,6 +379,7 @@ func TestECSServiceModule(t *testing.T) {
 
 ### GitHub Actions Workflow
 
+{% raw %}
 ```yaml
 # .github/workflows/terraform.yml
 name: Terraform
@@ -459,6 +460,7 @@ jobs:
       - run: tofu apply -auto-approve tfplan
         working-directory: infra/environments/prod
 ```
+{% endraw %}
 
 ---
 

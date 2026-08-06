@@ -83,6 +83,7 @@ This catches secrets, formatting, and type errors locally — before CI even run
 
 Dedicated security tooling in CI catches what pre-commit misses:
 
+{% raw %}
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -119,6 +120,7 @@ jobs:
           severity: CRITICAL,HIGH
           exit-code: '1'
 ```
+{% endraw %}
 
 Key principle: **fail the build only on HIGH/CRITICAL severity**. Low and medium severity items create noise without preventing real issues.
 

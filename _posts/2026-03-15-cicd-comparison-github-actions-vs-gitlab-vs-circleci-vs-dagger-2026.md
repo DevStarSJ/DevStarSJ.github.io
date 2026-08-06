@@ -89,6 +89,7 @@ jobs:
 
 **Reusable Workflows** — the killer feature for platform teams:
 
+{% raw %}
 ```yaml
 # .github/workflows/reusable-build.yml
 on:
@@ -111,6 +112,7 @@ jobs:
         aws-region: us-east-1
     # ... build steps
 ```
+{% endraw %}
 
 Called from any repo:
 ```yaml
@@ -334,6 +336,7 @@ anyio.run(main)
 
 The same script runs locally (`dagger run python dagger.py`) and in any CI system:
 
+{% raw %}
 ```yaml
 # GitHub Actions — just run the Dagger script
 - name: Run Pipeline
@@ -341,6 +344,7 @@ The same script runs locally (`dagger run python dagger.py`) and in any CI syste
   env:
     DAGGER_CLOUD_TOKEN: ${{ secrets.DAGGER_CLOUD_TOKEN }}
 ```
+{% endraw %}
 
 ### Why Dagger is Gaining Enterprise Traction
 

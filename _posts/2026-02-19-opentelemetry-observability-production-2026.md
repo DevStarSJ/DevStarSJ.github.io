@@ -248,6 +248,7 @@ This three-pillar correlation only works reliably when trace context (trace_id, 
 
 **Service Level Objectives** are the contract between your service and your users. Prometheus Rules + Grafana make SLO tracking operational:
 
+{% raw %}
 ```yaml
 # PrometheusRule for SLO tracking
 apiVersion: monitoring.coreos.com/v1
@@ -285,6 +286,7 @@ spec:
             summary: "Payment service error rate above SLO"
             description: "Current error rate: {{ $value | humanizePercentage }}"
 ```
+{% endraw %}
 
 ---
 

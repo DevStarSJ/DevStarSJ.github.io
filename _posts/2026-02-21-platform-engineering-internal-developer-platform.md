@@ -73,6 +73,7 @@ Each step in the golden path should be:
 
 Backstage's Software Templates are the best way to encode your golden path:
 
+{% raw %}
 ```yaml
 # templates/microservice/template.yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -153,6 +154,7 @@ spec:
       - title: Open in Catalog
         url: ${{ steps['register-catalog'].output.entityRef }}
 ```
+{% endraw %}
 
 When a developer runs this template, they get a GitHub repo, an ArgoCD application, a namespace in Kubernetes, and a Catalog entry — all in under two minutes.
 

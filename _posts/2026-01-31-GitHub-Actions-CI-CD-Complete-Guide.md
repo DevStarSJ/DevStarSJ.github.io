@@ -24,6 +24,7 @@ GitHub Actions has become the standard for CI/CD pipelines in modern software de
 
 ### Workflow Structure
 
+{% raw %}
 ```yaml
 # .github/workflows/ci.yml
 name: CI Pipeline
@@ -56,6 +57,7 @@ jobs:
       - name: Run tests
         run: npm test
 ```
+{% endraw %}
 
 ### Triggers
 
@@ -106,6 +108,7 @@ on:
 
 ### Matrix Builds
 
+{% raw %}
 ```yaml
 jobs:
   test:
@@ -138,9 +141,11 @@ jobs:
         if: matrix.coverage
         uses: codecov/codecov-action@v4
 ```
+{% endraw %}
 
 ### Job Dependencies
 
+{% raw %}
 ```yaml
 jobs:
   build:
@@ -178,9 +183,11 @@ jobs:
     steps:
       - run: echo "Deploying version ${{ needs.build.outputs.version }}"
 ```
+{% endraw %}
 
 ### Concurrency
 
+{% raw %}
 ```yaml
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -192,11 +199,13 @@ jobs:
       group: production-deploy
       cancel-in-progress: false # Don't cancel ongoing deploys
 ```
+{% endraw %}
 
 ## Complete CI/CD Pipeline
 
 ### Full-Stack Application
 
+{% raw %}
 ```yaml
 # .github/workflows/ci-cd.yml
 name: CI/CD Pipeline
@@ -374,11 +383,13 @@ jobs:
           echo "Deploying ${{ needs.build.outputs.image-tag }}"
           # Add your deployment commands here
 ```
+{% endraw %}
 
 ## Reusable Workflows
 
 ### Creating Reusable Workflow
 
+{% raw %}
 ```yaml
 # .github/workflows/reusable-deploy.yml
 name: Reusable Deploy
@@ -414,9 +425,11 @@ jobs:
           echo "Deploying ${{ inputs.image-tag }} to ${{ inputs.environment }}"
           echo "url=https://${{ inputs.environment }}.example.com" >> $GITHUB_OUTPUT
 ```
+{% endraw %}
 
 ### Using Reusable Workflow
 
+{% raw %}
 ```yaml
 jobs:
   deploy-staging:
@@ -427,11 +440,13 @@ jobs:
     secrets:
       DEPLOY_KEY: ${{ secrets.STAGING_DEPLOY_KEY }}
 ```
+{% endraw %}
 
 ## Composite Actions
 
 ### Creating Composite Action
 
+{% raw %}
 ```yaml
 # .github/actions/setup-project/action.yml
 name: 'Setup Project'
@@ -465,6 +480,7 @@ runs:
       shell: bash
       run: npx playwright install --with-deps
 ```
+{% endraw %}
 
 ### Using Composite Action
 
@@ -487,6 +503,7 @@ jobs:
 
 ### Repository Secrets
 
+{% raw %}
 ```yaml
 steps:
   - name: Deploy
@@ -495,9 +512,11 @@ steps:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
     run: ./deploy.sh
 ```
+{% endraw %}
 
 ### Environment Secrets
 
+{% raw %}
 ```yaml
 jobs:
   deploy:
@@ -506,6 +525,7 @@ jobs:
     steps:
       - run: echo "API_KEY=${{ secrets.API_KEY }}"
 ```
+{% endraw %}
 
 ### OIDC Authentication (Keyless)
 
@@ -532,6 +552,7 @@ jobs:
 
 ### Dynamic Matrix
 
+{% raw %}
 ```yaml
 jobs:
   prepare:
@@ -554,9 +575,11 @@ jobs:
     steps:
       - run: echo "Building ${{ matrix.service }}"
 ```
+{% endraw %}
 
 ### Path-based Triggering
 
+{% raw %}
 ```yaml
 on:
   push:
@@ -596,9 +619,11 @@ jobs:
     steps:
       - run: echo "Building Frontend"
 ```
+{% endraw %}
 
 ### Caching
 
+{% raw %}
 ```yaml
 steps:
   # NPM cache
@@ -623,9 +648,11 @@ steps:
       cache-from: type=gha
       cache-to: type=gha,mode=max
 ```
+{% endraw %}
 
 ### Notifications
 
+{% raw %}
 ```yaml
 jobs:
   notify:
@@ -642,6 +669,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
         if: always()
 ```
+{% endraw %}
 
 ## Security Best Practices
 

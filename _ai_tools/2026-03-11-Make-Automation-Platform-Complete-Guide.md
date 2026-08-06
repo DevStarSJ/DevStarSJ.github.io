@@ -121,9 +121,11 @@ After the trigger, add action modules. Example chain:
 
 ### 5. Map Data Between Modules
 Click a field in a module to access the **data mapper**. Select data from previous modules:
+{% raw %}
 ```
 Message content: {{1.subject}} - {{1.body}}
 ```
+{% endraw %}
 
 ### 6. Test and Activate
 - Click "Run once" to test
@@ -191,6 +193,7 @@ Trigger: New Shopify order
 
 ### Using HTTP Module for Any API
 The HTTP module lets you call any API without a native Make connector:
+{% raw %}
 ```
 URL: https://api.openai.com/v1/chat/completions
 Method: POST
@@ -200,6 +203,7 @@ Body: {
   "messages": [{"role": "user", "content": "{{your_content}}"}]
 }
 ```
+{% endraw %}
 
 ### Error Handling Routes
 Add error handlers to every critical module:

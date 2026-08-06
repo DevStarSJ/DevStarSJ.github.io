@@ -222,6 +222,7 @@ def log_llm_interaction(
 
 This is the LLM-specific layer most teams skip. Big mistake.
 
+{% raw %}
 ```python
 from anthropic import Anthropic
 from dataclasses import dataclass
@@ -316,6 +317,7 @@ Return only a number between 0.0 (fully grounded) and 1.0 (fully hallucinated)."
         except ValueError:
             return 0.5  # Unknown
 ```
+{% endraw %}
 
 ---
 
@@ -461,6 +463,7 @@ service:
 
 ## Alerting: What to Alert On
 
+{% raw %}
 ```yaml
 # prometheus-alerts.yaml
 groups:
@@ -495,6 +498,7 @@ groups:
     annotations:
       summary: "Average LLM response quality below 70%"
 ```
+{% endraw %}
 
 ---
 

@@ -163,12 +163,14 @@ Make's built-in data storage lets scenarios share state across runs. Use it to:
 ### HTTP/Webhook for Any API
 Not every app has a Make integration. The **HTTP** module lets you call any REST API:
 
+{% raw %}
 ```json
 URL: https://api.yourapp.com/endpoint
 Method: POST
 Headers: {"Authorization": "Bearer {{token}}"}
 Body: {"data": "{{input}}"}
 ```
+{% endraw %}
 
 ### Use Bundles & Arrays
 Make's data model treats everything as "bundles." Learn to use **Set Variable**, **Get Variable**, and **Array Aggregator** modules to pass complex data between steps.

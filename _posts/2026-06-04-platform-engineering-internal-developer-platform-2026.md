@@ -96,6 +96,7 @@ Here's a battle-tested IDP architecture used by mature platform teams:
 
 A golden path is an opinionated, end-to-end template for a common workload. Here's what a Node.js microservice golden path provides out of the box:
 
+{% raw %}
 ```yaml
 # scaffolder-template.yaml (Backstage)
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -129,6 +130,7 @@ spec:
     - id: register-in-catalog
       action: catalog:register
 ```
+{% endraw %}
 
 When a developer runs this template, they get: a GitHub repo with CI/CD wired up, a Kubernetes namespace, observability dashboards pre-configured, a PagerDuty schedule, and an entry in the service catalog — in under 5 minutes.
 

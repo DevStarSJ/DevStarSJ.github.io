@@ -434,6 +434,7 @@ rules:
 
 **Key alerts to configure:**
 
+{% raw %}
 ```yaml
 # Alertmanager rules
 groups:
@@ -459,6 +460,7 @@ groups:
         labels:
           severity: critical
 ```
+{% endraw %}
 
 ## Conclusion
 
