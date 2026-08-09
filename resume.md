@@ -21,7 +21,7 @@ description: >
 - **Backend**: FastAPI, Ruby on Rails, Nest.JS, Serverless-Express, ASP.NET, GraphQL(Apollo Federation), Prisma, TypeORM, Celery
 - **Frontend**: Next.JS, React, React-Native, MobX State Tree, Recoil
 - **Data Engineering**: Pandas, Spark, XGBoost, CatBoost, LightGBM, Scikit-Learn, Keras
-- **Infrastructure**: AWS, Terraform, Kubernetes(EKS), Helm, GitHub Actions, Jenkins, OpenSearch/Elasticsearch, Redis, MySQL/Aurora
+- **Infrastructure**: AWS, Terraform, Kubernetes(EKS), Helm, GitHub Actions(self-hosted runner), Jenkins, OpenSearch/Elasticsearch, ElastiCache/Redis, Aurora Cluster/MySQL, ECR
 - **Parallelism**: CUDA, SIMD, OpenMP
 
 ## Experience
@@ -32,9 +32,31 @@ description: >
 
 **SRE** (2023.08 ~ 현재)
 
-- IaC(Terraform + AWS), Kubernetes(EKS), CI/CD(GitHub Actions + Helm Chart)
-- 여러 리전에서 EC2로 직접 운영하던 인프라(Redis, Elasticsearch, Kubernetes)를 AWS managed service로 마이그레이션했습니다. 직접 운영하는 구조에서 리소스 관련 장애가 반복적으로 발생했고 대응도 어려웠기 때문에, managed service로 전환하면서 Seoul 리전으로 옮기는 작업을 진행했습니다. B2B 고객 대상 서비스라 무중단·무장애로 이전했으며, Elasticsearch는 기존 형태소분석기와 사용자정의 사전이 호환되지 않아 해당 부분을 새로 구현했습니다.
-- 별도 repo에서 수동 배포하던 레거시를 포함해 모든 서비스에 GitHub Actions + EKS Helm Chart 배포 프로세스를 새로 구축했습니다.
+주요 기술: Terraform(IaC), AWS, Kubernetes(EKS), Helm, GitHub Actions
+
+#### 프로젝트: Tokyo 리전 자체 운영 인프라 → Seoul 리전 Managed Service 전환 (2023.08 ~ 2023.12)
+
+입사 후 첫 과제로, 회사 서비스 대부분이 올라가 있던 AWS Tokyo 리전 인프라를 Seoul 리전의 managed service로 이전하는 작업을 설계하고 수행했습니다.
+
+- **문제**: Elasticsearch와 Redis를 EC2와 Kubernetes 위에서 직접 운영하고 있었고, 리소스 관련 장애가 주 단위로 반복 발생했습니다. 근본 대응 수단이 사실상 재기동뿐이라 같은 장애가 계속 재현되는 구조였습니다. 데이터베이스도 Aurora 단일 인스턴스로 구성되어 있어 확장 여력이 부족했습니다.
+- **해결**: 각 컴포넌트를 AWS managed service로 전환하면서 리전을 함께 이전했습니다. — Elasticsearch → **OpenSearch**, Redis → **ElastiCache**, Aurora 단일 인스턴스 → **Aurora Cluster**, 자체 운영 Kubernetes → **EKS**
+- **제약 조건**: B2B 고객사가 사용 중인 서비스였기 때문에 데이터 누락과 서비스 중단이 모두 허용되지 않았습니다. 데이터 정합성을 검증하며 **무중단·무손실로 전환**을 완료했습니다.
+- **기술적 난점**: OpenSearch가 기존에 사용하던 형태소분석기 및 사용자정의 사전과 호환되지 않아, 한국어 검색 품질을 유지하기 위해 해당 부분을 새로 구현했습니다.
+- **결과**: 반복되던 검색·캐시 장애를 managed service의 운영·복구 체계로 흡수했고, 데이터베이스는 클러스터 구성으로 전환해 읽기 확장이 가능한 구조를 확보했습니다. 리전 이전으로 국내 사용자 기준 네트워크 경로도 단축되었습니다.
+
+#### 프로젝트: 배포 파이프라인 통합 및 전면 자동화 (2023.08 ~ 2023.12)
+
+리전 이전과 병행하여, 흩어져 있던 배포 체계를 단일 저장소 기반의 자동화 파이프라인으로 재구축했습니다.
+
+- **문제**: 컨테이너 이미지는 GitHub Container Registry(GHCR)에 두고, Kubernetes manifest는 **별도 저장소에 모아 수동으로 배포**하는 구조였습니다. 코드와 배포 정의가 분리되어 있어 변경 이력 추적이 어렵고, 배포마다 사람의 개입이 필요했습니다.
+- **해결**: GitHub Actions **self-hosted runner**를 구축하고 `kubectl`, `helm` 등 배포 도구를 통합한 뒤, 이미지 저장소를 **AWS ECR**로, 배포 방식을 **Helm release** 기반으로 전환했습니다. 이를 통해 애플리케이션 코드와 배포 정의를 단일 저장소에서 관리하고, 빌드부터 배포까지 전 과정을 자동화했습니다.
+- **적용 범위**: 신규 서비스뿐 아니라 그동안 수동 배포에 의존하던 레거시 서비스까지 **모든 서비스**를 동일한 파이프라인으로 편입시켰습니다.
+- **결과**: 배포가 코드 변경에 따라 자동으로 이루어지는 구조가 되면서, 배포 자체가 특정 담당자에게 의존하지 않게 되었습니다.
+
+#### 상시 업무
+
+- Terraform 기반 IaC로 인프라를 코드로 관리하고 변경 이력을 추적합니다.
+- EKS 클러스터 및 AWS 리소스 운영, 모니터링, 장애 대응을 담당합니다.
 
 **Tech Lead** (2023.11 ~ 현재)
 
