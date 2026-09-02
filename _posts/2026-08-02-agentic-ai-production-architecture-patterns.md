@@ -7,6 +7,7 @@ author: "Seokjun Lee"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 header-mask: 0.4
 catalog: true
+categories: ai
 tags:
   - AI
   - LLM
