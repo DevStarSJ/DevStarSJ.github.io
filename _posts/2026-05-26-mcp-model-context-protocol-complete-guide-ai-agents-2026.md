@@ -13,6 +13,7 @@ tags:
   - Agents
   - Protocol
   - Anthropic
+categories: ai
 ---
 
 ## What Is MCP?

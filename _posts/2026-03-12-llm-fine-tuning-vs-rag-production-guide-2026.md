@@ -14,6 +14,7 @@ tags:
   - Fine-tuning
   - Machine Learning
   - Production
+categories: ai
 ---
 
 ## The Question Every AI Team Faces

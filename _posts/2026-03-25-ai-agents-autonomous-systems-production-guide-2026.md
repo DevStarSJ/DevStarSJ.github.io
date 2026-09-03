@@ -12,6 +12,7 @@ tags:
   - LLM
   - Automation
   - ProductionML
+categories: ai
 ---
 
 # Building Production-Ready AI Agents: Autonomous Systems in 2026

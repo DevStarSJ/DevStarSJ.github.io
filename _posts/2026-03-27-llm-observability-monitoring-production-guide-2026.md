@@ -13,6 +13,7 @@ tags:
   - Monitoring
   - OpenTelemetry
   - MLOps
+categories: ai
 ---
 
 # LLM Observability in Production: Tracing, Monitoring, and Debugging AI Applications

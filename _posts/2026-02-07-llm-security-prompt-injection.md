@@ -6,6 +6,7 @@ date: 2026-02-07
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1920&q=80"
 tags: [Security, AI, LLM, Prompt Injection, Machine Learning, AppSec]
+categories: ai
 ---
 
 As LLMs become central to application architecture, they've become prime targets for attackers. Prompt injection, data exfiltration, and jailbreaking threaten any system that integrates AI. Here's how to defend against them.

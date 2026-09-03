@@ -13,6 +13,7 @@ tags:
   - Vector Database
   - Machine Learning
   - Production
+categories: ai
 ---
 
 # Retrieval-Augmented Generation (RAG) Best Practices: Building Production-Ready Systems in 2026

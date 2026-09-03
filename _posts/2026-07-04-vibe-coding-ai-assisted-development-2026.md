@@ -12,6 +12,7 @@ tags:
   - CodingAgents
   - Productivity
   - LLM
+categories: ai
 ---
 
 # Vibe Coding in 2026: How AI-Assisted Development Is Reshaping the Craft

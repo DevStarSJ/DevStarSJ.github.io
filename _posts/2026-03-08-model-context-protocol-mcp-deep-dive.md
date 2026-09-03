@@ -12,6 +12,7 @@ tags:
   - LLM
   - Integration
   - Protocol
+categories: ai
 ---
 
 If you've spent any time building AI-powered applications in the last year, you've probably run into the same problem dozens of times: every tool, every data source, every external service needs its own custom integration. Your AI assistant needs to talk to your database? Write an adapter. It needs to call your APIs? Write another one. Search your files? Yet another bespoke connector.

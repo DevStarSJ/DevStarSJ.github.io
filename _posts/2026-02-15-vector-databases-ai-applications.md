@@ -6,6 +6,7 @@ date: 2026-02-15
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200"
 tags: [Vector Database, AI, Machine Learning, Embeddings, Pinecone, Weaviate, ChromaDB, RAG]
+categories: ai
 ---
 
 # Vector Databases Explained: Powering the Next Generation of AI Applications

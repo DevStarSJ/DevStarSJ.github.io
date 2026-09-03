@@ -14,6 +14,7 @@ tags:
   - Pinecone
   - Embeddings
   - Machine Learning
+categories: ai
 ---
 
 ## The RAG Revolution Needed a New Kind of Storage

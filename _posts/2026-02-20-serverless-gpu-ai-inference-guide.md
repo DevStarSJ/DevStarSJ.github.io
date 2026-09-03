@@ -14,6 +14,7 @@ tags:
   - Modal
   - Inference
   - LLM
+categories: ai
 ---
 
 # Serverless GPU in 2026: Deploying AI Models Without Managing Infrastructure

@@ -13,6 +13,7 @@ tags:
   - Developer Tools
   - Anthropic
   - 2026
+categories: ai
 ---
 
 ## What Is Model Context Protocol?

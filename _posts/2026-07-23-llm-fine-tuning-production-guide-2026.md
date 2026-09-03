@@ -11,6 +11,7 @@ tags:
   - Fine-Tuning
   - Machine Learning
   - Production
+categories: ai
 ---
 
 Fine-tuning large language models has matured rapidly. What once required a warehouse of GPUs can now be done on a single A100 with the right techniques. This guide covers what's actually working in production environments in 2026.

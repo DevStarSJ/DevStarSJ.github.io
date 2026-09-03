@@ -13,6 +13,7 @@ tags:
   - GitHub
   - DevOps
   - Developer Experience
+categories: ai
 ---
 
 # AI-Powered Code Review: How LLMs Are Transforming Engineering Quality Gates in 2026

@@ -12,6 +12,7 @@ tags:
   - Vector Database
   - AI Engineering
   - NLP
+categories: ai
 ---
 
 # RAG in 2026: Advanced Retrieval Strategies Beyond Naive Vector Search

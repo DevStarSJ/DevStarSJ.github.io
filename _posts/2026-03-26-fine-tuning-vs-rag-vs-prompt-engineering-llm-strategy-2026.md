@@ -13,6 +13,7 @@ tags:
   - RAG
   - MachineLearning
   - GenAI
+categories: ai
 ---
 
 # Fine-tuning vs RAG vs Prompt Engineering: Choosing the Right LLM Strategy in 2026

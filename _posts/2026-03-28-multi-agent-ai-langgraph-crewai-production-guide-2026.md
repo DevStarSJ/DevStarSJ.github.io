@@ -13,6 +13,7 @@ tags:
   - Multi-Agent
   - LLM
   - Python
+categories: ai
 ---
 
 # Multi-Agent AI Systems with LangGraph & CrewAI: Production Guide 2026

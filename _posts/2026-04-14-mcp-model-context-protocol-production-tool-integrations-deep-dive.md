@@ -13,6 +13,7 @@ tags:
   - AgentFramework
   - Anthropic
   - Tools
+categories: ai
 ---
 
 # MCP (Model Context Protocol) Deep Dive: Building Production-Ready Tool Integrations for AI Agents

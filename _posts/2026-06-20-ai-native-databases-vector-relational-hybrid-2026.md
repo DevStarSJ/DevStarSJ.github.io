@@ -15,6 +15,7 @@ tags:
   - Qdrant
   - PostgreSQL
   - Machine Learning
+categories: ai
 ---
 
 ## The Database Landscape Has Shifted

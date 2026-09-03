@@ -12,6 +12,7 @@ tags:
   - GitHub
   - LLM
   - DevOps
+categories: ai
 ---
 
 AI code review tools have gone from novelty to ubiquity in two years. Every team has tried one. But the initial enthusiasm often fades when the tool starts flagging every PR with 20 comments about things developers don't care about. Getting AI-assisted code review to actually improve quality — without drowning developers in noise — requires more thought than just installing a tool.

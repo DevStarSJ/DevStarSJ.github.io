@@ -15,6 +15,7 @@ tags:
   - Windsurf
   - Developer Tools
   - Productivity
+categories: ai
 ---
 
 # GitHub Copilot Workspace vs Cursor vs Windsurf: The Ultimate AI IDE Comparison 2026

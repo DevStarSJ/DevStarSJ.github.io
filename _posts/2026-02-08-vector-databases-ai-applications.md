@@ -6,6 +6,7 @@ date: 2026-02-08
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1920&q=80"
 tags: [Vector Database, AI, RAG, Embeddings, Pinecone, Weaviate, Machine Learning]
+categories: ai
 ---
 
 Every AI application needs a memory. When you ask an LLM about your documents, how does it find relevant information? The answer is vector databases—specialized systems that store and search high-dimensional embeddings at scale.

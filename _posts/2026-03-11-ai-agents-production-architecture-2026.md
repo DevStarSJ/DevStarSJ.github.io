@@ -13,6 +13,7 @@ tags:
   - Architecture
   - Production
   - MLOps
+categories: ai
 ---
 
 AI agents have graduated from research projects to production workloads. In 2025, the narrative was "agents are almost ready." In 2026, the conversation has shifted to "how do we make them reliable, observable, and cost-effective at scale?" Having worked through several agent deployments — from customer support automation to code review pipelines — I want to share the patterns that hold up and the pitfalls that will wreck your on-call rotation.

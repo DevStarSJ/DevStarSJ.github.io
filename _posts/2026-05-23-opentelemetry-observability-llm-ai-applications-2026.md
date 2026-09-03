@@ -13,6 +13,7 @@ tags:
   - AI Engineering
   - Monitoring
   - DevOps
+categories: ai
 ---
 
 # Observability in the Age of AI: How OpenTelemetry is Evolving for LLM Applications

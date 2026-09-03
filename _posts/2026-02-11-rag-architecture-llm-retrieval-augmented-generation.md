@@ -6,6 +6,7 @@ date: 2026-02-11
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 tags: [RAG, LLM, AI, Vector Database, Machine Learning, NLP]
+categories: ai
 ---
 
 # RAG Architecture Deep Dive: Building Production-Ready Retrieval-Augmented Generation Systems

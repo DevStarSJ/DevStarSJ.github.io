@@ -6,6 +6,7 @@ date: 2026-02-14
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 tags: [MCP, AI Agents, LLM, Claude, OpenAI, Integration, Protocol]
+categories: ai
 ---
 
 # Model Context Protocol (MCP): Building Interconnected AI Agent Systems

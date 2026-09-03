@@ -16,6 +16,7 @@ tags:
   - React
   - MCP
   - Developer Tools
+categories: ai
 ---
 
 # Claude Code Complete Architecture Analysis: 7 Execution Modes, 45+ Tools, Coordinator Multi-Agent, and 8 Design Patterns

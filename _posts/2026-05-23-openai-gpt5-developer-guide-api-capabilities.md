@@ -13,6 +13,7 @@ tags:
   - API
   - AI
   - Developer
+categories: ai
 ---
 
 # GPT-5 for Developers: A Practical Guide to the New API Capabilities in 2026

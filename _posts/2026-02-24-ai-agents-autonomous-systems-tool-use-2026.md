@@ -14,6 +14,7 @@ tags:
   - Automation
   - Anthropic
   - OpenAI
+categories: ai
 ---
 
 # Building Production AI Agents in 2026: Tool Use, Orchestration, and Reliability at Scale

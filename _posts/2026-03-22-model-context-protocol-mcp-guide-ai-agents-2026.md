@@ -13,6 +13,7 @@ tags:
   - Agents
   - Claude
   - Developer Tools
+categories: ai
 ---
 
 # Model Context Protocol (MCP): The USB-C Standard for AI Agents in 2026

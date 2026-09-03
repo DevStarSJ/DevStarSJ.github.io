@@ -12,6 +12,7 @@ tags:
   - Inference
   - Performance
   - MLOps
+categories: ai
 ---
 
 # Inference Optimization: Making LLMs Fast and Cheap Enough for Production

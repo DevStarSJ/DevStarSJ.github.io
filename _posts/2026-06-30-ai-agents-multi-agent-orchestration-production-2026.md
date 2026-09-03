@@ -12,6 +12,7 @@ tags:
   - LLM
   - Architecture
   - Production
+categories: ai
 ---
 
 # Multi-Agent AI Orchestration: Building Production-Ready Agentic Systems in 2026

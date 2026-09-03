@@ -12,6 +12,7 @@ tags:
   - LLM
   - Agents
   - Protocol
+categories: ai
 ---
 
 # Model Context Protocol (MCP): The USB-C Standard for AI Tool Integration

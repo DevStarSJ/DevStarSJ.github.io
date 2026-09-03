@@ -14,6 +14,7 @@ tags:
   - QLoRA
   - MachineLearning
   - Python
+categories: ai
 ---
 
 # LLM Fine-Tuning with LoRA and QLoRA: A Practical Guide for 2026

@@ -13,6 +13,7 @@ tags:
   - Agents
   - Protocol
   - Developer Tools
+categories: ai
 ---
 
 ## The Integration Problem Nobody Wanted to Solve

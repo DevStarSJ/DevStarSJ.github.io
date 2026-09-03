@@ -14,6 +14,7 @@ tags:
   - Agents
   - Claude
   - OpenAI
+categories: ai
 ---
 
 ## What is Model Context Protocol (MCP)?

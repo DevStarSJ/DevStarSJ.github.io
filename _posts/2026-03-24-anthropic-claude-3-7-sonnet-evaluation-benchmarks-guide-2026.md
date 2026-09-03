@@ -14,6 +14,7 @@ tags:
   - LLM
   - Benchmarks
   - Machine Learning
+categories: ai
 ---
 
 # Anthropic Claude 3.7 Sonnet: Deep Dive into Performance, Benchmarks & Real-World Use Cases

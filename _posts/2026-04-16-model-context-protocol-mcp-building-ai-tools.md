@@ -15,6 +15,7 @@ tags:
   - API
   - Python
   - TypeScript
+categories: ai
 ---
 
 # Model Context Protocol (MCP): Building AI Tools That Actually Integrate

@@ -13,6 +13,7 @@ tags:
   - MachineLearning
   - Database
   - Embeddings
+categories: ai
 ---
 
 ## Introduction

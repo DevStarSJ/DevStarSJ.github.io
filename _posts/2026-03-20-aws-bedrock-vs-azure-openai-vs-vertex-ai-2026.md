@@ -14,6 +14,7 @@ tags:
   - AI
   - Cloud
   - Enterprise
+categories: ai
 ---
 
 # AWS Bedrock vs Azure OpenAI vs Google Vertex AI: Enterprise LLM Platform Comparison 2026

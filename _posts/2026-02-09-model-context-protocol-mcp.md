@@ -6,6 +6,7 @@ date: 2026-02-09
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80"
 tags: [MCP, Model Context Protocol, Anthropic, Claude, AI Tools, LLM Integration, API]
+categories: ai
 ---
 
 Every AI application needs to connect to external tools—databases, APIs, file systems. Until now, each integration was custom. Model Context Protocol (MCP) changes that with a universal standard.

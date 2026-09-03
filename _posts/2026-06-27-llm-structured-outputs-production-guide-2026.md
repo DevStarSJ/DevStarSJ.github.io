@@ -14,6 +14,7 @@ tags:
   - OpenAI
   - Anthropic
   - ProductionAI
+categories: ai
 ---
 
 ## The Problem with Free-Form LLM Outputs

@@ -14,6 +14,7 @@ tags:
   - CI/CD
   - Claude
   - Automation
+categories: ai
 ---
 
 # AI-Powered Code Review with GitHub Actions: Automate Quality Gates in 2026

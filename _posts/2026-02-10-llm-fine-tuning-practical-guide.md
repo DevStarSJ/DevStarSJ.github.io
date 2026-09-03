@@ -6,6 +6,7 @@ date: 2026-02-10
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80"
 tags: [LLM, Fine-Tuning, Machine Learning, AI, LoRA, QLoRA, OpenAI, Hugging Face]
+categories: ai
 ---
 
 Prompt engineering gets you 80% of the way. Fine-tuning gets you the last 20%—but it's expensive and easy to mess up. Here's when it makes sense and how to do it right.

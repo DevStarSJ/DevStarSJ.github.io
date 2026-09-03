@@ -15,6 +15,7 @@ tags:
   - Monitoring
   - GenAI
   - Production
+categories: ai
 ---
 
 ## The Observability Gap in AI Systems

@@ -14,6 +14,7 @@ tags:
   - Anthropic
   - Extended Thinking
   - Benchmarks
+categories: ai
 ---
 
 # Claude 3.7 Sonnet Extended Thinking: A Deep Dive into Hybrid Reasoning Models

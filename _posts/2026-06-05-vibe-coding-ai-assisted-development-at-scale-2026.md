@@ -13,6 +13,7 @@ tags:
   - Productivity
   - Coding Agents
   - Software Engineering
+categories: ai
 ---
 
 ## The "Vibe Coding" Phenomenon

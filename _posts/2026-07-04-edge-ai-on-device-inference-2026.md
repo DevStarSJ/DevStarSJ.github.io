@@ -12,6 +12,7 @@ tags:
   - MLOps
   - Inference
   - IoT
+categories: ai
 ---
 
 # Edge AI in 2026: Running Models Where the Data Lives

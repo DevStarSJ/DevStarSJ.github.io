@@ -13,6 +13,7 @@ tags:
   - Enterprise
   - LLM
   - Agents
+categories: ai
 ---
 
 # Claude 4 and the New Era of Enterprise AI: A Developer's Adoption Guide

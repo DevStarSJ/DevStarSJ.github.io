@@ -12,6 +12,7 @@ tags:
   - IoT
   - Cloud
   - Performance
+categories: ai
 ---
 
 # Edge Computing and Edge AI: The Complete Developer's Guide for 2026

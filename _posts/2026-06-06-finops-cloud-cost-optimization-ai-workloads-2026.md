@@ -13,6 +13,7 @@ tags:
   - GCP
   - Azure
   - AI Infrastructure
+categories: ai
 ---
 
 # FinOps at Scale: Taming Cloud Costs in the Age of AI Workloads

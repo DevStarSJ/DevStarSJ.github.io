@@ -13,6 +13,7 @@ tags:
   - Infrastructure
   - API Gateway
   - Cost Optimization
+categories: ai
 ---
 
 As organizations move from LLM experimentation to production, a critical infrastructure gap becomes apparent: who manages the complexity of routing requests, controlling costs, enforcing rate limits, and maintaining observability across multiple AI providers? The answer increasingly is the **AI Gateway** — a purpose-built proxy layer sitting between your applications and LLM providers.

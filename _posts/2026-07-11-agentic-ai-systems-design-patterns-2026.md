@@ -13,6 +13,7 @@ tags:
   - Multi-Agent
   - Architecture
   - Python
+categories: ai
 ---
 
 # Agentic AI Systems: Design Patterns for Building Autonomous AI Workflows in 2026

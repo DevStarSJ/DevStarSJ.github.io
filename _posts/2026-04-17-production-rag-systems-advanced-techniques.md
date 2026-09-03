@@ -13,6 +13,7 @@ tags:
   - LLM
   - NLP
   - Python
+categories: ai
 ---
 
 # Building Production-Ready RAG Systems: Beyond the Basics

@@ -15,6 +15,7 @@ tags:
   - Cursor
   - GitHub Copilot
   - Productivity
+categories: ai
 ---
 
 ## The Hype Cycle Has Settled

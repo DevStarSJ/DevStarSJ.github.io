@@ -12,6 +12,7 @@ tags:
   - Vibe Coding
   - LLM
   - Software Engineering
+categories: ai
 ---
 
 There's a new phrase circulating in engineering teams: *vibe coding*. The term, coined by Andrej Karpathy in early 2025, describes a mode of programming where you describe what you want in natural language, let an AI generate the code, and intervene only when something breaks. You're not writing code line-by-line. You're steering.

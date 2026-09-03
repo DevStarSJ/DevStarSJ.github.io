@@ -14,6 +14,7 @@ tags:
   - Agents
   - Multimodal
   - Production
+categories: ai
 ---
 
 # Claude 4 in Production: Building Reliable Multimodal AI Agents in 2026

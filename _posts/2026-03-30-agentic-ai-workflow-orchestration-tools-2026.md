@@ -13,6 +13,7 @@ tags:
   - LangGraph
   - Orchestration
   - AutoGen
+categories: ai
 ---
 
 # Agentic AI Workflows in 2026: Orchestration Tools, Patterns, and Production Lessons

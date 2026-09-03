@@ -13,6 +13,7 @@ tags:
   - Protocol
   - Integration
   - Anthropic
+categories: ai
 ---
 
 ## The Integration Problem AI Has Been Ignoring

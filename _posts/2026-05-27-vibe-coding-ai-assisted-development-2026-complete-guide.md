@@ -13,6 +13,7 @@ tags:
   - Developer Tools
   - GitHub Copilot
   - Claude Code
+categories: ai
 ---
 
 ## The Term That Captured a Movement

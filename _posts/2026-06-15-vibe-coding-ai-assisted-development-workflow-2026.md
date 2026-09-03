@@ -12,6 +12,7 @@ tags:
   - Productivity
   - Copilot
   - CodingAgent
+categories: ai
 ---
 
 # Vibe Coding in 2026: How AI-Assisted Development Is Reshaping Engineering Workflows

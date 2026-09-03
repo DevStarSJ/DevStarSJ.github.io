@@ -13,6 +13,7 @@ tags:
   - Machine Learning
   - MLOps
   - LoRA
+categories: ai
 ---
 
 # LLM Fine-Tuning in Production 2026: LoRA, QLoRA, and Full Fine-Tuning Compared

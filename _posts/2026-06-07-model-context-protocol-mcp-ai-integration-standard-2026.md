@@ -12,6 +12,7 @@ tags:
   - LLM
   - Agentic AI
   - Integration
+categories: ai
 ---
 
 ## What is Model Context Protocol (MCP)?

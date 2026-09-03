@@ -13,6 +13,7 @@ tags:
   - Performance
   - vLLM
   - Production AI
+categories: ai
 ---
 
 ## The LLM Inference Challenge

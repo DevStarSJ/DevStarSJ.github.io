@@ -14,6 +14,7 @@ tags:
   - Developer Tools
   - Vibe Coding
   - Productivity
+categories: ai
 ---
 
 # Vibe Coding in 2026: AI Pair Programming with GitHub Copilot, Cursor, and Windsurf

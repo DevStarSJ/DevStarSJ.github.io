@@ -12,6 +12,7 @@ tags:
   - LLM
   - Architecture
   - Production
+categories: ai
 ---
 
 ## Introduction

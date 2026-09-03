@@ -12,6 +12,7 @@ tags:
   - Prompt Engineering
   - GPT
   - Claude
+categories: ai
 ---
 
 # Prompt Engineering in 2026: Beyond Few-Shot — Advanced Techniques That Actually Work

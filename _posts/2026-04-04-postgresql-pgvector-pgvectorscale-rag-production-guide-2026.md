@@ -15,6 +15,7 @@ tags:
   - Machine Learning
   - Database
   - Embeddings
+categories: ai
 ---
 
 # PostgreSQL Vector Search in 2026: pgvector vs pgvectorscale — Building Production RAG Systems

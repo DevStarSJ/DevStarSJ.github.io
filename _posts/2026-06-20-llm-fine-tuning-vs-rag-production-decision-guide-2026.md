@@ -14,6 +14,7 @@ tags:
   - Fine-tuning
   - Machine Learning
   - Production
+categories: ai
 ---
 
 ## Introduction

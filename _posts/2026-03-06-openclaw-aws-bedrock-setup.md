@@ -12,6 +12,7 @@ tags:
   - Bedrock
   - Claude
   - AI
+categories: ai
 ---
 
 This guide walks through how to connect OpenClaw to AWS Bedrock and run Claude Sonnet 4.6 as your primary model on macOS. Using Bedrock lets you leverage your AWS account's capacity with stable, reliable inference — and once it's set up, it just works.

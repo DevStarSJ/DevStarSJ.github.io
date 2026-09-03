@@ -12,6 +12,7 @@ tags:
   - Agents
   - MLOps
   - Production
+categories: ai
 ---
 
 A year ago, "AI agents" meant demos on YouTube. Today, they're pulling orders, triaging support tickets, writing code, and managing pipelines inside real production systems. The gap between what works in a notebook and what survives contact with production has never been more instructive.

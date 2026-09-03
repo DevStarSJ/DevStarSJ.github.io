@@ -12,6 +12,7 @@ tags:
   - Software Engineering
   - Automation
   - LLM
+categories: ai
 ---
 
 Something quietly crossed a threshold in 2025: AI stopped being a tool that helps developers write code and started becoming a system that *does* software engineering. Not autocomplete. Not a smarter Stack Overflow. An agent — one that reads your codebase, plans changes, writes tests, runs them, debugs failures, and opens a pull request.

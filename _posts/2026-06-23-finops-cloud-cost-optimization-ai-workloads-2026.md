@@ -14,6 +14,7 @@ tags:
   - GCP
   - Cost Optimization
   - AI Infrastructure
+categories: ai
 ---
 
 ## Introduction

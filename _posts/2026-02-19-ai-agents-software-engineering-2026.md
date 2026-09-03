@@ -12,6 +12,7 @@ tags:
   - Coding Agents
   - Developer Tools
   - Software Engineering
+categories: ai
 ---
 
 # AI Coding Agents in 2026: From Autocomplete to Autonomous Engineering

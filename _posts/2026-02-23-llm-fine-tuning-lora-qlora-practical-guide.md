@@ -13,6 +13,7 @@ tags:
   - QLoRA
   - Machine Learning
   - AI
+categories: ai
 ---
 
 # LLM Fine-Tuning in 2026: A Practical Guide to LoRA and QLoRA

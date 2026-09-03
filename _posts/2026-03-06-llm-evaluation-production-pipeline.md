@@ -12,6 +12,7 @@ tags:
   - Evaluation
   - MLOps
   - Production AI
+categories: ai
 ---
 
 Shipping LLM-powered features is now table stakes. The hard part isn't getting a prototype working — it's knowing whether your model is performing well, catching regressions before users do, and maintaining quality as you iterate on prompts and models.

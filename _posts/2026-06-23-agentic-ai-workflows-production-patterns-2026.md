@@ -13,6 +13,7 @@ tags:
   - Multi-Agent
   - Production
   - MLOps
+categories: ai
 ---
 
 ## Introduction

@@ -13,6 +13,7 @@ tags:
   - LLM
   - Vector Database
   - NLP
+categories: ai
 ---
 
 ## The Problem With "Just RAG"

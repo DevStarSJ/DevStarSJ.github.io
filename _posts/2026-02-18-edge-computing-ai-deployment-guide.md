@@ -12,6 +12,7 @@ tags:
   - IoT
   - Machine Learning
   - Infrastructure
+categories: ai
 ---
 
 # Edge Computing and Edge AI: Deploying Intelligence at the Edge in 2026

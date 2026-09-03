@@ -6,6 +6,7 @@ date: 2026-02-06
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80"
 tags: [AI, MCP, Claude, Integration, API, Developer Tools]
+categories: ai
 ---
 
 Remember when every device needed a different cable? Then USB came along. Model Context Protocol (MCP) is doing the same thing for AI tools—creating a universal way for AI models to interact with external systems.

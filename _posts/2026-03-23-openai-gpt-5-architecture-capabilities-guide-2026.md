@@ -14,6 +14,7 @@ tags:
   - LLM
   - Machine Learning
   - Deep Learning
+categories: ai
 ---
 
 # GPT-5 Architecture Deep Dive: What's New and How It Changes AI Development in 2026

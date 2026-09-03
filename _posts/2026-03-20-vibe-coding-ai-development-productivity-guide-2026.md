@@ -13,6 +13,7 @@ tags:
   - Cursor
   - Claude Code
   - Productivity
+categories: ai
 ---
 
 # Vibe Coding with AI: How to Build Production Apps 10x Faster in 2026

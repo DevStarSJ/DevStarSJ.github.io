@@ -15,6 +15,7 @@ tags:
   - Developer Tools
   - MCP
   - Anthropic
+categories: ai
 ---
 
 # Claude Code Channels: Control Your AI Agent from Telegram and Discord

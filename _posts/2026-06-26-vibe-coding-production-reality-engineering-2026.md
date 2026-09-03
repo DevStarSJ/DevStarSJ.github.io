@@ -13,6 +13,7 @@ tags:
   - LLM
   - Productivity
   - SoftwareEngineering
+categories: ai
 ---
 
 ## Introduction

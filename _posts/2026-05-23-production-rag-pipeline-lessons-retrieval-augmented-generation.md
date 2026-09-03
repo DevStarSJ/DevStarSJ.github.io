@@ -13,6 +13,7 @@ tags:
   - AI Engineering
   - NLP
   - Production ML
+categories: ai
 ---
 
 # Building Reliable RAG Pipelines in Production: Lessons from Real Deployments

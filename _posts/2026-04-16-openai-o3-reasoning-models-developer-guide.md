@@ -13,6 +13,7 @@ tags:
   - Reasoning
   - o3
   - Python
+categories: ai
 ---
 
 # OpenAI o3 and Reasoning Models: A Developer's Practical Guide

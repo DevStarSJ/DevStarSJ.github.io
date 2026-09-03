@@ -15,6 +15,7 @@ tags:
   - Bun
   - AI Agents
   - Reverse Engineering
+categories: ai
 ---
 
 # Claude Code Source Code Leak: How a Bun Bug Exposed Anthropic's AI Agent Internals

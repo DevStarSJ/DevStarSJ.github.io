@@ -13,6 +13,7 @@ tags:
   - Realtime API
   - WebSocket
   - LLM
+categories: ai
 ---
 
 # Building Production-Ready Voice Agents with OpenAI Realtime API in 2026

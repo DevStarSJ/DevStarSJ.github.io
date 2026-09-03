@@ -12,6 +12,7 @@ tags:
   - RAG
   - AI
   - Machine Learning
+categories: ai
 ---
 
 # LLM Fine-Tuning and RAG Optimization: A Practical Guide for 2026

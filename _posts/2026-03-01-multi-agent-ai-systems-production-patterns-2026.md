@@ -13,6 +13,7 @@ tags:
   - Agent Orchestration
   - Production
   - Architecture
+categories: ai
 ---
 
 # Multi-Agent AI Systems in Production: Patterns, Pitfalls, and Best Practices for 2026

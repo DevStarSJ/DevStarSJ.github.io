@@ -13,6 +13,7 @@ tags:
   - LLM
   - API
   - Python
+categories: ai
 ---
 
 # Anthropic Claude 4 API: Complete Developer Guide for 2026

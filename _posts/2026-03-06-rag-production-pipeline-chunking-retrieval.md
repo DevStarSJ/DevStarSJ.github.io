@@ -12,6 +12,7 @@ tags:
   - AI Engineering
   - Vector Database
   - Information Retrieval
+categories: ai
 ---
 
 Retrieval-Augmented Generation (RAG) is the backbone of most production AI applications. Knowledge bases, document Q&A, code search, customer support — if your application needs to answer questions about specific content, RAG is usually how you do it.

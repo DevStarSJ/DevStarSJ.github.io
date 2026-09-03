@@ -12,6 +12,7 @@ tags:
   - Agents
   - Production
   - MLOps
+categories: ai
 ---
 
 # AI Agents in Production: Patterns, Pitfalls, and Best Practices for 2026

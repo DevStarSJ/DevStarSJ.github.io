@@ -6,6 +6,7 @@ date: 2026-02-05
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80"
 tags: [AI, LangChain, Agents, LLM, Python]
+categories: ai
 ---
 
 The AI landscape has shifted dramatically. We're no longer just building chatbots—we're creating **autonomous agents** that can reason, plan, and execute complex tasks. LangChain has emerged as the go-to framework for building these intelligent systems.

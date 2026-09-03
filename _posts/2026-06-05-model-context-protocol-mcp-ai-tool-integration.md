@@ -13,6 +13,7 @@ tags:
   - LLM
   - AI Agents
   - Integration
+categories: ai
 ---
 
 ## What Is the Model Context Protocol?

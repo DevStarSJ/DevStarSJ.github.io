@@ -12,6 +12,7 @@ tags:
   - Machine Learning
   - Mobile AI
   - Quantization
+categories: ai
 ---
 
 # Edge AI in 2026: Running LLMs and Vision Models On-Device

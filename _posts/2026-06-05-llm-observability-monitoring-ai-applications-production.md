@@ -13,6 +13,7 @@ tags:
   - MLOps
   - AI
   - Monitoring
+categories: ai
 ---
 
 ## Why LLM Observability Is Different

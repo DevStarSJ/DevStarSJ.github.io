@@ -13,6 +13,7 @@ tags:
   - RAG
   - Database
   - Backend
+categories: ai
 ---
 
 # Postgres as a Vector Database: pgvector in Production 2026

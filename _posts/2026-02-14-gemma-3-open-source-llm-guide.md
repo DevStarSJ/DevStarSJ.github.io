@@ -6,6 +6,7 @@ date: 2026-02-14
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200"
 tags: [Gemma, LLM, Open Source, AI, Machine Learning, Google, Hugging Face, Local AI]
+categories: ai
 ---
 
 # Gemma 3: Google's Open Source LLM Revolution

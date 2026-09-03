@@ -12,6 +12,7 @@ tags:
   - Agentic AI
   - Production
   - MLOps
+categories: ai
 ---
 
 # Agentic AI Workflows in Production: Patterns and Best Practices for 2026

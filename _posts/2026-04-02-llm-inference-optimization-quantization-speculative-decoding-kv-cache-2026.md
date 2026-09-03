@@ -14,6 +14,7 @@ tags:
   - Machine Learning
   - Performance
   - MLOps
+categories: ai
 ---
 
 # LLM Inference Optimization in 2026: Quantization, Speculative Decoding, and KV Cache Strategies

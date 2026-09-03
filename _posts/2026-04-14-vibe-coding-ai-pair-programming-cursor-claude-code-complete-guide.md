@@ -13,6 +13,7 @@ tags:
   - ClaudeCode
   - LLM
   - DeveloperTools
+categories: ai
 ---
 
 # Vibe Coding in 2026: How AI Pair Programming Is Reshaping Software Development

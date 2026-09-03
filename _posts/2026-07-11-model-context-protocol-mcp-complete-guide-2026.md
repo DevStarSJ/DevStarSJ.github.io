@@ -14,6 +14,7 @@ tags:
   - Claude
   - Integration
   - Protocol
+categories: ai
 ---
 
 # Model Context Protocol (MCP): The USB-C Moment for AI Tool Integration

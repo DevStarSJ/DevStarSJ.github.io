@@ -12,6 +12,7 @@ tags:
   - Agents
   - Production
   - DevOps
+categories: ai
 ---
 
 # AI Agents in Production: A Complete Deployment Guide for 2026

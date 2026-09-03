@@ -6,6 +6,7 @@ date: 2026-02-15
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 tags: [AI, Agents, LLM, Autonomous Systems, OpenAI, Anthropic, LangChain]
+categories: ai
 ---
 
 # Building AI Agents: From Chatbots to Autonomous Systems

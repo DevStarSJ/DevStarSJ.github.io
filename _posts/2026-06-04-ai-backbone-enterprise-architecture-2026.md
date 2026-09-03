@@ -13,6 +13,7 @@ tags:
   - Cloud
   - Machine Learning
   - Digital Transformation
+categories: ai
 ---
 
 ## The Shift: AI Is No Longer an Add-On

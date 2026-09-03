@@ -13,6 +13,7 @@ tags:
   - Vector Database
   - Agentic AI
   - Machine Learning
+categories: ai
 ---
 
 ## The RAG Graveyard

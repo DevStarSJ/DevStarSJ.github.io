@@ -5,6 +5,7 @@ subtitle: "Moving from simple chatbots to autonomous AI agents that get things d
 date: 2026-03-05 22:00:00 +0900
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop"
 tags: [AI, Technology, Automation]
+categories: ai
 ---
 
 As we move further into 2026, the conversation around Artificial Intelligence has shifted from generative models that simply create text or images to **Agentic AI**. Unlike their predecessors, AI agents are designed to execute complex tasks autonomously, interacting with various software tools and making decisions to achieve a specific goal.

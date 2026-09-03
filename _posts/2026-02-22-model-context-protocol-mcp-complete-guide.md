@@ -12,6 +12,7 @@ tags:
   - LLM
   - Developer Tools
   - Anthropic
+categories: ai
 ---
 
 # Model Context Protocol (MCP): The Universal Standard for AI Tool Integration

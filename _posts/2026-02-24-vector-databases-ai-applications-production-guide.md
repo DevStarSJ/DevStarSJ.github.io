@@ -15,6 +15,7 @@ tags:
   - Weaviate
   - Embeddings
   - AI
+categories: ai
 ---
 
 # Vector Databases in 2026: The Complete Production Guide for AI-Powered Applications

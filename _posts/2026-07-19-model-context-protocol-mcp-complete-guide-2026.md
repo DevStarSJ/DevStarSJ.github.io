@@ -12,6 +12,7 @@ tags:
   - LLM
   - Agentic AI
   - Anthropic
+categories: ai
 ---
 
 ## What Is Model Context Protocol?

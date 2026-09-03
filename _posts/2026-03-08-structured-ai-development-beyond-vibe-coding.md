@@ -12,6 +12,7 @@ tags:
   - Coding
   - Productivity
   - LLM
+categories: ai
 ---
 
 In early 2025, the term "vibe coding" swept through developer Twitter. The pitch was irresistible: stop worrying about the details, just describe what you want, and let AI figure out the implementation. Ship fast. Iterate faster. Who cares if you don't fully understand every line?

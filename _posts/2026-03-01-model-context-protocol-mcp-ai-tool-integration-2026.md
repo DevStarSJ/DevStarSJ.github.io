@@ -14,6 +14,7 @@ tags:
   - Anthropic
   - Claude
   - Agent
+categories: ai
 ---
 
 # Model Context Protocol (MCP): The New Standard for AI Tool Integration in 2026

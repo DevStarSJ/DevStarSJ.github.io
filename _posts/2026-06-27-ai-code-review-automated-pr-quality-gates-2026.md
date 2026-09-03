@@ -13,6 +13,7 @@ tags:
   - LLM
   - CI/CD
   - DeveloperExperience
+categories: ai
 ---
 
 ## The Code Review Bottleneck Is Real

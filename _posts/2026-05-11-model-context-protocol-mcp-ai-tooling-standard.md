@@ -12,6 +12,7 @@ tags:
   - LLM
   - Tooling
   - Protocol
+categories: ai
 ---
 
 ## The Fragmentation Problem in AI Tooling

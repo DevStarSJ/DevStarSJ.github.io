@@ -13,6 +13,7 @@ tags:
   - Semantic Search
   - Machine Learning
   - Embeddings
+categories: ai
 ---
 
 # Vector Databases Explained: The Infrastructure Layer Powering Modern AI Applications

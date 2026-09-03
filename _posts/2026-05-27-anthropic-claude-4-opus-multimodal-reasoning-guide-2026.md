@@ -13,6 +13,7 @@ tags:
   - LLM
   - Multimodal
   - Reasoning
+categories: ai
 ---
 
 ## The State of Large Language Models in 2026

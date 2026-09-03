@@ -12,6 +12,7 @@ tags:
   - Developer Tools
   - Productivity
   - Programming
+categories: ai
 ---
 
 # AI Pair Programming in 2026: GitHub Copilot, Claude, and Beyond

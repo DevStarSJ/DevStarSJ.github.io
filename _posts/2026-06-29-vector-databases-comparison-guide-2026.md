@@ -13,6 +13,7 @@ tags:
   - RAG
   - Embeddings
   - 2026
+categories: ai
 ---
 
 ## Why Vector Databases Matter Now

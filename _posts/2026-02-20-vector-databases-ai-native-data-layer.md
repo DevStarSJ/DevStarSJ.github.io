@@ -14,6 +14,7 @@ tags:
   - Pinecone
   - pgvector
   - Weaviate
+categories: ai
 ---
 
 # Vector Databases in 2026: The AI-Native Data Layer Every Engineer Should Know

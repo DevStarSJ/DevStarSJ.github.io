@@ -6,6 +6,7 @@ date: 2026-02-09
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80"
 tags: [AI Agents, LLM, Autonomous Systems, Claude, GPT, Multi-Agent, Automation]
+categories: ai
 ---
 
 AI agents have evolved from simple Q&A bots to autonomous systems that can browse the web, write code, manage files, and coordinate with other agents. In 2026, building agentic workflows is becoming a core skill for developers.

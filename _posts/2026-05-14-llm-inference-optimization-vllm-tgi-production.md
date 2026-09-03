@@ -14,6 +14,7 @@ tags:
   - MLOps
   - Production
   - AI
+categories: ai
 ---
 
 # LLM Inference Optimization: vLLM, TGI, and Production Serving Strategies in 2026

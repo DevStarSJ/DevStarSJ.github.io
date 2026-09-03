@@ -12,6 +12,7 @@ tags:
   - RAG
   - MLOps
   - Backend
+categories: ai
 ---
 
 # Vector Databases in Production: A Practical Guide for 2026

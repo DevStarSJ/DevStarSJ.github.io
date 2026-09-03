@@ -14,6 +14,7 @@ tags:
   - Machine Learning
   - Database
   - pgvector
+categories: ai
 ---
 
 ## The Vector Database Explosion

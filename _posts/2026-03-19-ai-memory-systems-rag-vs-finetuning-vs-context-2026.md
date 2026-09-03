@@ -12,6 +12,7 @@ tags:
   - LLM
   - Fine-Tuning
   - Machine Learning
+categories: ai
 ---
 
 # AI Memory Systems in 2026: RAG vs Fine-Tuning vs Long Context — Choosing the Right Approach

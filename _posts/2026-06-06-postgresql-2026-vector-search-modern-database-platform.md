@@ -12,6 +12,7 @@ tags:
   - pgvector
   - SQL
   - Open Source
+categories: ai
 ---
 
 # Postgres in 2026: The Unstoppable Rise of the World's Most Advanced Open Source Database

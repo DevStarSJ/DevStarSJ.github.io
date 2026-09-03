@@ -13,6 +13,7 @@ tags:
   - PromptEngineering
   - MLOps
   - Python
+categories: ai
 ---
 
 # DSPy: The End of Prompt Engineering as We Know It

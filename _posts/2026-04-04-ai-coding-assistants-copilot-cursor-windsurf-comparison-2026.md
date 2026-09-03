@@ -15,6 +15,7 @@ tags:
   - Developer Tools
   - Productivity
   - LLM
+categories: ai
 ---
 
 # AI Coding Assistants in 2026: GitHub Copilot vs Cursor vs Windsurf — A Deep Dive Comparison

@@ -12,6 +12,7 @@ tags:
   - Edge Computing
   - Cloud
   - Performance
+categories: ai
 ---
 
 When WebAssembly landed in browsers in 2017, the conversation was about running C++ games and video editors in a web tab. A reasonable but ultimately small idea.

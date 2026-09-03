@@ -15,6 +15,7 @@ tags:
   - Claude
   - Benchmarks
   - Developer Tools
+categories: ai
 ---
 
 ## Introduction

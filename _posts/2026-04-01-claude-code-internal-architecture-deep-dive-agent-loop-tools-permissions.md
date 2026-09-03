@@ -15,6 +15,7 @@ tags:
   - Developer Tools
   - LLM
   - MCP
+categories: ai
 ---
 
 # Claude Code Internal Architecture Deep Dive: How Anthropic Built a Production AI Coding Agent

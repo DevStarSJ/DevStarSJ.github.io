@@ -13,6 +13,7 @@ tags:
   - Testing
   - MLOps
   - Production AI
+categories: ai
 ---
 
 ## The Vibes-Based Development Trap

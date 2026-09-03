@@ -13,6 +13,7 @@ tags:
   - Automation
   - Enterprise
   - OpenAI
+categories: ai
 ---
 
 # AI Agents in the Enterprise: Building Autonomous Workflows That Actually Work

@@ -13,6 +13,7 @@ tags:
   - Machine Learning
   - LoRA
   - Production
+categories: ai
 ---
 
 # LLM Fine-Tuning in Production: A Complete Guide for 2026

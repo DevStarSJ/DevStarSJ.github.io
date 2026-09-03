@@ -12,6 +12,7 @@ tags:
   - Safety
   - MLOps
   - Backend
+categories: ai
 ---
 
 # LLM Guardrails and Safety Layers: Building Reliable AI Applications in 2026

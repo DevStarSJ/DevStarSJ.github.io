@@ -13,6 +13,7 @@ tags:
   - Database
   - Search
   - RAG
+categories: ai
 ---
 
 Two years ago, "vector database" was a term most engineers learned the week they started building their first RAG pipeline. Today it's a production concern — teams are running hundreds of millions of vectors, managing embedding model upgrades, dealing with stale indexes, and debugging why semantic search returns the wrong results at 2am. This post is about what we've learned.

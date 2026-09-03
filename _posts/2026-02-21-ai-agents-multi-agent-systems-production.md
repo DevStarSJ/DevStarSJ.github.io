@@ -12,6 +12,7 @@ tags:
   - Multi-Agent
   - AI Architecture
   - Production AI
+categories: ai
 ---
 
 # Building Production-Ready Multi-Agent AI Systems in 2026

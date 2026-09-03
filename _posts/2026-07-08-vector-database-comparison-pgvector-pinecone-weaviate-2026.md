@@ -14,6 +14,7 @@ tags:
   - pgvector
   - Pinecone
   - Weaviate
+categories: ai
 ---
 
 # Vector Databases Explained: Choosing Between Pgvector, Pinecone, and Weaviate in 2026

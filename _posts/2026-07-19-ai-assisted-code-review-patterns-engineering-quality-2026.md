@@ -13,6 +13,7 @@ tags:
   - Engineering Culture
   - LLM
   - DevOps
+categories: ai
 ---
 
 ## The Promise vs. The Reality

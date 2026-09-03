@@ -6,6 +6,7 @@ date: 2026-02-06
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&q=80"
 tags: [AI, Code Review, GitHub Copilot, Claude, Cursor, Developer Tools]
+categories: ai
 ---
 
 AI-powered code review has evolved from a novelty to an essential part of modern development workflows. In 2026, the competition between tools has never been fiercer. Let's break down what actually works.

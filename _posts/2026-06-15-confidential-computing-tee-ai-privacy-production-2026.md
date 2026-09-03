@@ -12,6 +12,7 @@ tags:
   - AI
   - Privacy
   - Cloud
+categories: ai
 ---
 
 # Confidential Computing in 2026: Running AI Workloads Where No One Can See the Data

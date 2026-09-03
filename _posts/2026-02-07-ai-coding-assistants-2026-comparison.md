@@ -6,6 +6,7 @@ date: 2026-02-07
 author: "Dev Star"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80"
 tags: [AI, Development, Productivity, Tools, Claude, Copilot, Cursor]
+categories: ai
 ---
 
 AI coding assistants have evolved from autocomplete tools to genuine pair programmers. In 2026, three platforms lead the market: Claude Code, GitHub Copilot, and Cursor. Each takes a different approach to AI-assisted development.

@@ -12,6 +12,7 @@ tags:
   - LLM
   - Agent
   - Integration
+categories: ai
 ---
 
 # Model Context Protocol (MCP): The Standard That's Changing AI Integration in 2026

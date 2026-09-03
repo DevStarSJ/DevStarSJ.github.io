@@ -13,6 +13,7 @@ tags:
   - Prompt Engineering
   - Machine Learning
   - Productivity
+categories: ai
 ---
 
 In 2023, prompt engineering felt like casting spells. "Pretend you are a senior engineer..." "Think step by step..." "You will be tipped $200 for a good answer." Some of these worked. Most were cargo cult. By 2026, we have actual empirical data on what moves the needle — and the picture is more nuanced than the discourse suggests.

@@ -13,6 +13,7 @@ tags:
   - LLM
   - Integration
   - Protocols
+categories: ai
 ---
 
 ## Introduction

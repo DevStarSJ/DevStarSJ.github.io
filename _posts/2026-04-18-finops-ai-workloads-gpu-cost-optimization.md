@@ -13,6 +13,7 @@ tags:
   - GPU
   - LLM
   - Cost Optimization
+categories: ai
 ---
 
 ## Introduction

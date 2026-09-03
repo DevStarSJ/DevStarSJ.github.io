@@ -13,6 +13,7 @@ tags:
   - GitHub Copilot
   - Productivity
   - LLM
+categories: ai
 ---
 
 # AI-Powered Developer Tools in 2026: Cursor, Copilot, and the Future of Coding

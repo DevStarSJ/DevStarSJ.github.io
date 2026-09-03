@@ -13,6 +13,7 @@ tags:
   - LLM
   - Machine Learning
   - Production
+categories: ai
 ---
 
 # Vector Databases and RAG Architecture: Building Production-Ready AI Search in 2026

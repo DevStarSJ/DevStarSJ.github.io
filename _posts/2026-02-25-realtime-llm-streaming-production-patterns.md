@@ -14,6 +14,7 @@ tags:
   - Real-Time
   - Server-Sent Events
   - WebSockets
+categories: ai
 ---
 
 # Real-Time LLM Streaming in Production: Patterns for Responsive AI Applications

@@ -12,6 +12,7 @@ tags:
   - Architecture
   - Production
   - Reliability
+categories: ai
 ---
 
 # AI Agents in Production: Architecture Patterns for Reliable Autonomous Systems
