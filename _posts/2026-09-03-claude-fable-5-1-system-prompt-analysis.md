@@ -3,7 +3,7 @@ layout: post
 title: "Claude Fable 5.1 시스템 프롬프트 전문 분석 및 한글 번역"
 subtitle: "Anthropic이 공개한 시스템 프롬프트에서 배우는 프로덕션 프롬프트 설계 — 그리고 전문 한글 해석"
 date: 2026-09-03 08:00:00 +0900
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
 header-mask: 0.4
 catalog: true
