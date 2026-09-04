@@ -3,7 +3,7 @@ layout: post
 title: "Terraform 2.0: What Changed and How to Migrate Your Infrastructure Code"
 subtitle: "Breaking changes, the new state backend model, provider v6, and the definitive upgrade checklist"
 date: 2026-04-17 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 catalog: true
 tags:

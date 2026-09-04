@@ -3,7 +3,7 @@ layout: post
 title: "OpenTofu and the Future of Infrastructure as Code After Terraform's License Change"
 subtitle: "How the open-source IaC ecosystem evolved after HashiCorp's BSL pivot and what it means for your infrastructure strategy"
 date: 2026-05-13 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80"
 header-mask: 0.4
 catalog: true

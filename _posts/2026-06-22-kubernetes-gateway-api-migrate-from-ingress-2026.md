@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Gateway API: Why You Should Migrate from Ingress Now"
 subtitle: "A complete guide to the GA-stable Gateway API — roles, routes, traffic splitting, and a migration path from NGINX Ingress"
 date: 2026-06-22 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

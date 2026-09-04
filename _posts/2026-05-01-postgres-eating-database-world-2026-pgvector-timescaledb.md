@@ -3,7 +3,7 @@ layout: post
 title: "Postgres Is Eating the Database World in 2026: Here's Why"
 subtitle: "From time-series to vector search to graph queries — how PostgreSQL became the universal database and why specialized databases are losing market share"
 date: 2026-05-01 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

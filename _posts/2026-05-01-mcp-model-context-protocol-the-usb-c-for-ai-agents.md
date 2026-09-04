@@ -3,7 +3,7 @@ layout: post
 title: "MCP: The USB-C for AI Agents Is Here and Changing Everything"
 subtitle: "How Anthropic's Model Context Protocol became the universal connector that AI tools desperately needed"
 date: 2026-05-01 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

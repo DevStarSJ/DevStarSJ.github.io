@@ -3,7 +3,7 @@ layout: post
 title: "Next.js 15 App Router in Production: Patterns, Pitfalls, and Performance"
 subtitle: "Practical lessons from deploying Next.js 15 at scale — caching strategies, Server Components, and the rendering model demystified"
 date: 2026-05-13 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80"
 header-mask: 0.4
 catalog: true

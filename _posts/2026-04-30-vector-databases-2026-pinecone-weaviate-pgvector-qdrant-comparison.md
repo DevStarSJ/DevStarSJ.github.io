@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: Comparing Pinecone, Weaviate, pgvector, and Qdrant for Production RAG"
 subtitle: "An engineer's guide to choosing the right vector store — benchmark data, architecture trade-offs, and real deployment lessons"
 date: 2026-04-30 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

@@ -3,7 +3,7 @@ layout: post
 title: "Durable Execution: How Temporal and Restate Are Changing Distributed Systems"
 subtitle: "Escaping the complexity of sagas, compensations, and retry logic with durable execution engines"
 date: 2026-05-13 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80"
 header-mask: 0.4
 catalog: true

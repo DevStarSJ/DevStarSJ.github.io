@@ -3,7 +3,7 @@ layout: post
 title: "React Server Components in 2026: The Definitive Architecture Guide"
 subtitle: "How RSC, Suspense, and streaming SSR rewired how we think about React applications"
 date: 2026-07-10 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "The Death of the Monolith? Why Modular Monoliths Are Making a Comeback in 2026"
 subtitle: "After years of microservices hype, engineering teams are rediscovering the modular monolith — and for good reason"
 date: 2026-04-30 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

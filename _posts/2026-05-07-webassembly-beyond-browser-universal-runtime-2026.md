@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Beyond the Browser: Wasm's Rise as a Universal Runtime in 2026"
 subtitle: "How WebAssembly is reshaping edge computing, serverless, and plugin architectures"
 date: 2026-05-07 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

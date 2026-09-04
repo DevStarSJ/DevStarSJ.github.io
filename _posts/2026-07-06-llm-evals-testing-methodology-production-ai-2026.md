@@ -3,7 +3,7 @@ layout: post
 title: "LLM Evals: The Testing Methodology Your AI Team Is Probably Skipping"
 subtitle: "Why vibes-based AI development fails in production and how to build rigorous evaluation pipelines for language models"
 date: 2026-07-06 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
 catalog: true
 tags:

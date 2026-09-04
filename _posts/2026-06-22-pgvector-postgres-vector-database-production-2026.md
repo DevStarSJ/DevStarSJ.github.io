@@ -3,7 +3,7 @@ layout: post
 title: "Postgres as a Vector Database: pgvector in Production 2026"
 subtitle: "Why teams are consolidating their vector workloads into PostgreSQL — architecture, tuning, and the real cost comparison with dedicated vector DBs"
 date: 2026-06-22 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

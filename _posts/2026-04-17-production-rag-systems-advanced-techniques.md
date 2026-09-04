@@ -3,7 +3,7 @@ layout: post
 title: "Building Production-Ready RAG Systems: Beyond the Basics"
 subtitle: "Chunking strategies, reranking, hybrid search, and evaluation frameworks for enterprise-grade Retrieval-Augmented Generation"
 date: 2026-04-17 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80"
 catalog: true
 tags:

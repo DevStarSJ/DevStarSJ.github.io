@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly in 2026: Running Native Code in the Browser and Beyond"
 subtitle: "WASM Components, WASI 2.0, and the polyglot runtime that's reshaping the web"
 date: 2026-07-10 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

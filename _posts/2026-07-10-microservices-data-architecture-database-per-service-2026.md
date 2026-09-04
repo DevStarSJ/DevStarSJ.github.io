@@ -3,7 +3,7 @@ layout: post
 title: "Database Per Service vs. Shared Database: Microservices Data Architecture in 2026"
 subtitle: "The patterns, trade-offs, and when each approach actually makes sense for your team"
 date: 2026-07-10 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

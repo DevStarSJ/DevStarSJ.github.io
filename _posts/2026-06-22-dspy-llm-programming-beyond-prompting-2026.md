@@ -3,7 +3,7 @@ layout: post
 title: "DSPy: The End of Prompt Engineering as We Know It"
 subtitle: "How declarative LLM programming with DSPy replaces brittle prompt strings with composable, optimizable pipelines"
 date: 2026-06-22 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

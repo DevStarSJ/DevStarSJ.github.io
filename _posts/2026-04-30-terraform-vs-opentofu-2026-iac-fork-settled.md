@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs OpenTofu in 2026: The Great Infrastructure-as-Code Fork Has Settled"
 subtitle: "Two years after HashiCorp's license change, the IaC landscape has stabilized — here's where things stand and what to choose"
 date: 2026-04-30 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

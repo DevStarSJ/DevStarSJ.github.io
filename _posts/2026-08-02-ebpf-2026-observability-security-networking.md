@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in 2026: Observability, Security, and Networking Without Kernel Modules"
 subtitle: "From theory to production: how eBPF is replacing strace, iptables, and traditional APM agents"
 date: 2026-08-02 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 header-mask: 0.4
 catalog: true

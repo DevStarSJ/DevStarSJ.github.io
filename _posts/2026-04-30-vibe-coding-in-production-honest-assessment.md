@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding in Production: When AI-Generated Code Meets Real-World Complexity"
 subtitle: "The honest assessment of shipping LLM-written code at scale — what works, what breaks, and how to do it responsibly"
 date: 2026-04-30 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

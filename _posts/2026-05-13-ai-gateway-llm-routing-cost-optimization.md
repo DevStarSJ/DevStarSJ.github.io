@@ -3,7 +3,7 @@ layout: post
 title: "AI Gateway: The Missing Infrastructure Layer for LLM-Powered Applications"
 subtitle: "How AI gateways handle routing, cost optimization, rate limiting, and observability across multiple LLM providers"
 date: 2026-05-13 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=80"
 header-mask: 0.4
 catalog: true

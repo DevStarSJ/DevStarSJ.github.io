@@ -3,7 +3,7 @@ layout: post
 title: "React 20 Server Components in Practice: Architecture Patterns and Performance Wins"
 subtitle: "Async components, server actions, streaming, and the mental model shift required for React's new paradigm"
 date: 2026-04-17 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80"
 catalog: true
 tags:

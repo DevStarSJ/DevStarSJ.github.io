@@ -3,7 +3,7 @@ layout: post
 title: "Feature Flags at Scale: Beyond the Toggle — Architecture Patterns for 2026"
 subtitle: "From simple on/off switches to targeted rollouts, experiment frameworks, and operational kill switches — building a mature feature flag system"
 date: 2026-06-22 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

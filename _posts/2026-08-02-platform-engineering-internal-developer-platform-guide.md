@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building an Internal Developer Platform That Teams Actually Use"
 subtitle: "Golden paths, self-service portals, and the toolchain decisions behind developer experience that scales"
 date: 2026-08-02 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80"
 header-mask: 0.4
 catalog: true

@@ -3,7 +3,7 @@ layout: post
 title: "AI Code Review in 2026: Beyond GitHub Copilot — The Tools That Actually Ship Better Code"
 subtitle: "How AI-powered code review is transforming pull request culture and catching bugs before production"
 date: 2026-04-30 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

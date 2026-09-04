@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Cost Optimization: Cutting Your Cloud Bill Without Cutting Corners"
 subtitle: "Practical strategies to reduce Kubernetes infrastructure costs by 30-60% while maintaining reliability and performance"
 date: 2026-05-08 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

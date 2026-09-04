@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in 2026: The Technology Quietly Rewriting Linux Infrastructure"
 subtitle: "From network observability to zero-trust security — why every platform team needs to understand eBPF"
 date: 2026-07-06 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 catalog: true
 tags:

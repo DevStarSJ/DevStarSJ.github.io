@@ -3,7 +3,7 @@ layout: post
 title: "Zero-Trust Security Architecture: Implementing Never Trust, Always Verify"
 subtitle: "A practical engineering guide to building zero-trust networks with real implementation patterns"
 date: 2026-07-10 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

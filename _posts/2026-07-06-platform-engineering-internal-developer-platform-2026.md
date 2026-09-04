@@ -3,7 +3,7 @@ layout: post
 title: "The End of YAML Hell: How Platform Engineering Is Reinventing Developer Experience"
 subtitle: "Internal Developer Platforms, golden paths, and why the best DevOps teams are building products for their own engineers"
 date: 2026-07-06 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
 catalog: true
 tags:

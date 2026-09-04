@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering: Building Internal Developer Platforms That Actually Get Used"
 subtitle: "Why most IDPs fail, and the golden path approach that makes developers love their infrastructure"
 date: 2026-07-10 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

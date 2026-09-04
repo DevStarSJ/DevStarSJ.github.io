@@ -3,7 +3,7 @@ layout: post
 title: "AWS Bedrock vs Azure OpenAI vs Google Vertex AI: Enterprise LLM Platform Comparison 2026"
 subtitle: "A practical breakdown of cloud LLM platforms — model availability, pricing, compliance, and developer experience for production deployments"
 date: 2026-06-22 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

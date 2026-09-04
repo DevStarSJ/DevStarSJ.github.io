@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0 and the Future of JavaScript Runtimes: Beyond Node.js"
 subtitle: "How Deno, Bun, and WinterCG are reshaping the JavaScript runtime landscape in 2026"
 date: 2026-05-07 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

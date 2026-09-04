@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases Explained: The Infrastructure Layer Powering Modern AI Applications"
 subtitle: "Why semantic search, RAG, and recommendation systems all converge on vector databases — and how to choose the right one"
 date: 2026-05-08 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

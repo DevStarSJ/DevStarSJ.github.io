@@ -3,7 +3,7 @@ layout: post
 title: "MCP (Model Context Protocol): The Missing Link Between AI Agents and Your Tools"
 subtitle: "How Anthropic's open protocol is becoming the universal adapter for AI integrations"
 date: 2026-07-06 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 catalog: true
 tags:

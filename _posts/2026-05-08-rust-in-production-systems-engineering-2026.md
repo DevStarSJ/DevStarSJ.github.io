@@ -3,7 +3,7 @@ layout: post
 title: "Rust in Production: Why Systems Engineers Are Betting Their Stacks on It"
 subtitle: "Memory safety, performance, and a maturing ecosystem — why Rust is no longer just for systems programmers"
 date: 2026-05-08 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

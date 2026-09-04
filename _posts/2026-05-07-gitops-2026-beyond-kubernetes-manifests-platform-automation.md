@@ -3,7 +3,7 @@ layout: post
 title: "GitOps in 2026: From Kubernetes Manifests to Full Platform Automation"
 subtitle: "How GitOps has evolved from a CD pattern into the foundation of modern platform engineering"
 date: 2026-05-07 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

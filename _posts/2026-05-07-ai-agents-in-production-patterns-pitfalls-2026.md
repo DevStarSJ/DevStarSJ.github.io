@@ -3,7 +3,7 @@ layout: post
 title: "AI Agents in Production: Patterns, Pitfalls, and Best Practices for 2026"
 subtitle: "Moving beyond demos — real-world lessons from deploying autonomous AI agents at scale"
 date: 2026-05-07 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

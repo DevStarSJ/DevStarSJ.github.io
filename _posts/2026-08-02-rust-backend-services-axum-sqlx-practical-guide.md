@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Services: A Practical Guide to Replacing Python and Go Microservices"
 subtitle: "Axum, SQLx, Tokio, and the real-world trade-offs of adopting Rust in a polyglot microservices architecture"
 date: 2026-08-02 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80"
 header-mask: 0.4
 catalog: true

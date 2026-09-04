@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 1.32 Features Every DevOps Engineer Needs to Know"
 subtitle: "Gateway API GA, in-place pod resize, sidecar containers, and the deprecations you can't ignore"
 date: 2026-04-17 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "eBPF: The Linux Superpower Transforming Cloud-Native Observability and Security"
 subtitle: "How eBPF lets you observe and secure systems without changing a single line of application code"
 date: 2026-05-07 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

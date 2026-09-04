@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Operator Pattern in 2026: Building Production-Grade Controllers"
 subtitle: "A practical guide to writing Kubernetes operators with controller-runtime, handling reconciliation loops, and managing complex stateful applications"
 date: 2026-05-13 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1600&q=80"
 header-mask: 0.4
 catalog: true

@@ -3,7 +3,7 @@ layout: post
 title: "Durable Execution: The Pattern That Makes Distributed Systems Reliable by Default"
 subtitle: "Why Temporal, Restate, and their peers are rewriting how we think about distributed workflows — and why you should care"
 date: 2026-05-01 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1545987796-200677ee1011?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

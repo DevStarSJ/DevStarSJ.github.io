@@ -3,7 +3,7 @@ layout: post
 title: "LLM Fine-Tuning in Production: A Complete Guide for 2026"
 subtitle: "From LoRA to QLoRA — building domain-specific AI without burning your GPU budget"
 date: 2026-07-10 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

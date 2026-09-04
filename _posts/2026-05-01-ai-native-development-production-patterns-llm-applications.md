@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native Development: How to Actually Build Applications with LLMs in the Loop"
 subtitle: "Moving beyond demos — production patterns for structured outputs, streaming, fallbacks, and cost control when LLMs are core infrastructure"
 date: 2026-05-01 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

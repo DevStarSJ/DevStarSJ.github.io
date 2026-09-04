@@ -3,7 +3,7 @@ layout: post
 title: "Agentic AI in Production: Architecture Patterns for LLM-Powered Autonomous Systems"
 subtitle: "Tool calling, multi-agent orchestration, memory layers, and safety guardrails for deploying AI agents at enterprise scale"
 date: 2026-08-02 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 header-mask: 0.4
 catalog: true

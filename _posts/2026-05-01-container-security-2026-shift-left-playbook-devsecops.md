@@ -3,7 +3,7 @@ layout: post
 title: "Container Security in 2026: The Shift-Left Playbook That Actually Works"
 subtitle: "From image scanning to runtime policies — a practical security strategy for teams that ship fast without compromising on hardening"
 date: 2026-05-01 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1600&auto=format&fit=crop"
 catalog: true
 categories:

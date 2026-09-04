@@ -3,7 +3,7 @@ layout: post
 title: "Serverless is Dead, Long Live Serverless: The Container-Function Convergence in 2026"
 subtitle: "How AWS Lambda, Google Cloud Run, and Azure Container Apps are blurring the lines — and what it means for your architecture"
 date: 2026-07-06 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80"
 catalog: true
 tags:

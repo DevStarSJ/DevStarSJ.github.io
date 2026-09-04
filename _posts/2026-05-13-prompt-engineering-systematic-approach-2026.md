@@ -3,7 +3,7 @@ layout: post
 title: "Prompt Engineering Is Dead. Long Live Prompt Engineering."
 subtitle: "How the craft of prompting has evolved from magic spells to systematic engineering — and what actually works in 2026"
 date: 2026-05-13 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1600&q=80"
 header-mask: 0.4
 catalog: true

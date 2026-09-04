@@ -3,7 +3,7 @@ layout: post
 title: "React 19 Concurrent Features: The Complete Performance Guide for 2026"
 subtitle: "Actions, use() hook, Server Components, and the new compiler — everything you need to build blazing-fast React apps"
 date: 2026-08-02 12:00:00
-author: "Seokjun Lee"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80"
 header-mask: 0.4
 catalog: true
