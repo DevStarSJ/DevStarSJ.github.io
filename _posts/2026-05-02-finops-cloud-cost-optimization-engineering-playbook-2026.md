@@ -3,7 +3,7 @@ layout: post
 title: "FinOps in 2026: How Engineering Teams Are Cutting Cloud Bills by 40% Without Cutting Features"
 subtitle: "The technical playbook for cloud cost optimization — from right-sizing to AI-driven anomaly detection"
 date: 2026-05-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&q=80"
 categories: [Cloud, FinOps]
 tags: [FinOps, cloud-cost, AWS, GCP, Azure, optimization, Kubernetes, cost-engineering]

@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Runway ML Gen-3: Complete Guide to AI Video Generation 2026"
 subtitle: "Create stunning AI videos from text and images with Runway's Gen-3 Alpha"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1536240478700-b869ad10a2ab?w=1200&auto=format&fit=crop"
 category: image
 tags: [ai, video, runway, gen3, creativity]

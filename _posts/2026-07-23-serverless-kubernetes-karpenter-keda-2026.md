@@ -3,7 +3,7 @@ layout: post
 title: "Serverless Kubernetes in 2026: Karpenter, KEDA, and the Death of Node Management"
 subtitle: "Stop thinking about nodes. Start thinking about workloads."
 date: 2026-07-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&q=80"
 tags:
   - Kubernetes

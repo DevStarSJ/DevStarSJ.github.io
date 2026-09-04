@@ -3,7 +3,7 @@ layout: post
 title: "LLM Observability in Production: A Complete Monitoring Guide for 2026"
 subtitle: "Tracing, evaluation, and cost control for large language model deployments"
 date: 2026-04-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
 categories: [AI, MLOps, Observability]
 tags: [LLM, observability, monitoring, production, MLOps, AI engineering, tracing, evaluation]

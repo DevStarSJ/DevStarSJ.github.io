@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in Production: A Complete Observability Guide for 2026"
 subtitle: "Traces, metrics, and logs unified — how to implement OTel across your entire stack without vendor lock-in"
 date: 2026-03-29 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

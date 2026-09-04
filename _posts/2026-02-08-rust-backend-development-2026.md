@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development in 2026: Why Teams Are Making the Switch"
 subtitle: "Performance, safety, and developer experience finally converge"
 date: 2026-02-08
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&q=80"
 tags: [Rust, Backend, API, Performance, Web Development, Axum, Tokio]
 ---

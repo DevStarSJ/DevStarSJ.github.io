@@ -3,7 +3,7 @@ layout: post
 title: "gRPC in 2026: Building High-Performance APIs for Modern Distributed Systems"
 subtitle: "Master Protocol Buffers, streaming, and microservices communication"
 date: 2026-01-31
-author: "DevStar"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry Meets AI: Observability for LLM-Powered Applications in 2026"
 subtitle: "Tracing, metrics, and logging patterns for production AI systems using OpenTelemetry Semantic Conventions for GenAI"
 date: 2026-06-20 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
 header-mask: 0.4
 catalog: true

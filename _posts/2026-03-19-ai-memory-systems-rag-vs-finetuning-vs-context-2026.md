@@ -3,7 +3,7 @@ layout: post
 title: "AI Memory Systems in 2026: RAG vs Fine-Tuning vs Long Context — Choosing the Right Approach"
 subtitle: "A practical guide to giving your AI applications persistent, reliable memory without burning your budget"
 date: 2026-03-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&q=80"
 catalog: true
 tags:

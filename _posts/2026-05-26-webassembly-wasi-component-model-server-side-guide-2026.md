@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly in 2026: Beyond the Browser — WASI, Components, and the Server-Side Revolution"
 subtitle: "How WASM is escaping the browser sandbox and becoming the universal runtime of cloud-native computing"
 date: 2026-05-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 catalog: true
 tags:

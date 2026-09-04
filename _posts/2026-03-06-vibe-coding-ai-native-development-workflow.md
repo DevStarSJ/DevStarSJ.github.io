@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding: The AI-Native Development Workflow Taking Over in 2026"
 subtitle: "How developers are shipping 10x faster by letting AI handle the boilerplate while they focus on intent"
 date: 2026-03-06 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200"
 catalog: true
 tags:

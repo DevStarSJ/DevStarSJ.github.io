@@ -3,7 +3,7 @@ layout: post
 title: "PostgreSQL 17 vs MySQL 9 vs TiDB: Which Database Should You Choose in 2026?"
 subtitle: "A head-to-head comparison for OLTP, analytics, and hybrid workloads"
 date: 2026-03-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&q=80"
 categories: [Database, Backend]
 tags: [PostgreSQL, MySQL, TiDB, Database, OLTP, HTAP, SQL, Backend]

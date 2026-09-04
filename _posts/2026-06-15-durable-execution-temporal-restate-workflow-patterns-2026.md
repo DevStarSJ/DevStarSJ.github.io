@@ -3,7 +3,7 @@ layout: post
 title: "Durable Execution: The Pattern That's Quietly Eating Microservices Architecture"
 subtitle: "How Temporal, Restate, and durable workflows are replacing queues, retries, and distributed sagas"
 date: 2026-06-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

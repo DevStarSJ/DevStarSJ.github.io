@@ -3,7 +3,7 @@ layout: post
 title: "Rust in Production: Why More Teams Are Betting on Rust for Systems and Web in 2026"
 subtitle: "From rewriting C++ components to building full-stack web services, Rust adoption has crossed a critical threshold"
 date: 2026-05-20 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

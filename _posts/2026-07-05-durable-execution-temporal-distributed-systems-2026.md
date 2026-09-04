@@ -3,7 +3,7 @@ layout: post
 title: "Durable Execution: The Pattern That Fixes Distributed Systems"
 subtitle: "Why Temporal, Restate, and Hatchet are solving the hardest problem in backend engineering"
 date: 2026-07-05 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: Choosing the Right One for Your RAG Architecture"
 subtitle: "Pinecone, Weaviate, pgvector, Qdrant, and Chroma — a practical comparison for production AI systems"
 date: 2026-04-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
 categories: [AI, Database, RAG]
 tags: [vector database, RAG, embeddings, Pinecone, pgvector, Weaviate, Qdrant, LLM, semantic search]

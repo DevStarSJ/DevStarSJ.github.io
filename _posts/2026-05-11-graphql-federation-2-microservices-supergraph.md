@@ -3,7 +3,7 @@ layout: post
 title: "GraphQL Federation 2.0: Building a Unified Supergraph Across Microservices"
 subtitle: "A deep dive into Apollo Federation's declarative composition, entity resolvers, and the shift-left approach to API governance"
 date: 2026-05-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

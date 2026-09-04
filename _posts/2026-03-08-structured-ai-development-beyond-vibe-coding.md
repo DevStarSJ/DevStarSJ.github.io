@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding Is Dead. Long Live Structured AI Development"
 subtitle: "The honeymoon phase of AI-assisted coding is over — here's what mature, production-grade AI development actually looks like in 2026"
 date: 2026-03-08 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Cost Optimization: A FinOps Engineering Guide"
 subtitle: "Cut your K8s bill by 40% without sacrificing reliability"
 date: 2026-02-09
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1920&q=80"
 tags: [Kubernetes, FinOps, Cost Optimization, Cloud, DevOps, AWS, GCP, Azure]
 ---

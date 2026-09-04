@@ -3,7 +3,7 @@ layout: post
 title: "AWS Lambda Cold Starts Are Dead: Lambda SnapStart and Proactive Initialization in 2026"
 subtitle: "How AWS finally solved the cold start problem — and what it means for your serverless architecture decisions."
 date: 2026-05-25 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80"
 categories: [Cloud, AWS, Serverless]
 tags: [AWS, Lambda, serverless, cold-start, SnapStart, cloud-native]

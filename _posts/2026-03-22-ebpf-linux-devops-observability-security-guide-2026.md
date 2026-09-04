@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in 2026: The Linux Superpower Every DevOps Engineer Should Know"
 subtitle: "From observability to security to networking — why eBPF is reshaping the infrastructure stack"
 date: 2026-03-22 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

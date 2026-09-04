@@ -3,7 +3,7 @@ layout: post
 title: "AI Agents in 2026: Building Autonomous Agentic Workflows"
 subtitle: "From simple chatbots to multi-agent systems that actually get work done"
 date: 2026-02-09
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80"
 tags: [AI Agents, LLM, Autonomous Systems, Claude, GPT, Multi-Agent, Automation]
 categories: ai

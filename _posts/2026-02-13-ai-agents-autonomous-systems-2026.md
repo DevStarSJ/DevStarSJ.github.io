@@ -3,7 +3,7 @@ layout: post
 title: "AI Agents in 2026: Building Autonomous Systems That Actually Work"
 subtitle: "From chatbots to autonomous agents - practical patterns for building reliable AI systems with LLMs"
 date: 2026-02-13
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 tags: [AI, LLM, AI Agents, Autonomous Systems, Machine Learning, Software Architecture]
 categories: ai

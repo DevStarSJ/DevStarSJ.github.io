@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Why Systems Developers Are Finally Making the Switch"
 subtitle: "Memory safety mandates, WASM, and async maturity are pushing Rust into the mainstream"
 date: 2026-04-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1619468129361-605ebea04b44?w=1200&q=80"
 categories: [Programming, Systems, Rust]
 tags: [Rust, systems programming, memory safety, WebAssembly, async, performance, C++]

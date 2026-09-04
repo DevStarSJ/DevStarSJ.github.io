@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Observability with OpenTelemetry: The Complete Guide"
 subtitle: "Unified traces, metrics, and logs for cloud-native applications"
 date: 2026-02-08
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1920&q=80"
 tags: [Kubernetes, OpenTelemetry, Observability, DevOps, Monitoring, Distributed Systems]
 ---

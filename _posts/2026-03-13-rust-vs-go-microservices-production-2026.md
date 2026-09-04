@@ -3,7 +3,7 @@ layout: post
 title: "Rust in Production 2026: Lessons from 3 Years of Migrating Microservices from Go"
 subtitle: "When Rust is worth the investment, and when Go is still the better answer"
 date: 2026-03-13 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&q=80"
 catalog: true
 tags:

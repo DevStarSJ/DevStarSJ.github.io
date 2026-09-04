@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Gateway API: The Future of Ingress and Traffic Management"
 subtitle: "Why Gateway API is replacing Ingress, how to migrate, and production patterns with Envoy Gateway and Istio"
 date: 2026-05-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&auto=format&fit=crop&q=80&ixlib=rb-4.0.3"
 catalog: true
 tags:

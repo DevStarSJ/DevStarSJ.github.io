@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development: A 2026 Production Guide"
 subtitle: "Why more teams are choosing Rust for high-performance APIs, and how to build production services with Axum and Tokio"
 date: 2026-03-29 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

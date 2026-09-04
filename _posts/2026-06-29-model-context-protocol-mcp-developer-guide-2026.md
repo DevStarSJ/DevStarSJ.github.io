@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The USB-C Standard for AI Agents in 2026"
 subtitle: "How MCP is becoming the universal connector between AI models and the tools they use"
 date: 2026-06-29 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80"
 catalog: true
 tags:

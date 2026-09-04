@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in Production: The Definitive Guide to Unified Observability"
 subtitle: "Stop juggling three separate tools — OTel gives you traces, metrics, and logs in one coherent signal"
 date: 2026-07-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
 catalog: true
 tags:

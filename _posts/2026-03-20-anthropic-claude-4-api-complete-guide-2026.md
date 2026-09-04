@@ -3,7 +3,7 @@ layout: post
 title: "Anthropic Claude 4 API: Complete Developer Guide for 2026"
 subtitle: "Build powerful AI applications with Claude 4's extended context, multimodal capabilities, and tool use"
 date: 2026-03-20 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "React 19 Concurrent Features & Suspense: A Complete Deep Dive for 2026"
 subtitle: "Master React's most powerful rendering patterns with Actions, use() hook, and advanced Suspense composition"
 date: 2026-03-28 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

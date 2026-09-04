@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in Production: A Practical Guide for 2026"
 subtitle: "From embeddings to retrieval — choosing, scaling, and operating vector stores at real-world scale"
 date: 2026-07-05 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 catalog: true
 tags:

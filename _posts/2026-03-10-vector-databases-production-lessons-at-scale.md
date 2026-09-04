@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in Production: Lessons from Running Embeddings at Scale"
 subtitle: "Pinecone, Weaviate, Qdrant, pgvector — after two years of vector search in production, here's what actually matters when your embedding corpus hits 100M+ vectors"
 date: 2026-03-10 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200"
 catalog: true
 tags:

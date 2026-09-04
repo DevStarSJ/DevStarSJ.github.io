@@ -3,7 +3,7 @@ layout: post
 title: "Redis 8.0 & Valkey 8: In-Memory Database Evolution in 2026"
 subtitle: "Understanding Redis 8's new features, the Valkey fork's progress, and how to choose the right in-memory store for production"
 date: 2026-03-28 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

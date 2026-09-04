@@ -3,7 +3,7 @@ layout: post
 title: "Bun vs Deno 2: The Battle for the Future of JavaScript Runtimes"
 subtitle: "Node.js had a good run — now two challengers are rewriting the rules of server-side JavaScript with speed, security, and developer experience at the forefront"
 date: 2026-02-23
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200"
 catalog: true
 tags:

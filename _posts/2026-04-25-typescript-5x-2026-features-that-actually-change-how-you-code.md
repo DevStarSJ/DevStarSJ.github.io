@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 5.x in 2026: Features That Actually Change How You Code"
 subtitle: "From const type parameters to using declarations — the TypeScript features making a real difference in production codebases"
 date: 2026-04-25 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200&q=80"
 categories: [TypeScript, Frontend, Backend]
 tags: [TypeScript, JavaScript, type system, Node.js, decorators, satisfies, const generics, using declarations]

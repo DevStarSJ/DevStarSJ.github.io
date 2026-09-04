@@ -3,7 +3,7 @@ layout: post
 title: "AI Agents in Production: Architecture Patterns That Actually Work in 2026"
 subtitle: "Beyond the hype — real-world patterns for deploying reliable, observable, and cost-efficient AI agent systems at scale."
 date: 2026-03-11 09:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200"
 catalog: true
 tags:

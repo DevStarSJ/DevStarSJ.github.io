@@ -3,7 +3,7 @@ layout: post
 title: "GitOps in 2026: Flux vs ArgoCD vs the New Challengers"
 subtitle: "ArgoCD and Flux have matured, but Crossplane, Pulumi Kubernetes Operator, and platform engineering tooling are reshaping how teams think about GitOps. A practical comparison."
 date: 2026-03-10 11:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=1200"
 catalog: true
 tags:

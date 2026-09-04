@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly in 2026: The Universal Runtime for Cloud-Native and Edge Computing"
 subtitle: "How WASM is breaking free from the browser and reshaping how we deploy workloads at the edge, in the cloud, and beyond"
 date: 2026-02-24
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

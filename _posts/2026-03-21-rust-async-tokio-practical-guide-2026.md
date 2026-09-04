@@ -3,7 +3,7 @@ layout: post
 title: "Rust Async Programming with Tokio: A Practical Guide for 2026"
 subtitle: "Master async/await patterns, task spawning, and concurrent I/O in modern Rust applications"
 date: 2026-03-21 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&auto=format&fit=crop&q=80"
 categories: [Rust, Async, Systems Programming]
 tags: [rust, tokio, async, concurrency, performance, backend]

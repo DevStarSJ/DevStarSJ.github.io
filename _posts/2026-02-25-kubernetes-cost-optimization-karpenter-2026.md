@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Cost Optimization in 2026: Karpenter, Spot Instances, and Right-Sizing at Scale"
 subtitle: "Cut your cloud bill by 60% without sacrificing reliability — the battle-tested strategies for Kubernetes cost engineering"
 date: 2026-02-25
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"
 catalog: true
 tags:

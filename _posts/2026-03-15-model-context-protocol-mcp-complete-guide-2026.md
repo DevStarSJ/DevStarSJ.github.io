@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The Standard That's Connecting AI to Everything"
 subtitle: "How Anthropic's open protocol is becoming the USB-C of AI integrations"
 date: 2026-03-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200&q=80"
 categories: [AI, Protocol]
 tags: [MCP, Model-Context-Protocol, Anthropic, Claude, AI-Tools, Integration, LLM, Agents]

@@ -3,7 +3,7 @@ layout: post
 title: "React 19 Deep Dive: Server Components, Actions, and the New React Paradigm"
 subtitle: "Everything you need to know about React's biggest update in years"
 date: 2026-02-07
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1920&q=80"
 tags: [React, JavaScript, Frontend, Web Development, Server Components]
 ---

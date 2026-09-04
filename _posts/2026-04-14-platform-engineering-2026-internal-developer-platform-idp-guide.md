@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Actually Get Adopted"
 subtitle: "IDP architecture, golden paths, self-service infrastructure, and the metrics that matter"
 date: 2026-04-14 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

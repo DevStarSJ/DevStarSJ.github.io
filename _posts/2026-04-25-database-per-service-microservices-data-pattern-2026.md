@@ -3,7 +3,7 @@ layout: post
 title: "Database Per Service: The Microservices Data Pattern You're Probably Doing Wrong"
 subtitle: "Distributed data ownership, eventual consistency, and the practical tradeoffs of database-per-service in production"
 date: 2026-04-25 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&q=80"
 categories: [Architecture, Microservices, Database]
 tags: [microservices, database per service, event sourcing, CQRS, saga pattern, distributed data, eventual consistency]

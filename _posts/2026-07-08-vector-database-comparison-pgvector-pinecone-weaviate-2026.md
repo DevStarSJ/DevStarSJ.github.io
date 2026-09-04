@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases Explained: Choosing Between Pgvector, Pinecone, and Weaviate in 2026"
 subtitle: "Semantic search, RAG pipelines, and embedding storage — picking the right vector store for your AI application"
 date: 2026-07-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
 catalog: true
 tags:

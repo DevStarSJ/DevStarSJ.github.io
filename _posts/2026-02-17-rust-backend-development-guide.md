@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development: A Practical Guide for 2026"
 subtitle: "Build blazing-fast, memory-safe APIs with Rust and Axum"
 date: 2026-02-17
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200"
 catalog: true
 tags:

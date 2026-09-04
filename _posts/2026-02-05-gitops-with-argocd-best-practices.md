@@ -3,7 +3,7 @@ layout: post
 title: "GitOps with ArgoCD: Best Practices for Production"
 subtitle: "Declarative, auditable, and automated Kubernetes deployments"
 date: 2026-02-05
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1920&q=80"
 tags: [GitOps, ArgoCD, Kubernetes, DevOps, CI/CD]
 ---

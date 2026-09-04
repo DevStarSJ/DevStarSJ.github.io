@@ -3,7 +3,7 @@ layout: post
 title: "React 20 Deep Dive: Compiler, Server Components, and the New Mental Model"
 subtitle: "Everything you need to know about React 20's architecture changes, the React Compiler in production, and how to migrate"
 date: 2026-06-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

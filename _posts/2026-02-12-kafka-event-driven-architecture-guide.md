@@ -3,7 +3,7 @@ layout: post
 title: "Event-Driven Architecture with Apache Kafka: Building Scalable Real-Time Systems"
 subtitle: "Master Kafka Streams, event sourcing patterns, and CloudEvents for modern distributed applications"
 date: 2026-02-12
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 tags: [Apache Kafka, Event-Driven Architecture, Microservices, Streaming, CloudEvents]
 ---

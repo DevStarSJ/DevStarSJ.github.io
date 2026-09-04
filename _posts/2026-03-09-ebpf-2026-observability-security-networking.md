@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in 2026: From Kernel Observability to Application Security"
 subtitle: "eBPF started as a packet filter and became the backbone of cloud-native observability, security, and networking — here's the current state and where it's heading"
 date: 2026-03-09 11:30:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Database per Service vs. Shared Database: Microservices Data Patterns in 2026"
 subtitle: "The definitive trade-off guide for teams designing microservice data boundaries"
 date: 2026-07-05 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Components: The Future of Cross-Language Modularity in 2026"
 subtitle: "How WASM Component Model is changing the way we build and share polyglot software modules"
 date: 2026-06-20 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 header-mask: 0.4
 catalog: true

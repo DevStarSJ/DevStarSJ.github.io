@@ -3,7 +3,7 @@ layout: post
 title: "GitOps at Scale: Managing 100+ Microservices with Argo CD and Helm"
 subtitle: "Patterns, pitfalls, and practical configuration for running GitOps in large production environments"
 date: 2026-06-27 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 5.8 Features Every Developer Should Know in 2026"
 subtitle: "Type-safe config, exact optional property types, decorator metadata and more"
 date: 2026-03-17 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80"
 catalog: true
 tags:

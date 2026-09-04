@@ -3,7 +3,7 @@ layout: post
 title: "Zero Trust Security in Practice: Moving Beyond the Perimeter in Cloud-Native Systems"
 subtitle: "What 'never trust, always verify' actually looks like when your infrastructure spans five clouds and your workforce is fully remote"
 date: 2026-03-07 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200"
 catalog: true
 tags:

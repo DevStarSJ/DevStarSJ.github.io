@@ -3,7 +3,7 @@ layout: post
 title: "AI Coding Agents in 2026: From Autocomplete to Autonomous Engineering"
 subtitle: "How AI agents are reshaping software development workflows, what actually works in production, and where the real limits are"
 date: 2026-02-19
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200"
 catalog: true
 tags:

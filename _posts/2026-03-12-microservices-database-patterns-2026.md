@@ -3,7 +3,7 @@ layout: post
 title: "Database Per Service vs Shared Database: Microservices Data Patterns in 2026"
 subtitle: "A pragmatic guide to microservices data architecture — when strict isolation pays off and when it creates more problems than it solves"
 date: 2026-03-12 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.3
 catalog: true

@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development in 2026: Is It Ready?"
 subtitle: "A practical assessment of Rust's web ecosystem for production APIs"
 date: 2026-02-09
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&q=80"
 tags: [Rust, Backend, Web Development, Axum, Tokio, API, Performance]
 ---

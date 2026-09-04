@@ -3,7 +3,7 @@ layout: post
 title: "Zero Trust Security Architecture: A Practical Implementation Guide"
 subtitle: "Never trust, always verify—how to actually implement it"
 date: 2026-02-05
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1920&q=80"
 tags: [Security, Zero Trust, Architecture, DevSecOps, Cloud]
 ---

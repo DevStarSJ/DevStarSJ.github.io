@@ -3,7 +3,7 @@ layout: post
 title: "Anthropic Claude 3.7 Sonnet: Deep Dive into Performance, Benchmarks & Real-World Use Cases"
 subtitle: "Why Claude 3.7 Sonnet is Redefining AI Coding, Reasoning, and Enterprise Applications in 2026"
 date: 2026-03-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

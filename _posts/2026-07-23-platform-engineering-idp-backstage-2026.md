@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Developers Actually Use"
 subtitle: "From golden paths to self-service portals — what makes IDPs succeed"
 date: 2026-07-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80"
 tags:
   - Platform Engineering

@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Gateway API & Service Mesh in 2026: Cilium, Istio, and the Future of Cloud-Native Networking"
 subtitle: "How the Gateway API is reshaping Kubernetes networking and why Cilium's eBPF-based mesh is winning"
 date: 2026-04-04 12:00:00
-author: "Dev.StarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

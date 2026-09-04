@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in Production: Programmable Kernel Networking and Observability Without Code Changes"
 subtitle: "How eBPF is transforming security, performance monitoring, and networking in modern infrastructure"
 date: 2026-05-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

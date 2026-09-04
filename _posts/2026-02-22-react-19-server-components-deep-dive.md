@@ -3,7 +3,7 @@ layout: post
 title: "React 19 Server Components: A Practical Deep Dive"
 subtitle: "Beyond the marketing — what React Server Components actually change about how you build, where the performance wins come from, and the patterns that make them worth adopting"
 date: 2026-02-22
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The Standard That's Changing How AI Agents Work"
 subtitle: "Why MCP is becoming the HTTP of AI tooling — and how to build with it in 2026"
 date: 2026-07-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Quantum Computing for Developers in 2026: A Practical Guide Beyond the Hype"
 subtitle: "What quantum computing can actually do today, how to write your first quantum circuits, and which problems are genuinely worth solving with qubits"
 date: 2026-02-25
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200"
 catalog: true
 tags:

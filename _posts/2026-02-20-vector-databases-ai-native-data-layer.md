@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: The AI-Native Data Layer Every Engineer Should Know"
 subtitle: "A deep dive into vector databases, embedding models, hybrid search, and how to pick the right tool for your AI application"
 date: 2026-02-20
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

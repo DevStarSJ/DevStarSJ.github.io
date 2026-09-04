@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0 and the Future of JavaScript Runtimes: A Practical Comparison"
 subtitle: "Node.js had a 15-year head start. Here's why Deno 2.0 and Bun are forcing a rethink"
 date: 2026-07-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=1200&q=80"
 catalog: true
 tags:

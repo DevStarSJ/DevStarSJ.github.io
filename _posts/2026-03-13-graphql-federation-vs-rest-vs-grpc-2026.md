@@ -3,7 +3,7 @@ layout: post
 title: "GraphQL Federation vs REST vs gRPC: Choosing Your API Architecture in 2026"
 subtitle: "A decision framework for modern distributed systems API design"
 date: 2026-03-13 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 catalog: true
 tags:

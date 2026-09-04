@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry: The Complete Guide to Modern Observability"
 subtitle: "Implement unified tracing, metrics, and logging across your distributed systems with OpenTelemetry"
 date: 2026-02-14
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"
 tags: [OpenTelemetry, Observability, Monitoring, Tracing, Metrics, DevOps, SRE]
 ---

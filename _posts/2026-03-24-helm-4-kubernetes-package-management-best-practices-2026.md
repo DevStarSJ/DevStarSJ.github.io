@@ -3,7 +3,7 @@ layout: post
 title: "Helm 4 & Kubernetes Package Management: Best Practices for Production 2026"
 subtitle: "Mastering Helm 4's New Features, OCI Registry Support, and GitOps Integration for Scalable K8s Deployments"
 date: 2026-03-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

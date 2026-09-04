@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Developers: A Practical Getting Started Guide"
 subtitle: "Why Rust is taking over systems programming—and how to start using it"
 date: 2026-02-05
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1920&q=80"
 tags: [Rust, Backend, Programming, Systems, Performance]
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The New Standard for AI Tool Integration in 2026"
 subtitle: "How Anthropic's open protocol is unifying the way AI models connect to tools, data sources, and external services"
 date: 2026-03-01
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 1.32 Deep Dive: Sidecar Containers, In-Place Pod Resizing, and What's Next"
 subtitle: "The most impactful Kubernetes changes in 2026 and how to take advantage of them in production clusters"
 date: 2026-03-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1600&q=80"
 catalog: true
 tags:

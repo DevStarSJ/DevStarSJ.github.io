@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in 2026: The Definitive Guide to Distributed Tracing at Scale"
 subtitle: "Instrumenting microservices, managing cardinality, and making sense of traces in production"
 date: 2026-04-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

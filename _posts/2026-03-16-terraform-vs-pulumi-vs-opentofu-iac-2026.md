@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs. Pulumi vs. OpenTofu: The IaC Landscape in 2026"
 subtitle: "After HashiCorp's license change, the infrastructure-as-code ecosystem fractured — and it's more interesting for it"
 date: 2026-03-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&q=80"
 categories: [DevOps, Infrastructure, Cloud]
 tags: [Terraform, Pulumi, OpenTofu, IaC, Infrastructure-as-Code, DevOps, Cloud, HashiCorp, CDKTF]

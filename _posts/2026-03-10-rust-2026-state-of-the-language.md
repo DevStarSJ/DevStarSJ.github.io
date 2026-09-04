@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Where It Won, Where It Struggled, and What's Next"
 subtitle: "Rust has conquered systems programming and is pushing deep into web backends, AI tooling, and the Linux kernel — but adoption friction is real. An honest state of the language."
 date: 2026-03-10 09:30:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1542903660-eedba2cda473?w=1200"
 catalog: true
 tags:

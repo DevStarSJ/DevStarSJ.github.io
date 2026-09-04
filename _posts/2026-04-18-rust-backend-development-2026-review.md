@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Is It Finally Ready for Everyday Backend Development?"
 subtitle: "Honest assessment of Rust's maturity for web services, async patterns, and developer ergonomics"
 date: 2026-04-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&auto=format&fit=crop&q=80"
 catalog: true
 tags:

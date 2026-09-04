@@ -3,7 +3,7 @@ layout: post
 title: "GitOps in 2026: ArgoCD vs Flux vs Helm — The Complete Comparison"
 subtitle: "Which GitOps tool should you use? A production-tested guide to Kubernetes continuous delivery"
 date: 2026-07-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

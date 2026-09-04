@@ -3,7 +3,7 @@ layout: post
 title: "GraphQL Federation: Building Scalable APIs Across Microservices"
 subtitle: "Unite your microservices under a single, powerful GraphQL gateway"
 date: 2026-02-17
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: The Internal Developer Platform Maturity Model"
 subtitle: "IDP adoption has exploded — but most teams are stuck at level 2. Here's what separates the good platforms from the great ones"
 date: 2026-03-09 09:30:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200"
 catalog: true
 tags:

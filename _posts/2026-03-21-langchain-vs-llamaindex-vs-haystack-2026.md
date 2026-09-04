@@ -3,7 +3,7 @@ layout: post
 title: "LangChain vs LlamaIndex vs Haystack: Choosing Your AI Framework in 2026"
 subtitle: "A deep dive into the three leading frameworks for building LLM applications, RAG pipelines, and AI agents"
 date: 2026-03-21 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
 categories: [AI, LLM, Python]
 tags: [langchain, llamaindex, haystack, llm, rag, agents, ai-framework]

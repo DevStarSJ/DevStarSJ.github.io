@@ -3,7 +3,7 @@ layout: post
 title: "AI Code Review in 2026: GitHub Copilot X vs Claude vs Cursor"
 subtitle: "How AI is transforming the way we review and write code"
 date: 2026-02-06
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&q=80"
 tags: [AI, Code Review, GitHub Copilot, Claude, Cursor, Developer Tools]
 categories: ai

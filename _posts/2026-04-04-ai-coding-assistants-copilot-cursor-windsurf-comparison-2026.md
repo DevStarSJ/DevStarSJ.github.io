@@ -3,7 +3,7 @@ layout: post
 title: "AI Coding Assistants in 2026: GitHub Copilot vs Cursor vs Windsurf — A Deep Dive Comparison"
 subtitle: "Which AI coding assistant actually makes you more productive? We tested them all on real-world tasks"
 date: 2026-04-04 12:00:00
-author: "Dev.StarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

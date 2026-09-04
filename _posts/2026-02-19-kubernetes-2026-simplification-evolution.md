@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes in 2026: The Simplification Era — What's Changed and What's Next"
 subtitle: "From YAML hell to managed simplicity: how the Kubernetes ecosystem is finally becoming accessible, and the patterns that define modern cluster operations"
 date: 2026-02-19
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 catalog: true
 tags:

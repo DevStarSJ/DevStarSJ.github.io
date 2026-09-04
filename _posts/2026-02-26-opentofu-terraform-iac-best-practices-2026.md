@@ -3,7 +3,7 @@ layout: post
 title: "OpenTofu and Terraform IaC Best Practices in 2026: The Complete Production Guide"
 subtitle: "Infrastructure as Code has matured — here's how to structure, test, and operate IaC at scale with OpenTofu and Terraform in 2026"
 date: 2026-02-26
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200"
 catalog: true
 tags:

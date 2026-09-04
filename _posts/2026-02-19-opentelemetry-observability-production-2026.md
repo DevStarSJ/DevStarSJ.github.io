@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in 2026: The Definitive Guide to Production Observability"
 subtitle: "How OpenTelemetry became the observability standard, the instrumentation patterns that work, and building a full LGTM stack for your microservices"
 date: 2026-02-19
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"
 catalog: true
 tags:

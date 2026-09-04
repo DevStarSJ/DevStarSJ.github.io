@@ -3,7 +3,7 @@ layout: post
 title: "Confidential Computing: Protecting Data in Use with Trusted Execution Environments"
 subtitle: "How Intel TDX, AMD SEV, and AWS Nitro Enclaves enable computation on encrypted data — even from the cloud provider"
 date: 2026-05-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

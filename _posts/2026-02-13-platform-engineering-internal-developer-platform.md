@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering: Building Internal Developer Platforms That Actually Get Used"
 subtitle: "Design principles and implementation patterns for creating developer platforms that boost productivity"
 date: 2026-02-13
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200"
 tags: [Platform Engineering, DevOps, Internal Developer Platform, Backstage, Developer Experience]
 ---

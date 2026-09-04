@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Components: The Future of Cross-Language Development"
 subtitle: "Build portable, composable modules that work anywhere with the WebAssembly Component Model"
 date: 2026-02-14
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 tags: [WebAssembly, Wasm, Components, WIT, Cross-Platform, Rust, Go, Python]
 ---

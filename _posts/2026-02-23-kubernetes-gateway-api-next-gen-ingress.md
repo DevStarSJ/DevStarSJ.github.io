@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Gateway API: The Future of Ingress Is Already Here"
 subtitle: "Why the Ingress resource is being deprecated and how to migrate to the expressive, role-aware, multi-protocol Gateway API before it becomes urgent"
 date: 2026-02-23
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 catalog: true
 tags:

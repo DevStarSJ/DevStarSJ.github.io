@@ -3,7 +3,7 @@ layout: post
 title: "Edge Computing in 2026: Why Your Cloud-First Strategy Needs a Rethink"
 subtitle: "From CDN to intelligent edge — how the compute boundary is dissolving and what it means for your architecture"
 date: 2026-03-12 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.3
 catalog: true

@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Actually Get Used"
 subtitle: "From golden paths to self-service portals — what separates successful IDPs from expensive shelf-ware"
 date: 2026-04-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80"
 categories: [DevOps, Platform Engineering, Cloud]
 tags: [platform engineering, IDP, developer experience, Backstage, Crossplane, DevOps, golden path]

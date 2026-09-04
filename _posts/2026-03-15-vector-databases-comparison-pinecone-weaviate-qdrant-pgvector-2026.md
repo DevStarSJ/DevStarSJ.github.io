@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: Pinecone vs Weaviate vs Qdrant vs pgvector"
 subtitle: "A practical guide to choosing and scaling vector storage for AI and RAG applications"
 date: 2026-03-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
 categories: [AI, Database]
 tags: [Vector-Database, RAG, Embeddings, Pinecone, Weaviate, Qdrant, pgvector, AI, Semantic-Search]

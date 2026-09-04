@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Why Systems Languages Are Taking Over Modern Backend Development"
 subtitle: "From memory safety to fearless concurrency — Rust is no longer just for systems programmers"
 date: 2026-07-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&q=80"
 catalog: true
 tags:

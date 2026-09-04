@@ -3,7 +3,7 @@ layout: post
 title: "Event-Driven Architecture with Kafka and CloudEvents: Patterns for 2026"
 subtitle: "Schema evolution, exactly-once semantics, and the CloudEvents standard for building resilient event-driven systems"
 date: 2026-05-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&auto=format&fit=crop&q=70"
 catalog: true
 tags:

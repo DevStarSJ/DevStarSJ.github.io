@@ -3,7 +3,7 @@ layout: subsite-post
 title: "ChatGPT-4o: OpenAI's Most Capable Multimodal AI Assistant"
 subtitle: "Complete guide to ChatGPT-4o — voice, vision, images, and reasoning in one AI assistant"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 category: chatbot
 tags:

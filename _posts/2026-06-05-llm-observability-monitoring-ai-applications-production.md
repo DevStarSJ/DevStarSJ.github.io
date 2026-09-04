@@ -3,7 +3,7 @@ layout: post
 title: "LLM Observability: How to Monitor AI Applications in Production"
 subtitle: "Traces, evals, and cost tracking for language model-powered systems"
 date: 2026-06-05 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop"
 header-mask: 0.4
 catalog: true

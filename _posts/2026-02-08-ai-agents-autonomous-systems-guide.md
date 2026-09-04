@@ -3,7 +3,7 @@ layout: post
 title: "Building AI Agents in 2026: From LLMs to Autonomous Systems"
 subtitle: "A practical guide to designing, deploying, and scaling AI agents that actually work"
 date: 2026-02-08
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80"
 tags: [AI, Agents, LLM, Claude, GPT, Automation, Machine Learning]
 categories: ai

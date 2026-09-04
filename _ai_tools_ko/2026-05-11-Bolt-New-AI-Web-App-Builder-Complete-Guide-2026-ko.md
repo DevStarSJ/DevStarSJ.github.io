@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Bolt.new AI 웹앱 빌더: 완벽 가이드 2026"
 subtitle: "자연어 프롬프트로 풀스택 웹앱을 빌드하고 배포하기"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&auto=format&fit=crop"
 category: coding
 tags: [ai, 코딩, bolt, 웹개발, 배포]

@@ -3,7 +3,7 @@ layout: post
 title: "SQLite Is Having a Renaissance: Edge Databases, Libsql, and the Return of the Embedded DB"
 subtitle: "How the world's most deployed database is powering a new generation of cloud-edge applications"
 date: 2026-06-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

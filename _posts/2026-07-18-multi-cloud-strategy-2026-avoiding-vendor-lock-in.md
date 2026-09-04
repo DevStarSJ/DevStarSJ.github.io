@@ -3,7 +3,7 @@ layout: post
 title: "Multi-Cloud Strategy 2026: Avoiding Vendor Lock-In Without Drowning in Complexity"
 subtitle: "Practical patterns for distributing workloads across AWS, GCP, and Azure without losing your mind or your SLA"
 date: 2026-07-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

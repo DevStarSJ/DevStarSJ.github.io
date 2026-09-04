@@ -3,7 +3,7 @@ layout: post
 title: "AI-Assisted Code Review: How Teams Are Using LLMs Without Losing Engineering Quality"
 subtitle: "Practical patterns for integrating AI into your code review process — without replacing the human judgment that actually matters"
 date: 2026-07-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

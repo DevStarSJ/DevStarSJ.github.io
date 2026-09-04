@@ -3,7 +3,7 @@ layout: post
 title: "Edge Computing 2026: Running Code at the CDN — Cloudflare Workers, Fastly Compute, and Lambda@Edge"
 subtitle: "How edge functions are replacing traditional origin servers for latency-sensitive workloads — architecture, benchmarks, and real use cases"
 date: 2026-03-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

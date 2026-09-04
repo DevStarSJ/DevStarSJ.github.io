@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0 and the Node.js Compatibility Revolution: What Developers Need to Know"
 subtitle: "How Deno evolved from Node.js alternative to a first-class production runtime in 2026"
 date: 2026-06-07 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

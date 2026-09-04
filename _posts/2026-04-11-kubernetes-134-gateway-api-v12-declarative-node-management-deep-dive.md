@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 1.34 Deep Dive: Gateway API v1.2, Declarative Node Management, and the End of Ingress"
 subtitle: "Everything you need to know about the latest Kubernetes release — and why Gateway API is finally ready for production"
 date: 2026-04-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop&q=80"
 categories: [DevOps, Kubernetes]
 tags: [Kubernetes, K8s, Gateway API, DevOps, Cloud Native, Container Orchestration]

@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Gateway API: The Future of Ingress and Service Mesh"
 subtitle: "Master the new standard for traffic management in Kubernetes clusters"
 date: 2026-02-15
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 tags: [Kubernetes, Gateway API, Ingress, Service Mesh, Cloud Native, DevOps]
 ---

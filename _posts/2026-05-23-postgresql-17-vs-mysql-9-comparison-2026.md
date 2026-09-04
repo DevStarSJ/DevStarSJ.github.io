@@ -3,7 +3,7 @@ layout: post
 title: "PostgreSQL 17 vs MySQL 9: Which Database Should You Choose in 2026?"
 subtitle: "A practical comparison for developers — JSON, performance, replication, and ecosystem — based on what actually matters for modern applications"
 date: 2026-05-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

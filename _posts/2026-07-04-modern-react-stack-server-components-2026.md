@@ -3,7 +3,7 @@ layout: post
 title: "The Modern React Stack in 2026: Server Components, Suspense, and the Server-First Shift"
 subtitle: "React 19 changed the defaults. Here's how the serious production stacks are actually built now."
 date: 2026-07-04 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80"
 catalog: true
 tags:

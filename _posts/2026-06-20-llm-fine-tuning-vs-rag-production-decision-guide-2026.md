@@ -3,7 +3,7 @@ layout: post
 title: "LLM Fine-Tuning vs RAG: The Definitive Production Decision Guide (2026)"
 subtitle: "When to fine-tune, when to retrieve, and when to combine both — with real-world cost and performance benchmarks"
 date: 2026-06-20 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 header-mask: 0.4
 catalog: true

@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in 2026: The Technology Quietly Reshaping Linux Infrastructure"
 subtitle: "From observability to security to networking — why every platform team needs to understand eBPF"
 date: 2026-07-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

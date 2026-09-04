@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Jasper AI: The Enterprise AI Writing Assistant That Scales Content Creation"
 subtitle: "Complete guide to Jasper AI — how marketing teams and content creators use AI to produce high-quality content at scale"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80"
 category: productivity
 tags:

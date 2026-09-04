@@ -3,7 +3,7 @@ layout: post
 title: "FinOps in the Age of AI Workloads: Taming GPU and LLM Inference Costs"
 subtitle: "Practical strategies for managing cloud AI spend before it manages you"
 date: 2026-04-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600&auto=format&fit=crop&q=80"
 catalog: true
 tags:

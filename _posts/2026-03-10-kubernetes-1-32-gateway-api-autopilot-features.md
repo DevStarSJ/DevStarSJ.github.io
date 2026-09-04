@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 1.32: Gateway API Goes GA and the Rise of Autopilot Features"
 subtitle: "Gateway API has finally reached GA, kubectl get all actually works now, and cluster autoscaling is smarter than ever — here's what engineers need to know in 2026"
 date: 2026-03-10 09:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building the Internal Developer Platform That Teams Actually Use"
 subtitle: "From golden paths to self-service portals — the IDP patterns that stick"
 date: 2026-06-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

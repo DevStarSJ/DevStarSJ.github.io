@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Teams Actually Use"
 subtitle: "IDP design principles, toolchain choices, and the golden path that reduces cognitive load"
 date: 2026-03-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&q=80"
 categories: [DevOps, Platform-Engineering]
 tags: [Platform-Engineering, IDP, Backstage, DevOps, Kubernetes, Developer-Experience, GitOps, Golden-Path]

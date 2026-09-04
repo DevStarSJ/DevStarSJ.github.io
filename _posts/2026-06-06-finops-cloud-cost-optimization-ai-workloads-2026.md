@@ -3,7 +3,7 @@ layout: post
 title: "FinOps at Scale: Taming Cloud Costs in the Age of AI Workloads"
 subtitle: "Practical strategies for cloud cost optimization when GPU clusters and LLM APIs dominate your bill"
 date: 2026-06-06 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

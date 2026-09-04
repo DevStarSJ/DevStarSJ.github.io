@@ -3,7 +3,7 @@ layout: post
 title: "Durable Execution: The Pattern That's Quietly Fixing Distributed Systems"
 subtitle: "How Temporal, Restate, and similar frameworks are eliminating the hardest problems in microservice orchestration"
 date: 2026-06-04 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 header-mask: 0.4
 catalog: true

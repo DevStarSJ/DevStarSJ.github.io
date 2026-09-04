@@ -3,7 +3,7 @@ layout: post
 title: "AWS Lambda SnapStart and Cold Start Elimination: A Deep Dive for 2026"
 subtitle: "How to reduce Lambda cold starts by 90% using SnapStart, tiered compilation, and warm pool strategies"
 date: 2026-03-18 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80"
 catalog: true
 tags:

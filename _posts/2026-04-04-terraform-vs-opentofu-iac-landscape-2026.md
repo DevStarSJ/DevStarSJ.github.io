@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs OpenTofu in 2026: The IaC Landscape After the HashiCorp Fork"
 subtitle: "Two years after HashiCorp's BSL license change, how has the infrastructure-as-code ecosystem evolved?"
 date: 2026-04-04 12:00:00
-author: "Dev.StarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

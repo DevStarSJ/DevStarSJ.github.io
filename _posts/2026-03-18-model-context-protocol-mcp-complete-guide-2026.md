@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The Standard That's Changing AI Integration in 2026"
 subtitle: "How MCP unifies tool calling, context sharing, and agent orchestration across LLM providers"
 date: 2026-03-18 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&q=80"
 catalog: true
 tags:

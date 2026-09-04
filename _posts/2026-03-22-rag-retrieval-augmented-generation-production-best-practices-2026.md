@@ -3,7 +3,7 @@ layout: post
 title: "Retrieval-Augmented Generation (RAG) Best Practices: Building Production-Ready Systems in 2026"
 subtitle: "From naive RAG to advanced retrieval strategies — a practical guide for teams shipping RAG to production"
 date: 2026-03-22 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

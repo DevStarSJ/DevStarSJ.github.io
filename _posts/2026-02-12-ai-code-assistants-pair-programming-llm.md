@@ -3,7 +3,7 @@ layout: post
 title: "AI Code Assistants in 2026: Maximizing Developer Productivity with LLM Pair Programming"
 subtitle: "A comprehensive guide to leveraging GitHub Copilot, Claude Code, Cursor, and other AI assistants for professional software development"
 date: 2026-02-12
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 tags: [AI, Code Assistants, GitHub Copilot, LLM, Developer Productivity, Claude]
 categories: ai

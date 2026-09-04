@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes FinOps: Slash Your Cloud Bill by 40% with Smart Resource Management"
 subtitle: "Practical strategies for optimizing Kubernetes costs without sacrificing performance or reliability"
 date: 2026-02-13
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 tags: [Kubernetes, FinOps, Cloud Cost, DevOps, Cost Optimization, Cloud Native]
 ---

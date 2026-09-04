@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Bolt.new AI Web App Builder: Complete Guide 2026"
 subtitle: "Build and deploy full-stack web apps with natural language prompts"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&auto=format&fit=crop"
 category: coding
 tags: [ai, coding, bolt, web-development, deployment]

@@ -3,7 +3,7 @@ layout: post
 title: "MLOps Best Practices: From Experiment to Production in 2026"
 subtitle: "Build reliable, scalable machine learning pipelines that actually work"
 date: 2026-02-17
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1200"
 catalog: true
 tags:

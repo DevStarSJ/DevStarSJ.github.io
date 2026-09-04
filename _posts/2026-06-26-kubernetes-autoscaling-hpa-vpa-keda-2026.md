@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Autoscaling in 2026: HPA, VPA, KEDA, and When to Use Each"
 subtitle: "A practical guide to choosing and combining Kubernetes autoscaling strategies for modern cloud-native workloads"
 date: 2026-06-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

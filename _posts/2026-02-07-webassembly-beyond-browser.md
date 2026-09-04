@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Beyond the Browser: Server-Side Wasm in 2026"
 subtitle: "How Wasm is reshaping cloud computing, edge functions, and plugin systems"
 date: 2026-02-07
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1920&q=80"
 tags: [WebAssembly, Wasm, Cloud, Edge Computing, Rust, Performance]
 ---

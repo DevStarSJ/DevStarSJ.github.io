@@ -3,7 +3,7 @@ layout: post
 title: "React Server Components and Next.js 15: Mastering the Full-Stack React Model in 2026"
 subtitle: "Understanding RSC architecture, streaming, Suspense boundaries, and when to use Server vs. Client Components"
 date: 2026-03-18 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1600&q=80"
 catalog: true
 tags:

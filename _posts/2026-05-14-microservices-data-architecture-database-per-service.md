@@ -3,7 +3,7 @@ layout: post
 title: "Database-Per-Service vs Shared Database: Microservices Data Architecture in 2026"
 subtitle: "The real trade-offs of data isolation in distributed systems — and when each pattern makes sense"
 date: 2026-05-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

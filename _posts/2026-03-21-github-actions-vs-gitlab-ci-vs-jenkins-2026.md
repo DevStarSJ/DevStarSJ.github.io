@@ -3,7 +3,7 @@ layout: post
 title: "GitHub Actions vs GitLab CI vs Jenkins in 2026: CI/CD Platform Showdown"
 subtitle: "A practical comparison of the three biggest CI/CD platforms to help you make the right choice"
 date: 2026-03-21 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200&auto=format&fit=crop&q=80"
 categories: [DevOps, CI/CD, Automation]
 tags: [github-actions, gitlab-ci, jenkins, cicd, devops, automation]

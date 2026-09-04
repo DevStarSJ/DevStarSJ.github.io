@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The USB-C of AI Integrations"
 subtitle: "How Anthropic's open standard is reshaping tool connectivity for LLMs"
 date: 2026-02-09
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80"
 tags: [MCP, Model Context Protocol, Anthropic, Claude, AI Tools, LLM Integration, API]
 categories: ai

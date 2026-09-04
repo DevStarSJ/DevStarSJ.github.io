@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0 and the End of the Node Monoculture"
 subtitle: "Deno 2.0 is production-ready, npm-compatible, and ships with batteries included. Is this finally the Node.js successor that sticks?"
 date: 2026-03-10 10:30:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200"
 catalog: true
 tags:

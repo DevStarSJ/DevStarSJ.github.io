@@ -3,7 +3,7 @@ layout: post
 title: "Python 3.13: The Performance Release We've Been Waiting For"
 subtitle: "Free-threaded mode, JIT compiler, and what it means for your code"
 date: 2026-02-10
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1920&q=80"
 tags: [Python, Python 3.13, GIL, JIT, Performance, Free Threading, CPython]
 ---

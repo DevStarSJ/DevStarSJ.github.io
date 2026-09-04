@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases for AI: Powering RAG Systems at Scale"
 subtitle: "A deep dive into vector databases, embeddings, and building production-ready retrieval-augmented generation systems"
 date: 2026-02-14
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200"
 tags: [Vector Database, RAG, AI, Embeddings, Pinecone, Weaviate, ChromaDB, LLM]
 categories: ai

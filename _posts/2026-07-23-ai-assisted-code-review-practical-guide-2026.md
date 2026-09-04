@@ -3,7 +3,7 @@ layout: post
 title: "AI-Assisted Code Review: How to Actually Improve Code Quality Without the Noise"
 subtitle: "Integrating LLMs into your review pipeline — what works, what doesn't, and how to avoid alert fatigue"
 date: 2026-07-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1587620962725-abab19836100?w=1200&q=80"
 tags:
   - AI

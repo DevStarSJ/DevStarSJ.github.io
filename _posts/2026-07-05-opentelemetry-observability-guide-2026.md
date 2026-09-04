@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in 2026: Observability Has Finally Grown Up"
 subtitle: "Why OTel is now the default choice for tracing, metrics, and logs — and how to actually use it well"
 date: 2026-07-05 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
 catalog: true
 tags:

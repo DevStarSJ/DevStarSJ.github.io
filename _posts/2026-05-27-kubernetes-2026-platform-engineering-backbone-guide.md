@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 2026: From Container Orchestration to Platform Engineering Backbone"
 subtitle: "How Kubernetes evolved beyond ops tooling into the universal control plane for modern infrastructure"
 date: 2026-05-27 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&q=80"
 catalog: true
 tags:

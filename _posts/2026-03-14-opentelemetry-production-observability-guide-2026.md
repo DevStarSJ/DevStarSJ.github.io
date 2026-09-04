@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in Production: A Practical Guide to Observability in 2026"
 subtitle: "Traces, metrics, and logs unified — how to instrument your services the right way"
 date: 2026-03-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
 categories: [DevOps, Observability]
 tags: [OpenTelemetry, Observability, Tracing, Metrics, Logs, DevOps, Kubernetes, Monitoring]

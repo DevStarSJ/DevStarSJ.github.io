@@ -3,7 +3,7 @@ layout: post
 title: "PostgreSQL 17 Features Every Developer Should Know"
 subtitle: "From incremental backup to MERGE improvements and JSON_TABLE — what's new in PostgreSQL 17 and how it changes your queries"
 date: 2026-04-16 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

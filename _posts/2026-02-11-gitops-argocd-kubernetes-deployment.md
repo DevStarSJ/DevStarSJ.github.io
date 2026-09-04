@@ -3,7 +3,7 @@ layout: post
 title: "GitOps with ArgoCD: The Complete Guide to Kubernetes Deployment Automation"
 subtitle: "Master declarative continuous deployment for Kubernetes using ArgoCD and Git-based workflows"
 date: 2026-02-11
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200"
 tags: [GitOps, ArgoCD, Kubernetes, DevOps, CI/CD, Automation]
 ---

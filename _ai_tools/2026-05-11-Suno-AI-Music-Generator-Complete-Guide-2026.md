@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Suno AI Music Generator: Complete Guide 2026"
 subtitle: "Create full songs with lyrics in seconds using AI"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&auto=format&fit=crop"
 category: productivity
 tags: [ai, music, suno, audio, creativity]

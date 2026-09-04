@@ -3,7 +3,7 @@ layout: post
 title: "Neon Serverless Postgres + Drizzle ORM: The Modern Full-Stack Database Stack"
 subtitle: "Zero-Cold-Start Postgres with Type-Safe Queries — Complete Guide for 2026"
 date: 2026-03-27 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

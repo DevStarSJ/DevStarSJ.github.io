@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building an Internal Developer Platform That Developers Actually Use"
 subtitle: "Golden paths, self-service portals, and the engineering culture shifts that separate IDPs that get adopted from ones that get abandoned"
 date: 2026-02-21
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200"
 catalog: true
 tags:

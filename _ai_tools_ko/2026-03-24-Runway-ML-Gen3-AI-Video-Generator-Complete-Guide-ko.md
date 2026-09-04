@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Runway ML Gen-3 Alpha: 크리에이티브 제작을 재정의하는 AI 비디오 생성기"
 subtitle: "텍스트-투-비디오부터 고급 AI 비디오 편집까지 — Runway ML Gen-3 Alpha 완벽 가이드"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=1200&q=80"
 category: image
 lang: ko

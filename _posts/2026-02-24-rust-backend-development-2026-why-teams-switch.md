@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development in 2026: Why Engineering Teams Are Making the Switch"
 subtitle: "Memory safety, blazing performance, and a maturing ecosystem — the practical case for adopting Rust in production backend services"
 date: 2026-02-24
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1200"
 catalog: true
 tags:

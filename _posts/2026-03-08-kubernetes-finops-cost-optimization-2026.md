@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 2026: Why FinOps and Cost Observability Are Now First-Class Concerns"
 subtitle: "Cloud bills grew faster than container clusters — here's how teams are finally getting costs under control in Kubernetes"
 date: 2026-03-08 09:30:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200"
 catalog: true
 tags:

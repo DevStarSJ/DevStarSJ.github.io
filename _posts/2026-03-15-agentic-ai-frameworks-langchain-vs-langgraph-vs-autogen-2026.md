@@ -3,7 +3,7 @@ layout: post
 title: "Agentic AI Frameworks in 2026: LangChain vs LangGraph vs AutoGen vs CrewAI"
 subtitle: "A practical comparison of the leading AI agent frameworks for production deployments"
 date: 2026-03-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 categories: [AI, Frameworks]
 tags: [LangChain, LangGraph, AutoGen, CrewAI, AI-Agents, LLM, Python, Framework-Comparison]

@@ -3,7 +3,7 @@ layout: post
 title: "GitOps at Scale: Argo CD, Flux, and the Future of Kubernetes Deployment Pipelines"
 subtitle: "Beyond kubectl apply — how mature teams manage thousands of clusters with GitOps"
 date: 2026-05-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

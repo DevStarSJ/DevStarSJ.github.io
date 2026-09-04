@@ -3,7 +3,7 @@ layout: post
 title: "React 19 vs Next.js 15 vs Remix 3: Choosing the Right React Framework in 2026"
 subtitle: "A practical comparison of the three most popular React meta-frameworks with real-world benchmarks"
 date: 2026-03-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

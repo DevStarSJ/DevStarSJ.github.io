@@ -3,7 +3,7 @@ layout: post
 title: "Serverless in 2026: AWS Lambda vs Cloudflare Workers vs Vercel Edge"
 subtitle: "When to go serverless, which platform to choose, and what the cold start problem looks like today"
 date: 2026-03-25 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

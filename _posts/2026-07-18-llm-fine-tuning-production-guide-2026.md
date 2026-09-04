@@ -3,7 +3,7 @@ layout: post
 title: "LLM Fine-Tuning in Production 2026: LoRA, QLoRA, and Full Fine-Tuning Compared"
 subtitle: "A practical guide to customizing large language models for enterprise use cases without breaking the bank"
 date: 2026-07-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: How to Build an Internal Developer Platform That Developers Actually Use"
 subtitle: "The gap between 'we built a platform' and 'developers love it' — and how to close it"
 date: 2026-03-07 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"
 catalog: true
 tags:

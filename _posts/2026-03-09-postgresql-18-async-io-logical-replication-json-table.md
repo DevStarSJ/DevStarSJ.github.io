@@ -3,7 +3,7 @@ layout: post
 title: "PostgreSQL 18: What's New and Why It Matters for Your Application"
 subtitle: "Asynchronous I/O, improved logical replication, and the new query parallelism features that could cut your database costs significantly"
 date: 2026-03-09 11:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "FinOps 2026: Engineering Your Way Out of Cloud Cost Chaos"
 subtitle: "Practical patterns for cloud cost visibility, allocation, and optimization — beyond the dashboard"
 date: 2026-04-25 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
 categories: [Cloud, DevOps, FinOps]
 tags: [FinOps, cloud cost, AWS, GCP, Azure, Kubernetes cost, cost optimization, tagging, chargeback]

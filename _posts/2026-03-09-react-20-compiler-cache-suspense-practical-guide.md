@@ -3,7 +3,7 @@ layout: post
 title: "React 20 and the New Concurrency Primitives: What Actually Changed"
 subtitle: "React's compiler is finally here, Suspense semantics shifted again, and the new cache() API changes how you think about data fetching — a practical guide"
 date: 2026-03-09 10:30:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200"
 catalog: true
 tags:

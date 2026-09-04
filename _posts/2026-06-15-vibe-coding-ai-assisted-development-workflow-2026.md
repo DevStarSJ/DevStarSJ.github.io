@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding in 2026: How AI-Assisted Development Is Reshaping Engineering Workflows"
 subtitle: "From GitHub Copilot to autonomous agents — what modern dev looks like"
 date: 2026-06-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

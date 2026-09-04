@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Teams Actually Love"
 subtitle: "How leading engineering organizations are reducing cognitive load, accelerating delivery, and scaling developer autonomy through IDPs"
 date: 2026-02-19
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"
 catalog: true
 tags:

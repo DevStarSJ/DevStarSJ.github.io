@@ -3,7 +3,7 @@ layout: post
 title: "Bun 2.0 and the JavaScript Runtime Wars: A Performance Deep-Dive (2026)"
 subtitle: "Benchmarking Bun, Deno, and Node.js 24 across real workloads — and when the winner actually matters"
 date: 2026-06-20 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200&q=80"
 header-mask: 0.4
 catalog: true

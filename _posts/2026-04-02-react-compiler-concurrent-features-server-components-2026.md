@@ -3,7 +3,7 @@ layout: post
 title: "React 20 and Beyond: Concurrent Features, React Compiler, and the End of Manual Optimization"
 subtitle: "How React's evolution is eliminating useMemo, useCallback, and the mental overhead of performance optimization"
 date: 2026-04-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

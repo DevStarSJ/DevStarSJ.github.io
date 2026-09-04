@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in Production: End-to-End Observability for Microservices in 2026"
 subtitle: "From zero to full-stack distributed tracing, metrics, and logs with OpenTelemetry, Grafana, and Tempo"
 date: 2026-03-18 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80"
 catalog: true
 tags:

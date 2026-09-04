@@ -3,7 +3,7 @@ layout: post
 title: "Pulumi: Infrastructure as Code with Real Programming Languages"
 subtitle: "Move beyond YAML and HCL—define cloud infrastructure using TypeScript, Python, Go, or C#"
 date: 2026-02-15
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200"
 tags: [Pulumi, Infrastructure as Code, IaC, DevOps, Cloud, AWS, Terraform, TypeScript]
 ---

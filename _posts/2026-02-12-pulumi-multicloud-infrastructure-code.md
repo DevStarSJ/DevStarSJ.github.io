@@ -3,7 +3,7 @@ layout: post
 title: "Pulumi for Multi-Cloud: Infrastructure as Code with Real Programming Languages"
 subtitle: "Master multi-cloud infrastructure management using TypeScript, Python, and Go with Pulumi's modern IaC approach"
 date: 2026-02-12
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200"
 tags: [Pulumi, Infrastructure as Code, Multi-Cloud, DevOps, Cloud Architecture]
 ---

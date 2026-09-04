@@ -3,7 +3,7 @@ layout: post
 title: "MCP (Model Context Protocol): The USB-C of AI Integrations"
 subtitle: "How Anthropic's open protocol is becoming the universal connector for AI agents and tools"
 date: 2026-04-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

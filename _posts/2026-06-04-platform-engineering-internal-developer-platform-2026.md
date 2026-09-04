@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Developers Actually Love"
 subtitle: "Why IDP adoption is surging and how to build one that reduces cognitive load without creating a new bottleneck"
 date: 2026-06-04 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=1200&auto=format&fit=crop"
 header-mask: 0.4
 catalog: true

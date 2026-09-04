@@ -3,7 +3,7 @@ layout: subsite-post
 title: "n8n AI 워크플로우 자동화: 완벽 가이드 2026"
 subtitle: "n8n 오픈소스 플랫폼으로 강력한 AI 기반 자동화 구축하기"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200&auto=format&fit=crop"
 category: automation
 tags: [ai, 자동화, n8n, 워크플로우, 노코드]

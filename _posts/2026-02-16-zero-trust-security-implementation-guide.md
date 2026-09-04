@@ -3,7 +3,7 @@ layout: post
 title: "Zero Trust Security: From Concept to Implementation in 2026"
 subtitle: "A practical guide to implementing Zero Trust architecture with modern tools and cloud-native patterns"
 date: 2026-02-16
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200"
 tags: [Zero Trust, Security, Cloud Security, Identity, Authentication, BeyondCorp, SASE, IAM]
 ---

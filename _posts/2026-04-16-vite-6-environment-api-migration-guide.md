@@ -3,7 +3,7 @@ layout: post
 title: "Vite 6 and the Future of Frontend Build Tools: A Complete Migration Guide"
 subtitle: "How Vite 6 reshapes frontend development with its Environment API, improved SSR, and what it means for your React and Vue projects"
 date: 2026-04-16 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

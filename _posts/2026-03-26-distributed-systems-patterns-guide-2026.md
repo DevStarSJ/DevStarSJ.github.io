@@ -3,7 +3,7 @@ layout: post
 title: "Distributed Systems Patterns Every Backend Engineer Must Know in 2026"
 subtitle: "Saga pattern, outbox, CQRS, circuit breaker, and more — practical patterns for resilient microservices"
 date: 2026-03-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

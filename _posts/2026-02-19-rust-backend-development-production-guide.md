@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development in 2026: A Production-Ready Guide"
 subtitle: "Why teams are choosing Rust for high-performance APIs, the frameworks that have matured, and practical patterns for real-world services"
 date: 2026-02-19
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200"
 catalog: true
 tags:

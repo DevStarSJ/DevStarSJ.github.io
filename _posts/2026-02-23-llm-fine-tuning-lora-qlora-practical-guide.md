@@ -3,7 +3,7 @@ layout: post
 title: "LLM Fine-Tuning in 2026: A Practical Guide to LoRA and QLoRA"
 subtitle: "Stop prompting, start training — how to efficiently adapt foundation models to your domain with parameter-efficient fine-tuning techniques"
 date: 2026-02-23
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 2026: What's Changed and What Your Platform Team Needs to Know"
 subtitle: "From Gateway API GA to AI workload scheduling — the Kubernetes landscape has shifted significantly. Here's the practical update for platform engineers."
 date: 2026-05-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

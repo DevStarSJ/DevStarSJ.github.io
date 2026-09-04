@@ -3,7 +3,7 @@ layout: post
 title: "Next.js 15 App Router Deep Dive: Server Components, Caching, and Performance in Production"
 subtitle: "A comprehensive guide to building fast, scalable Next.js apps in 2026 — what's changed, what still trips you up"
 date: 2026-03-30 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14431b9?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

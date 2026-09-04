@@ -3,7 +3,7 @@ layout: post
 title: "FinOps in 2026: Engineering Cloud Costs Out of Your Architecture"
 subtitle: "Move beyond tagging policies and reserved instance math — the modern FinOps playbook for engineering teams who want to cut cloud bills without slowing down"
 date: 2026-02-22
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0 vs Node.js vs Bun: Which JavaScript Runtime Wins in 2026?"
 subtitle: "A practical comparison of the three major JS runtimes — performance, compatibility, ecosystem, and when to choose each"
 date: 2026-03-22 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

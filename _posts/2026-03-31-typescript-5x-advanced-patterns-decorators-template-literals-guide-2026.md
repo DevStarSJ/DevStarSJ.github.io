@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 5.x Advanced Patterns: Decorators, Template Literals, and Type-Safe APIs"
 subtitle: "Master the TypeScript 5.x features that senior engineers actually use in production codebases"
 date: 2026-03-31 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

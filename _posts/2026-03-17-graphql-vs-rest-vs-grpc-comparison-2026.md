@@ -3,7 +3,7 @@ layout: post
 title: "GraphQL vs REST vs gRPC in 2026: Choosing the Right API for Your Use Case"
 subtitle: "A practical comparison with real benchmarks, trade-offs, and when to use each"
 date: 2026-03-17 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=80"
 catalog: true
 tags:

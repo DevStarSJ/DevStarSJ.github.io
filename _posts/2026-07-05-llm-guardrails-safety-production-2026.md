@@ -3,7 +3,7 @@ layout: post
 title: "LLM Guardrails and Safety Layers: Building Reliable AI Applications in 2026"
 subtitle: "Input validation, output filtering, prompt injection defense, and the practical infrastructure for safe LLM deployment"
 date: 2026-07-05 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 catalog: true
 tags:

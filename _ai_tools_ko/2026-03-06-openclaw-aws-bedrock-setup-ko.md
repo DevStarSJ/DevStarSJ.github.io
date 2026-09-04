@@ -3,7 +3,7 @@ layout: subsite-post
 title: "OpenClaw을 AWS Bedrock으로 연결하기: 실전 설정 가이드"
 subtitle: "Gemini API에서 AWS Bedrock Claude Sonnet 4.6으로 전환하기 — 삽질 포함"
 date: 2026-03-06 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 catalog: true
 category: automation

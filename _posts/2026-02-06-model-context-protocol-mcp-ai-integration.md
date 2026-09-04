@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The Universal Standard for AI Tool Integration"
 subtitle: "How MCP is becoming the USB of AI applications"
 date: 2026-02-06
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80"
 tags: [AI, MCP, Claude, Integration, API, Developer Tools]
 categories: ai

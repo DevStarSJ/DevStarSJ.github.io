@@ -3,7 +3,7 @@ layout: post
 title: "Edge AI: Deploying Machine Learning Models at the Edge for Real-Time Intelligence"
 subtitle: "Complete guide to running AI inference on edge devices - from model optimization to production deployment"
 date: 2026-02-13
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200"
 tags: [Edge AI, Machine Learning, IoT, TensorFlow Lite, ONNX, Edge Computing]
 categories: ai

@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Why Systems Programmers Are Finally Making the Switch"
 subtitle: "Async runtimes, embedded targets, and the maturing ecosystem that's winning over C++ veterans"
 date: 2026-04-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14431b9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in Production: The Complete Observability Setup Guide"
 subtitle: "From zero to full-stack observability — instrumenting your services, choosing backends, and building the dashboards and alerts that actually help you find and fix problems fast"
 date: 2026-02-22
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"
 catalog: true
 tags:

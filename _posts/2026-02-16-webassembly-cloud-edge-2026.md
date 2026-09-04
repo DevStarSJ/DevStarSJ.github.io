@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Beyond the Browser: Cloud, Edge, and Serverless in 2026"
 subtitle: "How WASM is reshaping server-side computing with near-native performance and universal portability"
 date: 2026-02-16
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200"
 tags: [WebAssembly, WASM, WASI, Edge Computing, Serverless, Cloudflare Workers, Spin, WasmCloud]
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly in 2026: The Runtime That Escaped the Browser"
 subtitle: "WASM is now a universal execution layer for cloud functions, edge computing, plugins, and AI inference — here's the full picture"
 date: 2026-03-07 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

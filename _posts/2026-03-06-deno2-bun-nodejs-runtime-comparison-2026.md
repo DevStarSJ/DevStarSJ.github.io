@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2 and the Runtime Wars: Why Node.js Is No Longer the Obvious Choice"
 subtitle: "Bun is fast, Deno is secure, Node is stable — a practical comparison for 2026 JavaScript backend development"
 date: 2026-03-06 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200"
 catalog: true
 tags:

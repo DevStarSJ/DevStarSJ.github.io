@@ -3,7 +3,7 @@ layout: post
 title: "LLM Security in 2026: Defending Against Prompt Injection and Data Exfiltration"
 subtitle: "A practical guide to securing AI-powered applications"
 date: 2026-02-07
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1920&q=80"
 tags: [Security, AI, LLM, Prompt Injection, Machine Learning, AppSec]
 categories: ai

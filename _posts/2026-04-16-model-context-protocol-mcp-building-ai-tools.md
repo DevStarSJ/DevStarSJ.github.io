@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): Building AI Tools That Actually Integrate"
 subtitle: "How Anthropic's MCP standard is solving the fragmentation problem in AI tooling — and how to build your own MCP servers"
 date: 2026-04-16 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

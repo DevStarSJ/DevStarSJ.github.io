@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly in 2026: Running Untrusted Code Safely in Every Environment"
 subtitle: "From browser sandboxes to edge runtimes and server-side WASM — a practical guide"
 date: 2026-04-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&auto=format&fit=crop&q=80"
 catalog: true
 tags:

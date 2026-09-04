@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0 vs Bun vs Node.js: The JavaScript Runtime War in 2026"
 subtitle: "A comprehensive performance and developer experience comparison of modern JS runtimes"
 date: 2026-03-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&q=80"
 categories: [JavaScript, Runtime]
 tags: [Deno, Bun, Node.js, JavaScript, TypeScript, Performance, Backend, Runtime-Comparison]

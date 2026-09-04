@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development: Building Fast, Safe Web Services"
 subtitle: "A comprehensive guide to building production-ready APIs with Rust, Axum, and SQLx"
 date: 2026-02-15
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1619410283995-43d9134e7656?w=1200"
 tags: [Rust, Backend, Axum, SQLx, Web Development, API, Performance]
 ---

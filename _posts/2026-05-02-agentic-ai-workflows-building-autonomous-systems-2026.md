@@ -3,7 +3,7 @@ layout: post
 title: "Agentic AI Workflows: Building Autonomous Systems That Actually Work in 2026"
 subtitle: "From LLM chatbots to multi-agent pipelines — the architecture patterns you need"
 date: 2026-05-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 categories: [AI, Architecture]
 tags: [AI, agents, LLM, automation, multi-agent, agentic-AI, workflow]

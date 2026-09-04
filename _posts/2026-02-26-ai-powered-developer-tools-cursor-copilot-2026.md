@@ -3,7 +3,7 @@ layout: post
 title: "AI-Powered Developer Tools in 2026: Cursor, Copilot, and the Future of Coding"
 subtitle: "How AI coding assistants are reshaping the entire software development lifecycle — and how to get the most out of them"
 date: 2026-02-26
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200"
 catalog: true
 tags:

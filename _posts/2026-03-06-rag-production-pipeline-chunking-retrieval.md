@@ -3,7 +3,7 @@ layout: post
 title: "Building Reliable RAG Systems: From Prototype to Production"
 subtitle: "Chunking strategies, retrieval quality, reranking, and everything else that makes or breaks your Retrieval-Augmented Generation pipeline"
 date: 2026-03-06 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200"
 catalog: true
 tags:

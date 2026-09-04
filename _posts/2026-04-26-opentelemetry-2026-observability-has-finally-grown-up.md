@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in 2026: Observability Has Finally Grown Up"
 subtitle: "How OTel became the universal standard for distributed tracing, metrics, and logs — and why you should be all-in"
 date: 2026-04-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

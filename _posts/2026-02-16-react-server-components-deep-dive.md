@@ -3,7 +3,7 @@ layout: post
 title: "React Server Components Deep Dive: Architecture, Patterns, and Performance"
 subtitle: "Understanding the paradigm shift in React rendering and how to build faster applications"
 date: 2026-02-16
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1200"
 tags: [React, Server Components, RSC, Next.js, Web Performance, JavaScript, Frontend Architecture]
 ---

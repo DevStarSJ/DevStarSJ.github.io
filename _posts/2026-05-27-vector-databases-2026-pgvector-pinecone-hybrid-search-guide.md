@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: pgvector, Pinecone, and the Rise of Hybrid Search"
 subtitle: "Which vector store to pick, how embeddings work in production, and why your relational database might be enough"
 date: 2026-05-27 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&q=80"
 catalog: true
 tags:

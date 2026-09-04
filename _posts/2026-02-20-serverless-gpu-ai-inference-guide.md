@@ -3,7 +3,7 @@ layout: post
 title: "Serverless GPU in 2026: Deploying AI Models Without Managing Infrastructure"
 subtitle: "A complete guide to serverless GPU platforms — Modal, Replicate, RunPod Serverless, and Beam — for cost-effective AI inference and fine-tuning"
 date: 2026-02-20
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=1200"
 catalog: true
 tags:

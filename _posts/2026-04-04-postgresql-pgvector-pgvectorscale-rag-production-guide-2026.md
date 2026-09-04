@@ -3,7 +3,7 @@ layout: post
 title: "PostgreSQL Vector Search in 2026: pgvector vs pgvectorscale — Building Production RAG Systems"
 subtitle: "A practical guide to running high-performance vector search directly in PostgreSQL without a dedicated vector database"
 date: 2026-04-04 12:00:00
-author: "Dev.StarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

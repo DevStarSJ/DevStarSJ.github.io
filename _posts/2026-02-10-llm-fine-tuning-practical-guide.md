@@ -3,7 +3,7 @@ layout: post
 title: "Fine-Tuning LLMs in 2026: A Practical Guide to Custom AI Models"
 subtitle: "When to fine-tune, techniques that work, and avoiding common pitfalls"
 date: 2026-02-10
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80"
 tags: [LLM, Fine-Tuning, Machine Learning, AI, LoRA, QLoRA, OpenAI, Hugging Face]
 categories: ai

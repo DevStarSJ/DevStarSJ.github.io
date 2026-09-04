@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Beyond the Browser: WASM as a Cloud-Native Runtime in 2026"
 subtitle: "How WebAssembly is reshaping serverless, edge computing, and polyglot microservices"
 date: 2026-06-06 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

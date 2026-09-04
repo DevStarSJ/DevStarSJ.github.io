@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in Production: Observability, Security, and Networking Without Kernel Modules"
 subtitle: "A practical guide to using eBPF for zero-overhead observability, runtime security, and high-performance networking in modern infrastructure"
 date: 2026-06-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

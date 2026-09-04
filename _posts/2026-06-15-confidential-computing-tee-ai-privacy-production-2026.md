@@ -3,7 +3,7 @@ layout: post
 title: "Confidential Computing in 2026: Running AI Workloads Where No One Can See the Data"
 subtitle: "TEEs, AMD SEV-SNP, Intel TDX, and why privacy-preserving compute is going mainstream"
 date: 2026-06-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

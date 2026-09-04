@@ -3,7 +3,7 @@ layout: post
 title: "Agentic AI Workflows in 2026: Orchestration Tools, Patterns, and Production Lessons"
 subtitle: "A practical guide to building reliable multi-step AI agents with LangGraph, AutoGen, and beyond"
 date: 2026-03-30 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

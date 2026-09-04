@@ -3,7 +3,7 @@ layout: post
 title: "AI Agents in Production: Architecture Patterns for Reliable Autonomous Systems"
 subtitle: "Moving beyond demos — how engineering teams are building AI agents that actually work in production"
 date: 2026-06-06 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

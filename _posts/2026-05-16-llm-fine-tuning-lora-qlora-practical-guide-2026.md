@@ -3,7 +3,7 @@ layout: post
 title: "LLM Fine-Tuning in 2026: LoRA, QLoRA, and When to Actually Do It"
 subtitle: "A practical decision framework for when fine-tuning beats prompt engineering—and how to execute it efficiently"
 date: 2026-05-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 5.5: Complete Guide to New Features and Performance Improvements"
 subtitle: "Explore inferred type predicates, isolated declarations, and other powerful additions in TypeScript 5.5"
 date: 2026-02-11
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200"
 tags: [TypeScript, JavaScript, Programming, Web Development, Frontend]
 ---

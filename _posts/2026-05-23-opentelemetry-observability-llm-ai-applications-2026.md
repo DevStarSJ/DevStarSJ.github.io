@@ -3,7 +3,7 @@ layout: post
 title: "Observability in the Age of AI: How OpenTelemetry is Evolving for LLM Applications"
 subtitle: "Tracing, metrics, and logging patterns for AI-powered services — and why the old observability playbook doesn't fully apply"
 date: 2026-05-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

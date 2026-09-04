@@ -3,7 +3,7 @@ layout: post
 title: "Bun 2.0 vs Node.js vs Deno 2: The Ultimate JavaScript Runtime Comparison in 2026"
 subtitle: "Performance Benchmarks, Ecosystem Maturity, and When to Use Each Runtime"
 date: 2026-03-27 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

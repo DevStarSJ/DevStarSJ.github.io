@@ -3,7 +3,7 @@ layout: post
 title: "Building Production-Ready AI Agents: Autonomous Systems in 2026"
 subtitle: "From LLM wrappers to autonomous agents — architecture, patterns, and pitfalls"
 date: 2026-03-25 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

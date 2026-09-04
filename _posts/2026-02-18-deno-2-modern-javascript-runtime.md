@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0: The Modern JavaScript Runtime for 2026"
 subtitle: "Secure by default, TypeScript native, and npm compatible—why Deno is ready for production"
 date: 2026-02-18
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200"
 catalog: true
 tags:

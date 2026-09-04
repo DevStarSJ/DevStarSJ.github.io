@@ -3,7 +3,7 @@ layout: post
 title: "Agentic RAG: Moving Beyond Naive Retrieval-Augmented Generation"
 subtitle: "How multi-agent retrieval architectures are solving the limitations of first-generation RAG systems"
 date: 2026-06-04 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&auto=format&fit=crop"
 header-mask: 0.4
 catalog: true

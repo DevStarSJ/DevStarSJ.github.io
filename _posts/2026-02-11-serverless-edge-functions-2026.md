@@ -3,7 +3,7 @@ layout: post
 title: "Serverless 2.0: Edge Functions Are Reshaping Cloud Architecture in 2026"
 subtitle: "How edge computing and serverless are converging to deliver ultra-low latency applications"
 date: 2026-02-11
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 tags: [Serverless, Edge Computing, Cloud, Architecture, AWS, Cloudflare]
 ---

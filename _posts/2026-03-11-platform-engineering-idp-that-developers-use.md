@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Developers Actually Use"
 subtitle: "The gap between a beautiful IDP on paper and one your engineers love is entirely about reducing cognitive load, not adding more features."
 date: 2026-03-11 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200"
 catalog: true
 tags:

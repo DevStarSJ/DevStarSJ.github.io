@@ -3,7 +3,7 @@ layout: post
 title: "AI-Powered Code Review with GitHub Actions: Automate Quality Gates in 2026"
 subtitle: "Use Claude, GPT-4, and Custom Prompts to Catch Bugs Before Your Human Reviewers Do"
 date: 2026-03-27 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

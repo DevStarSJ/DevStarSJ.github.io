@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Lovable AI App Builder: Complete Guide 2026"
 subtitle: "The fastest way to build production-ready web apps with AI"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"
 category: coding
 tags: [ai, coding, lovable, app-builder, no-code]

@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 6.0: What's New and Why It Matters for Your Codebase"
 subtitle: "Deep dive into TypeScript 6's biggest changes — isolated declarations, variadic tuple improvements, and the new module resolution"
 date: 2026-06-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1587620962725-abab19836100?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

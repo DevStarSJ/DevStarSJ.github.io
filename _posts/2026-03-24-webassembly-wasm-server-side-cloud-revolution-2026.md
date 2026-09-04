@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly (WASM) in 2026: The Server-Side Revolution Reshaping Cloud Computing"
 subtitle: "From Browser Sandbox to Universal Runtime: How WASM is Transforming Serverless, Edge, and Microservices"
 date: 2026-03-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

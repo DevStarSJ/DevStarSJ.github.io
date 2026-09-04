@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding Is Dead: The Rise of AI-Assisted Software Engineering in 2026"
 subtitle: "Moving beyond AI autocomplete to systematic AI-driven development workflows that actually ship production code"
 date: 2026-03-12 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.3
 catalog: true

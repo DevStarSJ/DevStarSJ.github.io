@@ -3,7 +3,7 @@ layout: post
 title: "FinOps in 2026: Engineering Practices for Cloud Cost Efficiency at Scale"
 subtitle: "From tag governance to anomaly detection — how platform teams are making cloud spending visible, accountable, and controllable"
 date: 2026-04-03 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

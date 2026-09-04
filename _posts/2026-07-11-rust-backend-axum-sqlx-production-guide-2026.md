@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development in 2026: Axum, SQLx, and the Production Stack"
 subtitle: "A practical guide to building production-ready REST APIs with Rust's modern web ecosystem"
 date: 2026-07-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1565347135867-8e8edc09c920?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

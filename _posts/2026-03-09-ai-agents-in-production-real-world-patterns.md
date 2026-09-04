@@ -3,7 +3,7 @@ layout: post
 title: "AI Agents in Production: Real-World Patterns That Actually Work"
 subtitle: "Beyond the hype — here's what engineering teams have learned deploying autonomous AI agents at scale in 2026"
 date: 2026-03-09 09:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200"
 catalog: true
 tags:

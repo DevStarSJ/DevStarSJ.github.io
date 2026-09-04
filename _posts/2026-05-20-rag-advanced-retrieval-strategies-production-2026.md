@@ -3,7 +3,7 @@ layout: post
 title: "RAG in 2026: Advanced Retrieval Strategies Beyond Naive Vector Search"
 subtitle: "Why basic RAG pipelines fail in production and the architectural patterns that actually work"
 date: 2026-05-20 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

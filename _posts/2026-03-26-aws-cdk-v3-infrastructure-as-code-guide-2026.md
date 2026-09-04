@@ -3,7 +3,7 @@ layout: post
 title: "AWS CDK v3 Guide: Infrastructure as Code for the Modern Cloud in 2026"
 subtitle: "From stacks to constructs to production deployments — the definitive CDK v3 tutorial"
 date: 2026-03-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

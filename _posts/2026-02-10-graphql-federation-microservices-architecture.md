@@ -3,7 +3,7 @@ layout: post
 title: "GraphQL Federation 2.0: Scaling Microservices with Unified APIs"
 subtitle: "Build a supergraph from independent services using Apollo Federation"
 date: 2026-02-10
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1920&q=80"
 tags: [GraphQL, Federation, Apollo, Microservices, API Gateway, Supergraph, TypeScript]
 ---

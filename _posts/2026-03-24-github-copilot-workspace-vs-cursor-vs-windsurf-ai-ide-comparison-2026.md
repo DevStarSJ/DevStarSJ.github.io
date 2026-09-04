@@ -3,7 +3,7 @@ layout: post
 title: "GitHub Copilot Workspace vs Cursor vs Windsurf: The Ultimate AI IDE Comparison 2026"
 subtitle: "Which AI-Powered Development Environment Should You Choose? A Developer's Hands-On Guide"
 date: 2026-03-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

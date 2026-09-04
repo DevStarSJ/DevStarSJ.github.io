@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The Standard That's Changing How AI Agents Connect to Tools"
 subtitle: "What MCP is, why it matters, and how to build production-ready MCP servers in 2026"
 date: 2026-06-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

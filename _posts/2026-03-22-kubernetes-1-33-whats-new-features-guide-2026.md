@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 1.33: What's New and How to Leverage the Latest Features in 2026"
 subtitle: "A comprehensive guide to the most impactful changes in K8s 1.33 — from sidecar containers GA to improved scheduling"
 date: 2026-03-22 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

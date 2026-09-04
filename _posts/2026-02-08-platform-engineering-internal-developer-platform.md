@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Work"
 subtitle: "How to reduce cognitive load and accelerate delivery without adding complexity"
 date: 2026-02-08
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80"
 tags: [Platform Engineering, DevOps, Developer Experience, IDP, Backstage, Kubernetes]
 ---

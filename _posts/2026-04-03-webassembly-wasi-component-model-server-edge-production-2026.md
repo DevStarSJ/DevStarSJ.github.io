@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly in 2026: Beyond the Browser — WASM for Server-Side and Edge Computing"
 subtitle: "How WASI, component model, and WasmCloud are turning WebAssembly into a universal deployment target"
 date: 2026-04-03 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 2026: Platform Engineering Has Won"
 subtitle: "Why the shift from raw K8s to developer platforms is the most important infrastructure trend of the decade"
 date: 2026-04-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

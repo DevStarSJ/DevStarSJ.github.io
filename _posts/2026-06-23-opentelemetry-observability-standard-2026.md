@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in 2026: The Observability Standard That Won"
 subtitle: "From traces to profiles to eBPF — why OTel is now the foundation of every modern observability stack"
 date: 2026-06-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

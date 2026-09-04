@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2 vs Node.js vs Bun: Choosing the Right JavaScript Runtime in 2026"
 subtitle: "A practical deep-dive into performance, compatibility, tooling, and production readiness of the three major JS runtimes"
 date: 2026-05-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200&q=80"
 catalog: true
 tags:

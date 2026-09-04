@@ -3,7 +3,7 @@ layout: post
 title: "GitOps in Production 2026: ArgoCD vs Flux — A Complete Comparison and Implementation Guide"
 subtitle: "Deep-dive into GitOps patterns with ArgoCD and Flux CD — architecture, multi-tenancy, secrets management, and which tool fits your team"
 date: 2026-02-20
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 catalog: true
 tags:

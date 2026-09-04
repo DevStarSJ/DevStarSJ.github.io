@@ -3,7 +3,7 @@ layout: post
 title: "GPT-5 for Developers: A Practical Guide to the New API Capabilities in 2026"
 subtitle: "What's actually changed in the GPT-5 API, how to migrate from GPT-4o, and where the new capabilities unlock real product value"
 date: 2026-05-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

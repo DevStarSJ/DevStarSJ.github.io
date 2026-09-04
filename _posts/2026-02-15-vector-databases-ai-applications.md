@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases Explained: Powering the Next Generation of AI Applications"
 subtitle: "Understanding embeddings, similarity search, and choosing the right vector database for your AI workloads"
 date: 2026-02-15
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200"
 tags: [Vector Database, AI, Machine Learning, Embeddings, Pinecone, Weaviate, ChromaDB, RAG]
 categories: ai

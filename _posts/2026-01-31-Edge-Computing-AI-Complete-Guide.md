@@ -3,7 +3,7 @@ layout: post
 title: "Edge Computing and Edge AI: The Complete Developer's Guide for 2026"
 subtitle: "Build faster, smarter applications by processing data at the edge"
 date: 2026-01-31
-author: "DevStar"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

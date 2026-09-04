@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Teams Actually Use"
 subtitle: "IDP design, tooling choices, golden paths, and the organizational dynamics that make or break them"
 date: 2026-04-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&auto=format&fit=crop&q=80"
 catalog: true
 tags:

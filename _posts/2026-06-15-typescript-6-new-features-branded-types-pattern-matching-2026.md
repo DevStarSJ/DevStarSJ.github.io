@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 6.0: What's New and Why the Type System Just Got Dramatically More Powerful"
 subtitle: "Nominal types, higher-kinded types, and the end of the 'any' escape hatch"
 date: 2026-06-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

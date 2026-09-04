@@ -3,7 +3,7 @@ layout: post
 title: "Real-Time LLM Streaming in Production: Patterns for Responsive AI Applications"
 subtitle: "Stop waiting for complete responses — stream tokens from LLMs to users in milliseconds with these battle-tested architecture patterns"
 date: 2026-02-25
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Event-Driven Architecture in 2026: Kafka, Redpanda, and Building Resilient Systems"
 subtitle: "A practical guide to designing, implementing, and operating event-driven systems that scale to millions of events per second"
 date: 2026-02-26
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

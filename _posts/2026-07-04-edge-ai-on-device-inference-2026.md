@@ -3,7 +3,7 @@ layout: post
 title: "Edge AI in 2026: Running Models Where the Data Lives"
 subtitle: "On-device inference, tiny models, and why the edge deployment story is finally maturing"
 date: 2026-07-04 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
 catalog: true
 tags:

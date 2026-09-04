@@ -3,7 +3,7 @@ layout: post
 title: "The Go vs Rust Decision in 2026: When to Use Each Language"
 subtitle: "A practical engineering guide to choosing between Go and Rust for systems, services, and performance-critical code"
 date: 2026-03-25 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

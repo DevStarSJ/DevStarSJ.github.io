@@ -3,7 +3,7 @@ layout: post
 title: "Feature Flags at Scale: OpenFeature, Flagsmith, and Progressive Delivery in 2026"
 subtitle: "How to build a feature flag system that supports safe deployments, A/B tests, and gradual rollouts without vendor lock-in"
 date: 2026-05-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

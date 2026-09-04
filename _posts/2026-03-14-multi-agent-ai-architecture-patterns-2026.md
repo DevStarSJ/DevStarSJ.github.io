@@ -3,7 +3,7 @@ layout: post
 title: "Multi-Agent AI Systems: Architecture Patterns for Building Reliable Agent Pipelines"
 subtitle: "Orchestration, tool use, memory, and failure handling in production AI agent systems"
 date: 2026-03-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
 categories: [AI, Architecture]
 tags: [AI-Agents, LLM, Multi-Agent, LangGraph, CrewAI, Orchestration, Tool-Use, RAG, Architecture]

@@ -3,7 +3,7 @@ layout: post
 title: "Claude 4 Opus: Anthropic's Most Powerful Model and What It Means for Developers"
 subtitle: "A deep dive into multimodal reasoning, extended context windows, and real-world use cases"
 date: 2026-05-27 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "React 20 and the Compiler Revolution: What Every Frontend Developer Needs to Know"
 subtitle: "The React compiler is now stable. The mental model for performance optimization has fundamentally changed — and most of your useMemo calls are now dead code."
 date: 2026-03-11 10:30:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200"
 catalog: true
 tags:

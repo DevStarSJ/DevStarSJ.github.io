@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in 2026: The Definitive Guide to Cloud-Native Observability"
 subtitle: "Traces, metrics, logs, and profiles — how to achieve full-stack visibility in distributed systems using the open standard that won the observability wars"
 date: 2026-03-01
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"
 catalog: true
 tags:

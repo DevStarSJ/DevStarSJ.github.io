@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Runway ML Gen-3 Alpha: The AI Video Generator Redefining Creative Production"
 subtitle: "Complete guide to Runway ML Gen-3 Alpha — from text-to-video to advanced video editing with AI"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=1200&q=80"
 category: image
 tags:

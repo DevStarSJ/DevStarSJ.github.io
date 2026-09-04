@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs OpenTofu in 2026: The Infrastructure-as-Code Fork Decision"
 subtitle: "A practical comparison for teams choosing between Terraform and the open-source fork"
 date: 2026-04-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 categories: [DevOps, Cloud, IaC]
 tags: [Terraform, OpenTofu, infrastructure-as-code, DevOps, HashiCorp, CDKTF, cloud]

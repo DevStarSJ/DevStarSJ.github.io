@@ -3,7 +3,7 @@ layout: post
 title: "The Modern Data Stack in 2026: dbt, Iceberg, and the End of the Data Warehouse as We Knew It"
 subtitle: "How open table formats, streaming lakehouse architectures, and AI-native analytics are reshaping how we think about data infrastructure"
 date: 2026-03-07 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200"
 catalog: true
 tags:

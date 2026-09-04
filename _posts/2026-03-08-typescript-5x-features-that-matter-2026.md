@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 5.x in 2026: The Features That Actually Changed How We Write Code"
 subtitle: "Beyond the hype — the TypeScript improvements from the 5.x series that are genuinely worth understanding and adopting"
 date: 2026-03-08 11:30:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200"
 catalog: true
 tags:

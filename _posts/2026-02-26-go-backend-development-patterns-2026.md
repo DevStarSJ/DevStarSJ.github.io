@@ -3,7 +3,7 @@ layout: post
 title: "Go Backend Development in 2026: Patterns, Performance, and Production Readiness"
 subtitle: "Modern Go idioms and architectural patterns that senior Go engineers use to build fast, maintainable, and observable backend services"
 date: 2026-02-26
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Building Production-Ready Event-Driven Systems with Apache Kafka and Flink in 2026"
 subtitle: "Stream processing patterns, exactly-once semantics, and lessons learned from running Kafka at scale"
 date: 2026-03-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80"
 catalog: true
 tags:

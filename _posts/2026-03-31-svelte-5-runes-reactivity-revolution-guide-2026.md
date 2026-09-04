@@ -3,7 +3,7 @@ layout: post
 title: "Svelte 5 Runes: The Reactivity Revolution You Need to Know in 2026"
 subtitle: "How Svelte 5's fine-grained reactivity model outperforms React and Vue in real-world benchmarks"
 date: 2026-03-31 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

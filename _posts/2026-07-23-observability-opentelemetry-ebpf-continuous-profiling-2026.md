@@ -3,7 +3,7 @@ layout: post
 title: "Observability in 2026: OpenTelemetry, eBPF, and the Rise of Continuous Profiling"
 subtitle: "Beyond logs, metrics, and traces — the fourth pillar is here"
 date: 2026-07-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
 tags:
   - Observability

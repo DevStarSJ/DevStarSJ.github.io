@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): Building Interconnected AI Agent Systems"
 subtitle: "How MCP is revolutionizing the way AI agents communicate with tools, data, and each other"
 date: 2026-02-14
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 tags: [MCP, AI Agents, LLM, Claude, OpenAI, Integration, Protocol]
 categories: ai

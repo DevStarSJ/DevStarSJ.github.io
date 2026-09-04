@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in Production: The Complete Observability Stack for 2026"
 subtitle: "End-to-end guide to traces, metrics, and logs with OTel — from instrumentation to dashboards"
 date: 2026-05-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
 catalog: true
 tags:

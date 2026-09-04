@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 2026: What's Actually Changed and What You Need to Unlearn"
 subtitle: "From sidecar injection to sidecarless service mesh, from YAML sprawl to declarative platform APIs — the k8s landscape has shifted"
 date: 2026-03-06 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393913-3d4c48d07fc9?w=1200"
 catalog: true
 tags:

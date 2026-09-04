@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Teams Actually Use"
 subtitle: "Why most IDPs fail, what makes them succeed, and the tools and practices that distinguish great platform teams"
 date: 2026-03-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1600&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Observability in 2026: OpenTelemetry, eBPF, and the Future of System Monitoring"
 subtitle: "How modern observability stacks with OTel and eBPF are replacing traditional monitoring approaches"
 date: 2026-03-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

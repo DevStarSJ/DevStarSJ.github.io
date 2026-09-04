@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Python Developers: Writing Fast Extensions with PyO3 in 2026"
 subtitle: "When Python is too slow, you don't have to rewrite everything—bridge the gap with PyO3 Rust extensions"
 date: 2026-05-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

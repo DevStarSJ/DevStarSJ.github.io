@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Why Systems Programmers Are Finally Switching (And What It Takes)"
 subtitle: "A practical look at Rust adoption, ecosystem maturity, and where the rough edges still are"
 date: 2026-06-06 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1624628639856-100bf817fd35?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

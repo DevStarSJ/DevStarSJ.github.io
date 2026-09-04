@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding in 2026: How AI Pair Programming with Cursor and Claude Code Is Reshaping Software Development"
 subtitle: "From autocomplete to autonomous coding agents — the complete developer's guide"
 date: 2026-04-14 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

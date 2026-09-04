@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Why Systems Engineers Are Finally Making the Switch"
 subtitle: "Memory safety, async maturity, and the ecosystem that changed everything"
 date: 2026-06-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

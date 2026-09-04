@@ -3,7 +3,7 @@ layout: post
 title: "LLM Inference Optimization in 2026: From vLLM to Speculative Decoding"
 subtitle: "A practical guide to running large language models efficiently in production"
 date: 2026-06-07 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

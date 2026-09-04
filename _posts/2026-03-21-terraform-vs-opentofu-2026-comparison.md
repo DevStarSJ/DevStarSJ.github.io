@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs OpenTofu in 2026: Which IaC Tool Should You Choose?"
 subtitle: "A comprehensive comparison of HashiCorp Terraform and the OpenTofu fork after the BSL license change"
 date: 2026-03-21 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop&q=80"
 categories: [DevOps, IaC, Cloud]
 tags: [terraform, opentofu, iac, devops, cloud, infrastructure]

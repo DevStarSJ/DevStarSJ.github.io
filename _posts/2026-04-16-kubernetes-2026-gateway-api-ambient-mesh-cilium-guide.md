@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 2026: Gateway API, Sidecarless Service Mesh, and What's Changed"
 subtitle: "The Kubernetes ecosystem has evolved dramatically — here's what modern K8s looks like and how to take advantage of the latest features"
 date: 2026-04-16 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

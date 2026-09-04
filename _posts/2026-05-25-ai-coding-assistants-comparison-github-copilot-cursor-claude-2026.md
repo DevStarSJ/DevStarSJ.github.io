@@ -3,7 +3,7 @@ layout: post
 title: "AI Coding Assistants in 2026: GitHub Copilot vs Cursor vs Claude Code — A Deep Dive Comparison"
 subtitle: "Which AI coding tool actually makes you more productive? Real benchmarks, workflows, and honest take on each."
 date: 2026-05-25 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80"
 categories: [AI, Development Tools]
 tags: [AI, coding-assistant, github-copilot, cursor, claude-code, developer-productivity]

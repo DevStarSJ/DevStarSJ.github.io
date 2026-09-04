@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0 vs Node.js 22 vs Bun 1.2: The JavaScript Runtime Wars in 2026"
 subtitle: "A comprehensive comparison of performance, compatibility, ecosystem, and production readiness"
 date: 2026-04-01 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

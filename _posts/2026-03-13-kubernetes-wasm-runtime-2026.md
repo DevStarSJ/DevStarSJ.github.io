@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes + WebAssembly in 2026: The Next Evolution of Container Orchestration"
 subtitle: "Why WASM is becoming a first-class workload in Kubernetes clusters"
 date: 2026-03-13 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 catalog: true
 tags:

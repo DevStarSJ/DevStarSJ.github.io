@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Why Systems Programmers Are Finally Switching"
 subtitle: "After years of hype, Rust adoption has hit an inflection point — here's what changed, what the language looks like today, and how to start"
 date: 2026-04-16 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

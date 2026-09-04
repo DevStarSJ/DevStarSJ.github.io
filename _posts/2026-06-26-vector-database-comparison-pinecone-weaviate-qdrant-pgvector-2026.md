@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: Choosing Between Pinecone, Weaviate, Qdrant, and pgvector"
 subtitle: "A practical benchmark and decision guide for production RAG and semantic search workloads"
 date: 2026-06-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

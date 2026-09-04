@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Cost Optimization: From Cloud Bill Shock to FinOps Mastery"
 subtitle: "Practical strategies to reduce Kubernetes infrastructure costs by 40-70% without sacrificing reliability"
 date: 2026-03-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 categories: [Kubernetes, FinOps]
 tags: [Kubernetes, FinOps, Cost-Optimization, Cloud, AWS, GCP, Azure, Spot-Instances, HPA, VPA]

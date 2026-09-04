@@ -3,7 +3,7 @@ layout: post
 title: "Inference Optimization: Making LLMs Fast and Cheap Enough for Production"
 subtitle: "Quantization, speculative decoding, KV cache optimization, and batching strategies that actually move the needle"
 date: 2026-06-30 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
 catalog: true
 tags:

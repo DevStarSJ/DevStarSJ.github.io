@@ -3,7 +3,7 @@ layout: post
 title: "Temporal: Durable Execution Workflows for Microservices — The Complete 2026 Guide"
 subtitle: "Replace Fragile Async Code with Reliable, Scalable Workflow Orchestration Using Temporal"
 date: 2026-03-24 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

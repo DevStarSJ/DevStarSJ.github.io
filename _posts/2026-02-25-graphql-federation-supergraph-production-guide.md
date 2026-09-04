@@ -3,7 +3,7 @@ layout: post
 title: "GraphQL Federation in 2026: Building a Production Supergraph at Scale"
 subtitle: "How to compose microservices into a unified GraphQL API your clients actually want to use — without the distributed monolith pitfalls"
 date: 2026-02-25
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

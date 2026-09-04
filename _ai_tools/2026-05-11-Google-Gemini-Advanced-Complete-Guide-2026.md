@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Google Gemini Advanced: Complete Guide 2026"
 subtitle: "Everything you need to know about Google's most powerful AI assistant"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&auto=format&fit=crop"
 category: chatbot
 tags: [ai, chatbot, gemini, google, assistant]

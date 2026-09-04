@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in 2026: The Technology Reshaping Linux Networking, Security, and Observability"
 subtitle: "How extended Berkeley Packet Filter went from packet filtering to the backbone of modern cloud infrastructure"
 date: 2026-07-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

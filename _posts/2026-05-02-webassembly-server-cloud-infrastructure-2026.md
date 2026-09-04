@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly on the Server: Why WASM Is Eating Cloud Infrastructure in 2026"
 subtitle: "Faster cold starts, stronger isolation, true portability — the serverless runtime of the future is here"
 date: 2026-05-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 categories: [Cloud, WebAssembly]
 tags: [WebAssembly, WASM, serverless, cloud, edge, runtime, WASI]

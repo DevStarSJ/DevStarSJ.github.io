@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: Pinecone vs Weaviate vs pgvector Compared"
 subtitle: "Choosing the right vector store for your AI application — from managed cloud to self-hosted Postgres"
 date: 2026-03-21 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1200&auto=format&fit=crop&q=80"
 categories: [AI, Databases, Backend]
 tags: [vector-database, pinecone, weaviate, pgvector, rag, embeddings, ai]

@@ -3,7 +3,7 @@ layout: post
 title: "GitOps in 2026: ArgoCD vs Flux — The Definitive Comparison"
 subtitle: "Choosing the right GitOps tool for Kubernetes continuous delivery in 2026"
 date: 2026-03-25 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

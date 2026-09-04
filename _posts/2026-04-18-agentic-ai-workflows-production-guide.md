@@ -3,7 +3,7 @@ layout: post
 title: "Building Production-Ready Agentic AI Workflows: Architecture, Patterns, and Pitfalls"
 subtitle: "From single-model prompts to multi-agent orchestration that actually ships"
 date: 2026-04-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&auto=format&fit=crop&q=80"
 catalog: true
 tags:

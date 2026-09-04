@@ -3,7 +3,7 @@ layout: post
 title: "GitHub Actions vs GitLab CI vs CircleCI vs Dagger: CI/CD in 2026"
 subtitle: "Choosing the right CI/CD platform for modern software delivery — speed, cost, and developer experience"
 date: 2026-03-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=1200&q=80"
 categories: [DevOps, CI-CD]
 tags: [GitHub-Actions, GitLab-CI, CircleCI, Dagger, CI-CD, DevOps, Pipelines, Automation]

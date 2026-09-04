@@ -3,7 +3,7 @@ layout: post
 title: "AI Agents in Production: A Complete Deployment Guide for 2026"
 subtitle: "From prototype to production-grade autonomous AI systems"
 date: 2026-03-17 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&q=80"
 catalog: true
 tags:

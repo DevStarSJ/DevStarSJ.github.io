@@ -3,7 +3,7 @@ layout: post
 title: "eBPF for Observability and Security: The Complete Guide for 2026"
 subtitle: "Harness kernel-level superpowers for monitoring, tracing, and security without modifying your code"
 date: 2026-02-18
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200"
 catalog: true
 tags:

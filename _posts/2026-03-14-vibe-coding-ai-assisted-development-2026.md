@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding: How AI-Assisted Development is Reshaping Software Engineering in 2026"
 subtitle: "From autocomplete to full-stack generation — the rise of intent-driven programming"
 date: 2026-03-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80"
 categories: [AI, Development]
 tags: [AI, LLM, Vibe-Coding, GitHub-Copilot, Cursor, Software-Engineering, Developer-Productivity]

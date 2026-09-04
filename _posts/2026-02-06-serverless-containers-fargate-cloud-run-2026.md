@@ -3,7 +3,7 @@ layout: post
 title: "Serverless Containers in 2026: AWS Fargate vs Cloud Run vs Azure Container Apps"
 subtitle: "The definitive comparison for container workloads without infrastructure headaches"
 date: 2026-02-06
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1920&q=80"
 tags: [Cloud, Containers, AWS, GCP, Azure, Serverless, DevOps]
 ---

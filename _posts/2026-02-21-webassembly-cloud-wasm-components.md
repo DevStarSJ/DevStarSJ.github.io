@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Beyond the Browser: WASM Components in Cloud and Edge Computing"
 subtitle: "How WebAssembly Components, WASI, and the component model are reshaping serverless, edge computing, and plugin architectures in 2026"
 date: 2026-02-21
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200"
 catalog: true
 tags:

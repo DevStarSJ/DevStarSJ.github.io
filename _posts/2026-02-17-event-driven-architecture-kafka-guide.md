@@ -3,7 +3,7 @@ layout: post
 title: "Event-Driven Architecture with Apache Kafka: Complete Guide"
 subtitle: "Build scalable, decoupled systems with real-time event streaming"
 date: 2026-02-17
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

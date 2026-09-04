@@ -3,7 +3,7 @@ layout: post
 title: "DuckDB: The In-Process Analytics Engine That Changes Everything"
 subtitle: "How an embeddable OLAP database is replacing heavyweight data stacks for analytics, replacing pandas for data science, and powering a new generation of local-first data tools"
 date: 2026-02-22
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"
 catalog: true
 tags:

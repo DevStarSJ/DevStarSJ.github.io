@@ -3,7 +3,7 @@ layout: post
 title: "AI-Powered Code Review: How LLMs Are Transforming Engineering Quality Gates in 2026"
 subtitle: "From GitHub Copilot PR reviews to autonomous quality agents — building an AI-augmented code review pipeline"
 date: 2026-06-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

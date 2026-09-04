@@ -3,7 +3,7 @@ layout: post
 title: "Next.js 15 vs Remix v3 vs SvelteKit 2: Choosing the Right Full-Stack Framework in 2026"
 subtitle: "A comprehensive comparison of the three dominant full-stack web frameworks — performance, DX, and when to use each"
 date: 2026-04-04 12:00:00
-author: "Dev.StarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

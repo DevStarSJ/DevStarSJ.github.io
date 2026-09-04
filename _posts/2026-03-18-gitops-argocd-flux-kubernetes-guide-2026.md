@@ -3,7 +3,7 @@ layout: post
 title: "GitOps with ArgoCD and Flux: Deploying Kubernetes Applications the Right Way in 2026"
 subtitle: "A complete guide to GitOps principles, ArgoCD vs Flux comparison, ApplicationSet patterns, and progressive delivery with Argo Rollouts"
 date: 2026-03-18 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1600&q=80"
 catalog: true
 tags:

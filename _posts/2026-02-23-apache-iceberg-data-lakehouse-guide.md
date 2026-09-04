@@ -3,7 +3,7 @@ layout: post
 title: "Apache Iceberg and the Data Lakehouse Revolution: A Complete Guide"
 subtitle: "How open table formats are killing data warehouses, unifying analytics, and giving you ACID transactions on S3 for pennies on the dollar"
 date: 2026-02-23
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

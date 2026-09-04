@@ -3,7 +3,7 @@ layout: post
 title: "Fine-tuning vs RAG vs Prompt Engineering: Choosing the Right LLM Strategy in 2026"
 subtitle: "A practical decision framework for production AI applications — when to train, when to retrieve, and when to just prompt better"
 date: 2026-03-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "LLM Fine-Tuning vs RAG: A Practical Decision Guide for Production 2026"
 subtitle: "When to fine-tune your model and when to build a RAG pipeline — with real cost and performance data"
 date: 2026-03-12 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.3
 catalog: true

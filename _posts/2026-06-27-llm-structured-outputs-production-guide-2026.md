@@ -3,7 +3,7 @@ layout: post
 title: "Structured Outputs and JSON Mode: Getting Reliable Data from LLMs in Production"
 subtitle: "How to use structured output APIs, schema validation, and retry strategies to build LLM pipelines that don't randomly break"
 date: 2026-06-27 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

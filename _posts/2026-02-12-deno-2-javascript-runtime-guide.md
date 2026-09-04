@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0: The Modern JavaScript Runtime Revolution"
 subtitle: "Explore Deno 2.0's game-changing features including native npm support, improved Node.js compatibility, and enhanced security model"
 date: 2026-02-12
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200"
 tags: [Deno, JavaScript, TypeScript, Runtime, Backend Development]
 ---

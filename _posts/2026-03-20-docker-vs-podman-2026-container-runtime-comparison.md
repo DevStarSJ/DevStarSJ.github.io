@@ -3,7 +3,7 @@ layout: post
 title: "Docker vs Podman in 2026: Which Container Runtime Should You Choose?"
 subtitle: "A comprehensive comparison of Docker Desktop and Podman for developers and DevOps teams"
 date: 2026-03-20 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

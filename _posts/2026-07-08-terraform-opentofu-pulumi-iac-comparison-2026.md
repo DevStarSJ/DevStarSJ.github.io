@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs. OpenTofu vs. Pulumi: Infrastructure as Code in 2026"
 subtitle: "HashiCorp's license change created a fork — here's how the IaC landscape looks now and what to choose"
 date: 2026-07-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80"
 catalog: true
 tags:

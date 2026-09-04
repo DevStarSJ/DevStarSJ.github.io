@@ -3,7 +3,7 @@ layout: post
 title: "LLM Evaluation in Production: Beyond Vibes and Spot Checks"
 subtitle: "How to build a rigorous, automated evaluation pipeline for language model features before they reach your users"
 date: 2026-03-06 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200"
 catalog: true
 tags:

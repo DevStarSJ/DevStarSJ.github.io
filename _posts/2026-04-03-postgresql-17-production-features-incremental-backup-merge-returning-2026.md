@@ -3,7 +3,7 @@ layout: post
 title: "PostgreSQL 17 Deep Dive: New Features That Actually Matter in Production"
 subtitle: "Incremental backups, vectorized execution, logical replication improvements, and what they mean for your database layer"
 date: 2026-04-03 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Lovable AI 앱 빌더: 완벽 가이드 2026"
 subtitle: "AI로 프로덕션 수준의 웹앱을 가장 빠르게 만드는 방법"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"
 category: coding
 tags: [ai, 코딩, lovable, 앱빌더, 노코드]

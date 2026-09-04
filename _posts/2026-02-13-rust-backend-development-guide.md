@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development: A Practical Guide to High-Performance Services"
 subtitle: "Build blazingly fast, memory-safe backend services with Rust - from basics to production deployment"
 date: 2026-02-13
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200"
 tags: [Rust, Backend Development, Performance, Web Services, Axum, Tokio]
 ---

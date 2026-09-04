@@ -3,7 +3,7 @@ layout: post
 title: "React 19 vs Next.js 15 vs Remix v3: The State of the JavaScript Frontend in 2026"
 subtitle: "Server Components, full-stack frameworks, and where the ecosystem is actually heading"
 date: 2026-03-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?w=1200&q=80"
 categories: [Frontend, JavaScript]
 tags: [React, Next.js, Remix, JavaScript, Frontend, Server-Components, TypeScript, Web-Development]

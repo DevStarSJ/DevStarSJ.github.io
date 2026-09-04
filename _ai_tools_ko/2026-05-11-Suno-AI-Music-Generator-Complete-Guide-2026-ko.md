@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Suno AI 음악 생성기: 완벽 가이드 2026"
 subtitle: "AI로 몇 초 만에 가사까지 있는 완성된 노래 만들기"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&auto=format&fit=crop"
 category: productivity
 tags: [ai, 음악, suno, 오디오, 창작]

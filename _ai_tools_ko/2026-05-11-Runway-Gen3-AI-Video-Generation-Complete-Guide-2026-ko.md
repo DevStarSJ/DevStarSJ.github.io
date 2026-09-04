@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Runway ML Gen-3: AI 영상 생성 완벽 가이드 2026"
 subtitle: "Runway Gen-3 Alpha로 텍스트와 이미지에서 멋진 AI 영상 만들기"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1536240478700-b869ad10a2ab?w=1200&auto=format&fit=crop"
 category: image
 tags: [ai, 영상, runway, gen3, 창작]

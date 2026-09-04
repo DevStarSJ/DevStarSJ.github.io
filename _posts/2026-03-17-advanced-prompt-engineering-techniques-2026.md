@@ -3,7 +3,7 @@ layout: post
 title: "Prompt Engineering in 2026: Beyond Few-Shot — Advanced Techniques That Actually Work"
 subtitle: "Chain-of-thought, self-consistency, tree-of-thought, and the patterns top engineers use"
 date: 2026-03-17 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1600&q=80"
 catalog: true
 tags:

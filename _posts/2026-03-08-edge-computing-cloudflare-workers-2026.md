@@ -3,7 +3,7 @@ layout: post
 title: "Edge Computing in 2026: When the Cloud Moved to the Network Edge"
 subtitle: "Cloudflare Workers, Deno Deploy, Vercel Edge — how edge runtimes are reshaping where and how we run code"
 date: 2026-03-08 11:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200"
 catalog: true
 tags:

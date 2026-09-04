@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering Metrics: What to Measure When Your IDP Is Your Product"
 subtitle: "DORA metrics, developer experience scores, and the KPIs that actually tell you if your internal platform is working"
 date: 2026-04-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

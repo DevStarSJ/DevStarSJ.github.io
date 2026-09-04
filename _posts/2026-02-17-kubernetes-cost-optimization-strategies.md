@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Cost Optimization: 7 Proven Strategies for 2026"
 subtitle: "Reduce your cloud bill by up to 60% with these battle-tested techniques"
 date: 2026-02-17
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 catalog: true
 tags:

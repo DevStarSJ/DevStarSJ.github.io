@@ -3,7 +3,7 @@ layout: post
 title: "Python 3.13 Free-Threading: Is the GIL Finally Gone?"
 subtitle: "Understanding Python's experimental no-GIL mode, what it means for performance, and when you should (and shouldn't) use it"
 date: 2026-03-12 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.3
 catalog: true

@@ -3,7 +3,7 @@ layout: post
 title: "Building AI Agents with LangChain: A Complete 2026 Guide"
 subtitle: "From simple chatbots to autonomous agents that can reason, plan, and execute"
 date: 2026-02-05
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80"
 tags: [AI, LangChain, Agents, LLM, Python]
 categories: ai

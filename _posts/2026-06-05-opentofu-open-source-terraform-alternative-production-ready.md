@@ -3,7 +3,7 @@ layout: post
 title: "OpenTofu: The Open Source Terraform Alternative That's Now Production-Ready"
 subtitle: "Why the infrastructure-as-code community migrated and what it means for your IaC strategy"
 date: 2026-06-05 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 header-mask: 0.4
 catalog: true

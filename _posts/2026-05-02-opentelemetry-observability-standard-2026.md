@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in 2026: The Observability Standard That Finally Unified the Industry"
 subtitle: "How OTel became the lingua franca of distributed tracing, metrics, and logs — and how to use it right"
 date: 2026-05-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
 categories: [DevOps, Observability]
 tags: [OpenTelemetry, OTel, observability, tracing, metrics, logs, distributed-systems, monitoring]

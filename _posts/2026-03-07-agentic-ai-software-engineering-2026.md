@@ -3,7 +3,7 @@ layout: post
 title: "Agentic AI in Software Engineering: When Your AI Writes, Tests, and Deploys Code"
 subtitle: "Beyond copilots — autonomous AI agents are now handling entire development workflows end-to-end"
 date: 2026-03-07 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=1200"
 catalog: true
 tags:

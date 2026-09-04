@@ -3,7 +3,7 @@ layout: post
 title: "FinOps in 2026: Taming Cloud Costs in the Age of AI Workloads"
 subtitle: "Practical strategies for controlling cloud spend when your biggest cost is GPU compute"
 date: 2026-06-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

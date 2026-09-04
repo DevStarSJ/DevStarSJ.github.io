@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2 and the Node.js Migration Wave: Is the Switch Worth It?"
 subtitle: "A practical look at Deno 2's Node.js compatibility, performance gains, and when it makes sense to migrate"
 date: 2026-04-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

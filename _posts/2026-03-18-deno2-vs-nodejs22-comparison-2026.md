@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0 vs Node.js 22: A Practical Comparison for Backend Developers in 2026"
 subtitle: "Which JavaScript runtime should you choose for your next project? Security, compatibility, performance, and ecosystem compared"
 date: 2026-03-18 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80"
 catalog: true
 tags:

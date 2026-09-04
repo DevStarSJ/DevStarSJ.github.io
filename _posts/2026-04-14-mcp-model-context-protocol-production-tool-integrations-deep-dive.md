@@ -3,7 +3,7 @@ layout: post
 title: "MCP (Model Context Protocol) Deep Dive: Building Production-Ready Tool Integrations for AI Agents"
 subtitle: "Anthropic's open standard for connecting LLMs to the real world — architecture, security, and implementation"
 date: 2026-04-14 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms That Teams Actually Love"
 subtitle: "How to design and implement an IDP that accelerates development without creating bureaucracy"
 date: 2026-03-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

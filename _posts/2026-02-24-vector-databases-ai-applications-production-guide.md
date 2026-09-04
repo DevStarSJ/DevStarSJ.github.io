@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: The Complete Production Guide for AI-Powered Applications"
 subtitle: "From RAG pipelines to semantic search and recommendation engines — how to choose, implement, and operate vector databases at scale"
 date: 2026-02-24
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200"
 catalog: true
 tags:

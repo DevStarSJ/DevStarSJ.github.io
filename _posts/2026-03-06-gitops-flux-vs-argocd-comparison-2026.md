@@ -3,7 +3,7 @@ layout: post
 title: "GitOps in 2026: Flux vs ArgoCD — Choosing the Right Continuous Delivery Engine"
 subtitle: "A hands-on comparison of the two dominant GitOps tools with practical guidance on when to use each"
 date: 2026-03-06 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200"
 catalog: true
 tags:

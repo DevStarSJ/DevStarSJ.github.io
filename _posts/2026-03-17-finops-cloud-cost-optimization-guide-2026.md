@@ -3,7 +3,7 @@ layout: post
 title: "FinOps for Developers: Cutting Cloud Costs Without Slowing Down"
 subtitle: "Practical cost optimization tactics that engineering teams can implement today"
 date: 2026-03-17 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80"
 catalog: true
 tags:

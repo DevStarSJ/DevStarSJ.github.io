@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0: The TypeScript Runtime That Finally Makes Sense"
 subtitle: "Why Deno 2.0 is winning developers over from Node.js"
 date: 2026-02-06
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1920&q=80"
 tags: [Deno, TypeScript, JavaScript, Runtime, Node.js, Backend]
 ---

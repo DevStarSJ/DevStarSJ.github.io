@@ -3,7 +3,7 @@ layout: post
 title: "AI Agents in Production: Architecture Patterns for Reliable, Safe, and Scalable Agentic Systems"
 subtitle: "From experimental demos to production-grade agents: memory management, tool calling, human-in-the-loop, and failure recovery"
 date: 2026-04-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&auto=format&fit=crop&q=80"
 categories: [AI, Architecture]
 tags: [AI Agents, LLM, Production AI, Architecture, MCP, Tool Calling, Agent Systems]

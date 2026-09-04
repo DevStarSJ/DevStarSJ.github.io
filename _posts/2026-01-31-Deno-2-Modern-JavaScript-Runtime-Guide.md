@@ -3,7 +3,7 @@ layout: post
 title: "Deno 2.0 in 2026: The Modern JavaScript Runtime That's Production Ready"
 subtitle: "TypeScript-first, secure by default, with Node.js compatibility"
 date: 2026-01-31
-author: "DevStar"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200"
 catalog: true
 tags:

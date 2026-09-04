@@ -3,7 +3,7 @@ layout: post
 title: "React Server Components in 2026: The Mental Model That Changes Everything"
 subtitle: "Moving beyond the confusion — a clear explanation of RSC architecture, streaming, and when to use Client vs Server Components"
 date: 2026-07-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

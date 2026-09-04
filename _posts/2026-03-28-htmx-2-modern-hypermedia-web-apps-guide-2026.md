@@ -3,7 +3,7 @@ layout: post
 title: "HTMX 2.0 & Modern Hypermedia: Building Fast Web Apps Without JavaScript Fatigue"
 subtitle: "How HTMX 2.0 combined with server-side rendering is challenging the SPA model in 2026"
 date: 2026-03-28 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

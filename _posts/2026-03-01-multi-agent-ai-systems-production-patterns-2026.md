@@ -3,7 +3,7 @@ layout: post
 title: "Multi-Agent AI Systems in Production: Patterns, Pitfalls, and Best Practices for 2026"
 subtitle: "Moving beyond single-agent chatbots to coordinated AI workforces that tackle complex, long-horizon tasks"
 date: 2026-03-01
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200"
 catalog: true
 tags:

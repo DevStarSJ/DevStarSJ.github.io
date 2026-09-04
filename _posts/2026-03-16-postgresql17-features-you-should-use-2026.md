@@ -3,7 +3,7 @@ layout: post
 title: "PostgreSQL 17 Features You Should Actually Be Using"
 subtitle: "Beyond the basics: the new capabilities in PG17 that genuinely change how you build applications"
 date: 2026-03-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&q=80"
 categories: [Database, PostgreSQL, Backend]
 tags: [PostgreSQL, PostgreSQL17, Database, SQL, Performance, JSON, JSONB, Optimization, Backend]

@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in 2026: The De Facto Standard for Distributed Observability"
 subtitle: "From instrumentation to analysis: a complete guide to production-grade observability with OTel"
 date: 2026-05-20 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

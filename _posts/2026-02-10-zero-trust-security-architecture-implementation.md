@@ -3,7 +3,7 @@ layout: post
 title: "Zero Trust Security in 2026: Beyond the Perimeter"
 subtitle: "Implement zero trust with identity-first access, micro-segmentation, and continuous verification"
 date: 2026-02-10
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1920&q=80"
 tags: [Security, Zero Trust, IAM, ZTNA, Cloudflare, OAuth, mTLS, DevSecOps]
 ---

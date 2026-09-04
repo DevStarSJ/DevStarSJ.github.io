@@ -3,7 +3,7 @@ layout: post
 title: "Zero Trust Architecture in Practice: Beyond the Buzzword"
 subtitle: "How to actually implement Zero Trust in your infrastructure — with Kubernetes, service meshes, and real examples"
 date: 2026-07-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

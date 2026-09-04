@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases and RAG Architecture: Building Production-Ready AI Search in 2026"
 subtitle: "A deep dive into pgvector, Qdrant, Weaviate, and retrieval-augmented generation patterns that actually scale"
 date: 2026-05-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

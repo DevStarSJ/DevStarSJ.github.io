@@ -3,7 +3,7 @@ layout: post
 title: "eBPF: The Superpower Behind Modern Cloud-Native Security and Observability"
 subtitle: "How a tiny kernel technology is reshaping how we monitor, secure, and network cloud-native applications — without a single line of kernel code or sidecar"
 date: 2026-02-23
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200"
 catalog: true
 tags:

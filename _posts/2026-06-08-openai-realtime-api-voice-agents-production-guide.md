@@ -3,7 +3,7 @@ layout: post
 title: "Building Production-Ready Voice Agents with OpenAI Realtime API in 2026"
 subtitle: "A practical guide to low-latency speech-to-speech AI agents using WebSockets and function calling"
 date: 2026-06-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

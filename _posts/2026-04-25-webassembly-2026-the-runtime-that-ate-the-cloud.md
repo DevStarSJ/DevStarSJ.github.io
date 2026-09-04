@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly in 2026: The Runtime That Ate the Cloud"
 subtitle: "From browser curiosity to universal execution layer — WASM's journey into serverless, edge, and beyond"
 date: 2026-04-25 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 categories: [Cloud, Architecture, WebAssembly]
 tags: [WebAssembly, WASM, WASI, edge computing, serverless, Cloudflare Workers, Wasmtime, component model]

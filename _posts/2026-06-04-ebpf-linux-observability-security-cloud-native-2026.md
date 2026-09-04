@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in 2026: The Technology Quietly Revolutionizing Linux Observability and Security"
 subtitle: "How eBPF became the foundation of modern cloud-native monitoring, networking, and runtime security"
 date: 2026-06-04 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop"
 header-mask: 0.4
 catalog: true

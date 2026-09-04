@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The Universal Standard for AI Tool Integration"
 subtitle: "How Anthropic's open protocol is reshaping how AI assistants connect to the world"
 date: 2026-05-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

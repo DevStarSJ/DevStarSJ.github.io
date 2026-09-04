@@ -3,7 +3,7 @@ layout: post
 title: "Serverless Architecture Patterns: A Complete Guide for 2026"
 subtitle: "Build scalable, cost-effective applications without managing servers"
 date: 2026-01-31
-author: "DevStar"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200"
 catalog: true
 tags:

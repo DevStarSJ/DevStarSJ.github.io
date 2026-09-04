@@ -3,7 +3,7 @@ layout: post
 title: "AWS vs Google Cloud vs Azure in 2026: The Definitive Comparison for Developers"
 subtitle: "A data-driven analysis of the three major cloud platforms to help you choose the right one"
 date: 2026-03-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

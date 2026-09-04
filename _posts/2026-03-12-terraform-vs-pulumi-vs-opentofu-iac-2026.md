@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs Pulumi vs OpenTofu: The IaC War in 2026"
 subtitle: "After HashiCorp's BSL license controversy, the Infrastructure-as-Code landscape has fundamentally changed"
 date: 2026-03-12 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.3
 catalog: true

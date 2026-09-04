@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 6.0: What's New and Why It Matters for Your Codebase"
 subtitle: "A practical walkthrough of TypeScript 6's most impactful features — and when to actually use them."
 date: 2026-05-25 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&q=80"
 categories: [TypeScript, Frontend, Development]
 tags: [TypeScript, JavaScript, programming, frontend, type-system]

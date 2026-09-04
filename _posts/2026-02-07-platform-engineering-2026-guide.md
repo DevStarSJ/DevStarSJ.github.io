@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Your Internal Developer Platform"
 subtitle: "How to create golden paths that developers actually want to use"
 date: 2026-02-07
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80"
 tags: [DevOps, Platform Engineering, Kubernetes, Developer Experience, IDP]
 ---

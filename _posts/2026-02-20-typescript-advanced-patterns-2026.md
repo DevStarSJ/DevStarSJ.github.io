@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript Advanced Patterns in 2026: Type-Level Programming That Actually Scales"
 subtitle: "Master template literal types, infer, conditional types, and the advanced TypeScript patterns that elite engineering teams use to build bulletproof systems"
 date: 2026-02-20
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=1200"
 catalog: true
 tags:

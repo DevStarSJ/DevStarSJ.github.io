@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs OpenTofu in 2026: Which IaC Tool Should You Choose?"
 subtitle: "A comprehensive comparison of features, licensing, ecosystem, and performance after two years of OpenTofu development"
 date: 2026-06-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

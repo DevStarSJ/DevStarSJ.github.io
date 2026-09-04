@@ -3,7 +3,7 @@ layout: post
 title: "React 20 and the Compiler Era: How React's New Architecture Changes Frontend Development"
 subtitle: "React Compiler, Server Components at scale, and the patterns defining modern React applications"
 date: 2026-05-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

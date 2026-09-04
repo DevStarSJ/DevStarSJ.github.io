@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Why Systems Programmers and Web Developers Are Both Converging on It"
 subtitle: "A practical look at Rust's evolution — from fearless concurrency to async web services and WASM targets"
 date: 2026-05-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&q=80"
 catalog: true
 tags:

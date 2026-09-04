@@ -3,7 +3,7 @@ layout: post
 title: "MCP (Model Context Protocol): The Backbone of Modern AI Agent Integration"
 subtitle: "How Anthropic's open protocol is reshaping how AI agents interact with the world"
 date: 2026-05-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 catalog: true
 tags:

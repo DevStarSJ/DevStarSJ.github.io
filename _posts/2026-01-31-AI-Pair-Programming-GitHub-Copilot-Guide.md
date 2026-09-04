@@ -3,7 +3,7 @@ layout: post
 title: "AI Pair Programming in 2026: GitHub Copilot, Claude, and Beyond"
 subtitle: "Master the art of coding with AI assistants to 10x your productivity"
 date: 2026-01-31
-author: "DevStar"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200"
 catalog: true
 tags:

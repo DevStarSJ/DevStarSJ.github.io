@@ -3,7 +3,7 @@ layout: post
 title: "Rust Async in Production: Tokio, Axum, and Building High-Performance APIs in 2026"
 subtitle: "A practical deep dive into Rust's async ecosystem — from zero to production-grade HTTP APIs that handle millions of requests per second"
 date: 2026-03-01
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200"
 catalog: true
 tags:

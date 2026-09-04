@@ -3,7 +3,7 @@ layout: post
 title: "Rust in the Data Stack: DuckDB, Polars, and the OLAP Revolution"
 subtitle: "How Rust-powered data tools are replacing Python-based ETL pipelines with 10-100x performance gains"
 date: 2026-06-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

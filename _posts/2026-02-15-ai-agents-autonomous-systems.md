@@ -3,7 +3,7 @@ layout: post
 title: "Building AI Agents: From Chatbots to Autonomous Systems"
 subtitle: "A practical guide to designing, implementing, and deploying AI agents that can reason, plan, and act"
 date: 2026-02-15
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 tags: [AI, Agents, LLM, Autonomous Systems, OpenAI, Anthropic, LangChain]
 categories: ai

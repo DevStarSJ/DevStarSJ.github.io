@@ -3,7 +3,7 @@ layout: post
 title: "OpenTelemetry in 2026: The Complete Guide to Unified Observability for Distributed Systems"
 subtitle: "From zero to production-grade telemetry: traces, metrics, logs, and profiles with OpenTelemetry's maturing ecosystem"
 date: 2026-04-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80"
 categories: [DevOps, Observability]
 tags: [OpenTelemetry, Observability, Distributed Tracing, Metrics, Logging, DevOps, SRE]

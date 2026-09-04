@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding in 2026: How AI-Assisted Development Is Reshaping Software Engineering"
 subtitle: "From GitHub Copilot to autonomous coding agents — what changed, what works, and what's hype"
 date: 2026-05-27 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80"
 catalog: true
 tags:

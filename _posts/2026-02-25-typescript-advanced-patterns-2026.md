@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript Advanced Patterns in 2026: Type-Safe APIs, Branded Types, and Beyond"
 subtitle: "Master the TypeScript techniques that senior engineers use to write bulletproof, self-documenting code at scale"
 date: 2026-02-25
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200"
 catalog: true
 tags:

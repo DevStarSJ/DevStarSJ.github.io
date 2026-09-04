@@ -3,7 +3,7 @@ layout: post
 title: "Rust in Production: Why More Teams Are Replacing Go and Java with Rust in 2026"
 subtitle: "Performance, safety, and a maturing ecosystem — Rust's moment has arrived"
 date: 2026-05-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&q=80"
 categories: [Programming, Rust]
 tags: [Rust, backend, performance, systems-programming, memory-safety, production]

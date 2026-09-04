@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Jasper AI: 콘텐츠 제작을 확장하는 엔터프라이즈 AI 글쓰기 도구"
 subtitle: "마케팅 팀과 콘텐츠 크리에이터가 고품질 콘텐츠를 대규모로 제작하는 방법 — Jasper AI 완벽 가이드"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80"
 category: productivity
 lang: ko

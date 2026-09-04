@@ -3,7 +3,7 @@ layout: post
 title: "Edge Computing in 2026: Building Low-Latency Applications with 5G"
 subtitle: "Deploy compute closer to users with edge platforms and 5G networks"
 date: 2026-02-10
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
 tags: [Edge Computing, 5G, CDN, Cloudflare Workers, AWS Wavelength, Latency, IoT]
 ---

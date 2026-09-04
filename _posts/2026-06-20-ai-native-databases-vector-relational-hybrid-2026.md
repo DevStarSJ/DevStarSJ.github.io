@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native Databases: The Rise of Hybrid Vector-Relational Systems in 2026"
 subtitle: "How pgvector, Qdrant, Weaviate, and newcomers are reshaping data infrastructure for the AI era"
 date: 2026-06-20 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200&q=80"
 header-mask: 0.4
 catalog: true

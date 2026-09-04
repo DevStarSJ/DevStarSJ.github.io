@@ -3,7 +3,7 @@ layout: post
 title: "AI as the Enterprise Backbone: Redesigning Architecture for 2026 and Beyond"
 subtitle: "How leading organizations are embedding AI into every layer of their technology stack"
 date: 2026-06-04 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 header-mask: 0.4
 catalog: true

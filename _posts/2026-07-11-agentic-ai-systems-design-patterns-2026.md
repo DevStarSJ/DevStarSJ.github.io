@@ -3,7 +3,7 @@ layout: post
 title: "Agentic AI Systems: Design Patterns for Building Autonomous AI Workflows in 2026"
 subtitle: "From simple LLM calls to multi-agent orchestration — patterns that actually work in production"
 date: 2026-07-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

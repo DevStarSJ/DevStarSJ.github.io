@@ -3,7 +3,7 @@ layout: post
 title: "FinOps 2026: Cloud Cost Engineering Beyond the Dashboard"
 subtitle: "Cutting cloud spend is table stakes. The mature teams are building cost as a first-class engineering concern."
 date: 2026-07-04 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
 catalog: true
 tags:

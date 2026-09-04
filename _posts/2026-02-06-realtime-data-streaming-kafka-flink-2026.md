@@ -3,7 +3,7 @@ layout: post
 title: "Real-Time Data Streaming in 2026: Apache Kafka + Flink Architecture Guide"
 subtitle: "Building production-grade streaming pipelines for modern data infrastructure"
 date: 2026-02-06
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80"
 tags: [Data Engineering, Kafka, Flink, Streaming, Real-Time, Big Data]
 ---

@@ -3,7 +3,7 @@ layout: subsite-post
 title: "ChatGPT-4o: OpenAI의 가장 강력한 멀티모달 AI 어시스턴트"
 subtitle: "음성, 비전, 이미지, 추론이 하나에 — ChatGPT-4o 완벽 가이드"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 category: chatbot
 lang: ko

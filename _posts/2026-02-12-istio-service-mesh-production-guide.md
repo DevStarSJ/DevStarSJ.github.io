@@ -3,7 +3,7 @@ layout: post
 title: "Istio Service Mesh: Complete Production Guide for Kubernetes"
 subtitle: "Master traffic management, security, and observability with Istio's powerful service mesh capabilities"
 date: 2026-02-12
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 tags: [Istio, Service Mesh, Kubernetes, Microservices, Cloud Native]
 ---

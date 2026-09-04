@@ -3,7 +3,7 @@ layout: post
 title: "Building Production-Ready Multi-Agent AI Systems in 2026"
 subtitle: "From single LLM calls to orchestrated agent networks: architecture patterns, tool design, and reliability strategies for real-world multi-agent deployments"
 date: 2026-02-21
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200"
 catalog: true
 tags:

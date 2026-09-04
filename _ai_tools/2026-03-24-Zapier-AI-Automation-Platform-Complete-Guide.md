@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Zapier AI: Automate Anything with Natural Language Workflows"
 subtitle: "Complete guide to Zapier AI — how to build powerful automations using AI without writing code"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5734c3df?w=1200&q=80"
 category: automation
 tags:

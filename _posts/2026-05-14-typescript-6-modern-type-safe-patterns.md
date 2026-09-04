@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 6.0 and Modern Type-Safe Patterns: What Changed and What It Means for Your Codebase"
 subtitle: "A practical guide to TypeScript's latest features and how to adopt them in production"
 date: 2026-05-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

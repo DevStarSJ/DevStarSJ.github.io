@@ -3,7 +3,7 @@ layout: post
 title: "Durable Execution: How Temporal, Restate, and DBOS Are Rethinking Distributed State"
 subtitle: "Why traditional message queues and sagas fall short — and how durable execution frameworks eliminate entire categories of distributed systems bugs"
 date: 2026-04-03 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Development in 2026: Is It Finally Practical?"
 subtitle: "A production engineer's honest assessment of Rust's ecosystem, DX, and where it genuinely wins"
 date: 2026-03-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&q=80"
 categories: [Rust, Backend, Programming]
 tags: [Rust, Backend, Axum, Tokio, Performance, Systems-Programming, Web-Development, API]

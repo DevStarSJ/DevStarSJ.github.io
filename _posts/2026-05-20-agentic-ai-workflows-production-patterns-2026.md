@@ -3,7 +3,7 @@ layout: post
 title: "Agentic AI Workflows in Production: Patterns and Best Practices for 2026"
 subtitle: "How to architect reliable, observable, and safe AI agent systems at scale"
 date: 2026-05-20 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

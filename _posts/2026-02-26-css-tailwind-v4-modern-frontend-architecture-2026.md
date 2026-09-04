@@ -3,7 +3,7 @@ layout: post
 title: "Modern CSS and Tailwind v4 in 2026: The Frontend Architecture Playbook"
 subtitle: "CSS has never been more powerful — cascade layers, container queries, @starting-style, and Tailwind v4 rewrite everything you thought you knew"
 date: 2026-02-26
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Internal Developer Platforms with Backstage"
 subtitle: "How leading engineering organizations are reducing cognitive load, improving developer experience, and shipping faster with well-designed Internal Developer Platforms"
 date: 2026-03-01
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200"
 catalog: true
 tags:

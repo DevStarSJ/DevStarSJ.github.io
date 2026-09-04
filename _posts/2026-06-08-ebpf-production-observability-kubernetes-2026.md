@@ -3,7 +3,7 @@ layout: post
 title: "eBPF in 2026: From Kernel Magic to Production Observability Platform"
 subtitle: "How eBPF became the foundation of modern cloud-native observability, networking, and security — and how to use it"
 date: 2026-06-08 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

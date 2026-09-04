@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Cost Optimization: 7 Strategies That Actually Work"
 subtitle: "Stop overpaying for cloud resources without sacrificing performance"
 date: 2026-02-05
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1920&q=80"
 tags: [Kubernetes, Cloud, DevOps, Cost Optimization, FinOps]
 ---

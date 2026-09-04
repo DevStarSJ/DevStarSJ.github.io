@@ -3,7 +3,7 @@ layout: post
 title: "Connecting OpenClaw to AWS Bedrock: A Real-World Setup Guide"
 subtitle: "How to switch from Gemini API to Claude Sonnet 4.6 via AWS Bedrock — including all the gotchas"
 date: 2026-03-06 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 catalog: true
 tags:

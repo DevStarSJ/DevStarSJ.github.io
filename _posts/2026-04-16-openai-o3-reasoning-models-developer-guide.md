@@ -3,7 +3,7 @@ layout: post
 title: "OpenAI o3 and Reasoning Models: A Developer's Practical Guide"
 subtitle: "Understanding when and how to use reasoning models to solve complex coding, math, and multi-step problems"
 date: 2026-04-16 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

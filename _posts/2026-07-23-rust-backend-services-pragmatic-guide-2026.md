@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Backend Services in 2026: A Pragmatic Adoption Guide"
 subtitle: "When to migrate, what to rewrite, and how to introduce Rust without breaking your team"
 date: 2026-07-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
 tags:
   - Rust

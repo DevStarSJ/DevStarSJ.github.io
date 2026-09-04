@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Zapier AI: 자연어로 워크플로우를 구축하는 자동화 플랫폼"
 subtitle: "코드 없이 AI를 사용해 강력한 자동화를 구축하는 방법 — Zapier AI 완벽 가이드"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518432031352-d6fc5734c3df?w=1200&q=80"
 category: automation
 lang: ko

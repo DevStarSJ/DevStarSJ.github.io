@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Platform Engineering 2026: Building Internal Developer Platforms That Actually Work"
 subtitle: "How platform teams are using Backstage, Crossplane, and GitOps to reduce developer friction and accelerate delivery"
 date: 2026-07-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

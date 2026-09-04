@@ -3,7 +3,7 @@ layout: post
 title: "Postgres in 2026: The Unstoppable Rise of the World's Most Advanced Open Source Database"
 subtitle: "From vector search to time-series to geospatial — how PostgreSQL became the default database for every use case"
 date: 2026-06-06 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

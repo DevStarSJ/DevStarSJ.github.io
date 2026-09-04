@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding with AI: How to Build Production Apps 10x Faster in 2026"
 subtitle: "Master AI-assisted development with GitHub Copilot, Cursor, and Claude Code to ship faster without sacrificing quality"
 date: 2026-03-20 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "GitOps in 2026: ArgoCD vs Flux — The Definitive Comparison for Production Kubernetes"
 subtitle: "Both tools are mature and battle-tested. Here's how to choose based on your team's needs, not benchmarks."
 date: 2026-05-25 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&q=80"
 categories: [DevOps, Kubernetes, GitOps]
 tags: [GitOps, ArgoCD, FluxCD, Kubernetes, CD, DevOps, platform-engineering]

@@ -3,7 +3,7 @@ layout: post
 title: "GitOps in Production: ArgoCD vs Flux and the Patterns That Actually Work"
 subtitle: "A practitioner's guide to GitOps at scale — choosing between ArgoCD and Flux, structuring your repos, handling secrets, and avoiding the common pitfalls that kill GitOps rollouts"
 date: 2026-02-22
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 catalog: true
 tags:

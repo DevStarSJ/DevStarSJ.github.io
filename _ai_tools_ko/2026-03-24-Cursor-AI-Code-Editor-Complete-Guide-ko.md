@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Cursor AI: AI 퍼스트 코드 에디터로 코딩 방식을 혁신하다"
 subtitle: "VS Code 포크 기반의 Cursor AI 완벽 가이드 — AI를 코딩 워크플로우의 중심에 놓다"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80"
 category: coding
 lang: ko

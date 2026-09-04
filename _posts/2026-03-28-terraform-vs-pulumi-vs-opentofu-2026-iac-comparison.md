@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs Pulumi vs OpenTofu 2026: The Definitive IaC Comparison"
 subtitle: "Which Infrastructure as Code tool should you use in 2026? A deep technical comparison with real-world benchmarks"
 date: 2026-03-28 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

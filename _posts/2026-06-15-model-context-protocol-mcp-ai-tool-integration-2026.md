@@ -3,7 +3,7 @@ layout: post
 title: "Model Context Protocol (MCP): The USB-C Standard for AI Tool Integration"
 subtitle: "How Anthropic's open protocol is becoming the backbone of the agentic AI ecosystem"
 date: 2026-06-15 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 2026: Platform Engineering, Autopilot, and the Death of Manual Cluster Ops"
 subtitle: "How Kubernetes has evolved from infrastructure tool to application platform — and what comes next"
 date: 2026-06-07 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

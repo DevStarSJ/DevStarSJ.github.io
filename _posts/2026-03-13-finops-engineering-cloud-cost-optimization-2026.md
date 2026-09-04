@@ -3,7 +3,7 @@ layout: post
 title: "FinOps Engineering in 2026: How to Cut Cloud Costs by 40% Without Sacrificing Reliability"
 subtitle: "A practical engineering guide to cloud cost optimization across AWS, GCP, and Azure"
 date: 2026-03-13 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Beyond the Browser: Server-Side WASM in Production"
 subtitle: "Running WASM workloads with Wasmtime, WasmEdge, and Spin"
 date: 2026-02-09
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80"
 tags: [WebAssembly, WASM, Wasmtime, WasmEdge, Spin, Fermyon, Serverless, Rust]
 ---

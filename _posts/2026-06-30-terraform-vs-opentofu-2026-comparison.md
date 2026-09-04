@@ -3,7 +3,7 @@ layout: post
 title: "Terraform vs OpenTofu in 2026: The Fork That Matured"
 subtitle: "A practical comparison of IaC choices after 18 months of OpenTofu production use"
 date: 2026-06-30 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80"
 catalog: true
 tags:

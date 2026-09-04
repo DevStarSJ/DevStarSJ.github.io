@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Components in 2026: The Next Revolution in Server-Side Computing"
 subtitle: "How WASM components are transforming microservices, edge deployments, and polyglot architectures"
 date: 2026-02-19
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200"
 catalog: true
 tags:

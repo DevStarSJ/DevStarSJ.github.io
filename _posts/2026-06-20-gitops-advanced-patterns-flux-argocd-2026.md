@@ -3,7 +3,7 @@ layout: post
 title: "GitOps 2.0: Advanced Patterns with Flux and ArgoCD in 2026"
 subtitle: "Multi-tenant fleets, progressive delivery, drift detection, and AI-assisted reconciliation"
 date: 2026-06-20 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&q=80"
 header-mask: 0.4
 catalog: true

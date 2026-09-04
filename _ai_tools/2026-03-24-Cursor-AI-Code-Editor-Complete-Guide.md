@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Cursor AI: The AI-First Code Editor That Transforms How You Write Code"
 subtitle: "Complete guide to Cursor AI — the VS Code fork that puts AI at the center of your coding workflow"
 date: 2026-03-24 15:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80"
 category: coding
 tags:

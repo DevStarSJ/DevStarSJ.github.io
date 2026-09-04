@@ -3,7 +3,7 @@ layout: post
 title: "Rust in Production: Lessons from Three Years of Replacing Python and Go Services"
 subtitle: "What actually happens when you rewrite performance-critical services in Rust — the wins, the pain, and the team dynamics"
 date: 2026-03-07 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200"
 catalog: true
 tags:

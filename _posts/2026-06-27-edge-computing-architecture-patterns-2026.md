@@ -3,7 +3,7 @@ layout: post
 title: "Edge Computing in 2026: When Cloud Is Too Far Away"
 subtitle: "A practical guide to edge architecture patterns, platforms, and when to actually use them"
 date: 2026-06-27 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

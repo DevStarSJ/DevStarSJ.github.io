@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Gateway API: The Future of Ingress and Traffic Management"
 subtitle: "Why you should migrate from Ingress to the expressive, role-oriented Gateway API"
 date: 2026-06-05 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&auto=format&fit=crop"
 header-mask: 0.4
 catalog: true

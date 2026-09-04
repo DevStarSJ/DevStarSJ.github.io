@@ -3,7 +3,7 @@ layout: post
 title: "RAG is Dead, Long Live Agentic RAG: The 2026 Retrieval Revolution"
 subtitle: "Why naive RAG pipelines are failing in production and how agentic architectures are fixing them"
 date: 2026-04-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

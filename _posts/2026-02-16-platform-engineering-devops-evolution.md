@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering: The Evolution Beyond DevOps"
 subtitle: "Building Internal Developer Platforms that accelerate delivery while reducing cognitive load"
 date: 2026-02-16
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200"
 tags: [Platform Engineering, DevOps, IDP, Backstage, Kubernetes, Developer Experience, Cloud Native]
 ---

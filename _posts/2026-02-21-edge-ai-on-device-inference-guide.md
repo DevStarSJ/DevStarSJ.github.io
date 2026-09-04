@@ -3,7 +3,7 @@ layout: post
 title: "Edge AI in 2026: Running LLMs and Vision Models On-Device"
 subtitle: "How to deploy quantized models, manage memory constraints, and build responsive AI features that work without a cloud API call"
 date: 2026-02-21
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200"
 catalog: true
 tags:

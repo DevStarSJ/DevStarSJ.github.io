@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building Golden Paths That Developers Actually Love"
 subtitle: "From 'just use Kubernetes' chaos to internal developer platforms that reduce cognitive load and ship faster"
 date: 2026-05-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80"
 catalog: true
 tags:

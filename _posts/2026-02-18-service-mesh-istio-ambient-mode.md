@@ -3,7 +3,7 @@ layout: post
 title: "Service Mesh Evolution: Istio Ambient Mode and Beyond in 2026"
 subtitle: "Sidecar-free service mesh architecture for reduced complexity and improved performance"
 date: 2026-02-18
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200"
 catalog: true
 tags:

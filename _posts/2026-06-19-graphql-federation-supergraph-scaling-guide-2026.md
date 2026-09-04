@@ -3,7 +3,7 @@ layout: post
 title: "GraphQL Federation in 2026: Scaling APIs Across Distributed Teams with Apollo and Cosmo"
 subtitle: "Everything you need to know about supergraphs, subgraph composition, and schema-first API governance at scale"
 date: 2026-06-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Edge Computing and Edge AI: Deploying Intelligence at the Edge in 2026"
 subtitle: "Build low-latency, privacy-first AI applications with edge deployment strategies"
 date: 2026-02-18
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

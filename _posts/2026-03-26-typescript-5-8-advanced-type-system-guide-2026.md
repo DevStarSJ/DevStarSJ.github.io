@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 5.8 Deep Dive: The Most Powerful Type System Features for Production Code"
 subtitle: "Template literal types, conditional inference, satisfies operator, and everything new in TypeScript 5.x that changes how you write code"
 date: 2026-03-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

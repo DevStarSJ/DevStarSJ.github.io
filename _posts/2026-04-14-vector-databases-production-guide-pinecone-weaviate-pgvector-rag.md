@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in Production: A Practical Guide to Pinecone, Weaviate, and pgvector in 2026"
 subtitle: "Choosing the right vector store, scaling embeddings search, and building reliable RAG pipelines"
 date: 2026-04-14 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

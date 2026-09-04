@@ -3,7 +3,7 @@ layout: post
 title: "Go 1.24 Generics Patterns: Writing Reusable, Type-Safe Code Without the Pain"
 subtitle: "Practical generics patterns in Go that actually improve code quality — and the anti-patterns to avoid"
 date: 2026-03-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1600&q=80"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Building Production AI Agents in 2026: Tool Use, Orchestration, and Reliability at Scale"
 subtitle: "From toy demos to mission-critical automation — the engineering practices that separate reliable AI agents from expensive failures"
 date: 2026-02-24
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 catalog: true
 tags:

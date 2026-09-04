@@ -3,7 +3,7 @@ layout: post
 title: "Quantum Computing for Developers: A Practical Guide for 2026"
 subtitle: "Beyond the hype — what quantum computing actually means for software engineers today, which problems it solves, and how to start experimenting"
 date: 2026-02-20
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding in Production: What Actually Happens When AI Writes Your Codebase"
 subtitle: "Beyond the hype — the real engineering challenges, pitfalls, and wins of AI-generated production code in 2026"
 date: 2026-06-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

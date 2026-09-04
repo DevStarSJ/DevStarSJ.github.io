@@ -3,7 +3,7 @@ layout: post
 title: "LLM Fine-Tuning with LoRA and QLoRA: A Practical Guide for 2026"
 subtitle: "How to adapt large language models to your domain efficiently without burning your GPU budget"
 date: 2026-03-29 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677756119517-756a188d2d94?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

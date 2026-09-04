@@ -3,7 +3,7 @@ layout: post
 title: "Vite 6 vs Webpack 5 vs Turbopack: The Ultimate Frontend Build Tool Showdown 2026"
 subtitle: "Which bundler actually wins in real-world performance, DX, and ecosystem support?"
 date: 2026-03-26 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

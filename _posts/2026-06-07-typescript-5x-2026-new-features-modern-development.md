@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 5.x in 2026: New Features That Changed How We Write JavaScript"
 subtitle: "A deep dive into the TypeScript features reshaping modern web and backend development"
 date: 2026-06-07 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

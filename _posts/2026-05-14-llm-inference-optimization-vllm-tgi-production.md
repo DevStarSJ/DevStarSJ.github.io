@@ -3,7 +3,7 @@ layout: post
 title: "LLM Inference Optimization: vLLM, TGI, and Production Serving Strategies in 2026"
 subtitle: "How to serve large language models at scale without burning your GPU budget"
 date: 2026-05-14 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

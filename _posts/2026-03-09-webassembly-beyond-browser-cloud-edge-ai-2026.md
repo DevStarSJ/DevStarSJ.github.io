@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Beyond the Browser: WASM in Cloud, Edge, and AI Inference"
 subtitle: "WebAssembly was supposed to make web apps faster. It turned out to be something much bigger — a universal runtime for the post-container era"
 date: 2026-03-09 10:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

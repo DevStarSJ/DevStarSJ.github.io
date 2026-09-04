@@ -3,7 +3,7 @@ layout: post
 title: "Multi-Agent AI Orchestration: Building Production-Ready Agentic Systems in 2026"
 subtitle: "From single LLM calls to coordinated agent networks that actually ship"
 date: 2026-06-30 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 catalog: true
 tags:

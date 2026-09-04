@@ -3,7 +3,7 @@ layout: post
 title: "Edge Computing with WebAssembly: The Future of Serverless Architecture in 2026"
 subtitle: "How WASM is transforming edge deployment with near-native performance and true portability"
 date: 2026-06-19 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

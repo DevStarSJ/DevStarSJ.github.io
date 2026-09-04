@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Why Systems Programmers Are Finally Making the Switch"
 subtitle: "A practical look at Rust's momentum, the pain points that still exist, and when it's the right tool for the job"
 date: 2026-07-18 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1600&auto=format&fit=crop"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: Choosing the Right One for Your AI Application"
 subtitle: "Pinecone, Weaviate, Qdrant, pgvector, ChromaDB — when to use each and why"
 date: 2026-06-29 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80"
 catalog: true
 tags:

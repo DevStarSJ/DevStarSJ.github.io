@@ -3,7 +3,7 @@ layout: post
 title: "AI-Powered Code Review: Building Automated PR Quality Gates in 2026"
 subtitle: "How engineering teams are using LLMs to catch bugs, enforce standards, and ship faster — without slowing down developers"
 date: 2026-06-27 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

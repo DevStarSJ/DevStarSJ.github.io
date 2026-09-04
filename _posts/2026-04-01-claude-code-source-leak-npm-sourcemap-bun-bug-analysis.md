@@ -3,7 +3,7 @@ layout: post
 title: "Claude Code Source Code Leak: How a Bun Bug Exposed Anthropic's AI Agent Internals"
 subtitle: "A technical deep-dive into the accidental source map leak, what it revealed, and what every developer should learn from it"
 date: 2026-04-01 00:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

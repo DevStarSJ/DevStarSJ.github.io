@@ -3,7 +3,7 @@ layout: post
 title: "AI Coding Assistants in 2026: A Realistic Productivity Audit"
 subtitle: "After a year of using Cursor, GitHub Copilot, and Claude Code in production, here's what actually helps"
 date: 2026-03-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
 categories: [AI, Developer-Tools, Productivity]
 tags: [AI, Copilot, Cursor, Claude-Code, Vibe-Coding, Developer-Productivity, LLM, Code-Generation]

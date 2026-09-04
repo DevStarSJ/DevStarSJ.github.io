@@ -3,7 +3,7 @@ layout: post
 title: "LLM Fine-Tuning and RAG Optimization: A Practical Guide for 2026"
 subtitle: "Master the art of customizing large language models and building efficient RAG pipelines"
 date: 2026-02-18
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "DevSecOps: Securing Your CI/CD Pipeline from Code to Production"
 subtitle: "A practical guide to implementing security automation throughout your software delivery pipeline"
 date: 2026-02-11
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200"
 tags: [DevSecOps, Security, CI/CD, DevOps, SAST, DAST, Container Security]
 ---

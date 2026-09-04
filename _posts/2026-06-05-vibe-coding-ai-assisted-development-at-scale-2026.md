@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding in 2026: How AI-Assisted Development Actually Works at Scale"
 subtitle: "Beyond the hype — a practical look at integrating coding agents into real engineering teams"
 date: 2026-06-05 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&auto=format&fit=crop"
 header-mask: 0.4
 catalog: true

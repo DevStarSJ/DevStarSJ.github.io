@@ -3,7 +3,7 @@ layout: post
 title: "Next.js 16 App Router: Complete Guide to Server Actions and Streaming 2026"
 subtitle: "Master Next.js 16's advanced features including Server Actions, Partial Prerendering, and React 19 integration"
 date: 2026-03-20 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&auto=format&fit=crop&q=80"
 catalog: true
 tags:

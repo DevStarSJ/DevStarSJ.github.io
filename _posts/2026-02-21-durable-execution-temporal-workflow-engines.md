@@ -3,7 +3,7 @@ layout: post
 title: "Durable Execution: Why Temporal and Workflow Engines Are Replacing Queues and Cron Jobs"
 subtitle: "How durable execution frameworks eliminate the complexity of retry logic, state management, and distributed coordination — and when to choose them over traditional approaches"
 date: 2026-02-21
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200"
 catalog: true
 tags:

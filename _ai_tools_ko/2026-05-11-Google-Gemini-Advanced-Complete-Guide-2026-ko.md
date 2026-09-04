@@ -3,7 +3,7 @@ layout: subsite-post
 title: "Google Gemini Advanced: 완벽 가이드 2026"
 subtitle: "구글의 가장 강력한 AI 어시스턴트에 대한 모든 것"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&auto=format&fit=crop"
 category: chatbot
 tags: [ai, 챗봇, gemini, google, 어시스턴트]

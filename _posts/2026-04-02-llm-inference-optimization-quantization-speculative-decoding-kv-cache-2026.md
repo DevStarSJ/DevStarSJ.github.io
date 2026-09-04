@@ -3,7 +3,7 @@ layout: post
 title: "LLM Inference Optimization in 2026: Quantization, Speculative Decoding, and KV Cache Strategies"
 subtitle: "A deep dive into the techniques that make large language models fast and cost-efficient in production"
 date: 2026-04-02 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

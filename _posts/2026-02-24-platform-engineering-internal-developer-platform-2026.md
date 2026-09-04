@@ -3,7 +3,7 @@ layout: post
 title: "Platform Engineering in 2026: Building an Internal Developer Platform That Teams Actually Use"
 subtitle: "The shift from DevOps to Platform Engineering is real — here's how to build a golden path that accelerates delivery without becoming a bureaucratic bottleneck"
 date: 2026-02-24
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1200"
 catalog: true
 tags:

@@ -3,7 +3,7 @@ layout: post
 title: "GPT-5 Architecture Deep Dive: What's New and How It Changes AI Development in 2026"
 subtitle: "Exploring the technical innovations behind GPT-5 and practical implications for developers"
 date: 2026-03-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
 header-mask: 0.4
 catalog: true

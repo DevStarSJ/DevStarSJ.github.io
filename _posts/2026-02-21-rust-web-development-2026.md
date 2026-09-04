@@ -3,7 +3,7 @@ layout: post
 title: "Rust for Web Development in 2026: Beyond Systems Programming"
 subtitle: "Axum, Leptos, and the Rust web ecosystem have matured. Here's what it looks like to build full-stack web applications in Rust today — and when it's worth it"
 date: 2026-02-21
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200"
 catalog: true
 tags:

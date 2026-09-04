@@ -3,7 +3,7 @@ layout: subsite-post
 title: "n8n AI Workflow Automation: Complete Guide 2026"
 subtitle: "Build powerful AI-powered automations with n8n's open-source platform"
 date: 2026-05-11 15:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200&auto=format&fit=crop"
 category: automation
 tags: [ai, automation, n8n, workflow, no-code]

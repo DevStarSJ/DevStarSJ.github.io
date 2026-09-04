@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases Explained: Powering AI Search and RAG Applications"
 subtitle: "A practical guide to choosing, deploying, and optimizing vector databases"
 date: 2026-02-08
-author: "Dev Star"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1920&q=80"
 tags: [Vector Database, AI, RAG, Embeddings, Pinecone, Weaviate, Machine Learning]
 categories: ai

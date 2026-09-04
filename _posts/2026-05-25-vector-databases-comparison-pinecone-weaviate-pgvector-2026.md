@@ -3,7 +3,7 @@ layout: post
 title: "Vector Databases in 2026: Pinecone vs Weaviate vs pgvector — When to Use Which"
 subtitle: "A practical guide to choosing the right vector storage for your AI application — from prototypes to production at scale."
 date: 2026-05-25 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 categories: [AI, Database]
 tags: [vector-database, pinecone, weaviate, pgvector, RAG, embeddings, AI]

@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes 1.31 to 1.33: Every Feature You Need to Know Right Now"
 subtitle: "Gateway API GA, in-place pod resizing, and the deprecations that will break your cluster"
 date: 2026-06-30 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1200&q=80"
 catalog: true
 tags:

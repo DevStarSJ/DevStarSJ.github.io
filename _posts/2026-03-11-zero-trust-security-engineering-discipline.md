@@ -3,7 +3,7 @@ layout: post
 title: "Zero Trust Security in 2026: From Buzzword to Engineering Discipline"
 subtitle: "Zero Trust has moved from marketing narrative to concrete engineering practice. Here's what mature implementations look like — and what most organizations are still getting wrong."
 date: 2026-03-11 11:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200"
 catalog: true
 tags:

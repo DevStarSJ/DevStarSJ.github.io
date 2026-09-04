@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: The Language That Ate Systems Programming"
 subtitle: "From OS kernels to web backends — why Rust has become the default choice for performance-critical code"
 date: 2026-04-26 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

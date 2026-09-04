@@ -3,7 +3,7 @@ layout: post
 title: "Kubernetes Gateway API: The Future of Ingress Management in 2026"
 subtitle: "Why you should migrate from Ingress to Gateway API right now"
 date: 2026-03-17 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1600&q=80"
 catalog: true
 tags:

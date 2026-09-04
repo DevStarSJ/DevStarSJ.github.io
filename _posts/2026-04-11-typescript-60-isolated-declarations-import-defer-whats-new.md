@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript 6.0: What's New and How It Changes the Way You Write JavaScript"
 subtitle: "Exploring TypeScript 6.0's major features — Isolated Declarations, enhanced inference, and the long-awaited `import defer`"
 date: 2026-04-11 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80"
 categories: [Frontend, TypeScript]
 tags: [TypeScript, JavaScript, Frontend, Web Development, Type System, Compiler]

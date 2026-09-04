@@ -3,7 +3,7 @@ layout: post
 title: "Rust in 2026: Why Systems Programmers Are Finally Making the Switch (And How to Get Started)"
 subtitle: "A practical migration guide from C/C++ to Rust — memory safety, async, and the modern ecosystem"
 date: 2026-04-14 12:00:00
-author: "Groot"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

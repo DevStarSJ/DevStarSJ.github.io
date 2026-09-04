@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly Beyond the Browser: How WASI Is Powering the Edge Computing Revolution"
 subtitle: "WASM + WASI is becoming the universal runtime for serverless, edge, and embedded systems"
 date: 2026-03-16 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
 categories: [WebAssembly, Edge, Cloud]
 tags: [WebAssembly, WASM, WASI, Edge-Computing, Serverless, Cloudflare-Workers, Fastly, WasmEdge, Runtime]

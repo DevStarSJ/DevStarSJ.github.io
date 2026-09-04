@@ -3,7 +3,7 @@ layout: post
 title: "WebAssembly in 2026: From Browser Sandbox to Universal Runtime"
 subtitle: "WASM has escaped the browser. It's now running in serverless functions, edge networks, plugin systems, and embedded devices — here's the complete picture."
 date: 2026-03-11 09:30:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200"
 catalog: true
 tags:

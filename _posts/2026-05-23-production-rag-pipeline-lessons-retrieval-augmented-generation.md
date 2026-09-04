@@ -3,7 +3,7 @@ layout: post
 title: "Building Reliable RAG Pipelines in Production: Lessons from Real Deployments"
 subtitle: "Moving beyond the demo — the indexing strategies, retrieval tuning, and evaluation frameworks that make RAG actually work at scale"
 date: 2026-05-23 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?w=1200&auto=format&fit=crop"
 catalog: true
 tags:

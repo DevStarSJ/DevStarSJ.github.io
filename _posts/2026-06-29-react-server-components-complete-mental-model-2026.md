@@ -3,7 +3,7 @@ layout: post
 title: "React Server Components in 2026: The Complete Mental Model"
 subtitle: "After three years of RSC in production, here's what you actually need to understand"
 date: 2026-06-29 12:00:00
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80"
 catalog: true
 tags:

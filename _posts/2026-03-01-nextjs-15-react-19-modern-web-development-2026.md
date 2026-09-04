@@ -3,7 +3,7 @@ layout: post
 title: "Next.js 15 & React 19 in 2026: The Complete Guide to Modern Web Development"
 subtitle: "Server Components, Server Actions, Compiler optimizations, and everything you need to know to build blazing-fast web apps today"
 date: 2026-03-01
-author: "DevStarSJ"
+author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=1200"
 catalog: true
 tags:
