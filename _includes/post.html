@@ -31,7 +31,13 @@
   {% unless include.excerpt %}
     <div class="markdown-body">
 
-{% if post.header-img %}<div class="head-image"><img src="{{ site.url }}/{% if post.header-img %}assets/{{ post.header-img }}{% endif %}"/></div>
+{% if post.header-img %}
+{% assign header_image = post.header-img %}
+{% assign first_character = header_image | slice: 0 %}
+{% unless header_image contains '://' or first_character == '/' %}
+  {% assign header_image = header_image | prepend: '/assets/' %}
+{% endunless %}
+<div class="head-image"><img src="{{ header_image | absolute_url | escape }}" alt="{{ post.title | escape }}"/></div>
 <br/>{% elsif tag.header-img %}
 <div class="head-image"><img src="{{ site.url }}/assets/{{ tag.header-img }}"/></div>
 <br/>{% endif %}

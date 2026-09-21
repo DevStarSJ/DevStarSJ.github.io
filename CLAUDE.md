@@ -1,53 +1,29 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Project
 
-## What this is
-
-Personal blog (https://DevStarSJ.github.io) built on Jekyll 3.8 with a modified Hydejack 6.4 theme. Deployed by GitHub Pages: pushing to `master` is the deploy. There are no tests or CI.
+Personal development blog at https://DevStarSJ.github.io, built with Jekyll 3.x and Hydejack 6.4. GitHub Pages deploys when `master` is pushed. Do not commit or push without the user's explicit instruction.
 
 ## Commands
 
 ```bash
-bundle exec jekyll serve        # local build + serve at localhost:4000
+bundle exec jekyll serve
+bundle exec jekyll build --safe
+bundle exec ruby scripts/check-site.rb /path/to/built/site
 ```
 
-Theme JavaScript: the bundled `assets/js/hydejack.js` is committed and served as-is. The npm build toolchain (babel 6 / browserify, 2017-era) was removed to clear Dependabot alerts — to rebuild from `_js/src/`, restore `package.json`/`package-lock.json` from git history (commit `262b4a79`) or set up a modern bundler.
+GitHub Pages does not run custom `_plugins/` code. Use `--safe` when checking deployed behavior.
 
-Jupyter notebook → post: put the `.ipynb` in `_ipynbs/`, then `./ipython_to_html.sh <filename-without-extension>` appends the converted HTML into `_posts/<filename>.html`.
+## Content
 
-Note: GitHub Pages builds with its plugin whitelist only — the custom plugins in `_plugins/` (ipynb.rb, youtube.rb) do NOT run on the deployed site.
+- Posts: `_posts/YYYY-MM-DD-title.md`, `layout: post`. Categories and tags are in `_featured_categories/` and `_featured_tags/`.
+- Keep personally written and manually curated posts, including the five English OpenClaw/Claude Code posts from March–April 2026.
+- Automated batch posts were removed in commit `47430935`. The wellness, health-wellness-daily, finance and ai-tools subsites have also been removed. Do not recreate them or resume automated publishing without a request.
+- Sharing thumbnails use `social_image`, defaulting to the author's existing photo. A page can explicitly override it with a curated image. Decorative `header-img` and sidebar `image` are not sharing thumbnails.
+- `header-img` accepts an absolute URL, a root-relative path, or a legacy path relative to `assets/`.
 
-## Content architecture
+## Theme
 
-Two kinds of content:
+The bundled `assets/js/hydejack.js` is served as-is. The old npm build toolchain was removed; restoring it is unnecessary for content or Liquid changes.
 
-1. **Main dev blog** — `_posts/YYYY-MM-DD-title.md`, `layout: post`, front matter uses `subtitle`, `header-img`, `catalog: true`, `tags:` list. Categories/tags for the main blog live in `_featured_categories/` and `_featured_tags/`.
-
-2. **Subsites** — four standalone sections, each a pair of Jekyll collections (English + Korean):
-
-   | Section | Collections | URLs |
-   |---------|-------------|------|
-   | finance | `_finance/`, `_finance_ko/` | `/finance/`, `/finance/ko/` |
-   | ai-tools | `_ai_tools/`, `_ai_tools_ko/` | `/ai-tools/`, `/ai-tools/ko/` |
-   | wellness | `_wellness/`, `_wellness_ko/` | `/wellness/`, `/wellness/ko/` |
-   | health-wellness-daily | `_health_wellness_daily/` | `/health-wellness-daily/` |
-
-   Defaults in `_config.yml` give every subsite post `layout: subsite-post`, its `section`, and `lang` — do not repeat those in front matter (except `lang: ko` is conventionally set explicitly in KO posts).
-
-### Writing a subsite post
-
-- File: `_<collection>/YYYY-MM-DD-Title-With-Hyphens.md`; the Korean twin goes in `_<collection>_ko/` with the same filename plus `-ko` suffix. EN and KO are always written as a pair.
-- Front matter: `title`, `date` (with time), `category`, `tags: [...]`, `header-img` (Unsplash URL), `description` (SEO). KO posts add `lang: ko` and localized title/tags/description.
-- `category` must match an existing category page: each subsite has static pages like `finance/investing/index.html` (and `finance/ko/investing/`) that filter the collection with `where: 'category', '<name>'`. New category = create those index pages in both languages.
-- Filename dates matter: files dated in the future won't publish until that date passes.
-
-### Rendering pipeline
-
-`subsite-post` / `subsite-page` layouts (`_layouts/`) + `_includes/subsites/` (header, footer, toc, language-switcher, adsense) render all subsites generically, driven by `page.section` + `page.lang`. UI strings are localized via `_data/i18n.yml`. The per-section layouts like `finance-post.html` / `wellness-list-ko.html` are the older generation — new content uses the generic `subsite-*` layouts.
-
-## Conventions
-
-- Commits are batches of posts: `Add 5 finance posts (EN+KO) for YYYY-MM-DD` — see `git log` for the pattern.
-- Work happens directly on `master`.
-- Images are hot-linked from Unsplash (`?w=1200&auto=format&fit=crop` for header, `w=900` inline with a photographer credit line).
+Jupyter conversion: place notebooks in `_ipynbs/`, then run `./ipython_to_html.sh <filename-without-extension>`.
