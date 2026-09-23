@@ -2,7 +2,7 @@
 layout: post
 title: "개인이 팀이 된 시대: 규칙은 지켜지는데 판단은 새어 나간다"
 subtitle: "코딩 에이전트가 주 커밋 주체가 된 뒤 겪은 일, 그리고 판단을 코드 밖으로 꺼내기 위해 LLM 게이트웨이를 들인 이야기"
-date: 2026-09-23 22:00:00 +0900
+date: 2026-09-23 15:00:00 +0900
 author: "Yun SeokJoon"
 header-img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
 header-mask: 0.4
