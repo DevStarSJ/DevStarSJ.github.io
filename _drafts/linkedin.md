@@ -8,7 +8,7 @@
 ## 헤드라인 (220자 제한)
 
 ```
-SRE · DevOps · LLM/AI Agent Engineer @ DeepSearch | Terraform · EKS · LangGraph | 금융 데이터 & AIGC 파이프라인
+SRE · DevOps · LLM Platform Engineer @ DeepSearch | Terraform · EKS · LiteLLM · LangGraph | 금융 데이터 & AIGC 파이프라인
 ```
 
 ## 소개 (About)
@@ -16,7 +16,7 @@ SRE · DevOps · LLM/AI Agent Engineer @ DeepSearch | Terraform · EKS · LangGr
 ```
 개인보다 팀 성과를 중요하게 생각하며, 동료들이 편하게 일할 수 있게 돕는 Agile Facilitator가 되고자 노력합니다. 팀에 도움이 되는 일이라면 Gray Zone이라도 마다하지 않는 해결사(Skunk Worker) 역할을 합니다.
 
-20년 넘게 임베디드 펌웨어, 국방 시뮬레이터(CUDA), 머신러닝 시세 모델, 서버리스 MSA, SRE, LLM 파이프라인까지 필요한 기술을 빠르게 익혀 적용해온 제너럴리스트입니다. 최근에는 금융 도메인에서 LLM 기반 AIGC 파이프라인과 AI Agent(LangGraph/LangChain)를 설계·구축하고, 전사 인프라·보안 기반(시크릿 관리, 배포 파이프라인, 관측성)을 담당하고 있습니다.
+20년 넘게 임베디드 펌웨어, 국방 시뮬레이터(CUDA), 머신러닝 시세 모델, 서버리스 MSA, SRE, LLM 파이프라인까지 필요한 기술을 빠르게 익혀 적용해온 제너럴리스트입니다. 최근에는 금융 도메인에서 LLM 기반 AIGC 파이프라인과 AI Agent(LangGraph/LangChain)를 설계·구축하고, 전사 인프라·보안 기반(시크릿 관리, 배포 파이프라인, 관측성)과 LLM 게이트웨이·모델 평가 체계를 담당하고 있습니다.
 
 주요 관심사: SRE/DevOps 자동화, AI Agent 아키텍처, LLM Observability, 조직의 Agile 문화
 
@@ -33,7 +33,7 @@ LinkedIn은 한 회사 아래 여러 직책(position)을 등록할 수 있고, �
 • AWS Tokyo 리전에서 EC2/자체 k8s로 직접 운영하던 인프라(Elasticsearch, Redis, Aurora 단일 인스턴스)를 Seoul 리전 managed service(OpenSearch, ElastiCache, Aurora Cluster, EKS)로 무중단·무손실 이전. 주 단위로 반복되던 장애를 구조적으로 해소
 • OpenSearch 전환 시 형태소분석기·사용자정의 사전 비호환 문제를 새로 구현하여 한국어 검색 품질 유지
 • GHCR + 별도 manifest repo 수동 배포 체계를 GitHub Actions self-hosted runner + ECR + Helm release 기반 단일 저장소 자동화 파이프라인으로 재구축 (레거시 포함 전 서비스 적용)
-• 레거시 벡터 검색엔진의 대외 API 의존성 제거: 데이터를 MySQL에 동일 적재하는 파이프라인과 신규 API를 구축하고, 고객사 인터페이스 변경 없이 공급 경로 교체
+• 레거시 벡터 검색엔진 대체 및 완전 폐기: 데이터를 MySQL에 동일 적재하는 파이프라인과 신규 API로 대외 공급 경로를 먼저 교체(고객사 인터페이스 변경 없음)하고, 남은 의존성까지 모두 대체한 뒤 인프라 자체를 내림. 전 과정 서비스 중단·장애 없음
 • LLM 마이그레이션(OpenAI → Azure OpenAI → AWS Bedrock) 및 멀티 리전·모델 fallback 구현
 • 2주 단위 1on1, Engineering Day 운영. AI 코딩 도구 전사 도입 주도
 ```
@@ -62,7 +62,11 @@ LinkedIn은 한 회사 아래 여러 직책(position)을 등록할 수 있고, �
 • GitHub 평문 시크릿 전수 제거 → AWS Secrets Manager + External Secrets Operator 체계 구축
 • 배포 파이프라인 고도화: runner AWS 계정별 분리, 공통 workflow template·Helm chart 표준화, PAT → GitHub App 토큰 전환
 • APM을 dd-trace에서 OpenTelemetry로 전환하여 벤더 종속 제거, 관련 비용 완전 제거
-• LLM 호출량·비용·지연·에러율 대시보드 구축, AI 코드리뷰 자동화 도입 및 분산 구조 전환
+• LLM 호출량·비용·지연·에러율 대시보드 및 Slack 알람 구축(가격표 누락·비용 급증·에러율), 단가표 단일 원천화
+• LLM 게이트웨이(LiteLLM) 도입: 제공자·리전·fallback·자격증명 판단을 중앙 설정으로 통합하고, 키 발급·사용량 조회용 셀프서비스 웹(ModelHub) 직접 구축
+• 코드 수정 없이 OpenTelemetry 계측 주입 경로에 라우팅 레이어를 얹어 전사 LLM 직접 호출을 게이트웨이 경유로 전환(실패 시 직접 호출로 자동 복귀). 전환 중 서비스 중단·장애 없음. 임베딩 리전 변경만으로 응답 시간 1/5 단축
+• ModelHub에 운영 호출 이력 기반 모델 평가 화면 구축(모델·프롬프트를 바꿔 가며 형식·말투·내용 일치를 LLM이 채점). 이를 이용해 품질을 유지하면서 훨씬 저렴한 모델로 교체 진행
+• AI 코드리뷰 자동화 도입 및 분산 구조 전환
 • EKS Graviton(arm64) 전환, cost allocation tag 표준 수립
 ```
 
