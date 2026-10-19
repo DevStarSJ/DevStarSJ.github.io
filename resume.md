@@ -17,7 +17,7 @@ description: >
 
 - **Soft Skills**: Facilitation, Scrum Master, Agile Coaching, 1on1 & 피드백
 - **Programming Language**: Python, TypeScript, Ruby, JavaScript, C#, C++, Visual Basic, C (왼쪽일수록 최근에 사용한 기술입니다)
-- **LLM / AI**: LangChain, LangGraph, AWS Bedrock, Azure OpenAI, OpenAI, AI Agent Architecture(Workflow/Agentic Loop), Prompt Engineering, LLM Observability, LLM Gateway(LiteLLM), LLM Evaluation
+- **LLM / AI**: LangChain, LangGraph, AWS Bedrock, Azure OpenAI, OpenAI, AI Agent Architecture(Workflow/Agentic Loop), Prompt Engineering, LLM Observability, LLM Gateway(LiteLLM), LLM Evaluation, Claude Code Agent Runtime
 - **Backend**: FastAPI, Ruby on Rails, Nest.JS, Serverless-Express, ASP.NET, GraphQL(Apollo Federation), Prisma, TypeORM, Celery
 - **Frontend**: Next.JS, React, React-Native, MobX State Tree, Recoil
 - **Data Engineering**: Pandas, Spark, XGBoost, CatBoost, LightGBM, Scikit-Learn, Keras
@@ -155,6 +155,15 @@ description: >
 - ModelHub에 **실제 운영 호출 이력(입력과 기존 답변)을 불러와, 모델과 프롬프트를 바꿔 가며 답변을 나란히 비교하는 평가 화면**을 만들었습니다. 정답 여부뿐 아니라 기존 답변 대비 형식·말투·내용 일치와 출력 규칙 준수를 LLM이 항목별로 채점하고, 실행 기록을 남겨 모델 교체 판단의 근거로 쓸 수 있게 했습니다.
 - 벤치마크 점수만으로는 "정답률은 같은데 출력 형식이 달라져 다운스트림이 깨지는" 경우를 잡을 수 없기 때문에, 우리 프롬프트·우리 입력으로 확인하는 것을 기준으로 삼았습니다. 이를 통해 **서비스별로 모델을 비교하고 교체하는 과정을 쉽게** 만들었습니다.
 - 이 화면을 이용해 **기존 품질을 유지하면서 훨씬 저렴한 모델로 교체하는 작업을 직접 진행**했습니다. 형식이 달라지는 호출은 프롬프트를 보완해 기존 모델과 새 모델 모두에서 같은 결과가 나오는지 확인한 뒤 반영했고, 운영 원문 요청을 운영 피크 이상의 부하로 재생해 검증한 뒤 적용했습니다.
+
+**사내 Agent 플랫폼용 Claude Code 에이전트 런타임 구축** (2026.09 ~ 2026.10) — Claude Code, Kubernetes, Slack
+
+사내 AI Agent 플랫폼(AgentOS)에서 누구나 생성해 쓸 수 있는 **Claude Code 기반 에이전트 런타임 이미지**를 만들고, 실제로 업무에 쓰면서 계속 다듬었습니다.
+
+- **Slack으로 주고받으며 일을 시키는 인터페이스**: 오픈소스 에이전트 Hermes의 Slack 상호작용 방식을 차용해, 멘션이나 DM으로 작업을 맡기고 스레드 단위로 세션을 이어 가며 대화하듯 업무를 진행할 수 있게 했습니다. 진행 상황을 갱신되는 한 줄로 보여주고, 작업 중 질문에는 메인 작업을 방해하지 않고 바로 답하며, 실행 시간 상한에 걸리면 인계 메모를 남긴 뒤 같은 스레드에서 이어받도록 했습니다. 허용한 봇의 알림 멘션으로도 작업을 실행할 수 있어, 운영 알림을 에이전트가 받아 바로 처리하는 흐름을 만들었습니다.
+- **로컬과 같은 작업 환경**: git·gh·kubectl·helm·aws 등 작업 도구와 플러그인·서브에이전트·스킬·엔지니어링 규칙을 이미지에 고정해, 누가 에이전트를 만들어도 로컬 개발 환경과 같은 구성으로 동작하게 했습니다. 사용자가 한 번 등록한 자격 정보(GitHub·AWS·Grafana·Jira 등)를 본인 에이전트 전체가 공통으로 쓰도록 플랫폼 기능도 함께 추가했습니다.
+- **보안**: LLM 호출은 게이트웨이 가상 키로만 나가 파드에 실제 API 키가 없고, 노드 메타데이터(IMDS) 접근 차단, 래퍼 자격 정보의 CLI 격리, Slack 허용 사용자 기본 거부, 운영 환경 자격의 기본 비활성 등을 적용했습니다.
+- **연동 경험 개선**: Slack 앱 연결 가이드, 토큰 연결 테스트, 워크스페이스 사용자 선택 UI 등 에이전트를 Slack에 붙이는 과정의 시행착오를 줄였습니다.
 
 **인프라 비용 최적화 및 IaC 정비**
 
