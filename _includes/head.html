@@ -64,6 +64,32 @@
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 
+{% if page.alt_url %}
+<link rel="alternate" hreflang="{{ page.lang | default: 'ko' }}" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="{% if page.lang == 'en' %}ko{% else %}en{% endif %}" href="{{ page.alt_url | absolute_url }}">
+{% endif %}
+
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ description | strip_html | strip | truncatewords: 50 | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "inLanguage": {{ page.lang | default: 'ko' | jsonify }},
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+  "image": {{ social_image | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "Yun SeokJoon",
+    "url": {{ '/' | absolute_url | jsonify }}
+  }
+}
+</script>
+{% endif %}
+
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ site.feed.path | default:'feed.xml' | absolute_url }}">
 
 {% if page.previous %}
